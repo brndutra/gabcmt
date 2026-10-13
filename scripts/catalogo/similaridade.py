@@ -59,7 +59,7 @@ def rotulo(membros, contexto=None):
         freq=sorted(cand,key=lambda x:-x[1])
         esc=[]
         for s,_ in freq[:1]+pont:          # o mais frequente + os mais característicos
-            if s not in esc: esc.append(s)
+            if not any(s.lower().startswith(e.lower()) or e.lower().startswith(s.lower()) for e in esc): esc.append(s)
             if len(esc)==4: break
         if not esc: esc=[s for s,_ in cont.most_common(3)]
     return '. '.join(frase(x) for x in esc) or '(sem cabeçalho)'

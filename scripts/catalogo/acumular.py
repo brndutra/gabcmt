@@ -97,6 +97,7 @@ def gerar_html(regs):
         "schema": "gabA.paradigmas", "schema_versao": 1, "versao": "1.0.0",
         "atualizado_em": __import__("datetime").date.today().isoformat(), "banco_tipo": "Precedente",
         "registros": novos}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (BASE / "catalogo-agrupado.json").write_text(json.dumps(recs, ensure_ascii=False), encoding="utf-8")
     datas = [r["julg_iso"] for r in regs.values() if r.get("julg_iso")]
     periodo = f"{fmt(min(datas))} a {fmt(max(datas))}" if datas else "—"
     dados = json.dumps(recs, ensure_ascii=False).replace("</", "<\\/")
@@ -174,6 +175,9 @@ summary{cursor:pointer;color:var(--acc);font-weight:500}
 .tcard>summary .rz{grid-column:2/4;display:flex;flex-wrap:wrap;gap:6px;width:auto}
 .tag{font:500 11.5px var(--sans);padding:2px 8px;border-radius:999px;background:var(--acc-soft);color:var(--acc)}
 .tag.w{background:var(--warn-soft);color:var(--warn)}
+.tcard>summary .esp{grid-column:2/4;display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12.5px;color:var(--mut)}
+.tcard>summary .esp b{font:600 11px var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--fg)}
+.tcard>summary .esp span+span::before{content:'· ';color:var(--line)}.tcard>summary .esp em{font:500 11px var(--mono);font-style:normal}
 .tcard[open]>summary{border-bottom:1px solid var(--line)}
 .sent{font:600 11px var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--mut);padding:10px 14px 2px}
 .mb{display:grid;grid-template-columns:200px 120px 1fr;gap:4px 14px;padding:8px 14px;border-top:1px dashed var(--line);font-size:13px}
@@ -182,7 +186,7 @@ summary{cursor:pointer;color:var(--acc);font-weight:500}
 .gr{font:600 11.5px var(--sans)}.gr i{display:block;font:500 11px var(--mono);color:var(--mut);font-style:normal}
 .g-rep{color:var(--acc)}.g-ide{color:var(--acc)}.g-qua{color:var(--acc)}.g-sim{color:var(--fg)}.g-mes{color:var(--mut)}
 .mb details summary{font-weight:400;color:var(--fg)}
-@media (max-width:760px){.mb{grid-template-columns:1fr}.tcard>summary{grid-template-columns:1fr}.tcard>summary .rz{grid-column:auto}}
+@media (max-width:760px){.mb{grid-template-columns:1fr}.tcard>summary{grid-template-columns:1fr}.tcard>summary .rz,.tcard>summary .esp{grid-column:auto}}
 @media (prefers-reduced-motion:no-preference){.chip,.btn{transition:background .15s,color .15s}}
 </style>
 <div class="top">
@@ -263,10 +267,12 @@ const membro=i=>{const r=R[i];const pct=(r.grauIgualdade==='representante'||r.gr
  <details data-e="${i}"><summary>${esc(r.ementaCabecalho||r.processo)}</summary><div class="ementa"></div></details></div>`};
 function cartao(t){const idx=porTema[t],r0=R[idx[0]];const cont={};idx.forEach(i=>{const s=R[i].sentidoResultado;cont[s]=(cont[s]||0)+1});
  const iguais=idx.filter(i=>R[i].grauIgualdade==='idêntico'||R[i].grauIgualdade==='quase idêntico').length;
+ const tc={};idx.forEach(i=>new Set(String(R[i].especificidadesTags||'').split(';').map(x=>x.trim()).filter(Boolean)).forEach(x=>{tc[x]=(tc[x]||0)+1}));
+ const esp=Object.entries(tc).filter(([x,c])=>idx.length===1||c>=Math.max(2,idx.length*0.2)).sort((a,b)=>b[1]-a[1]).slice(0,8);
  const ord=[...idx].sort((a,b)=>SENT.indexOf(R[a].sentidoResultado)-SENT.indexOf(R[b].sentidoResultado)||R[b].similaridadeTema-R[a].similaridadeTema);
  let html='',cur=null;ord.forEach(i=>{const s=R[i].sentidoResultado;if(s!==cur&&Object.keys(cont).length>1){html+=`<div class="sent" data-s="${esc(s)}">${esc(s)}</div>`}cur=s;html+=membro(i)});
  return `<details class="tcard" data-t="${t}"${idx.length>1&&idx.length<=8?'':''}><summary><span class="tid">${t}</span><span class="rot">${esc(r0.temaRotulo)}</span><span class="n">${idx.length} ${idx.length>1?'casos':'caso'}</span>
- <span class="rz">${SENT.filter(s=>cont[s]).map(s=>`<span class="tag">${cont[s]} ${esc(s)}</span>`).join('')}${iguais?`<span class="tag w">${iguais} com texto igual ou quase igual ao representante</span>`:''}</span></summary>${html}</details>`}
+ <span class="rz">${SENT.filter(s=>cont[s]).map(s=>`<span class="tag">${cont[s]} ${esc(s)}</span>`).join('')}${iguais?`<span class="tag w">${iguais} com texto igual ou quase igual ao representante</span>`:''}</span>${esp.length?`<span class="esp"><b>Especificidades</b> ${esp.map(([x,c])=>`<span>${esc(x)}${idx.length>1?` <em>${c}</em>`:''}</span>`).join('')}</span>`:''}</summary>${html}</details>`}
 $('grp').innerHTML=Object.keys(porAss).sort((a,b)=>porAss[b].reduce((n,t)=>n+porTema[t].length,0)-porAss[a].reduce((n,t)=>n+porTema[t].length,0)).map(a=>{
  const ts=porAss[a],multi=ts.filter(t=>porTema[t].length>1),uni=ts.filter(t=>porTema[t].length===1);
  return `<section class="asec" data-a="${esc(a)}"><h2>${esc(a)}</h2><p class="sub"></p>${multi.map(cartao).join('')}${uni.length?`<details class="tcard" data-uni="1"><summary><span class="tid">—</span><span class="rot">Casos sem par neste assunto</span><span class="n"></span><span class="rz"><span class="tag">questões que aparecem uma só vez</span></span></summary>${uni.map(t=>membro(porTema[t][0])).join('')}</details>`:''}</section>`}).join('');

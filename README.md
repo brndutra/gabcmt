@@ -6,7 +6,8 @@ Material de apoio do gabinete do Desembargador Federal Carlos Muta (Turma Region
 
 | Caminho | O que é |
 |---|---|
-| `index.html` | Catálogo de 1.828 acórdãos (julgados de 18/03 a 06/10/2026), organizados por **assunto › tema › igualdade de texto**, com alternância para a visão em tabela, filtros e exportação de `precedentes.json`. Arquivo único, sem dependências. |
+| `index.html` | Catálogo de 1.828 acórdãos (julgados de 18/03 a 06/10/2026), organizados por **assunto › tema › igualdade de texto**, com as especificidades de cada tema, alternância para a visão em tabela, filtros e exportação de `precedentes.json`. Arquivo único, sem dependências. |
+| `precedentes/` | Os mesmos precedentes em pastas: **uma pasta por assunto** e, dentro dela, **um arquivo por tema**, com as especificidades mais frequentes. Comece pelo [`precedentes/INDICE.md`](precedentes/INDICE.md); cada pasta tem um `README.md` com os temas, resultados, especificidades e a lista de processos. |
 | `data/precedentes-parte1.json` | 845 precedentes julgados de 06/07 a 06/10/2026, prontos para importar. |
 | `data/precedentes-parte2.json` | 845 precedentes julgados de 18/03 a 06/07/2026, prontos para importar. |
 | `data/acordaos.jsonl` | Base bruta colhida na pesquisa de jurisprudência do TRF3 (um acórdão por linha). |
@@ -20,6 +21,7 @@ Ative o GitHub Pages em **Settings › Pages**, origem **Deploy from a branch**,
 ## Como importar no Construtor de Minutas
 
 - **Precedentes:** Banco de Paradigmas › Precedentes › **Importar JSON**, uma parte de cada vez (cada uma fica abaixo do limite de 10 MB do servidor). A importação casa por `id` e não apaga registros ausentes do arquivo. Os 138 processos que já constavam do banco ficaram de fora das partes; no `index.html`, marque "Incluir os que já constam do banco" para exportá-los também.
+- **Por assunto ou tema:** cada `.json` dentro de `precedentes/<assunto>/` é um arquivo de importação completo, com só os acórdãos ainda fora do banco. Importe apenas os temas que interessam.
 - **Modelos-matriz:** Banco de Paradigmas › Modelos-matriz › **Importar JSON**, com `modelos-matriz-2886.json`.
 
 ## Organização por similaridade
@@ -47,5 +49,5 @@ Os parágrafos presentes em todos os votos de uma hipótese formam o texto-base;
 
 ## Scripts
 
-- `scripts/catalogo/`: `acumular.py` regenera o catálogo a partir de `acordaos.jsonl` (copie o arquivo de `data/` para a pasta do script); `paradigma.py` converte cada acórdão para o formato do banco; `similaridade.py` faz o agrupamento; `extrair.py` lê os lotes colhidos no portal. Requer `scikit-learn` e `numpy`.
+- `scripts/catalogo/`: `acumular.py` regenera o catálogo a partir de `acordaos.jsonl` (copie o arquivo de `data/` para a pasta do script); `paradigma.py` converte cada acórdão para o formato do banco; `similaridade.py` faz o agrupamento; `organizar.py` monta a pasta `precedentes/` a partir de `catalogo-agrupado.json` (gerado pelo `acumular.py`); `extrair.py` lê os lotes colhidos no portal. Requer `scikit-learn` e `numpy`.
 - `scripts/modelos-matriz/`: extração dos votos dos PDFs do PJe (`extrair_pdf.py`, `estruturar.py`, requer `pymupdf`), montagem (`montar.py`), geração do JSON (`gerar.py`) e conferência de fidelidade ao texto original (`conferir.py`). Os PDFs de origem não estão no repositório.
