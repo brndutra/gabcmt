@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000752-12.2025.4.03.6006 | 09/06/2026 | desprovido | Ausência de previsão em lista de exceções normativas. Importação de mercadoria classificada como resíduo. Denegação da segurança | denegação da segurança |
-| 5003861-91.2021.4.03.6000 | 28/09/2026 | desprovido | Débitos decorrentes do registro de declaração de importação. Imposto de importação, IPI, PIS e COFINS. Compensação tributária. Artigo 74, § 3º, ii, da lei 9.430/1996 | mandado de segurança preventivo; compensação tributária; imposto de importação, ipi, PIS e COFINS; créditos judiciais habilitados |
+| 5000752-12.2025.4.03.6006 | 09/06/2026 | desprovido | Ausência de previsão em lista de exceções normativas. Denegação da segurança. Importação de mercadoria classificada como resíduo | denegação da segurança |
+| 5003861-91.2021.4.03.6000 | 28/09/2026 | desprovido | Artigo 74, § 3º, ii, da lei 9.430/1996. Compensação tributária. Constitucionalidade. Créditos judiciais habilitados | mandado de segurança preventivo; compensação tributária; imposto de importação, ipi, PIS e COFINS; créditos judiciais habilitados |
 
 </details>
 

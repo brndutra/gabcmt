@@ -8,12 +8,12 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T583** · Embargos de declaração · Vícios inexistentes. Rejeição. Contrato administrativo | 5 | 5 rejeitados | embargos de declaração (5); contrato administrativo (3); vícios inexistentes (2) | [T583-edcl-vicios-inexistentes-rejeicao-contrato-administrati.json](T583-edcl-vicios-inexistentes-rejeicao-contrato-administrati.json) |
+| **T583** · Embargos de declaração · Rejeição. Vícios inexistentes. Contrato administrativo | 5 | 5 rejeitados | embargos de declaração (5); contrato administrativo (3); vícios inexistentes (2) | [T583-edcl-rejeicao-vicios-inexistentes-contrato-administrati.json](T583-edcl-rejeicao-vicios-inexistentes-contrato-administrati.json) |
 | **T584** · Embargos de declaração · Omissão sanada. Parcial acolhimento, sem efeitos infringentes | 2 | 2 parcialmente provido | embargos de declaração (2) | [T584-edcl-omissao-sanada-parcial-acolhimento-sem-efeitos-inf.json](T584-edcl-omissao-sanada-parcial-acolhimento-sem-efeitos-inf.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T583</b> · Embargos de declaração · Vícios inexistentes. Rejeição. Contrato administrativo — 5 casos</summary>
+<details><summary><b>T583</b> · Embargos de declaração · Rejeição. Vícios inexistentes. Contrato administrativo — 5 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|

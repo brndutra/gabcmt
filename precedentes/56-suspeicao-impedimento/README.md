@@ -8,11 +8,11 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T655** · Impedimento de licitar e contratar. Regularidade formal e controle jurisdicional. Sanção administrativa | 2 | 1 parcialmente provido, 1 desprovido |  | [T655-impedimento-de-licitar-e-contratar-regularidade-formal.json](T655-impedimento-de-licitar-e-contratar-regularidade-formal.json) |
+| **T655** · Ação anulatória. Descredenciamento do sicaf. Execução da sanção antes da intimação pessoal da decisão | 2 | 1 parcialmente provido, 1 desprovido |  | [T655-acao-anulatoria-descredenciamento-do-sicaf-execucao-da.json](T655-acao-anulatoria-descredenciamento-do-sicaf-execucao-da.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T655</b> · Impedimento de licitar e contratar. Regularidade formal e controle jurisdicional. Sanção administrativa — 2 casos</summary>
+<details><summary><b>T655</b> · Ação anulatória. Descredenciamento do sicaf. Execução da sanção antes da intimação pessoal da decisão — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|

@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5001767-12.2018.4.03.6119 | 14/08/2026 | rejeitados | Embargos de declaração · Ação regressiva acidentária. Estágio irregular. Rediscussão de mérito. Recurso rejeitado | embargos de declaração; ação regressiva acidentária; estágio irregular; inexistência dos vícios do art |
+| 5001767-12.2018.4.03.6119 | 14/08/2026 | rejeitados | Embargos de declaração · 1.022 do CPC. Ação regressiva acidentária. Estágio irregular. Inexistência dos vícios do art | embargos de declaração; ação regressiva acidentária; estágio irregular; inexistência dos vícios do art |
 
 </details>
 

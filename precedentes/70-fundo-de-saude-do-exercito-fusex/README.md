@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000290-10.2024.4.03.6000 | 30/06/2026 | desprovido | Ex-cônjuge pensionista de militar. Tema repetitivo 1.080/STJ. Fundo de saúde do exército (fusex). Ausência de dependência econômica | fundo de saúde do exército (fusex); assistência médico-hospitalar; ex-cônjuge pensionista de militar; ausência de dependência econômica |
+| 5000290-10.2024.4.03.6000 | 30/06/2026 | desprovido | Assistência médico-hospitalar. Ausência de dependência econômica. Ex-cônjuge pensionista de militar. Fundo de saúde do exército (fusex) | fundo de saúde do exército (fusex); assistência médico-hospitalar; ex-cônjuge pensionista de militar; ausência de dependência econômica |
 
 </details>
 

@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0006425-17.2010.4.03.6000 | 28/09/2026 | desprovido | Contraditório e ampla defesa observados. Anexação de sindicância disciplinar. Autonomia dos procedimentos. Coisa julgada material quanto ao processo ético-profissional | conselho regional de medicina; procedimento de apuração de doença incapacitante; anexação de sindicância disciplinar; autonomia dos procedimentos |
+| 0006425-17.2010.4.03.6000 | 28/09/2026 | desprovido | Afastamento temporário do exercício profissional. Anexação de sindicância disciplinar. Autonomia dos procedimentos. Ação declaratória de nulidade de processo administrativo | conselho regional de medicina; procedimento de apuração de doença incapacitante; anexação de sindicância disciplinar; autonomia dos procedimentos |
 
 </details>
 

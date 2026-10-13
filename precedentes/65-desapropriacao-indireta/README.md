@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0002406-25.2011.4.03.6002 *(no banco)* | 12/05/2026 | parcialmente provido | Embargos de declaração · Ação de indenização por apossamento administrativo. Erro material sanado. Acolhimento parcial. Desapropriação indireta | embargos de declaração; desapropriação indireta; valor da indenização mantido; erro material sanado |
+| 0002406-25.2011.4.03.6002 *(no banco)* | 12/05/2026 | parcialmente provido | Embargos de declaração · Acolhimento parcial. Ação de indenização por apossamento administrativo. Desapropriação indireta. Erro material sanado | embargos de declaração; desapropriação indireta; valor da indenização mantido; erro material sanado |
 
 </details>
 

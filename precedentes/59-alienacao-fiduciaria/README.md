@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0002419-54.2016.4.03.6000 | 06/07/2026 | desprovido | Inexistência de mora do credor. Inadimplemento contratual. Cerceamento de defesa não configurado. Insuficiência da oferta | ação de consignação em pagamento; inadimplemento contratual; ausência de depósito integral da dívida; insuficiência da oferta |
+| 0002419-54.2016.4.03.6000 | 06/07/2026 | desprovido | Ausência de depósito integral da dívida. Ação de consignação em pagamento. Cerceamento de defesa não configurado. Financiamento imobiliário com alienação fiduciária | ação de consignação em pagamento; inadimplemento contratual; ausência de depósito integral da dívida; insuficiência da oferta |
 
 </details>
 

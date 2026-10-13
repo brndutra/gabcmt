@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5001325-15.2018.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Concurso público. Nomeação e posse. Edital. Exigência de especialização | embargos de declaração.mandado de segurança; concurso público; edital; exigência de especialização |
+| 5001325-15.2018.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Candidato com qualificação superior. Concurso público. Edital. Exigência de especialização | embargos de declaração.mandado de segurança; concurso público; edital; exigência de especialização |
 
 </details>
 

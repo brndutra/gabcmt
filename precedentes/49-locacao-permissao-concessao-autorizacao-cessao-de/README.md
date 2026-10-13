@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0001666-97.2016.4.03.6000 | 09/06/2026 | provido | Ausência de violação ao contraditório e à ampla defesa. Validade do processo administrativo. Desmatamento de vegetação nativa sem autorização. Ação anulatória de auto de infração ambiental | ação anulatória de auto de infração ambiental; desmatamento de vegetação nativa sem autorização; validade do processo administrativo; presunção de legitimidade do ato administrativo |
-| 0007314-34.2011.4.03.6000 | 15/09/2026 | parcialmente provido | Obra finalizada, construção de passagem de nível com interligação de avenidas no perímetro urbano do município. Inversão da sucumbência. Ação de interdito proibitório. Proteção possessória de faixa de domínio ferroviária desativada | ação de interdito proibitório; provimento parcial do recurso; inversão da sucumbência |
+| 0001666-97.2016.4.03.6000 | 09/06/2026 | provido | Ausência de violação ao contraditório e à ampla defesa. Ação anulatória de auto de infração ambiental. Desmatamento de vegetação nativa sem autorização. Inexistência de direito adquirido à degradação ambiental | ação anulatória de auto de infração ambiental; desmatamento de vegetação nativa sem autorização; validade do processo administrativo; presunção de legitimidade do ato administrativo |
+| 0007314-34.2011.4.03.6000 | 15/09/2026 | parcialmente provido | Ação de interdito proibitório. Inversão da sucumbência. Obra finalizada, construção de passagem de nível com interligação de avenidas no perímetro urbano do município. Ocupação por município e empresa contratada sem autorização da concessionária | ação de interdito proibitório; provimento parcial do recurso; inversão da sucumbência |
 
 </details>
 

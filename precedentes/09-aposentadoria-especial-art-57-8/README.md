@@ -10,16 +10,16 @@
 |---|---:|---|---|---|
 | **T415** · Aposentadoria especial | 11 | 1 provido, 3 parcialmente provido, 5 desprovido, 2 não conhecido | aposentadoria especial (3) | [T415-aposentadoria-especial.json](T415-aposentadoria-especial.json) (9 de 11) |
 | **T416** · Aposentadoria especial. Enquadramento por categoria profissional. Exposição a agentes biológicos. Requisitos preenchidos | 7 | 2 provido, 2 parcialmente provido, 3 desprovido | aposentadoria especial (5); enquadramento por categoria profissional (3); exposição a agentes biológicos (2) | [T416-aposentadoria-especial-enquadramento-por-categoria-prof.json](T416-aposentadoria-especial-enquadramento-por-categoria-prof.json) |
-| **T434** · Embargos de declaração · Ausência de vício sanável. Rejeição. Consectários legais. Ec 136/2025 | 7 | 7 rejeitados | embargos de declaração (6); aposentadoria especial (5); correção monetária e juros de mora (4); consectários legais (3); critérios de correção monetária e juros de mora (3) | [T434-edcl-ausencia-de-vicio-sanavel-rejeicao-consectarios-le.json](T434-edcl-ausencia-de-vicio-sanavel-rejeicao-consectarios-le.json) |
-| **T417** · Reconhecimento de tempo especial. Exposição ao agente nocivo ruído. Exposição a ruído. Aposentadoria especial | 6 | 1 provido, 1 parcialmente provido, 3 desprovido, 1 não conhecido | reconhecimento de tempo especial (4); aposentadoria especial (2); exposição ao agente nocivo ruído (2); exposição a ruído (2) | [T417-reconhecimento-de-tempo-especial-exposicao-ao-agente-no.json](T417-reconhecimento-de-tempo-especial-exposicao-ao-agente-no.json) |
+| **T434** · Embargos de declaração · Ausência de vício sanável. Rejeição. Consectários legais. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal | 7 | 7 rejeitados | embargos de declaração (6); aposentadoria especial (5); correção monetária e juros de mora (4); consectários legais (3); critérios de correção monetária e juros de mora (3) | [T434-edcl-ausencia-de-vicio-sanavel-rejeicao-consectarios-le.json](T434-edcl-ausencia-de-vicio-sanavel-rejeicao-consectarios-le.json) |
+| **T417** · Reconhecimento de tempo especial. Exposição ao agente nocivo ruído. Exposição a ruído. Aposentadoria especial | 6 | 1 provido, 1 parcialmente provido, 3 desprovido, 1 não conhecido | reconhecimento de tempo especial (4); aposentadoria especial (2); exposição a ruído (2); exposição ao agente nocivo ruído (2) | [T417-reconhecimento-de-tempo-especial-exposicao-ao-agente-no.json](T417-reconhecimento-de-tempo-especial-exposicao-ao-agente-no.json) |
 | **T418** · Conversão em aposentadoria especial. Reconhecimento de atividade especial | 4 | 3 desprovido, 1 não conhecido | conversão em aposentadoria especial (2); reconhecimento de atividade especial (2) | [T418-conversao-em-aposentadoria-especial-reconhecimento-de-a.json](T418-conversao-em-aposentadoria-especial-reconhecimento-de-a.json) (3 de 4) |
 | **T419** · Revogação da gratuidade de justiça | 3 | 2 parcialmente provido, 1 desprovido | revogação da gratuidade de justiça (2) | [T419-revogacao-da-gratuidade-de-justica.json](T419-revogacao-da-gratuidade-de-justica.json) |
-| **T435** · Embargos de declaração · Ausência de vício sanável. Reconhecimento de períodos especiais. Equipamento de proteção individual. Rediscussão | 3 | 3 rejeitados | embargos de declaração (3); aposentadoria especial (2); reconhecimento de períodos especiais (2) | [T435-edcl-ausencia-de-vicio-sanavel-reconhecimento-de-period.json](T435-edcl-ausencia-de-vicio-sanavel-reconhecimento-de-period.json) (2 de 3) |
+| **T435** · Embargos de declaração · Ausência de vício sanável. Equipamento de proteção individual. Reconhecimento de períodos especiais. Rediscussão | 3 | 3 rejeitados | embargos de declaração (3); aposentadoria especial (2); reconhecimento de períodos especiais (2) | [T435-edcl-ausencia-de-vicio-sanavel-equipamento-de-protecao.json](T435-edcl-ausencia-de-vicio-sanavel-equipamento-de-protecao.json) (2 de 3) |
 | **T420** · Tema 1.209/STF | 2 | 1 parcialmente provido, 1 não conhecido |  | [T420-tema-1-209-stf.json](T420-tema-1-209-stf.json) |
 | **T421** · Reconhecimento de tempo especial | 2 | 2 provido | reconhecimento de tempo especial (2) | [T421-reconhecimento-de-tempo-especial.json](T421-reconhecimento-de-tempo-especial.json) |
-| **T422** · Sobrestamento. Ajudante de cozinha em ambiente hospitalar. Agentes biológicos | 2 | 1 parcialmente provido, 1 não conhecido |  | [T422-sobrestamento-ajudante-de-cozinha-em-ambiente-hospitala.json](T422-sobrestamento-ajudante-de-cozinha-em-ambiente-hospitala.json) |
-| **T423** · Exposição à tensão elétrica superior a 250 volts. Aposentadoria especial e por tempo de contribuição. Atividade de eletricista | 2 | 1 parcialmente provido, 1 desprovido |  | [T423-exposicao-a-tensao-eletrica-superior-a-250-volts-aposen.json](T423-exposicao-a-tensao-eletrica-superior-a-250-volts-aposen.json) |
-| **T436** · Embargos de declaração · Reconhecimento de tempo especial. Vícios inexistentes. Multa. Rejeição | 2 | 2 rejeitados | embargos de declaração (2); reconhecimento de tempo especial (2) | [T436-edcl-reconhecimento-de-tempo-especial-vicios-inexistent.json](T436-edcl-reconhecimento-de-tempo-especial-vicios-inexistent.json) |
+| **T422** · Agentes biológicos. Ajudante de cozinha em ambiente hospitalar. Aposentadoria especial não configurada | 2 | 1 parcialmente provido, 1 não conhecido |  | [T422-agentes-biologicos-ajudante-de-cozinha-em-ambiente-hosp.json](T422-agentes-biologicos-ajudante-de-cozinha-em-ambiente-hosp.json) |
+| **T423** · Aposentadoria especial. Aposentadoria especial e por tempo de contribuição. Atividade de eletricista | 2 | 1 parcialmente provido, 1 desprovido |  | [T423-aposentadoria-especial-aposentadoria-especial-e-por-tem.json](T423-aposentadoria-especial-aposentadoria-especial-e-por-tem.json) |
+| **T436** · Embargos de declaração · Multa. Vícios inexistentes. Reconhecimento de tempo especial. Rejeição | 2 | 2 rejeitados | embargos de declaração (2); reconhecimento de tempo especial (2) | [T436-edcl-multa-vicios-inexistentes-reconhecimento-de-tempo.json](T436-edcl-multa-vicios-inexistentes-reconhecimento-de-tempo.json) |
 | Casos sem par | 12 | 2 provido, 3 parcialmente provido, 3 desprovido, 2 não conhecido, 1 rejeitados, 1 acolhidos | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
@@ -56,7 +56,7 @@
 
 </details>
 
-<details><summary><b>T434</b> · Embargos de declaração · Ausência de vício sanável. Rejeição. Consectários legais. Ec 136/2025 — 7 casos</summary>
+<details><summary><b>T434</b> · Embargos de declaração · Ausência de vício sanável. Rejeição. Consectários legais. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal — 7 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -104,7 +104,7 @@
 
 </details>
 
-<details><summary><b>T435</b> · Embargos de declaração · Ausência de vício sanável. Reconhecimento de períodos especiais. Equipamento de proteção individual. Rediscussão — 3 casos</summary>
+<details><summary><b>T435</b> · Embargos de declaração · Ausência de vício sanável. Equipamento de proteção individual. Reconhecimento de períodos especiais. Rediscussão — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -132,7 +132,7 @@
 
 </details>
 
-<details><summary><b>T422</b> · Sobrestamento. Ajudante de cozinha em ambiente hospitalar. Agentes biológicos — 2 casos</summary>
+<details><summary><b>T422</b> · Agentes biológicos. Ajudante de cozinha em ambiente hospitalar. Aposentadoria especial não configurada — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -141,7 +141,7 @@
 
 </details>
 
-<details><summary><b>T423</b> · Exposição à tensão elétrica superior a 250 volts. Aposentadoria especial e por tempo de contribuição. Atividade de eletricista — 2 casos</summary>
+<details><summary><b>T423</b> · Aposentadoria especial. Aposentadoria especial e por tempo de contribuição. Atividade de eletricista — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -150,7 +150,7 @@
 
 </details>
 
-<details><summary><b>T436</b> · Embargos de declaração · Reconhecimento de tempo especial. Vícios inexistentes. Multa. Rejeição — 2 casos</summary>
+<details><summary><b>T436</b> · Embargos de declaração · Multa. Vícios inexistentes. Reconhecimento de tempo especial. Rejeição — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -163,18 +163,18 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0000186-41.2017.4.03.6003 | 09/06/2026 | desprovido | Periculosidade comprovada. Exposição a substâncias inflamáveis. Aposentadoria especial. Reconhecimento de tempo especial | aposentadoria especial; reconhecimento de tempo especial; motorista de veículo de cargas perigosas; exposição a substâncias inflamáveis |
-| 0001025-66.2017.4.03.6003 | 11/06/2026 | provido | Inexistência de proveito econômico. Readequação aos tetos da EC 20/1998 e EC 41/2003. Ausência de limitação do salário de benefício. Revisão de benefício | revisão de benefício; readequação aos tetos da EC 20/1998 e EC 41/2003; ausência de limitação do salário de benefício; inexistência de proveito econômico |
+| 0000186-41.2017.4.03.6003 | 09/06/2026 | desprovido | Aposentadoria especial. Exposição a substâncias inflamáveis. Motorista de veículo de cargas perigosas. Periculosidade comprovada | aposentadoria especial; reconhecimento de tempo especial; motorista de veículo de cargas perigosas; exposição a substâncias inflamáveis |
+| 0001025-66.2017.4.03.6003 | 11/06/2026 | provido | Ausência de limitação do salário de benefício. Inexistência de proveito econômico. Readequação aos tetos da EC 20/1998 e EC 41/2003. Revisão de benefício | revisão de benefício; readequação aos tetos da EC 20/1998 e EC 41/2003; ausência de limitação do salário de benefício; inexistência de proveito econômico |
 | 0002912-22.2016.4.03.6003 | 27/08/2026 | não conhecido | Aposentadoria especial. Atividade de mecânico. Reconhecimento de períodos especiais | apelação cível e remessa oficial; aposentadoria especial; atividade de mecânico; reconhecimento de períodos especiais |
-| 5001614-20.2024.4.03.6005 | 28/09/2026 | desprovido | Documentos não apresentados na via administrativa. Indeferimento forçado. Aposentadoria especial. Extinção sem resolução do mérito | aposentadoria especial; interesse de agir; indeferimento forçado; extinção sem resolução do mérito |
-| 5002455-64.2023.4.03.6000 | 27/04/2026 | parcialmente provido | Honorários limitados à súmula 111 do STJ. Reexame necessário afastado. Ruído e agentes químicos. Reconhecimento de períodos especiais | apelações cíveis; reconhecimento de períodos especiais; ruído e agentes químicos; reexame necessário afastado |
-| 5002463-46.2020.4.03.6000 | 30/06/2026 | não conhecido | Tema 629/STJ. Inaplicabilidade ao trabalhador urbano | tema 629/STJ; inaplicabilidade ao trabalhador urbano |
-| 5002509-24.2023.4.03.6002 | 27/08/2026 | provido | Ppra. Concessão do benefício desde a DER. Epi. Aposentadoria especial | aposentadoria especial; tempo especial; auxiliar de inspeção federal em frigorífico; PPP |
-| 5003222-02.2024.4.03.9999 | 27/04/2026 | parcialmente provido | Requisitos preenchidos. Exposição a agentes biológicos. Agente funerário | agente funerário; exposição a agentes biológicos; requisitos preenchidos |
-| 5058783-74.2025.4.03.9999 | 10/08/2026 | desprovido | Aposentadoria especial. Cálculo da renda mensal inicial de atividades concomitantes e aplicação de direito adquirido. Atividade de auxiliar de enfermagem com exposição a agentes biológicos e químicos | aposentadoria especial |
-| 5303647-82.2026.4.03.9999 | 28/09/2026 | parcialmente provido | Ausência de implemento dos requisitos para concessão do benefício. Aposentadoria especial. Atividade de vigia. Reconhecimento parcial | aposentadoria especial; tempo especial; atividade em serraria; atividade de vigia |
-| 5004708-93.2021.4.03.6000 | 10/08/2026 | acolhidos | Embargos de declaração · Omissão quanto ao cômputo do tempo de serviço especial reconhecido em demanda anterior. Aposentadoria especial. Exposição a agentes biológicos. Técnica de enfermagem | embargos de declaração; aposentadoria especial; técnica de enfermagem; exposição a agentes biológicos |
-| 5021065-43.2025.4.03.9999 | 28/09/2026 | rejeitados | Embargos de declaração · Aposentadoria especial. Ausência de requerimento oportuno. Produção de prova técnica e perícia por similaridade. Restituição de valores recebidos por tutela provisória | embargos de declaração; aposentadoria especial; cerceamento de defesa; ausência de requerimento oportuno |
+| 5001614-20.2024.4.03.6005 | 28/09/2026 | desprovido | Aposentadoria especial. Documentos não apresentados na via administrativa. Extinção sem resolução do mérito. Indeferimento forçado | aposentadoria especial; interesse de agir; indeferimento forçado; extinção sem resolução do mérito |
+| 5002455-64.2023.4.03.6000 | 27/04/2026 | parcialmente provido | Aposentadoria especial e por tempo de contribuição. Honorários limitados à súmula 111 do STJ. Reconhecimento de períodos especiais. Reexame necessário afastado | apelações cíveis; reconhecimento de períodos especiais; ruído e agentes químicos; reexame necessário afastado |
+| 5002463-46.2020.4.03.6000 | 30/06/2026 | não conhecido | Inaplicabilidade ao trabalhador urbano. Tema 629/STJ | tema 629/STJ; inaplicabilidade ao trabalhador urbano |
+| 5002509-24.2023.4.03.6002 | 27/08/2026 | provido | Aposentadoria especial. Auxiliar de inspeção federal em frigorífico. Concessão do benefício desde a DER. Epi | aposentadoria especial; tempo especial; auxiliar de inspeção federal em frigorífico; PPP |
+| 5003222-02.2024.4.03.9999 | 27/04/2026 | parcialmente provido | Agente funerário. Exposição a agentes biológicos. Requisitos preenchidos | agente funerário; exposição a agentes biológicos; requisitos preenchidos |
+| 5058783-74.2025.4.03.9999 | 10/08/2026 | desprovido | Aposentadoria especial. Atividade de auxiliar de enfermagem com exposição a agentes biológicos e químicos. Cálculo da renda mensal inicial de atividades concomitantes e aplicação de direito adquirido | aposentadoria especial |
+| 5303647-82.2026.4.03.9999 | 28/09/2026 | parcialmente provido | Aposentadoria especial. Atividade de vigia. Atividade em serraria. Ausência de implemento dos requisitos para concessão do benefício | aposentadoria especial; tempo especial; atividade em serraria; atividade de vigia |
+| 5004708-93.2021.4.03.6000 | 10/08/2026 | acolhidos | Embargos de declaração · Acolhimento com efeitos infringentes. Aposentadoria especial. Exposição a agentes biológicos. Omissão quanto ao cômputo do tempo de serviço especial reconhecido em demanda anterior | embargos de declaração; aposentadoria especial; técnica de enfermagem; exposição a agentes biológicos |
+| 5021065-43.2025.4.03.9999 | 28/09/2026 | rejeitados | Embargos de declaração · Aposentadoria especial. Apuração em cumprimento de sentença. Ausência de requerimento oportuno. Cerceamento de defesa | embargos de declaração; aposentadoria especial; cerceamento de defesa; ausência de requerimento oportuno |
 
 </details>
 

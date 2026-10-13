@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5004597-17.2018.4.03.6000 | 20/07/2026 | desprovido | Mandado de segurança. Vedação constitucional à tríplice acumulação. Acumulação de cargos públicos privativos de profissionais de saúde | mandado de segurança; vedação constitucional à tríplice acumulação |
+| 5004597-17.2018.4.03.6000 | 20/07/2026 | desprovido | Acumulação de cargos públicos privativos de profissionais de saúde. Mandado de segurança. Vedação constitucional à tríplice acumulação | mandado de segurança; vedação constitucional à tríplice acumulação |
 
 </details>
 

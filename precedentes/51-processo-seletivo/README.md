@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000450-79.2017.4.03.6000 | 20/07/2026 | desprovido | Concurso público. Abertura de processo seletivo para professor substituto na mesma área. Surgimento de vaga durante a validade do certame. Preterição configurada | apelação em mandado de segurança; concurso público; candidato aprovado fora das vagas do edital; surgimento de vaga durante a validade do certame |
-| 5000973-38.2024.4.03.6003 | 09/06/2026 | desprovido | Mandado de segurança. Decadência. Desclassificação de candidata. Processo seletivo simplificado | mandado de segurança; processo seletivo simplificado; desclassificação de candidata; decadência |
+| 5000450-79.2017.4.03.6000 | 20/07/2026 | desprovido | Abertura de processo seletivo para professor substituto na mesma área. Candidato aprovado fora das vagas do edital. Concurso público. Preterição configurada | apelação em mandado de segurança; concurso público; candidato aprovado fora das vagas do edital; surgimento de vaga durante a validade do certame |
+| 5000973-38.2024.4.03.6003 | 09/06/2026 | desprovido | Decadência. Desclassificação de candidata. Mandado de segurança. Processo seletivo simplificado | mandado de segurança; processo seletivo simplificado; desclassificação de candidata; decadência |
 
 </details>
 

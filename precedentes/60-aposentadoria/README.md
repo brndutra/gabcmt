@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5158697-14.2025.4.03.9999 | 31/03/2026 | desprovido | Regra de transição. Sistema de pontos. Comprovação dos requisitos legais. Ec 103/2019 | aposentadoria de professora; EC 103/2019; regra de transição; sistema de pontos |
+| 5158697-14.2025.4.03.9999 | 31/03/2026 | desprovido | Aposentadoria de professora. Comprovação dos requisitos legais. Ec 103/2019. Regra de transição | aposentadoria de professora; EC 103/2019; regra de transição; sistema de pontos |
 
 </details>
 

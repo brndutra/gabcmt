@@ -11,6 +11,7 @@ Material de apoio do gabinete do Desembargador Federal Carlos Muta (Turma Region
 | `data/precedentes-parte1.json` | 845 precedentes julgados de 06/07 a 06/10/2026, prontos para importar. |
 | `data/precedentes-parte2.json` | 845 precedentes julgados de 18/03 a 06/07/2026, prontos para importar. |
 | `data/acordaos.jsonl` | Base bruta colhida na pesquisa de jurisprudência do TRF3 (um acórdão por linha). |
+| `banco/` | **Bancos do app**, como exportados pelo Construtor de Minutas: precedentes curados, modelos, parágrafos, normas, jurisprudência, assuntos e padrão de redação. Veja [`banco/README.md`](banco/README.md). |
 | `modelos-matriz/modelos-matriz-2886.json` | Três Modelos-matriz de voto sobre o índice de 28,86% (ACP 0005019-15.1997.4.03.6000), com gestor de parágrafos. |
 | `scripts/` | Rotinas em Python que geram o catálogo, o agrupamento e os modelos-matriz. |
 
@@ -47,7 +48,29 @@ Construídos a partir do texto integral de seis votos julgados em 05/10/2026, se
 
 Os parágrafos presentes em todos os votos de uma hipótese formam o texto-base; os que aparecem só em parte deles ficam no gestor de parágrafos como opções situacionais.
 
+## Sem duplicidade
+
+Cada precedente aparece uma única vez como arquivo de importação:
+
+- se já está no banco do app, fica só em `banco/precedentes.json` (ou é citado em `banco/modelos.json`) e sai de `precedentes/` e de `data/precedentes-parte*.json`;
+- se ainda não está, fica só no catálogo (`precedentes/` e `data/`), com `statusCuradoria: bruto`.
+
+Quando o mesmo processo tem outro julgamento já curado (por exemplo, a apelação no banco e os embargos de declaração no catálogo), o do catálogo recebe id próprio (`par-<processo>-<espécie>-<data>`), para que importá-lo não sobrescreva o registro curado.
+
+## Como atualizar
+
+Exporte os bancos no app e rode, na raiz do repositório:
+
+```
+python3 scripts/construir.py normas.json paragrafos.json precedentes.json modelos.json assuntos.json jurisprudencia.json redacao.json
+```
+
+Os arquivos são reconhecidos pelo `schema`, não pelo nome. A importação mescla por `id` (atualiza o que existe, acrescenta o que é novo, não apaga nada) e elimina duplicatas pela chave natural de cada banco: processo e espécie nos precedentes, sigla nas normas, referência na jurisprudência, nome nos assuntos, texto nos parágrafos. Com `--substituir`, a exportação passa a ser a fotografia oficial do banco, e registros apagados no app saem também daqui. Em seguida o script refaz o catálogo, a pasta `precedentes/`, as duas partes de `data/` e o `index.html`. Requer `scikit-learn` e `numpy`.
+
 ## Scripts
+
+- `scripts/construir.py`: executa todas as etapas acima.
+- `scripts/banco/importar.py`: só a importação dos bancos para `banco/`, sem refazer o catálogo.
 
 - `scripts/catalogo/`: `acumular.py` regenera o catálogo a partir de `acordaos.jsonl` (copie o arquivo de `data/` para a pasta do script); `paradigma.py` converte cada acórdão para o formato do banco; `similaridade.py` faz o agrupamento; `organizar.py` monta a pasta `precedentes/` a partir de `catalogo-agrupado.json` (gerado pelo `acumular.py`); `extrair.py` lê os lotes colhidos no portal. Requer `scikit-learn` e `numpy`.
 - `scripts/modelos-matriz/`: extração dos votos dos PDFs do PJe (`extrair_pdf.py`, `estruturar.py`, requer `pymupdf`), montagem (`montar.py`), geração do JSON (`gerar.py`) e conferência de fidelidade ao texto original (`conferir.py`). Os PDFs de origem não estão no repositório.

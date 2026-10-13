@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0011771-36.2016.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Desvio de função. Danos morais. Assédio moral. Vícios inexistentes | embargos de declaração; desvio de função; assédio moral; danos morais |
+| 0011771-36.2016.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Assédio moral. Danos morais. Desvio de função. Rejeição | embargos de declaração; desvio de função; assédio moral; danos morais |
 
 </details>
 

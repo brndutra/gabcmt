@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000289-69.2017.4.03.6000 | 15/09/2026 | provido | Inversão da sucumbência. Ação regressiva de seguradora. Omissão na fiscalização e conservação da via. Responsabilidade civil do DNIT | ação regressiva de seguradora; acidente de trânsito em rodovia federal; colisão com animal na pista; responsabilidade civil do DNIT |
-| 0011986-56.2009.4.03.6000 | 06/07/2026 | acolhidos | Embargos de declaração · Danos materiais e morais. Morte. Inadequação. Aquaplanagem | embargos de declaração; responsabilidade civil do estado; acidente de trânsito em rodovia federal; aquaplanagem |
+| 5000289-69.2017.4.03.6000 | 15/09/2026 | provido | Acidente de trânsito em rodovia federal. Ação regressiva de seguradora. Colisão com animal na pista. Inversão da sucumbência | ação regressiva de seguradora; acidente de trânsito em rodovia federal; colisão com animal na pista; responsabilidade civil do DNIT |
+| 0011986-56.2009.4.03.6000 | 06/07/2026 | acolhidos | Embargos de declaração · Acidente de trânsito em rodovia federal. Acolhimento, com efeitos infringentes. Aquaplanagem. Danos materiais e morais | embargos de declaração; responsabilidade civil do estado; acidente de trânsito em rodovia federal; aquaplanagem |
 
 </details>
 

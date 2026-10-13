@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000131-28.2019.4.03.6005 | 28/04/2026 | rejeitados | Embargos de declaração · Vícios inexistentes. Abertura fraudulenta de microempresa individual (mei). Rejeição. Indenização mantida em valor proporcional | embargos de declaração; responsabilidade objetiva da União; dano moral configurado; indenização mantida em valor proporcional |
+| 5000131-28.2019.4.03.6005 | 28/04/2026 | rejeitados | Embargos de declaração · Abertura fraudulenta de microempresa individual (mei). Dano moral configurado. Indenização mantida em valor proporcional. Rejeição | embargos de declaração; responsabilidade objetiva da União; dano moral configurado; indenização mantida em valor proporcional |
 
 </details>
 

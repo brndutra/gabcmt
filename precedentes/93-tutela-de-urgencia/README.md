@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5031747-81.2025.4.03.0000 | 15/09/2026 | desprovido | Contrato de compra e venda e mútuo para construção de unidade habitacional. Suspensão das parcelas do financiamento e das cobranças condominiais. Tutela de urgência. Ausência dos requisitos legais | agravo de instrumento; programa casa verde e amarela; tutela de urgência; ausência dos requisitos legais |
+| 5031747-81.2025.4.03.0000 | 15/09/2026 | desprovido | Ausência dos requisitos legais. Contrato de compra e venda e mútuo para construção de unidade habitacional. Programa casa verde e amarela. Suspensão das parcelas do financiamento e das cobranças condominiais | agravo de instrumento; programa casa verde e amarela; tutela de urgência; ausência dos requisitos legais |
 
 </details>
 

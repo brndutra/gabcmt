@@ -9,12 +9,12 @@
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
 | **T454** · Auxílio-acidente. Ausência de redução da capacidade laborativa | 13 | 2 provido, 10 desprovido, 1 não conhecido | auxílio-acidente (12); ausência de redução da capacidade laborativa (4) | [T454-auxilio-acidente-ausencia-de-reducao-da-capacidade-labo.json](T454-auxilio-acidente-ausencia-de-reducao-da-capacidade-labo.json) (11 de 13) |
-| **T455** · Benefício por incapacidade. Laudo judicial conclusivo. Auxílio-acidente | 8 | 1 provido, 1 parcialmente provido, 6 desprovido | benefício por incapacidade (3); auxílio-acidente (3) | [T455-beneficio-por-incapacidade-laudo-judicial-conclusivo-au.json](T455-beneficio-por-incapacidade-laudo-judicial-conclusivo-au.json) |
-| **T465** · Embargos de declaração · Auxílio-acidente. Ausência de vício sanável. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Rejeição | 4 | 1 parcialmente provido, 3 rejeitados | embargos de declaração (4); auxílio-acidente (4) | [T465-edcl-auxilio-acidente-ausencia-de-vicio-sanavel-correca.json](T465-edcl-auxilio-acidente-ausencia-de-vicio-sanavel-correca.json) |
+| **T455** · Auxílio-acidente. Benefício por incapacidade. Laudo judicial conclusivo | 8 | 1 provido, 1 parcialmente provido, 6 desprovido | auxílio-acidente (3); benefício por incapacidade (3) | [T455-auxilio-acidente-beneficio-por-incapacidade-laudo-judic.json](T455-auxilio-acidente-beneficio-por-incapacidade-laudo-judic.json) |
+| **T465** · Embargos de declaração · Auxílio-acidente. Ausência de vício sanável. Consectários legais. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal | 4 | 1 parcialmente provido, 3 rejeitados | auxílio-acidente (4); embargos de declaração (4) | [T465-edcl-auxilio-acidente-ausencia-de-vicio-sanavel-consect.json](T465-edcl-auxilio-acidente-ausencia-de-vicio-sanavel-consect.json) |
 | **T456** · Mandado de segurança | 3 | 1 provido, 2 desprovido | mandado de segurança (3) | [T456-mandado-de-seguranca.json](T456-mandado-de-seguranca.json) |
-| **T457** · Remessa ao tribunal de justiça estadual. Incompetência absoluta da justiça federal | 3 | 3 outro | incompetência absoluta da justiça federal (2) | [T457-remessa-ao-tribunal-de-justica-estadual-incompetencia-a.json](T457-remessa-ao-tribunal-de-justica-estadual-incompetencia-a.json) |
+| **T457** · Incompetência absoluta da justiça federal. Remessa ao tribunal de justiça estadual | 3 | 3 outro | incompetência absoluta da justiça federal (2) | [T457-incompetencia-absoluta-da-justica-federal-remessa-ao-tr.json](T457-incompetencia-absoluta-da-justica-federal-remessa-ao-tr.json) |
 | **T458** · Auxílio-acidente | 3 | 1 parcialmente provido, 1 desprovido, 1 não conhecido | auxílio-acidente (3) | [T458-auxilio-acidente.json](T458-auxilio-acidente.json) |
-| **T459** · Tutela de urgência deferida. Fratura do punho esquerdo. Auxílio-acidente | 2 | 1 provido, 1 desprovido |  | [T459-tutela-de-urgencia-deferida-fratura-do-punho-esquerdo-a.json](T459-tutela-de-urgencia-deferida-fratura-do-punho-esquerdo-a.json) |
+| **T459** · Auxílio-acidente. Benefício devido. Consectários legais | 2 | 1 provido, 1 desprovido |  | [T459-auxilio-acidente-beneficio-devido-consectarios-legais.json](T459-auxilio-acidente-beneficio-devido-consectarios-legais.json) |
 | **T460** · Auxílio-acidente | 2 | 2 desprovido | auxílio-acidente (2) | [T460-auxilio-acidente.json](T460-auxilio-acidente.json) |
 | Casos sem par | 4 | 1 provido, 1 parcialmente provido, 1 desprovido, 1 prejudicado/extinto | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
@@ -40,7 +40,7 @@
 
 </details>
 
-<details><summary><b>T455</b> · Benefício por incapacidade. Laudo judicial conclusivo. Auxílio-acidente — 8 casos</summary>
+<details><summary><b>T455</b> · Auxílio-acidente. Benefício por incapacidade. Laudo judicial conclusivo — 8 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -55,7 +55,7 @@
 
 </details>
 
-<details><summary><b>T465</b> · Embargos de declaração · Auxílio-acidente. Ausência de vício sanável. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Rejeição — 4 casos</summary>
+<details><summary><b>T465</b> · Embargos de declaração · Auxílio-acidente. Ausência de vício sanável. Consectários legais. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -76,7 +76,7 @@
 
 </details>
 
-<details><summary><b>T457</b> · Remessa ao tribunal de justiça estadual. Incompetência absoluta da justiça federal — 3 casos</summary>
+<details><summary><b>T457</b> · Incompetência absoluta da justiça federal. Remessa ao tribunal de justiça estadual — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -96,7 +96,7 @@
 
 </details>
 
-<details><summary><b>T459</b> · Tutela de urgência deferida. Fratura do punho esquerdo. Auxílio-acidente — 2 casos</summary>
+<details><summary><b>T459</b> · Auxílio-acidente. Benefício devido. Consectários legais — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -118,10 +118,10 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000237-71.2025.4.03.6007 | 26/05/2026 | desprovido | Auxílio-acidente. Extinção sem resolução do mérito mantida. Procuração com assinatura eletrônica em plataforma privada. Ausência de certificação icp-brasil | auxílio-acidente; ausência de certificação icp-brasil; irregularidade na representação processual; extinção sem resolução do mérito mantida |
-| 5000402-24.2025.4.03.6006 | 15/09/2026 | parcialmente provido | Fungibilidade recursal. Sequelas definitivas e incapacitantes. Recurso inominado. Extinção sem resolução do mérito | recurso inominado; fungibilidade recursal; benefício de auxílio-acidente; sequelas definitivas e incapacitantes |
-| 5026048-12.2025.4.03.0000 | 27/08/2026 | prejudicado/extinto | Redistribuição do feito. Cumprimento de sentença. Inclusão de auxílio-acidente no cálculo da RMI de aposentadoria por tempo de contribuição. Declinação de competência | agravo de instrumento; cumprimento de sentença; incompetência absoluta do órgão julgador; declinação de competência |
-| 5186738-88.2025.4.03.9999 | 30/06/2026 | provido | Inversão da sucumbência. Acidente de qualquer natureza anterior à lei 9.032/1995. Auxílio-acidente. Consolidação das sequelas | auxílio-acidente; consolidação das sequelas; princípio tempus regit actum; inversão da sucumbência |
+| 5000237-71.2025.4.03.6007 | 26/05/2026 | desprovido | Ausência de certificação icp-brasil. Auxílio-acidente. Extinção sem resolução do mérito mantida. Irregularidade na representação processual | auxílio-acidente; ausência de certificação icp-brasil; irregularidade na representação processual; extinção sem resolução do mérito mantida |
+| 5000402-24.2025.4.03.6006 | 15/09/2026 | parcialmente provido | Ausência à perícia médica judicial. Benefício de auxílio-acidente. Extinção sem resolução do mérito. Fungibilidade recursal | recurso inominado; fungibilidade recursal; benefício de auxílio-acidente; sequelas definitivas e incapacitantes |
+| 5026048-12.2025.4.03.0000 | 27/08/2026 | prejudicado/extinto | Cumprimento de sentença. Declinação de competência. Inclusão de auxílio-acidente no cálculo da RMI de aposentadoria por tempo de contribuição. Incompetência absoluta do órgão julgador | agravo de instrumento; cumprimento de sentença; incompetência absoluta do órgão julgador; declinação de competência |
+| 5186738-88.2025.4.03.9999 | 30/06/2026 | provido | Acidente de qualquer natureza anterior à lei 9.032/1995. Auxílio-acidente. Consolidação das sequelas. Inversão da sucumbência | auxílio-acidente; consolidação das sequelas; princípio tempus regit actum; inversão da sucumbência |
 
 </details>
 

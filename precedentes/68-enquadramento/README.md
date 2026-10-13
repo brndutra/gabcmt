@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5003496-95.2025.4.03.6000 | 05/10/2026 | desprovido | Impossibilidade de alteração do pedido e causa de pedir em sede de apelação. Proventos de reforma. Moléstia grave. Rol taxativo | ação declaratória de isenção de imposto de renda; proventos de reforma; moléstia grave; rol taxativo |
+| 5003496-95.2025.4.03.6000 | 05/10/2026 | desprovido | Ação declaratória de isenção de imposto de renda. Impossibilidade de alteração do pedido e causa de pedir em sede de apelação. Moléstia grave. Não enquadramento da doença narrada na inicial | ação declaratória de isenção de imposto de renda; proventos de reforma; moléstia grave; rol taxativo |
 
 </details>
 

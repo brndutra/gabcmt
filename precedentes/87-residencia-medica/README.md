@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5007524-30.2026.4.03.0000 | 15/09/2026 | não conhecido | Mandado de segurança. Decisão monocrática que não conheceu do agravo de instrumento por ausência de dialeticidade. Bonificação de 10% em processos seletivos de residência médica. Alegação de erro material | agravo interno em agravo de instrumento; mandado de segurança; alegação de erro material; fundamento inatacado |
+| 5007524-30.2026.4.03.0000 | 15/09/2026 | não conhecido | Alegação de erro material. Bonificação de 10% em processos seletivos de residência médica. Decisão monocrática que não conheceu do agravo de instrumento por ausência de dialeticidade. Fundamento inatacado | agravo interno em agravo de instrumento; mandado de segurança; alegação de erro material; fundamento inatacado |
 
 </details>
 

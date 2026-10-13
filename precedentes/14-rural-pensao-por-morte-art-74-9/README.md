@@ -10,8 +10,8 @@
 |---|---:|---|---|---|
 | **T481** · Pensão por morte | 20 | 3 provido, 1 parcialmente provido, 15 desprovido, 1 não conhecido | pensão por morte (13); pensão por morte rural (6) | [T481-pensao-por-morte.json](T481-pensao-por-morte.json) (14 de 20) |
 | **T482** · Segurada especial indígena. Aposentadoria por idade rural | 4 | 1 provido, 3 desprovido | segurada especial indígena (3); aposentadoria por idade rural (2) | [T482-segurada-especial-indigena-aposentadoria-por-idade-rura.json](T482-segurada-especial-indigena-aposentadoria-por-idade-rura.json) (3 de 4) |
-| **T483** · Aposentadoria por idade rural. Extinção do processo sem resolução do mérito. Deficiência instrutória. Segurada especial | 2 | 2 prejudicado/extinto | aposentadoria por idade rural (2); segurada especial (2) | [T483-aposentadoria-por-idade-rural-extincao-do-processo-sem.json](T483-aposentadoria-por-idade-rural-extincao-do-processo-sem.json) (1 de 2) |
-| **T487** · Embargos de declaração · Ação de concessão de pensão por morte. Companheira de segurado especial rural indígena. Vícios inexistentes | 2 | 1 parcialmente provido, 1 rejeitados | embargos de declaração (2) | [T487-edcl-acao-de-concessao-de-pensao-por-morte-companheira.json](T487-edcl-acao-de-concessao-de-pensao-por-morte-companheira.json) (1 de 2) |
+| **T483** · Aposentadoria por idade rural. Deficiência instrutória. Extinção do processo sem resolução do mérito. Segurada especial | 2 | 2 prejudicado/extinto | aposentadoria por idade rural (2); segurada especial (2) | [T483-aposentadoria-por-idade-rural-deficiencia-instrutoria-e.json](T483-aposentadoria-por-idade-rural-deficiencia-instrutoria-e.json) (1 de 2) |
+| **T487** · Embargos de declaração · Acolhimento parcial, com efeitos modificativos. Ação de concessão de pensão por morte. Companheira de segurado especial rural indígena | 2 | 1 parcialmente provido, 1 rejeitados | embargos de declaração (2) | [T487-edcl-acolhimento-parcial-com-efeitos-modificativos-acao.json](T487-edcl-acolhimento-parcial-com-efeitos-modificativos-acao.json) (1 de 2) |
 | Casos sem par | 4 | 2 provido, 1 parcialmente provido, 1 rejeitados | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
@@ -54,7 +54,7 @@
 
 </details>
 
-<details><summary><b>T483</b> · Aposentadoria por idade rural. Extinção do processo sem resolução do mérito. Deficiência instrutória. Segurada especial — 2 casos</summary>
+<details><summary><b>T483</b> · Aposentadoria por idade rural. Deficiência instrutória. Extinção do processo sem resolução do mérito. Segurada especial — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -63,7 +63,7 @@
 
 </details>
 
-<details><summary><b>T487</b> · Embargos de declaração · Ação de concessão de pensão por morte. Companheira de segurado especial rural indígena. Vícios inexistentes — 2 casos</summary>
+<details><summary><b>T487</b> · Embargos de declaração · Acolhimento parcial, com efeitos modificativos. Ação de concessão de pensão por morte. Companheira de segurado especial rural indígena — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -76,10 +76,10 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000471-16.2021.4.03.6000 | 28/09/2026 | provido | Erro no cálculo administrativo. Revisão da renda mensal inicial. Revisão devida. Pensão por morte | pensão por morte; revisão da renda mensal inicial; salários de contribuição registrados no CNIS; erro no cálculo administrativo |
-| 5002261-61.2024.4.03.9999 | 14/04/2026 | provido | Pensão por morte rural. Correção monetária. Honorários advocatícios. Juros de mora | pensão por morte rural; correção monetária; juros de mora; honorários advocatícios |
-| 5165456-57.2026.4.03.9999 | 10/08/2026 | parcialmente provido | Regime de economia familiar. Segurado especial. Qualidade de segurado comprovada. Termo inicial do benefício | pensão por morte rural; segurado especial; regime de economia familiar; qualidade de segurado comprovada |
-| 5001682-50.2023.4.03.9999 | 10/08/2026 | rejeitados | Embargos de declaração · Regime de economia familiar. Qualidade de segurado especial do instituidor. Consectários legais. Ausência de vício sanável | embargos de declaração; pensão por morte; qualidade de segurado especial do instituidor; regime de economia familiar |
+| 5000471-16.2021.4.03.6000 | 28/09/2026 | provido | Benefício originário de aposentadoria por idade de empregado rural. Erro no cálculo administrativo. Pensão por morte. Revisão da renda mensal inicial | pensão por morte; revisão da renda mensal inicial; salários de contribuição registrados no CNIS; erro no cálculo administrativo |
+| 5002261-61.2024.4.03.9999 | 14/04/2026 | provido | Correção monetária. Honorários advocatícios. Juros de mora. Pensão por morte rural | pensão por morte rural; correção monetária; juros de mora; honorários advocatícios |
+| 5165456-57.2026.4.03.9999 | 10/08/2026 | parcialmente provido | Pensão por morte rural. Qualidade de segurado comprovada. Regime de economia familiar. Segurado especial | pensão por morte rural; segurado especial; regime de economia familiar; qualidade de segurado comprovada |
+| 5001682-50.2023.4.03.9999 | 10/08/2026 | rejeitados | Embargos de declaração · Ausência de vício sanável. Consectários legais. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Correção monetária e juros de mora | embargos de declaração; pensão por morte; qualidade de segurado especial do instituidor; regime de economia familiar |
 
 </details>
 

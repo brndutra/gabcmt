@@ -8,12 +8,12 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T625** · Reforma. Militar temporário | 2 | 2 parcialmente provido | militar temporário (2) | [T625-reforma-militar-temporario.json](T625-reforma-militar-temporario.json) |
+| **T625** · Militar temporário. Reforma | 2 | 2 parcialmente provido | militar temporário (2) | [T625-militar-temporario-reforma.json](T625-militar-temporario-reforma.json) |
 | Casos sem par | 1 | 1 rejeitados | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T625</b> · Reforma. Militar temporário — 2 casos</summary>
+<details><summary><b>T625</b> · Militar temporário. Reforma — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -26,7 +26,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5003426-25.2018.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Capacidade para atividades laborativas civis. Incapacidade definitiva para o serviço militar. Desincorporação. Compensação pecuniária e danos morais indevidos | embargos de declaração.militar temporária; desincorporação; incapacidade definitiva para o serviço militar; capacidade para atividades laborativas civis |
+| 5003426-25.2018.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Ausência de nexo causal com a atividade castrense. Capacidade para atividades laborativas civis. Compensação pecuniária e danos morais indevidos. Desincorporação | embargos de declaração.militar temporária; desincorporação; incapacidade definitiva para o serviço militar; capacidade para atividades laborativas civis |
 
 </details>
 

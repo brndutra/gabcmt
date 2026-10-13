@@ -10,10 +10,10 @@
 |---|---:|---|---|---|
 | **T275** · Pensão por morte. Comprovação de União estável. Dependência econômica presumida. União estável | 14 | 4 provido, 2 parcialmente provido, 8 desprovido | pensão por morte (11); comprovação de união estável (5); dependência econômica presumida (4); união estável (4) | [T275-pensao-por-morte-comprovacao-de-uniao-estavel-dependenc.json](T275-pensao-por-morte-comprovacao-de-uniao-estavel-dependenc.json) (13 de 14) |
 | **T276** · Pensão por morte. União estável. Termo inicial do benefício. Início de prova material e prova testemunhal | 8 | 2 parcialmente provido, 6 desprovido | pensão por morte (8); união estável (5); termo inicial do benefício (3); comprovação de união estável (2); início de prova material e prova testemunhal (2) | [T276-pensao-por-morte-uniao-estavel-termo-inicial-do-benefic.json](T276-pensao-por-morte-uniao-estavel-termo-inicial-do-benefic.json) (7 de 8) |
-| **T277** · Pensão por morte. Incapacidade absoluta. Filho inválido. Dependência econômica presumida | 7 | 3 provido, 4 desprovido | pensão por morte (4); dependência econômica presumida (3); filho inválido (2) | [T277-pensao-por-morte-incapacidade-absoluta-filho-invalido-d.json](T277-pensao-por-morte-incapacidade-absoluta-filho-invalido-d.json) (6 de 7) |
+| **T277** · Pensão por morte. Filho inválido. Incapacidade absoluta. Dependência econômica presumida | 7 | 3 provido, 4 desprovido | pensão por morte (4); dependência econômica presumida (3); filho inválido (2) | [T277-pensao-por-morte-filho-invalido-incapacidade-absoluta-d.json](T277-pensao-por-morte-filho-invalido-incapacidade-absoluta-d.json) (6 de 7) |
 | **T278** · Pensão por morte. Honorários de sucumbência. União estável. Ausência de início de prova material contemporânea ao óbito | 7 | 6 provido, 1 desprovido | pensão por morte (6); união estável (4); honorários de sucumbência (3); companheira (2) | [T278-pensao-por-morte-honorarios-de-sucumbencia-uniao-estave.json](T278-pensao-por-morte-honorarios-de-sucumbencia-uniao-estave.json) |
 | **T306** · Embargos de declaração · Pensão por morte. Vícios inexistentes. Rejeição. Caráter protelatório do recurso | 7 | 7 rejeitados | embargos de declaração (7); pensão por morte (7); comprovação de união estável (2) | [T306-edcl-pensao-por-morte-vicios-inexistentes-rejeicao-cara.json](T306-edcl-pensao-por-morte-vicios-inexistentes-rejeicao-cara.json) |
-| **T279** · Pensão por morte. 74 da lei 8.213/1991. Não incidência do prazo do art. Proteção integral da criança e do adolescente | 6 | 2 provido, 3 desprovido, 1 não conhecido | pensão por morte (6); termo inicial do benefício (4); não incidência do prazo do art (3); dependentes menores absolutamente incapazes (2); data do óbito (2) | [T279-pensao-por-morte-74-da-lei-8-213-1991-nao-incidencia-do.json](T279-pensao-por-morte-74-da-lei-8-213-1991-nao-incidencia-do.json) |
+| **T279** · Pensão por morte. 74 da lei 8.213/1991. Não incidência do prazo do art. Proteção integral da criança e do adolescente | 6 | 2 provido, 3 desprovido, 1 não conhecido | pensão por morte (6); termo inicial do benefício (4); não incidência do prazo do art (3); data do óbito (2); dependentes menores absolutamente incapazes (2) | [T279-pensao-por-morte-74-da-lei-8-213-1991-nao-incidencia-do.json](T279-pensao-por-morte-74-da-lei-8-213-1991-nao-incidencia-do.json) |
 | **T280** · Pensão por morte | 4 | 1 provido, 3 desprovido | pensão por morte (4) | [T280-pensao-por-morte.json](T280-pensao-por-morte.json) |
 | **T281** · Pensão por morte | 4 | 3 desprovido, 1 não conhecido | pensão por morte (4) | [T281-pensao-por-morte.json](T281-pensao-por-morte.json) |
 | **T307** · Embargos de declaração · Ausência de vício sanável. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Critérios de correção monetária e juros de mora. Ec 113/2021 e EC 136/2025 | 4 | 4 rejeitados | embargos de declaração (4); pensão por morte (3); união estável (2) | [T307-edcl-ausencia-de-vicio-sanavel-correcao-de-oficio-quant.json](T307-edcl-ausencia-de-vicio-sanavel-correcao-de-oficio-quant.json) (2 de 4) |
@@ -21,16 +21,16 @@
 | **T283** · Pensão por morte | 3 | 2 provido, 1 desprovido | pensão por morte (3) | [T283-pensao-por-morte.json](T283-pensao-por-morte.json) (2 de 3) |
 | **T284** · Pensão por morte. Qualidade de segurado | 3 | 1 provido, 2 desprovido | pensão por morte (3); qualidade de segurado (3) | [T284-pensao-por-morte-qualidade-de-segurado.json](T284-pensao-por-morte-qualidade-de-segurado.json) |
 | **T285** · Inaplicabilidade retroativa das exigências introduzidas pela MP 871/2019 aos fatos geradores anteriores. Prova testemunhal. Reconhecimento de União estável. Pensão por morte | 2 | 2 desprovido | pensão por morte (2); prova testemunhal (2); reconhecimento de união estável (2) | [T285-inaplicabilidade-retroativa-das-exigencias-introduzidas.json](T285-inaplicabilidade-retroativa-das-exigencias-introduzidas.json) (1 de 2) |
-| **T286** · Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Juízo de retratação acolhido. Ec 113/2021 | 2 | 2 desprovido | consectários legais (2); tema 1.419/STF (2); juízo de retratação (2) | [T286-alteracao-dos-criterios-de-correcao-monetaria-e-juros-d.json](T286-alteracao-dos-criterios-de-correcao-monetaria-e-juros-d.json) |
+| **T286** · Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Ec 113/2021. Ec 136/2025 | 2 | 2 desprovido | consectários legais (2); juízo de retratação (2); tema 1.419/STF (2) | [T286-alteracao-dos-criterios-de-correcao-monetaria-e-juros-d.json](T286-alteracao-dos-criterios-de-correcao-monetaria-e-juros-d.json) |
 | **T287** · Pensão por morte | 2 | 1 parcialmente provido, 1 não conhecido | pensão por morte (2) | [T287-pensao-por-morte.json](T287-pensao-por-morte.json) |
 | **T288** · Impedimento de longo prazo. Sucumbência recíproca | 2 | 1 provido, 1 parcialmente provido |  | [T288-impedimento-de-longo-prazo-sucumbencia-reciproca.json](T288-impedimento-de-longo-prazo-sucumbencia-reciproca.json) |
-| **T289** · Cessação de cota de filho maior. Ação revisional cumulada com declaração de inexigibilidade de débito e indenização por danos morais. Boa-fé objetiva | 2 | 2 desprovido |  | [T289-cessacao-de-cota-de-filho-maior-acao-revisional-cumulad.json](T289-cessacao-de-cota-de-filho-maior-acao-revisional-cumulad.json) |
+| **T289** · Ação revisional cumulada com declaração de inexigibilidade de débito e indenização por danos morais. Boa-fé do beneficiário. Boa-fé objetiva | 2 | 2 desprovido |  | [T289-acao-revisional-cumulada-com-declaracao-de-inexigibilid.json](T289-acao-revisional-cumulada-com-declaracao-de-inexigibilid.json) |
 | **T290** · Segurança concedida | 2 | 2 desprovido |  | [T290-seguranca-concedida.json](T290-seguranca-concedida.json) |
 | **T291** · Pensão por morte | 2 | 1 provido, 1 desprovido | pensão por morte (2) | [T291-pensao-por-morte.json](T291-pensao-por-morte.json) |
 | **T292** · Pensão por morte | 2 | 1 parcialmente provido, 1 desprovido | pensão por morte (2) | [T292-pensao-por-morte.json](T292-pensao-por-morte.json) |
 | **T308** · Embargos de declaração · Ausência de vicio sanável | 2 | 2 rejeitados | embargos de declaração (2) | [T308-edcl-ausencia-de-vicio-sanavel.json](T308-edcl-ausencia-de-vicio-sanavel.json) |
-| **T309** · Embargos de declaração · Multa. Caráter protelatório não comprovado. Artigo 1.026, § 2º, CPC | 2 | 2 rejeitados |  | [T309-edcl-multa-carater-protelatorio-nao-comprovado-artigo-1.json](T309-edcl-multa-carater-protelatorio-nao-comprovado-artigo-1.json) |
-| **T310** · Embargos de declaração · Pensão por morte. Correção monetária e juros de mora | 2 | 1 rejeitados, 1 prejudicado/extinto | embargos de declaração (2); pensão por morte (2) | [T310-edcl-pensao-por-morte-correcao-monetaria-e-juros-de-mor.json](T310-edcl-pensao-por-morte-correcao-monetaria-e-juros-de-mor.json) |
+| **T309** · Embargos de declaração · Alegação de omissão e prequestionamento. Artigo 1.026, § 2º, CPC. Ausência de vício sanável | 2 | 2 rejeitados |  | [T309-edcl-alegacao-de-omissao-e-prequestionamento-artigo-1-0.json](T309-edcl-alegacao-de-omissao-e-prequestionamento-artigo-1-0.json) |
+| **T310** · Embargos de declaração · Correção monetária e juros de mora. Pensão por morte | 2 | 1 rejeitados, 1 prejudicado/extinto | embargos de declaração (2); pensão por morte (2) | [T310-edcl-correcao-monetaria-e-juros-de-mora-pensao-por-mort.json](T310-edcl-correcao-monetaria-e-juros-de-mora-pensao-por-mort.json) |
 | Casos sem par | 17 | 2 provido, 2 parcialmente provido, 7 desprovido, 2 não conhecido, 3 rejeitados, 1 prejudicado/extinto | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) (16 de 17) |
 
 ## Casos de cada tema
@@ -71,7 +71,7 @@
 
 </details>
 
-<details><summary><b>T277</b> · Pensão por morte. Incapacidade absoluta. Filho inválido. Dependência econômica presumida — 7 casos</summary>
+<details><summary><b>T277</b> · Pensão por morte. Filho inválido. Incapacidade absoluta. Dependência econômica presumida — 7 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -198,7 +198,7 @@
 
 </details>
 
-<details><summary><b>T286</b> · Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Juízo de retratação acolhido. Ec 113/2021 — 2 casos</summary>
+<details><summary><b>T286</b> · Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Ec 113/2021. Ec 136/2025 — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -225,7 +225,7 @@
 
 </details>
 
-<details><summary><b>T289</b> · Cessação de cota de filho maior. Ação revisional cumulada com declaração de inexigibilidade de débito e indenização por danos morais. Boa-fé objetiva — 2 casos</summary>
+<details><summary><b>T289</b> · Ação revisional cumulada com declaração de inexigibilidade de débito e indenização por danos morais. Boa-fé do beneficiário. Boa-fé objetiva — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -270,7 +270,7 @@
 
 </details>
 
-<details><summary><b>T309</b> · Embargos de declaração · Multa. Caráter protelatório não comprovado. Artigo 1.026, § 2º, CPC — 2 casos</summary>
+<details><summary><b>T309</b> · Embargos de declaração · Alegação de omissão e prequestionamento. Artigo 1.026, § 2º, CPC. Ausência de vício sanável — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -279,7 +279,7 @@
 
 </details>
 
-<details><summary><b>T310</b> · Embargos de declaração · Pensão por morte. Correção monetária e juros de mora — 2 casos</summary>
+<details><summary><b>T310</b> · Embargos de declaração · Correção monetária e juros de mora. Pensão por morte — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -292,23 +292,23 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000119-50.2025.4.03.9999 *(no banco)* | 28/09/2026 | desprovido | Inexigibilidade do débito. Danos morais. Descontos em benefício de pensão por morte. Ausência de prova de repercussão extrapatrimonial concreta | descontos em benefício de pensão por morte; inexigibilidade do débito; danos morais |
-| 5000184-77.2026.4.03.6000 | 27/08/2026 | desprovido | Pensão por morte. Honorários advocatícios. Concessão administrativa antes da citação | pensão por morte; concessão administrativa antes da citação; honorários advocatícios |
-| 5000344-70.2025.4.03.9999 | 26/05/2026 | desprovido | Revisão da renda mensal inicial. Pensão por morte. Constitucionalidade.recurso desprovido. Norma do tempo do óbito do instituidor | pensão por morte; revisão da renda mensal inicial; norma do tempo do óbito do instituidor; EC 103/2019 |
-| 5002653-77.2018.4.03.6000 | 27/04/2026 | provido | Extinção sem resolução do mérito por ausência de documentação. Pensão por morte. Cooperação processual. Primazia do julgamento de mérito | pensão por morte; parte indígena em situação de hipossuficiência; cooperação processual; primazia do julgamento de mérito |
-| 5004328-33.2023.4.03.9999 | 10/08/2026 | prejudicado/extinto | Pensão por morte. Perda superveniente do objeto. Transação homologada judicialmente após a interposição do recurso. Recurso prejudicado | pensão por morte; perda superveniente do objeto; recurso prejudicado |
-| 5062584-61.2026.4.03.9999 | 26/05/2026 | desprovido | Honorários de sucumbência. Ausência de comprovação de invalidez total e permanente. Filha maior inválida | filha maior inválida; honorários de sucumbência |
-| 5088684-53.2026.4.03.9999 | 09/06/2026 | desprovido | Indeferimento forçado. Ausência de documentação mínima. Retroação da data de início do benefício. Requerimentos administrativos anteriores | ação revisional de pensão por morte; retroação da data de início do benefício; requerimentos administrativos anteriores; ausência de documentação mínima |
-| 5099461-34.2025.4.03.9999 | 27/04/2026 | desprovido | Coisa julgada. Identidade de partes, pedido e causa de pedir. Pensão por morte. Extinção do feito sem resolução do mérito mantida | pensão por morte; coisa julgada; identidade de partes, pedido e causa de pedir; relativização da coisa julgada |
-| 5137950-43.2025.4.03.9999 | 14/04/2026 | não conhecido | Pensão por morte. Pagamento de parcelas pretéritas. Inércia do beneficiário. Prescrição quinquenal | pensão por morte; pagamento de parcelas pretéritas; prescrição quinquenal; inércia do beneficiário |
-| 5162607-49.2025.4.03.9999 | 31/03/2026 | parcialmente provido | Companheira de segurado falecido. Reconhecimento de União estável. Valores percebidos pelo núcleo familiar. Pensão por morte | pensão por morte; companheira de segurado falecido; reconhecimento de união estável; habilitação tardia |
-| 5191997-30.2026.4.03.9999 | 06/07/2026 | provido | Segurado indígena. Ausência de intimação do ministério público em primeiro grau. Nulidade absoluta | segurado indígena; nulidade absoluta; sentença anulada |
-| 5192047-90.2025.4.03.9999 | 09/06/2026 | não conhecido | Pensão por morte. Alegação de ausência de qualidade de segurado não suscitada em momento oportuno. Recurso não conhecido. Inovação recursal | pensão por morte; inovação recursal; recurso não conhecido |
+| 5000119-50.2025.4.03.9999 *(no banco)* | 28/09/2026 | desprovido | Ausência de prova de repercussão extrapatrimonial concreta. Cobrança de valores recebidos a título de aposentadoria por idade. Danos morais. Descontos em benefício de pensão por morte | descontos em benefício de pensão por morte; inexigibilidade do débito; danos morais |
+| 5000184-77.2026.4.03.6000 | 27/08/2026 | desprovido | Concessão administrativa antes da citação. Honorários advocatícios. Pensão por morte | pensão por morte; concessão administrativa antes da citação; honorários advocatícios |
+| 5000344-70.2025.4.03.9999 | 26/05/2026 | desprovido | Constitucionalidade.recurso desprovido. Ec 103/2019. Norma do tempo do óbito do instituidor. Pensão por morte | pensão por morte; revisão da renda mensal inicial; norma do tempo do óbito do instituidor; EC 103/2019 |
+| 5002653-77.2018.4.03.6000 | 27/04/2026 | provido | Cooperação processual. Extinção sem resolução do mérito por ausência de documentação. Parte indígena em situação de hipossuficiência. Pensão por morte | pensão por morte; parte indígena em situação de hipossuficiência; cooperação processual; primazia do julgamento de mérito |
+| 5004328-33.2023.4.03.9999 | 10/08/2026 | prejudicado/extinto | Pensão por morte. Perda superveniente do objeto. Recurso prejudicado. Transação homologada judicialmente após a interposição do recurso | pensão por morte; perda superveniente do objeto; recurso prejudicado |
+| 5062584-61.2026.4.03.9999 | 26/05/2026 | desprovido | Ausência de comprovação de invalidez total e permanente. Filha maior inválida. Honorários de sucumbência | filha maior inválida; honorários de sucumbência |
+| 5088684-53.2026.4.03.9999 | 09/06/2026 | desprovido | Ausência de documentação mínima. Ação revisional de pensão por morte. Indeferimento forçado. Requerimentos administrativos anteriores | ação revisional de pensão por morte; retroação da data de início do benefício; requerimentos administrativos anteriores; ausência de documentação mínima |
+| 5099461-34.2025.4.03.9999 | 27/04/2026 | desprovido | Coisa julgada. Extinção do feito sem resolução do mérito mantida. Identidade de partes, pedido e causa de pedir. Impossibilidade | pensão por morte; coisa julgada; identidade de partes, pedido e causa de pedir; relativização da coisa julgada |
+| 5137950-43.2025.4.03.9999 | 14/04/2026 | não conhecido | Inércia do beneficiário. Pagamento de parcelas pretéritas. Pensão por morte. Prescrição quinquenal | pensão por morte; pagamento de parcelas pretéritas; prescrição quinquenal; inércia do beneficiário |
+| 5162607-49.2025.4.03.9999 | 31/03/2026 | parcialmente provido | Companheira de segurado falecido. Filhos já em gozo do benefício. Habilitação tardia. Inexistência de parcelas atrasadas, sob pena de pagamento dúplice | pensão por morte; companheira de segurado falecido; reconhecimento de união estável; habilitação tardia |
+| 5191997-30.2026.4.03.9999 | 06/07/2026 | provido | Ausência de intimação do ministério público em primeiro grau. Nulidade absoluta. Segurado indígena | segurado indígena; nulidade absoluta; sentença anulada |
+| 5192047-90.2025.4.03.9999 | 09/06/2026 | não conhecido | Alegação de ausência de qualidade de segurado não suscitada em momento oportuno. Inovação recursal. Pensão por morte. Recurso não conhecido | pensão por morte; inovação recursal; recurso não conhecido |
 | 5227417-96.2026.4.03.9999 | 10/08/2026 | desprovido | Indenização por danos morais decorrente de suspensão de benefício |  |
-| 0006348-32.2015.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Equiparação remuneratória. Vícios inexistentes. Honorários advocatícios. Rejeição | embargos de declaração.pensão por morte; equiparação remuneratória; honorários advocatícios; vícios inexistentes |
-| 5000481-14.2022.4.03.6004 | 20/07/2026 | parcialmente provido | Embargos de declaração · Requerimento administrativo. Pensão por morte. Prequestionamento. Termo inicial do benefício | embargos de declaração; pensão por morte; termo inicial do benefício; erro material |
-| 5062584-61.2026.4.03.9999 | 28/09/2026 | rejeitados | Embargos de declaração · Prova pericial. Alegação de omissão e contradição. Pensão por morte. Ausência de incapacidade total e permanente | embargos de declaração em apelação cível; pensão por morte; filha maior inválida; alegação de omissão e contradição |
-| 5099461-34.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Tema 629/STJ. Ausência de fatos ou provas novas. Ausência de vício sanável. Novo conjunto probatório | embargos de declaração; pensão por morte; coisa julgada material; novo conjunto probatório |
+| 0006348-32.2015.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Equiparação remuneratória. Honorários advocatícios. Rejeição. Vícios inexistentes | embargos de declaração.pensão por morte; equiparação remuneratória; honorários advocatícios; vícios inexistentes |
+| 5000481-14.2022.4.03.6004 | 20/07/2026 | parcialmente provido | Embargos de declaração · Erro material. Pensão por morte. Prequestionamento. Requerimento administrativo | embargos de declaração; pensão por morte; termo inicial do benefício; erro material |
+| 5062584-61.2026.4.03.9999 | 28/09/2026 | rejeitados | Embargos de declaração · Alegação de omissão e contradição. Ausência de incapacidade total e permanente. Cerceamento de defesa. Filha maior inválida | embargos de declaração em apelação cível; pensão por morte; filha maior inválida; alegação de omissão e contradição |
+| 5099461-34.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Ausência de fatos ou provas novas. Ausência de vício sanável. Coisa julgada material. Novo conjunto probatório | embargos de declaração; pensão por morte; coisa julgada material; novo conjunto probatório |
 
 </details>
 

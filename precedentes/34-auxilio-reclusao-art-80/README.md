@@ -27,7 +27,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5269556-63.2026.4.03.9999 | 15/09/2026 | desprovido | Dependência econômica presumida. Prova testemunhal idônea. União estável. Auxílio-reclusão | auxílio-reclusão; união estável; prisão anterior à MP 871/2019; prova testemunhal idônea |
+| 5269556-63.2026.4.03.9999 | 15/09/2026 | desprovido | Auxílio-reclusão. Dependência econômica presumida. Prisão anterior à MP 871/2019. Prova testemunhal idônea | auxílio-reclusão; união estável; prisão anterior à MP 871/2019; prova testemunhal idônea |
 
 </details>
 

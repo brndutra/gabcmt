@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5003212-91.2019.4.03.6002 | 28/04/2026 | rejeitados | Embargos de declaração · Transferências voluntárias de recursos públicos. Omissão inexistente. Regularidade fiscal. Rejeição | transferências voluntárias de recursos públicos; regularidade fiscal; erro material corrigido, de ofício; omissão inexistente |
+| 5003212-91.2019.4.03.6002 | 28/04/2026 | rejeitados | Embargos de declaração · Erro material corrigido, de ofício. Omissão inexistente. Regularidade fiscal. Rejeição | transferências voluntárias de recursos públicos; regularidade fiscal; erro material corrigido, de ofício; omissão inexistente |
 
 </details>
 

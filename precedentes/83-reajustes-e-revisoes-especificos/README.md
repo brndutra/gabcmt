@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5087403-62.2026.4.03.9999 | 27/04/2026 | provido | Atividades concomitantes vinculadas ao rgps. Honorários de sucumbência. Soma integral dos salários de contribuição. Revisão de benefício | revisão de benefício; atividades concomitantes vinculadas ao rgps; cálculo do salário de benefício; soma integral dos salários de contribuição |
+| 5087403-62.2026.4.03.9999 | 27/04/2026 | provido | Atividades concomitantes vinculadas ao rgps. Cálculo do salário de benefício. Honorários de sucumbência. Revisão de benefício | revisão de benefício; atividades concomitantes vinculadas ao rgps; cálculo do salário de benefício; soma integral dos salários de contribuição |
 
 </details>
 

@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5002613-21.2020.4.03.6002 | 28/04/2026 | rejeitados | Embargos de declaração · Capacidade para atividades civis. Licenciamento. Reforma. Incapacidade para atividades militares | embargos de declaração; militar temporária; licenciamento; acidente em serviço |
+| 5002613-21.2020.4.03.6002 | 28/04/2026 | rejeitados | Embargos de declaração · Acidente em serviço. Capacidade para atividades civis. Incapacidade para atividades militares. Lei nº 13.954/2019 | embargos de declaração; militar temporária; licenciamento; acidente em serviço |
 
 </details>
 

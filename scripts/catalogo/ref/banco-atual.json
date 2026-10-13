@@ -1,1 +1,1976 @@
-{"5002030-32.2026.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-001", "especie": "ApCiv", "sessao": ""}], "5009968-07.2024.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-002", "especie": "AI", "sessao": ""}], "5000618-94.2025.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-003", "especie": "ApCiv + RemNec", "sessao": ""}], "5000497-37.2023.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-004", "especie": "ApCiv", "sessao": ""}], "0001195-07.2018.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-005", "especie": "ApCiv", "sessao": ""}], "5000104-68.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-006", "especie": "AI", "sessao": ""}], "5000008-83.2026.4.03.6005": [{"tipo": "Modelo", "id": "par-modelo-m8-007", "especie": "ApCiv", "sessao": ""}], "5019953-68.2022.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-008", "especie": "AI", "sessao": ""}], "5033347-11.2023.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-009", "especie": "AI", "sessao": ""}], "5027893-79.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-010", "especie": "AI", "sessao": ""}], "5002592-33.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-011", "especie": "AI", "sessao": ""}], "5011719-92.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-012", "especie": "AI", "sessao": ""}], "5000148-87.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-013", "especie": "MS", "sessao": ""}], "5010321-76.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-014", "especie": "MS", "sessao": ""}], "5000149-72.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-015", "especie": "MS", "sessao": ""}], "5000136-73.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-016", "especie": "AI", "sessao": ""}], "5000294-32.2024.4.03.6005": [{"tipo": "Modelo", "id": "par-modelo-m8-017", "especie": "ApCiv", "sessao": ""}], "5000006-83.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-018", "especie": "MS", "sessao": ""}], "0001003-42.2016.4.03.6003": [{"tipo": "Modelo", "id": "par-modelo-m8-019", "especie": "", "sessao": ""}], "5212379-78.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-020", "especie": "ApCiv", "sessao": ""}], "5008045-72.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-021", "especie": "AI", "sessao": ""}], "5000089-02.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-022", "especie": "AI", "sessao": ""}], "5000135-88.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-023", "especie": "AI", "sessao": ""}], "5008382-74.2024.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-024", "especie": "ApCiv", "sessao": ""}], "5001444-02.2021.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-025", "especie": "ApCiv", "sessao": ""}], "5012008-25.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-026", "especie": "AI", "sessao": ""}], "5024117-71.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-027", "especie": "AI", "sessao": ""}], "5009779-58.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-028", "especie": "AI", "sessao": ""}], "5028715-68.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-029", "especie": "AI", "sessao": ""}], "5010929-74.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-030", "especie": "AI", "sessao": ""}], "5012795-20.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-031", "especie": "AI", "sessao": ""}], "5030693-17.2024.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-032", "especie": "AI", "sessao": ""}, {"tipo": "Modelo", "id": "par-modelo-m8-135", "especie": "AI", "sessao": ""}], "5010073-13.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-033", "especie": "ApCiv", "sessao": ""}], "5025874-03.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-034", "especie": "", "sessao": ""}], "5014814-96.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-035", "especie": "MS", "sessao": ""}], "0014855-16.2014.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-036", "especie": "ApCiv", "sessao": ""}], "0001889-16.2008.4.03.6005": [{"tipo": "Modelo", "id": "par-modelo-m8-037", "especie": "ApCiv", "sessao": ""}], "5012990-78.2021.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-038", "especie": "AI", "sessao": ""}, {"tipo": "Modelo", "id": "par-modelo-m8-136", "especie": "AI", "sessao": ""}], "5024625-17.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-039", "especie": "AI", "sessao": ""}, {"tipo": "Precedente", "id": "par-5024625-17-2025-4-03-0000", "especie": "AI", "sessao": ""}], "5013760-95.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-040", "especie": "AI", "sessao": ""}], "5087384-56.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-041", "especie": "EDcl", "sessao": ""}], "5000810-32.2022.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-042", "especie": "EDcl", "sessao": ""}], "5001485-69.2020.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-043", "especie": "ApCiv", "sessao": ""}], "5002616-13.2020.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-044", "especie": "ApCiv", "sessao": ""}], "5005074-17.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-045", "especie": "AI", "sessao": ""}], "5001980-25.2025.4.03.6005": [{"tipo": "Modelo", "id": "par-modelo-m8-046", "especie": "RemNecCiv", "sessao": ""}], "5028378-79.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-047", "especie": "AI", "sessao": ""}], "0000465-11.2009.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-048", "especie": "ApCiv", "sessao": ""}], "0000128-31.2014.4.03.6007": [{"tipo": "Modelo", "id": "par-modelo-m8-049", "especie": "ApCiv", "sessao": ""}], "5007297-40.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-050", "especie": "AI", "sessao": ""}], "5007357-13.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-051", "especie": "AI", "sessao": ""}], "5000094-24.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-052", "especie": "AI", "sessao": ""}], "5005209-29.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-053", "especie": "AI", "sessao": ""}], "5186539-66.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-054", "especie": "ApCiv", "sessao": ""}], "5000019-82.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-055", "especie": "", "sessao": ""}], "5001945-48.2024.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-056", "especie": "", "sessao": ""}], "0007553-96.2015.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-057", "especie": "", "sessao": ""}], "5000051-87.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-058", "especie": "AI", "sessao": ""}], "5145414-84.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-059", "especie": "ApCiv", "sessao": ""}], "5193518-10.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-060", "especie": "", "sessao": ""}], "5000055-27.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-061", "especie": "AI", "sessao": ""}], "5024596-35.2023.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-062", "especie": "", "sessao": ""}], "0006190-74.2015.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-063", "especie": "", "sessao": ""}], "0000454-20.2016.4.03.6007": [{"tipo": "Modelo", "id": "par-modelo-m8-064", "especie": "EDcl", "sessao": ""}], "5003937-23.2018.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-065", "especie": "EDcl", "sessao": ""}, {"tipo": "Modelo", "id": "par-modelo-m8-118", "especie": "ApCiv", "sessao": ""}], "5000405-93.2022.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-066", "especie": "EDcl", "sessao": ""}], "5000821-91.2018.4.03.6005": [{"tipo": "Modelo", "id": "par-modelo-m8-067", "especie": "EDcl", "sessao": ""}], "0002406-25.2011.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-068", "especie": "EDcl", "sessao": ""}], "5000746-25.2023.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-069", "especie": "EDcl", "sessao": ""}], "5004619-38.2020.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-070", "especie": "EDcl", "sessao": ""}], "5002933-06.2023.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-071", "especie": "EDcl", "sessao": ""}], "0007564-77.2005.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-072", "especie": "EDcl", "sessao": ""}], "0000861-17.2011.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-073", "especie": "EDcl", "sessao": ""}], "5002609-24.2019.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-074", "especie": "EDcl", "sessao": ""}], "5000138-43.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-075", "especie": "AI", "sessao": ""}], "5029837-19.2025.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-076", "especie": "AI", "sessao": ""}], "5011653-78.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-077", "especie": "AI", "sessao": ""}], "5000040-58.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-078", "especie": "AI", "sessao": ""}], "5000077-85.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-079", "especie": "AI", "sessao": ""}], "5005012-74.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-080", "especie": "AI", "sessao": ""}], "5007206-47.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-081", "especie": "AI", "sessao": ""}], "5005508-06.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-082", "especie": "AI", "sessao": ""}], "5010897-69.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-083", "especie": "AI", "sessao": ""}], "5010466-35.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-084", "especie": "AgInt", "sessao": ""}], "5007267-05.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-085", "especie": "AI", "sessao": ""}], "5016449-15.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-086", "especie": "AI", "sessao": ""}], "5009638-39.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-087", "especie": "AI", "sessao": ""}], "5006282-36.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-088", "especie": "AI", "sessao": ""}], "5000106-38.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-089", "especie": "AI", "sessao": ""}], "5000079-55.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-090", "especie": "AI", "sessao": ""}], "5000111-60.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-091", "especie": "ApCiv", "sessao": ""}], "5000187-84.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-092", "especie": "AI", "sessao": ""}], "5000158-34.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-093", "especie": "AI", "sessao": ""}], "5000176-55.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-094", "especie": "AI", "sessao": ""}], "5000200-83.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-095", "especie": "AI", "sessao": ""}], "5000196-46.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-096", "especie": "AI", "sessao": ""}], "5000193-91.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-098", "especie": "AI", "sessao": ""}], "5000099-46.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-099", "especie": "AI", "sessao": ""}], "5013819-83.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-100", "especie": "AI", "sessao": ""}], "5002884-81.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-101", "especie": "AI", "sessao": ""}], "5015035-79.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-102", "especie": "AI", "sessao": ""}], "5015370-98.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-103", "especie": "AI", "sessao": ""}], "5001801-30.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-104", "especie": "AgInt", "sessao": ""}], "5000059-64.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-105", "especie": "", "sessao": ""}], "5000194-76.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-106", "especie": "AI", "sessao": ""}], "5000202-53.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-107", "especie": "", "sessao": ""}], "5010033-31.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-108", "especie": "AI", "sessao": ""}], "5010961-79.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-109", "especie": "", "sessao": ""}], "5000531-68.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-110", "especie": "AI", "sessao": ""}], "5002516-72.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-111", "especie": "AI", "sessao": ""}], "5008555-11.2018.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-112", "especie": "ApCiv", "sessao": ""}], "5211256-45.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-113", "especie": "ApCiv", "sessao": ""}], "5000119-50.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-114", "especie": "", "sessao": ""}], "5172001-46.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-115", "especie": "ApCiv", "sessao": ""}], "5001803-41.2023.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-116", "especie": "", "sessao": ""}], "5000005-98.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-117", "especie": "AI", "sessao": ""}], "5007641-97.2025.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-119", "especie": "ApCiv", "sessao": ""}], "5090007-30.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-120", "especie": "", "sessao": ""}], "5140392-79.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-121", "especie": "EDcl", "sessao": ""}], "5144197-06.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-122", "especie": "", "sessao": ""}], "5206085-73.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-123", "especie": "", "sessao": ""}], "5184716-23.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-124", "especie": "", "sessao": ""}, {"tipo": "Modelo", "id": "par-modelo-rural-015", "especie": "ApCiv", "sessao": ""}], "5204391-69.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-125", "especie": "", "sessao": ""}], "5000090-84.2026.4.03.0001": [{"tipo": "Modelo", "id": "par-modelo-m8-126", "especie": "AI", "sessao": ""}], "5070690-12.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-127", "especie": "", "sessao": ""}], "5097882-51.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-128", "especie": "", "sessao": ""}], "5151753-59.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-129", "especie": "ApCiv", "sessao": ""}], "5067395-64.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-130", "especie": "", "sessao": ""}], "5000621-87.2018.4.03.6004": [{"tipo": "Modelo", "id": "par-modelo-m8-131", "especie": "", "sessao": ""}], "5008387-96.2024.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-132", "especie": "ApCiv", "sessao": ""}], "5002175-25.2025.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-133", "especie": "", "sessao": ""}], "5027853-05.2022.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-134", "especie": "AI", "sessao": ""}], "5217062-27.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-137", "especie": "ApCiv", "sessao": ""}], "5000473-31.2022.4.03.6006": [{"tipo": "Modelo", "id": "par-modelo-m8-138", "especie": "ApCiv", "sessao": ""}], "5005152-89.2023.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-m8-139", "especie": "ApCiv", "sessao": ""}], "5001576-57.2023.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-140", "especie": "ApCiv", "sessao": ""}], "0005914-81.2008.4.03.6002": [{"tipo": "Modelo", "id": "par-modelo-m8-141", "especie": "ApCiv", "sessao": ""}], "0000200-53.2025.4.03.6000": [{"tipo": "Modelo", "id": "par-modelo-m8-142", "especie": "ApCiv", "sessao": ""}], "5017313-53.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-143", "especie": "AI", "sessao": ""}], "5011486-61.2026.4.03.0000": [{"tipo": "Modelo", "id": "par-modelo-m8-144", "especie": "AI", "sessao": ""}], "5000733-14.2022.4.03.6005": [{"tipo": "Modelo", "id": "par-modelo-m8-145", "especie": "ApCiv", "sessao": ""}], "5208727-19.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-001", "especie": "ApCiv", "sessao": ""}], "5126597-06.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-002", "especie": "ApCiv", "sessao": ""}], "5124114-66.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-003", "especie": "ApCiv", "sessao": ""}], "5176293-74.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-004", "especie": "ApCiv", "sessao": ""}], "5214421-66.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-005", "especie": "ApCiv", "sessao": ""}], "5225936-98.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-006", "especie": "ApCiv", "sessao": ""}], "5165561-34.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-007", "especie": "ApCiv", "sessao": ""}], "5162465-11.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-008", "especie": "ApCiv", "sessao": ""}], "5048433-27.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-009", "especie": "ApCiv", "sessao": ""}], "5162518-89.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-010", "especie": "ApCiv", "sessao": ""}], "5121645-47.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-011", "especie": "ApCiv", "sessao": ""}], "5153326-35.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-012", "especie": "ApCiv", "sessao": ""}], "5130034-55.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-013", "especie": "ApCiv", "sessao": ""}], "5184736-14.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-014", "especie": "ApCiv", "sessao": ""}], "5144660-45.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-016", "especie": "ApCiv", "sessao": ""}], "5202890-17.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-017", "especie": "ApCiv", "sessao": ""}], "5135516-47.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-018", "especie": "ApCiv", "sessao": ""}], "5088851-70.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-019", "especie": "ApCiv", "sessao": ""}], "5104946-15.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-020", "especie": "ApCiv", "sessao": ""}], "5123254-02.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-021", "especie": "ApCiv", "sessao": ""}], "5083437-91.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-022", "especie": "ApCiv", "sessao": ""}], "5187808-09.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-023", "especie": "ApCiv", "sessao": ""}], "5192017-55.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-024", "especie": "ApCiv", "sessao": ""}], "5129861-31.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-025", "especie": "ApCiv", "sessao": ""}], "5208715-05.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-026", "especie": "ApCiv", "sessao": ""}], "5088827-42.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-027", "especie": "ApCiv", "sessao": ""}], "5135340-68.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-028", "especie": "ApCiv", "sessao": ""}], "5089239-07.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-029", "especie": "ApCiv", "sessao": ""}], "5203006-23.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-030", "especie": "ApCiv", "sessao": ""}], "5074977-86.2024.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-031", "especie": "ApCiv", "sessao": ""}], "5190086-17.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-032", "especie": "ApCiv", "sessao": ""}], "5067901-74.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-033", "especie": "ApCiv", "sessao": ""}], "5000336-78.2024.4.03.6006": [{"tipo": "Modelo", "id": "par-modelo-rural-034", "especie": "ApCiv", "sessao": ""}], "5225833-91.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-035", "especie": "ApCiv", "sessao": ""}], "5176817-08.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-036", "especie": "ApCiv", "sessao": ""}], "5105717-56.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-037", "especie": "EDcl", "sessao": ""}], "5204226-56.2025.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-038", "especie": "", "sessao": ""}], "5151731-98.2026.4.03.9999": [{"tipo": "Modelo", "id": "par-modelo-rural-039", "especie": "", "sessao": ""}], "0025947-82.2026.4.03.8000": [{"tipo": "Modelo", "id": "par-modelo-rural-040", "especie": "EDcl", "sessao": ""}], "0001574-13.2016.4.03.6003": [{"tipo": "Precedente", "id": "par-0001574-13-2016-4-03-6003", "especie": "ApCiv", "sessao": "05/10/2026"}], "0000296-68.2025.4.03.6000": [{"tipo": "Precedente", "id": "par-0000296-68-2025-4-03-6000", "especie": "ApCiv", "sessao": "05/10/2026"}], "5001037-82.2023.4.03.6003": [{"tipo": "Precedente", "id": "par-5001037-82-2023-4-03-6003", "especie": "ApCiv", "sessao": "05/10/2026"}], "5002641-47.2024.4.03.6002": [{"tipo": "Precedente", "id": "par-5002641-47-2024-4-03-6002", "especie": "ApCiv", "sessao": "05/10/2026"}], "5002421-65.2018.4.03.6000": [{"tipo": "Precedente", "id": "par-5002421-65-2018-4-03-6000", "especie": "ApCiv", "sessao": "05/10/2026"}], "5094301-28.2025.4.03.9999": [{"tipo": "Precedente", "id": "par-5094301-28-2025-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5280563-52.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5280563-52-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5313891-70.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5313891-70-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5293064-38.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5293064-38-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5340893-15.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5340893-15-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5341817-26.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5341817-26-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5340918-28.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5340918-28-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5347655-47.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5347655-47-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5342044-16.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5342044-16-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5259101-39.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5259101-39-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5310175-35.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5310175-35-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5311503-97.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5311503-97-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5340242-80.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5340242-80-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5333822-59.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5333822-59-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5334078-02.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5334078-02-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5259172-41.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5259172-41-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5303330-84.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5303330-84-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5302231-79.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5302231-79-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5349387-63.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5349387-63-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5349241-22.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5349241-22-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5348616-85.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5348616-85-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5104176-56.2024.4.03.9999": [{"tipo": "Precedente", "id": "par-5104176-56-2024-4-03-9999", "especie": "EDcl", "sessao": "05/10/2026"}], "5275629-51.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5275629-51-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5257696-65.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5257696-65-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5214247-57.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5214247-57-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5141920-51.2025.4.03.9999": [{"tipo": "Precedente", "id": "par-5141920-51-2025-4-03-9999", "especie": "EDcl", "sessao": "05/10/2026"}], "5280066-38.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5280066-38-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5311783-68.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5311783-68-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5311722-13.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5311722-13-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5061462-13.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5061462-13-2026-4-03-9999", "especie": "EDcl", "sessao": "05/10/2026"}], "5338926-32.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5338926-32-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5348506-86.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5348506-86-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5340359-71.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5340359-71-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5313194-49.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5313194-49-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5334029-58.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5334029-58-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5340616-96.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5340616-96-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5340416-89.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5340416-89-2026-4-03-9999", "especie": "ApCiv", "sessao": "05/10/2026"}], "5006675-71.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5006675-71-2024-4-03-6000", "especie": "ApCiv", "sessao": "05/10/2026"}], "5006320-95.2023.4.03.6000": [{"tipo": "Precedente", "id": "par-5006320-95-2023-4-03-6000", "especie": "ApCiv", "sessao": "28/09/2026"}], "5008281-37.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5008281-37-2024-4-03-6000", "especie": "ApCiv", "sessao": "05/10/2026"}], "5005759-71.2023.4.03.6000": [{"tipo": "Precedente", "id": "par-5005759-71-2023-4-03-6000", "especie": "ApCiv", "sessao": "05/10/2026"}], "5005974-13.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5005974-13-2024-4-03-6000", "especie": "ApCiv", "sessao": "05/10/2026"}], "5007730-57.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5007730-57-2024-4-03-6000", "especie": "ApCiv", "sessao": "05/10/2026"}], "5006799-54.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5006799-54-2024-4-03-6000", "especie": "ApCiv", "sessao": "05/10/2026"}], "5001978-41.2023.4.03.6000": [{"tipo": "Precedente", "id": "par-5001978-41-2023-4-03-6000", "especie": "ApelRemNec", "sessao": "05/10/2026"}], "5003544-88.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5003544-88-2024-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5003454-12.2026.4.03.6000": [{"tipo": "Precedente", "id": "par-5003454-12-2026-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5003797-42.2025.4.03.6000": [{"tipo": "Precedente", "id": "par-5003797-42-2025-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5002762-81.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5002762-81-2024-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5006437-52.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5006437-52-2024-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5001524-12.2024.4.03.6005": [{"tipo": "Precedente", "id": "par-5001524-12-2024-4-03-6005", "especie": "ApCiv", "sessao": ""}], "5206086-58.2026.4.03.9999": [{"tipo": "Precedente", "id": "par-5206086-58-2026-4-03-9999", "especie": "ApCiv", "sessao": ""}], "5002484-80.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5002484-80-2024-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5003058-06.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5003058-06-2024-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5006171-65.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5006171-65-2024-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5009725-71.2025.4.03.6000": [{"tipo": "Precedente", "id": "par-5009725-71-2025-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5008082-15.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5008082-15-2024-4-03-6000", "especie": "ApCiv", "sessao": ""}], "5005384-36.2024.4.03.6000": [{"tipo": "Precedente", "id": "par-5005384-36-2024-4-03-6000", "especie": "ApCiv", "sessao": ""}]}
+{
+ "0000296-68.2025.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-0000296-68-2025-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "0001574-13.2016.4.03.6003": [
+  {
+   "tipo": "Precedente",
+   "id": "par-0001574-13-2016-4-03-6003",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5001037-82.2023.4.03.6003": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5001037-82-2023-4-03-6003",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5001524-12.2024.4.03.6005": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5001524-12-2024-4-03-6005",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5001978-41.2023.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5001978-41-2023-4-03-6000",
+   "especie": "ApelRemNec",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5002421-65.2018.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5002421-65-2018-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5002484-80.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5002484-80-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5002641-47.2024.4.03.6002": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5002641-47-2024-4-03-6002",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5002762-81.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5002762-81-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5003058-06.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5003058-06-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5003454-12.2026.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5003454-12-2026-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5003544-88.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5003544-88-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5003797-42.2025.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5003797-42-2025-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5005384-36.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5005384-36-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5005759-71.2023.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5005759-71-2023-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5005974-13.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5005974-13-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5006171-65.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5006171-65-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5006320-95.2023.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5006320-95-2023-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "28/09/2026"
+  }
+ ],
+ "5006437-52.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5006437-52-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5006675-71.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5006675-71-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5006799-54.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5006799-54-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5007730-57.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5007730-57-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5008082-15.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5008082-15-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5008281-37.2024.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5008281-37-2024-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5009725-71.2025.4.03.6000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5009725-71-2025-4-03-6000",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5024625-17.2025.4.03.0000": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5024625-17-2025-4-03-0000",
+   "especie": "AI",
+   "sessao": ""
+  },
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-039",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5061462-13.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5061462-13-2026-4-03-9999",
+   "especie": "EDcl",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5094301-28.2025.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5094301-28-2025-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5104176-56.2024.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5104176-56-2024-4-03-9999",
+   "especie": "EDcl",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5141920-51.2025.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5141920-51-2025-4-03-9999",
+   "especie": "EDcl",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5206086-58.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5206086-58-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5214247-57.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5214247-57-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5257696-65.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5257696-65-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5259101-39.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5259101-39-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5259172-41.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5259172-41-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5275629-51.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5275629-51-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5280066-38.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5280066-38-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5280563-52.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5280563-52-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5293064-38.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5293064-38-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5302231-79.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5302231-79-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5303330-84.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5303330-84-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5310175-35.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5310175-35-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5311503-97.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5311503-97-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5311722-13.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5311722-13-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5311783-68.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5311783-68-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5313194-49.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5313194-49-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5313891-70.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5313891-70-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5333822-59.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5333822-59-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5334029-58.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5334029-58-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5334078-02.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5334078-02-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5338926-32.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5338926-32-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5340242-80.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5340242-80-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5340359-71.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5340359-71-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5340416-89.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5340416-89-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5340616-96.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5340616-96-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5340893-15.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5340893-15-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5340918-28.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5340918-28-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5341817-26.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5341817-26-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5342044-16.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5342044-16-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5347655-47.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5347655-47-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5348506-86.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5348506-86-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5348616-85.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5348616-85-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5349241-22.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5349241-22-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5349387-63.2026.4.03.9999": [
+  {
+   "tipo": "Precedente",
+   "id": "par-5349387-63-2026-4-03-9999",
+   "especie": "ApCiv",
+   "sessao": "05/10/2026"
+  }
+ ],
+ "5002030-32.2026.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-001",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5009968-07.2024.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-002",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000618-94.2025.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-003",
+   "especie": "ApCiv + RemNec",
+   "sessao": ""
+  }
+ ],
+ "5000497-37.2023.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-004",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "0001195-07.2018.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-005",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5000104-68.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-006",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000008-83.2026.4.03.6005": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-007",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5019953-68.2022.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-008",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5033347-11.2023.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-009",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5027893-79.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-010",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5002592-33.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-011",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5011719-92.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-012",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000148-87.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-013",
+   "especie": "MS",
+   "sessao": ""
+  }
+ ],
+ "5010321-76.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-014",
+   "especie": "MS",
+   "sessao": ""
+  }
+ ],
+ "5000149-72.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-015",
+   "especie": "MS",
+   "sessao": ""
+  }
+ ],
+ "5000136-73.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-016",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000294-32.2024.4.03.6005": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-017",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5000006-83.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-018",
+   "especie": "MS",
+   "sessao": ""
+  }
+ ],
+ "0001003-42.2016.4.03.6003": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-019",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5212379-78.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-020",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5008045-72.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-021",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000089-02.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-022",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000135-88.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-023",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5008382-74.2024.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-024",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5001444-02.2021.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-025",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5012008-25.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-026",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5024117-71.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-027",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5009779-58.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-028",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5028715-68.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-029",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5010929-74.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-030",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5012795-20.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-031",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5030693-17.2024.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-032",
+   "especie": "AI",
+   "sessao": ""
+  },
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-135",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5010073-13.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-033",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5025874-03.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-034",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5014814-96.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-035",
+   "especie": "MS",
+   "sessao": ""
+  }
+ ],
+ "0014855-16.2014.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-036",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "0001889-16.2008.4.03.6005": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-037",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5012990-78.2021.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-038",
+   "especie": "AI",
+   "sessao": ""
+  },
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-136",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5013760-95.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-040",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5087384-56.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-041",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5000810-32.2022.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-042",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5001485-69.2020.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-043",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5002616-13.2020.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-044",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5005074-17.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-045",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5001980-25.2025.4.03.6005": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-046",
+   "especie": "RemNecCiv",
+   "sessao": ""
+  }
+ ],
+ "5028378-79.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-047",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "0000465-11.2009.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-048",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "0000128-31.2014.4.03.6007": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-049",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5007297-40.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-050",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5007357-13.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-051",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000094-24.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-052",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5005209-29.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-053",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5186539-66.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-054",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5000019-82.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-055",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5001945-48.2024.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-056",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "0007553-96.2015.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-057",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5000051-87.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-058",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5145414-84.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-059",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5193518-10.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-060",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5000055-27.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-061",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5024596-35.2023.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-062",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "0006190-74.2015.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-063",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "0000454-20.2016.4.03.6007": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-064",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5003937-23.2018.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-065",
+   "especie": "EDcl",
+   "sessao": ""
+  },
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-118",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5000405-93.2022.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-066",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5000821-91.2018.4.03.6005": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-067",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "0002406-25.2011.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-068",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5000746-25.2023.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-069",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5004619-38.2020.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-070",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5002933-06.2023.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-071",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "0007564-77.2005.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-072",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "0000861-17.2011.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-073",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5002609-24.2019.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-074",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5000138-43.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-075",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5029837-19.2025.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-076",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5011653-78.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-077",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000040-58.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-078",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000077-85.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-079",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5005012-74.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-080",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5007206-47.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-081",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5005508-06.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-082",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5010897-69.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-083",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5010466-35.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-084",
+   "especie": "AgInt",
+   "sessao": ""
+  }
+ ],
+ "5007267-05.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-085",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5016449-15.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-086",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5009638-39.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-087",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5006282-36.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-088",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000106-38.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-089",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000079-55.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-090",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000111-60.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-091",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5000187-84.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-092",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000158-34.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-093",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000176-55.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-094",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000200-83.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-095",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000196-46.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-096",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000193-91.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-098",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000099-46.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-099",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5013819-83.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-100",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5002884-81.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-101",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5015035-79.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-102",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5015370-98.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-103",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5001801-30.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-104",
+   "especie": "AgInt",
+   "sessao": ""
+  }
+ ],
+ "5000059-64.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-105",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5000194-76.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-106",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000202-53.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-107",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5010033-31.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-108",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5010961-79.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-109",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5000531-68.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-110",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5002516-72.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-111",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5008555-11.2018.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-112",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5211256-45.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-113",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5000119-50.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-114",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5172001-46.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-115",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5001803-41.2023.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-116",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5000005-98.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-117",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5007641-97.2025.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-119",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5090007-30.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-120",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5140392-79.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-121",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5144197-06.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-122",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5206085-73.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-123",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5184716-23.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-124",
+   "especie": "",
+   "sessao": ""
+  },
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-015",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5204391-69.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-125",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5000090-84.2026.4.03.0001": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-126",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5070690-12.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-127",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5097882-51.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-128",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5151753-59.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-129",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5067395-64.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-130",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5000621-87.2018.4.03.6004": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-131",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5008387-96.2024.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-132",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5002175-25.2025.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-133",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5027853-05.2022.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-134",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5217062-27.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-137",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5000473-31.2022.4.03.6006": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-138",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5005152-89.2023.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-139",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5001576-57.2023.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-140",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "0005914-81.2008.4.03.6002": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-141",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "0000200-53.2025.4.03.6000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-142",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5017313-53.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-143",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5011486-61.2026.4.03.0000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-144",
+   "especie": "AI",
+   "sessao": ""
+  }
+ ],
+ "5000733-14.2022.4.03.6005": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-m8-145",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5208727-19.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-001",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5126597-06.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-002",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5124114-66.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-003",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5176293-74.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-004",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5214421-66.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-005",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5225936-98.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-006",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5165561-34.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-007",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5162465-11.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-008",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5048433-27.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-009",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5162518-89.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-010",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5121645-47.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-011",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5153326-35.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-012",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5130034-55.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-013",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5184736-14.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-014",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5144660-45.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-016",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5202890-17.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-017",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5135516-47.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-018",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5088851-70.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-019",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5104946-15.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-020",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5123254-02.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-021",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5083437-91.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-022",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5187808-09.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-023",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5192017-55.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-024",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5129861-31.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-025",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5208715-05.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-026",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5088827-42.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-027",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5135340-68.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-028",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5089239-07.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-029",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5203006-23.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-030",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5074977-86.2024.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-031",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5190086-17.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-032",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5067901-74.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-033",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5000336-78.2024.4.03.6006": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-034",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5225833-91.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-035",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5176817-08.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-036",
+   "especie": "ApCiv",
+   "sessao": ""
+  }
+ ],
+ "5105717-56.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-037",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ],
+ "5204226-56.2025.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-038",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "5151731-98.2026.4.03.9999": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-039",
+   "especie": "",
+   "sessao": ""
+  }
+ ],
+ "0025947-82.2026.4.03.8000": [
+  {
+   "tipo": "Modelo",
+   "id": "par-modelo-rural-040",
+   "especie": "EDcl",
+   "sessao": ""
+  }
+ ]
+}

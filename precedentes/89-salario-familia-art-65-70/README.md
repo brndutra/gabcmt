@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5059479-13.2025.4.03.9999 | 14/04/2026 | desprovido | Salário-família. Termo inicial do pagamento. Data do requerimento administrativo | salário-família; termo inicial do pagamento; data do requerimento administrativo; desprovimento do recurso |
+| 5059479-13.2025.4.03.9999 | 14/04/2026 | desprovido | Data do requerimento administrativo. Salário-família. Termo inicial do pagamento | salário-família; termo inicial do pagamento; data do requerimento administrativo; desprovimento do recurso |
 
 </details>
 

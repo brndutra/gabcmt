@@ -8,11 +8,11 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T624** · Renovação de matrículas. Sisfies. Fies. Erro operacional | 3 | 1 parcialmente provido, 2 desprovido | fies (3); aditamentos contratuais (2); erro operacional (2); mandado de segurança (2) | [T624-renovacao-de-matriculas-sisfies-fies-erro-operacional.json](T624-renovacao-de-matriculas-sisfies-fies-erro-operacional.json) |
+| **T624** · Aditamentos contratuais. Erro operacional. Fies. Renovação de matrículas | 3 | 1 parcialmente provido, 2 desprovido | fies (3); aditamentos contratuais (2); erro operacional (2); mandado de segurança (2) | [T624-aditamentos-contratuais-erro-operacional-fies-renovacao.json](T624-aditamentos-contratuais-erro-operacional-fies-renovacao.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T624</b> · Renovação de matrículas. Sisfies. Fies. Erro operacional — 3 casos</summary>
+<details><summary><b>T624</b> · Aditamentos contratuais. Erro operacional. Fies. Renovação de matrículas — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|

@@ -1,0 +1,2294 @@
+{
+  "schema": "gabA.paragrafos",
+  "schema_versao": 1,
+  "versao": "2026-10-13",
+  "atualizado_em": "2026-10-13T21:38:09.654Z",
+  "registros": [
+    {
+      "id": "adm.nao",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Não conhecimento",
+      "status": "estrutural",
+      "texto": "Não conheço {art} {recurso}, por {inadmissibilidade|FUNDAMENTO DA INADMISSIBILIDADE}.",
+      "variaveis": [
+        {
+          "campo": "art",
+          "rotulo": ""
+        },
+        {
+          "campo": "recurso",
+          "rotulo": ""
+        },
+        {
+          "campo": "inadmissibilidade",
+          "rotulo": "FUNDAMENTO DA INADMISSIBILIDADE"
+        }
+      ],
+      "nivelTema": "Conhecimento do recurso",
+      "nivelEspecificidade": "Não conhecimento",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "adm.parcial",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Conhecimento parcial",
+      "status": "estrutural",
+      "texto": "Presentes, em parte, os pressupostos de admissibilidade, conheço parcialmente {art} {recurso}, ressalvada [DELIMITAÇÃO DO NÃO CONHECIMENTO].",
+      "variaveis": [
+        {
+          "campo": "art",
+          "rotulo": ""
+        },
+        {
+          "campo": "recurso",
+          "rotulo": ""
+        },
+        {
+          "campo": "",
+          "rotulo": "DELIMITAÇÃO DO NÃO CONHECIMENTO",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Conhecimento do recurso",
+      "nivelEspecificidade": "Conhecimento parcial",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "adm.sim",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Conhecimento integral",
+      "status": "estrutural",
+      "texto": "Presentes os pressupostos de admissibilidade, conheço {art} {recurso}.",
+      "variaveis": [
+        {
+          "campo": "art",
+          "rotulo": ""
+        },
+        {
+          "campo": "recurso",
+          "rotulo": ""
+        }
+      ],
+      "nivelTema": "Conhecimento do recurso",
+      "nivelEspecificidade": "Conhecimento integral",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "admiss.932",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Poderes do relator — artigo 932 do CPC",
+      "status": "padrao",
+      "uso": "Monocráticas terminativas: enquadramento do julgamento singular (19 ocorrências integrais).",
+      "texto": "Nos termos do artigo 932 do CPC, incumbe ao relator, por decisão monocrática: não conhecer de recurso inadmissível, prejudicado ou não impugnado em específico quanto aos fundamentos da decisão recorrida (inciso III); negar provimento a recurso contrário a súmulas de Tribunais Superiores ou da própria Corte (inciso IV, a), a julgados repetitivos de Cortes Superiores (inciso IV, b) e a entendimento firmado em incidente de resolução de demandas repetitivas ou de assunção de competência (inciso IV, c); e, facultadas contrarrazões, dar provimento ao recurso se a decisão recorrida contrariar súmula de Tribunais Superiores ou da própria Corte (inciso V, a), julgado repetitivo de Cortes Superiores (inciso V, b), e entendimento firmado em incidente de resolução de demandas repetitivas ou de assunção de competência (inciso V, c).",
+      "especificidadesTags": "julgamento monocrático; artigo 932",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Julgamento monocrático (artigo 932 do CPC)",
+      "nivelEspecificidade": "Fundamento legal",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "admiss.932.enquadra",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Enquadramento — hipótese comporta julgamento singular",
+      "status": "padrao",
+      "uso": "Fecha o bloco do artigo 932 do CPC; depois vem o juízo de admissibilidade ou de mérito, em frase curta.",
+      "texto": "A hipótese comporta julgamento sob tais parâmetros.",
+      "especificidadesTags": "julgamento monocrático; artigo 932",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Julgamento monocrático (artigo 932 do CPC)",
+      "nivelEspecificidade": "Enquadramento do caso",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "admiss.932.stj",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Poderes do relator — orientação da Corte Superior",
+      "status": "padrao",
+      "uso": "Segue o bloco do artigo 932 do CPC.",
+      "texto": "Segundo a Corte Superior, a legislação processual também permite “ao relator decidir monocraticamente o recurso, quando amparado em jurisprudência dominante ou Súmula de Tribunal Superior, consoante exegese do art. 932, IV e V, do CPC/2015. Eventual mácula na deliberação unipessoal fica superada, em razão da apreciação da matéria pelo órgão colegiado na seara do agravo interno” (AgInt nos EDcl no CC 139.267, Rel. Min. MARCO BUZZI, DJe 18/11/2016; AINTARESP 1.524.177, Rel. Min. MARCO BELLIZZE, DJE 12/12/2019; AIRESP 1.807.225, Rel. Min. LUIS FELIPE SALOMÃO, DJE 26/11/2019; AIRESP 1.702.970, Rel. Min. PAULO SANSEVERINO, DJE 30/08/2019; AIRESP 1.365.096, Rel. Min. RAUL ARAÚJO, DJE 01/07/2019; e AIRESP 1.794.297, Rel. Min. OG FERNANDES, DJE 12/06/2019).",
+      "especificidadesTags": "julgamento monocrático; artigo 932",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Julgamento monocrático (artigo 932 do CPC)",
+      "nivelEspecificidade": "Orientação da Corte Superior",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "cit.corte",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "Precedente ratificador — Corte",
+      "status": "estrutural",
+      "texto": "Em casos que tais, assim tem decidido a Corte:",
+      "variaveis": [],
+      "nivelTema": "Precedente ratificador",
+      "nivelEspecificidade": "Corte",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.j01",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "J01 · Precedente confirmatório",
+      "status": "preferencial",
+      "texto": "Neste sentido:",
+      "uso": "Expressão documentada no compêndio. Adequada quando o fundamento jurídico já foi exposto. Opção principal do construtor.",
+      "variaveis": [],
+      "nivelTema": "Jurisprudência — introdução",
+      "nivelEspecificidade": "J01 · Precedente confirmatório",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.j02",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "J02 · Precedente do tribunal",
+      "status": "variante",
+      "texto": "Neste sentido, precedente da Corte:",
+      "uso": "Construção identificada no modelo de deserção do compêndio.",
+      "variaveis": [],
+      "nivelTema": "Jurisprudência — introdução",
+      "nivelEspecificidade": "J02 · Precedente do tribunal",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.j03",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "J03 · Jurisprudência consolidada",
+      "status": "variante",
+      "texto": "Consolidada a jurisprudência do Superior Tribunal de Justiça no sentido de que [TESE JURÍDICA], conforme [REFERÊNCIA JURISPRUDENCIAL].",
+      "uso": "Baseada na redação do capítulo de gratuidade da justiça. Reservar para orientação efetivamente consolidada.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "TESE JURÍDICA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "REFERÊNCIA JURISPRUDENCIAL",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Jurisprudência — introdução",
+      "nivelEspecificidade": "J03 · Jurisprudência consolidada",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.j04",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "J04 · Entendimento convergente",
+      "status": "variante",
+      "texto": "Conforme jurisprudência do [TRIBUNAL], [TESE JURÍDICA APLICÁVEL], segundo [PRECEDENTE].",
+      "uso": "Adaptação da construção localizada no capítulo de competência do compêndio.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "TRIBUNAL",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "TESE JURÍDICA APLICÁVEL",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "PRECEDENTE",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Jurisprudência — introdução",
+      "nivelEspecificidade": "J04 · Entendimento convergente",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.j05",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "J05 · Tema repetitivo",
+      "status": "especifico",
+      "texto": "A matéria foi objeto de exame pelo [TRIBUNAL] no julgamento do Tema [NÚMERO], em que se firmou entendimento no sentido de que [TESE EFETIVAMENTE FIXADA].",
+      "uso": "Fórmula adaptada. Exige conferência do alcance da tese e de eventual suspensão ou superação.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "TRIBUNAL",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "NÚMERO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "TESE EFETIVAMENTE FIXADA",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Jurisprudência — introdução",
+      "nivelEspecificidade": "J05 · Tema repetitivo",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.j06",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "J06 · Distinção",
+      "status": "variante",
+      "texto": "Não se aplica à espécie o entendimento firmado no [PRECEDENTE], pois [DISTINÇÃO FÁTICA OU JURÍDICA DETERMINANTE].",
+      "uso": "Para individualizar o motivo da inaplicabilidade do precedente.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "PRECEDENTE",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "DISTINÇÃO FÁTICA OU JURÍDICA DETERMINANTE",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Jurisprudência — introdução",
+      "nivelEspecificidade": "J06 · Distinção",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.padrao",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "Introdução curta + transcrição isolada",
+      "status": "estrutural",
+      "texto": "Neste sentido:\n\n“[TRECHO LITERAL DA JURISPRUDÊNCIA, SEM ALTERAÇÃO DO TEXTO ORIGINAL.]”\n\n[CLASSE NÚMERO], Rel. [RELATOR], [DATA DE PUBLICAÇÃO OU JULGAMENTO].",
+      "uso": "Padrão fixo (artigos 3º e 5º do Manual): transcrição em parágrafo próprio, entre aspas e em itálico; referência com classe, número, relator e data, sem a unidade federativa. Use “+ Citação” no capítulo para montá-la automaticamente.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "TRECHO LITERAL DA JURISPRUDÊNCIA, SEM ALTERAÇÃO DO TEXTO ORIGINAL.",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "CLASSE NÚMERO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "RELATOR",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "DATA DE PUBLICAÇÃO OU JULGAMENTO",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Citação estruturada",
+      "nivelEspecificidade": "Introdução curta + transcrição isolada",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.stj",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "Precedente — Superior Tribunal de Justiça",
+      "status": "estrutural",
+      "texto": "Neste sentido é o entendimento do Superior Tribunal de Justiça:",
+      "variaveis": [],
+      "nivelTema": "Precedente ratificador",
+      "nivelEspecificidade": "Superior Tribunal de Justiça",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "cit.turma",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "Precedente ratificador — Turma Regional",
+      "status": "estrutural",
+      "texto": "Em casos que tais, assim tem decidido esta Turma Regional:",
+      "variaveis": [],
+      "nivelTema": "Precedente ratificador",
+      "nivelEspecificidade": "Turma Regional",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "consect.especifico",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Critérios específicos — Tema 810 → Selic (autônomo)",
+      "status": "especifico",
+      "texto": "As parcelas vencidas deverão ser objeto de um único pagamento e serão corrigidas monetariamente e acrescidas de juros de mora em conformidade com o entendimento firmado pelo Supremo Tribunal Federal no RE 870.947 (Tema 810 da Repercussão Geral), até a entrada em vigor da EC 113/2021, quando então passará a incidir, de forma exclusiva, a taxa Selic, conforme disposto no Manual de Cálculos da Justiça Federal e na Nota Técnica 02/2025 do CJF, emitida após a entrada em vigor da EC 136/2025.",
+      "uso": "Redação detalhada: reservar para discussão muito específica; por ora prevalece o padrão genérico.",
+      "variaveis": [],
+      "nivelTema": "Consectários legais — Critérios específicos (Tema 810 → Selic)",
+      "nivelEspecificidade": "Autônomo",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "consect.especifico.conector",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Critérios específicos — Tema 810 → Selic (com conector)",
+      "status": "especifico",
+      "texto": "Nesse sentido, as parcelas vencidas deverão ser objeto de um único pagamento e serão corrigidas monetariamente e acrescidas de juros de mora em conformidade com o entendimento firmado pelo Supremo Tribunal Federal no RE 870.947 (Tema 810 da Repercussão Geral), até a entrada em vigor da EC 113/2021, quando então passará a incidir, de forma exclusiva, a taxa Selic, conforme disposto no Manual de Cálculos da Justiça Federal e na Nota Técnica 02/2025 do CJF, emitida após a entrada em vigor da EC 136/2025.",
+      "uso": "Fecha a sequência da reforma de ofício. Redação detalhada: reservar para discussão muito específica; por ora prevalece o padrão genérico.",
+      "variaveis": [],
+      "nivelTema": "Consectários legais — Critérios específicos (Tema 810 → Selic)",
+      "nivelEspecificidade": "Com conector",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "consect.generico",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Padrão genérico — uniformização vigente",
+      "status": "padrao",
+      "texto": "As parcelas vencidas, por possuírem natureza alimentar, devem ser objeto de pagamento único, corrigidas monetariamente e acrescidas de juros de mora, nos termos do Manual de Cálculos da Justiça Federal vigente, cuja metodologia é baseada na jurisprudência consolidada e precedentes vinculantes firmados pelas Cortes Superiores a respeito da legislação de regência, especificamente indicados no documento para cada espécie.",
+      "uso": "Uniformização (padrão mais genérico). Aparece em praticamente todos os processos em que houve condenação do INSS ao pagamento de valores atrasados: concessão ou revisão de aposentadorias (rural, idade, tempo de contribuição, invalidez), BPC/LOAS, auxílio-doença e pensão por morte. Os modelos com todos os critérios especificados (itens 68 e 73) ficam para discussões muito específicas.",
+      "variaveis": [],
+      "nivelTema": "Consectários legais — Padrão genérico",
+      "nivelEspecificidade": "Uniformização vigente",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "consect.oficio.ordem",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Reforma de ofício — matéria de ordem pública",
+      "status": "especifico",
+      "texto": "Tratando os consectários legais de matéria de ordem pública, o efeito translativo do recurso permite a reapreciação da questão pelo órgão ad quem, ainda que de ofício.",
+      "uso": "Usar apenas quando houver reforma de ofício dos consectários, em discussão específica.",
+      "variaveis": [],
+      "nivelTema": "Consectários legais — Reforma de ofício",
+      "nivelEspecificidade": "Matéria de ordem pública",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "consect.oficio.redefinir",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Reforma de ofício — necessidade de redefinir parâmetros",
+      "status": "especifico",
+      "texto": "Entretanto, já que as prestações serão atualizadas até a data do pagamento, ainda não efetivado, é evidente que haverá incidência de juros de mora e correção monetária após a entrada em vigor da EC 113/2021, razão pela qual há necessidade de redefinir os parâmetros do cálculo.",
+      "variaveis": [],
+      "nivelTema": "Consectários legais — Reforma de ofício",
+      "nivelEspecificidade": "Redefinição de parâmetros",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "consect.oficio.sentenca",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Reforma de ofício — sentença anterior à EC 113/2021",
+      "status": "especifico",
+      "texto": "Verifica-se que sentença foi proferida em {dataSentenca|DATA DA SENTENÇA}, antes, portanto, da vigência do artigo 3º da EC 113/2021, e da alteração promovida pela EC 136/2025, de modo que a atualização monetária foi estabelecida conforme a legislação então vigente, notadamente os artigos 41-A da Lei 8.213/1991 e 1º-F da Lei 9.494/1997.",
+      "uso": "Informe a data da sentença na seção “Consectários e custas”.",
+      "variaveis": [
+        {
+          "campo": "dataSentenca",
+          "rotulo": "DATA DA SENTENÇA"
+        }
+      ],
+      "nivelTema": "Consectários legais — Reforma de ofício",
+      "nivelEspecificidade": "Sentença anterior à EC 113/2021",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "custas.ms.texto01",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Texto 01 — síntese",
+      "status": "variante",
+      "texto": "Não há isenção para o INSS diante da atuação em primeiro grau perante o Juízo Estadual no exercício da competência delegada (Súmula 178 do STJ e artigo 24, § 1º, da Lei Estadual 3.779/2009 do Mato Grosso do Sul).",
+      "uso": "Somente quando expressamente pedido.",
+      "variaveis": [],
+      "nivelTema": "Custas — Competência delegada (MS)",
+      "nivelEspecificidade": "Texto 01 — síntese",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "custas.ms.texto02",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Texto 02 — redação anterior",
+      "status": "anterior",
+      "texto": "As autarquias são isentas do pagamento de custas na Justiça Federal, a teor do disposto no artigo 4º, inciso I, da Lei 9.289/96. Ocorre que, inobstante tal fato, a normatização sobre a respectiva cobrança nas causas ajuizadas perante a Justiça Estadual, no exercício da competência delegada, nos termos do artigo 1º, § 1º, do mesmo diploma legal, é delegada à legislação estadual.\n\nDesta feita, quanto aos processos que tramitaram no Estado do Mato Grosso do Sul, tal qual o presente, é de se atribuir ao INSS o ônus do pagamento das custas processuais, nos termos do artigo 24, §§ 1º e 2º da Lei 3.779/09, ressaltando-se que o recolhimento deve ser exigido somente ao final da demanda, do vencido.",
+      "uso": "Redação anterior à uniformização (Lei 9.289/96, “inobstante”). Preferir a redação uniformizada.",
+      "variaveis": [],
+      "nivelTema": "Custas — Competência delegada (MS)",
+      "nivelEspecificidade": "Texto 02 — redação anterior",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "custas.ms.uniformizado",
+      "categoria": "Encerramento › Consectários e custas",
+      "titulo": "Custas na Justiça Estadual — redação uniformizada",
+      "status": "pedido",
+      "texto": "Em relação às custas e despesas processuais, as autarquias são isentas do pagamento de custas na Justiça Federal, a teor do disposto no artigo 4º, I, da Lei 9.289/1996. Ocorre que, não obstante tal fato, a normatização sobre a respectiva cobrança nas causas ajuizadas perante a Justiça Estadual, no exercício da competência delegada, nos termos do artigo 1º, § 1º, do mesmo diploma legal, é delegada à legislação estadual.\n\nDesta feita, quanto aos processos que tramitaram no Estado de Mato Grosso do Sul, tal qual o presente, é de se atribuir ao INSS o ônus do pagamento das custas processuais, nos termos do artigo 24, §§ 1º e 2º da Lei Estadual 3.779/2009, ressaltando-se que o recolhimento deve ser exigido somente ao final da demanda, do vencido.",
+      "uso": "Uniformização: suprimir e incluir apenas quando expressamente pedido. Aparece nos processos de competência delegada — previdenciários e assistenciais que tramitaram nas comarcas do interior de MS sem sede da Justiça Federal.",
+      "variaveis": [],
+      "nivelTema": "Custas — Competência delegada (MS)",
+      "nivelEspecificidade": "Redação uniformizada",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Consectários e custas"
+    },
+    {
+      "id": "disp.932.naoconhece",
+      "categoria": "Encerramento › Dispositivo",
+      "titulo": "Não conhecimento — artigo 932, III, do CPC",
+      "status": "padrao",
+      "uso": "Monocrática: dispositivo ancorado na norma, na primeira pessoa.",
+      "texto": "Ante o exposto, com esteio no artigo 932, III, do CPC, não conheço do {recursoNome|RECURSO}.",
+      "especificidadesTags": "julgamento monocrático; artigo 932",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Julgamento monocrático",
+      "nivelEspecificidade": "Não conhecimento (artigo 932, III)",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Dispositivo"
+    },
+    {
+      "id": "disp.fecho",
+      "categoria": "Encerramento › Dispositivo",
+      "titulo": "Encerramento do voto",
+      "status": "estrutural",
+      "texto": "É como voto.",
+      "variaveis": [],
+      "nivelTema": "Encerramento",
+      "nivelEspecificidade": "É como voto",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Dispositivo"
+    },
+    {
+      "id": "disp.final",
+      "categoria": "Encerramento › Dispositivo",
+      "titulo": "Dispositivo",
+      "status": "estrutural",
+      "texto": "Ante o exposto, {pre}{ending}{efeitos}{comando}.",
+      "variaveis": [
+        {
+          "campo": "pre",
+          "rotulo": ""
+        },
+        {
+          "campo": "ending",
+          "rotulo": ""
+        },
+        {
+          "campo": "efeitos",
+          "rotulo": ""
+        },
+        {
+          "campo": "comando",
+          "rotulo": ""
+        }
+      ],
+      "nivelTema": "Dispositivo",
+      "nivelEspecificidade": "Padrão",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Dispositivo"
+    },
+    {
+      "id": "doc.administrativo",
+      "categoria": "Documentação › Processo administrativo",
+      "titulo": "Processo administrativo / requerimento",
+      "status": "estrutural",
+      "texto": "Na via administrativa, os documentos (ID {ids|ID(S)}{data}) registram {conteudo|ANDAMENTO / DECISÃO / REQUERIMENTO}, tendo sido consignado {conclusao|RESULTADO DOCUMENTADO}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "ANDAMENTO / DECISÃO / REQUERIMENTO"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "RESULTADO DOCUMENTADO"
+        }
+      ],
+      "nivelTema": "Processo administrativo / requerimento",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Processo administrativo"
+    },
+    {
+      "id": "doc.analise",
+      "categoria": "Documentação › Confronto e valoração das provas",
+      "titulo": "Complemento — apreciação do julgador",
+      "status": "estrutural",
+      "texto": " Na apreciação do conjunto probatório, {analise}.",
+      "variaveis": [
+        {
+          "campo": "analise",
+          "rotulo": ""
+        }
+      ],
+      "nivelTema": "Valoração da prova",
+      "nivelEspecificidade": "Apreciação do julgador — primeiro documento",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Confronto e valoração das provas"
+    },
+    {
+      "id": "doc.analise2",
+      "categoria": "Documentação › Confronto e valoração das provas",
+      "titulo": "Complemento — apreciação do julgador (documentos seguintes)",
+      "status": "estrutural",
+      "texto": " Nesse contexto, {analise}.",
+      "uso": "Usado a partir do segundo documento com apreciação, para não repetir a mesma abertura.",
+      "variaveis": [
+        {
+          "campo": "analise",
+          "rotulo": ""
+        }
+      ],
+      "nivelTema": "Valoração da prova",
+      "nivelEspecificidade": "Apreciação do julgador — documentos seguintes",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Confronto e valoração das provas"
+    },
+    {
+      "id": "doc.complementar",
+      "categoria": "Documentação › Laudos e perícias",
+      "titulo": "Laudo pericial complementar",
+      "status": "estrutural",
+      "texto": "Em complementação à prova pericial (ID {ids|ID(S)}{data}), foram prestados esclarecimentos sobre {conteudo|QUESITOS OU QUESTÕES ESCLARECIDAS}, concluindo-se por {conclusao|CONCLUSÃO COMPLEMENTAR}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "QUESITOS OU QUESTÕES ESCLARECIDAS"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "CONCLUSÃO COMPLEMENTAR"
+        }
+      ],
+      "nivelTema": "Laudo pericial complementar",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Laudos e perícias"
+    },
+    {
+      "id": "doc.contraste",
+      "categoria": "Documentação › Confronto e valoração das provas",
+      "titulo": "Complemento — confronto probatório",
+      "status": "estrutural",
+      "texto": " Em confronto com os demais elementos probatórios, observa-se {contraste}.",
+      "variaveis": [
+        {
+          "campo": "contraste",
+          "rotulo": ""
+        }
+      ],
+      "nivelTema": "Valoração da prova",
+      "nivelEspecificidade": "Confronto probatório",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Confronto e valoração das provas"
+    },
+    {
+      "id": "doc.financeiro",
+      "categoria": "Documentação › Fichas financeiras",
+      "titulo": "Fichas financeiras / contracheques",
+      "status": "estrutural",
+      "texto": "As fichas financeiras e os comprovantes remuneratórios (ID {ids|ID(S)}{data}) indicam {conteudo|RUBRICAS, PERÍODOS E VALORES}, conforme {conclusao|RESULTADO DA VERIFICAÇÃO}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "RUBRICAS, PERÍODOS E VALORES"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "RESULTADO DA VERIFICAÇÃO"
+        }
+      ],
+      "nivelTema": "Fichas financeiras / contracheques",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Fichas financeiras"
+    },
+    {
+      "id": "doc.geral",
+      "categoria": "Documentação › Documentação geral",
+      "titulo": "Documentação geral / prova documental",
+      "status": "estrutural",
+      "texto": "A documentação constante dos autos (ID {ids|ID(S)}{data}) registra {conteudo|CONTEÚDO RELEVANTE}, do que se extrai {conclusao|ALCANCE OBJETIVO DO DOCUMENTO}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "CONTEÚDO RELEVANTE"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "ALCANCE OBJETIVO DO DOCUMENTO"
+        }
+      ],
+      "nivelTema": "Documentação geral / prova documental",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Documentação geral"
+    },
+    {
+      "id": "doc.impugnacao",
+      "categoria": "Documentação › Outros documentos",
+      "titulo": "Impugnação / manifestação sobre prova",
+      "status": "estrutural",
+      "texto": "Em manifestação sobre a prova (ID {ids|ID(S)}{data}), {parte|PARTE} questionou {conteudo|ASPECTOS IMPUGNADOS}, sustentando {conclusao|ALEGAÇÃO}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "parte",
+          "rotulo": "PARTE"
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "ASPECTOS IMPUGNADOS"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "ALEGAÇÃO"
+        }
+      ],
+      "nivelTema": "Impugnação / manifestação sobre prova",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Outros documentos"
+    },
+    {
+      "id": "doc.laboral",
+      "categoria": "Documentação › CTPS / CNIS",
+      "titulo": "CTPS / CNIS / vínculos laborais",
+      "status": "estrutural",
+      "texto": "Os registros laborais (ID {ids|ID(S)}{data}) demonstram {conteudo|VÍNCULOS, ATIVIDADES OU PERÍODOS REGISTRADOS}, segundo {conclusao|INFORMAÇÃO OBJETIVA}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "VÍNCULOS, ATIVIDADES OU PERÍODOS REGISTRADOS"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "INFORMAÇÃO OBJETIVA"
+        }
+      ],
+      "nivelTema": "CTPS / CNIS / vínculos laborais",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "CTPS / CNIS"
+    },
+    {
+      "id": "doc.medico",
+      "categoria": "Documentação › Relatórios e prontuários médicos",
+      "titulo": "Atestado ou relatório médico",
+      "status": "estrutural",
+      "texto": "O relatório ou atestado médico (ID {ids|ID(S)}{data}){origem} registra {conteudo|CONTEÚDO CLÍNICO DOCUMENTADO}, com indicação de {conclusao|CONCLUSÃO CONSIGNADA}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "origem",
+          "rotulo": ""
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "CONTEÚDO CLÍNICO DOCUMENTADO"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "CONCLUSÃO CONSIGNADA"
+        }
+      ],
+      "nivelTema": "Atestado ou relatório médico",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Relatórios e prontuários médicos"
+    },
+    {
+      "id": "doc.pericia",
+      "categoria": "Documentação › Laudos e perícias",
+      "titulo": "Laudo médico-pericial judicial",
+      "status": "estrutural",
+      "texto": "O laudo pericial judicial (ID {ids|ID(S)}{data}){origem} examinou {conteudo|ELEMENTOS EFETIVAMENTE ANALISADOS} e concluiu por {conclusao|CONCLUSÃO PERICIAL}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "origem",
+          "rotulo": ""
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "ELEMENTOS EFETIVAMENTE ANALISADOS"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "CONCLUSÃO PERICIAL"
+        }
+      ],
+      "nivelTema": "Laudo médico-pericial judicial",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Laudos e perícias"
+    },
+    {
+      "id": "doc.prontuario",
+      "categoria": "Documentação › Relatórios e prontuários médicos",
+      "titulo": "Prontuário / exames clínicos",
+      "status": "estrutural",
+      "texto": "Os prontuários e exames médicos (ID {ids|ID(S)}{data}) registram {conteudo|ACHADOS OBJETIVOS}, indicando {conclusao|ALCANCE DOCUMENTAL}.",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": "ID(S)"
+        },
+        {
+          "campo": "data",
+          "rotulo": ""
+        },
+        {
+          "campo": "conteudo",
+          "rotulo": "ACHADOS OBJETIVOS"
+        },
+        {
+          "campo": "conclusao",
+          "rotulo": "ALCANCE DOCUMENTAL"
+        }
+      ],
+      "nivelTema": "Prontuário / exames clínicos",
+      "nivelEspecificidade": "Parágrafo-base",
+      "nivelCategoria": "Documentação",
+      "nivelSubsecao": "Relatórios e prontuários médicos"
+    },
+    {
+      "id": "fecho.ai",
+      "categoria": "Encerramento › Dispositivo",
+      "titulo": "Agravo de instrumento — decisão terminativa",
+      "status": "padrao",
+      "texto": "Comunique-se o Juízo de origem.\n\nPublique-se. Intime-se.\n\nOportunamente, arquivem-se os autos.\n\nCampo Grande, data da assinatura.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "fecho",
+      "nivelTema": "Fecho processual (decisão monocrática)",
+      "nivelEspecificidade": "Agravo de instrumento",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Dispositivo"
+    },
+    {
+      "id": "fecho.apelacao",
+      "categoria": "Encerramento › Dispositivo",
+      "titulo": "Apelação — decisão terminativa",
+      "status": "padrao",
+      "texto": "Publique-se. Intime-se.\n\nApós, baixem os autos à Vara de origem.\n\nCampo Grande, data da assinatura.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "fecho",
+      "nivelTema": "Fecho processual (decisão monocrática)",
+      "nivelEspecificidade": "Apelação",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Dispositivo"
+    },
+    {
+      "id": "fecho.despacho",
+      "categoria": "Encerramento › Dispositivo",
+      "titulo": "Despacho",
+      "status": "padrao",
+      "texto": "Após, tornem os autos conclusos.\n\nIntime-se.\n\nCampo Grande, data da assinatura.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "fecho; despacho",
+      "nivelTema": "Fecho processual (decisão monocrática)",
+      "nivelEspecificidade": "Despacho",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Dispositivo"
+    },
+    {
+      "id": "fecho.recurso",
+      "categoria": "Genéricos › Transições e estrutura",
+      "titulo": "Fecho — recurso desprovido",
+      "status": "estrutural",
+      "texto": "Assim, nada colhe o recurso{recorrenteDe}.",
+      "variaveis": [
+        "recorrenteDe"
+      ],
+      "nivelTema": "Fecho da fundamentação",
+      "nivelEspecificidade": "Recurso desprovido",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Transições e estrutura"
+    },
+    {
+      "id": "fund.exemplo",
+      "categoria": "Seção › 1ª Seção",
+      "titulo": "Legitimidade ativa em cumprimento individual de sentença coletiva",
+      "status": "variante",
+      "texto": "Senhores Desembargadores, a controvérsia recursal diz respeito à legitimidade ativa para o cumprimento individual do título judicial formado na ação coletiva [PROCESSO].\n\nInicialmente, cabe observar que a delimitação subjetiva do título executivo deve considerar [CONTEÚDO DO TÍTULO E DA COISA JULGADA].\n\nNa espécie, a parte exequente [SITUAÇÃO RELEVANTE], conforme [DOCUMENTOS E ID’S], circunstância que [APLICAÇÃO AO CASO].\n\nNesse cenário, [CONCLUSÃO FUNDAMENTADA SOBRE A LEGITIMIDADE].\n\nNeste sentido:\n\n“[TRANSCRIÇÃO LITERAL DO PRECEDENTE]”\n\n[REFERÊNCIA COMPLETA].",
+      "uso": "Exemplo de redação integrada: questão → normas e provas → conclusão → jurisprudência ratificadora (artigo 11 do Manual). Os campos variáveis impedem que uma conclusão seja presumida.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "PROCESSO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "CONTEÚDO DO TÍTULO E DA COISA JULGADA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "SITUAÇÃO RELEVANTE",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "DOCUMENTOS E ID’S",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "APLICAÇÃO AO CASO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "CONCLUSÃO FUNDAMENTADA SOBRE A LEGITIMIDADE",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "TRANSCRIÇÃO LITERAL DO PRECEDENTE",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "REFERÊNCIA COMPLETA",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Cumprimento individual de sentença coletiva",
+      "nivelEspecificidade": "Legitimidade ativa",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "1ª Seção"
+    },
+    {
+      "id": "hon.ajg",
+      "categoria": "Encerramento › Honorários",
+      "titulo": "Ressalva da gratuidade",
+      "status": "estrutural",
+      "texto": ", observada a gratuidade de justiça concedida (artigo 98, § 3º, do CPC)",
+      "variaveis": [],
+      "nivelTema": "Gratuidade da justiça",
+      "nivelEspecificidade": "Ressalva",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Honorários"
+    },
+    {
+      "id": "hon.fixar",
+      "categoria": "Encerramento › Honorários",
+      "titulo": "Fixação",
+      "status": "estrutural",
+      "texto": "Condeno {honParte|PARTE SUCUMBENTE} ao pagamento de honorários advocatícios, fixados em {honFinal|PERCENTUAL} sobre {honBaseArt}{ajg}, observados os critérios do artigo 85 do CPC.",
+      "variaveis": [
+        {
+          "campo": "honParte",
+          "rotulo": "PARTE SUCUMBENTE"
+        },
+        {
+          "campo": "honFinal",
+          "rotulo": "PERCENTUAL"
+        },
+        {
+          "campo": "honBaseArt",
+          "rotulo": ""
+        },
+        {
+          "campo": "ajg",
+          "rotulo": ""
+        }
+      ],
+      "nivelTema": "Fixação",
+      "nivelEspecificidade": "Padrão",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Honorários"
+    },
+    {
+      "id": "hon.majorar",
+      "categoria": "Encerramento › Honorários",
+      "titulo": "Majoração recursal",
+      "status": "estrutural",
+      "texto": "Pela sucumbência recursal, {honParte|PARTE RECORRENTE} deve suportar condenação adicional (artigo 85, § 11, do CPC), no equivalente a {honAdic|PERCENTUAL ADICIONAL}, a ser acrescido ao fixado na origem{ajg}.",
+      "variaveis": [
+        "ajg",
+        "honAdic",
+        "honParte"
+      ],
+      "nivelTema": "Majoração recursal",
+      "nivelEspecificidade": "Padrão",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Honorários"
+    },
+    {
+      "id": "hon.manter",
+      "categoria": "Encerramento › Honorários",
+      "titulo": "Manutenção",
+      "status": "estrutural",
+      "texto": "Mantém-se a condenação em honorários advocatícios, nos termos fixados na sentença.",
+      "variaveis": [],
+      "nivelTema": "Manutenção",
+      "nivelEspecificidade": "Padrão",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Honorários"
+    },
+    {
+      "id": "hon.redistribuir",
+      "categoria": "Encerramento › Honorários",
+      "titulo": "Redistribuição da sucumbência",
+      "status": "estrutural",
+      "texto": "Redistribuo os ônus da sucumbência, atribuindo a {honParte|PARTE RESPONSÁVEL} o pagamento dos honorários advocatícios, fixados em {honFinal|PERCENTUAL} sobre {honBaseArt}{ajg}.",
+      "variaveis": [
+        {
+          "campo": "honParte",
+          "rotulo": "PARTE RESPONSÁVEL"
+        },
+        {
+          "campo": "honFinal",
+          "rotulo": "PERCENTUAL"
+        },
+        {
+          "campo": "honBaseArt",
+          "rotulo": ""
+        },
+        {
+          "campo": "ajg",
+          "rotulo": ""
+        }
+      ],
+      "nivelTema": "Redistribuição da sucumbência",
+      "nivelEspecificidade": "Padrão",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Honorários"
+    },
+    {
+      "id": "hon.sem",
+      "categoria": "Encerramento › Honorários",
+      "titulo": "Sem honorários adicionais",
+      "status": "estrutural",
+      "texto": "Deixo de fixar honorários advocatícios adicionais, em razão de {honMotivo|FUNDAMENTO ESPECÍFICO}.",
+      "variaveis": [
+        {
+          "campo": "honMotivo",
+          "rotulo": "FUNDAMENTO ESPECÍFICO"
+        }
+      ],
+      "nivelTema": "Sem honorários adicionais",
+      "nivelEspecificidade": "Padrão",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Honorários"
+    },
+    {
+      "id": "intro.abertura.controversia",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Abertura — questão em discussão",
+      "status": "estrutural",
+      "texto": "A controvérsia envolve discutir se {controversia|QUESTÃO EM DISCUSSÃO}.",
+      "variaveis": [
+        "controversia"
+      ],
+      "nivelTema": "Abertura do voto",
+      "nivelEspecificidade": "Questão em discussão",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "intro.abertura.sentenca",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Abertura — o que decidiu a sentença",
+      "status": "estrutural",
+      "texto": "A sentença {sentenca|O QUE DECIDIU A SENTENÇA}.",
+      "variaveis": [
+        "sentenca"
+      ],
+      "nivelTema": "Abertura do voto",
+      "nivelEspecificidade": "O que decidiu a sentença",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "intro.controversia",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Controvérsia recursal",
+      "status": "estrutural",
+      "texto": "A controvérsia recursal consiste em definir se {controversia|QUESTÃO JURÍDICA CENTRAL}.",
+      "variaveis": [
+        {
+          "campo": "controversia",
+          "rotulo": "QUESTÃO JURÍDICA CENTRAL"
+        }
+      ],
+      "nivelTema": "Síntese da demanda",
+      "nivelEspecificidade": "Controvérsia recursal",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "intro.cumprimento",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Cumprimento individual de sentença coletiva",
+      "status": "estrutural",
+      "texto": "Na espécie, trata-se de cumprimento individual de sentença coletiva, promovido por {autor|EXEQUENTE} em face {reuDe}, com o objetivo de {pedido|PEDIDO PRINCIPAL}, sob o fundamento de que {causa|CAUSA DE PEDIR}.",
+      "variaveis": [
+        {
+          "campo": "autor",
+          "rotulo": "EXEQUENTE"
+        },
+        {
+          "campo": "reuDe",
+          "rotulo": ""
+        },
+        {
+          "campo": "pedido",
+          "rotulo": "PEDIDO PRINCIPAL"
+        },
+        {
+          "campo": "causa",
+          "rotulo": "CAUSA DE PEDIR"
+        }
+      ],
+      "nivelTema": "Síntese da demanda",
+      "nivelEspecificidade": "Cumprimento individual de sentença coletiva",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "intro.geral",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Demais ações",
+      "status": "estrutural",
+      "texto": "Na espécie, trata-se de {natureza}, ajuizada por {autor|PARTE AUTORA} em face {reuDe}, com o objetivo de {pedido|PEDIDO PRINCIPAL}, sob o fundamento de que {causa|CAUSA DE PEDIR}.",
+      "variaveis": [
+        {
+          "campo": "natureza",
+          "rotulo": ""
+        },
+        {
+          "campo": "autor",
+          "rotulo": "PARTE AUTORA"
+        },
+        {
+          "campo": "reuDe",
+          "rotulo": ""
+        },
+        {
+          "campo": "pedido",
+          "rotulo": "PEDIDO PRINCIPAL"
+        },
+        {
+          "campo": "causa",
+          "rotulo": "CAUSA DE PEDIR"
+        }
+      ],
+      "nivelTema": "Síntese da demanda",
+      "nivelEspecificidade": "Demais ações",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "intro.ids",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Referência a documentos dos autos",
+      "status": "estrutural",
+      "texto": "Conforme os elementos constantes dos autos ({ids}), [ANÁLISE DOS DOCUMENTOS E DE SUA RELEVÂNCIA PARA A CONTROVÉRSIA].",
+      "variaveis": [
+        {
+          "campo": "ids",
+          "rotulo": ""
+        },
+        {
+          "campo": "",
+          "rotulo": "ANÁLISE DOS DOCUMENTOS E DE SUA RELEVÂNCIA PARA A CONTROVÉRSIA",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Síntese da demanda",
+      "nivelEspecificidade": "Referência a documentos",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "intro.ms",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Mandado de segurança",
+      "status": "estrutural",
+      "texto": "Na espécie, trata-se de mandado de segurança, impetrado por {autor|IMPETRANTE} contra ato atribuído {reuA}, com o objetivo de {pedido|PEDIDO PRINCIPAL}, sob o fundamento de que {causa|CAUSA DE PEDIR}.",
+      "variaveis": [
+        {
+          "campo": "autor",
+          "rotulo": "IMPETRANTE"
+        },
+        {
+          "campo": "reuA",
+          "rotulo": ""
+        },
+        {
+          "campo": "pedido",
+          "rotulo": "PEDIDO PRINCIPAL"
+        },
+        {
+          "campo": "causa",
+          "rotulo": "CAUSA DE PEDIR"
+        }
+      ],
+      "nivelTema": "Síntese da demanda",
+      "nivelEspecificidade": "Mandado de segurança",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "merito.transicao",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Passagem ao mérito — uma preliminar",
+      "status": "estrutural",
+      "texto": "Superada a preliminar, passa-se à análise do mérito.",
+      "variaveis": [],
+      "nivelTema": "Passagem ao mérito",
+      "nivelEspecificidade": "Uma preliminar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "merito.transicao.plural",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Passagem ao mérito — várias preliminares",
+      "status": "estrutural",
+      "texto": "Superadas as preliminares, passa-se à análise do mérito.",
+      "variaveis": [],
+      "nivelTema": "Passagem ao mérito",
+      "nivelEspecificidade": "Várias preliminares",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "merito.vazio",
+      "categoria": "Genéricos › Transições e estrutura",
+      "titulo": "Capítulo sem fundamentação",
+      "status": "estrutural",
+      "texto": "[FUNDAMENTAÇÃO ESPECÍFICA DO CASO CONCRETO]",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "FUNDAMENTAÇÃO ESPECÍFICA DO CASO CONCRETO",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Estrutura",
+      "nivelEspecificidade": "Capítulo sem fundamentação",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Transições e estrutura"
+    },
+    {
+      "id": "mono.1015.prova",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Artigo 1.015 do CPC — decisão sobre produção de prova",
+      "status": "padrao",
+      "texto": "A única hipótese taxativa de cabimento de agravo de instrumento em matéria probatória envolve a questão da redistribuição do ônus da prova (artigo 1.015, XI, do CPC), e a tanto não se equipara deferimento ou indeferimento de prova, tampouco sendo possível cogitar de urgência para interposição recursal em detrimento da apelação, quando possível invocar, em preliminar, a eventual nulidade da sentença por cerceamento probatório ou de defesa.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "agravo de instrumento; artigo 1.015; prova",
+      "uso": "Agravo contra deferimento ou indeferimento de prova (Tema 988/STJ).",
+      "nivelTema": "Não cabimento do agravo de instrumento (artigo 1.015 do CPC)",
+      "nivelEspecificidade": "Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "mono.cooperacao",
+      "categoria": "Genéricos › Parágrafos livres",
+      "titulo": "Dever de cooperação observado",
+      "status": "padrao",
+      "texto": "Ressalte-se, por fim, que o dever de cooperação processual, previsto nos artigos 6º, 10 e 321 do CPC, foi devidamente observado.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "cooperação; intimação",
+      "uso": "Após intimação específica não atendida (preparo, representação, habilitação).",
+      "nivelTema": "Dever de cooperação",
+      "nivelEspecificidade": "Intimação prévia observada",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Parágrafos livres"
+    },
+    {
+      "id": "mono.desistencia",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Desistência recursal — acolhimento e homologação",
+      "status": "padrao",
+      "texto": "Diante do teor da manifestação, é de rigor o seu acolhimento.\n\nAnte o exposto, acolho o pedido de desistência do recurso e o homologo, nos termos do artigo 998, caput, do CPC.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "desistência",
+      "uso": "Pedido de desistência do recurso.",
+      "nivelTema": "Desistência recursal",
+      "nivelEspecificidade": "Homologar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "mono.dialeticidade.generica",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Dialeticidade — razões genéricas e dissociadas",
+      "status": "padrao",
+      "texto": "O agravante deduziu razões genéricas — e, portanto, dissociadas — sobre o ponto específico em que se assentou, fundamentalmente, a decisão agravada, sem, por consequência, conferir a devida aptidão dialética às razões recursais e inviabilizando, assim, a cognição do recurso.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "dialeticidade",
+      "nivelTema": "Ausência de dialeticidade (impugnação específica)",
+      "nivelEspecificidade": "Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "mono.disp.prejudicado",
+      "categoria": "Encerramento › Dispositivo",
+      "titulo": "Agravo de instrumento prejudicado — artigo 932, III, do CPC",
+      "status": "padrao",
+      "texto": "Ante o exposto, julgo prejudicado o agravo de instrumento, nos termos do artigo 932, III, do CPC.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "perda do objeto; artigo 932",
+      "nivelTema": "Julgamento monocrático",
+      "nivelEspecificidade": "Agravo de instrumento prejudicado",
+      "nivelCategoria": "Encerramento",
+      "nivelSubsecao": "Dispositivo"
+    },
+    {
+      "id": "mono.perda.objeto",
+      "categoria": "Abertura › Perda superveniente do objeto",
+      "titulo": "Perda superveniente do objeto — sentença na origem",
+      "status": "padrao",
+      "texto": "Assim, resta evidente a perda superveniente do objeto do presente recurso, uma vez que não mais subsiste a decisão impugnada.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "perda do objeto; agravo de instrumento",
+      "uso": "Agravo de instrumento após sentença na ação de origem.",
+      "nivelTema": "Perda superveniente do objeto",
+      "nivelEspecificidade": "Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Perda superveniente do objeto"
+    },
+    {
+      "id": "norma.n01",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "N01 · Regra normativa",
+      "status": "preferencial",
+      "texto": "Nos termos do artigo [DISPOSITIVO] da [NORMA], [REGRA JURÍDICA APLICÁVEL].",
+      "uso": "Fórmula sintética, adequada à apresentação de uma regra legal sem transcrição literal.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "DISPOSITIVO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "NORMA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "REGRA JURÍDICA APLICÁVEL",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Normas jurídicas",
+      "nivelEspecificidade": "N01 · Regra normativa",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "norma.n02",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "N02 · Interpretação da disciplina normativa",
+      "status": "variante",
+      "texto": "A disciplina da matéria, prevista no artigo [DISPOSITIVO] da [NORMA], [ESTABELECE/EXIGE/RESSALVA] [CONTEÚDO JURÍDICO], de modo que [CONSEQUÊNCIA JURÍDICA].",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "DISPOSITIVO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "NORMA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "ESTABELECE/EXIGE/RESSALVA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "CONTEÚDO JURÍDICO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "CONSEQUÊNCIA JURÍDICA",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Normas jurídicas",
+      "nivelEspecificidade": "N02 · Interpretação",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "norma.n03",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "N03 · Regra e exceção",
+      "status": "variante",
+      "texto": "Embora o artigo [DISPOSITIVO] da [NORMA] estabeleça [REGRA GERAL], a disciplina legal ressalva [HIPÓTESE EXCEPCIONAL], quando [REQUISITOS].",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "DISPOSITIVO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "NORMA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "REGRA GERAL",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "HIPÓTESE EXCEPCIONAL",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "REQUISITOS",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Normas jurídicas",
+      "nivelEspecificidade": "N03 · Regra e exceção",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "norma.n04",
+      "categoria": "Genéricos › Normas e citações",
+      "titulo": "N04 · Aplicação da norma ao caso",
+      "status": "variante",
+      "texto": "Na espécie, [FATO JURIDICAMENTE RELEVANTE], conforme [DOCUMENTO/ID], circunstância que [PREENCHE/AFASTA] os requisitos previstos no artigo [DISPOSITIVO] da [NORMA].",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "FATO JURIDICAMENTE RELEVANTE",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "DOCUMENTO/ID",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "PREENCHE/AFASTA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "DISPOSITIVO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "NORMA",
+          "preencher_manualmente": true
+        }
+      ],
+      "nivelTema": "Normas jurídicas",
+      "nivelEspecificidade": "N04 · Aplicação ao caso",
+      "nivelCategoria": "Genéricos",
+      "nivelSubsecao": "Normas e citações"
+    },
+    {
+      "id": "pensao.tempus",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Lei vigente na data do óbito",
+      "status": "padrao",
+      "texto": "Por força do princípio tempus regit actum, a legislação aplicável para o trato da concessão do benefício é a vigente na data do evento morte, conforme entendimento consolidado na Súmula 340/STJ.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "pensão por morte; Súmula 340/STJ",
+      "nivelTema": "Pensão por morte",
+      "nivelEspecificidade": "Lei aplicável (tempus regit actum); Lei vigente na data do óbito",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "pensao.uniao.24meses",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "União estável — prova material dos 24 meses",
+      "status": "padrao",
+      "texto": "A prova exclusivamente testemunhal não se presta a comprovar a união estável, a teor do artigo 16, § 5º, da Lei 8.213/1991, com redação dada pela Lei 13.846/2019, vigente ao tempo do óbito, dispondo, expressamente, que \"As provas de união estável e de dependência econômica exigem início de prova material contemporânea dos fatos, produzido em período não superior a 24 (vinte e quatro) meses anterior à data do óbito ou do recolhimento à prisão do segurado, não admitida a prova exclusivamente testemunhal, exceto na ocorrência de motivo de força maior ou caso fortuito, conforme disposto no regulamento\".",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "pensão por morte; união estável",
+      "uso": "Óbito a partir de 18/01/2019.",
+      "nivelTema": "Pensão por morte",
+      "nivelEspecificidade": "União estável; Prova material dos 24 meses",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "prel.abertura1",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Primeira preliminar — exposição",
+      "status": "estrutural",
+      "texto": "Inicialmente, examino a preliminar de {materia|MATÉRIA}, suscitada {por|SUSCITANTE}, sob o fundamento de que {alegacao|ALEGAÇÃO}.",
+      "variaveis": [
+        {
+          "campo": "materia",
+          "rotulo": "MATÉRIA"
+        },
+        {
+          "campo": "por",
+          "rotulo": "SUSCITANTE"
+        },
+        {
+          "campo": "alegacao",
+          "rotulo": "ALEGAÇÃO"
+        }
+      ],
+      "nivelTema": "Estrutura da exposição",
+      "nivelEspecificidade": "Primeira preliminar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.abertura2",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Segunda preliminar — exposição",
+      "status": "estrutural",
+      "texto": "No que se refere à preliminar de {materia|MATÉRIA}, suscitada {por|SUSCITANTE}, sob o fundamento de que {alegacao|ALEGAÇÃO}.",
+      "variaveis": [
+        {
+          "campo": "materia",
+          "rotulo": "MATÉRIA"
+        },
+        {
+          "campo": "por",
+          "rotulo": "SUSCITANTE"
+        },
+        {
+          "campo": "alegacao",
+          "rotulo": "ALEGAÇÃO"
+        }
+      ],
+      "nivelTema": "Estrutura da exposição",
+      "nivelEspecificidade": "Segunda preliminar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.aberturaFim",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Última preliminar — exposição",
+      "status": "estrutural",
+      "texto": "Por fim à preliminar de {materia|MATÉRIA}, suscitada {por|SUSCITANTE}, sob o fundamento de que {alegacao|ALEGAÇÃO}.",
+      "variaveis": [
+        {
+          "campo": "materia",
+          "rotulo": "MATÉRIA"
+        },
+        {
+          "campo": "por",
+          "rotulo": "SUSCITANTE"
+        },
+        {
+          "campo": "alegacao",
+          "rotulo": "ALEGAÇÃO"
+        }
+      ],
+      "nivelTema": "Estrutura da exposição",
+      "nivelEspecificidade": "Última preliminar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.aberturaMeio",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Preliminares intermediárias — exposição",
+      "status": "estrutural",
+      "texto": "Quanto à alegação de {materia|MATÉRIA}, suscitada {por|SUSCITANTE}, sob o fundamento de que {alegacao|ALEGAÇÃO}.",
+      "variaveis": [
+        {
+          "campo": "materia",
+          "rotulo": "MATÉRIA"
+        },
+        {
+          "campo": "por",
+          "rotulo": "SUSCITANTE"
+        },
+        {
+          "campo": "alegacao",
+          "rotulo": "ALEGAÇÃO"
+        }
+      ],
+      "nivelTema": "Estrutura da exposição",
+      "nivelEspecificidade": "Preliminares intermediárias",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.m.cabimentoAI",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Não cabimento do agravo de instrumento (artigo 1.015 do CPC)",
+      "status": "padrao",
+      "uso": "Decisão fora do rol do artigo 1.015, sem urgência (Tema 988/STJ).",
+      "texto": "O rol do artigo 1.015 do CPC é de taxatividade mitigada, admitindo a interposição de agravo de instrumento apenas quando verificada a urgência decorrente da inutilidade do julgamento da questão no recurso de apelação (Tema 988/STJ).\n\nNa espécie, é objeto de recurso a decisão que [CONTEÚDO DA DECISÃO AGRAVADA], o que não tem correspondência com o elenco legal das hipóteses de cabimento, de que tratam os incisos e o parágrafo único do artigo 1.015 do CPC, tampouco sendo possível cogitar de urgência para interposição recursal em detrimento da apelação.",
+      "especificidadesTags": "agravo de instrumento; cabimento",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Não cabimento do agravo de instrumento (artigo 1.015 do CPC)",
+      "nivelEspecificidade": "Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.m.cerceamento",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Cerceamento de defesa (rejeição)",
+      "status": "padrao",
+      "uso": "Prova dos autos suficiente; artigo 370 do CPC.",
+      "texto": "Nos termos do artigo 370 do CPC, cabe ao juiz determinar as provas necessárias ao julgamento do mérito, indeferindo, em decisão fundamentada, as diligências inúteis ou meramente protelatórias. Na espécie, [A PROVA DOCUMENTAL / PERICIAL] constante dos autos (ID [ID]) revelou-se suficiente à solução da controvérsia, não se cogitando de cerceamento de defesa.",
+      "especificidadesTags": "cerceamento de defesa; prova",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Nulidade da sentença por cerceamento de defesa",
+      "nivelEspecificidade": "Rejeitar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.m.desercao",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Deserção (não conhecimento)",
+      "status": "padrao",
+      "uso": "Preparo não comprovado nem regularizado após intimação.",
+      "texto": "O preparo constitui requisito objetivo de admissibilidade recursal. Nos termos do artigo 1.007, caput, do CPC, deve ser comprovado no ato de interposição do recurso, sob pena de deserção.\n\nIntimada para regularizar o preparo (ID [ID]), nos termos do artigo 1.007, § 4º, do CPC, a parte deixou de comprová-lo no prazo assinalado.\n\nConfigurada a deserção, impõe-se o não conhecimento do recurso.",
+      "especificidadesTags": "preparo; deserção",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Deserção (ausência ou insuficiência de preparo)",
+      "nivelEspecificidade": "Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.m.dialeticidade",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Ausência de dialeticidade (não conhecimento)",
+      "status": "padrao",
+      "uso": "Razões dissociadas dos fundamentos da decisão recorrida.",
+      "texto": "Não é demais lembrar que, segundo o artigo 1.010 do CPC, a apelação deve conter, entre outros requisitos, a exposição dos fatos e do direito, bem como as razões do pedido de reforma ou de decretação da nulidade, exigindo-se, portanto, a dialeticidade da insurgência, com a necessária adequação das razões recursais ao pedido de reforma, em consonância com o teor da decisão recorrida.\n\nPortanto, é manifesta a dissociação entre as razões recursais e os fundamentos da decisão recorrida, circunstância que configura violação ao princípio da dialeticidade recursal e impede o conhecimento do recurso.",
+      "especificidadesTags": "dialeticidade",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Ausência de dialeticidade (impugnação específica)",
+      "nivelEspecificidade": "Acolher; Acolher em parte",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.m.dialeticidade.rej",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Dialeticidade atendida (rejeição)",
+      "status": "padrao",
+      "uso": "Razões recursais enfrentam os fundamentos da decisão.",
+      "texto": "Segundo o artigo 1.010 do CPC, a apelação deve conter a exposição dos fatos e do direito e as razões do pedido de reforma ou de decretação de nulidade, requisito atendido na espécie, pois as razões recursais enfrentam especificamente [FUNDAMENTO DA DECISÃO IMPUGNADO].",
+      "especificidadesTags": "dialeticidade",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Ausência de dialeticidade (impugnação específica)",
+      "nivelEspecificidade": "Rejeitar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.m.fundamentacao",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Fundamentação suficiente da sentença (rejeição)",
+      "status": "padrao",
+      "uso": "Nulidade por falta de fundamentação afastada.",
+      "texto": "A sentença examinou as questões essenciais ao deslinde da controvérsia, com fundamentação suficiente, nos termos dos artigos 93, IX, da Constituição Federal e 489, § 1º, do CPC, não sendo exigível o enfrentamento de argumentos incapazes de infirmar a conclusão adotada.",
+      "especificidadesTags": "fundamentação; nulidade da sentença",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Nulidade da sentença por ausência de fundamentação",
+      "nivelEspecificidade": "Rejeitar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.m.gratuidade",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Gratuidade — presunção relativa (artigo 99, § 3º, do CPC)",
+      "status": "padrao",
+      "uso": "Impugnação ou exame da gratuidade.",
+      "texto": "A legislação (artigo 99, § 3º, do CPC) não confere presunção absoluta à declaração de hipossuficiência, permitindo ao Juízo analisar a existência dos requisitos legais para o deferimento do pedido. Assim, cabe ao magistrado verificar, sempre que necessário, a efetiva comprovação do estado de hipossuficiência, uma vez que a presunção em favor da declaração é relativa, podendo ser afastada mediante análise do caso concreto.",
+      "especificidadesTags": "gratuidade da justiça",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Impugnação à gratuidade da justiça",
+      "nivelEspecificidade": "Rejeitar; Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.m.ilegitimidade",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Legitimidade pela teoria da asserção (rejeição)",
+      "status": "padrao",
+      "uso": "Afastar ilegitimidade ativa ou passiva.",
+      "texto": "A legitimidade para a causa é aferida à luz da relação jurídica de direito material deduzida na inicial, segundo a teoria da asserção, figurando [PARTE] como titular [DO DIREITO / DA OBRIGAÇÃO] discutida, conforme [DOCUMENTO] (ID [ID]).",
+      "especificidadesTags": "legitimidade",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Ilegitimidade ativa; Ilegitimidade passiva",
+      "nivelEspecificidade": "Rejeitar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.m.inovacao",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Inovação recursal (não conhecimento no ponto)",
+      "status": "padrao",
+      "uso": "Matéria não deduzida na origem.",
+      "texto": "A matéria não foi submetida ao Juízo de origem, configurando inovação recursal vedada pelo artigo 1.014 do CPC, sem demonstração de força maior que justificasse sua dedução apenas nesta instância.",
+      "especificidadesTags": "inovação recursal",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Inovação recursal",
+      "nivelEspecificidade": "Acolher; Acolher em parte",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.m.intempestividade",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Intempestividade (não conhecimento)",
+      "status": "padrao",
+      "uso": "Peça protocolada após o prazo.",
+      "texto": "Nos termos dos artigos 219, 224 e 1.003, § 5º, do CPC, o prazo recursal é de 15 (quinze) dias úteis, contados da intimação [— em dobro para a Fazenda Pública, nos termos do artigo 183 do CPC —], o que não foi observado na espécie, revelando a intempestividade da manifestação.",
+      "especificidadesTags": "tempestividade",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Intempestividade do recurso",
+      "nivelEspecificidade": "Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.m.intercorrente",
+      "categoria": "Abertura › Prejudiciais de mérito",
+      "titulo": "Prescrição intercorrente na execução fiscal (Tema 566/STJ)",
+      "status": "padrao",
+      "uso": "Prejudicial de mérito em execução fiscal.",
+      "texto": "Nos termos do artigo 40 da Lei 6.830/1980, conforme a sistemática fixada pelo Superior Tribunal de Justiça no Tema 566, o prazo de suspensão de um ano inicia-se automaticamente na data da ciência da Fazenda Pública acerca da não localização do devedor ou de bens penhoráveis, findo o qual tem início o prazo prescricional quinquenal intercorrente.",
+      "especificidadesTags": "prescrição intercorrente; execução fiscal",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Prescrição intercorrente",
+      "nivelEspecificidade": "Rejeitar; Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Prejudiciais de mérito"
+    },
+    {
+      "id": "prel.m.interesse",
+      "categoria": "Abertura › Perda superveniente do objeto",
+      "titulo": "Perda superveniente do interesse recursal",
+      "status": "padrao",
+      "uso": "Fato superveniente esvazia a utilidade do recurso.",
+      "texto": "O interesse recursal, como condição de admissibilidade do recurso, deve estar presente não apenas no momento da interposição, mas persistir até o julgamento. A perda superveniente do interesse torna o recurso prejudicado, impondo seu não conhecimento.",
+      "especificidadesTags": "interesse recursal; perda do objeto",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Perda superveniente do objeto; Ausência de interesse recursal",
+      "nivelEspecificidade": "Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Perda superveniente do objeto"
+    },
+    {
+      "id": "prel.m.petita",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Sentença nos limites do pedido (rejeição)",
+      "status": "padrao",
+      "uso": "Afastar alegação de julgamento extra ou ultra petita.",
+      "texto": "O juiz não está vinculado aos fundamentos jurídicos invocados na petição inicial, cabendo-lhe analisar os fatos e pedidos deduzidos no caso concreto e aplicar-lhes a solução pertinente à luz do ordenamento jurídico, nos limites dos artigos 141 e 492 do CPC.",
+      "especificidadesTags": "extra petita; congruência",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Sentença extra petita; Sentença ultra petita; Sentença citra petita",
+      "nivelEspecificidade": "Rejeitar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.m.preparo",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Preparo comprovado (rejeição da deserção)",
+      "status": "padrao",
+      "uso": "Rejeitar deserção alegada.",
+      "texto": "O preparo constitui requisito objetivo de admissibilidade recursal e, nos termos do artigo 1.007, caput, do CPC, foi comprovado no ato de interposição do recurso (ID [ID]).",
+      "especificidadesTags": "preparo; deserção",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Deserção (ausência ou insuficiência de preparo)",
+      "nivelEspecificidade": "Rejeitar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.m.quinquenal",
+      "categoria": "Abertura › Prejudiciais de mérito",
+      "titulo": "Prescrição quinquenal das parcelas (Súmula 85/STJ)",
+      "status": "padrao",
+      "uso": "Prejudicial de mérito em relação de trato sucessivo com a Fazenda Pública.",
+      "texto": "Nas relações jurídicas de trato sucessivo em que figure como devedora a Fazenda Pública, quando não negado o próprio direito reclamado, a prescrição atinge apenas as prestações vencidas antes do quinquênio anterior à propositura da ação, nos termos do artigo 1º do Decreto 20.910/1932 e da Súmula 85/STJ.",
+      "especificidadesTags": "prescrição; Fazenda Pública",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Prescrição quinquenal das parcelas; Prescrição do fundo de direito",
+      "nivelEspecificidade": "Rejeitar; Acolher em parte; Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Prejudiciais de mérito"
+    },
+    {
+      "id": "prel.m.representacao",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Irregularidade de representação não sanada",
+      "status": "padrao",
+      "uso": "Mandato não juntado após intimação (artigo 76, § 2º, I, do CPC).",
+      "texto": "Intimada para regularizar a representação processual, considerando a falta de juntada de instrumento de mandato (ID [ID]), a parte deixou transcorrer in albis o prazo assinalado, perpetuando, assim, o defeito processual, a inviabilizar a admissibilidade do recurso interposto, na forma do artigo 76, § 2º, I, do CPC.",
+      "especificidadesTags": "representação processual",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Irregularidade de representação processual",
+      "nivelEspecificidade": "Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.m.requerimento",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Prévio requerimento administrativo (Tema 350/STF)",
+      "status": "padrao",
+      "uso": "Interesse de agir em ação previdenciária.",
+      "texto": "Conforme assentado pelo Supremo Tribunal Federal no Tema 350 (RE 631.240), a concessão de benefício previdenciário depende de requerimento do interessado, não se caracterizando ameaça ou lesão a direito antes de sua apreciação e indeferimento pelo INSS, ou se excedido o prazo legal para sua análise, ressalvadas as hipóteses de entendimento notória e reiteradamente contrário da Administração.",
+      "especificidadesTags": "interesse de agir; requerimento administrativo; INSS",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Ausência de prévio requerimento administrativo; Falta de interesse de agir",
+      "nivelEspecificidade": "Rejeitar; Acolher",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.m.tempestividade",
+      "categoria": "Abertura › Admissibilidade",
+      "titulo": "Tempestividade — intimação eletrônica (rejeição)",
+      "status": "padrao",
+      "uso": "Rejeitar intempestividade alegada: contagem a partir da intimação eletrônica.",
+      "texto": "Nos termos do artigo 5º, § 2º, da Lei 11.419/2006, c/c os artigos 219, 224, § 2º, e 231, V, do CPC, a intimação eletrônica considera-se realizada no primeiro dia útil seguinte ao da consulta ou ao término do prazo para consultá-la, iniciando-se a contagem do prazo recursal em [DATA INICIAL], com término em [DATA FINAL]. Tendo sido o recurso interposto em [DATA DA INTERPOSIÇÃO], é tempestivo.",
+      "especificidadesTags": "tempestividade; intimação eletrônica",
+      "fonte": "Modelos 8 — padrão de preliminares",
+      "nivelTema": "Intempestividade do recurso",
+      "nivelEspecificidade": "Rejeitar",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Admissibilidade"
+    },
+    {
+      "id": "prel.resultado",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Resultado da preliminar",
+      "status": "estrutural",
+      "texto": "{verbo} a preliminar, pois {fundamento|FUNDAMENTO}.",
+      "variaveis": [
+        {
+          "campo": "verbo",
+          "rotulo": ""
+        },
+        {
+          "campo": "fundamento",
+          "rotulo": "FUNDAMENTO"
+        }
+      ],
+      "nivelTema": "Estrutura da exposição",
+      "nivelEspecificidade": "Resultado",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "prel.transicao",
+      "categoria": "Abertura › Preliminares",
+      "titulo": "Transição para o mérito",
+      "status": "estrutural",
+      "texto": "Superadas as questões preliminares que não impedem a apreciação do mérito, passo ao exame da controvérsia recursal.",
+      "variaveis": [],
+      "nivelTema": "Estrutura da exposição",
+      "nivelEspecificidade": "Transição para o mérito",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Preliminares"
+    },
+    {
+      "id": "relator",
+      "categoria": "Abertura › Delimitação da controvérsia",
+      "titulo": "Identificação do relator",
+      "status": "estrutural",
+      "texto": "O Desembargador Federal Carlos Muta (Relator):",
+      "variaveis": [],
+      "nivelTema": "Cabeçalho",
+      "nivelEspecificidade": "Identificação do relator",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Delimitação da controvérsia"
+    },
+    {
+      "id": "rural.afirmacao.generica",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Prova oral genérica — natureza da atividade indefinida",
+      "status": "padrao",
+      "texto": "Ademais, a afirmação genérica de que [A PARTE AUTORA] trabalhava em fazendas não permite identificar, com precisão, a natureza jurídica da atividade exercida, isto é, se na condição de segurado especial em regime de economia familiar, empregado rural, diarista ou trabalhador eventual, categorias submetidas a pressupostos jurídicos e probatórios distintos.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "A PARTE AUTORA",
+          "preencher_manualmente": true
+        }
+      ],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "prova testemunhal; natureza da atividade",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Prova oral; Genérica — natureza indefinida",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.ausente.inicio",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Ausência de início razoável de prova material",
+      "status": "padrao",
+      "texto": "Logo, ausente início razoável de prova material contemporâneo ou suficientemente indicativo do labor rural no período de carência, não se mostra possível a concessão da aposentadoria por idade rural.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "início de prova material; Tema 629",
+      "uso": "Antecede o bloco do Tema 629.",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Tema 629 — deficiência instrutória; Ausência de início razoável de prova",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.dificuldade",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Dificuldade probatória não dispensa prova material",
+      "status": "padrao",
+      "texto": "No contexto, ainda que se reconheça a dificuldade probatória própria do trabalhador rural, tal circunstância não afasta a necessidade de início de prova material idôneo, apto a ser ampliado pela prova testemunhal.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "início de prova material",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Início de prova material; Dificuldade probatória",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.documento.ano",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Documento por ano — dispensa",
+      "status": "padrao",
+      "uso": "Votos de procedência rural.",
+      "texto": "Destaca-se que a comprovação do labor rurícola não exige a apresentação de documento correspondente a cada mês ou ano integrante da carência, bastando a existência de início razoável de prova material que, ampliado por prova oral idônea, permita concluir pela efetiva prestação da atividade rural durante o período controvertido.",
+      "especificidadesTags": "início de prova material; atividade rural",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Início de prova material; Documento por ano — dispensa",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.enquadramento",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Abertura — requisito etário e carência",
+      "status": "padrao",
+      "texto": "Na espécie, [A AUTORA/O AUTOR], nascid[A/O] em [DATA] (ID [ID]), completou o requisito etário em [DATA], sujeitando-se à comprovação do exercício de atividade rural pelo período de 180 meses, a título de carência, com requerimento administrativo em [DATA], indeferido por [MOTIVO DO INDEFERIMENTO] (ID [ID]).",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "A AUTORA/O AUTOR",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "A/O",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "DATA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "ID",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "MOTIVO DO INDEFERIMENTO",
+          "preencher_manualmente": true
+        }
+      ],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "aposentadoria por idade rural; carência",
+      "uso": "Primeiro parágrafo da fundamentação do voto rural.",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Requisitos do benefício; Requisito etário e carência",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.extincao.honorarios",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Extinção na apelação — honorários com exigibilidade suspensa",
+      "status": "padrao",
+      "texto": "Cabe, pois, por deficiência probatória no contexto específico da pretensão desejada, a extinção do processo sem resolução do mérito, restando vencida a parte autora, que deve arcar com os honorários advocatícios fixados em 10% (dez por cento) do valor atualizado da causa, suspensa, no entanto, a sua execução, nos termos do artigo 98, § 3º, do CPC, por ser beneficiária da assistência judiciária gratuita.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "Tema 629; honorários; gratuidade",
+      "uso": "Quando a extinção decorre da reforma da sentença.",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Tema 629 — deficiência instrutória; Honorários na extinção",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.hibrida.inovacao",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Aposentadoria híbrida — inovação recursal vedada",
+      "status": "padrao",
+      "texto": "Não é possível, por sua vez, alterar o pedido e a causa de pedir para que se inclua tempo urbano para efeito de aposentadoria por idade híbrida, que se sujeita, de qualquer forma, à idade mínima maior (65 anos para homens) do que a exigida para atividades exclusivamente rurais (60 anos para homens). Tal conversão geraria inovação da lide, vedada em sede recursal, conforme já decidido por esta Turma Regional em data recente em precedente de que fui relator (ApCiv 5134582-26.2025.4.03.9999, julgado em 06/07/2026).",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "aposentadoria híbrida; inovação recursal",
+      "uso": "Ajustar idades para segurada (60 e 55 anos).",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Tempo urbano e rural; Aposentadoria híbrida — inovação recursal",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.inventario",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Inventário documental — abertura da lista",
+      "status": "padrao",
+      "texto": "Para comprovação da atividade rural, [A AUTORA/O AUTOR] apresentou:\n\n1 - [DOCUMENTO], [DATA E QUALIFICAÇÃO REGISTRADA] (ID [ID]);\n\n2 - [DOCUMENTO] (ID [ID]); e\n\n3 - [DOCUMENTO] (ID [ID]).",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "A AUTORA/O AUTOR",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "DOCUMENTO",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "DATA E QUALIFICAÇÃO REGISTRADA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "ID",
+          "preencher_manualmente": true
+        }
+      ],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "início de prova material",
+      "uso": "Cada item: espécie, data, titular e ID.",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Início de prova material; Inventário documental",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.manutencao",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Manutenção da aposentadoria rural",
+      "status": "padrao",
+      "uso": "Recurso do INSS desprovido.",
+      "texto": "Em suma, comprovados o requisito etário e o exercício de atividade rural pelo período correspondente à carência, impõe-se a manutenção da concessão da aposentadoria por idade rural conforme fixado na origem.",
+      "especificidadesTags": "aposentadoria por idade rural; INSS",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Resultado; Manutenção da sentença",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.manutencao.fecho",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Manutenção — fecho",
+      "status": "padrao",
+      "uso": "Segue o parágrafo de manutenção.",
+      "texto": "Assim, nada colhe o recurso da autarquia ré.",
+      "especificidadesTags": "aposentadoria por idade rural; INSS",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Resultado; Manutenção — fecho",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.natureza",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Natureza do trabalho, não o local",
+      "status": "padrao",
+      "uso": "Função urbana exercida em fazenda não é rural.",
+      "texto": "Não é o local do trabalho, mas a natureza do trabalho que define a sua caracterização como rural ou não.",
+      "especificidadesTags": "atividade rural; natureza do trabalho",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Natureza da atividade; Natureza do trabalho, não o local",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.prova.contraria",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Prova contrária — improcedência, não extinção",
+      "status": "padrao",
+      "uso": "Distinção que decide o caso: a prova demonstra fato impeditivo.",
+      "texto": "A hipótese, como visto, não é de insuficiência probatória a permitir renovação da pretensão, mas de prova da improcedência do pedido.",
+      "especificidadesTags": "Tema 629; improcedência; atividade rural",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Improcedência por prova contrária; Improcedência, não extinção",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.prova.improcedencia",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Prova documental contrária — improcedência",
+      "status": "padrao",
+      "texto": "Logo, a prova documental acostada comprova a inviabilidade de qualificar [A PARTE AUTORA] como segurad[A/O] especial, não se tratando de mera deficiência instrutória, além do que a prova exclusivamente testemunhal, ainda que houvesse dúvida ou início de prova material da condição invocada, não poderia servir, isoladamente, de amparo à pretensão deduzida (Súmula 149/STJ) no sentido do reconhecimento da atividade rural em regime de economia familiar diante da própria vedação legal de caracterização de tal condição.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "A PARTE AUTORA",
+          "preencher_manualmente": true
+        },
+        {
+          "campo": "",
+          "rotulo": "A/O",
+          "preencher_manualmente": true
+        }
+      ],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "improcedência; segurado especial",
+      "uso": "Fato impeditivo provado (artigo 11, § 9º, da Lei 8.213/1991).",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Improcedência por prova contrária; Prova documental contrária",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.prova.oral",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Prova oral complementar",
+      "status": "padrao",
+      "uso": "Improcedência ou extinção quando a pretensão se apoia só em testemunhos.",
+      "texto": "A prova testemunhal deve restringir-se à complementação de lacunas da documentação, não sendo admitida para suprir todo o ônus probatório atribuído à parte autora, sob pena de violação do artigo 55, § 3º, da Lei 8.213/1991 e da Súmula 149/STJ.",
+      "especificidadesTags": "prova testemunhal; Súmula 149/STJ; atividade rural",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Prova oral; Complementar",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.reforma",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Reforma — concessão desde a DER",
+      "status": "padrao",
+      "uso": "Concessão em grau recursal.",
+      "texto": "Impõe-se, portanto, a reforma da sentença para conceder o benefício de {beneficio|BENEFÍCIO} desde a DER, em {der|DATA DA DER}.",
+      "especificidadesTags": "aposentadoria por idade rural; DER",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Resultado; Reforma — concessão desde a DER",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.t629.fecho",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Tema 629 — fecho da extinção",
+      "status": "padrao",
+      "uso": "Encerra a extinção por deficiência probatória.",
+      "texto": "Cabe, pois, por deficiência probatória no contexto específico da pretensão desejada, a extinção do processo sem resolução do mérito.",
+      "especificidadesTags": "Tema 629; deficiência instrutória; atividade rural",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Tema 629 — deficiência instrutória; Fecho da extinção",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.t629.ponte",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Tema 629 — ponte e transcrição do paradigma",
+      "status": "padrao",
+      "texto": "É o que se percebe da tese jurídica aprovada no Tema 629, julgado pelo Superior Tribunal de Justiça, em rito repetitivo:\n\nREsp 1.352.721, j. 16/12/2015. Rel. Ministro NAPOLEÃO NUNES MAIA FILHO: \"A ausência de conteúdo probatório eficaz a instruir a inicial, conforme determina o art. 283 do CPC, implica a carência de pressuposto de constituição e desenvolvimento válido do processo, impondo sua extinção sem o julgamento do mérito (art. 267, IV do CPC) e a consequente possibilidade de o autor intentar novamente a ação (art. 268 do CPC), caso reúna os elementos necessários à tal iniciativa.\"",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "Tema 629; deficiência instrutória",
+      "uso": "Entre a premissa e o fecho do Tema 629.",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Tema 629 — deficiência instrutória; Ponte e transcrição do paradigma",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.t629.premissa",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Tema 629 — premissa (deficiência instrutória)",
+      "status": "padrao",
+      "uso": "Prova insuficiente, não contrária: extinção sem resolução do mérito.",
+      "texto": "Em casos que tais, apurada a deficiência instrutória da inicial para a elucidação de fato constitutivo do direito alegado, situação que não se confunde com a produção de prova suficiente da improcedência do pleito, a jurisprudência consolidada assenta o cabimento da extinção do processo sem resolução do mérito a fim de oportunizar que a parte hipossuficiente renove a pretensão judicial sem gerar, por consequência, coisa julgada material no contexto da dubiedade ou deficiência probatória.",
+      "especificidadesTags": "Tema 629; deficiência instrutória; atividade rural",
+      "fonte": "Padrão de Redação Carlos Muta — fórmulas fixas (184 textos-modelo)",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Tema 629 — deficiência instrutória; Premissa",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.tempo.misto",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Tempo urbano e rural — carência rural não comprovada",
+      "status": "padrao",
+      "texto": "Como se observa, os fatos constitutivos do direito não se referem a tempo exclusivamente rural, mas abrangem igualmente período urbano, sendo que de período rural não houve comprovação de atividade pelo prazo de carência de 180 meses, o que inviabiliza o reconhecimento do direito postulado.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "tempo urbano; atividade rural",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Tempo urbano e rural; Carência rural não comprovada",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "rural.valoracao.integral",
+      "categoria": "Seção › 3ª Seção",
+      "titulo": "Valoração integral do acervo",
+      "status": "padrao",
+      "texto": "Neste contexto, o acervo probatório deve ser valorado na integralidade, considerando a realidade do trabalhador rural em regime de economia familiar, para o qual nem sempre há documentação formal contínua de todo o período de carência, desde que os elementos constantes dos autos, analisados em conjunto, sejam aptos a demonstrar a continuidade das atividades rurais.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "atividade rural; valoração da prova",
+      "uso": "Votos de procedência.",
+      "nivelTema": "Atividade rural (segurado especial)",
+      "nivelEspecificidade": "Valoração da prova; Valoração integral do acervo",
+      "nivelCategoria": "Seção",
+      "nivelSubsecao": "3ª Seção"
+    },
+    {
+      "id": "tutela.contraditorio",
+      "categoria": "Abertura › Tutelas recursais",
+      "titulo": "Indeferimento liminar — prévio contraditório",
+      "status": "padrao",
+      "texto": "Discute-se [OBJETO DA PRETENSÃO], pretensão acerca da qual não se vislumbra concorrência dos requisitos legais para a concessão da tutela recursal in limine, em detrimento do mínimo contraditório, providência essencial à segura caracterização da probabilidade do direito associada ao perigo de dano ou risco ao resultado útil do processo.",
+      "variaveis": [
+        {
+          "campo": "",
+          "rotulo": "OBJETO DA PRETENSÃO",
+          "preencher_manualmente": true
+        }
+      ],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "tutela; contraditório",
+      "nivelTema": "Pedido de antecipação da tutela recursal; Pedido de efeito suspensivo",
+      "nivelEspecificidade": "Indeferir",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Tutelas recursais"
+    },
+    {
+      "id": "tutela.requisitos",
+      "categoria": "Abertura › Tutelas recursais",
+      "titulo": "Ausência cumulativa dos requisitos",
+      "status": "padrao",
+      "texto": "Neste cenário processual, não se vislumbra a presença cumulativa dos requisitos necessários para o deferimento da medida.",
+      "variaveis": [],
+      "fonte": "Padrão de Redação Carlos Muta — Modelos 8 e Compêndio Rural (184 textos-modelo)",
+      "especificidadesTags": "tutela; efeito suspensivo",
+      "uso": "Indeferimento de efeito suspensivo ou tutela recursal.",
+      "nivelTema": "Pedido de efeito suspensivo; Pedido de antecipação da tutela recursal",
+      "nivelEspecificidade": "Indeferir",
+      "nivelCategoria": "Abertura",
+      "nivelSubsecao": "Tutelas recursais"
+    }
+  ]
+}

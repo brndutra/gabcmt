@@ -37,7 +37,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5003303-51.2023.4.03.6000 | 15/09/2026 | rejeitados | Embargos de declaração · Compensação. Indébito fiscal. Ausência de vício sanável. Exclusão da base de cálculo do PIS/COFINS | embargos de declaração; icms e icms-st; exclusão da base de cálculo do pis/cofins; indébito fiscal |
+| 5003303-51.2023.4.03.6000 | 15/09/2026 | rejeitados | Embargos de declaração · Ausência de vício sanável. Compensação. Exclusão da base de cálculo do PIS/COFINS. Icms e ICMS-st | embargos de declaração; icms e icms-st; exclusão da base de cálculo do pis/cofins; indébito fiscal |
 
 </details>
 

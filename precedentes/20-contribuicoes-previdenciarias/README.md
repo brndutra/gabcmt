@@ -8,7 +8,7 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T551** · Embargos de declaração · Mandado de segurança. Contribuições previdenciárias patronais, rat e terceiros. Incidência sobre verbas trabalhistas. Vícios inexistentes | 4 | 2 parcialmente provido, 2 rejeitados | mandado de segurança (4); incidência sobre verbas trabalhistas (2); embargos de declaração (2) | [T551-edcl-mandado-de-seguranca-contribuicoes-previdenciarias.json](T551-edcl-mandado-de-seguranca-contribuicoes-previdenciarias.json) |
+| **T551** · Embargos de declaração · Mandado de segurança. Contribuições previdenciárias patronais, rat e terceiros. Incidência sobre verbas trabalhistas. Vícios inexistentes | 4 | 2 parcialmente provido, 2 rejeitados | mandado de segurança (4); embargos de declaração (2); incidência sobre verbas trabalhistas (2) | [T551-edcl-mandado-de-seguranca-contribuicoes-previdenciarias.json](T551-edcl-mandado-de-seguranca-contribuicoes-previdenciarias.json) |
 | **T548** · Anulação da sentença. Contribuição previdenciária patronal | 2 | 1 provido, 1 parcialmente provido | contribuição previdenciária patronal (2) | [T548-anulacao-da-sentenca-contribuicao-previdenciaria-patron.json](T548-anulacao-da-sentenca-contribuicao-previdenciaria-patron.json) |
 | Casos sem par | 4 | 1 desprovido, 2 rejeitados, 1 outro | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
@@ -38,10 +38,10 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000257-07.2026.4.03.0000 | 27/04/2026 | outro | Segregação de débitos para fins de competência. Impugnação da contribuição previdenciária do artigo 22, iv, da lei 8.212/1991. Execução fiscal. Conflito negativo de competência | conflito negativo de competência; execução fiscal; simples nacional; exceção de pré-executividade |
-| 5121591-18.2025.4.03.9999 | 12/05/2026 | desprovido | Seguro-defeso. Honorários de sucumbência. Registro geral da atividade pesqueira suspenso. Pescador artesanal | seguro-defeso; pescador artesanal; registro geral da atividade pesqueira suspenso; existência de outra fonte de renda |
-| 5004833-95.2020.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Vícios inexistentes. Contribuição previdenciária instituída pela lei 13.954/2019. Inexistência de direito adquirido a regime jurídico. Pensão militar | embargos de declaração; pensão militar; vícios inexistentes; rejeição |
-| 5121591-18.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Seguro-defeso. Registro geral da atividade pesqueira suspenso. Pescador artesanal. Requisitos não preenchidos | embargos de declaração; seguro-defeso; pescador artesanal; registro geral da atividade pesqueira suspenso |
+| 5000257-07.2026.4.03.0000 | 27/04/2026 | outro | Competência das turmas da 2ª seção. Conflito negativo de competência. Exceção de pré-executividade. Execução fiscal | conflito negativo de competência; execução fiscal; simples nacional; exceção de pré-executividade |
+| 5121591-18.2025.4.03.9999 | 12/05/2026 | desprovido | Ausência de contribuições previdenciárias. Existência de outra fonte de renda. Honorários de sucumbência. Pescador artesanal | seguro-defeso; pescador artesanal; registro geral da atividade pesqueira suspenso; existência de outra fonte de renda |
+| 5004833-95.2020.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Contribuição previdenciária instituída pela lei 13.954/2019. Inexistência de direito adquirido a regime jurídico. Pensão militar. Rejeição | embargos de declaração; pensão militar; vícios inexistentes; rejeição |
+| 5121591-18.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Ausência de contribuições previdenciárias. Erro material corrigido de ofício, sem efeitos infringentes. Existência de outra fonte de renda. Pescador artesanal | embargos de declaração; seguro-defeso; pescador artesanal; registro geral da atividade pesqueira suspenso |
 
 </details>
 

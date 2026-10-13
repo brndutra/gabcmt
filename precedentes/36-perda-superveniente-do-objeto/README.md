@@ -8,12 +8,12 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T614** · Superveniência de sentença na origem. Perda superveniente do objeto. Recurso prejudicado. Ação civil pública | 2 | 2 prejudicado/extinto | agravo de instrumento (2); ação civil pública (2); superveniência de sentença na origem (2) | [T614-superveniencia-de-sentenca-na-origem-perda-supervenient.json](T614-superveniencia-de-sentenca-na-origem-perda-supervenient.json) |
+| **T614** · Ação civil pública. Perda superveniente do objeto. Recurso prejudicado. Superveniência de sentença na origem | 2 | 2 prejudicado/extinto | agravo de instrumento (2); ação civil pública (2); superveniência de sentença na origem (2) | [T614-acao-civil-publica-perda-superveniente-do-objeto-recurs.json](T614-acao-civil-publica-perda-superveniente-do-objeto-recurs.json) |
 | Casos sem par | 2 | 2 desprovido | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T614</b> · Superveniência de sentença na origem. Perda superveniente do objeto. Recurso prejudicado. Ação civil pública — 2 casos</summary>
+<details><summary><b>T614</b> · Ação civil pública. Perda superveniente do objeto. Recurso prejudicado. Superveniência de sentença na origem — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -26,8 +26,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0007560-93.2012.4.03.6000 | 06/07/2026 | desprovido | Súmula 308/STJ. Hipoteca firmada entre construtora e agente financeiro. Princípio da causalidade. Ineficácia perante o adquirente | embargos de terceiro; ineficácia perante o adquirente; súmula 308/STJ; princípio da causalidade |
-| 5001225-26.2019.4.03.6000 | 15/09/2026 | desprovido | Heteroidentificação. Cancelamento da matrícula. Comissão instituída após matrícula. Ação afirmativa | ensino superior; ação afirmativa; cotas étnico-raciais; heteroidentificação |
+| 0007560-93.2012.4.03.6000 | 06/07/2026 | desprovido | Condenação da emgea, substituta da caixa econômica federal, em honorários advocatícios. Embargos de terceiro. Extinção do processo por perda superveniente do objeto. Hipoteca firmada entre construtora e agente financeiro | embargos de terceiro; ineficácia perante o adquirente; súmula 308/STJ; princípio da causalidade |
+| 5001225-26.2019.4.03.6000 | 15/09/2026 | desprovido | Ausência de previsão editalícia específica. Ação afirmativa. Cancelamento da matrícula. Comissão instituída após matrícula | ensino superior; ação afirmativa; cotas étnico-raciais; heteroidentificação |
 
 </details>
 

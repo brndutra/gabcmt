@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5001824-76.2021.4.03.6005 | 28/04/2026 | rejeitados | Embargos de declaração · Mandado de segurança. Segurança mantida. Adicional de atividade penosa. Restabelecimento do benefício | embargos de declaração; mandado de segurança; adicional de atividade penosa; servidor em teletrabalho em zona de fronteira |
+| 5001824-76.2021.4.03.6005 | 28/04/2026 | rejeitados | Embargos de declaração · Adicional de atividade penosa. Mandado de segurança. Rejeição. Restabelecimento do benefício | embargos de declaração; mandado de segurança; adicional de atividade penosa; servidor em teletrabalho em zona de fronteira |
 
 </details>
 

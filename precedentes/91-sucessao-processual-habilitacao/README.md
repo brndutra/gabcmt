@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0006477-03.2016.4.03.6000 | 28/09/2026 | desprovido | Mandado de segurança. Ausência de direito líquido e certo. Ausência de comprovação de ingresso da titular do crédito na execução ou de sucessão processual. Prescrição | mandado de segurança; prescrição; ausência de direito líquido e certo |
+| 0006477-03.2016.4.03.6000 | 28/09/2026 | desprovido | Ausência de comprovação de ingresso da titular do crédito na execução ou de sucessão processual. Ausência de direito líquido e certo. Habilitação e compensação de crédito tributário reconhecido em título judicial. Mandado de segurança | mandado de segurança; prescrição; ausência de direito líquido e certo |
 
 </details>
 

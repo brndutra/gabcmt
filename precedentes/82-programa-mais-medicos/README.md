@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0000882-08.2025.4.03.6000 | 28/09/2026 | desprovido | Programa mais médicos. Postergação da apresentação do diploma e carteira médica. Médico formado no exterior | remessa necessária em mandado de segurança; programa mais médicos; médico formado no exterior; remessa necessária desprovida |
+| 0000882-08.2025.4.03.6000 | 28/09/2026 | desprovido | Médico formado no exterior. Postergação da apresentação do diploma e carteira médica. Programa mais médicos | remessa necessária em mandado de segurança; programa mais médicos; médico formado no exterior; remessa necessária desprovida |
 
 </details>
 

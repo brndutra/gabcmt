@@ -8,12 +8,12 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T609** · Faixa de domínio de rodovia federal. Reintegração de posse. Ocupação irregular | 4 | 1 provido, 3 desprovido | faixa de domínio de rodovia federal (2); reintegração de posse (2) | [T609-faixa-de-dominio-de-rodovia-federal-reintegracao-de-pos.json](T609-faixa-de-dominio-de-rodovia-federal-reintegracao-de-pos.json) |
+| **T609** · Faixa de domínio de rodovia federal. Ocupação irregular. Reintegração de posse | 4 | 1 provido, 3 desprovido | faixa de domínio de rodovia federal (2); reintegração de posse (2) | [T609-faixa-de-dominio-de-rodovia-federal-ocupacao-irregular.json](T609-faixa-de-dominio-de-rodovia-federal-ocupacao-irregular.json) |
 | Casos sem par | 1 | 1 parcialmente provido | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T609</b> · Faixa de domínio de rodovia federal. Reintegração de posse. Ocupação irregular — 4 casos</summary>
+<details><summary><b>T609</b> · Faixa de domínio de rodovia federal. Ocupação irregular. Reintegração de posse — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -28,7 +28,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0002254-12.2013.4.03.6000 | 10/08/2026 | parcialmente provido | Exigibilidade de taxa de ocupação. Cessão irregular do imóvel e desvio de finalidade. Ação de reintegração de posse. Ressarcimento de iptu e condomínio na proporção do efetivo dispêndio pela CEF | ação de reintegração de posse; programa de arrendamento residencial - par; exigibilidade de taxa de ocupação |
+| 0002254-12.2013.4.03.6000 | 10/08/2026 | parcialmente provido | Ação de reintegração de posse. Cessão irregular do imóvel e desvio de finalidade. Exigibilidade de taxa de ocupação. Programa de arrendamento residencial - par | ação de reintegração de posse; programa de arrendamento residencial - par; exigibilidade de taxa de ocupação |
 
 </details>
 

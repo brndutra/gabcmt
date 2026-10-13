@@ -28,13 +28,13 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0001998-11.2009.4.03.6000 | 28/09/2026 | parcialmente provido | Cumprimento individual de sentença coletiva. Abatimento de valores pagos por requisição de pequeno valor. Juros de mora. Reajuste de 3,17% | embargos à execução; cumprimento individual de sentença coletiva; reajuste de 3,17%; juros de mora |
-| 0053853-89.2014.4.03.6182 | 18/03/2026 | acolhidos | Acolhimento. Perda de objeto dos embargos. Imunidade tributária reconhecida. Embargos à execução fiscal | embargos à execução fiscal; ação anulatória ajuizada anteriormente; execução fiscal extinta; imunidade tributária reconhecida |
-| 5000287-68.2023.4.03.6007 | 30/06/2026 | desprovido | Ibama. Nulidade da subsequente intimação por edital. Infração ambiental. Processo administrativo | embargos à execução fiscal; processo administrativo; infração ambiental; IBAMA |
-| 5006674-73.2026.4.03.0000 | 14/08/2026 | desprovido | Preclusão. Prova pericial contábil. Poder instrutório do juiz. Indeferimento de esclarecimentos e encerramento da instrução | prova pericial contábil; preclusão; poder instrutório do juiz; agravo não provido |
-| 0002526-30.2018.4.03.6000 | 09/06/2026 | parcialmente provido | Embargos de declaração · Recibos comprobatórios. Dedução de despesas médicas. Embargos à execução fiscal. Omissão sanada | embargos de declaração; embargos à execução fiscal; imposto de renda pessoa física; dedução de despesas médicas |
-| 0006519-18.2017.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Caráter protelatório não comprovado. Artigo 1.026, § 2º, CPC. Ans. Prescrição intercorrente no processo administrativo.vícios inexistentes | ans; multa; rejeição |
-| 5000168-84.2021.4.03.6005 | 30/06/2026 | rejeitados | Embargos de declaração · Peso declarado na nota fiscal superior ao aferido pela fiscalização. Responsabilidade do embarcador por excesso de peso nos eixos. Embargos à execução fiscal. Vícios inexistentes | embargos de declaração; embargos à execução fiscal; nulidade de autos de infração; vícios inexistentes |
+| 0001998-11.2009.4.03.6000 | 28/09/2026 | parcialmente provido | Abatimento de valores pagos por requisição de pequeno valor. Cumprimento individual de sentença coletiva. Embargos à execução. Honorários sucumbenciais | embargos à execução; cumprimento individual de sentença coletiva; reajuste de 3,17%; juros de mora |
+| 0053853-89.2014.4.03.6182 | 18/03/2026 | acolhidos | Acolhimento. Ação anulatória ajuizada anteriormente. Embargos à execução fiscal. Execução fiscal extinta | embargos à execução fiscal; ação anulatória ajuizada anteriormente; execução fiscal extinta; imunidade tributária reconhecida |
+| 5000287-68.2023.4.03.6007 | 30/06/2026 | desprovido | Cerceamento de defesa. Devolução de carta com aviso de recebimento com anotação "não procurado". Embargos à execução fiscal. Ibama | embargos à execução fiscal; processo administrativo; infração ambiental; IBAMA |
+| 5006674-73.2026.4.03.0000 | 14/08/2026 | desprovido | Indeferimento de esclarecimentos e encerramento da instrução. Poder instrutório do juiz. Preclusão. Prova pericial contábil | prova pericial contábil; preclusão; poder instrutório do juiz; agravo não provido |
+| 0002526-30.2018.4.03.6000 | 09/06/2026 | parcialmente provido | Embargos de declaração · Dedução de despesas médicas. Embargos à execução fiscal. Imposto de renda pessoa física. Omissão sanada | embargos de declaração; embargos à execução fiscal; imposto de renda pessoa física; dedução de despesas médicas |
+| 0006519-18.2017.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Ans. Artigo 1.026, § 2º, CPC. Caráter protelatório não comprovado. Multa | ans; multa; rejeição |
+| 5000168-84.2021.4.03.6005 | 30/06/2026 | rejeitados | Embargos de declaração · Embargos à execução fiscal. Nulidade de autos de infração. Peso declarado na nota fiscal superior ao aferido pela fiscalização. Rejeição | embargos de declaração; embargos à execução fiscal; nulidade de autos de infração; vícios inexistentes |
 
 </details>
 

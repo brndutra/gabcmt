@@ -8,15 +8,15 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T471** · Execução fiscal. Artigo 8º da lei 12.514/2011. Valor mínimo para ajuizamento. Conselho de fiscalização profissional | 20 | 20 desprovido | execução fiscal (19); artigo 8º da Lei 12.514/2011 (18); valor mínimo para ajuizamento (18); conselho de fiscalização profissional (17) | [T471-execucao-fiscal-artigo-8o-da-lei-12-514-2011-valor-mini.json](T471-execucao-fiscal-artigo-8o-da-lei-12-514-2011-valor-mini.json) |
-| **T472** · Prescrição intercorrente. Execução fiscal | 4 | 3 provido, 1 desprovido | prescrição intercorrente (4); execução fiscal (4) | [T472-prescricao-intercorrente-execucao-fiscal.json](T472-prescricao-intercorrente-execucao-fiscal.json) |
+| **T471** · Artigo 8º da lei 12.514/2011. Valor mínimo para ajuizamento. Conselho de fiscalização profissional. Execução fiscal | 20 | 20 desprovido | execução fiscal (19); artigo 8º da Lei 12.514/2011 (18); valor mínimo para ajuizamento (18); conselho de fiscalização profissional (17) | [T471-artigo-8o-da-lei-12-514-2011-valor-minimo-para-ajuizame.json](T471-artigo-8o-da-lei-12-514-2011-valor-minimo-para-ajuizame.json) |
+| **T472** · Execução fiscal. Prescrição intercorrente | 4 | 3 provido, 1 desprovido | execução fiscal (4); prescrição intercorrente (4) | [T472-execucao-fiscal-prescricao-intercorrente.json](T472-execucao-fiscal-prescricao-intercorrente.json) |
 | **T473** · Tema 1.184/STF | 2 | 1 provido, 1 desprovido |  | [T473-tema-1-184-stf.json](T473-tema-1-184-stf.json) |
-| **T477** · Embargos de declaração · Vícios inexistentes. Rejeição | 2 | 2 rejeitados | embargos de declaração (2) | [T477-edcl-vicios-inexistentes-rejeicao.json](T477-edcl-vicios-inexistentes-rejeicao.json) |
+| **T477** · Embargos de declaração · Rejeição. Vícios inexistentes | 2 | 2 rejeitados | embargos de declaração (2) | [T477-edcl-rejeicao-vicios-inexistentes.json](T477-edcl-rejeicao-vicios-inexistentes.json) |
 | Casos sem par | 6 | 1 provido, 1 parcialmente provido, 2 desprovido, 2 rejeitados | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T471</b> · Execução fiscal. Artigo 8º da lei 12.514/2011. Valor mínimo para ajuizamento. Conselho de fiscalização profissional — 20 casos</summary>
+<details><summary><b>T471</b> · Artigo 8º da lei 12.514/2011. Valor mínimo para ajuizamento. Conselho de fiscalização profissional. Execução fiscal — 20 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -43,7 +43,7 @@
 
 </details>
 
-<details><summary><b>T472</b> · Prescrição intercorrente. Execução fiscal — 4 casos</summary>
+<details><summary><b>T472</b> · Execução fiscal. Prescrição intercorrente — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -63,7 +63,7 @@
 
 </details>
 
-<details><summary><b>T477</b> · Embargos de declaração · Vícios inexistentes. Rejeição — 2 casos</summary>
+<details><summary><b>T477</b> · Embargos de declaração · Rejeição. Vícios inexistentes — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -76,12 +76,12 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5001557-07.2021.4.03.6005 | 09/06/2026 | provido | Dano moral IN RE ipsa. Autuações indevidas da ANTT/PRF. Restituição de valores pagos. Inscrição em dívida ativa | autuações indevidas da antt/prf; inscrição em dívida ativa; restituição de valores pagos; dano moral IN RE ipsa |
-| 5004977-64.2023.4.03.6000 | 27/08/2026 | desprovido | Anuidades. Presunção de liquidez e certeza ilidida. Execução fiscal. Extinção sem resolução do mérito.recurso desprovido | execução fiscal; conselho profissional; anuidades; presunção de liquidez e certeza ilidida |
-| 5008173-92.2026.4.03.0000 | 14/08/2026 | desprovido | 833, iv e x, do CPC. Execução fiscal. Penhora de ativos financeiros. Pessoa jurídica | agravo de instrumento; execução fiscal; penhora de ativos financeiros; pessoa jurídica |
-| 0004199-63.2015.4.03.6000 | 30/06/2026 | rejeitados | Embargos de declaração · Decadência não configurada. Ação pauliana. Fraude presumida. Doação de imóveis após inscrição de crédito tributário em dívida ativa | embargos de declaração; ação pauliana; fraude presumida; decadência não configurada |
+| 5001557-07.2021.4.03.6005 | 09/06/2026 | provido | Autuações indevidas da ANTT/PRF. Ação declaratória de nulidade de ato administrativo cumulada com indenização por danos morais. Cancelamento administrativo dos autos de infração. Dano moral IN RE ipsa | autuações indevidas da antt/prf; inscrição em dívida ativa; restituição de valores pagos; dano moral IN RE ipsa |
+| 5004977-64.2023.4.03.6000 | 27/08/2026 | desprovido | Anuidades. Ausência de comprovação de notificação regular do lançamento. Conselho profissional. Execução fiscal | execução fiscal; conselho profissional; anuidades; presunção de liquidez e certeza ilidida |
+| 5008173-92.2026.4.03.0000 | 14/08/2026 | desprovido | 833, iv e x, do CPC. Execução fiscal. Impenhorabilidade. Inaplicabilidade do art | agravo de instrumento; execução fiscal; penhora de ativos financeiros; pessoa jurídica |
+| 0004199-63.2015.4.03.6000 | 30/06/2026 | rejeitados | Embargos de declaração · Ação pauliana. Decadência não configurada. Doação de imóveis após inscrição de crédito tributário em dívida ativa. Fraude presumida | embargos de declaração; ação pauliana; fraude presumida; decadência não configurada |
 | 5001518-56.2021.4.03.9999 | 09/06/2026 | parcialmente provido | Embargos de declaração · Execução fiscal. Multa administrativa. Omissão sanada. Parcial acolhimento, sem efeitos infringentes | embargos de declaração; execução fiscal; multa administrativa; prescrição afastada |
-| 5005185-16.2022.4.03.9999 | 28/04/2026 | rejeitados | Embargos de declaração · Prescrição intercorrente. Execução fiscal. Negado provimento. Vícios inexistentes | embargos de declaração; execução fiscal; prescrição intercorrente; negado provimento |
+| 5005185-16.2022.4.03.9999 | 28/04/2026 | rejeitados | Embargos de declaração · Execução fiscal. Negado provimento. Prescrição intercorrente. Rejeição | embargos de declaração; execução fiscal; prescrição intercorrente; negado provimento |
 
 </details>
 

@@ -13,22 +13,22 @@
 | **T327** · Aposentadoria por tempo de contribuição da pessoa com deficiência | 4 | 1 provido, 1 parcialmente provido, 1 desprovido, 1 não conhecido |  | [T327-aposentadoria-por-tempo-de-contribuicao-da-pessoa-com-d.json](T327-aposentadoria-por-tempo-de-contribuicao-da-pessoa-com-d.json) |
 | **T328** · Aposentadoria por tempo de contribuição. Reexame necessário afastado | 4 | 1 parcialmente provido, 3 desprovido | aposentadoria por tempo de contribuição (4) | [T328-aposentadoria-por-tempo-de-contribuicao-reexame-necessa.json](T328-aposentadoria-por-tempo-de-contribuicao-reexame-necessa.json) |
 | **T329** · Aposentadoria por tempo de contribuição | 3 | 1 provido, 2 desprovido | aposentadoria por tempo de contribuição (2) | [T329-aposentadoria-por-tempo-de-contribuicao.json](T329-aposentadoria-por-tempo-de-contribuicao.json) |
-| **T330** · Aposentadoria por tempo de contribuição. Taxa selic. Correção monetária e juros de mora. Ec 113/2021 e EC 136/2025 | 3 | 3 desprovido | aposentadoria por tempo de contribuição (2); correção monetária e juros de mora (2); EC 113/2021 e EC 136/2025 (2) | [T330-aposentadoria-por-tempo-de-contribuicao-taxa-selic-corr.json](T330-aposentadoria-por-tempo-de-contribuicao-taxa-selic-corr.json) |
-| **T331** · Aposentadoria por tempo de contribuição. Garantia do salário mínimo. Acordo de seguridade social brasil-portugal | 3 | 3 desprovido | aposentadoria por tempo de contribuição (3); garantia do salário mínimo (3); acordo de seguridade social brasil-portugal (3); apelação em ação revisional de RMI (3) | [T331-aposentadoria-por-tempo-de-contribuicao-garantia-do-sal.json](T331-aposentadoria-por-tempo-de-contribuicao-garantia-do-sal.json) |
+| **T330** · Aposentadoria por tempo de contribuição. Correção monetária e juros de mora. Ec 113/2021 e EC 136/2025. Taxa selic | 3 | 3 desprovido | EC 113/2021 e EC 136/2025 (2); aposentadoria por tempo de contribuição (2); correção monetária e juros de mora (2) | [T330-aposentadoria-por-tempo-de-contribuicao-correcao-moneta.json](T330-aposentadoria-por-tempo-de-contribuicao-correcao-moneta.json) |
+| **T331** · Acordo de seguridade social brasil-portugal. Garantia do salário mínimo. Aposentadoria por tempo de contribuição | 3 | 3 desprovido | acordo de seguridade social brasil-portugal (3); apelação em ação revisional de RMI (3); aposentadoria por tempo de contribuição (3); garantia do salário mínimo (3) | [T331-acordo-de-seguridade-social-brasil-portugal-garantia-do.json](T331-acordo-de-seguridade-social-brasil-portugal-garantia-do.json) |
 | **T332** · Aposentadoria por tempo de contribuição de professor | 3 | 1 provido, 1 parcialmente provido, 1 desprovido |  | [T332-aposentadoria-por-tempo-de-contribuicao-de-professor.json](T332-aposentadoria-por-tempo-de-contribuicao-de-professor.json) |
 | **T356** · Embargos de declaração · Aposentadoria por tempo de contribuição. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Consectários legais. Correção monetária e juros de mora | 3 | 3 rejeitados | aposentadoria por tempo de contribuição (3); embargos de declaração (2) | [T356-edcl-aposentadoria-por-tempo-de-contribuicao-correcao-d.json](T356-edcl-aposentadoria-por-tempo-de-contribuicao-correcao-d.json) (2 de 3) |
 | **T333** · Aposentadoria por tempo de contribuição | 2 | 1 parcialmente provido, 1 desprovido | aposentadoria por tempo de contribuição (2) | [T333-aposentadoria-por-tempo-de-contribuicao.json](T333-aposentadoria-por-tempo-de-contribuicao.json) (1 de 2) |
 | **T334** · Aposentadoria por tempo de contribuição | 2 | 1 desprovido, 1 não conhecido | aposentadoria por tempo de contribuição (2) | [T334-aposentadoria-por-tempo-de-contribuicao.json](T334-aposentadoria-por-tempo-de-contribuicao.json) |
-| **T335** · Natureza remuneratória. Auxílio-alimentação fornecido por vale, cartão ou tíquete. Revisão de aposentadoria por tempo de contribuição | 2 | 1 desprovido, 1 não conhecido |  | [T335-natureza-remuneratoria-auxilio-alimentacao-fornecido-po.json](T335-natureza-remuneratoria-auxilio-alimentacao-fornecido-po.json) |
-| **T336** · Reafirmação da DER no curso do processo administrativo. Renúncia ao direito de recorrer. Aposentadoria por tempo de contribuição | 2 | 2 não conhecido |  | [T336-reafirmacao-da-der-no-curso-do-processo-administrativo.json](T336-reafirmacao-da-der-no-curso-do-processo-administrativo.json) |
-| **T337** · Benefício concedido no período do “buraco negro”. Teto como limitador externo. Readequação aos tetos das emendas constitucionais 20/1998 e 41/2003 | 2 | 1 provido, 1 parcialmente provido |  | [T337-beneficio-concedido-no-periodo-do-buraco-negro-teto-com.json](T337-beneficio-concedido-no-periodo-do-buraco-negro-teto-com.json) |
-| **T338** · Certidão de tempo de contribuição. Aposentadoria por idade urbana | 2 | 2 desprovido | certidão de tempo de contribuição (2); aposentadoria por idade urbana (2) | [T338-certidao-de-tempo-de-contribuicao-aposentadoria-por-ida.json](T338-certidao-de-tempo-de-contribuicao-aposentadoria-por-ida.json) |
+| **T335** · Aposentadoria por tempo de contribuição. Ausência de recolhimento pelo empregador. Auxílio-alimentação fornecido por vale, cartão ou tíquete | 2 | 1 desprovido, 1 não conhecido |  | [T335-aposentadoria-por-tempo-de-contribuicao-ausencia-de-rec.json](T335-aposentadoria-por-tempo-de-contribuicao-ausencia-de-rec.json) |
+| **T336** · Aposentadoria por tempo de contribuição. Preclusão lógica. Reafirmação da DER no curso do processo administrativo | 2 | 2 não conhecido |  | [T336-aposentadoria-por-tempo-de-contribuicao-preclusao-logic.json](T336-aposentadoria-por-tempo-de-contribuicao-preclusao-logic.json) |
+| **T337** · 144 da lei 8.213/1991. Ausência de interesse processual. Benefício concedido no período do “buraco negro” | 2 | 1 provido, 1 parcialmente provido |  | [T337-144-da-lei-8-213-1991-ausencia-de-interesse-processual.json](T337-144-da-lei-8-213-1991-ausencia-de-interesse-processual.json) |
+| **T338** · Aposentadoria por idade urbana. Certidão de tempo de contribuição | 2 | 2 desprovido | aposentadoria por idade urbana (2); certidão de tempo de contribuição (2) | [T338-aposentadoria-por-idade-urbana-certidao-de-tempo-de-con.json](T338-aposentadoria-por-idade-urbana-certidao-de-tempo-de-con.json) |
 | **T339** · Interesse de agir | 2 | 2 desprovido | interesse de agir (2) | [T339-interesse-de-agir.json](T339-interesse-de-agir.json) |
-| **T340** · Retroação dos efeitos do pagamento. Indenização de contribuições em atraso. Recolhimento extemporâneo de contribuições previdenciárias | 2 | 2 desprovido |  | [T340-retroacao-dos-efeitos-do-pagamento-indenizacao-de-contr.json](T340-retroacao-dos-efeitos-do-pagamento-indenizacao-de-contr.json) |
+| **T340** · Aposentadoria por idade urbana. Aposentadoria por tempo de contribuição. Ato ilegal da administração | 2 | 2 desprovido |  | [T340-aposentadoria-por-idade-urbana-aposentadoria-por-tempo.json](T340-aposentadoria-por-idade-urbana-aposentadoria-por-tempo.json) |
 | **T341** · Aposentadoria por tempo de contribuição | 2 | 2 parcialmente provido | aposentadoria por tempo de contribuição (2) | [T341-aposentadoria-por-tempo-de-contribuicao.json](T341-aposentadoria-por-tempo-de-contribuicao.json) |
 | **T342** · Aposentadoria por idade urbana | 2 | 1 parcialmente provido, 1 desprovido | aposentadoria por idade urbana (2) | [T342-aposentadoria-por-idade-urbana.json](T342-aposentadoria-por-idade-urbana.json) |
 | **T343** · Tema 1.188/STJ | 2 | 1 provido, 1 desprovido | tema 1.188/STJ (2) | [T343-tema-1-188-stj.json](T343-tema-1-188-stj.json) |
-| **T357** · Embargos de declaração · Multa. Caráter protelatório do recurso. Vícios inexistentes. Rejeição | 2 | 2 rejeitados | embargos de declaração (2) | [T357-edcl-multa-carater-protelatorio-do-recurso-vicios-inexi.json](T357-edcl-multa-carater-protelatorio-do-recurso-vicios-inexi.json) |
+| **T357** · Embargos de declaração · Caráter protelatório do recurso. Multa. Vícios inexistentes. Rejeição | 2 | 2 rejeitados | embargos de declaração (2) | [T357-edcl-carater-protelatorio-do-recurso-multa-vicios-inexi.json](T357-edcl-carater-protelatorio-do-recurso-multa-vicios-inexi.json) |
 | Casos sem par | 16 | 4 provido, 1 parcialmente provido, 4 desprovido, 1 não conhecido, 3 rejeitados, 1 acolhidos, 2 outro | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) (15 de 16) |
 
 ## Casos de cada tema
@@ -95,7 +95,7 @@
 
 </details>
 
-<details><summary><b>T330</b> · Aposentadoria por tempo de contribuição. Taxa selic. Correção monetária e juros de mora. Ec 113/2021 e EC 136/2025 — 3 casos</summary>
+<details><summary><b>T330</b> · Aposentadoria por tempo de contribuição. Correção monetária e juros de mora. Ec 113/2021 e EC 136/2025. Taxa selic — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -105,7 +105,7 @@
 
 </details>
 
-<details><summary><b>T331</b> · Aposentadoria por tempo de contribuição. Garantia do salário mínimo. Acordo de seguridade social brasil-portugal — 3 casos</summary>
+<details><summary><b>T331</b> · Acordo de seguridade social brasil-portugal. Garantia do salário mínimo. Aposentadoria por tempo de contribuição — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -153,7 +153,7 @@
 
 </details>
 
-<details><summary><b>T335</b> · Natureza remuneratória. Auxílio-alimentação fornecido por vale, cartão ou tíquete. Revisão de aposentadoria por tempo de contribuição — 2 casos</summary>
+<details><summary><b>T335</b> · Aposentadoria por tempo de contribuição. Ausência de recolhimento pelo empregador. Auxílio-alimentação fornecido por vale, cartão ou tíquete — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -162,7 +162,7 @@
 
 </details>
 
-<details><summary><b>T336</b> · Reafirmação da DER no curso do processo administrativo. Renúncia ao direito de recorrer. Aposentadoria por tempo de contribuição — 2 casos</summary>
+<details><summary><b>T336</b> · Aposentadoria por tempo de contribuição. Preclusão lógica. Reafirmação da DER no curso do processo administrativo — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -171,7 +171,7 @@
 
 </details>
 
-<details><summary><b>T337</b> · Benefício concedido no período do “buraco negro”. Teto como limitador externo. Readequação aos tetos das emendas constitucionais 20/1998 e 41/2003 — 2 casos</summary>
+<details><summary><b>T337</b> · 144 da lei 8.213/1991. Ausência de interesse processual. Benefício concedido no período do “buraco negro” — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -180,7 +180,7 @@
 
 </details>
 
-<details><summary><b>T338</b> · Certidão de tempo de contribuição. Aposentadoria por idade urbana — 2 casos</summary>
+<details><summary><b>T338</b> · Aposentadoria por idade urbana. Certidão de tempo de contribuição — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -198,7 +198,7 @@
 
 </details>
 
-<details><summary><b>T340</b> · Retroação dos efeitos do pagamento. Indenização de contribuições em atraso. Recolhimento extemporâneo de contribuições previdenciárias — 2 casos</summary>
+<details><summary><b>T340</b> · Aposentadoria por idade urbana. Aposentadoria por tempo de contribuição. Ato ilegal da administração — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -234,7 +234,7 @@
 
 </details>
 
-<details><summary><b>T357</b> · Embargos de declaração · Multa. Caráter protelatório do recurso. Vícios inexistentes. Rejeição — 2 casos</summary>
+<details><summary><b>T357</b> · Embargos de declaração · Caráter protelatório do recurso. Multa. Vícios inexistentes. Rejeição — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -247,22 +247,22 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0000944-20.2017.4.03.6003 | 27/04/2026 | provido | Improcedência decretada por falta de prova testemunhal a corroborar o início de prova material. Nulidade da sentença decretada de ofício. Prova testemunhal produzida por carta precatória. Falta de juntada do material audiovisual | aposentadoria por tempo de contribuição; reconhecimento de período rural; prova testemunhal produzida por carta precatória; falta de juntada do material audiovisual |
-| 5001099-28.2023.4.03.6002 | 04/05/2026 | provido | Anulação parcial da sentença. Reconhecimento do labor rural. Cerceamento de defesa configurado quanto à prova pericial indireta. Reconhecimento de período rural e especial | reconhecimento de período rural e especial; anulação parcial da sentença; reconhecimento do labor rural |
-| 5002811-56.2024.4.03.9999 | 27/04/2026 | não conhecido | Inovação. Honorários de sucumbência. Recurso inominado. Não conhecimento | recurso inominado; devolutividade; inovação; aposentadoria por tempo de contribuição |
-| 5002943-24.2020.4.03.6000 | 15/09/2026 | parcialmente provido | Interesse de agir. Efeitos financeiros. Inclusão de verbas reconhecidas em reclamação trabalhista. Revisão de aposentadoria por tempo de contribuição | interesse de agir; efeitos financeiros; recurso parcialmente provido |
-| 5003599-07.2023.4.03.9999 | 20/07/2026 | desprovido | Aposentadoria por idade. Recolhimentos extemporâneos posteriores à primeira contribuição sem atraso. Cômputo para carência e tempo de contribuição. Contribuinte individual | aposentadoria por idade; contribuinte individual; cômputo para carência e tempo de contribuição |
-| 5004005-60.2024.4.03.6000 | 31/03/2026 | desprovido | Mandado de segurança. Demora no julgamento de recurso administrativo pelo conselho de recursos da previdência social. Ilegitimidade passiva do INSS. Segurança concedida | mandado de segurança; ilegitimidade passiva do INSS; segurança concedida; remessa oficial desprovida |
-| 5005064-51.2023.4.03.9999 | 26/05/2026 | desprovido | Consectários legais. Não configuração. Dano moral por indeferimento de benefício. Preenchimento dos requisitos na data do segundo requerimento administrativo | apelação e recurso adesivo; aposentadoria por idade urbana; dano moral por indeferimento de benefício; não configuração |
-| 5007475-41.2020.4.03.6000 | 27/04/2026 | provido | Concessão do benefício. Anotação em CTPS. Presunção juris tantum. Professora | professora; reconhecimento de períodos laborados; anotação em CTPS; presunção juris tantum |
+| 0000944-20.2017.4.03.6003 | 27/04/2026 | provido | Aposentadoria por tempo de contribuição. Falta de juntada do material audiovisual. Improcedência decretada por falta de prova testemunhal a corroborar o início de prova material. Nulidade da sentença decretada de ofício | aposentadoria por tempo de contribuição; reconhecimento de período rural; prova testemunhal produzida por carta precatória; falta de juntada do material audiovisual |
+| 5001099-28.2023.4.03.6002 | 04/05/2026 | provido | Anulação parcial da sentença. Cerceamento de defesa configurado quanto à prova pericial indireta. Reconhecimento de período rural e especial. Reconhecimento do labor rural | reconhecimento de período rural e especial; anulação parcial da sentença; reconhecimento do labor rural |
+| 5002811-56.2024.4.03.9999 | 27/04/2026 | não conhecido | Aposentadoria por tempo de contribuição. Complementação de contribuições. Confirmação da sentença. Devolutividade | recurso inominado; devolutividade; inovação; aposentadoria por tempo de contribuição |
+| 5002943-24.2020.4.03.6000 | 15/09/2026 | parcialmente provido | Efeitos financeiros. Inclusão de verbas reconhecidas em reclamação trabalhista. Interesse de agir. Revisão de aposentadoria por tempo de contribuição | interesse de agir; efeitos financeiros; recurso parcialmente provido |
+| 5003599-07.2023.4.03.9999 | 20/07/2026 | desprovido | Aposentadoria por idade. Contribuinte individual. Cômputo para carência e tempo de contribuição. Recolhimentos extemporâneos posteriores à primeira contribuição sem atraso | aposentadoria por idade; contribuinte individual; cômputo para carência e tempo de contribuição |
+| 5004005-60.2024.4.03.6000 | 31/03/2026 | desprovido | Demora no julgamento de recurso administrativo pelo conselho de recursos da previdência social. Ilegitimidade passiva do INSS. Mandado de segurança. Segurança concedida | mandado de segurança; ilegitimidade passiva do INSS; segurança concedida; remessa oficial desprovida |
+| 5005064-51.2023.4.03.9999 | 26/05/2026 | desprovido | Aposentadoria por idade urbana. Consectários legais. Dano moral por indeferimento de benefício. Não configuração | apelação e recurso adesivo; aposentadoria por idade urbana; dano moral por indeferimento de benefício; não configuração |
+| 5007475-41.2020.4.03.6000 | 27/04/2026 | provido | Anotação em CTPS. Concessão do benefício. Presunção juris tantum. Professora | professora; reconhecimento de períodos laborados; anotação em CTPS; presunção juris tantum |
 | 5007844-59.2025.4.03.6000 | 30/06/2026 | desprovido | Mandado de segurança. Mora administrativa na análise de requerimento de aposentadoria por tempo de contribuição. Segurança concedida mantida | mandado de segurança; segurança concedida mantida |
-| 5029845-30.2024.4.03.0000 | 27/08/2026 | outro | Redistribuição do feito. Ação de concessão de aposentadoria por tempo de contribuição. Indeferimento de prova pericial. Declinação de competência | agravo de instrumento; indeferimento de prova pericial; incompetência absoluta do órgão julgador; declinação de competência |
-| 5224794-59.2026.4.03.9999 | 27/08/2026 | outro | Aposentadoria por tempo de contribuição. Recurso já julgado. Distribuição em duplicidade | aposentadoria por tempo de contribuição; distribuição em duplicidade; recurso já julgado |
-| 5340616-96.2026.4.03.9999 *(no banco)* | 05/10/2026 | provido | Pendências e indicadores. Concessão administrativa superveniente. Art. Períodos contributivos constantes do CNIS | aposentadoria por tempo de contribuição urbana; períodos contributivos constantes do CNIS; pendências e indicadores; concessão administrativa superveniente |
-| 0000935-92.2016.4.03.6003 | 15/09/2026 | rejeitados | Embargos de declaração · Inaplicabilidade da lei 10.559/2002 ausência de vício sanável. Lei 8.878/1994. Período de afastamento. Prequestionamento | embargos de declaração; aposentadoria por tempo de contribuição; anistiado político; período de afastamento |
-| 5001787-90.2024.4.03.9999 | 15/09/2026 | acolhidos | Embargos de declaração · Implemento dos requisitos no curso da demanda. Reafirmação da data de entrada do requerimento. Omissão. Aposentadoria por tempo de contribuição integral | embargos de declaração; aposentadoria por tempo de contribuição; omissão; reafirmação da data de entrada do requerimento |
-| 5005030-76.2023.4.03.9999 | 10/08/2026 | rejeitados | Embargos de declaração · Tempo de contribuição não atingido. Ausência de vício sanável. Reconhecimento de tempo de serviço militar e de mandato eletivo municipal. Aposentadoria por tempo de contribuição | embargos de declaração; aposentadoria por tempo de contribuição; tempo de contribuição não atingido; ausência de vício sanável |
-| 5176804-09.2025.4.03.9999 | 30/06/2026 | rejeitados | Embargos de declaração · Caráter protelatório não comprovado. Artigo 1.026, § 2º, CPC. Preenchimento dos requisitos na DER. Aposentadoria por tempo de contribuição de professor | embargos de declaração; preenchimento dos requisitos na DER; termo inicial do benefício; vícios inexistentes |
+| 5029845-30.2024.4.03.0000 | 27/08/2026 | outro | Ação de concessão de aposentadoria por tempo de contribuição. Declinação de competência. Incompetência absoluta do órgão julgador. Indeferimento de prova pericial | agravo de instrumento; indeferimento de prova pericial; incompetência absoluta do órgão julgador; declinação de competência |
+| 5224794-59.2026.4.03.9999 | 27/08/2026 | outro | Aposentadoria por tempo de contribuição. Distribuição em duplicidade. Recurso já julgado | aposentadoria por tempo de contribuição; distribuição em duplicidade; recurso já julgado |
+| 5340616-96.2026.4.03.9999 *(no banco)* | 05/10/2026 | provido | 493 do CPC. Aposentadoria por tempo de contribuição urbana. Art. Concessão administrativa superveniente | aposentadoria por tempo de contribuição urbana; períodos contributivos constantes do CNIS; pendências e indicadores; concessão administrativa superveniente |
+| 0000935-92.2016.4.03.6003 | 15/09/2026 | rejeitados | Embargos de declaração · Anistiado político. Aposentadoria por tempo de contribuição. Impossibilidade de cômputo. Inaplicabilidade da lei 10.559/2002 ausência de vício sanável | embargos de declaração; aposentadoria por tempo de contribuição; anistiado político; período de afastamento |
+| 5001787-90.2024.4.03.9999 | 15/09/2026 | acolhidos | Embargos de declaração · Aposentadoria por tempo de contribuição. Aposentadoria por tempo de contribuição integral. Embargos acolhidos com efeitos infringentes. Implemento dos requisitos no curso da demanda | embargos de declaração; aposentadoria por tempo de contribuição; omissão; reafirmação da data de entrada do requerimento |
+| 5005030-76.2023.4.03.9999 | 10/08/2026 | rejeitados | Embargos de declaração · Aposentadoria por tempo de contribuição. Ausência de vício sanável. Reconhecimento de tempo de serviço militar e de mandato eletivo municipal. Rejeição | embargos de declaração; aposentadoria por tempo de contribuição; tempo de contribuição não atingido; ausência de vício sanável |
+| 5176804-09.2025.4.03.9999 | 30/06/2026 | rejeitados | Embargos de declaração · Aposentadoria por tempo de contribuição de professor. Artigo 1.026, § 2º, CPC. Caráter protelatório não comprovado. Multa | embargos de declaração; preenchimento dos requisitos na DER; termo inicial do benefício; vícios inexistentes |
 
 </details>
 

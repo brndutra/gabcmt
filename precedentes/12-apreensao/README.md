@@ -8,14 +8,14 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T466** · Infração. Circunstâncias do caso concreto. Fatores determinantes. Transporte de bens estrangeiros sem cobertura de entrada regular no território nacional | 25 | 7 provido, 18 desprovido | infração (25); perdimento (23); responsabilidade (21); condutor não proprietário (12); locadora de veículos (6) | [T466-infracao-circunstancias-do-caso-concreto-fatores-determ.json](T466-infracao-circunstancias-do-caso-concreto-fatores-determ.json) |
-| **T469** · Embargos de declaração · Infração. Ausência de vício sanável. Transporte de bens estrangeiros sem cobertura de entrada regular no território nacional. Perdimento | 5 | 5 rejeitados | embargos de declaração (5); perdimento (5); infração (5); locadora de veículos (2) | [T469-edcl-infracao-ausencia-de-vicio-sanavel-transporte-de-b.json](T469-edcl-infracao-ausencia-de-vicio-sanavel-transporte-de-b.json) |
-| **T470** · Embargos de declaração · Vícios inexistentes. Rejeição | 2 | 2 rejeitados | embargos de declaração (2) | [T470-edcl-vicios-inexistentes-rejeicao.json](T470-edcl-vicios-inexistentes-rejeicao.json) |
+| **T466** · Apreensão de mercadorias e do veículo transportador. Circunstâncias do caso concreto. Fatores determinantes. Infração | 25 | 7 provido, 18 desprovido | infração (25); perdimento (23); responsabilidade (21); condutor não proprietário (12); locadora de veículos (6) | [T466-apreensao-de-mercadorias-e-do-veiculo-transportador-cir.json](T466-apreensao-de-mercadorias-e-do-veiculo-transportador-cir.json) |
+| **T469** · Embargos de declaração · Apreensão de mercadorias e do veículo transportador. Ausência de vício sanável. Infração. Perdimento | 5 | 5 rejeitados | embargos de declaração (5); infração (5); perdimento (5); locadora de veículos (2) | [T469-edcl-apreensao-de-mercadorias-e-do-veiculo-transportado.json](T469-edcl-apreensao-de-mercadorias-e-do-veiculo-transportado.json) |
+| **T470** · Embargos de declaração · Rejeição. Vícios inexistentes | 2 | 2 rejeitados | embargos de declaração (2) | [T470-edcl-rejeicao-vicios-inexistentes.json](T470-edcl-rejeicao-vicios-inexistentes.json) |
 | Casos sem par | 2 | 2 desprovido | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T466</b> · Infração. Circunstâncias do caso concreto. Fatores determinantes. Transporte de bens estrangeiros sem cobertura de entrada regular no território nacional — 25 casos</summary>
+<details><summary><b>T466</b> · Apreensão de mercadorias e do veículo transportador. Circunstâncias do caso concreto. Fatores determinantes. Infração — 25 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -47,7 +47,7 @@
 
 </details>
 
-<details><summary><b>T469</b> · Embargos de declaração · Infração. Ausência de vício sanável. Transporte de bens estrangeiros sem cobertura de entrada regular no território nacional. Perdimento — 5 casos</summary>
+<details><summary><b>T469</b> · Embargos de declaração · Apreensão de mercadorias e do veículo transportador. Ausência de vício sanável. Infração. Perdimento — 5 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -59,7 +59,7 @@
 
 </details>
 
-<details><summary><b>T470</b> · Embargos de declaração · Vícios inexistentes. Rejeição — 2 casos</summary>
+<details><summary><b>T470</b> · Embargos de declaração · Rejeição. Vícios inexistentes — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -72,8 +72,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000324-70.2024.4.03.6004 | 28/09/2026 | desprovido | Perdimento do veículo estrangeiro indevida. Apreensão e perdimento de veículo estrangeiro com produtos estrangeiros. Bens de uso médico e farmacêutico. Ação declaratória de nulidade de processo administrativo | bens de uso médico e farmacêutico; perdimento do veículo estrangeiro indevida |
-| 5004110-08.2022.4.03.6000 | 09/06/2026 | desprovido | Transporte de madeira nativa. Invalidação do documento. Apreensão da mercadoria. Desvio de rota | transporte de madeira nativa; documento de origem florestal (dof); desvio de rota; invalidação do documento |
+| 5000324-70.2024.4.03.6004 | 28/09/2026 | desprovido | Apreensão e perdimento de veículo estrangeiro com produtos estrangeiros. Ação declaratória de nulidade de processo administrativo. Bens de uso médico e farmacêutico. Origem e destinação para o próprio país estrangeiro | bens de uso médico e farmacêutico; perdimento do veículo estrangeiro indevida |
+| 5004110-08.2022.4.03.6000 | 09/06/2026 | desprovido | Apreensão da mercadoria. Desvio de rota. Documento de origem florestal (dof). Invalidação do documento | transporte de madeira nativa; documento de origem florestal (dof); desvio de rota; invalidação do documento |
 
 </details>
 

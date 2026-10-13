@@ -8,14 +8,14 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T569** · Correção de ofício. Ação indenizatória por vícios construtivos. Extinção do processo sem resolução do mérito. Desconstituição da sentença | 3 | 3 parcialmente provido | valor da causa (3); ação indenizatória por vícios construtivos (3); correção de ofício (3); competência absoluta do juizado especial federal (3) | [T569-correcao-de-oficio-acao-indenizatoria-por-vicios-constr.json](T569-correcao-de-oficio-acao-indenizatoria-por-vicios-constr.json) |
-| **T570** · Cumprimento individual de sentença coletiva. Tema 1.178/STJ. Revisão baseada em critério estritamente objetivo. Declaração de hipossuficiência | 3 | 3 desprovido | tema 1.178/STJ (3); cumprimento individual de sentença coletiva (3); gratuidade da justiça (3); declaração de hipossuficiência (3) | [T570-cumprimento-individual-de-sentenca-coletiva-tema-1-178.json](T570-cumprimento-individual-de-sentenca-coletiva-tema-1-178.json) |
+| **T569** · Ação indenizatória por vícios construtivos. Competência absoluta do juizado especial federal. Correção de ofício. Decisão surpresa | 3 | 3 parcialmente provido | ação indenizatória por vícios construtivos (3); competência absoluta do juizado especial federal (3); correção de ofício (3); valor da causa (3) | [T569-acao-indenizatoria-por-vicios-construtivos-competencia.json](T569-acao-indenizatoria-por-vicios-construtivos-competencia.json) |
+| **T570** · Cumprimento individual de sentença coletiva. Revisão baseada em critério estritamente objetivo. Tema 1.178/STJ. Declaração de hipossuficiência | 3 | 3 desprovido | cumprimento individual de sentença coletiva (3); declaração de hipossuficiência (3); gratuidade da justiça (3); tema 1.178/STJ (3) | [T570-cumprimento-individual-de-sentenca-coletiva-revisao-bas.json](T570-cumprimento-individual-de-sentenca-coletiva-revisao-bas.json) |
 | **T571** · Gratuidade da justiça | 3 | 1 parcialmente provido, 2 desprovido | agravo de instrumento (2); gratuidade da justiça (2) | [T571-gratuidade-da-justica.json](T571-gratuidade-da-justica.json) |
 | Casos sem par | 1 | 1 desprovido | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T569</b> · Correção de ofício. Ação indenizatória por vícios construtivos. Extinção do processo sem resolução do mérito. Desconstituição da sentença — 3 casos</summary>
+<details><summary><b>T569</b> · Ação indenizatória por vícios construtivos. Competência absoluta do juizado especial federal. Correção de ofício. Decisão surpresa — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -25,7 +25,7 @@
 
 </details>
 
-<details><summary><b>T570</b> · Cumprimento individual de sentença coletiva. Tema 1.178/STJ. Revisão baseada em critério estritamente objetivo. Declaração de hipossuficiência — 3 casos</summary>
+<details><summary><b>T570</b> · Cumprimento individual de sentença coletiva. Revisão baseada em critério estritamente objetivo. Tema 1.178/STJ. Declaração de hipossuficiência — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -49,7 +49,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5009601-12.2026.4.03.0000 | 14/08/2026 | desprovido | Pessoa jurídica. Gratuidade de justiça. Insuficiência de extratos bancários de passivos para comprovação de hipossuficiência | agravo interno em agravo de instrumento; gratuidade de justiça; pessoa jurídica |
+| 5009601-12.2026.4.03.0000 | 14/08/2026 | desprovido | Gratuidade de justiça. Insuficiência de extratos bancários de passivos para comprovação de hipossuficiência. Pessoa jurídica | agravo interno em agravo de instrumento; gratuidade de justiça; pessoa jurídica |
 
 </details>
 

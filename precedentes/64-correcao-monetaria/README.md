@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0000454-20.2016.4.03.6007 *(no banco)* | 28/09/2026 | rejeitados | Embargos de declaração · Pensão especial e indenização por danos morais. Ausência de vício sanável. Critérios de correção monetária e juros de mora. Ec 113/2021 e EC 136/2025 | embargos de declaração; pensão especial e indenização por danos morais; proposta de acordo; critérios de correção monetária e juros de mora |
+| 0000454-20.2016.4.03.6007 *(no banco)* | 28/09/2026 | rejeitados | Embargos de declaração · Ausência de vício sanável. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Critérios de correção monetária e juros de mora. Ec 113/2021 e EC 136/2025 | embargos de declaração; pensão especial e indenização por danos morais; proposta de acordo; critérios de correção monetária e juros de mora |
 
 </details>
 

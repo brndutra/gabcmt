@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0000788-73.2010.4.03.6004 | 05/10/2026 | prejudicado/extinto | Reintegração de militar. Ação ordinária. Princípio da causalidade. Honorários | ação ordinária; anulação de ato de desincorporação; reintegração de militar; tratamento médico |
-| 0005538-91.2014.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Reforma e reintegração. Vícios inexistentes. Rejeição. Militar temporário | embargos de declaração; militar temporário; reforma e reintegração; improcedência dos pedidos |
+| 0000788-73.2010.4.03.6004 | 05/10/2026 | prejudicado/extinto | Anulação de ato de desincorporação. Ação ordinária. Desinteresse expresso do autor. Extinção sem resolução do mérito | ação ordinária; anulação de ato de desincorporação; reintegração de militar; tratamento médico |
+| 0005538-91.2014.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Improcedência dos pedidos. Militar temporário. Reforma e reintegração. Rejeição | embargos de declaração; militar temporário; reforma e reintegração; improcedência dos pedidos |
 
 </details>
 

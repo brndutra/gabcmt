@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0002192-98.2015.4.03.6000 | 09/06/2026 | desprovido | Financiamento estudantil. Extinção sem resolução do mérito. Falta de interesse processual | financiamento estudantil; falta de interesse processual; extinção sem resolução do mérito |
-| 5000818-92.2025.4.03.6005 | 09/06/2026 | parcialmente provido | Infração. Extinção sem resolução do mérito. Condutor não proprietário. Circunstâncias do caso concreto | infração; perdimento; extinção sem resolução do mérito; reforma |
+| 0002192-98.2015.4.03.6000 | 09/06/2026 | desprovido | Extinção sem resolução do mérito. Falta de interesse processual. Financiamento estudantil | financiamento estudantil; falta de interesse processual; extinção sem resolução do mérito |
+| 5000818-92.2025.4.03.6005 | 09/06/2026 | parcialmente provido | Apreensão de mercadorias e do veículo transportador. Circunstâncias do caso concreto. Condutor não proprietário. Exame do mérito | infração; perdimento; extinção sem resolução do mérito; reforma |
 
 </details>
 

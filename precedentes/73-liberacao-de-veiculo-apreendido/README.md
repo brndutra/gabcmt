@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5013603-38.2024.4.03.6000 | 09/06/2026 | desprovido | Liberação de veículo apreendido. Processo administrativo fiscal. Nulidade de decretação de revelia. Impossibilidade de antecipação de efeitos de revisão administrativa | processo administrativo fiscal; nulidade de decretação de revelia; liberação de veículo apreendido |
+| 5013603-38.2024.4.03.6000 | 09/06/2026 | desprovido | Impossibilidade de antecipação de efeitos de revisão administrativa. Liberação de veículo apreendido. Nulidade de decretação de revelia. Processo administrativo fiscal | processo administrativo fiscal; nulidade de decretação de revelia; liberação de veículo apreendido |
 
 </details>
 

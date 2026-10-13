@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5008270-13.2021.4.03.6000 | 28/04/2026 | rejeitados | Mandado de segurança. Contribuições ao fust e funttel. Vícios inexistentes. Constitucionalidade | mandado de segurança; contribuições ao fust e funttel; constitucionalidade; vícios inexistentes |
-| 5001470-71.2018.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Previdência complementar. Rejeição. Equacionamento de déficit. Vícios inexistentes | embargos de declaração; previdência complementar; plano reg/replan não saldado; equacionamento de déficit |
+| 5008270-13.2021.4.03.6000 | 28/04/2026 | rejeitados | Constitucionalidade. Contribuições ao fust e funttel. Mandado de segurança. Rejeição | mandado de segurança; contribuições ao fust e funttel; constitucionalidade; vícios inexistentes |
+| 5001470-71.2018.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Equacionamento de déficit. Honorários. Plano reg/replan não saldado. Previdência complementar | embargos de declaração; previdência complementar; plano reg/replan não saldado; equacionamento de déficit |
 
 </details>
 

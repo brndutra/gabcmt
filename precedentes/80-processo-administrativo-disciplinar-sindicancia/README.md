@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0000152-63.2017.4.03.6004 | 06/07/2026 | desprovido | Pensão militar. Ausência de nexo causal entre omissão estatal imputada e evento danoso. Ausência de dependência econômica. Presunção de legalidade e veracidade do ato administrativo | responsabilidade civil do estado; sindicância administrativa; pensão militar; ausência de dependência econômica |
+| 0000152-63.2017.4.03.6004 | 06/07/2026 | desprovido | Ausência de dependência econômica. Ausência de nexo causal entre omissão estatal imputada e evento danoso. Morte de militar da marinha por afogamento durante viagem de instrução. Pensão militar | responsabilidade civil do estado; sindicância administrativa; pensão militar; ausência de dependência econômica |
 
 </details>
 

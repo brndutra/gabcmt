@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0011359-08.2016.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Fundamentação per relationem. Inaplicabilidade. 281, ii, do ctb. Prazo decadencial do art | embargos de declaração; transporte terrestre de produtos perigosos; auto de infração lavrado pela ANTT; prazo decadencial do art |
+| 0011359-08.2016.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · 281, ii, do ctb. Auto de infração lavrado pela ANTT. Fundamentação per relationem. Inaplicabilidade | embargos de declaração; transporte terrestre de produtos perigosos; auto de infração lavrado pela ANTT; prazo decadencial do art |
 
 </details>
 

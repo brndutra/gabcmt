@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5006703-49.2018.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Rejeição. Princípio da dialeticidade recursal. Vícios inexistentes. Recurso não conhecido | embargos de declaração; princípio da dialeticidade recursal; recurso não conhecido; vícios inexistentes |
+| 5006703-49.2018.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Princípio da dialeticidade recursal. Recurso não conhecido. Rejeição. Vícios inexistentes | embargos de declaração; princípio da dialeticidade recursal; recurso não conhecido; vícios inexistentes |
 
 </details>
 

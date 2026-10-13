@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5002260-35.2021.4.03.6005 | 28/09/2026 | desprovido | Mandado de segurança. Coisa julgada. Litispendência. Extinção sem resolução do mérito | mandado de segurança; litispendência; coisa julgada; extinção sem resolução do mérito |
+| 5002260-35.2021.4.03.6005 | 28/09/2026 | desprovido | Apreensão e perdimento administrativo de veículos. Coisa julgada. Extinção sem resolução do mérito. Litispendência | mandado de segurança; litispendência; coisa julgada; extinção sem resolução do mérito |
 
 </details>
 

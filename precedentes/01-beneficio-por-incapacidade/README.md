@@ -11,57 +11,57 @@
 | **T001** · Benefício por incapacidade. Perda da qualidade de segurado | 25 | 9 provido, 16 desprovido | benefício por incapacidade (15); perda da qualidade de segurado (8) | [T001-beneficio-por-incapacidade-perda-da-qualidade-de-segura.json](T001-beneficio-por-incapacidade-perda-da-qualidade-de-segura.json) (23 de 25) |
 | **T002** · Benefício por incapacidade. Incapacidade parcial e permanente | 20 | 2 provido, 8 parcialmente provido, 10 desprovido | benefício por incapacidade (9); incapacidade parcial e permanente (7); benefício por incapacidade permanente (4) | [T002-beneficio-por-incapacidade-incapacidade-parcial-e-perma.json](T002-beneficio-por-incapacidade-incapacidade-parcial-e-perma.json) (18 de 20) |
 | **T003** · Benefício por incapacidade. Ausência de comprovação de incapacidade laborativa. Laudo pericial | 19 | 19 desprovido | benefício por incapacidade (11); laudo pericial (6); ausência de incapacidade laborativa (4) | [T003-beneficio-por-incapacidade-ausencia-de-comprovacao-de-i.json](T003-beneficio-por-incapacidade-ausencia-de-comprovacao-de-i.json) |
-| **T078** · Embargos de declaração · Consectários legais. Ec 136/2025. Correção monetária e juros de mora. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal | 15 | 4 parcialmente provido, 11 rejeitados | embargos de declaração (15); correção monetária e juros de mora (10); benefício por incapacidade temporária (5); benefício por incapacidade (4); consectários legais (4); auxílio por incapacidade temporária (3); critérios de correção monetária e juros de mora (3) | [T078-edcl-consectarios-legais-ec-136-2025-correcao-monetaria.json](T078-edcl-consectarios-legais-ec-136-2025-correcao-monetaria.json) |
-| **T004** · Benefício por incapacidade. Laudo pericial conclusivo. Cerceamento probatório inexistente. Ausência de incapacidade laborativa | 11 | 1 parcialmente provido, 10 desprovido | benefício por incapacidade (8); laudo pericial conclusivo (8); cerceamento probatório inexistente (3); ausência de incapacidade laborativa (3) | [T004-beneficio-por-incapacidade-laudo-pericial-conclusivo-ce.json](T004-beneficio-por-incapacidade-laudo-pericial-conclusivo-ce.json) (10 de 11) |
-| **T005** · Benefício por incapacidade. Auxílio por incapacidade temporária | 10 | 3 provido, 2 parcialmente provido, 5 desprovido | benefício por incapacidade (5); auxílio por incapacidade temporária (5); provimento do recurso (2); benefício por incapacidade temporária (2) | [T005-beneficio-por-incapacidade-auxilio-por-incapacidade-tem.json](T005-beneficio-por-incapacidade-auxilio-por-incapacidade-tem.json) |
+| **T078** · Embargos de declaração · Consectários legais. Correção monetária e juros de mora. Ec 136/2025. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal | 15 | 4 parcialmente provido, 11 rejeitados | embargos de declaração (15); correção monetária e juros de mora (10); benefício por incapacidade temporária (5); benefício por incapacidade (4); consectários legais (4); auxílio por incapacidade temporária (3); critérios de correção monetária e juros de mora (3) | [T078-edcl-consectarios-legais-correcao-monetaria-e-juros-de.json](T078-edcl-consectarios-legais-correcao-monetaria-e-juros-de.json) |
+| **T004** · Benefício por incapacidade. Laudo pericial conclusivo. Cerceamento probatório inexistente. Ausência de incapacidade laborativa | 11 | 1 parcialmente provido, 10 desprovido | benefício por incapacidade (8); laudo pericial conclusivo (8); ausência de incapacidade laborativa (3); cerceamento probatório inexistente (3) | [T004-beneficio-por-incapacidade-laudo-pericial-conclusivo-ce.json](T004-beneficio-por-incapacidade-laudo-pericial-conclusivo-ce.json) (10 de 11) |
+| **T005** · Auxílio por incapacidade temporária. Benefício por incapacidade | 10 | 3 provido, 2 parcialmente provido, 5 desprovido | auxílio por incapacidade temporária (5); benefício por incapacidade (5); benefício por incapacidade temporária (2); provimento do recurso (2) | [T005-auxilio-por-incapacidade-temporaria-beneficio-por-incap.json](T005-auxilio-por-incapacidade-temporaria-beneficio-por-incap.json) |
 | **T006** · Benefício por incapacidade. Ausência de incapacidade laboral atestada em perícia judicial | 9 | 1 parcialmente provido, 8 desprovido | benefício por incapacidade (4) | [T006-beneficio-por-incapacidade-ausencia-de-incapacidade-lab.json](T006-beneficio-por-incapacidade-ausencia-de-incapacidade-lab.json) |
-| **T007** · Benefício por incapacidade temporária. Aposentadoria por incapacidade permanente | 8 | 2 provido, 3 parcialmente provido, 3 desprovido | aposentadoria por incapacidade permanente (3); benefício por incapacidade temporária (3) | [T007-beneficio-por-incapacidade-temporaria-aposentadoria-por.json](T007-beneficio-por-incapacidade-temporaria-aposentadoria-por.json) (7 de 8) |
-| **T008** · Incapacidade não apurada pelo laudo judicial. Benefício por incapacidade permanente | 7 | 1 parcialmente provido, 6 desprovido | incapacidade não apurada pelo laudo judicial (4); benefício por incapacidade permanente (2); benefício por incapacidade (2) | [T008-incapacidade-nao-apurada-pelo-laudo-judicial-beneficio.json](T008-incapacidade-nao-apurada-pelo-laudo-judicial-beneficio.json) |
-| **T009** · Incompetência absoluta da justiça federal. Súmula 501 e tema 414/STF. Competência da justiça estadual. Artigo 109, i, da CF/1988 | 7 | 1 provido, 6 outro | incompetência absoluta da justiça federal (5); benefício por incapacidade (3); artigo 109, I, da cf/1988 (3); súmula 501 e Tema 414/STF (3); acidente de trabalho (2) | [T009-incompetencia-absoluta-da-justica-federal-sumula-501-e.json](T009-incompetencia-absoluta-da-justica-federal-sumula-501-e.json) (6 de 7) |
+| **T007** · Aposentadoria por incapacidade permanente. Benefício por incapacidade temporária | 8 | 2 provido, 3 parcialmente provido, 3 desprovido | aposentadoria por incapacidade permanente (3); benefício por incapacidade temporária (3) | [T007-aposentadoria-por-incapacidade-permanente-beneficio-por.json](T007-aposentadoria-por-incapacidade-permanente-beneficio-por.json) (7 de 8) |
+| **T008** · Incapacidade não apurada pelo laudo judicial. Benefício por incapacidade permanente | 7 | 1 parcialmente provido, 6 desprovido | incapacidade não apurada pelo laudo judicial (4); benefício por incapacidade (2); benefício por incapacidade permanente (2) | [T008-incapacidade-nao-apurada-pelo-laudo-judicial-beneficio.json](T008-incapacidade-nao-apurada-pelo-laudo-judicial-beneficio.json) |
+| **T009** · Incompetência absoluta da justiça federal. Artigo 109, i, da CF/1988. Competência da justiça estadual. Declinação em favor do tribunal de justiça do estado de mato grosso do sul | 7 | 1 provido, 6 outro | incompetência absoluta da justiça federal (5); artigo 109, I, da cf/1988 (3); benefício por incapacidade (3); súmula 501 e Tema 414/STF (3); acidente de trabalho (2) | [T009-incompetencia-absoluta-da-justica-federal-artigo-109-i.json](T009-incompetencia-absoluta-da-justica-federal-artigo-109-i.json) (6 de 7) |
 | **T010** · Benefício por incapacidade | 6 | 3 provido, 1 parcialmente provido, 2 desprovido | benefício por incapacidade (2); benefício por incapacidade permanente (2) | [T010-beneficio-por-incapacidade.json](T010-beneficio-por-incapacidade.json) (5 de 6) |
-| **T011** · Laudo judicial conclusivo. Ausência de incapacidade laboral. Transtorno depressivo. Benefício por incapacidade | 6 | 6 desprovido | benefício por incapacidade (3); transtorno depressivo (2); ausência de incapacidade laboral (2); laudo judicial conclusivo (2) | [T011-laudo-judicial-conclusivo-ausencia-de-incapacidade-labo.json](T011-laudo-judicial-conclusivo-ausencia-de-incapacidade-labo.json) (5 de 6) |
-| **T012** · Cessação indevida. Data de início do benefício. Benefício por incapacidade | 6 | 4 provido, 2 parcialmente provido | cessação indevida (4); benefício por incapacidade (4); data de início do benefício (3); benefício por incapacidade temporária (2) | [T012-cessacao-indevida-data-de-inicio-do-beneficio-beneficio.json](T012-cessacao-indevida-data-de-inicio-do-beneficio-beneficio.json) |
-| **T013** · Benefício por incapacidade. Ausência de intervenção do ministério público em primeiro grau. Nulidade absoluta. Autor indígena | 6 | 6 provido | sentença anulada (6); benefício por incapacidade (5); nulidade absoluta (4); nulidade (2); autor indígena (2); segurado indígena (2) | [T013-beneficio-por-incapacidade-ausencia-de-intervencao-do-m.json](T013-beneficio-por-incapacidade-ausencia-de-intervencao-do-m.json) |
-| **T014** · Inaplicabilidade da EC 103/2019. Cálculo do benefício. Qualidade de segurado. Aposentadoria por incapacidade permanente | 6 | 4 parcialmente provido, 2 desprovido | aposentadoria por incapacidade permanente (2); consectários legais (2); benefício por incapacidade permanente (2) | [T014-inaplicabilidade-da-ec-103-2019-calculo-do-beneficio-qu.json](T014-inaplicabilidade-da-ec-103-2019-calculo-do-beneficio-qu.json) |
-| **T015** · Consectários legais. Alteração dos critérios de correção monetária e juros de mora. Juízo de retratação acolhido. Ec 113/2021 | 5 | 5 desprovido | consectários legais (5); tema 1.419/STF (4); juízo de retratação (4) | [T015-consectarios-legais-alteracao-dos-criterios-de-correcao.json](T015-consectarios-legais-alteracao-dos-criterios-de-correcao.json) |
-| **T016** · Incapacidade não impugnada no mérito. Benefício por incapacidade temporária e permanente. Alegação de cerceamento de defesa | 5 | 1 provido, 4 desprovido |  | [T016-incapacidade-nao-impugnada-no-merito-beneficio-por-inca.json](T016-incapacidade-nao-impugnada-no-merito-beneficio-por-inca.json) |
+| **T011** · Ausência de incapacidade laboral. Laudo judicial conclusivo. Transtorno depressivo. Benefício por incapacidade | 6 | 6 desprovido | benefício por incapacidade (3); ausência de incapacidade laboral (2); laudo judicial conclusivo (2); transtorno depressivo (2) | [T011-ausencia-de-incapacidade-laboral-laudo-judicial-conclus.json](T011-ausencia-de-incapacidade-laboral-laudo-judicial-conclus.json) (5 de 6) |
+| **T012** · Benefício por incapacidade. Cessação indevida. Data de início do benefício | 6 | 4 provido, 2 parcialmente provido | benefício por incapacidade (4); cessação indevida (4); data de início do benefício (3); benefício por incapacidade temporária (2) | [T012-beneficio-por-incapacidade-cessacao-indevida-data-de-in.json](T012-beneficio-por-incapacidade-cessacao-indevida-data-de-in.json) |
+| **T013** · Benefício por incapacidade. Ausência de intervenção do ministério público em primeiro grau. Nulidade absoluta. Ausência de intimação do ministério público em primeiro grau | 6 | 6 provido | sentença anulada (6); benefício por incapacidade (5); nulidade absoluta (4); autor indígena (2); nulidade (2); segurado indígena (2) | [T013-beneficio-por-incapacidade-ausencia-de-intervencao-do-m.json](T013-beneficio-por-incapacidade-ausencia-de-intervencao-do-m.json) |
+| **T014** · Inaplicabilidade da EC 103/2019. Cálculo do benefício. Qualidade de segurado. Aposentadoria por incapacidade permanente | 6 | 4 parcialmente provido, 2 desprovido | aposentadoria por incapacidade permanente (2); benefício por incapacidade permanente (2); consectários legais (2) | [T014-inaplicabilidade-da-ec-103-2019-calculo-do-beneficio-qu.json](T014-inaplicabilidade-da-ec-103-2019-calculo-do-beneficio-qu.json) |
+| **T015** · Consectários legais. Alteração dos critérios de correção monetária e juros de mora. Ec 113/2021. Ec 136/2025 | 5 | 5 desprovido | consectários legais (5); juízo de retratação (4); tema 1.419/STF (4) | [T015-consectarios-legais-alteracao-dos-criterios-de-correcao.json](T015-consectarios-legais-alteracao-dos-criterios-de-correcao.json) |
+| **T016** · Alegação de cerceamento de defesa. Alegação de cerceamento de defesa por contradições no laudo pericial. Ausência de cerceamento de defesa | 5 | 1 provido, 4 desprovido |  | [T016-alegacao-de-cerceamento-de-defesa-alegacao-de-cerceamen.json](T016-alegacao-de-cerceamento-de-defesa-alegacao-de-cerceamen.json) |
 | **T017** · Benefício por incapacidade. Pretensão de conversão em benefício por incapacidade permanente | 5 | 5 desprovido | benefício por incapacidade (4) | [T017-beneficio-por-incapacidade-pretensao-de-conversao-em-be.json](T017-beneficio-por-incapacidade-pretensao-de-conversao-em-be.json) |
 | **T018** · Aposentadoria por invalidez | 4 | 1 provido, 1 parcialmente provido, 2 desprovido | aposentadoria por invalidez (2) | [T018-aposentadoria-por-invalidez.json](T018-aposentadoria-por-invalidez.json) |
-| **T019** · Contribuições previdenciárias abaixo do limite mínimo do salário de contribuição. Ilegalidade do art. Qualidade de segurado e carência. 19-e do decreto nº 3.048/1999 | 4 | 2 provido, 2 desprovido | ilegalidade do art (2); qualidade de segurado e carência (2); 19-e do Decreto nº 3.048/1999 (2) | [T019-contribuicoes-previdenciarias-abaixo-do-limite-minimo-d.json](T019-contribuicoes-previdenciarias-abaixo-do-limite-minimo-d.json) |
-| **T020** · Auxílio por incapacidade temporária. Termo final do benefício. Benefício por incapacidade | 4 | 1 provido, 2 parcialmente provido, 1 desprovido | auxílio por incapacidade temporária (3); termo final do benefício (2); benefício por incapacidade (2) | [T020-auxilio-por-incapacidade-temporaria-termo-final-do-bene.json](T020-auxilio-por-incapacidade-temporaria-termo-final-do-bene.json) |
+| **T019** · Contribuições previdenciárias abaixo do limite mínimo do salário de contribuição. 19-e do decreto nº 3.048/1999. Artigo 19-e do decreto 3.049/1999, na redação do decreto 10.410/2020. Artigo 195, § 14, da CF/1988, na redação da EC 103/2019 | 4 | 2 provido, 2 desprovido | 19-e do Decreto nº 3.048/1999 (2); ilegalidade do art (2); qualidade de segurado e carência (2) | [T019-contribuicoes-previdenciarias-abaixo-do-limite-minimo-d.json](T019-contribuicoes-previdenciarias-abaixo-do-limite-minimo-d.json) |
+| **T020** · Auxílio por incapacidade temporária. Termo final do benefício. Benefício por incapacidade | 4 | 1 provido, 2 parcialmente provido, 1 desprovido | auxílio por incapacidade temporária (3); benefício por incapacidade (2); termo final do benefício (2) | [T020-auxilio-por-incapacidade-temporaria-termo-final-do-bene.json](T020-auxilio-por-incapacidade-temporaria-termo-final-do-bene.json) |
 | **T021** · Benefício por incapacidade. Ausência de elementos robustos em sentido contrário. Laudo pericial conclusivo pela capacidade laborativa. Preliminares rejeitadas | 4 | 4 desprovido | benefício por incapacidade (4); preliminares rejeitadas (2) | [T021-beneficio-por-incapacidade-ausencia-de-elementos-robust.json](T021-beneficio-por-incapacidade-ausencia-de-elementos-robust.json) |
 | **T079** · Embargos de declaração · Prequestionamento. Ausência de incapacidade laborativa. Rediscussão laudo pericial. Ausência de vício sanável | 4 | 4 rejeitados | embargos de declaração (4); ausência de incapacidade laborativa (2) | [T079-edcl-prequestionamento-ausencia-de-incapacidade-laborat.json](T079-edcl-prequestionamento-ausencia-de-incapacidade-laborat.json) |
-| **T022** · Extinção do processo sem resolução do mérito. Coisa julgada material | 3 | 2 provido, 1 parcialmente provido | coisa julgada material (2); extinção do processo sem resolução do mérito (2) | [T022-extincao-do-processo-sem-resolucao-do-merito-coisa-julg.json](T022-extincao-do-processo-sem-resolucao-do-merito-coisa-julg.json) |
-| **T023** · Razões dissociadas. Honorários de sucumbência. Recurso inominado | 3 | 3 não conhecido |  | [T023-razoes-dissociadas-honorarios-de-sucumbencia-recurso-in.json](T023-razoes-dissociadas-honorarios-de-sucumbencia-recurso-in.json) |
+| **T022** · Coisa julgada material. Extinção do processo sem resolução do mérito | 3 | 2 provido, 1 parcialmente provido | coisa julgada material (2); extinção do processo sem resolução do mérito (2) | [T022-coisa-julgada-material-extincao-do-processo-sem-resoluc.json](T022-coisa-julgada-material-extincao-do-processo-sem-resoluc.json) |
+| **T023** · Ausência de razões recursais. Fungibilidade. Honorários de sucumbência | 3 | 3 não conhecido |  | [T023-ausencia-de-razoes-recursais-fungibilidade-honorarios-d.json](T023-ausencia-de-razoes-recursais-fungibilidade-honorarios-d.json) |
 | **T024** · Alta programada | 3 | 1 parcialmente provido, 2 desprovido | alta programada (2) | [T024-alta-programada.json](T024-alta-programada.json) |
-| **T025** · Majoração dos honorários. Benefício por incapacidade temporária | 3 | 3 desprovido | majoração dos honorários (2); benefício por incapacidade temporária (2) | [T025-majoracao-dos-honorarios-beneficio-por-incapacidade-tem.json](T025-majoracao-dos-honorarios-beneficio-por-incapacidade-tem.json) |
+| **T025** · Benefício por incapacidade temporária. Majoração dos honorários | 3 | 3 desprovido | benefício por incapacidade temporária (2); majoração dos honorários (2) | [T025-beneficio-por-incapacidade-temporaria-majoracao-dos-hon.json](T025-beneficio-por-incapacidade-temporaria-majoracao-dos-hon.json) |
 | **T026** · Interesse de agir. Benefício por incapacidade | 3 | 2 provido, 1 desprovido | interesse de agir (3); benefício por incapacidade (2) | [T026-interesse-de-agir-beneficio-por-incapacidade.json](T026-interesse-de-agir-beneficio-por-incapacidade.json) |
 | **T027** · Prazo de duração | 3 | 3 parcialmente provido | prazo de duração (2) | [T027-prazo-de-duracao.json](T027-prazo-de-duracao.json) |
 | **T028** · Benefício por incapacidade. Laudo judicial conclusivo | 3 | 1 provido, 2 parcialmente provido | benefício por incapacidade (2); laudo judicial conclusivo (2) | [T028-beneficio-por-incapacidade-laudo-judicial-conclusivo.json](T028-beneficio-por-incapacidade-laudo-judicial-conclusivo.json) |
 | **T029** · Benefício por incapacidade | 3 | 1 provido, 2 desprovido | benefício por incapacidade (2) | [T029-beneficio-por-incapacidade.json](T029-beneficio-por-incapacidade.json) |
-| **T030** · Não enquadramento nas hipóteses do anexo i do decreto 3.048/1999. Ausência de necessidade de assistência permanente de terceiros. Ação de concessão de adicional de 25% sobre benefício por incapacidade permanente | 3 | 1 provido, 1 parcialmente provido, 1 desprovido |  | [T030-nao-enquadramento-nas-hipoteses-do-anexo-i-do-decreto-3.json](T030-nao-enquadramento-nas-hipoteses-do-anexo-i-do-decreto-3.json) |
+| **T030** · Ausência de necessidade de assistência permanente de terceiros. Ação de concessão de adicional de 25% sobre benefício por incapacidade permanente. Não enquadramento nas hipóteses do anexo i do decreto 3.048/1999 | 3 | 1 provido, 1 parcialmente provido, 1 desprovido |  | [T030-ausencia-de-necessidade-de-assistencia-permanente-de-te.json](T030-ausencia-de-necessidade-de-assistencia-permanente-de-te.json) |
 | **T031** · Benefício por incapacidade | 3 | 3 desprovido | benefício por incapacidade (3) | [T031-beneficio-por-incapacidade.json](T031-beneficio-por-incapacidade.json) (1 de 3) |
 | **T032** · Data de início da incapacidade | 3 | 1 parcialmente provido, 2 desprovido | data de início da incapacidade (2) | [T032-data-de-inicio-da-incapacidade.json](T032-data-de-inicio-da-incapacidade.json) (2 de 3) |
-| **T033** · Indeferimento administrativo. Benefício por incapacidade temporária. Sucumbência recíproca mantida | 2 | 2 desprovido |  | [T033-indeferimento-administrativo-beneficio-por-incapacidade.json](T033-indeferimento-administrativo-beneficio-por-incapacidade.json) (1 de 2) |
-| **T034** · Laudo judicial. Cerceamento de defesa | 2 | 1 parcialmente provido, 1 desprovido |  | [T034-laudo-judicial-cerceamento-de-defesa.json](T034-laudo-judicial-cerceamento-de-defesa.json) |
+| **T033** · Auxílio por incapacidade temporária. Benefício por incapacidade temporária. Danos morais não configurados | 2 | 2 desprovido |  | [T033-auxilio-por-incapacidade-temporaria-beneficio-por-incap.json](T033-auxilio-por-incapacidade-temporaria-beneficio-por-incap.json) (1 de 2) |
+| **T034** · Cerceamento de defesa. Laudo judicial | 2 | 1 parcialmente provido, 1 desprovido |  | [T034-cerceamento-de-defesa-laudo-judicial.json](T034-cerceamento-de-defesa-laudo-judicial.json) |
 | **T035** · Prescrição | 2 | 2 provido | prescrição (2) | [T035-prescricao.json](T035-prescricao.json) |
-| **T036** · Benefício por incapacidade. Astreintes. Tutela de urgência | 2 | 2 parcialmente provido | benefício por incapacidade (2); tutela de urgência (2) | [T036-beneficio-por-incapacidade-astreintes-tutela-de-urgenci.json](T036-beneficio-por-incapacidade-astreintes-tutela-de-urgenci.json) |
-| **T037** · Benefício por incapacidade temporária. Mora administrativa na implantação de benefício após decisão favorável em recurso administrativo. Mandado de segurança | 2 | 2 desprovido |  | [T037-beneficio-por-incapacidade-temporaria-mora-administrati.json](T037-beneficio-por-incapacidade-temporaria-mora-administrati.json) |
+| **T036** · Astreintes. Tutela de urgência. Benefício por incapacidade | 2 | 2 parcialmente provido | benefício por incapacidade (2); tutela de urgência (2) | [T036-astreintes-tutela-de-urgencia-beneficio-por-incapacidad.json](T036-astreintes-tutela-de-urgencia-beneficio-por-incapacidad.json) |
+| **T037** · Benefício por incapacidade temporária. Mandado de segurança. Mora administrativa na análise de requerimento de alta de aposentadoria por incapacidade permanente | 2 | 2 desprovido |  | [T037-beneficio-por-incapacidade-temporaria-mandado-de-segura.json](T037-beneficio-por-incapacidade-temporaria-mandado-de-segura.json) |
 | **T038** · Mandado de segurança | 2 | 2 desprovido | mandado de segurança (2) | [T038-mandado-de-seguranca.json](T038-mandado-de-seguranca.json) |
 | **T039** · Condições pessoais desfavoráveis | 2 | 1 provido, 1 desprovido | condições pessoais desfavoráveis (2) | [T039-condicoes-pessoais-desfavoraveis.json](T039-condicoes-pessoais-desfavoraveis.json) |
-| **T040** · Tutela de urgência. Recurso prejudicado | 2 | 2 prejudicado/extinto | agravo de instrumento (2); tutela de urgência (2) | [T040-tutela-de-urgencia-recurso-prejudicado.json](T040-tutela-de-urgencia-recurso-prejudicado.json) |
+| **T040** · Recurso prejudicado. Tutela de urgência | 2 | 2 prejudicado/extinto | agravo de instrumento (2); tutela de urgência (2) | [T040-recurso-prejudicado-tutela-de-urgencia.json](T040-recurso-prejudicado-tutela-de-urgencia.json) |
 | **T041** · Aposentadoria por invalidez | 2 | 1 parcialmente provido, 1 não conhecido | aposentadoria por invalidez (2) | [T041-aposentadoria-por-invalidez.json](T041-aposentadoria-por-invalidez.json) (1 de 2) |
-| **T042** · Benefício por incapacidade. Ausência de comprovação de incapacidade. Laudos periciais | 2 | 2 desprovido |  | [T042-beneficio-por-incapacidade-ausencia-de-comprovacao-de-i.json](T042-beneficio-por-incapacidade-ausencia-de-comprovacao-de-i.json) |
-| **T043** · Auxílio-doença. Aplicação do tema 246 da TNU. Necessidade de garantir prazo mínimo para pedido administrativo de prorrogação | 2 | 2 parcialmente provido |  | [T043-auxilio-doenca-aplicacao-do-tema-246-da-tnu-necessidade.json](T043-auxilio-doenca-aplicacao-do-tema-246-da-tnu-necessidade.json) |
+| **T042** · Ausência de comprovação de incapacidade. Benefício por incapacidade. Benefício por incapacidade temporária | 2 | 2 desprovido |  | [T042-ausencia-de-comprovacao-de-incapacidade-beneficio-por-i.json](T042-ausencia-de-comprovacao-de-incapacidade-beneficio-por-i.json) |
+| **T043** · Aplicação do tema 246 da TNU. Auxílio por incapacidade temporária. Auxílio-doença | 2 | 2 parcialmente provido |  | [T043-aplicacao-do-tema-246-da-tnu-auxilio-por-incapacidade-t.json](T043-aplicacao-do-tema-246-da-tnu-auxilio-por-incapacidade-t.json) |
 | **T044** · Ausência de incapacidade laboral constatada em perícia judicial. Neoplasia maligna de mama | 2 | 2 desprovido | neoplasia maligna de mama (2) | [T044-ausencia-de-incapacidade-laboral-constatada-em-pericia.json](T044-ausencia-de-incapacidade-laboral-constatada-em-pericia.json) |
 | **T045** · Tema 692/STJ | 2 | 2 provido | tema 692/STJ (2) | [T045-tema-692-stj.json](T045-tema-692-stj.json) |
-| **T046** · Ausência de incapacidade laboral demonstrada. Benefício por incapacidade temporária. Esquizofrenia paranoide em fase compensada | 2 | 1 parcialmente provido, 1 desprovido |  | [T046-ausencia-de-incapacidade-laboral-demonstrada-beneficio.json](T046-ausencia-de-incapacidade-laboral-demonstrada-beneficio.json) |
-| **T047** · Auxílio-doença. Incapacidade temporária comprovada. Qualidade de segurado e carência demonstradas | 2 | 2 desprovido |  | [T047-auxilio-doenca-incapacidade-temporaria-comprovada-quali.json](T047-auxilio-doenca-incapacidade-temporaria-comprovada-quali.json) |
-| **T048** · Contribuições regulares. Segurada facultativa. Benefício por incapacidade permanente | 2 | 1 parcialmente provido, 1 desprovido |  | [T048-contribuicoes-regulares-segurada-facultativa-beneficio.json](T048-contribuicoes-regulares-segurada-facultativa-beneficio.json) (1 de 2) |
+| **T046** · Ausência de incapacidade laboral demonstrada. Benefício por incapacidade permanente. Benefício por incapacidade temporária | 2 | 1 parcialmente provido, 1 desprovido |  | [T046-ausencia-de-incapacidade-laboral-demonstrada-beneficio.json](T046-ausencia-de-incapacidade-laboral-demonstrada-beneficio.json) |
+| **T047** · Auxílio-doença. Incapacidade temporária comprovada. Incapacidade total e temporária comprovada | 2 | 2 desprovido |  | [T047-auxilio-doenca-incapacidade-temporaria-comprovada-incap.json](T047-auxilio-doenca-incapacidade-temporaria-comprovada-incap.json) |
+| **T048** · Aposentadoria por incapacidade permanente. Benefício por incapacidade permanente. Contribuições regulares | 2 | 1 parcialmente provido, 1 desprovido |  | [T048-aposentadoria-por-incapacidade-permanente-beneficio-por.json](T048-aposentadoria-por-incapacidade-permanente-beneficio-por.json) (1 de 2) |
 | **T049** · Inversão da sucumbência | 2 | 2 provido | inversão da sucumbência (2) | [T049-inversao-da-sucumbencia.json](T049-inversao-da-sucumbencia.json) |
 | **T080** · Embargos de declaração · Rejeição. Vícios inexistentes | 2 | 2 rejeitados | embargos de declaração (2) | [T080-edcl-rejeicao-vicios-inexistentes.json](T080-edcl-rejeicao-vicios-inexistentes.json) |
-| **T081** · Embargos de declaração · Aposentadoria por incapacidade permanente. Vícios inexistentes. Concessão de benefício por incapacidade | 2 | 1 parcialmente provido, 1 rejeitados | embargos de declaração (2) | [T081-edcl-aposentadoria-por-incapacidade-permanente-vicios-i.json](T081-edcl-aposentadoria-por-incapacidade-permanente-vicios-i.json) |
-| **T082** · Embargos de declaração · Aposentadoria por incapacidade permanente. Cálculo da renda mensal inicial | 2 | 1 parcialmente provido, 1 rejeitados | embargos de declaração (2); aposentadoria por incapacidade permanente (2) | [T082-edcl-aposentadoria-por-incapacidade-permanente-calculo.json](T082-edcl-aposentadoria-por-incapacidade-permanente-calculo.json) |
+| **T081** · Embargos de declaração · Acolhimento parcial. Aplicabilidade da legislação precedente. Aposentadoria por incapacidade permanente | 2 | 1 parcialmente provido, 1 rejeitados | embargos de declaração (2) | [T081-edcl-acolhimento-parcial-aplicabilidade-da-legislacao-p.json](T081-edcl-acolhimento-parcial-aplicabilidade-da-legislacao-p.json) |
+| **T082** · Embargos de declaração · Aposentadoria por incapacidade permanente. Cálculo da renda mensal inicial | 2 | 1 parcialmente provido, 1 rejeitados | aposentadoria por incapacidade permanente (2); embargos de declaração (2) | [T082-edcl-aposentadoria-por-incapacidade-permanente-calculo.json](T082-edcl-aposentadoria-por-incapacidade-permanente-calculo.json) |
 | Casos sem par | 35 | 6 provido, 9 parcialmente provido, 15 desprovido, 1 não conhecido, 4 rejeitados | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) (34 de 35) |
 
 ## Casos de cada tema
@@ -151,7 +151,7 @@
 
 </details>
 
-<details><summary><b>T078</b> · Embargos de declaração · Consectários legais. Ec 136/2025. Correção monetária e juros de mora. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal — 15 casos</summary>
+<details><summary><b>T078</b> · Embargos de declaração · Consectários legais. Correção monetária e juros de mora. Ec 136/2025. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal — 15 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -191,7 +191,7 @@
 
 </details>
 
-<details><summary><b>T005</b> · Benefício por incapacidade. Auxílio por incapacidade temporária — 10 casos</summary>
+<details><summary><b>T005</b> · Auxílio por incapacidade temporária. Benefício por incapacidade — 10 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -224,7 +224,7 @@
 
 </details>
 
-<details><summary><b>T007</b> · Benefício por incapacidade temporária. Aposentadoria por incapacidade permanente — 8 casos</summary>
+<details><summary><b>T007</b> · Aposentadoria por incapacidade permanente. Benefício por incapacidade temporária — 8 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -253,7 +253,7 @@
 
 </details>
 
-<details><summary><b>T009</b> · Incompetência absoluta da justiça federal. Súmula 501 e tema 414/STF. Competência da justiça estadual. Artigo 109, i, da CF/1988 — 7 casos</summary>
+<details><summary><b>T009</b> · Incompetência absoluta da justiça federal. Artigo 109, i, da CF/1988. Competência da justiça estadual. Declinação em favor do tribunal de justiça do estado de mato grosso do sul — 7 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -280,7 +280,7 @@
 
 </details>
 
-<details><summary><b>T011</b> · Laudo judicial conclusivo. Ausência de incapacidade laboral. Transtorno depressivo. Benefício por incapacidade — 6 casos</summary>
+<details><summary><b>T011</b> · Ausência de incapacidade laboral. Laudo judicial conclusivo. Transtorno depressivo. Benefício por incapacidade — 6 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -293,7 +293,7 @@
 
 </details>
 
-<details><summary><b>T012</b> · Cessação indevida. Data de início do benefício. Benefício por incapacidade — 6 casos</summary>
+<details><summary><b>T012</b> · Benefício por incapacidade. Cessação indevida. Data de início do benefício — 6 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -306,7 +306,7 @@
 
 </details>
 
-<details><summary><b>T013</b> · Benefício por incapacidade. Ausência de intervenção do ministério público em primeiro grau. Nulidade absoluta. Autor indígena — 6 casos</summary>
+<details><summary><b>T013</b> · Benefício por incapacidade. Ausência de intervenção do ministério público em primeiro grau. Nulidade absoluta. Ausência de intimação do ministério público em primeiro grau — 6 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -332,7 +332,7 @@
 
 </details>
 
-<details><summary><b>T015</b> · Consectários legais. Alteração dos critérios de correção monetária e juros de mora. Juízo de retratação acolhido. Ec 113/2021 — 5 casos</summary>
+<details><summary><b>T015</b> · Consectários legais. Alteração dos critérios de correção monetária e juros de mora. Ec 113/2021. Ec 136/2025 — 5 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -344,7 +344,7 @@
 
 </details>
 
-<details><summary><b>T016</b> · Incapacidade não impugnada no mérito. Benefício por incapacidade temporária e permanente. Alegação de cerceamento de defesa — 5 casos</summary>
+<details><summary><b>T016</b> · Alegação de cerceamento de defesa. Alegação de cerceamento de defesa por contradições no laudo pericial. Ausência de cerceamento de defesa — 5 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -379,7 +379,7 @@
 
 </details>
 
-<details><summary><b>T019</b> · Contribuições previdenciárias abaixo do limite mínimo do salário de contribuição. Ilegalidade do art. Qualidade de segurado e carência. 19-e do decreto nº 3.048/1999 — 4 casos</summary>
+<details><summary><b>T019</b> · Contribuições previdenciárias abaixo do limite mínimo do salário de contribuição. 19-e do decreto nº 3.048/1999. Artigo 19-e do decreto 3.049/1999, na redação do decreto 10.410/2020. Artigo 195, § 14, da CF/1988, na redação da EC 103/2019 — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -423,7 +423,7 @@
 
 </details>
 
-<details><summary><b>T022</b> · Extinção do processo sem resolução do mérito. Coisa julgada material — 3 casos</summary>
+<details><summary><b>T022</b> · Coisa julgada material. Extinção do processo sem resolução do mérito — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -433,7 +433,7 @@
 
 </details>
 
-<details><summary><b>T023</b> · Razões dissociadas. Honorários de sucumbência. Recurso inominado — 3 casos</summary>
+<details><summary><b>T023</b> · Ausência de razões recursais. Fungibilidade. Honorários de sucumbência — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -453,7 +453,7 @@
 
 </details>
 
-<details><summary><b>T025</b> · Majoração dos honorários. Benefício por incapacidade temporária — 3 casos</summary>
+<details><summary><b>T025</b> · Benefício por incapacidade temporária. Majoração dos honorários — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -503,7 +503,7 @@
 
 </details>
 
-<details><summary><b>T030</b> · Não enquadramento nas hipóteses do anexo i do decreto 3.048/1999. Ausência de necessidade de assistência permanente de terceiros. Ação de concessão de adicional de 25% sobre benefício por incapacidade permanente — 3 casos</summary>
+<details><summary><b>T030</b> · Ausência de necessidade de assistência permanente de terceiros. Ação de concessão de adicional de 25% sobre benefício por incapacidade permanente. Não enquadramento nas hipóteses do anexo i do decreto 3.048/1999 — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -533,7 +533,7 @@
 
 </details>
 
-<details><summary><b>T033</b> · Indeferimento administrativo. Benefício por incapacidade temporária. Sucumbência recíproca mantida — 2 casos</summary>
+<details><summary><b>T033</b> · Auxílio por incapacidade temporária. Benefício por incapacidade temporária. Danos morais não configurados — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -542,7 +542,7 @@
 
 </details>
 
-<details><summary><b>T034</b> · Laudo judicial. Cerceamento de defesa — 2 casos</summary>
+<details><summary><b>T034</b> · Cerceamento de defesa. Laudo judicial — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -560,7 +560,7 @@
 
 </details>
 
-<details><summary><b>T036</b> · Benefício por incapacidade. Astreintes. Tutela de urgência — 2 casos</summary>
+<details><summary><b>T036</b> · Astreintes. Tutela de urgência. Benefício por incapacidade — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -569,7 +569,7 @@
 
 </details>
 
-<details><summary><b>T037</b> · Benefício por incapacidade temporária. Mora administrativa na implantação de benefício após decisão favorável em recurso administrativo. Mandado de segurança — 2 casos</summary>
+<details><summary><b>T037</b> · Benefício por incapacidade temporária. Mandado de segurança. Mora administrativa na análise de requerimento de alta de aposentadoria por incapacidade permanente — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -596,7 +596,7 @@
 
 </details>
 
-<details><summary><b>T040</b> · Tutela de urgência. Recurso prejudicado — 2 casos</summary>
+<details><summary><b>T040</b> · Recurso prejudicado. Tutela de urgência — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -614,7 +614,7 @@
 
 </details>
 
-<details><summary><b>T042</b> · Benefício por incapacidade. Ausência de comprovação de incapacidade. Laudos periciais — 2 casos</summary>
+<details><summary><b>T042</b> · Ausência de comprovação de incapacidade. Benefício por incapacidade. Benefício por incapacidade temporária — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -623,7 +623,7 @@
 
 </details>
 
-<details><summary><b>T043</b> · Auxílio-doença. Aplicação do tema 246 da TNU. Necessidade de garantir prazo mínimo para pedido administrativo de prorrogação — 2 casos</summary>
+<details><summary><b>T043</b> · Aplicação do tema 246 da TNU. Auxílio por incapacidade temporária. Auxílio-doença — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -650,7 +650,7 @@
 
 </details>
 
-<details><summary><b>T046</b> · Ausência de incapacidade laboral demonstrada. Benefício por incapacidade temporária. Esquizofrenia paranoide em fase compensada — 2 casos</summary>
+<details><summary><b>T046</b> · Ausência de incapacidade laboral demonstrada. Benefício por incapacidade permanente. Benefício por incapacidade temporária — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -659,7 +659,7 @@
 
 </details>
 
-<details><summary><b>T047</b> · Auxílio-doença. Incapacidade temporária comprovada. Qualidade de segurado e carência demonstradas — 2 casos</summary>
+<details><summary><b>T047</b> · Auxílio-doença. Incapacidade temporária comprovada. Incapacidade total e temporária comprovada — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -668,7 +668,7 @@
 
 </details>
 
-<details><summary><b>T048</b> · Contribuições regulares. Segurada facultativa. Benefício por incapacidade permanente — 2 casos</summary>
+<details><summary><b>T048</b> · Aposentadoria por incapacidade permanente. Benefício por incapacidade permanente. Contribuições regulares — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -695,7 +695,7 @@
 
 </details>
 
-<details><summary><b>T081</b> · Embargos de declaração · Aposentadoria por incapacidade permanente. Vícios inexistentes. Concessão de benefício por incapacidade — 2 casos</summary>
+<details><summary><b>T081</b> · Embargos de declaração · Acolhimento parcial. Aplicabilidade da legislação precedente. Aposentadoria por incapacidade permanente — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -717,41 +717,41 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0000105-32.2016.4.03.6002 | 15/09/2026 | desprovido | Incapacidade parcial para atividades castrenses. Lei 6.880/1990. Inexistência de incapacidade definitiva. Reforma indevida | militar temporário; lei 6.880/1990; reforma e indenização por danos morais; nulidade |
-| 0000719-14.2014.4.03.6000 | 28/09/2026 | desprovido | Ausência de conduta ilícita da administração. Ler/dort. Custeio de tratamento médico. Servidora pública | responsabilidade civil do estado; servidora pública; doença ocupacional; ler/dort |
+| 0000105-32.2016.4.03.6002 | 15/09/2026 | desprovido | Acidente anterior à lei 13.954/2019. Cerceamento probatório inexistente. Danos morais não caracterizados. Incapacidade parcial para atividades castrenses | militar temporário; lei 6.880/1990; reforma e indenização por danos morais; nulidade |
+| 0000719-14.2014.4.03.6000 | 28/09/2026 | desprovido | Ausência de conduta ilícita da administração. Custeio de tratamento médico. Danos materiais, morais e estéticos. Doença ocupacional | responsabilidade civil do estado; servidora pública; doença ocupacional; ler/dort |
 | 0005623-14.2013.4.03.6000 | 10/08/2026 | parcialmente provido | Militar temporário licenciado com incapacidade temporária. Reintegração para tratamento médico-hospitalar com percepção de soldo | recurso parcialmente provido |
-| 5000096-07.2025.4.03.9999 | 26/05/2026 | desprovido | Benefício por incapacidade. Ausência de juntada do processo administrativo. Interesse de agir. Extinção sem resolução de mérito mantida | benefício por incapacidade; interesse de agir; ausência de juntada do processo administrativo; inexistência de pretensão resistida |
-| 5000112-58.2025.4.03.9999 | 15/09/2026 | provido | Análise do conjunto probatório. Incapacidade demonstrada no período controvertido. Perícia judicial inconclusiva. Honorários sucumbenciais | perícia judicial inconclusiva; análise do conjunto probatório; honorários sucumbenciais |
-| 5000155-92.2025.4.03.9999 | 26/05/2026 | desprovido | Incapacidade atestada por laudo judicial. Benefício por incapacidade. Discussão sobre inexistência de desídia para aproveitamento do primeiro requerimento. Perda da qualidade de segurada ao tempo do segundo requerimento, após indeferimento do primeiro por desídia da segurada | benefício por incapacidade; incapacidade atestada por laudo judicial; apelo desprovido |
-| 5000290-07.2025.4.03.9999 | 12/05/2026 | parcialmente provido | Benefício por incapacidade. Data de início da incapacidade. Auxílio por incapacidade temporária. Análise conjunta do laudo judicial e documentos médicos do acervo processual | apelação e recurso adesivo; benefício por incapacidade; auxílio por incapacidade temporária; data de início da incapacidade |
-| 5000318-20.2025.4.03.6007 | 20/07/2026 | desprovido | Suspensão de benefício por incapacidade permanente. Ilegalidade. Premissa fática da decisão adminstrativa equivocada | remessa necessária em mandado de segurança; ilegalidade; remessa necessária desprovida |
-| 5000638-25.2025.4.03.9999 | 27/04/2026 | parcialmente provido | Benefício por incapacidade. Legalidade. Honorários de sucumbência. Auxílio-doença | benefício por incapacidade; incapacidade parcial e temporária; auxílio-doença; preexistência da incapacidade não configurada |
-| 5000767-62.2026.4.03.6000 | 27/08/2026 | provido | Mandado de segurança. Benefício por incapacidade. Recurso administrativo. Alteração posterior do pedido e da causa de pedir | mandado de segurança; recurso administrativo; benefício por incapacidade; ausência de interesse processual |
-| 5001452-40.2024.4.03.6000 | 15/09/2026 | desprovido | Aposentadoria por incapacidade permanente. Perícia judicial. Consectários legais. Isenção de carência | aposentadoria por incapacidade permanente; isenção de carência; perícia judicial; consectários legais |
-| 5001784-38.2024.4.03.9999 | 15/09/2026 | provido | Benefício por incapacidade. Impugnação ao cumprimento de sentença como sucedâneo de ação rescisória. Inadmissibilidade. Conflito de coisas julgadas | apelação em cumprimento de sentença; benefício por incapacidade; conflito de coisas julgadas; prevalência da última coisa julgada |
-| 5001978-41.2023.4.03.6000 *(no banco)* | 05/10/2026 | não conhecido | Citação válida. Coisa julgada. Adicional de 25%. Incapacidade superveniente | benefício por incapacidade permanente; adicional de 25%; coisa julgada; incapacidade superveniente |
-| 5002143-48.2024.4.03.6002 | 28/09/2026 | desprovido | Benefício por incapacidade temporária e internações hospitalares. Data do requerimento administrativo. Força maior. Exclusão digital e barreira geracional | aposentadoria por idade urbana; força maior; exclusão digital e barreira geracional; interesse processual configurado |
-| 5002287-59.2024.4.03.9999 | 12/05/2026 | desprovido | Laudo pericial. Auxílio-doença. Vícios e indeferimento de complementação da perícia. Cerceamento | auxílio-doença; laudo pericial; cerceamento; nulidade inexistente |
-| 5002816-78.2024.4.03.9999 | 15/09/2026 | provido | Incapacidade laborativa. Perda de 87,5% da capacidade funcional. Honorários de sucumbência. Benefício por incapacidade temporária, cessação indevida | incapacidade laborativa; laudo judicial conclusivo; perda de 87,5% da capacidade funcional; conversão |
+| 5000096-07.2025.4.03.9999 | 26/05/2026 | desprovido | Ausência de juntada do processo administrativo. Benefício por incapacidade. Extinção sem resolução de mérito mantida. Inexistência de pretensão resistida | benefício por incapacidade; interesse de agir; ausência de juntada do processo administrativo; inexistência de pretensão resistida |
+| 5000112-58.2025.4.03.9999 | 15/09/2026 | provido | Análise do conjunto probatório. Honorários sucumbenciais. Incapacidade demonstrada no período controvertido. Perícia judicial inconclusiva | perícia judicial inconclusiva; análise do conjunto probatório; honorários sucumbenciais |
+| 5000155-92.2025.4.03.9999 | 26/05/2026 | desprovido | Benefício por incapacidade. Discussão sobre inexistência de desídia para aproveitamento do primeiro requerimento. Incapacidade atestada por laudo judicial. Perda da qualidade de segurada ao tempo do segundo requerimento, após indeferimento do primeiro por desídia da segurada | benefício por incapacidade; incapacidade atestada por laudo judicial; apelo desprovido |
+| 5000290-07.2025.4.03.9999 | 12/05/2026 | parcialmente provido | Análise conjunta do laudo judicial e documentos médicos do acervo processual. Auxílio por incapacidade temporária. Benefício por incapacidade. Data de início da incapacidade | apelação e recurso adesivo; benefício por incapacidade; auxílio por incapacidade temporária; data de início da incapacidade |
+| 5000318-20.2025.4.03.6007 | 20/07/2026 | desprovido | Ilegalidade. Premissa fática da decisão adminstrativa equivocada. Suspensão de benefício por incapacidade permanente | remessa necessária em mandado de segurança; ilegalidade; remessa necessária desprovida |
+| 5000638-25.2025.4.03.9999 | 27/04/2026 | parcialmente provido | Auxílio-doença. Benefício por incapacidade. Honorários de sucumbência. Incapacidade parcial e temporária | benefício por incapacidade; incapacidade parcial e temporária; auxílio-doença; preexistência da incapacidade não configurada |
+| 5000767-62.2026.4.03.6000 | 27/08/2026 | provido | Alteração posterior do pedido e da causa de pedir. Ausência de interesse processual. Benefício por incapacidade. Extinção sem resolução de mérito | mandado de segurança; recurso administrativo; benefício por incapacidade; ausência de interesse processual |
+| 5001452-40.2024.4.03.6000 | 15/09/2026 | desprovido | Aposentadoria por incapacidade permanente. Consectários legais. Incapacidade por progressão de doenças preexistentes. Isenção de carência | aposentadoria por incapacidade permanente; isenção de carência; perícia judicial; consectários legais |
+| 5001784-38.2024.4.03.9999 | 15/09/2026 | provido | Benefício por incapacidade. Conflito de coisas julgadas. Impugnação ao cumprimento de sentença como sucedâneo de ação rescisória. Inadmissibilidade | apelação em cumprimento de sentença; benefício por incapacidade; conflito de coisas julgadas; prevalência da última coisa julgada |
+| 5001978-41.2023.4.03.6000 *(no banco)* | 05/10/2026 | não conhecido | Adicional de 25%. Ausência de novo requerimento administrativo. Benefício por incapacidade permanente. Citação válida | benefício por incapacidade permanente; adicional de 25%; coisa julgada; incapacidade superveniente |
+| 5002143-48.2024.4.03.6002 | 28/09/2026 | desprovido | Aposentadoria por idade urbana. Benefício por incapacidade temporária e internações hospitalares. Data do requerimento administrativo. Descumprimento de carta de exigência administrativa | aposentadoria por idade urbana; força maior; exclusão digital e barreira geracional; interesse processual configurado |
+| 5002287-59.2024.4.03.9999 | 12/05/2026 | desprovido | Auxílio-doença. Cerceamento. Laudo pericial. Nulidade inexistente | auxílio-doença; laudo pericial; cerceamento; nulidade inexistente |
+| 5002816-78.2024.4.03.9999 | 15/09/2026 | provido | Benefício por incapacidade temporária, cessação indevida. Consectários legais. Conversão. Critério de apuração | incapacidade laborativa; laudo judicial conclusivo; perda de 87,5% da capacidade funcional; conversão |
 | 5058786-29.2025.4.03.9999 | 12/05/2026 | desprovido | Alegação genérica de incapacidade. Benefício por incapacidade permanente. Incapacidade não comprovada na perícia judicial | benefício por incapacidade permanente; incapacidade não comprovada na perícia judicial; alegação genérica de incapacidade |
-| 5078819-06.2026.4.03.9999 | 30/06/2026 | desprovido | Ausência de justificativa comprovada. Benefício por incapacidade. Preclusão da prova. Não comparecimento à perícia médica judicial | benefício por incapacidade; não comparecimento à perícia médica judicial; ausência de justificativa comprovada; preclusão da prova |
-| 5103276-73.2024.4.03.9999 | 28/09/2026 | parcialmente provido | Ação declaratória de inexigibilidade de débito e restituição de valores. Inexigibilidade do débito relativo ao período sem sobreposição comprovada. Exigibilidade limitada à competência em que comprovado o pagamento em duplicidade. Benefícios por incapacidade | benefícios por incapacidade; pagamento concomitante; liquidação; apelação parcialmente provido |
-| 5120381-29.2025.4.03.9999 | 12/05/2026 | desprovido | Perícia médica. Benefício por incapacidade. 60, § 1º, da lei 8.213/1991. Requerimento administrativo após cessação da incapacidade | benefício por incapacidade; cerceamento de defesa; art; 129-a da Lei 8.231/1991 |
-| 5129921-04.2025.4.03.9999 | 30/06/2026 | provido | Benefício por incapacidade. Laudo judicial. Ação ajuizada antes do julgamento do tema 350/STF. Data da incapacidade | benefício por incapacidade; data de início do benefício; data da incapacidade; laudo judicial |
+| 5078819-06.2026.4.03.9999 | 30/06/2026 | desprovido | Ausência de justificativa comprovada. Benefício por incapacidade. Não comparecimento à perícia médica judicial. Preclusão da prova | benefício por incapacidade; não comparecimento à perícia médica judicial; ausência de justificativa comprovada; preclusão da prova |
+| 5103276-73.2024.4.03.9999 | 28/09/2026 | parcialmente provido | Ação declaratória de inexigibilidade de débito e restituição de valores. Benefícios por incapacidade. Exigibilidade limitada à competência em que comprovado o pagamento em duplicidade. Inexigibilidade do débito relativo ao período sem sobreposição comprovada | benefícios por incapacidade; pagamento concomitante; liquidação; apelação parcialmente provido |
+| 5120381-29.2025.4.03.9999 | 12/05/2026 | desprovido | 129-a da lei 8.231/1991. 60, § 1º, da lei 8.213/1991. Art. Benefício por incapacidade | benefício por incapacidade; cerceamento de defesa; art; 129-a da Lei 8.231/1991 |
+| 5129921-04.2025.4.03.9999 | 30/06/2026 | provido | Ação ajuizada antes do julgamento do tema 350/STF. Benefício por incapacidade. Data da incapacidade. Data de início do benefício | benefício por incapacidade; data de início do benefício; data da incapacidade; laudo judicial |
 | 5165697-31.2026.4.03.9999 | 20/07/2026 | desprovido | Benefício por incapacidade temporária. Possibilidade de filiação simultânea ao rgps como microempreendedor individual. Servidor público filiado a rpps | benefício por incapacidade temporária; servidor público filiado a rpps |
-| 5184706-76.2026.4.03.9999 | 15/09/2026 | desprovido | Benefício por incapacidade. Restabelecimento de benefício por incapacidade temporária e conversão em benefício por incapacidade permanente. Tema 1.124/STJ. Laudo complementar não juntado na instância administrativa | benefício por incapacidade; data de início do benefício; tema 1.124/STJ |
-| 5193440-16.2026.4.03.9999 | 30/06/2026 | desprovido | Benefício por incapacidade. Pedidos subsidiários não formulados na inicial. Inovação recursal. Ausência de incapacidade laborativa comprovada | benefício por incapacidade; aposentadoria por invalidez ou auxílio-doença; hiv; ausência de incapacidade laborativa comprovada |
-| 5194722-26.2025.4.03.9999 | 28/09/2026 | provido | 60, ix, do decreto 3.048/1999, redação vigente à época. Revisão da renda mensal inicial. Aposentadoria por idade. Cômputo no período básico de cálculo | aposentadoria por idade; revisão da renda mensal inicial; cômputo no período básico de cálculo; intercalação com atividade contributiva |
-| 5242830-52.2026.4.03.9999 | 28/09/2026 | desprovido | Ilegitimidade recursal. Perda de objeto confirmada. Ação de concessão de benefício por incapacidade. Nulidade inexistente | ação de concessão de benefício por incapacidade; perda superveniente do objeto; litigância de má-fé e ofício à OAB; ilegitimidade recursal |
-| 5297900-54.2026.4.03.9999 | 15/09/2026 | parcialmente provido | Incapacidade total e temporária. Interesse remanescente. Deferimento em período compatível com o laudo pericial. Benefício por incapacidade temporária | benefício por incapacidade temporária; extinção sem resolução do mérito; interesse de agir; concessão administrativa superveniente |
-| 5319926-46.2026.4.03.9999 | 28/09/2026 | parcialmente provido | Incapacidade residual incompatível com a realidade socioeconômica. Laudo pericial. Aposentadoria por incapacidade permanente. Consectários legais | aposentadoria por incapacidade permanente; laudo pericial; consectários legais |
-| 0010667-19.2010.4.03.6000 | 30/06/2026 | parcialmente provido | Embargos de declaração · Condução de motocicleta sem habilitação. Indenização por danos materiais e morais. Concorrência de culpas excluída. Acidente de trânsito envolvendo veículo oficial | embargos de declaração; acidente de trânsito envolvendo veículo oficial; indenização por danos materiais e morais; condução de motocicleta sem habilitação |
-| 5001538-42.2024.4.03.9999 | 15/09/2026 | parcialmente provido | Embargos de declaração · Conversão em aposentadoria por incapacidade permanente. Auxílio por incapacidade temporária. Acolhimento parcial. Laudo pericial nulo | embargos de declaração; auxílio por incapacidade temporária; laudo pericial nulo; honorários advocatícios |
-| 5003118-76.2024.4.03.6000 | 06/07/2026 | parcialmente provido | Embargos de declaração · Alegação de coisa julgada material. Aposentadoria por invalidez. Evolução do quadro clínico. Parcial acolhimento, com efeitos infringentes | embargos de declaração; aposentadoria por invalidez; alegação de coisa julgada material; evolução do quadro clínico |
-| 5104942-12.2024.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Benefício por incapacidade. Artigo 19-e do decreto 3.049/1999, na redação do decreto 10.410/2020. Artigo 195, § 14, da CF/1988, na redação da EC 103/2019. Prequestionamento | embargos de declaração; benefício por incapacidade; rediscussão.ausência de vício sanável; prequestionamento |
-| 5118536-25.2026.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Rejeição. Embargos de declaraçãobenefício por incapacidade. Vícios inexistentes. Ausência de incapacidade laborativa comprovada | embargos de declaraçãobenefício por incapacidade; ausência de incapacidade laborativa comprovada; vícios inexistentes; rejeição |
-| 5130534-24.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Ausência de vício sanável. Recolhimentos com indicadores de pendência no CNIS. Período de auxílio-doença computado. Carência não comprovada | embargos de declaração; aposentadoria por idade urbana; contribuinte facultativa; carência não comprovada |
-| 5186571-71.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Benefício por incapacidade. Segurado indígena. Ausência de vício sanável. Nulidade absoluta | embargos de declaração; benefício por incapacidade; segurado indígena; nulidade absoluta |
+| 5184706-76.2026.4.03.9999 | 15/09/2026 | desprovido | Benefício por incapacidade. Data de início do benefício. Laudo complementar não juntado na instância administrativa. Restabelecimento de benefício por incapacidade temporária e conversão em benefício por incapacidade permanente | benefício por incapacidade; data de início do benefício; tema 1.124/STJ |
+| 5193440-16.2026.4.03.9999 | 30/06/2026 | desprovido | Aposentadoria por invalidez ou auxílio-doença. Ausência de incapacidade laborativa comprovada. Benefício por incapacidade. Hiv | benefício por incapacidade; aposentadoria por invalidez ou auxílio-doença; hiv; ausência de incapacidade laborativa comprovada |
+| 5194722-26.2025.4.03.9999 | 28/09/2026 | provido | 60, ix, do decreto 3.048/1999, redação vigente à época. Aposentadoria por idade. Art. Benefício por incapacidade temporária de natureza acidentária | aposentadoria por idade; revisão da renda mensal inicial; cômputo no período básico de cálculo; intercalação com atividade contributiva |
+| 5242830-52.2026.4.03.9999 | 28/09/2026 | desprovido | Ação de concessão de benefício por incapacidade. Contraditório. Ilegitimidade recursal. Litigância de má-fé e ofício à OAB | ação de concessão de benefício por incapacidade; perda superveniente do objeto; litigância de má-fé e ofício à OAB; ilegitimidade recursal |
+| 5297900-54.2026.4.03.9999 | 15/09/2026 | parcialmente provido | Artigo 1.013, § 3º, i, do CPC. Benefício por incapacidade temporária. Causa madura. Concessão administrativa superveniente | benefício por incapacidade temporária; extinção sem resolução do mérito; interesse de agir; concessão administrativa superveniente |
+| 5319926-46.2026.4.03.9999 | 28/09/2026 | parcialmente provido | Aposentadoria por incapacidade permanente. Consectários legais. Incapacidade residual incompatível com a realidade socioeconômica. Laudo pericial | aposentadoria por incapacidade permanente; laudo pericial; consectários legais |
+| 0010667-19.2010.4.03.6000 | 30/06/2026 | parcialmente provido | Embargos de declaração · Acidente de trânsito envolvendo veículo oficial. Acolhimento parcial, com efeitos infringentes. Concorrência de culpas excluída. Condução de motocicleta sem habilitação | embargos de declaração; acidente de trânsito envolvendo veículo oficial; indenização por danos materiais e morais; condução de motocicleta sem habilitação |
+| 5001538-42.2024.4.03.9999 | 15/09/2026 | parcialmente provido | Embargos de declaração · Acolhimento parcial. Auxílio por incapacidade temporária. Conversão em aposentadoria por incapacidade permanente. Honorários advocatícios | embargos de declaração; auxílio por incapacidade temporária; laudo pericial nulo; honorários advocatícios |
+| 5003118-76.2024.4.03.6000 | 06/07/2026 | parcialmente provido | Embargos de declaração · Alegação de coisa julgada material. Alteração fática substancial. Aposentadoria por invalidez. Evolução do quadro clínico | embargos de declaração; aposentadoria por invalidez; alegação de coisa julgada material; evolução do quadro clínico |
+| 5104942-12.2024.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Artigo 19-e do decreto 3.049/1999, na redação do decreto 10.410/2020. Artigo 195, § 14, da CF/1988, na redação da EC 103/2019. Benefício por incapacidade. Contribuições previdenciárias abaixo do limite mínimo do salário de contribuição | embargos de declaração; benefício por incapacidade; rediscussão.ausência de vício sanável; prequestionamento |
+| 5118536-25.2026.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Ausência de incapacidade laborativa comprovada. Embargos de declaraçãobenefício por incapacidade. Rejeição. Vícios inexistentes | embargos de declaraçãobenefício por incapacidade; ausência de incapacidade laborativa comprovada; vícios inexistentes; rejeição |
+| 5130534-24.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Aposentadoria por idade urbana. Ausência de vício sanável. Carência não comprovada. Contribuinte facultativa | embargos de declaração; aposentadoria por idade urbana; contribuinte facultativa; carência não comprovada |
+| 5186571-71.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Ausência de intervenção do ministério público em primeiro grau. Ausência de vício sanável. Benefício por incapacidade. Nulidade absoluta | embargos de declaração; benefício por incapacidade; segurado indígena; nulidade absoluta |
 
 </details>
 

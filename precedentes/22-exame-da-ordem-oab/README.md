@@ -8,13 +8,13 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T564** · Concurso público. Sistema de cotas raciais. Princípio da vinculação ao instrumento convocatório. Heteroidentificação sem previsão editalícia | 5 | 1 provido, 3 desprovido, 1 rejeitados | sistema de cotas raciais (5); concurso público (5); heteroidentificação sem previsão editalícia (4); mandado de segurança (3) | [T564-concurso-publico-sistema-de-cotas-raciais-principio-da.json](T564-concurso-publico-sistema-de-cotas-raciais-principio-da.json) |
+| **T564** · Concurso público. Sistema de cotas raciais. Heteroidentificação sem previsão editalícia. Princípio da vinculação ao instrumento convocatório | 5 | 1 provido, 3 desprovido, 1 rejeitados | concurso público (5); sistema de cotas raciais (5); heteroidentificação sem previsão editalícia (4); mandado de segurança (3) | [T564-concurso-publico-sistema-de-cotas-raciais-heteroidentif.json](T564-concurso-publico-sistema-de-cotas-raciais-heteroidentif.json) |
 | **T565** · Concurso público | 2 | 1 parcialmente provido, 1 desprovido | concurso público (2) | [T565-concurso-publico.json](T565-concurso-publico.json) |
 | Casos sem par | 3 | 1 desprovido, 2 rejeitados | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
 
-<details><summary><b>T564</b> · Concurso público. Sistema de cotas raciais. Princípio da vinculação ao instrumento convocatório. Heteroidentificação sem previsão editalícia — 5 casos</summary>
+<details><summary><b>T564</b> · Concurso público. Sistema de cotas raciais. Heteroidentificação sem previsão editalícia. Princípio da vinculação ao instrumento convocatório — 5 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -39,9 +39,9 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5003794-97.2019.4.03.6000 | 20/07/2026 | desprovido | Concurso público. Expectativa de direito à noemação. Alegação de preterição por designação de servidores para cargos em comissão. Circunstância inapta a gerar preterição | concurso público; candidato aprovado em cadastro de reserva; expectativa de direito à noemação; circunstância inapta a gerar preterição |
-| 0004917-30.2010.4.03.6002 | 05/10/2026 | rejeitados | Embargos de declaração · Candidata aprovada fora do número de vagas. Concurso público. Ausência de vício sanável. Abertura de novo certame durante a validade do anterior | embargos de declaração; concurso público; candidata aprovada fora do número de vagas; preterição configurada |
-| 5001558-98.2021.4.03.6002 | 09/06/2026 | rejeitados | Embargos de declaração · Concurso público. Caráter protelatório não comprovado. Artigo 1.026, § 2º, CPC. Vícios inexistentes | embargos de declaração; concurso público; vícios inexistentes; rejeição |
+| 5003794-97.2019.4.03.6000 | 20/07/2026 | desprovido | Alegação de preterição por designação de servidores para cargos em comissão. Candidato aprovado em cadastro de reserva. Circunstância inapta a gerar preterição. Concurso público | concurso público; candidato aprovado em cadastro de reserva; expectativa de direito à noemação; circunstância inapta a gerar preterição |
+| 0004917-30.2010.4.03.6002 | 05/10/2026 | rejeitados | Embargos de declaração · Abertura de novo certame durante a validade do anterior. Ausência de vício sanável. Candidata aprovada fora do número de vagas. Concurso público | embargos de declaração; concurso público; candidata aprovada fora do número de vagas; preterição configurada |
+| 5001558-98.2021.4.03.6002 | 09/06/2026 | rejeitados | Embargos de declaração · Artigo 1.026, § 2º, CPC. Caráter protelatório não comprovado. Concurso público. Multa | embargos de declaração; concurso público; vícios inexistentes; rejeição |
 
 </details>
 

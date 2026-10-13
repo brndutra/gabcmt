@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5001089-97.2017.4.03.6000 | 28/09/2026 | desprovido | Legalidade. Reserva de vagas. Procedimento de heteroidentificação. Candidata autodeclarada parda | ensino superior; reserva de vagas; candidata autodeclarada parda; procedimento de heteroidentificação |
+| 5001089-97.2017.4.03.6000 | 28/09/2026 | desprovido | Cancelamento de matrícula. Candidata autodeclarada parda. Critério fenotípico. Ensino superior | ensino superior; reserva de vagas; candidata autodeclarada parda; procedimento de heteroidentificação |
 
 </details>
 

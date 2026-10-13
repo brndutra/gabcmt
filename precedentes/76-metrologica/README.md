@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5002965-82.2020.4.03.6000 | 06/07/2026 | rejeitados | Embargos de declaração · Rejeição. Vícios inexistentes. Infração metrológica | embargos de declaração; infração metrológica; vícios inexistentes; rejeição |
+| 5002965-82.2020.4.03.6000 | 06/07/2026 | rejeitados | Embargos de declaração · Infração metrológica. Rejeição. Vícios inexistentes | embargos de declaração; infração metrológica; vícios inexistentes; rejeição |
 
 </details>
 

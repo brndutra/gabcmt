@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000062-92.2026.4.03.6702 | 15/09/2026 | provido | Indeferimento da petição inicial. Descabimento. Ausência de previsão nos temas 6 e 1.234/STF. Desconstituição da sentença | ausência de previsão nos Temas 6 e 1.234/STF; indeferimento da petição inicial; descabimento; desconstituição da sentença |
-| 5000210-22.2019.4.03.6000 | 30/09/2026 | desprovido | Cobertura obrigatória. Resolução normativa 262/2011. Ação anulatória. Ressarcimento ao sistema único de saúde | nulidade por cerceamento; rejeição; ação anulatória; ressarcimento ao sistema único de saúde |
+| 5000062-92.2026.4.03.6702 | 15/09/2026 | provido | Ausência de previsão nos temas 6 e 1.234/STF. Descabimento. Desconstituição da sentença. Exigência de prescrição por profissional vinculado a cacon/unacon | ausência de previsão nos Temas 6 e 1.234/STF; indeferimento da petição inicial; descabimento; desconstituição da sentença |
+| 5000210-22.2019.4.03.6000 | 30/09/2026 | desprovido | Ação anulatória. Cobertura obrigatória. Fator 1,5. Nulidade por cerceamento | nulidade por cerceamento; rejeição; ação anulatória; ressarcimento ao sistema único de saúde |
 
 </details>
 

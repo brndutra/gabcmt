@@ -1,0 +1,805 @@
+{
+  "schema": "gabA.normas",
+  "schema_versao": 1,
+  "versao": "2026-10-13",
+  "atualizado_em": "2026-10-13T21:38:10.765Z",
+  "registros": [
+    {
+      "id": "nrm-adct",
+      "nome": "Ato das Disposições Constitucionais Transitórias",
+      "sigla": "ADCT",
+      "tipo": "Ato constitucional",
+      "numero": "",
+      "ano": "",
+      "prosa": "do ADCT",
+      "ordem": 1,
+      "aliases": [
+        "ADCT"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cc",
+      "nome": "Código Civil",
+      "sigla": "CC",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CC",
+      "ordem": 3,
+      "aliases": [
+        "CC",
+        "CC/02",
+        "CC/2002",
+        "Código Civil de 2002"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cc-1916",
+      "nome": "Código Civil de 1916",
+      "sigla": "CC/1916",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CC/1916",
+      "ordem": 3,
+      "aliases": [
+        "CC/16",
+        "CC/1916"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-ccom",
+      "nome": "Código Comercial",
+      "sigla": "CCom",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CCom",
+      "ordem": 3,
+      "aliases": [
+        "CCom"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cdc",
+      "nome": "Código de Defesa do Consumidor",
+      "sigla": "CDC",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CDC",
+      "ordem": 3,
+      "aliases": [
+        "CDC"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-ce",
+      "nome": "Código Eleitoral",
+      "sigla": "CE",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CE",
+      "ordem": 3,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cf-1988",
+      "nome": "Constituição Federal",
+      "sigla": "CF/1988",
+      "tipo": "Constituição",
+      "numero": "",
+      "ano": "",
+      "prosa": "da Constituição Federal",
+      "ordem": 0,
+      "aliases": [
+        "CF",
+        "CF/88",
+        "CF/1988",
+        "CRFB",
+        "CRFB/88",
+        "CRFB/1988",
+        "Constituição",
+        "Constituição Federal de 1988",
+        "Constituição da República",
+        "Constituição da República de 1988",
+        "Constituição da República Federativa do Brasil"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-clt",
+      "nome": "Consolidação das Leis do Trabalho",
+      "sigla": "CLT",
+      "tipo": "Consolidação",
+      "numero": "",
+      "ano": "",
+      "prosa": "da CLT",
+      "ordem": 3,
+      "aliases": [
+        "CLT"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cp",
+      "nome": "Código Penal",
+      "sigla": "CP",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CP",
+      "ordem": 3,
+      "aliases": [
+        "CP"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cpc",
+      "nome": "Código de Processo Civil",
+      "sigla": "CPC",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CPC",
+      "ordem": 3,
+      "aliases": [
+        "CPC",
+        "NCPC",
+        "CPC/15",
+        "CPC/2015",
+        "Código de Processo Civil de 2015"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cpc-1973",
+      "nome": "Código de Processo Civil de 1973",
+      "sigla": "CPC/1973",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CPC/1973",
+      "ordem": 3,
+      "aliases": [
+        "CPC/73",
+        "CPC/1973"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cpm",
+      "nome": "Código Penal Militar",
+      "sigla": "CPM",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CPM",
+      "ordem": 3,
+      "aliases": [
+        "CPM"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cpp",
+      "nome": "Código de Processo Penal",
+      "sigla": "CPP",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CPP",
+      "ordem": 3,
+      "aliases": [
+        "CPP"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-cppm",
+      "nome": "Código de Processo Penal Militar",
+      "sigla": "CPPM",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CPPM",
+      "ordem": 3,
+      "aliases": [
+        "CPPM"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-ctb",
+      "nome": "Código de Trânsito Brasileiro",
+      "sigla": "CTB",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CTB",
+      "ordem": 3,
+      "aliases": [
+        "CTB"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-ctn",
+      "nome": "Código Tributário Nacional",
+      "sigla": "CTN",
+      "tipo": "Código",
+      "numero": "",
+      "ano": "",
+      "prosa": "do CTN",
+      "ordem": 3,
+      "aliases": [
+        "CTN"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-decreto-20-910-1932",
+      "nome": "Decreto 20.910/1932",
+      "sigla": "Decreto 20.910/1932",
+      "tipo": "Decreto",
+      "numero": "20.910",
+      "ano": "1932",
+      "prosa": "do Decreto 20.910/1932",
+      "ordem": 8,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-decreto-6-759-2009",
+      "nome": "Decreto 6.759/2009",
+      "sigla": "Decreto 6.759/2009",
+      "tipo": "Decreto",
+      "numero": "6.759",
+      "ano": "2009",
+      "prosa": "do Decreto 6.759/2009",
+      "ordem": 8,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-decreto-lei-37-1966",
+      "nome": "Decreto-Lei 37/1966",
+      "sigla": "Decreto-Lei 37/1966",
+      "tipo": "Decreto-Lei",
+      "numero": "37",
+      "ano": "1966",
+      "prosa": "do Decreto-Lei 37/1966",
+      "ordem": 7,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-decreto-lei-4-657-1942",
+      "nome": "Decreto-Lei 4.657/1942",
+      "sigla": "Decreto-Lei 4.657/1942",
+      "tipo": "Decreto-Lei",
+      "numero": "4.657",
+      "ano": "1942",
+      "prosa": "do Decreto-Lei 4.657/1942",
+      "ordem": 7,
+      "aliases": [
+        "LINDB"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-decreto-lei-70-1966",
+      "nome": "Decreto-Lei 70/1966",
+      "sigla": "Decreto-Lei 70/1966",
+      "tipo": "Decreto-Lei",
+      "numero": "70",
+      "ano": "1966",
+      "prosa": "do Decreto-Lei 70/1966",
+      "ordem": 7,
+      "aliases": [
+        "DL 70/66",
+        "Decreto-Lei 70/66",
+        "Decreto-Lei nº 70/1966"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-emenda-constitucional-103-2019",
+      "nome": "Emenda Constitucional 103/2019",
+      "sigla": "EC 103/2019",
+      "tipo": "Emenda Constitucional",
+      "numero": "103",
+      "ano": "2019",
+      "prosa": "da Emenda Constitucional 103/2019",
+      "ordem": 1,
+      "aliases": [
+        "EC 103/2019",
+        "EC 103",
+        "Emenda Constitucional nº 103/2019",
+        "Reforma da Previdência"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-emenda-constitucional-113-2021",
+      "nome": "Emenda Constitucional 113/2021",
+      "sigla": "EC 113/2021",
+      "tipo": "Emenda Constitucional",
+      "numero": "113",
+      "ano": "2021",
+      "prosa": "da Emenda Constitucional 113/2021",
+      "ordem": 1,
+      "aliases": [
+        "EC 113/2021",
+        "EC 113",
+        "Emenda Constitucional nº 113/2021"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-10-259-2001",
+      "nome": "Lei 10.259/2001",
+      "sigla": "Lei 10.259/2001",
+      "tipo": "Lei",
+      "numero": "10.259",
+      "ano": "2001",
+      "prosa": "da Lei 10.259/2001",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-11-718-2008",
+      "nome": "Lei 11.718/2008",
+      "sigla": "Lei 11.718/2008",
+      "tipo": "Lei",
+      "numero": "11.718",
+      "ano": "2008",
+      "prosa": "da Lei 11.718/2008",
+      "ordem": 5,
+      "aliases": [
+        "Lei 11.718/08",
+        "Lei nº 11.718/2008",
+        "Lei nº 11.718, de 2008"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-12-016-2009",
+      "nome": "Lei 12.016/2009",
+      "sigla": "Lei 12.016/2009",
+      "tipo": "Lei",
+      "numero": "12.016",
+      "ano": "2009",
+      "prosa": "da Lei 12.016/2009",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-12-101-2009",
+      "nome": "Lei 12.101/2009",
+      "sigla": "Lei 12.101/2009",
+      "tipo": "Lei",
+      "numero": "12.101",
+      "ano": "2009",
+      "prosa": "da Lei 12.101/2009",
+      "ordem": 5,
+      "aliases": [
+        "Lei 12.101/09",
+        "Lei nº 12.101/2009"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-12-153-2009",
+      "nome": "Lei 12.153/2009",
+      "sigla": "Lei 12.153/2009",
+      "tipo": "Lei",
+      "numero": "12.153",
+      "ano": "2009",
+      "prosa": "da Lei 12.153/2009",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-12-514-2011",
+      "nome": "Lei 12.514/2011",
+      "sigla": "Lei 12.514/2011",
+      "tipo": "Lei",
+      "numero": "12.514",
+      "ano": "2011",
+      "prosa": "da Lei 12.514/2011",
+      "ordem": 5,
+      "aliases": [
+        "Lei 12.514/11",
+        "Lei nº 12.514/2011"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-13-465-2017",
+      "nome": "Lei 13.465/2017",
+      "sigla": "Lei 13.465/2017",
+      "tipo": "Lei",
+      "numero": "13.465",
+      "ano": "2017",
+      "prosa": "da Lei 13.465/2017",
+      "ordem": 5,
+      "aliases": [
+        "Lei 13.465/17",
+        "Lei nº 13.465/2017"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-13-846-2019",
+      "nome": "Lei 13.846/2019",
+      "sigla": "Lei 13.846/2019",
+      "tipo": "Lei",
+      "numero": "13.846",
+      "ano": "2019",
+      "prosa": "da Lei 13.846/2019",
+      "ordem": 5,
+      "aliases": [
+        "Lei 13.846/19",
+        "Lei nº 13.846/2019"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-13-959-2019",
+      "nome": "Lei 13.959/2019",
+      "sigla": "Lei 13.959/2019",
+      "tipo": "Lei",
+      "numero": "13.959",
+      "ano": "2019",
+      "prosa": "da Lei 13.959/2019",
+      "ordem": 5,
+      "aliases": [
+        "Lei 13.959/19",
+        "Lei nº 13.959/2019",
+        "Lei do Revalida"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-14-128-2021",
+      "nome": "Lei 14.128/2021",
+      "sigla": "Lei 14.128/2021",
+      "tipo": "Lei",
+      "numero": "14.128",
+      "ano": "2021",
+      "prosa": "da Lei 14.128/2021",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-14-195-2021",
+      "nome": "Lei 14.195/2021",
+      "sigla": "Lei 14.195/2021",
+      "tipo": "Lei",
+      "numero": "14.195",
+      "ano": "2021",
+      "prosa": "da Lei 14.195/2021",
+      "ordem": 5,
+      "aliases": [
+        "Lei 14.195/21",
+        "Lei nº 14.195/2021"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-5-010-1966",
+      "nome": "Lei 5.010/1966",
+      "sigla": "Lei 5.010/1966",
+      "tipo": "Lei",
+      "numero": "5.010",
+      "ano": "1966",
+      "prosa": "da Lei 5.010/1966",
+      "ordem": 5,
+      "aliases": [
+        "Lei 5.010/66",
+        "Lei nº 5.010/1966"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-6-015-1973",
+      "nome": "Lei 6.015/1973",
+      "sigla": "Lei 6.015/1973",
+      "tipo": "Lei",
+      "numero": "6.015",
+      "ano": "1973",
+      "prosa": "da Lei 6.015/1973",
+      "ordem": 5,
+      "aliases": [
+        "Lei 6.015/73",
+        "Lei nº 6.015/1973",
+        "Lei de Registros Públicos",
+        "LRP"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-6-830-1980",
+      "nome": "Lei 6.830/1980",
+      "sigla": "Lei 6.830/1980",
+      "tipo": "Lei",
+      "numero": "6.830",
+      "ano": "1980",
+      "prosa": "da Lei 6.830/1980",
+      "ordem": 5,
+      "aliases": [
+        "LEF"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-6-880-1980",
+      "nome": "Lei 6.880/1980",
+      "sigla": "Lei 6.880/1980",
+      "tipo": "Lei",
+      "numero": "6.880",
+      "ano": "1980",
+      "prosa": "da Lei 6.880/1980",
+      "ordem": 5,
+      "aliases": [
+        "Lei 6.880/80",
+        "Lei 6880/80",
+        "Lei nº 6.880/1980",
+        "Estatuto dos Militares"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-7-347-1985",
+      "nome": "Lei 7.347/1985",
+      "sigla": "Lei 7.347/1985",
+      "tipo": "Lei",
+      "numero": "7.347",
+      "ano": "1985",
+      "prosa": "da Lei 7.347/1985",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-069-1990",
+      "nome": "Lei 8.069/1990",
+      "sigla": "Lei 8.069/1990",
+      "tipo": "Lei",
+      "numero": "8.069",
+      "ano": "1990",
+      "prosa": "da Lei 8.069/1990",
+      "ordem": 5,
+      "aliases": [
+        "ECA"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-112-1990",
+      "nome": "Lei 8.112/1990",
+      "sigla": "Lei 8.112/1990",
+      "tipo": "Lei",
+      "numero": "8.112",
+      "ano": "1990",
+      "prosa": "da Lei 8.112/1990",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-212-1991",
+      "nome": "Lei 8.212/1991",
+      "sigla": "Lei 8.212/1991",
+      "tipo": "Lei",
+      "numero": "8.212",
+      "ano": "1991",
+      "prosa": "da Lei 8.212/1991",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-213-1991",
+      "nome": "Lei 8.213/1991",
+      "sigla": "Lei 8.213/1991",
+      "tipo": "Lei",
+      "numero": "8.213",
+      "ano": "1991",
+      "prosa": "da Lei 8.213/1991",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-429-1992",
+      "nome": "Lei 8.429/1992",
+      "sigla": "Lei 8.429/1992",
+      "tipo": "Lei",
+      "numero": "8.429",
+      "ano": "1992",
+      "prosa": "da Lei 8.429/1992",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-622-1993",
+      "nome": "Lei 8.622/1993",
+      "sigla": "Lei 8.622/1993",
+      "tipo": "Lei",
+      "numero": "8.622",
+      "ano": "1993",
+      "prosa": "da Lei 8.622/1993",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-627-1993",
+      "nome": "Lei 8.627/1993",
+      "sigla": "Lei 8.627/1993",
+      "tipo": "Lei",
+      "numero": "8.627",
+      "ano": "1993",
+      "prosa": "da Lei 8.627/1993",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-742-1993",
+      "nome": "Lei 8.742/1993",
+      "sigla": "Lei 8.742/1993",
+      "tipo": "Lei",
+      "numero": "8.742",
+      "ano": "1993",
+      "prosa": "da Lei 8.742/1993",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-8-906-1994",
+      "nome": "Lei 8.906/1994",
+      "sigla": "Lei 8.906/1994",
+      "tipo": "Lei",
+      "numero": "8.906",
+      "ano": "1994",
+      "prosa": "da Lei 8.906/1994",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-9-099-1995",
+      "nome": "Lei 9.099/1995",
+      "sigla": "Lei 9.099/1995",
+      "tipo": "Lei",
+      "numero": "9.099",
+      "ano": "1995",
+      "prosa": "da Lei 9.099/1995",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-9-394-1996",
+      "nome": "Lei 9.394/1996",
+      "sigla": "Lei 9.394/1996",
+      "tipo": "Lei",
+      "numero": "9.394",
+      "ano": "1996",
+      "prosa": "da Lei 9.394/1996",
+      "ordem": 5,
+      "aliases": [
+        "Lei 9.394/96",
+        "Lei 9394/96",
+        "Lei nº 9.394/1996",
+        "LDB"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-9-494-1997",
+      "nome": "Lei 9.494/1997",
+      "sigla": "Lei 9.494/1997",
+      "tipo": "Lei",
+      "numero": "9.494",
+      "ano": "1997",
+      "prosa": "da Lei 9.494/1997",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-9-514-1997",
+      "nome": "Lei 9.514/1997",
+      "sigla": "Lei 9.514/1997",
+      "tipo": "Lei",
+      "numero": "9.514",
+      "ano": "1997",
+      "prosa": "da Lei 9.514/1997",
+      "ordem": 5,
+      "aliases": [
+        "Lei 9.514/97",
+        "Lei nº 9.514/1997",
+        "Lei 9514/97"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-9-784-1999",
+      "nome": "Lei 9.784/1999",
+      "sigla": "Lei 9.784/1999",
+      "tipo": "Lei",
+      "numero": "9.784",
+      "ano": "1999",
+      "prosa": "da Lei 9.784/1999",
+      "ordem": 5,
+      "aliases": [],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-9-876-1999",
+      "nome": "Lei 9.876/1999",
+      "sigla": "Lei 9.876/1999",
+      "tipo": "Lei",
+      "numero": "9.876",
+      "ano": "1999",
+      "prosa": "da Lei 9.876/1999",
+      "ordem": 5,
+      "aliases": [
+        "Lei 9.876/99",
+        "Lei nº 9.876/1999"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-lei-complementar-8-1970",
+      "nome": "Lei Complementar 8/1970",
+      "sigla": "LC 8/1970",
+      "tipo": "Lei Complementar",
+      "numero": "8",
+      "ano": "1970",
+      "prosa": "da Lei Complementar 8/1970",
+      "ordem": 4,
+      "aliases": [
+        "LC 8/1970",
+        "LC 8/70",
+        "Lei Complementar nº 8/1970",
+        "Lei Complementar 8, de 1970"
+      ],
+      "seletor": true
+    },
+    {
+      "id": "nrm-medida-provisoria-871-2019",
+      "nome": "Medida Provisória 871/2019",
+      "sigla": "MP 871/2019",
+      "tipo": "Medida Provisória",
+      "numero": "871",
+      "ano": "2019",
+      "prosa": "da Medida Provisória 871/2019",
+      "ordem": 5,
+      "aliases": [
+        "MP 871/2019",
+        "MP 871",
+        "Medida Provisória nº 871/2019"
+      ],
+      "seletor": true
+    }
+  ]
+}

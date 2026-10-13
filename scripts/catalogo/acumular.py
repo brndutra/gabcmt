@@ -87,6 +87,10 @@ def gerar_html(regs):
         usados[p["id"]] = 1
         banco = P.no_banco(r["processo"], p["especie"])
         p["_noBanco"] = banco["tipo"] if banco else ""
+        ids_banco = {b["id"] for lst in P._CURADOS.values() for b in lst}
+        if not banco and p["id"] in ids_banco:  # outro julgamento do mesmo processo já curado com este id: não sobrescrever
+            p["id"] = f"{p['id']}-{(p['especie'] or 'julg').lower()}-{r.get('julg_iso', '').replace('-', '')}"
+        usados[p["id"]] = 1
         recs.append(p)
     recs.reverse()
     import similaridade as SIM

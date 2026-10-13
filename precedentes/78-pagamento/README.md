@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0000025-84.2010.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Rejeição. Arrematação em execução extrajudicial. Vícios inexistentes | arrematação em execução extrajudicial; vícios inexistentes; rejeição |
+| 0000025-84.2010.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Arrematação em execução extrajudicial. Rejeição. Vícios inexistentes | arrematação em execução extrajudicial; vícios inexistentes; rejeição |
 
 </details>
 

@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000141-62.2025.4.03.6005 | 09/06/2026 | provido | Mandado de segurança. Transferência de propriedade anterior à apreensão. Ilegitimidade ativa. Tutela de liberação cassada | mandado de segurança; pena de perdimento de veículo; ilegitimidade ativa; denegação do mandado de segurança |
-| 5000141-62.2025.4.03.6005 | 27/08/2026 | rejeitados | Embargos de declaração · Mandado de segurança. Transferência de propriedade anterior à apreensão. Ilegitimidade ativa. Ausência de vício sanável | embargos de declaração; mandado de segurança; pena de perdimento de veículo; ilegitimidade ativa |
+| 5000141-62.2025.4.03.6005 | 09/06/2026 | provido | Artigo 6º, § 5º, da lei 12.016/2009. Denegação do mandado de segurança. Ilegitimidade ativa. Mandado de segurança | mandado de segurança; pena de perdimento de veículo; ilegitimidade ativa; denegação do mandado de segurança |
+| 5000141-62.2025.4.03.6005 | 27/08/2026 | rejeitados | Embargos de declaração · Ausência de vício sanável. Ilegitimidade ativa. Mandado de segurança. Pena de perdimento de veículo | embargos de declaração; mandado de segurança; pena de perdimento de veículo; ilegitimidade ativa |
 
 </details>
 

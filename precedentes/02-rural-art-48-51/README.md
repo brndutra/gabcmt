@@ -10,54 +10,54 @@
 |---|---:|---|---|---|
 | **T090** · Aposentadoria por idade rural. Início de prova material corroborado por prova testemunhal. Segurada especial | 28 | 7 provido, 5 parcialmente provido, 16 desprovido | aposentadoria por idade rural (25); segurada especial (8) | [T090-aposentadoria-por-idade-rural-inicio-de-prova-material.json](T090-aposentadoria-por-idade-rural-inicio-de-prova-material.json) (15 de 28) |
 | **T091** · Aposentadoria por idade rural. Ausência de início razoável de prova material. Ausência de início de prova material. Segurado especial | 18 | 1 parcialmente provido, 17 prejudicado/extinto | aposentadoria por idade rural (18); segurado especial (10); ausência de início de prova material (9); ausência de início razoável de prova material (8); segurada especial (7); extinção do processo sem resolução do mérito (4) | [T091-aposentadoria-por-idade-rural-ausencia-de-inicio-razoav.json](T091-aposentadoria-por-idade-rural-ausencia-de-inicio-razoav.json) (17 de 18) |
-| **T092** · Aposentadoria por idade rural. Deficiência instrutória. Extinção do processo sem resolução do mérito. Insuficiência de início de prova material | 15 | 8 parcialmente provido, 2 desprovido, 5 prejudicado/extinto | aposentadoria por idade rural (15); deficiência instrutória (10); segurada especial (6); extinção do processo sem resolução do mérito (6); insuficiência de início de prova material (5); documentos em nome do cônjuge empregado rural (3); segurada especial em regime de economia familiar (3) | [T092-aposentadoria-por-idade-rural-deficiencia-instrutoria-e.json](T092-aposentadoria-por-idade-rural-deficiencia-instrutoria-e.json) (8 de 15) |
+| **T092** · Aposentadoria por idade rural. Deficiência instrutória. Extinção do processo sem resolução do mérito. Insuficiência de início de prova material | 15 | 8 parcialmente provido, 2 desprovido, 5 prejudicado/extinto | aposentadoria por idade rural (15); deficiência instrutória (10); extinção do processo sem resolução do mérito (6); segurada especial (6); insuficiência de início de prova material (5); documentos em nome do cônjuge empregado rural (3); segurada especial em regime de economia familiar (3) | [T092-aposentadoria-por-idade-rural-deficiencia-instrutoria-e.json](T092-aposentadoria-por-idade-rural-deficiencia-instrutoria-e.json) (8 de 15) |
 | **T093** · Aposentadoria por idade rural. Processo extinto sem resolução do mérito. Deficiência instrutória. Processo extinto sem resolução de mérito de ofício | 10 | 3 parcialmente provido, 7 prejudicado/extinto | aposentadoria por idade rural (10); deficiência instrutória (6); processo extinto sem resolução do mérito (2); segurado especial em regime de economia familiar (2) | [T093-aposentadoria-por-idade-rural-processo-extinto-sem-reso.json](T093-aposentadoria-por-idade-rural-processo-extinto-sem-reso.json) (8 de 10) |
 | **T094** · Aposentadoria por idade rural. Extinção do processo sem resolução do mérito. Ausência de início de prova material contemporâneo ao período de carência | 10 | 3 parcialmente provido, 3 desprovido, 4 prejudicado/extinto | aposentadoria por idade rural (9); extinção do processo sem resolução do mérito (7) | [T094-aposentadoria-por-idade-rural-extincao-do-processo-sem.json](T094-aposentadoria-por-idade-rural-extincao-do-processo-sem.json) (8 de 10) |
-| **T169** · Embargos de declaração · Ausência de vício sanável. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Ec 136/2025. Rejeição | 9 | 1 parcialmente provido, 8 rejeitados | embargos de declaração (8); aposentadoria por idade rural (5); critérios de correção monetária e juros de mora (4); correção monetária e juros de mora (3); EC 113/2021 e EC 136/2025 (3); segurado especial (2) | [T169-edcl-ausencia-de-vicio-sanavel-correcao-de-oficio-quant.json](T169-edcl-ausencia-de-vicio-sanavel-correcao-de-oficio-quant.json) (6 de 9) |
-| **T095** · Extinção do processo sem resolução do mérito. Aposentadoria rural por idade. Ausência de início de prova material suficiente. Aposentadoria por idade rural | 8 | 1 rejeitados, 7 prejudicado/extinto | extinção do processo sem resolução do mérito (8); aposentadoria rural por idade (6); ausência de início de prova material suficiente (3); ausência de início de prova material (2); aposentadoria por idade rural (2) | [T095-extincao-do-processo-sem-resolucao-do-merito-aposentado.json](T095-extincao-do-processo-sem-resolucao-do-merito-aposentado.json) |
+| **T169** · Embargos de declaração · Ausência de vício sanável. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Ec 136/2025. Rejeição | 9 | 1 parcialmente provido, 8 rejeitados | embargos de declaração (8); aposentadoria por idade rural (5); critérios de correção monetária e juros de mora (4); EC 113/2021 e EC 136/2025 (3); correção monetária e juros de mora (3); segurado especial (2) | [T169-edcl-ausencia-de-vicio-sanavel-correcao-de-oficio-quant.json](T169-edcl-ausencia-de-vicio-sanavel-correcao-de-oficio-quant.json) (6 de 9) |
+| **T095** · Extinção do processo sem resolução do mérito. Aposentadoria rural por idade. Ausência de início de prova material suficiente. Aposentadoria por idade rural | 8 | 1 rejeitados, 7 prejudicado/extinto | extinção do processo sem resolução do mérito (8); aposentadoria rural por idade (6); ausência de início de prova material suficiente (3); aposentadoria por idade rural (2); ausência de início de prova material (2) | [T095-extincao-do-processo-sem-resolucao-do-merito-aposentado.json](T095-extincao-do-processo-sem-resolucao-do-merito-aposentado.json) |
 | **T096** · Aposentadoria por idade rural. Segurada especial. Honorários de sucumbência | 7 | 1 provido, 6 desprovido | aposentadoria por idade rural (5); segurada especial (4) | [T096-aposentadoria-por-idade-rural-segurada-especial-honorar.json](T096-aposentadoria-por-idade-rural-segurada-especial-honorar.json) |
 | **T097** · Aposentadoria por idade rural. Segurado especial. Início de prova material corroborado por prova testemunhal | 7 | 1 provido, 6 desprovido | aposentadoria por idade rural (7); segurado especial (3) | [T097-aposentadoria-por-idade-rural-segurado-especial-inicio.json](T097-aposentadoria-por-idade-rural-segurado-especial-inicio.json) (5 de 7) |
 | **T098** · Aposentadoria por idade rural. Empregado rural. Requisitos preenchidos. Carência preenchida | 7 | 2 provido, 1 parcialmente provido, 4 desprovido | aposentadoria por idade rural (7); empregado rural (6) | [T098-aposentadoria-por-idade-rural-empregado-rural-requisito.json](T098-aposentadoria-por-idade-rural-empregado-rural-requisito.json) (6 de 7) |
-| **T099** · Inversão da sucumbência. Vínculos rurais descontínuos. Atividade urbana intercalada. Aposentadoria por idade rural | 6 | 6 provido | aposentadoria por idade rural (6); inversão da sucumbência (3); atividade urbana intercalada (2); vínculos rurais descontínuos (2); empregado rural (2) | [T099-inversao-da-sucumbencia-vinculos-rurais-descontinuos-at.json](T099-inversao-da-sucumbencia-vinculos-rurais-descontinuos-at.json) |
-| **T100** · Aposentadoria por idade rural. Trabalhador rural diarista ou boia-fria. Insuficiência de início de prova material contemporâneo. Extinção do processo sem resolução do mérito | 6 | 2 provido, 1 desprovido, 3 prejudicado/extinto | aposentadoria por idade rural (5); trabalhador rural diarista ou boia-fria (4); extinção do processo sem resolução do mérito (3); deficiência instrutória (3); carência comprovada (2) | [T100-aposentadoria-por-idade-rural-trabalhador-rural-diarist.json](T100-aposentadoria-por-idade-rural-trabalhador-rural-diarist.json) |
+| **T099** · Aposentadoria por idade rural. Inversão da sucumbência. Atividade urbana intercalada. Vínculos rurais descontínuos | 6 | 6 provido | aposentadoria por idade rural (6); inversão da sucumbência (3); atividade urbana intercalada (2); empregado rural (2); vínculos rurais descontínuos (2) | [T099-aposentadoria-por-idade-rural-inversao-da-sucumbencia-a.json](T099-aposentadoria-por-idade-rural-inversao-da-sucumbencia-a.json) |
+| **T100** · Aposentadoria por idade rural. Trabalhador rural diarista ou boia-fria. Insuficiência de início de prova material contemporâneo. Extinção do processo sem resolução do mérito | 6 | 2 provido, 1 desprovido, 3 prejudicado/extinto | aposentadoria por idade rural (5); trabalhador rural diarista ou boia-fria (4); deficiência instrutória (3); extinção do processo sem resolução do mérito (3); carência comprovada (2) | [T100-aposentadoria-por-idade-rural-trabalhador-rural-diarist.json](T100-aposentadoria-por-idade-rural-trabalhador-rural-diarist.json) |
 | **T101** · Aposentadoria por idade rural. Descaracterização da condição de segurado especial. Segurado especial | 5 | 3 provido, 1 desprovido, 1 prejudicado/extinto | aposentadoria por idade rural (4); segurado especial (3) | [T101-aposentadoria-por-idade-rural-descaracterizacao-da-cond.json](T101-aposentadoria-por-idade-rural-descaracterizacao-da-cond.json) (3 de 5) |
 | **T102** · Coisa julgada. Extinção do processo sem resolução do mérito. Aposentadoria por idade rural | 5 | 1 parcialmente provido, 2 desprovido, 2 prejudicado/extinto | coisa julgada (4); aposentadoria por idade rural (3) | [T102-coisa-julgada-extincao-do-processo-sem-resolucao-do-mer.json](T102-coisa-julgada-extincao-do-processo-sem-resolucao-do-mer.json) |
-| **T103** · Segurada especial. Benefício por incapacidade permanente. Aposentadoria por invalidez | 5 | 1 provido, 4 desprovido | segurada especial (3); benefício por incapacidade permanente (2); aposentadoria por invalidez (2) | [T103-segurada-especial-beneficio-por-incapacidade-permanente.json](T103-segurada-especial-beneficio-por-incapacidade-permanente.json) |
-| **T104** · Aposentadoria rural por idade. Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Juízo de retratação acolhido | 4 | 1 provido, 1 parcialmente provido, 2 desprovido | correção monetária e juros de mora (2); aposentadoria rural por idade (2); consectários legais (2); tema 1.419/STF (2); juízo de retratação (2) | [T104-aposentadoria-rural-por-idade-alteracao-dos-criterios-d.json](T104-aposentadoria-rural-por-idade-alteracao-dos-criterios-d.json) |
-| **T105** · Reconhecimento de tempo de serviço especial. Atividade rural em estabelecimento agropecuário. Enquadramento por categoria profissional. Aposentadoria especial | 4 | 1 provido, 1 parcialmente provido, 2 desprovido | atividade rural em estabelecimento agropecuário (3); reconhecimento de tempo de serviço especial (3); enquadramento por categoria profissional (3); aposentadoria por tempo de contribuição (2); aposentadoria especial (2) | [T105-reconhecimento-de-tempo-de-servico-especial-atividade-r.json](T105-reconhecimento-de-tempo-de-servico-especial-atividade-r.json) |
-| **T106** · Aposentadoria por idade rural. Impossibilidade de extensão. Ctps do cônjuge empregado rural. Extinção do processo sem resolução do mérito de ofício | 4 | 1 desprovido, 3 prejudicado/extinto | aposentadoria por idade rural (4); segurada especial (3); CTPS do cônjuge empregado rural (2) | [T106-aposentadoria-por-idade-rural-impossibilidade-de-extens.json](T106-aposentadoria-por-idade-rural-impossibilidade-de-extens.json) |
+| **T103** · Segurada especial. Aposentadoria por invalidez. Benefício por incapacidade permanente | 5 | 1 provido, 4 desprovido | segurada especial (3); aposentadoria por invalidez (2); benefício por incapacidade permanente (2) | [T103-segurada-especial-aposentadoria-por-invalidez-beneficio.json](T103-segurada-especial-aposentadoria-por-invalidez-beneficio.json) |
+| **T104** · Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Correção monetária e juros de mora. Ec 113/2021 | 4 | 1 provido, 1 parcialmente provido, 2 desprovido | aposentadoria rural por idade (2); consectários legais (2); correção monetária e juros de mora (2); juízo de retratação (2); tema 1.419/STF (2) | [T104-alteracao-dos-criterios-de-correcao-monetaria-e-juros-d.json](T104-alteracao-dos-criterios-de-correcao-monetaria-e-juros-d.json) |
+| **T105** · Atividade rural em estabelecimento agropecuário. Enquadramento por categoria profissional. Reconhecimento de tempo de serviço especial. Aposentadoria especial | 4 | 1 provido, 1 parcialmente provido, 2 desprovido | atividade rural em estabelecimento agropecuário (3); enquadramento por categoria profissional (3); reconhecimento de tempo de serviço especial (3); aposentadoria especial (2); aposentadoria por tempo de contribuição (2) | [T105-atividade-rural-em-estabelecimento-agropecuario-enquadr.json](T105-atividade-rural-em-estabelecimento-agropecuario-enquadr.json) |
+| **T106** · Aposentadoria por idade rural. Ctps do cônjuge empregado rural. Impossibilidade de extensão. Extinção do processo sem resolução do mérito de ofício | 4 | 1 desprovido, 3 prejudicado/extinto | aposentadoria por idade rural (4); segurada especial (3); CTPS do cônjuge empregado rural (2) | [T106-aposentadoria-por-idade-rural-ctps-do-conjuge-empregado.json](T106-aposentadoria-por-idade-rural-ctps-do-conjuge-empregado.json) |
 | **T107** · Aposentadoria por idade rural. Ausência de início razoável de prova material do exercício pessoal de atividade rural. Deficiência instrutória. Extinção do processo sem resolução do mérito | 4 | 1 parcialmente provido, 3 prejudicado/extinto | aposentadoria por idade rural (4); segurada especial (3) | [T107-aposentadoria-por-idade-rural-ausencia-de-inicio-razoav.json](T107-aposentadoria-por-idade-rural-ausencia-de-inicio-razoav.json) (2 de 4) |
-| **T170** · Embargos de declaração · Rejeição. Multa. Aposentadoria rural por idade. Caráter protelatório do recurso | 4 | 3 rejeitados, 1 acolhidos | embargos de declaração (4); aposentadoria rural por idade (2); aposentadoria por idade rural (2) | [T170-edcl-rejeicao-multa-aposentadoria-rural-por-idade-carat.json](T170-edcl-rejeicao-multa-aposentadoria-rural-por-idade-carat.json) |
+| **T170** · Embargos de declaração · Multa. Acolhimento, com efeitos infringentes. Aposentadoria rural por idade. Caráter protelatório do recurso | 4 | 3 rejeitados, 1 acolhidos | embargos de declaração (4); aposentadoria por idade rural (2); aposentadoria rural por idade (2) | [T170-edcl-multa-acolhimento-com-efeitos-infringentes-aposent.json](T170-edcl-multa-acolhimento-com-efeitos-infringentes-aposent.json) |
 | **T108** · Benefício por incapacidade. Honorários sucumbenciais fixados. Segurado especial | 3 | 2 provido, 1 desprovido | benefício por incapacidade (2); segurado especial (2) | [T108-beneficio-por-incapacidade-honorarios-sucumbenciais-fix.json](T108-beneficio-por-incapacidade-honorarios-sucumbenciais-fix.json) (2 de 3) |
-| **T109** · Aposentadoria por idade rural. Retroação da DIB à primeira DER | 3 | 3 desprovido | retroação da DIB à primeira DER (2); aposentadoria por idade rural (2) | [T109-aposentadoria-por-idade-rural-retroacao-da-dib-a-primei.json](T109-aposentadoria-por-idade-rural-retroacao-da-dib-a-primei.json) |
-| **T110** · Reconhecimento e averbação de tempo de serviço rural em regime de economia familiar. Inexistência de início de prova material. Insuficiência da prova exclusivamente testemunhal | 3 | 2 parcialmente provido, 1 desprovido |  | [T110-reconhecimento-e-averbacao-de-tempo-de-servico-rural-em.json](T110-reconhecimento-e-averbacao-de-tempo-de-servico-rural-em.json) |
+| **T109** · Aposentadoria por idade rural. Retroação da DIB à primeira DER | 3 | 3 desprovido | aposentadoria por idade rural (2); retroação da DIB à primeira DER (2) | [T109-aposentadoria-por-idade-rural-retroacao-da-dib-a-primei.json](T109-aposentadoria-por-idade-rural-retroacao-da-dib-a-primei.json) |
+| **T110** · Atividade rural exercida por menor de idade. Averbação de atividade rural em regime de economia familiar. Averbação de tempo de serviço rural | 3 | 2 parcialmente provido, 1 desprovido |  | [T110-atividade-rural-exercida-por-menor-de-idade-averbacao-d.json](T110-atividade-rural-exercida-por-menor-de-idade-averbacao-d.json) |
 | **T111** · Aposentadoria por idade rural. Inversão da sucumbência | 3 | 2 provido, 1 desprovido | aposentadoria por idade rural (3) | [T111-aposentadoria-por-idade-rural-inversao-da-sucumbencia.json](T111-aposentadoria-por-idade-rural-inversao-da-sucumbencia.json) |
 | **T112** · Auxílio por incapacidade temporária | 3 | 1 provido, 2 desprovido | auxílio por incapacidade temporária (3) | [T112-auxilio-por-incapacidade-temporaria.json](T112-auxilio-por-incapacidade-temporaria.json) (2 de 3) |
-| **T113** · Inversão da sucumbência. Deficiência instrutória. Extinção do processo sem resolução do mérito. Aposentadoria por idade rural | 3 | 3 parcialmente provido | aposentadoria por idade rural (3); deficiência instrutória (2) | [T113-inversao-da-sucumbencia-deficiencia-instrutoria-extinca.json](T113-inversao-da-sucumbencia-deficiencia-instrutoria-extinca.json) (2 de 3) |
-| **T114** · Ruído abaixo do limite de tolerância. Aposentadoria por tempo de contribuição | 2 | 1 parcialmente provido, 1 não conhecido | aposentadoria por tempo de contribuição (2) | [T114-ruido-abaixo-do-limite-de-tolerancia-aposentadoria-por.json](T114-ruido-abaixo-do-limite-de-tolerancia-aposentadoria-por.json) |
+| **T113** · Aposentadoria por idade rural. Inversão da sucumbência. Deficiência instrutória. Extinção do processo sem resolução do mérito | 3 | 3 parcialmente provido | aposentadoria por idade rural (3); deficiência instrutória (2) | [T113-aposentadoria-por-idade-rural-inversao-da-sucumbencia-d.json](T113-aposentadoria-por-idade-rural-inversao-da-sucumbencia-d.json) (2 de 3) |
+| **T114** · Aposentadoria por tempo de contribuição. Ruído abaixo do limite de tolerância | 2 | 1 parcialmente provido, 1 não conhecido | aposentadoria por tempo de contribuição (2) | [T114-aposentadoria-por-tempo-de-contribuicao-ruido-abaixo-do.json](T114-aposentadoria-por-tempo-de-contribuicao-ruido-abaixo-do.json) |
 | **T115** · Aposentadoria por tempo de contribuição | 2 | 1 parcialmente provido, 1 não conhecido | aposentadoria por tempo de contribuição (2) | [T115-aposentadoria-por-tempo-de-contribuicao.json](T115-aposentadoria-por-tempo-de-contribuicao.json) |
-| **T116** · Honorários de sucumbência. Ausência de início de prova material. Segurada especial. Aposentadoria por idade rural | 2 | 2 prejudicado/extinto | aposentadoria por idade rural (2); segurada especial (2); ausência de início de prova material (2) | [T116-honorarios-de-sucumbencia-ausencia-de-inicio-de-prova-m.json](T116-honorarios-de-sucumbencia-ausencia-de-inicio-de-prova-m.json) |
+| **T116** · Aposentadoria por idade rural. Ausência de início de prova material. Honorários de sucumbência. Segurada especial | 2 | 2 prejudicado/extinto | aposentadoria por idade rural (2); ausência de início de prova material (2); segurada especial (2) | [T116-aposentadoria-por-idade-rural-ausencia-de-inicio-de-pro.json](T116-aposentadoria-por-idade-rural-ausencia-de-inicio-de-pro.json) |
 | **T117** · Aposentadoria por idade rural. Ausência de início de prova material em nome próprio | 2 | 2 prejudicado/extinto | aposentadoria por idade rural (2) | [T117-aposentadoria-por-idade-rural-ausencia-de-inicio-de-pro.json](T117-aposentadoria-por-idade-rural-ausencia-de-inicio-de-pro.json) |
 | **T118** · Preenchimento dos requisitos legais | 2 | 2 desprovido | preenchimento dos requisitos legais (2) | [T118-preenchimento-dos-requisitos-legais.json](T118-preenchimento-dos-requisitos-legais.json) |
-| **T119** · Regime de economia familiar. Deficiência probatória. Propriedade superior a quatro módulos fiscais | 2 | 2 parcialmente provido |  | [T119-regime-de-economia-familiar-deficiencia-probatoria-prop.json](T119-regime-de-economia-familiar-deficiencia-probatoria-prop.json) |
+| **T119** · Aposentadoria por idade rural. Deficiência probatória. Exploração pecuária de cunho aparentemente comercial | 2 | 2 parcialmente provido |  | [T119-aposentadoria-por-idade-rural-deficiencia-probatoria-ex.json](T119-aposentadoria-por-idade-rural-deficiencia-probatoria-ex.json) |
 | **T120** · Intempestividade. Recurso não conhecido | 2 | 2 não conhecido |  | [T120-intempestividade-recurso-nao-conhecido.json](T120-intempestividade-recurso-nao-conhecido.json) |
 | **T121** · Aposentadoria por idade rural | 2 | 1 provido, 1 parcialmente provido | aposentadoria por idade rural (2) | [T121-aposentadoria-por-idade-rural.json](T121-aposentadoria-por-idade-rural.json) |
-| **T122** · Julgamento do mérito. Salário‑maternidade. Trabalhadora rural | 2 | 1 desprovido, 1 prejudicado/extinto |  | [T122-julgamento-do-merito-salariomaternidade-trabalhadora-ru.json](T122-julgamento-do-merito-salariomaternidade-trabalhadora-ru.json) |
+| **T122** · Aposentadoria por idade rural. Ausência de início de prova material contemporânea do labor rural. Documentos em nome de terceiro sem vinculação ao núcleo familiar no período relevante | 2 | 1 desprovido, 1 prejudicado/extinto |  | [T122-aposentadoria-por-idade-rural-ausencia-de-inicio-de-pro.json](T122-aposentadoria-por-idade-rural-ausencia-de-inicio-de-pro.json) |
 | **T123** · Aposentadoria por idade rural. Deficiência instrutória. Extinção do processo sem resolução do mérito | 2 | 1 parcialmente provido, 1 prejudicado/extinto | aposentadoria por idade rural (2); deficiência instrutória (2) | [T123-aposentadoria-por-idade-rural-deficiencia-instrutoria-e.json](T123-aposentadoria-por-idade-rural-deficiencia-instrutoria-e.json) (1 de 2) |
 | **T124** · Aposentadoria por idade rural | 2 | 1 provido, 1 desprovido | aposentadoria por idade rural (2) | [T124-aposentadoria-por-idade-rural.json](T124-aposentadoria-por-idade-rural.json) |
 | **T125** · Benefício por incapacidade. Incapacidade parcial e permanente | 2 | 1 provido, 1 parcialmente provido | benefício por incapacidade (2); incapacidade parcial e permanente (2) | [T125-beneficio-por-incapacidade-incapacidade-parcial-e-perma.json](T125-beneficio-por-incapacidade-incapacidade-parcial-e-perma.json) |
-| **T126** · Coexistência de tempo urbano. Tempo de atividade rural insuficiente. Impossibilidade de alterar pedido e causa de pedir. Início de prova material | 2 | 1 parcialmente provido, 1 prejudicado/extinto | aposentadoria por idade rural (2); coexistência de tempo urbano (2); tempo de atividade rural insuficiente (2); início de prova material (2) | *(todos já no banco)* |
+| **T126** · Aposentadoria por idade rural. Coexistência de tempo urbano. Impossibilidade de alterar pedido e causa de pedir. Tempo de atividade rural insuficiente | 2 | 1 parcialmente provido, 1 prejudicado/extinto | aposentadoria por idade rural (2); coexistência de tempo urbano (2); início de prova material (2); tempo de atividade rural insuficiente (2) | *(todos já no banco)* |
 | **T127** · Benefício por incapacidade. Incapacidade preexistente à filiação ao rgps. Segurado especial | 2 | 1 provido, 1 desprovido | benefício por incapacidade (2); segurado especial (2) | [T127-beneficio-por-incapacidade-incapacidade-preexistente-a.json](T127-beneficio-por-incapacidade-incapacidade-preexistente-a.json) |
 | **T128** · Aposentadoria por idade rural | 2 | 1 parcialmente provido, 1 desprovido | aposentadoria por idade rural (2) | [T128-aposentadoria-por-idade-rural.json](T128-aposentadoria-por-idade-rural.json) |
-| **T129** · Comprovação de atividade rural e termo inicial do benefício. Data do requerimento administrativo. Benefício por incapacidade temporária | 2 | 2 parcialmente provido |  | [T129-comprovacao-de-atividade-rural-e-termo-inicial-do-benef.json](T129-comprovacao-de-atividade-rural-e-termo-inicial-do-benef.json) |
-| **T130** · Aposentadoria por idade rural. Requerimento administrativo prévio. Interesse de agir | 2 | 1 provido, 1 desprovido | aposentadoria por idade rural (2); requerimento administrativo prévio (2); interesse de agir (2) | [T130-aposentadoria-por-idade-rural-requerimento-administrati.json](T130-aposentadoria-por-idade-rural-requerimento-administrati.json) |
-| **T131** · Benefício previdenciário. Idade mínima. Reconhecimento de tempo rural | 2 | 2 desprovido |  | [T131-beneficio-previdenciario-idade-minima-reconhecimento-de.json](T131-beneficio-previdenciario-idade-minima-reconhecimento-de.json) |
+| **T129** · Benefício por incapacidade temporária. Comprovação de atividade rural e termo inicial do benefício. Data do requerimento administrativo | 2 | 2 parcialmente provido |  | [T129-beneficio-por-incapacidade-temporaria-comprovacao-de-at.json](T129-beneficio-por-incapacidade-temporaria-comprovacao-de-at.json) |
+| **T130** · Aposentadoria por idade rural. Interesse de agir. Requerimento administrativo prévio | 2 | 1 provido, 1 desprovido | aposentadoria por idade rural (2); interesse de agir (2); requerimento administrativo prévio (2) | [T130-aposentadoria-por-idade-rural-interesse-de-agir-requeri.json](T130-aposentadoria-por-idade-rural-interesse-de-agir-requeri.json) |
+| **T131** · Aposentadoria por idade rural. Benefício previdenciário. Idade mínima | 2 | 2 desprovido |  | [T131-aposentadoria-por-idade-rural-beneficio-previdenciario.json](T131-aposentadoria-por-idade-rural-beneficio-previdenciario.json) |
 | **T132** · Aposentadoria por idade rural. Natureza não rural | 2 | 1 provido, 1 parcialmente provido | aposentadoria por idade rural (2); natureza não rural (2) | [T132-aposentadoria-por-idade-rural-natureza-nao-rural.json](T132-aposentadoria-por-idade-rural-natureza-nao-rural.json) |
-| **T133** · Tema 629/STJ. Deficiência instrutória. Aposentadoria por idade rural | 2 | 2 prejudicado/extinto | aposentadoria por idade rural (2); deficiência instrutória (2) | [T133-tema-629-stj-deficiencia-instrutoria-aposentadoria-por.json](T133-tema-629-stj-deficiencia-instrutoria-aposentadoria-por.json) |
+| **T133** · Aposentadoria por idade rural. Tema 629/STJ. Deficiência instrutória | 2 | 2 prejudicado/extinto | aposentadoria por idade rural (2); deficiência instrutória (2) | [T133-aposentadoria-por-idade-rural-tema-629-stj-deficiencia.json](T133-aposentadoria-por-idade-rural-tema-629-stj-deficiencia.json) |
 | **T134** · Aposentadoria por idade rural | 2 | 1 provido, 1 desprovido | aposentadoria por idade rural (2) | [T134-aposentadoria-por-idade-rural.json](T134-aposentadoria-por-idade-rural.json) (1 de 2) |
 | **T135** · Benefício por incapacidade. Trabalhador rural | 2 | 2 desprovido | benefício por incapacidade (2); trabalhador rural (2) | [T135-beneficio-por-incapacidade-trabalhador-rural.json](T135-beneficio-por-incapacidade-trabalhador-rural.json) |
-| **T136** · Regime de economia familiar. Prova testemunhal corroborativa. Carência comprovada. Aposentadoria por idade rural | 2 | 1 provido, 1 desprovido | aposentadoria por idade rural (2); regime de economia familiar (2) | [T136-regime-de-economia-familiar-prova-testemunhal-corrobora.json](T136-regime-de-economia-familiar-prova-testemunhal-corrobora.json) (1 de 2) |
-| **T171** · Embargos de declaração · Aposentadoria por idade rural. Vícios inexistentes. Rejeição | 2 | 2 rejeitados | embargos de declaração (2); aposentadoria por idade rural (2) | [T171-edcl-aposentadoria-por-idade-rural-vicios-inexistentes.json](T171-edcl-aposentadoria-por-idade-rural-vicios-inexistentes.json) |
+| **T136** · Aposentadoria por idade rural. Prova testemunhal corroborativa. Carência comprovada. Regime de economia familiar | 2 | 1 provido, 1 desprovido | aposentadoria por idade rural (2); regime de economia familiar (2) | [T136-aposentadoria-por-idade-rural-prova-testemunhal-corrobo.json](T136-aposentadoria-por-idade-rural-prova-testemunhal-corrobo.json) (1 de 2) |
+| **T171** · Embargos de declaração · Aposentadoria por idade rural. Vícios inexistentes. Rejeição | 2 | 2 rejeitados | aposentadoria por idade rural (2); embargos de declaração (2) | [T171-edcl-aposentadoria-por-idade-rural-vicios-inexistentes.json](T171-edcl-aposentadoria-por-idade-rural-vicios-inexistentes.json) |
 | Casos sem par | 37 | 7 provido, 5 parcialmente provido, 14 desprovido, 4 não conhecido, 3 rejeitados, 1 acolhidos, 3 prejudicado/extinto | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) (34 de 37) |
 
 ## Casos de cada tema
@@ -251,7 +251,7 @@
 
 </details>
 
-<details><summary><b>T099</b> · Inversão da sucumbência. Vínculos rurais descontínuos. Atividade urbana intercalada. Aposentadoria por idade rural — 6 casos</summary>
+<details><summary><b>T099</b> · Aposentadoria por idade rural. Inversão da sucumbência. Atividade urbana intercalada. Vínculos rurais descontínuos — 6 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -301,7 +301,7 @@
 
 </details>
 
-<details><summary><b>T103</b> · Segurada especial. Benefício por incapacidade permanente. Aposentadoria por invalidez — 5 casos</summary>
+<details><summary><b>T103</b> · Segurada especial. Aposentadoria por invalidez. Benefício por incapacidade permanente — 5 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -313,7 +313,7 @@
 
 </details>
 
-<details><summary><b>T104</b> · Aposentadoria rural por idade. Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Juízo de retratação acolhido — 4 casos</summary>
+<details><summary><b>T104</b> · Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Correção monetária e juros de mora. Ec 113/2021 — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -324,7 +324,7 @@
 
 </details>
 
-<details><summary><b>T105</b> · Reconhecimento de tempo de serviço especial. Atividade rural em estabelecimento agropecuário. Enquadramento por categoria profissional. Aposentadoria especial — 4 casos</summary>
+<details><summary><b>T105</b> · Atividade rural em estabelecimento agropecuário. Enquadramento por categoria profissional. Reconhecimento de tempo de serviço especial. Aposentadoria especial — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -335,7 +335,7 @@
 
 </details>
 
-<details><summary><b>T106</b> · Aposentadoria por idade rural. Impossibilidade de extensão. Ctps do cônjuge empregado rural. Extinção do processo sem resolução do mérito de ofício — 4 casos</summary>
+<details><summary><b>T106</b> · Aposentadoria por idade rural. Ctps do cônjuge empregado rural. Impossibilidade de extensão. Extinção do processo sem resolução do mérito de ofício — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -357,7 +357,7 @@
 
 </details>
 
-<details><summary><b>T170</b> · Embargos de declaração · Rejeição. Multa. Aposentadoria rural por idade. Caráter protelatório do recurso — 4 casos</summary>
+<details><summary><b>T170</b> · Embargos de declaração · Multa. Acolhimento, com efeitos infringentes. Aposentadoria rural por idade. Caráter protelatório do recurso — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -388,7 +388,7 @@
 
 </details>
 
-<details><summary><b>T110</b> · Reconhecimento e averbação de tempo de serviço rural em regime de economia familiar. Inexistência de início de prova material. Insuficiência da prova exclusivamente testemunhal — 3 casos</summary>
+<details><summary><b>T110</b> · Atividade rural exercida por menor de idade. Averbação de atividade rural em regime de economia familiar. Averbação de tempo de serviço rural — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -418,7 +418,7 @@
 
 </details>
 
-<details><summary><b>T113</b> · Inversão da sucumbência. Deficiência instrutória. Extinção do processo sem resolução do mérito. Aposentadoria por idade rural — 3 casos</summary>
+<details><summary><b>T113</b> · Aposentadoria por idade rural. Inversão da sucumbência. Deficiência instrutória. Extinção do processo sem resolução do mérito — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -428,7 +428,7 @@
 
 </details>
 
-<details><summary><b>T114</b> · Ruído abaixo do limite de tolerância. Aposentadoria por tempo de contribuição — 2 casos</summary>
+<details><summary><b>T114</b> · Aposentadoria por tempo de contribuição. Ruído abaixo do limite de tolerância — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -446,7 +446,7 @@
 
 </details>
 
-<details><summary><b>T116</b> · Honorários de sucumbência. Ausência de início de prova material. Segurada especial. Aposentadoria por idade rural — 2 casos</summary>
+<details><summary><b>T116</b> · Aposentadoria por idade rural. Ausência de início de prova material. Honorários de sucumbência. Segurada especial — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -473,7 +473,7 @@
 
 </details>
 
-<details><summary><b>T119</b> · Regime de economia familiar. Deficiência probatória. Propriedade superior a quatro módulos fiscais — 2 casos</summary>
+<details><summary><b>T119</b> · Aposentadoria por idade rural. Deficiência probatória. Exploração pecuária de cunho aparentemente comercial — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -500,7 +500,7 @@
 
 </details>
 
-<details><summary><b>T122</b> · Julgamento do mérito. Salário‑maternidade. Trabalhadora rural — 2 casos</summary>
+<details><summary><b>T122</b> · Aposentadoria por idade rural. Ausência de início de prova material contemporânea do labor rural. Documentos em nome de terceiro sem vinculação ao núcleo familiar no período relevante — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -536,7 +536,7 @@
 
 </details>
 
-<details><summary><b>T126</b> · Coexistência de tempo urbano. Tempo de atividade rural insuficiente. Impossibilidade de alterar pedido e causa de pedir. Início de prova material — 2 casos</summary>
+<details><summary><b>T126</b> · Aposentadoria por idade rural. Coexistência de tempo urbano. Impossibilidade de alterar pedido e causa de pedir. Tempo de atividade rural insuficiente — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -563,7 +563,7 @@
 
 </details>
 
-<details><summary><b>T129</b> · Comprovação de atividade rural e termo inicial do benefício. Data do requerimento administrativo. Benefício por incapacidade temporária — 2 casos</summary>
+<details><summary><b>T129</b> · Benefício por incapacidade temporária. Comprovação de atividade rural e termo inicial do benefício. Data do requerimento administrativo — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -572,7 +572,7 @@
 
 </details>
 
-<details><summary><b>T130</b> · Aposentadoria por idade rural. Requerimento administrativo prévio. Interesse de agir — 2 casos</summary>
+<details><summary><b>T130</b> · Aposentadoria por idade rural. Interesse de agir. Requerimento administrativo prévio — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -581,7 +581,7 @@
 
 </details>
 
-<details><summary><b>T131</b> · Benefício previdenciário. Idade mínima. Reconhecimento de tempo rural — 2 casos</summary>
+<details><summary><b>T131</b> · Aposentadoria por idade rural. Benefício previdenciário. Idade mínima — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -599,7 +599,7 @@
 
 </details>
 
-<details><summary><b>T133</b> · Tema 629/STJ. Deficiência instrutória. Aposentadoria por idade rural — 2 casos</summary>
+<details><summary><b>T133</b> · Aposentadoria por idade rural. Tema 629/STJ. Deficiência instrutória — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -626,7 +626,7 @@
 
 </details>
 
-<details><summary><b>T136</b> · Regime de economia familiar. Prova testemunhal corroborativa. Carência comprovada. Aposentadoria por idade rural — 2 casos</summary>
+<details><summary><b>T136</b> · Aposentadoria por idade rural. Prova testemunhal corroborativa. Carência comprovada. Regime de economia familiar — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -648,43 +648,43 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0003302-89.2016.4.03.6003 | 30/06/2026 | parcialmente provido | Presunção de boa-fé não desconstituída. Aposentadoria por idade rural. Tema 979/STJ. Concessão fraudulenta por servidor do INSS | apelação em ação de ressarcimento ao erário; aposentadoria por idade rural; concessão fraudulenta por servidor do INSS; decadência afastada |
-| 5000155-29.2024.4.03.9999 | 14/04/2026 | provido | Aposentadoria por idade rural. Fato todavia aferível do acervo documental juntado pela autora. Exercício de atividade urbana no período de carência. Segurada especial | aposentadoria por idade rural; segurada especial; inovação recursal; documento juntado extemporaneamente |
-| 5000356-03.2023.4.03.6007 | 26/05/2026 | desprovido | Deficiência probatória. Extinção do processo sem resolução do mérito de ofício. Nulidade por cerceamento probatório inexistente. Aposentadoria por idade rural | aposentadoria por idade rural; segurado especial; prova testemunhal; rol intempestivo |
-| 5000512-72.2025.4.03.9999 | 26/05/2026 | provido | Certidão do incra. Comprovação do exercício de atividade rural. Ato administrativo. Auxílio por incapacidade temporária | auxílio por incapacidade temporária; segurada especial; comprovação do exercício de atividade rural; certidão do INCRA |
-| 5000562-35.2024.4.03.9999 | 12/05/2026 | não conhecido | Consectários legais corrigidos de ofício. Aposentadoria por idade rural. Preclusão lógica. Comportamento contraditório do INSS | aposentadoria por idade rural; renúncia ao direito de recorrer; comportamento contraditório do INSS; preclusão lógica |
-| 5001072-08.2024.4.03.6003 | 30/06/2026 | desprovido | Mandado de segurança. Análise de recurso ordinário. Mora administrativa. Prazo legal descumprido | mandado de segurança; mora administrativa; análise de recurso ordinário; prazo legal descumprido |
-| 5001496-90.2024.4.03.9999 | 14/04/2026 | provido | Segurado especial. Auxílio-doença. Suspensão da exigibilidade. Prova testemunhal inconsistente | auxílio-doença; segurado especial; qualidade de segurado não comprovada; prova testemunhal inconsistente |
-| 5002138-26.2024.4.03.6002 | 15/09/2026 | desprovido | Pênfigo foliáceo. Documentação médica específica, atestando a peculiaridade da patologia. Benefício por incapacidade temporária. Trabalhadora rural | benefício por incapacidade temporária; pênfigo foliáceo; trabalhadora rural; laudo pericial contrário |
-| 5002785-58.2024.4.03.9999 | 27/04/2026 | provido | Honorários de sucumbência. Comprovação do labor rural. Aposentadoria por idade rural. Segurado especial | aposentadoria por idade rural; segurado especial; pequena propriedade rural; comprovação do labor rural |
-| 5002796-87.2024.4.03.9999 | 26/05/2026 | desprovido | Negado provimento. Segurado especial rural. Benefício por incapacidade permanente. Manutenção da qualidade de segurado | benefício por incapacidade permanente; segurado especial rural; manutenção da qualidade de segurado; negado provimento |
-| 5002857-45.2024.4.03.9999 | 16/04/2026 | desprovido | Improcedência do pedido. Litigância de má-fé configurada. Descaracterização do regime de economia familiar. Justiça gratuita | justiça gratuita; descaracterização do regime de economia familiar; litigância de má-fé configurada; improcedência do pedido |
-| 5002880-88.2024.4.03.9999 | 27/04/2026 | desprovido | Súmula 629/STJ. Honorários de sucumbência. Ausência de início de prova material suficiente. Aposentadoria por idade rural | aposentadoria por idade rural; segurado especial; ausência de início de prova material suficiente; extinção sem resolução do mérito |
-| 5005051-52.2023.4.03.9999 | 30/06/2026 | desprovido | Impossibilidade de retroação dos efeitos da concessão posterior do benefício. Aposentadoria por idade rural. Ausência de comprovação de atividade rural no período imediatamente anterior ao requerimento. Revisão de benefício | aposentadoria por idade rural; revisão de benefício; sucumbência recursal |
-| 5078612-41.2025.4.03.9999 | 06/07/2026 | desprovido | Benefício por incapacidade. Aposentadoria por incapacidade permanente. Segurada especial. Incapacidade permanente não comprovada | benefício por incapacidade; segurada especial; aposentadoria por incapacidade permanente; incapacidade permanente não comprovada |
-| 5082000-15.2026.4.03.9999 | 27/08/2026 | desprovido | Aposentadoria por tempo de contribuição. Reconhecimento de tempo de atividade rural na qualidade de empregado rural. Manutenção da sentença | aposentadoria por tempo de contribuição; manutenção da sentença |
-| 5082715-91.2025.4.03.9999 | 15/09/2026 | parcialmente provido | Dois períodos de recolhimento prisional. Segurado especial indígena. Sucumbência recíproca. Tema 1.124/STJ | auxílio-reclusão; segurado especial indígena; dois períodos de recolhimento prisional; termo inicial |
-| 5083274-14.2026.4.03.9999 | 30/06/2026 | não conhecido | Aposentadoria por idade rural. Indeferimento da petição inicial. Razões genéricas. Emenda da inicial | aposentadoria por idade rural; indeferimento da petição inicial; emenda da inicial; razões genéricas |
-| 5090441-19.2025.4.03.9999 | 27/08/2026 | desprovido | Regime de economia familiar. Segurado especial. Restabelecimento de aposentadoria por idade rural. Descaracterização da exploração familiar e de subsistência | segurado especial; regime de economia familiar; improcedência do pedido |
-| 5092427-71.2026.4.03.9999 | 20/07/2026 | não conhecido | Razões dissociadas. Benefício por incapacidade. Princípio da dialeticidade recursal. Segurado especial rural | benefício por incapacidade; segurado especial rural; razões dissociadas; princípio da dialeticidade recursal |
-| 5104946-15.2025.4.03.9999 *(no banco)* | 10/08/2026 | desprovido | Aposentadoria por idade rural. Segurados especiais. Prova testemunhal vaga e genérica. Sentença de extinção sem resolução do mérito | aposentadoria por idade rural; segurados especiais; sentença de extinção sem resolução do mérito; prova testemunhal vaga e genérica |
-| 5112017-68.2025.4.03.9999 | 27/08/2026 | desprovido | Aposentadoria por idade rural. Juntada de documentos após a sentença. Inovação probatória em grau recursal | aposentadoria por idade rural; juntada de documentos após a sentença; inovação probatória em grau recursal |
-| 5132842-96.2026.4.03.9999 | 27/08/2026 | parcialmente provido | Aposentadoria por idade rural. Segurado especial em regime de economia familiar. Deficiência instrutória. Extinção do processo sem resolução do mérito | aposentadoria por idade rural; segurado especial em regime de economia familiar; deficiência instrutória; extinção do processo sem resolução do mérito |
-| 5133621-51.2026.4.03.9999 | 30/06/2026 | não conhecido | Segurado especial. Aposentadoria por incapacidade permanente. Benefício no valor de um salário-mínimo. Ausência de interesse recursal | aposentadoria por incapacidade permanente; segurado especial; benefício no valor de um salário-mínimo; ausência de interesse recursal |
-| 5140338-16.2025.4.03.9999 | 27/08/2026 | prejudicado/extinto | Ausência de início de prova material apto. Pescador artesanal. Deficiência instrutória. Extinção do processo sem resolução do mérito | pescador artesanal; ausência de início de prova material apto; deficiência instrutória; extinção do processo sem resolução do mérito |
-| 5141920-51.2025.4.03.9999 | 20/07/2026 | provido | Aposentadoria por idade rural. Irrelevância da perda da qualidade de segurado. Inaplicabilidade do tema 642/STJ. Trabalhador empregado rural | aposentadoria por idade rural; trabalhador empregado rural; inaplicabilidade do Tema 642/STJ; irrelevância da perda da qualidade de segurado |
-| 5146021-97.2026.4.03.9999 | 20/07/2026 | parcialmente provido | Aposentadoria por tempo de contribuição. Nulidade parcial da sentença condicional. Atividades de frentista, ajudante de frigorífico, trabalhador rural na lavoura de cana-de-açúcar, vigia e exposição a ruído. Conversão de tempo especial em comum | aposentadoria por tempo de contribuição; conversão de tempo especial em comum; nulidade parcial da sentença condicional |
-| 5184716-23.2026.4.03.9999 *(no banco)* | 10/08/2026 | provido | Inversão da sucumbência. Aposentadoria por idade rural. Segurado especial indígena. Certidão de exercício de atividade rural emitida pela funai corroborada por prova testemunhal | aposentadoria por idade rural; segurado especial indígena; inversão da sucumbência |
-| 5184736-14.2026.4.03.9999 *(no banco)* | 10/08/2026 | provido | 11, § 9º, iii, da lei 8.213/1991. Aposentadoria por idade rural. Segurado especial. Reforma | aposentadoria por idade rural; segurado especial; início de prova material; art |
+| 0003302-89.2016.4.03.6003 | 30/06/2026 | parcialmente provido | Aposentadoria por idade rural. Concessão fraudulenta por servidor do INSS. Decadência afastada. Presunção de boa-fé não desconstituída | apelação em ação de ressarcimento ao erário; aposentadoria por idade rural; concessão fraudulenta por servidor do INSS; decadência afastada |
+| 5000155-29.2024.4.03.9999 | 14/04/2026 | provido | Aposentadoria por idade rural. Documento juntado extemporaneamente. Exercício de atividade urbana no período de carência. Fato todavia aferível do acervo documental juntado pela autora | aposentadoria por idade rural; segurada especial; inovação recursal; documento juntado extemporaneamente |
+| 5000356-03.2023.4.03.6007 | 26/05/2026 | desprovido | Aposentadoria por idade rural. Deficiência probatória. Extinção do processo sem resolução do mérito de ofício. Nulidade por cerceamento probatório inexistente | aposentadoria por idade rural; segurado especial; prova testemunhal; rol intempestivo |
+| 5000512-72.2025.4.03.9999 | 26/05/2026 | provido | Ato administrativo. Auxílio por incapacidade temporária. Certidão do incra. Comprovação do exercício de atividade rural | auxílio por incapacidade temporária; segurada especial; comprovação do exercício de atividade rural; certidão do INCRA |
+| 5000562-35.2024.4.03.9999 | 12/05/2026 | não conhecido | Aposentadoria por idade rural. Comportamento contraditório do INSS. Consectários legais corrigidos de ofício. Preclusão lógica | aposentadoria por idade rural; renúncia ao direito de recorrer; comportamento contraditório do INSS; preclusão lógica |
+| 5001072-08.2024.4.03.6003 | 30/06/2026 | desprovido | Análise de recurso ordinário. Mandado de segurança. Mora administrativa. Prazo legal descumprido | mandado de segurança; mora administrativa; análise de recurso ordinário; prazo legal descumprido |
+| 5001496-90.2024.4.03.9999 | 14/04/2026 | provido | Auxílio-doença. Condenação em honorários advocatícios. Prova testemunhal inconsistente. Qualidade de segurado não comprovada | auxílio-doença; segurado especial; qualidade de segurado não comprovada; prova testemunhal inconsistente |
+| 5002138-26.2024.4.03.6002 | 15/09/2026 | desprovido | Benefício por incapacidade temporária. Documentação médica específica, atestando a peculiaridade da patologia. Elementos concretos de análise. Laudo pericial contrário | benefício por incapacidade temporária; pênfigo foliáceo; trabalhadora rural; laudo pericial contrário |
+| 5002785-58.2024.4.03.9999 | 27/04/2026 | provido | Aposentadoria por idade rural. Comprovação do labor rural. Honorários de sucumbência. Pequena propriedade rural | aposentadoria por idade rural; segurado especial; pequena propriedade rural; comprovação do labor rural |
+| 5002796-87.2024.4.03.9999 | 26/05/2026 | desprovido | Benefício por incapacidade permanente. Manutenção da qualidade de segurado. Negado provimento. Segurado especial rural | benefício por incapacidade permanente; segurado especial rural; manutenção da qualidade de segurado; negado provimento |
+| 5002857-45.2024.4.03.9999 | 16/04/2026 | desprovido | Descaracterização do regime de economia familiar. Improcedência do pedido. Justiça gratuita. Litigância de má-fé configurada | justiça gratuita; descaracterização do regime de economia familiar; litigância de má-fé configurada; improcedência do pedido |
+| 5002880-88.2024.4.03.9999 | 27/04/2026 | desprovido | Aposentadoria por idade rural. Ausência de início de prova material suficiente. Extinção sem resolução do mérito. Honorários de sucumbência | aposentadoria por idade rural; segurado especial; ausência de início de prova material suficiente; extinção sem resolução do mérito |
+| 5005051-52.2023.4.03.9999 | 30/06/2026 | desprovido | Aposentadoria por idade rural. Ausência de comprovação de atividade rural no período imediatamente anterior ao requerimento. Impossibilidade de retroação dos efeitos da concessão posterior do benefício. Revisão de benefício | aposentadoria por idade rural; revisão de benefício; sucumbência recursal |
+| 5078612-41.2025.4.03.9999 | 06/07/2026 | desprovido | Aposentadoria por incapacidade permanente. Ausência de demonstração da permanência da incapacidade. Benefício por incapacidade. Incapacidade permanente não comprovada | benefício por incapacidade; segurada especial; aposentadoria por incapacidade permanente; incapacidade permanente não comprovada |
+| 5082000-15.2026.4.03.9999 | 27/08/2026 | desprovido | Aposentadoria por tempo de contribuição. Manutenção da sentença. Reconhecimento de tempo de atividade rural na qualidade de empregado rural | aposentadoria por tempo de contribuição; manutenção da sentença |
+| 5082715-91.2025.4.03.9999 | 15/09/2026 | parcialmente provido | Auxílio-reclusão. Dois períodos de recolhimento prisional. Prescrição quinquenal. Segurado especial indígena | auxílio-reclusão; segurado especial indígena; dois períodos de recolhimento prisional; termo inicial |
+| 5083274-14.2026.4.03.9999 | 30/06/2026 | não conhecido | Aposentadoria por idade rural. Emenda da inicial. Indeferimento da petição inicial. Razões genéricas | aposentadoria por idade rural; indeferimento da petição inicial; emenda da inicial; razões genéricas |
+| 5090441-19.2025.4.03.9999 | 27/08/2026 | desprovido | Descaracterização da exploração familiar e de subsistência. Improcedência do pedido. Regime de economia familiar. Restabelecimento de aposentadoria por idade rural | segurado especial; regime de economia familiar; improcedência do pedido |
+| 5092427-71.2026.4.03.9999 | 20/07/2026 | não conhecido | Benefício por incapacidade. Princípio da dialeticidade recursal. Razões dissociadas. Segurado especial rural | benefício por incapacidade; segurado especial rural; razões dissociadas; princípio da dialeticidade recursal |
+| 5104946-15.2025.4.03.9999 *(no banco)* | 10/08/2026 | desprovido | Aposentadoria por idade rural. Ausência de prova robusta. Prova testemunhal vaga e genérica. Segurados especiais | aposentadoria por idade rural; segurados especiais; sentença de extinção sem resolução do mérito; prova testemunhal vaga e genérica |
+| 5112017-68.2025.4.03.9999 | 27/08/2026 | desprovido | Aposentadoria por idade rural. Inovação probatória em grau recursal. Juntada de documentos após a sentença | aposentadoria por idade rural; juntada de documentos após a sentença; inovação probatória em grau recursal |
+| 5132842-96.2026.4.03.9999 | 27/08/2026 | parcialmente provido | Aposentadoria por idade rural. Deficiência instrutória. Extinção do processo sem resolução do mérito. Segurado especial em regime de economia familiar | aposentadoria por idade rural; segurado especial em regime de economia familiar; deficiência instrutória; extinção do processo sem resolução do mérito |
+| 5133621-51.2026.4.03.9999 | 30/06/2026 | não conhecido | Aposentadoria por incapacidade permanente. Ausência de interesse recursal. Benefício no valor de um salário-mínimo. Segurado especial | aposentadoria por incapacidade permanente; segurado especial; benefício no valor de um salário-mínimo; ausência de interesse recursal |
+| 5140338-16.2025.4.03.9999 | 27/08/2026 | prejudicado/extinto | Ausência de início de prova material apto. Deficiência instrutória. Extinção do processo sem resolução do mérito. Pescador artesanal | pescador artesanal; ausência de início de prova material apto; deficiência instrutória; extinção do processo sem resolução do mérito |
+| 5141920-51.2025.4.03.9999 | 20/07/2026 | provido | Aposentadoria por idade rural. Inaplicabilidade do tema 642/STJ. Irrelevância da perda da qualidade de segurado. Trabalhador empregado rural | aposentadoria por idade rural; trabalhador empregado rural; inaplicabilidade do Tema 642/STJ; irrelevância da perda da qualidade de segurado |
+| 5146021-97.2026.4.03.9999 | 20/07/2026 | parcialmente provido | Aposentadoria por tempo de contribuição. Atividades de frentista, ajudante de frigorífico, trabalhador rural na lavoura de cana-de-açúcar, vigia e exposição a ruído. Conversão de tempo especial em comum. Nulidade parcial da sentença condicional | aposentadoria por tempo de contribuição; conversão de tempo especial em comum; nulidade parcial da sentença condicional |
+| 5184716-23.2026.4.03.9999 *(no banco)* | 10/08/2026 | provido | Aposentadoria por idade rural. Certidão de exercício de atividade rural emitida pela funai corroborada por prova testemunhal. Inversão da sucumbência. Segurado especial indígena | aposentadoria por idade rural; segurado especial indígena; inversão da sucumbência |
+| 5184736-14.2026.4.03.9999 *(no banco)* | 10/08/2026 | provido | 11, § 9º, iii, da lei 8.213/1991. Aposentadoria por idade rural. Art. Exercício de atividade urbana concomitante e incompatível | aposentadoria por idade rural; segurado especial; início de prova material; art |
 | 5185610-33.2025.4.03.9999 | 27/08/2026 | prejudicado/extinto | Deficiência probatória. Processo extinto sem resolução de mérito de ofício | deficiência probatória |
-| 5191225-04.2025.4.03.9999 | 28/09/2026 | parcialmente provido | Laudo pericial conclusivo. Incapacidade temporária e parcial. Sucumbência recíproca. Restabelecimento de benefício por incapacidade temporária em conversão em benefício de incapacidade permenante | nulidade rejeitada; condição de segurado especial; início de prova material e prova testemunhal; laudo pericial conclusivo |
-| 5227390-16.2026.4.03.9999 | 27/08/2026 | desprovido | Carência. Aposentadoria por idade rural. Nulidade inexistente. Insuficiência | aposentadoria por idade rural; nulidade inexistente; início de prova material; carência |
-| 5319928-16.2026.4.03.9999 | 28/09/2026 | desprovido | Filiação sindical isolada. Depoimento pessoal e testemunhal. Aposentadoria por idade rural. Documentos relativos aos genitores e ao imóvel rural | aposentadoria por idade rural; filiação sindical isolada; depoimento pessoal e testemunhal; improcedência do pedido |
-| 5000721-75.2024.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Benefício por incapacidade. Descaracterização da condição de segurado especial. Segurado especial. Ausência de vício sanável | embargos de declaração; benefício por incapacidade; segurado especial; exercício de atividade urbana |
-| 5001679-61.2024.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Vínculo empregatício rural. Aposentadoria por idade rural. Inexistência de vício sanável. Documentos em nome do cônjuge | embargos de declaração; aposentadoria por idade rural; documentos em nome do cônjuge; vínculo empregatício rural |
-| 5002346-47.2024.4.03.9999 | 20/07/2026 | rejeitados | Embargos de declaração · Mitigação do início de prova material. Aposentadoria por idade rural. Rediscussão da matéria julgada. Ausência de vício sanável | embargos de declaração; aposentadoria por idade rural; mitigação do início de prova material; rediscussão da matéria julgada |
-| 5002942-31.2024.4.03.9999 | 20/07/2026 | acolhidos | Embargos de declaração · Prequestionamento. Aposentadoria por idade rural. Omissão quanto aos consectários legais | embargos de declaração em apelação; aposentadoria por idade rural; omissão quanto aos consectários legais; prequestionamento |
-| 5167409-56.2026.4.03.9999 | 15/09/2026 | prejudicado/extinto | Embargos de declaração · Empregado rural. Natureza rural das atividades. Aposentadoria por idade rural. Consectários legais | embargos de declaração; aposentadoria por idade rural; empregado rural; tratorista e operador de motosserra |
+| 5191225-04.2025.4.03.9999 | 28/09/2026 | parcialmente provido | Condição de segurado especial. Incapacidade temporária e parcial. Início de prova material e prova testemunhal. Laudo pericial conclusivo | nulidade rejeitada; condição de segurado especial; início de prova material e prova testemunhal; laudo pericial conclusivo |
+| 5227390-16.2026.4.03.9999 | 27/08/2026 | desprovido | Aposentadoria por idade rural. Carência. Insuficiência. Início de prova material | aposentadoria por idade rural; nulidade inexistente; início de prova material; carência |
+| 5319928-16.2026.4.03.9999 | 28/09/2026 | desprovido | Aposentadoria por idade rural. Depoimento pessoal e testemunhal. Documentos relativos aos genitores e ao imóvel rural. Filiação sindical isolada | aposentadoria por idade rural; filiação sindical isolada; depoimento pessoal e testemunhal; improcedência do pedido |
+| 5000721-75.2024.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Ausência de vício sanável. Benefício por incapacidade. Descaracterização da condição de segurado especial. Exercício de atividade urbana | embargos de declaração; benefício por incapacidade; segurado especial; exercício de atividade urbana |
+| 5001679-61.2024.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Aposentadoria por idade rural. Ausência de início de prova material em nome próprio. Documentos em nome do cônjuge. Inexistência de vício sanável | embargos de declaração; aposentadoria por idade rural; documentos em nome do cônjuge; vínculo empregatício rural |
+| 5002346-47.2024.4.03.9999 | 20/07/2026 | rejeitados | Embargos de declaração · Aposentadoria por idade rural. Ausência de vício sanável. Mitigação do início de prova material. Rediscussão da matéria julgada | embargos de declaração; aposentadoria por idade rural; mitigação do início de prova material; rediscussão da matéria julgada |
+| 5002942-31.2024.4.03.9999 | 20/07/2026 | acolhidos | Embargos de declaração · Aposentadoria por idade rural. Omissão quanto aos consectários legais. Prequestionamento | embargos de declaração em apelação; aposentadoria por idade rural; omissão quanto aos consectários legais; prequestionamento |
+| 5167409-56.2026.4.03.9999 | 15/09/2026 | prejudicado/extinto | Embargos de declaração · Aposentadoria por idade rural. Carência comprovada. Consectários legais. Correção monetária e juros de mora | embargos de declaração; aposentadoria por idade rural; empregado rural; tratorista e operador de motosserra |
 
 </details>
 

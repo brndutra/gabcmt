@@ -33,7 +33,7 @@ def especificidades(membros, limite=8):
     for r in membros:
         c.update(set(tags(r)))
     n = len(membros)
-    return [(t, k) for t, k in c.most_common() if n == 1 or k >= max(2, 0.2 * n)][:limite]
+    return [(t, k) for t, k in sorted(c.items(), key=lambda x: (-x[1], x[0])) if n == 1 or k >= max(2, 0.2 * n)][:limite]
 
 
 def resultados(membros):

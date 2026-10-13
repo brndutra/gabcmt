@@ -16,10 +16,10 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0006562-91.2013.4.03.6000 | 27/08/2026 | provido | Inversão da sucumbência. Ingresso em estágio de adaptação militar e promoção. Tutela provisória reformada. Devolução de valores | tutela provisória reformada; devolução de valores; inversão da sucumbência |
-| 5000111-60.2026.4.03.0001 *(no banco)* | 15/09/2026 | desprovido | Mandado de segurança. Idosos com enfermidade grave. Caução. Pedido de atribuição de efeito suspensivo à apelação | agravo interno; mandado de segurança; servidores aposentados; proventos de natureza alimentar |
-| 5001293-48.2025.4.03.6005 | 05/10/2026 | provido | Mandado de segurança. Inadequação da via eleita para desconstituir indiretamente efeitos de decisão judicial. Denegação do mandado de segurança (artigo 6º, § 5º, da lei 12.016/2009). Recurso especial admitido com efeito suspensivo | mandado de segurança; revalida 2024/1; recurso especial admitido com efeito suspensivo; ausência de interesse processual (adequação) |
-| 5001512-12.2021.4.03.6002 | 05/10/2026 | rejeitados | Embargos de declaração · Decreto nº 10.185/2019. Concurso público. Tradutor e intérprete de língua brasileira de sinais. Efeito suspensivo | embargos de declaração; concurso público; vaga decorrente de exoneração; decreto nº 10.185/2019 |
+| 0006562-91.2013.4.03.6000 | 27/08/2026 | provido | Devolução de valores. Ingresso em estágio de adaptação militar e promoção. Inversão da sucumbência. Tutela provisória reformada | tutela provisória reformada; devolução de valores; inversão da sucumbência |
+| 5000111-60.2026.4.03.0001 *(no banco)* | 15/09/2026 | desprovido | Boa-fé. Caução. Desnecessidade. Idosos com enfermidade grave | agravo interno; mandado de segurança; servidores aposentados; proventos de natureza alimentar |
+| 5001293-48.2025.4.03.6005 | 05/10/2026 | provido | Ato administrativo lastreado em acórdão proferido em mandado de segurança originário. Ausência de interesse processual (adequação). Denegação do mandado de segurança (artigo 6º, § 5º, da lei 12.016/2009). Inadequação da via eleita para desconstituir indiretamente efeitos de decisão judicial | mandado de segurança; revalida 2024/1; recurso especial admitido com efeito suspensivo; ausência de interesse processual (adequação) |
+| 5001512-12.2021.4.03.6002 | 05/10/2026 | rejeitados | Embargos de declaração · Concurso público. Decreto nº 10.185/2019. Efeito suspensivo. Omissão e contradição não configuradas | embargos de declaração; concurso público; vaga decorrente de exoneração; decreto nº 10.185/2019 |
 
 </details>
 

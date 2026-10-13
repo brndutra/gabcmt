@@ -16,8 +16,8 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0001684-84.2017.4.03.6000 | 05/10/2026 | desprovido | Ações pendentes. Contrato de prestação de serviços advocatícios. Remuneração condicionada ao êxito. Ação de arbitramento judicial de honorários contratuais | contrato de prestação de serviços advocatícios; remuneração condicionada ao êxito; ações pendentes; ausência de implemento da condição suspensiva |
-| 5032401-68.2025.4.03.0000 | 15/09/2026 | desprovido | Associação beneficente. Comprovação da origem e da destinação dos valores. Execução fiscal. Artigo 833, ix, do CPC | agravo de instrumento; execução fiscal; bloqueio de ativos financeiros via sisbajud; associação beneficente |
+| 0001684-84.2017.4.03.6000 | 05/10/2026 | desprovido | Ausência de implemento da condição suspensiva. Ação de arbitramento judicial de honorários contratuais. Ações pendentes. Contrato de prestação de serviços advocatícios | contrato de prestação de serviços advocatícios; remuneração condicionada ao êxito; ações pendentes; ausência de implemento da condição suspensiva |
+| 5032401-68.2025.4.03.0000 | 15/09/2026 | desprovido | Artigo 833, ix, do CPC. Associação beneficente. Bloqueio de ativos financeiros via sisbajud. Comprovação da origem e da destinação dos valores | agravo de instrumento; execução fiscal; bloqueio de ativos financeiros via sisbajud; associação beneficente |
 
 </details>
 

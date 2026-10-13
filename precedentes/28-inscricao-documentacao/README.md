@@ -27,9 +27,9 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000629-93.2020.4.03.6004 | 10/06/2026 | provido | Mandado de segurança. Ausência de prova pré-constituída da propriedade. Tentativa de exportação sem documentação fiscal. Sentença extra petita | mandado de segurança; apreensão de mercadorias; tentativa de exportação sem documentação fiscal; ausência de prova pré-constituída da propriedade |
-| 0003340-81.2014.4.03.6000 | 09/06/2026 | rejeitados | Embargos de declaração · Rejeição. Vícios inexistentes. Danos morais. Inscrição indevida em cadastro de inadimplentes | embargos de declaração; inscrição indevida em cadastro de inadimplentes; danos morais; vícios inexistentes |
-| 5000571-34.2022.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Mandado de segurança. Boa-fé não comprovada. Infração aduaneira. Transporte de mercadorias estrangeiras sem documentação regular | embargos de declaração; mandado de segurança; infração aduaneira; pena de perdimento de veículo |
+| 5000629-93.2020.4.03.6004 | 10/06/2026 | provido | Apreensão de mercadorias. Ausência de prova pré-constituída da propriedade. Denegação da segurança. Mandado de segurança | mandado de segurança; apreensão de mercadorias; tentativa de exportação sem documentação fiscal; ausência de prova pré-constituída da propriedade |
+| 0003340-81.2014.4.03.6000 | 09/06/2026 | rejeitados | Embargos de declaração · Danos morais. Inscrição indevida em cadastro de inadimplentes. Rejeição. Vícios inexistentes | embargos de declaração; inscrição indevida em cadastro de inadimplentes; danos morais; vícios inexistentes |
+| 5000571-34.2022.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Boa-fé não comprovada. Infração aduaneira. Mandado de segurança. Pena de perdimento de veículo | embargos de declaração; mandado de segurança; infração aduaneira; pena de perdimento de veículo |
 
 </details>
 

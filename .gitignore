@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 *.pdf
 src/
+scripts/catalogo/acordaos.jsonl
+scripts/catalogo/precedentes.json
+scripts/catalogo/catalogo-agrupado.json
+scripts/catalogo/tabela-acordaos-carlos-muta.html

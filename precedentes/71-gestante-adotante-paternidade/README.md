@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5000316-26.2020.4.03.6007 | 20/07/2026 | desprovido | Servidor público federal. Licença-paternidade. Impossibilidade de extensão para 180 dias. Pai não monoparental | servidor público federal; licença-paternidade; equiparação à licença-maternidade; ausência de previsão constitucional ou legal |
+| 5000316-26.2020.4.03.6007 | 20/07/2026 | desprovido | Ausência de previsão constitucional ou legal. Equiparação à licença-maternidade. Impossibilidade de extensão para 180 dias. Licença-paternidade | servidor público federal; licença-paternidade; equiparação à licença-maternidade; ausência de previsão constitucional ou legal |
 
 </details>
 

@@ -8,15 +8,15 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T315** · Abrangência nacional. Artigo 16 da lei 7.347/1985. Cumprimento de sentença. Ação civil pública | 46 | 34 provido, 1 parcialmente provido, 11 desprovido | cumprimento de sentença (46); ação civil pública (46); extinção do processo sem resolução de mérito (27); administrativo (27); extinção do processo sem exame de mérito (19); artigo 16 da Lei 7.347/1985 (15) | [T315-abrangencia-nacional-artigo-16-da-lei-7-347-1985-cumpri.json](T315-abrangencia-nacional-artigo-16-da-lei-7-347-1985-cumpri.json) (40 de 46) |
-| **T324** · Embargos de declaração · Rejeição. Ação civil pública. Cumprimento de sentença. Abrangência nacional | 21 | 21 rejeitados | ação civil pública (21); cumprimento de sentença (20); embargos de declaração (19); extinção do processo sem exame de mérito (11); artigo 16 da Lei 7.347/1985 (7) | [T324-edcl-rejeicao-acao-civil-publica-cumprimento-de-sentenc.json](T324-edcl-rejeicao-acao-civil-publica-cumprimento-de-sentenc.json) |
-| **T316** · Pagamento administrativo. Acordo individual ou transação administrativa. Vantagem de 28.86%. Temas 550 e 1.102/STJ | 10 | 10 desprovido | cumprimento individual de sentença coletiva (10); vantagem de 28.86% (10); ação civil pública (10); acordo individual ou transação administrativa (10) | [T316-pagamento-administrativo-acordo-individual-ou-transacao.json](T316-pagamento-administrativo-acordo-individual-ou-transacao.json) |
-| **T317** · Incidência do tema 550/STJ. Acordo administrativo sem homologação judicial. Inaplicabilidade do tema 1.102/STJ. Cumprimento de sentença | 8 | 8 desprovido | cumprimento de sentença (8); ação civil pública (8); incidência do Tema 550/STJ (5); inaplicabilidade do Tema 1.102/STJ.desprovimento (3); artigo 16 da Lei 7.347/1985 (3); extinção do processo sem exame de mérito (3); acordo administrativo sem homologação judicial (2) | [T317-incidencia-do-tema-550-stj-acordo-administrativo-sem-ho.json](T317-incidencia-do-tema-550-stj-acordo-administrativo-sem-ho.json) |
-| **T318** · Reajuste de 28,86%. Cumprimento individual de sentença coletiva. Ilegitimidade passiva do banco central do brasil e da União. Servidor público federal | 6 | 2 provido, 4 desprovido | reajuste de 28,86% (6); cumprimento individual de sentença coletiva (4); ação civil pública (3); servidor público federal (2); cumprimento de sentença (2) | [T318-reajuste-de-28-86-cumprimento-individual-de-sentenca-co.json](T318-reajuste-de-28-86-cumprimento-individual-de-sentenca-co.json) (5 de 6) |
-| **T319** · Ilegitimidade ativa. Razões em parte dissociadas. Exclusão expressa. Pretensão abrangida por ação coletiva distinta | 5 | 5 desprovido | razões em parte dissociadas (5); administrativo (5); ação civil pública (5); cumprimento de sentença (5) | *(todos já no banco)* |
-| **T320** · Ilegitimidade passiva do bacen e da União. Fixação de honorários advocatícios. Integração dos réus à lide para apresentação de contrarrazões de apelação. Nulidade não verificada | 3 | 3 desprovido | cumprimento de sentença (3); ação civil pública (3); decisão surpresa (3); extinção do processo sem exame de mérito (3) | [T320-ilegitimidade-passiva-do-bacen-e-da-uniao-fixacao-de-ho.json](T320-ilegitimidade-passiva-do-bacen-e-da-uniao-fixacao-de-ho.json) |
-| **T321** · Razões dissociadas. Não conhecimento. Acordo administrativo. Falta de dialeticidade recursal | 3 | 3 não conhecido | razões dissociadas (3); cumprimento individual de sentença coletiva (2); acordo administrativo (2); reajuste de 28,86% (2) | [T321-razoes-dissociadas-nao-conhecimento-acordo-administrati.json](T321-razoes-dissociadas-nao-conhecimento-acordo-administrati.json) |
-| **T322** · Pessoa natural. Impugnação fundada exclusivamente em critérios objetivos de renda. Impossibilidade. Gratuidade da justiça | 2 | 2 desprovido | impossibilidade (2); gratuidade da justiça (2); pessoa natural (2) | [T322-pessoa-natural-impugnacao-fundada-exclusivamente-em-cri.json](T322-pessoa-natural-impugnacao-fundada-exclusivamente-em-cri.json) (1 de 2) |
+| **T315** · Abrangência nacional. Artigo 16 da lei 7.347/1985. Cumprimento de sentença. Ação civil pública | 46 | 34 provido, 1 parcialmente provido, 11 desprovido | ação civil pública (46); cumprimento de sentença (46); administrativo (27); extinção do processo sem resolução de mérito (27); extinção do processo sem exame de mérito (19); artigo 16 da Lei 7.347/1985 (15) | [T315-abrangencia-nacional-artigo-16-da-lei-7-347-1985-cumpri.json](T315-abrangencia-nacional-artigo-16-da-lei-7-347-1985-cumpri.json) (40 de 46) |
+| **T324** · Embargos de declaração · Ação civil pública. Rejeição. Cumprimento de sentença. Abrangência nacional | 21 | 21 rejeitados | ação civil pública (21); cumprimento de sentença (20); embargos de declaração (19); extinção do processo sem exame de mérito (11); artigo 16 da Lei 7.347/1985 (7) | [T324-edcl-acao-civil-publica-rejeicao-cumprimento-de-sentenc.json](T324-edcl-acao-civil-publica-rejeicao-cumprimento-de-sentenc.json) |
+| **T316** · Acordo individual ou transação administrativa. Pagamento administrativo. Temas 550 e 1.102/STJ. Vantagem de 28.86% | 10 | 10 desprovido | acordo individual ou transação administrativa (10); ação civil pública (10); cumprimento individual de sentença coletiva (10); vantagem de 28.86% (10) | [T316-acordo-individual-ou-transacao-administrativa-pagamento.json](T316-acordo-individual-ou-transacao-administrativa-pagamento.json) |
+| **T317** · Ação civil pública. Incidência do tema 550/STJ. Acordo administrativo sem homologação judicial. Inaplicabilidade do tema 1.102/STJ | 8 | 8 desprovido | ação civil pública (8); cumprimento de sentença (8); incidência do Tema 550/STJ (5); artigo 16 da Lei 7.347/1985 (3); extinção do processo sem exame de mérito (3); inaplicabilidade do Tema 1.102/STJ.desprovimento (3); acordo administrativo sem homologação judicial (2) | [T317-acao-civil-publica-incidencia-do-tema-550-stj-acordo-ad.json](T317-acao-civil-publica-incidencia-do-tema-550-stj-acordo-ad.json) |
+| **T318** · Reajuste de 28,86%. Cumprimento individual de sentença coletiva. Ausência de limitação territorial no título executivo. Ilegitimidade passiva do banco central do brasil e da União | 6 | 2 provido, 4 desprovido | reajuste de 28,86% (6); cumprimento individual de sentença coletiva (4); ação civil pública (3); cumprimento de sentença (2); servidor público federal (2) | [T318-reajuste-de-28-86-cumprimento-individual-de-sentenca-co.json](T318-reajuste-de-28-86-cumprimento-individual-de-sentenca-co.json) (5 de 6) |
+| **T319** · Ação civil pública. Exclusão expressa. Ilegitimidade ativa. Pretensão abrangida por ação coletiva distinta | 5 | 5 desprovido | administrativo (5); ação civil pública (5); cumprimento de sentença (5); razões em parte dissociadas (5) | *(todos já no banco)* |
+| **T320** · Ação civil pública. Fixação de honorários advocatícios. Ilegitimidade passiva do bacen e da União. Integração dos réus à lide para apresentação de contrarrazões de apelação | 3 | 3 desprovido | ação civil pública (3); cumprimento de sentença (3); decisão surpresa (3); extinção do processo sem exame de mérito (3) | [T320-acao-civil-publica-fixacao-de-honorarios-advocaticios-i.json](T320-acao-civil-publica-fixacao-de-honorarios-advocaticios-i.json) |
+| **T321** · Não conhecimento. Razões dissociadas. Acordo administrativo. Falta de dialeticidade recursal | 3 | 3 não conhecido | razões dissociadas (3); acordo administrativo (2); cumprimento individual de sentença coletiva (2); reajuste de 28,86% (2) | [T321-nao-conhecimento-razoes-dissociadas-acordo-administrati.json](T321-nao-conhecimento-razoes-dissociadas-acordo-administrati.json) |
+| **T322** · Gratuidade da justiça. Impossibilidade. Impugnação fundada exclusivamente em critérios objetivos de renda. Pessoa natural | 2 | 2 desprovido | gratuidade da justiça (2); impossibilidade (2); pessoa natural (2) | [T322-gratuidade-da-justica-impossibilidade-impugnacao-fundad.json](T322-gratuidade-da-justica-impossibilidade-impugnacao-fundad.json) (1 de 2) |
 | Casos sem par | 1 | 1 provido | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
@@ -74,7 +74,7 @@
 
 </details>
 
-<details><summary><b>T324</b> · Embargos de declaração · Rejeição. Ação civil pública. Cumprimento de sentença. Abrangência nacional — 21 casos</summary>
+<details><summary><b>T324</b> · Embargos de declaração · Ação civil pública. Rejeição. Cumprimento de sentença. Abrangência nacional — 21 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -102,7 +102,7 @@
 
 </details>
 
-<details><summary><b>T316</b> · Pagamento administrativo. Acordo individual ou transação administrativa. Vantagem de 28.86%. Temas 550 e 1.102/STJ — 10 casos</summary>
+<details><summary><b>T316</b> · Acordo individual ou transação administrativa. Pagamento administrativo. Temas 550 e 1.102/STJ. Vantagem de 28.86% — 10 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -119,7 +119,7 @@
 
 </details>
 
-<details><summary><b>T317</b> · Incidência do tema 550/STJ. Acordo administrativo sem homologação judicial. Inaplicabilidade do tema 1.102/STJ. Cumprimento de sentença — 8 casos</summary>
+<details><summary><b>T317</b> · Ação civil pública. Incidência do tema 550/STJ. Acordo administrativo sem homologação judicial. Inaplicabilidade do tema 1.102/STJ — 8 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -134,7 +134,7 @@
 
 </details>
 
-<details><summary><b>T318</b> · Reajuste de 28,86%. Cumprimento individual de sentença coletiva. Ilegitimidade passiva do banco central do brasil e da União. Servidor público federal — 6 casos</summary>
+<details><summary><b>T318</b> · Reajuste de 28,86%. Cumprimento individual de sentença coletiva. Ausência de limitação territorial no título executivo. Ilegitimidade passiva do banco central do brasil e da União — 6 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -147,7 +147,7 @@
 
 </details>
 
-<details><summary><b>T319</b> · Ilegitimidade ativa. Razões em parte dissociadas. Exclusão expressa. Pretensão abrangida por ação coletiva distinta — 5 casos</summary>
+<details><summary><b>T319</b> · Ação civil pública. Exclusão expressa. Ilegitimidade ativa. Pretensão abrangida por ação coletiva distinta — 5 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -159,7 +159,7 @@
 
 </details>
 
-<details><summary><b>T320</b> · Ilegitimidade passiva do bacen e da União. Fixação de honorários advocatícios. Integração dos réus à lide para apresentação de contrarrazões de apelação. Nulidade não verificada — 3 casos</summary>
+<details><summary><b>T320</b> · Ação civil pública. Fixação de honorários advocatícios. Ilegitimidade passiva do bacen e da União. Integração dos réus à lide para apresentação de contrarrazões de apelação — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -169,7 +169,7 @@
 
 </details>
 
-<details><summary><b>T321</b> · Razões dissociadas. Não conhecimento. Acordo administrativo. Falta de dialeticidade recursal — 3 casos</summary>
+<details><summary><b>T321</b> · Não conhecimento. Razões dissociadas. Acordo administrativo. Falta de dialeticidade recursal — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -179,7 +179,7 @@
 
 </details>
 
-<details><summary><b>T322</b> · Pessoa natural. Impugnação fundada exclusivamente em critérios objetivos de renda. Impossibilidade. Gratuidade da justiça — 2 casos</summary>
+<details><summary><b>T322</b> · Gratuidade da justiça. Impossibilidade. Impugnação fundada exclusivamente em critérios objetivos de renda. Pessoa natural — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -192,7 +192,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5010092-66.2023.4.03.6000 | 12/05/2026 | provido | Revogação do benefício. Cumprimento de sentença. Extinção do processo sem exame de mérito. Gratuidade da justiça | cumprimento de sentença; ação civil pública; extinção do processo sem exame de mérito; gratuidade da justiça |
+| 5010092-66.2023.4.03.6000 | 12/05/2026 | provido | Ação civil pública. Cumprimento de sentença. Extinção do processo sem exame de mérito. Gratuidade da justiça | cumprimento de sentença; ação civil pública; extinção do processo sem exame de mérito; gratuidade da justiça |
 
 </details>
 

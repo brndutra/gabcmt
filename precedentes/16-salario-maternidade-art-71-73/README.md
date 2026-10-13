@@ -8,9 +8,9 @@
 
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
-| **T515** · Salário-maternidade. Segurada especial. Início de prova material corroborado por prova testemunhal | 19 | 2 provido, 15 desprovido, 2 prejudicado/extinto | salário-maternidade (14); segurada especial (12); segurada especial rural (4); salário-maternidade rural (4) | [T515-salario-maternidade-segurada-especial-inicio-de-prova-m.json](T515-salario-maternidade-segurada-especial-inicio-de-prova-m.json) (18 de 19) |
-| **T516** · Salário-maternidade. Qualidade de segurada comprovada | 4 | 1 provido, 3 desprovido | qualidade de segurada comprovada (2); salário-maternidade (2) | [T516-salario-maternidade-qualidade-de-segurada-comprovada.json](T516-salario-maternidade-qualidade-de-segurada-comprovada.json) |
-| **T521** · Embargos de declaração · Vícios inexistentes. Rejeição | 2 | 2 rejeitados | embargos de declaração (2) | [T521-edcl-vicios-inexistentes-rejeicao.json](T521-edcl-vicios-inexistentes-rejeicao.json) |
+| **T515** · Salário-maternidade. Segurada especial. Início de prova material corroborado por prova testemunhal | 19 | 2 provido, 15 desprovido, 2 prejudicado/extinto | salário-maternidade (14); segurada especial (12); salário-maternidade rural (4); segurada especial rural (4) | [T515-salario-maternidade-segurada-especial-inicio-de-prova-m.json](T515-salario-maternidade-segurada-especial-inicio-de-prova-m.json) (18 de 19) |
+| **T516** · Qualidade de segurada comprovada. Salário-maternidade | 4 | 1 provido, 3 desprovido | qualidade de segurada comprovada (2); salário-maternidade (2) | [T516-qualidade-de-segurada-comprovada-salario-maternidade.json](T516-qualidade-de-segurada-comprovada-salario-maternidade.json) |
+| **T521** · Embargos de declaração · Rejeição. Vícios inexistentes | 2 | 2 rejeitados | embargos de declaração (2) | [T521-edcl-rejeicao-vicios-inexistentes.json](T521-edcl-rejeicao-vicios-inexistentes.json) |
 | Casos sem par | 6 | 1 provido, 1 parcialmente provido, 2 desprovido, 1 rejeitados, 1 acolhidos | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
@@ -41,7 +41,7 @@
 
 </details>
 
-<details><summary><b>T516</b> · Salário-maternidade. Qualidade de segurada comprovada — 4 casos</summary>
+<details><summary><b>T516</b> · Qualidade de segurada comprovada. Salário-maternidade — 4 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@
 
 </details>
 
-<details><summary><b>T521</b> · Embargos de declaração · Vícios inexistentes. Rejeição — 2 casos</summary>
+<details><summary><b>T521</b> · Embargos de declaração · Rejeição. Vícios inexistentes — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -66,11 +66,11 @@
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
 | 5000089-72.2025.4.03.6003 | 01/07/2026 | desprovido | Mandado de segurança. Mora administrativa na análise de requerimento de salário-maternidade | mandado de segurança; remessa necessária desprovida |
-| 5001808-50.2020.4.03.6105 | 02/06/2026 | parcialmente provido | Mandado de segurança. Contribuição previdenciária patronal, rat e terceiros. Verbas remuneratórias e indenizatórias. Incidência e inexigibilidade | mandado de segurança; verbas remuneratórias e indenizatórias; incidência e inexigibilidade; modulação dos efeitos (tema 985/STF) |
-| 5005555-92.2022.4.03.9999 | 15/09/2026 | desprovido | Salário-maternidade. Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Juízo de retratação acolhido | juízo de retratação; salário-maternidade; consectários legais; tema 1.419/STF |
-| 5114737-71.2026.4.03.9999 | 06/07/2026 | provido | Regime de economia familiar. Salário-maternidade. Inversão da sucumbência. Descaracterização da indispensabilidade do labor rural | salário-maternidade; segurada especial; regime de economia familiar; provimento da apelação |
-| 5002835-84.2024.4.03.9999 | 20/07/2026 | acolhidos | Embargos de declaração · Salário-maternidade. Omissão quanto ao início de prova material. Prequestionamento | embargos de declaração; salário-maternidade; omissão quanto ao início de prova material; prequestionamento |
-| 5006263-82.2020.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Mandado de segurança. Incidência sobre verbas trabalhistas. Vícios inexistentes. Contribuição previdenciária patronal, rat e contribuições a terceiros | embargos de declaração; mandado de segurança; incidência sobre verbas trabalhistas; vícios inexistentes |
+| 5001808-50.2020.4.03.6105 | 02/06/2026 | parcialmente provido | Contribuição previdenciária patronal, rat e terceiros. Caso em exame. Incidência e inexigibilidade. Mandado de segurança | mandado de segurança; verbas remuneratórias e indenizatórias; incidência e inexigibilidade; modulação dos efeitos (tema 985/STF) |
+| 5005555-92.2022.4.03.9999 | 15/09/2026 | desprovido | Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Ec 113/2021. Ec 136/2025 | juízo de retratação; salário-maternidade; consectários legais; tema 1.419/STF |
+| 5114737-71.2026.4.03.9999 | 06/07/2026 | provido | Descaracterização da indispensabilidade do labor rural. Existência de renda urbana significativa de integrante do núcleo familiar. Inversão da sucumbência. Regime de economia familiar | salário-maternidade; segurada especial; regime de economia familiar; provimento da apelação |
+| 5002835-84.2024.4.03.9999 | 20/07/2026 | acolhidos | Embargos de declaração · Omissão quanto ao início de prova material. Prequestionamento. Salário-maternidade | embargos de declaração; salário-maternidade; omissão quanto ao início de prova material; prequestionamento |
+| 5006263-82.2020.4.03.6000 | 28/04/2026 | rejeitados | Embargos de declaração · Contribuição previdenciária patronal, rat e contribuições a terceiros. Incidência sobre verbas trabalhistas. Mandado de segurança. Rejeição | embargos de declaração; mandado de segurança; incidência sobre verbas trabalhistas; vícios inexistentes |
 
 </details>
 

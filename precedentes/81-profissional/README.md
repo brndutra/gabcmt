@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5002088-39.2020.4.03.6002 | 28/09/2026 | desprovido | Uti hospitalar. Conselho regional de enfermagem. Atribuição que não cabe ao conselho profissional. Ausência de previsão legal | ação civil pública; conselho regional de enfermagem; contratação de enfermeiros; uti hospitalar |
+| 5002088-39.2020.4.03.6002 | 28/09/2026 | desprovido | Atribuição que não cabe ao conselho profissional. Ausência de previsão legal. Ação civil pública. Conselho regional de enfermagem | ação civil pública; conselho regional de enfermagem; contratação de enfermeiros; uti hospitalar |
 
 </details>
 

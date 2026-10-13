@@ -10,9 +10,9 @@
 |---|---:|---|---|---|
 | **T439** · Aposentadoria por idade híbrida. Segurado especial rural. Deficiência probatória. Ausência de início de prova material | 28 | 3 provido, 3 parcialmente provido, 1 desprovido, 1 não conhecido, 20 prejudicado/extinto | aposentadoria por idade híbrida (20); segurado especial rural (16); ausência de início de prova material (8); deficiência probatória (8) | [T439-aposentadoria-por-idade-hibrida-segurado-especial-rural.json](T439-aposentadoria-por-idade-hibrida-segurado-especial-rural.json) (27 de 28) |
 | **T440** · Aposentadoria por idade híbrida. Carência cumprida. Honorários sucumbenciais majorados. Segurado especial | 4 | 1 provido, 1 parcialmente provido, 2 desprovido | aposentadoria por idade híbrida (4); segurado especial (2) | [T440-aposentadoria-por-idade-hibrida-carencia-cumprida-honor.json](T440-aposentadoria-por-idade-hibrida-carencia-cumprida-honor.json) |
-| **T451** · Embargos de declaração · Ausência de vício sanável. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Aposentadoria por idade híbrida. Rejeição | 3 | 3 rejeitados | embargos de declaração (3); aposentadoria por idade híbrida (3) | [T451-edcl-ausencia-de-vicio-sanavel-correcao-de-oficio-quant.json](T451-edcl-ausencia-de-vicio-sanavel-correcao-de-oficio-quant.json) |
-| **T441** · Falta de comprovação do labor rural. Exigência de atividade contínua, direta e pessoal para a caracterização da atividade rural em regime de economia familiar. Aposentadoria por idade híbrida | 2 | 2 desprovido |  | [T441-falta-de-comprovacao-do-labor-rural-exigencia-de-ativid.json](T441-falta-de-comprovacao-do-labor-rural-exigencia-de-ativid.json) |
-| **T442** · Aposentadoria por idade híbrida. Reafirmação da DER | 2 | 1 provido, 1 parcialmente provido | reafirmação da DER (2); aposentadoria por idade híbrida (2) | [T442-aposentadoria-por-idade-hibrida-reafirmacao-da-der.json](T442-aposentadoria-por-idade-hibrida-reafirmacao-da-der.json) |
+| **T451** · Embargos de declaração · Aposentadoria por idade híbrida. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Ausência de vício sanável. Rejeição | 3 | 3 rejeitados | aposentadoria por idade híbrida (3); embargos de declaração (3) | [T451-edcl-aposentadoria-por-idade-hibrida-correcao-de-oficio.json](T451-edcl-aposentadoria-por-idade-hibrida-correcao-de-oficio.json) |
+| **T441** · Aposentadoria híbrida. Aposentadoria por idade híbrida. Atividade rural em regime de economia familiar | 2 | 2 desprovido |  | [T441-aposentadoria-hibrida-aposentadoria-por-idade-hibrida-a.json](T441-aposentadoria-hibrida-aposentadoria-por-idade-hibrida-a.json) |
+| **T442** · Aposentadoria por idade híbrida. Reafirmação da DER | 2 | 1 provido, 1 parcialmente provido | aposentadoria por idade híbrida (2); reafirmação da DER (2) | [T442-aposentadoria-por-idade-hibrida-reafirmacao-da-der.json](T442-aposentadoria-por-idade-hibrida-reafirmacao-da-der.json) |
 | **T443** · Aposentadoria por idade híbrida | 2 | 1 provido, 1 desprovido | aposentadoria por idade híbrida (2) | [T443-aposentadoria-por-idade-hibrida.json](T443-aposentadoria-por-idade-hibrida.json) |
 | **T444** · Aposentadoria por idade rural | 2 | 2 desprovido | aposentadoria por idade rural (2) | [T444-aposentadoria-por-idade-rural.json](T444-aposentadoria-por-idade-rural.json) (1 de 2) |
 | Casos sem par | 8 | 1 provido, 1 parcialmente provido, 4 desprovido, 2 rejeitados | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
@@ -65,7 +65,7 @@
 
 </details>
 
-<details><summary><b>T451</b> · Embargos de declaração · Ausência de vício sanável. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Aposentadoria por idade híbrida. Rejeição — 3 casos</summary>
+<details><summary><b>T451</b> · Embargos de declaração · Aposentadoria por idade híbrida. Correção de ofício quanto às atualizações promovidas no manual de cálculos da justiça federal. Ausência de vício sanável. Rejeição — 3 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -75,7 +75,7 @@
 
 </details>
 
-<details><summary><b>T441</b> · Falta de comprovação do labor rural. Exigência de atividade contínua, direta e pessoal para a caracterização da atividade rural em regime de economia familiar. Aposentadoria por idade híbrida — 2 casos</summary>
+<details><summary><b>T441</b> · Aposentadoria híbrida. Aposentadoria por idade híbrida. Atividade rural em regime de economia familiar — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -115,14 +115,14 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5001464-85.2024.4.03.9999 | 20/07/2026 | desprovido | Período rural discutido na via administrativa. Aposentadoria por idade híbrida. Fundamentação alegada genérica. Rejeição | aposentadoria por idade híbrida; período rural discutido na via administrativa; nulidade da sentença; fundamentação alegada genérica |
-| 5001507-90.2022.4.03.9999 | 15/09/2026 | desprovido | Alteração dos critérios de correção monetária e juros de mora. Consectários legais. Juízo de retratação acolhido. Ec 113/2021 | juízo de retratação; aposentadoria por idade híbrida; consectários legais; tema 1.419/STF |
+| 5001464-85.2024.4.03.9999 | 20/07/2026 | desprovido | Aposentadoria por idade híbrida. Fundamentação alegada genérica. Nulidade da sentença. Período rural discutido na via administrativa | aposentadoria por idade híbrida; período rural discutido na via administrativa; nulidade da sentença; fundamentação alegada genérica |
+| 5001507-90.2022.4.03.9999 | 15/09/2026 | desprovido | Alteração dos critérios de correção monetária e juros de mora. Aposentadoria por idade híbrida. Consectários legais. Ec 113/2021 | juízo de retratação; aposentadoria por idade híbrida; consectários legais; tema 1.419/STF |
 | 5006034-49.2025.4.03.6000 | 30/06/2026 | desprovido | Mandado de segurança. Mora administrativa na análise de requerimento de aposentadoria por idade híbrida. Segurança concedida mantida | mandado de segurança; segurança concedida mantida |
-| 5056609-58.2026.4.03.9999 | 27/08/2026 | desprovido | Preclusão da prova testemunhal. Razões fundadas em meras teses jurídicas, genéricas, dissociadas e atentatórias ao princípio da dialeticidade recursal. Cerceamento de defesa. Aposentadoria por idade híbrida | aposentadoria por idade híbrida; conhecimento parcial; cerceamento de defesa; preclusão da prova testemunhal |
-| 5132756-28.2026.4.03.9999 | 27/08/2026 | parcialmente provido | Prazo para cumprimento. Multa cominatória. Valor da multa. Readequação | aposentadoria por idade híbrida; tutela de urgência; multa cominatória; prazo para cumprimento |
-| 5187479-31.2025.4.03.9999 | 27/08/2026 | provido | Contradição da sentença quanto à data de início do benefício e à espécie do benefício concedido. Aposentadoria por idade híbrida | aposentadoria por idade híbrida |
-| 5000584-93.2024.4.03.9999 | 06/07/2026 | rejeitados | Embargos de declaração · Trabalho rural. Vícios inexistentes. Aposentadoria por idade híbrida. Rejeição | embargos de declaração; aposentadoria por idade híbrida; trabalho rural; ausência de prova testemunhal robusta |
-| 5180366-26.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Insuficiência das contribuições urbanas. Análise de aposentadoria por idade híbrida. Princípio do melhor benefício. Ausência de vício sanável | embargos de declaração; aposentadoria por idade urbana; análise de aposentadoria por idade híbrida; insuficiência das contribuições urbanas |
+| 5056609-58.2026.4.03.9999 | 27/08/2026 | desprovido | Aposentadoria por idade híbrida. Cerceamento de defesa. Conhecimento parcial. Preclusão da prova testemunhal | aposentadoria por idade híbrida; conhecimento parcial; cerceamento de defesa; preclusão da prova testemunhal |
+| 5132756-28.2026.4.03.9999 | 27/08/2026 | parcialmente provido | Aposentadoria por idade híbrida. Multa cominatória. Prazo para cumprimento. Readequação | aposentadoria por idade híbrida; tutela de urgência; multa cominatória; prazo para cumprimento |
+| 5187479-31.2025.4.03.9999 | 27/08/2026 | provido | Aposentadoria por idade híbrida. Contradição da sentença quanto à data de início do benefício e à espécie do benefício concedido | aposentadoria por idade híbrida |
+| 5000584-93.2024.4.03.9999 | 06/07/2026 | rejeitados | Embargos de declaração · Aposentadoria por idade híbrida. Ausência de prova testemunhal robusta. Rejeição. Trabalho rural | embargos de declaração; aposentadoria por idade híbrida; trabalho rural; ausência de prova testemunhal robusta |
+| 5180366-26.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Análise de aposentadoria por idade híbrida. Aposentadoria por idade urbana. Ausência de vício sanável. Insuficiência das contribuições urbanas | embargos de declaração; aposentadoria por idade urbana; análise de aposentadoria por idade híbrida; insuficiência das contribuições urbanas |
 
 </details>
 

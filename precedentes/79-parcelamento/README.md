@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5001142-67.2020.4.03.6002 | 28/04/2026 | rejeitados | Embargos de declaração · Rejeição. Compensação de precatório em parcelamento. Vícios inexistentes | compensação de precatório em parcelamento; vícios inexistentes; rejeição |
+| 5001142-67.2020.4.03.6002 | 28/04/2026 | rejeitados | Embargos de declaração · Compensação de precatório em parcelamento. Rejeição. Vícios inexistentes | compensação de precatório em parcelamento; vícios inexistentes; rejeição |
 
 </details>
 

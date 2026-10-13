@@ -9,25 +9,25 @@
 | Tema | Casos | Resultados | Especificidades | Arquivo |
 |---|---:|---|---|---|
 | **T240** · Aposentadoria por tempo de contribuição. Reconhecimento de tempo especial | 25 | 3 provido, 10 parcialmente provido, 10 desprovido, 2 não conhecido | aposentadoria por tempo de contribuição (22); reconhecimento de tempo especial (8) | [T240-aposentadoria-por-tempo-de-contribuicao-reconhecimento.json](T240-aposentadoria-por-tempo-de-contribuicao-reconhecimento.json) |
-| **T241** · Aposentadoria por tempo de contribuição. Conversão de tempo especial em comum. Enquadramento por categoria profissional. Reconhecimento de tempo especial | 15 | 10 parcialmente provido, 3 desprovido, 2 não conhecido | aposentadoria por tempo de contribuição (14); reconhecimento de tempo especial (5); enquadramento por categoria profissional (5); conversão de tempo especial em comum (4) | [T241-aposentadoria-por-tempo-de-contribuicao-conversao-de-te.json](T241-aposentadoria-por-tempo-de-contribuicao-conversao-de-te.json) |
+| **T241** · Aposentadoria por tempo de contribuição. Conversão de tempo especial em comum. Enquadramento por categoria profissional. Reconhecimento de tempo especial | 15 | 10 parcialmente provido, 3 desprovido, 2 não conhecido | aposentadoria por tempo de contribuição (14); enquadramento por categoria profissional (5); reconhecimento de tempo especial (5); conversão de tempo especial em comum (4) | [T241-aposentadoria-por-tempo-de-contribuicao-conversao-de-te.json](T241-aposentadoria-por-tempo-de-contribuicao-conversao-de-te.json) |
 | **T265** · Embargos de declaração · Aposentadoria por tempo de contribuição. Ausência de vício sanável. Correção monetária e juros de mora. Rejeição | 15 | 14 rejeitados, 1 prejudicado/extinto | embargos de declaração (15); aposentadoria por tempo de contribuição (14); atividade especial (5) | [T265-edcl-aposentadoria-por-tempo-de-contribuicao-ausencia-d.json](T265-edcl-aposentadoria-por-tempo-de-contribuicao-ausencia-d.json) (14 de 15) |
-| **T242** · Aposentadoria por tempo de contribuição. Conversão em tempo comum. Reafirmação da data de entrada do requerimento. Perfil profissiográfico previdenciário | 5 | 1 provido, 1 parcialmente provido, 2 desprovido, 1 não conhecido | aposentadoria por tempo de contribuição (4); atividade especial (3) | [T242-aposentadoria-por-tempo-de-contribuicao-conversao-em-te.json](T242-aposentadoria-por-tempo-de-contribuicao-conversao-em-te.json) (4 de 5) |
+| **T242** · Aposentadoria por tempo de contribuição. Conversão em tempo comum. Perfil profissiográfico previdenciário. Reafirmação da data de entrada do requerimento | 5 | 1 provido, 1 parcialmente provido, 2 desprovido, 1 não conhecido | aposentadoria por tempo de contribuição (4); atividade especial (3) | [T242-aposentadoria-por-tempo-de-contribuicao-conversao-em-te.json](T242-aposentadoria-por-tempo-de-contribuicao-conversao-em-te.json) (4 de 5) |
 | **T243** · Aposentadoria por tempo de contribuição. Ruído. Conversão de tempo especial em comum. Reconhecimento de tempo especial | 5 | 3 desprovido, 2 não conhecido | aposentadoria por tempo de contribuição (5); ruído (2) | [T243-aposentadoria-por-tempo-de-contribuicao-ruido-conversao.json](T243-aposentadoria-por-tempo-de-contribuicao-ruido-conversao.json) |
 | **T244** · Extinção sem resolução do mérito. Interesse de agir configurado | 4 | 1 parcialmente provido, 3 desprovido | extinção sem resolução do mérito (2) | [T244-extincao-sem-resolucao-do-merito-interesse-de-agir-conf.json](T244-extincao-sem-resolucao-do-merito-interesse-de-agir-conf.json) |
 | **T245** · Aposentadoria por tempo de contribuição. Reafirmação da DER | 3 | 3 parcialmente provido | aposentadoria por tempo de contribuição (3); reafirmação da DER (2) | [T245-aposentadoria-por-tempo-de-contribuicao-reafirmacao-da.json](T245-aposentadoria-por-tempo-de-contribuicao-reafirmacao-da.json) |
 | **T246** · Ilegitimidade passiva do INSS. Aposentadoria por tempo de contribuição | 3 | 2 parcialmente provido, 1 prejudicado/extinto | aposentadoria por tempo de contribuição (2); ilegitimidade passiva do INSS (2) | [T246-ilegitimidade-passiva-do-inss-aposentadoria-por-tempo-d.json](T246-ilegitimidade-passiva-do-inss-aposentadoria-por-tempo-d.json) (2 de 3) |
 | **T266** · Embargos de declaração · Aposentadoria por tempo de contribuição. Exposição ao agente ruído. Atividade especial. Rejeição | 3 | 2 rejeitados, 1 acolhidos | aposentadoria por tempo de contribuição (3); atividade especial (3); embargos de declaração (2); exposição ao agente ruído (2) | [T266-edcl-aposentadoria-por-tempo-de-contribuicao-exposicao.json](T266-edcl-aposentadoria-por-tempo-de-contribuicao-exposicao.json) |
-| **T247** · Exposição à eletricidade acima de 250 volts. Conversão de tempo especial em comum. Atividade especial. Aposentadoria por tempo de contribuição | 2 | 2 desprovido | aposentadoria por tempo de contribuição (2); exposição à eletricidade acima de 250 volts (2); atividade especial (2) | [T247-exposicao-a-eletricidade-acima-de-250-volts-conversao-d.json](T247-exposicao-a-eletricidade-acima-de-250-volts-conversao-d.json) |
-| **T248** · Aposentadoria por tempo de contribuição e averbação de tempo especial. Aposentadoria por tempo de contribuição. Afastamento de coisa julgada | 2 | 1 parcialmente provido, 1 desprovido |  | [T248-aposentadoria-por-tempo-de-contribuicao-e-averbacao-de.json](T248-aposentadoria-por-tempo-de-contribuicao-e-averbacao-de.json) |
+| **T247** · Aposentadoria por tempo de contribuição. Exposição à eletricidade acima de 250 volts. Conversão de tempo especial em comum. Atividade especial | 2 | 2 desprovido | aposentadoria por tempo de contribuição (2); atividade especial (2); exposição à eletricidade acima de 250 volts (2) | [T247-aposentadoria-por-tempo-de-contribuicao-exposicao-a-ele.json](T247-aposentadoria-por-tempo-de-contribuicao-exposicao-a-ele.json) |
+| **T248** · Afastamento de coisa julgada. Aposentadoria por tempo de contribuição. Aposentadoria por tempo de contribuição e averbação de tempo especial | 2 | 1 parcialmente provido, 1 desprovido |  | [T248-afastamento-de-coisa-julgada-aposentadoria-por-tempo-de.json](T248-afastamento-de-coisa-julgada-aposentadoria-por-tempo-de.json) |
 | **T249** · Aposentadoria por tempo de contribuição. Correção monetária e juros de mora | 2 | 2 parcialmente provido | aposentadoria por tempo de contribuição (2) | [T249-aposentadoria-por-tempo-de-contribuicao-correcao-moneta.json](T249-aposentadoria-por-tempo-de-contribuicao-correcao-moneta.json) |
 | **T250** · Enquadramento por categoria profissional | 2 | 1 desprovido, 1 não conhecido | enquadramento por categoria profissional (2) | [T250-enquadramento-por-categoria-profissional.json](T250-enquadramento-por-categoria-profissional.json) |
 | **T251** · Aposentadoria por tempo de contribuição | 2 | 2 desprovido | aposentadoria por tempo de contribuição (2) | [T251-aposentadoria-por-tempo-de-contribuicao.json](T251-aposentadoria-por-tempo-de-contribuicao.json) |
-| **T252** · Reconhecimento de tempo especial de trabalhador agropecuário, campeiro e capataz. Revisão de aposentadoria por tempo de contribuição. Requisitos preenchidos | 2 | 2 parcialmente provido |  | [T252-reconhecimento-de-tempo-especial-de-trabalhador-agropec.json](T252-reconhecimento-de-tempo-especial-de-trabalhador-agropec.json) |
+| **T252** · Aposentadoria por tempo de contribuição. Período já reconhecido por sentença transitada em julgado. Reconhecimento de tempo especial como médica | 2 | 2 parcialmente provido |  | [T252-aposentadoria-por-tempo-de-contribuicao-periodo-ja-reco.json](T252-aposentadoria-por-tempo-de-contribuicao-periodo-ja-reco.json) |
 | **T253** · Aposentadoria por tempo de contribuição | 2 | 1 provido, 1 parcialmente provido | aposentadoria por tempo de contribuição (2) | [T253-aposentadoria-por-tempo-de-contribuicao.json](T253-aposentadoria-por-tempo-de-contribuicao.json) |
-| **T267** · Embargos de declaração · Aposentadoria por tempo de contribuição. Reconhecimento de tempo rural e tempo especial.exposição a agentes químicos e biológicos. Erro material corrigido | 2 | 2 parcialmente provido | embargos de declaração (2) | [T267-edcl-aposentadoria-por-tempo-de-contribuicao-reconhecim.json](T267-edcl-aposentadoria-por-tempo-de-contribuicao-reconhecim.json) (1 de 2) |
+| **T267** · Embargos de declaração · Acolhimento parcial, sem efeitos infringentes. Aposentadoria por tempo de contribuição. Erro material corrigido | 2 | 2 parcialmente provido | embargos de declaração (2) | [T267-edcl-acolhimento-parcial-sem-efeitos-infringentes-apose.json](T267-edcl-acolhimento-parcial-sem-efeitos-infringentes-apose.json) (1 de 2) |
 | **T268** · Embargos de declaração · Reconhecimento de tempo especial. Vícios inexistentes. Rejeição | 2 | 2 rejeitados | embargos de declaração (2); reconhecimento de tempo especial (2) | [T268-edcl-reconhecimento-de-tempo-especial-vicios-inexistent.json](T268-edcl-reconhecimento-de-tempo-especial-vicios-inexistent.json) |
-| **T269** · Embargos de declaração · Omissão sanada. Aposentadoria por tempo de contribuição | 2 | 1 não conhecido, 1 rejeitados | embargos de declaração (2); aposentadoria por tempo de contribuição (2) | [T269-edcl-omissao-sanada-aposentadoria-por-tempo-de-contribu.json](T269-edcl-omissao-sanada-aposentadoria-por-tempo-de-contribu.json) (1 de 2) |
-| **T270** · Embargos de declaração · Aposentadoria por tempo de contribuição. Tempo especial | 2 | 2 rejeitados | embargos de declaração (2); aposentadoria por tempo de contribuição (2); tempo especial (2) | [T270-edcl-aposentadoria-por-tempo-de-contribuicao-tempo-espe.json](T270-edcl-aposentadoria-por-tempo-de-contribuicao-tempo-espe.json) (1 de 2) |
+| **T269** · Embargos de declaração · Aposentadoria por tempo de contribuição. Omissão sanada | 2 | 1 não conhecido, 1 rejeitados | aposentadoria por tempo de contribuição (2); embargos de declaração (2) | [T269-edcl-aposentadoria-por-tempo-de-contribuicao-omissao-sa.json](T269-edcl-aposentadoria-por-tempo-de-contribuicao-omissao-sa.json) (1 de 2) |
+| **T270** · Embargos de declaração · Aposentadoria por tempo de contribuição. Tempo especial | 2 | 2 rejeitados | aposentadoria por tempo de contribuição (2); embargos de declaração (2); tempo especial (2) | [T270-edcl-aposentadoria-por-tempo-de-contribuicao-tempo-espe.json](T270-edcl-aposentadoria-por-tempo-de-contribuicao-tempo-espe.json) (1 de 2) |
 | Casos sem par | 15 | 2 provido, 7 parcialmente provido, 3 desprovido, 2 não conhecido, 1 rejeitados | questões que aparecem uma só vez | [casos-sem-par.json](casos-sem-par.json) |
 
 ## Casos de cada tema
@@ -108,7 +108,7 @@
 
 </details>
 
-<details><summary><b>T242</b> · Aposentadoria por tempo de contribuição. Conversão em tempo comum. Reafirmação da data de entrada do requerimento. Perfil profissiográfico previdenciário — 5 casos</summary>
+<details><summary><b>T242</b> · Aposentadoria por tempo de contribuição. Conversão em tempo comum. Perfil profissiográfico previdenciário. Reafirmação da data de entrada do requerimento — 5 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -173,7 +173,7 @@
 
 </details>
 
-<details><summary><b>T247</b> · Exposição à eletricidade acima de 250 volts. Conversão de tempo especial em comum. Atividade especial. Aposentadoria por tempo de contribuição — 2 casos</summary>
+<details><summary><b>T247</b> · Aposentadoria por tempo de contribuição. Exposição à eletricidade acima de 250 volts. Conversão de tempo especial em comum. Atividade especial — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -182,7 +182,7 @@
 
 </details>
 
-<details><summary><b>T248</b> · Aposentadoria por tempo de contribuição e averbação de tempo especial. Aposentadoria por tempo de contribuição. Afastamento de coisa julgada — 2 casos</summary>
+<details><summary><b>T248</b> · Afastamento de coisa julgada. Aposentadoria por tempo de contribuição. Aposentadoria por tempo de contribuição e averbação de tempo especial — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -218,7 +218,7 @@
 
 </details>
 
-<details><summary><b>T252</b> · Reconhecimento de tempo especial de trabalhador agropecuário, campeiro e capataz. Revisão de aposentadoria por tempo de contribuição. Requisitos preenchidos — 2 casos</summary>
+<details><summary><b>T252</b> · Aposentadoria por tempo de contribuição. Período já reconhecido por sentença transitada em julgado. Reconhecimento de tempo especial como médica — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -236,7 +236,7 @@
 
 </details>
 
-<details><summary><b>T267</b> · Embargos de declaração · Aposentadoria por tempo de contribuição. Reconhecimento de tempo rural e tempo especial.exposição a agentes químicos e biológicos. Erro material corrigido — 2 casos</summary>
+<details><summary><b>T267</b> · Embargos de declaração · Acolhimento parcial, sem efeitos infringentes. Aposentadoria por tempo de contribuição. Erro material corrigido — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -254,7 +254,7 @@
 
 </details>
 
-<details><summary><b>T269</b> · Embargos de declaração · Omissão sanada. Aposentadoria por tempo de contribuição — 2 casos</summary>
+<details><summary><b>T269</b> · Embargos de declaração · Aposentadoria por tempo de contribuição. Omissão sanada — 2 casos</summary>
 
 | Processo | Julgamento | Resultado | Semelhança com o representante | Especificidades |
 |---|---|---|---|---|
@@ -276,21 +276,21 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 0002026-23.2016.4.03.6003 | 09/06/2026 | não conhecido | Ação declaratória de reconhecimento de tempo especial. Recurso não conhecido. Falta de interesse recursal. Inexistência de sucumbência | inexistência de sucumbência; falta de interesse recursal; recurso não conhecido |
-| 0008241-92.2014.4.03.6000 | 27/08/2026 | parcialmente provido | Ausência de averbação da penhora. Arrematação judicial frustrada. Culpa concorrente. Responsabilidade autônoma da União | apelações; ação de ressarcimento; arrematação judicial frustrada; dupla alienação de imóveis |
-| 5001094-09.2024.4.03.9999 | 31/03/2026 | desprovido | Segurada indígena. Auxiliar de enfermagem. Reconhecimento de período rural e atividade especial | segurada indígena; auxiliar de enfermagem |
-| 5001552-36.2018.4.03.9999 | 10/08/2026 | parcialmente provido | Julgamento citra petita. Nulidade da sentença decretada de ofício. Atividades de torneiro mecânico e vigia. Conversão de tempo especial em comum | aposentadoria por tempo de contribuição; conversão de tempo especial em comum; atividades de torneiro mecânico e vigia; julgamento citra petita |
-| 5002639-17.2024.4.03.9999 | 14/04/2026 | parcialmente provido | Benefício concedido. Ausência de interesse processual quanto a período já computado administrativamente. Especialidade reconhecida por categoria profissional e exposição a ruído | benefício concedido |
-| 5004350-91.2023.4.03.9999 | 20/07/2026 | parcialmente provido | Aposentadoria por tempo de contribuição. Reconhecimento de tempo especial. Cálculo da renda mensal inicial | apelações cíveis; aposentadoria por tempo de contribuição; reconhecimento de tempo especial; cálculo da renda mensal inicial |
-| 5004474-48.2020.4.03.6000 | 15/09/2026 | não conhecido | Reconhecimento parcial. Fazenda pública. Aposentadoria por tempo de contribuição. Atividade especial | efeitos da revelia; fazenda pública; aposentadoria por tempo de contribuição; atividade especial |
-| 5081131-23.2024.4.03.9999 | 27/04/2026 | desprovido | Reconhecimento de atividade especial. Exposição a calor. Enquadramento profissional. Honorários sucumbenciais majorados | aposentadoria por tempo de contribuição; reconhecimento de atividade especial; exposição a calor; enquadramento profissional |
+| 0002026-23.2016.4.03.6003 | 09/06/2026 | não conhecido | Ação declaratória de reconhecimento de tempo especial. Falta de interesse recursal. Inexistência de sucumbência. Recurso não conhecido | inexistência de sucumbência; falta de interesse recursal; recurso não conhecido |
+| 0008241-92.2014.4.03.6000 | 27/08/2026 | parcialmente provido | Arrematação judicial frustrada. Ausência de averbação da penhora. Ausência de registro da carta de arrematação. Ação de ressarcimento | apelações; ação de ressarcimento; arrematação judicial frustrada; dupla alienação de imóveis |
+| 5001094-09.2024.4.03.9999 | 31/03/2026 | desprovido | Auxiliar de enfermagem. Reconhecimento de período rural e atividade especial. Segurada indígena | segurada indígena; auxiliar de enfermagem |
+| 5001552-36.2018.4.03.9999 | 10/08/2026 | parcialmente provido | 1.013, § 3º, do CPC. Aplicação do art. Aposentadoria por tempo de contribuição. Atividades de torneiro mecânico e vigia | aposentadoria por tempo de contribuição; conversão de tempo especial em comum; atividades de torneiro mecânico e vigia; julgamento citra petita |
+| 5002639-17.2024.4.03.9999 | 14/04/2026 | parcialmente provido | Ausência de interesse processual quanto a período já computado administrativamente. Benefício concedido. Especialidade reconhecida por categoria profissional e exposição a ruído | benefício concedido |
+| 5004350-91.2023.4.03.9999 | 20/07/2026 | parcialmente provido | Aposentadoria por tempo de contribuição. Cálculo da renda mensal inicial. Reconhecimento de tempo especial | apelações cíveis; aposentadoria por tempo de contribuição; reconhecimento de tempo especial; cálculo da renda mensal inicial |
+| 5004474-48.2020.4.03.6000 | 15/09/2026 | não conhecido | Aposentadoria por tempo de contribuição. Atividade especial. Efeitos da revelia. Fazenda pública | efeitos da revelia; fazenda pública; aposentadoria por tempo de contribuição; atividade especial |
+| 5081131-23.2024.4.03.9999 | 27/04/2026 | desprovido | Aposentadoria por tempo de contribuição. Enquadramento profissional. Exposição a calor. Honorários sucumbenciais majorados | aposentadoria por tempo de contribuição; reconhecimento de atividade especial; exposição a calor; enquadramento profissional |
 | 5121619-83.2025.4.03.9999 | 10/08/2026 | provido | Aposentadoria por tempo de contribuição. Cômputo de tempo especial. Função de frentista não comprovada | aposentadoria por tempo de contribuição; cômputo de tempo especial; função de frentista não comprovada |
-| 5263904-65.2026.4.03.9999 | 28/09/2026 | parcialmente provido | Trabalho rural. Ausência de recolhimentos. Citação. Exposição habitual e permanente a agentes biológicos | aposentadoria por tempo de contribuição; trabalho rural; cômputo posterior à Lei 8.213/1991; ausência de recolhimentos |
-| 5290027-03.2026.4.03.9999 | 28/09/2026 | provido | Prova testemunhal e perícia técnica. Perícia realizada de forma irregular. Reconhecimento de atividade especial. Julgamento de improcedência por ausência de prova | aposentadoria por tempo de contribuição; reconhecimento de atividade especial; prova testemunhal e perícia técnica; perícia realizada de forma irregular |
-| 5000508-35.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Rediscussão do julgado. Enquadramento de atividade especial. Inovação recursal. Prequestionamento | embargos de declaração; aposentadoria por tempo de contribuição; enquadramento de atividade especial; inovação recursal |
-| 5000582-45.2022.4.03.6006 | 27/04/2026 | desprovido | Embargos de declaração · Exposição a calor e frio em frigorífico. Dib na primeira DER. Conversão de tempo especial em comum. Cancelamento de multa por embargos de declaração | conversão de tempo especial em comum; exposição a calor e frio em frigorífico; DIB na primeira DER; cancelamento de multa por embargos de declaração |
-| 5000636-96.2017.4.03.6002 | 31/03/2026 | parcialmente provido | Embargos de declaração · Ausência de nocividade à saúde humana. Reconhecimento de tempo especial. Omissão reconhecida. Embargos do segurado prejudicados | embargos de declaração em apelação; aposentadoria por tempo de contribuição; reconhecimento de tempo especial; engenheiro agrônomo |
-| 5001254-36.2020.4.03.6002 | 10/08/2026 | parcialmente provido | Embargos de declaração · Omissão parcial configurada. Efeitos infringentes. Aposentadoria por tempo de contribuição. Atividade especial | embargos de declaração; aposentadoria por tempo de contribuição; atividade especial; exposição a ruído e frio |
+| 5263904-65.2026.4.03.9999 | 28/09/2026 | parcialmente provido | Aposentadoria por tempo de contribuição. Atividade especial. Ausência de recolhimentos. Citação | aposentadoria por tempo de contribuição; trabalho rural; cômputo posterior à Lei 8.213/1991; ausência de recolhimentos |
+| 5290027-03.2026.4.03.9999 | 28/09/2026 | provido | Aposentadoria por tempo de contribuição. Cerceamento probatório. Indeferimento de provas requeridas. Julgamento de improcedência por ausência de prova | aposentadoria por tempo de contribuição; reconhecimento de atividade especial; prova testemunhal e perícia técnica; perícia realizada de forma irregular |
+| 5000508-35.2025.4.03.9999 | 15/09/2026 | rejeitados | Embargos de declaração · Aposentadoria por tempo de contribuição. Enquadramento de atividade especial. Inovação recursal. Prequestionamento | embargos de declaração; aposentadoria por tempo de contribuição; enquadramento de atividade especial; inovação recursal |
+| 5000582-45.2022.4.03.6006 | 27/04/2026 | desprovido | Embargos de declaração · Cancelamento de multa por embargos de declaração. Conversão de tempo especial em comum. Dib na primeira DER. Exposição a calor e frio em frigorífico | conversão de tempo especial em comum; exposição a calor e frio em frigorífico; DIB na primeira DER; cancelamento de multa por embargos de declaração |
+| 5000636-96.2017.4.03.6002 | 31/03/2026 | parcialmente provido | Embargos de declaração · Agente biológico fitopatogênico. Aposentadoria por tempo de contribuição. Ausência de nocividade à saúde humana. Efeitos modificativos | embargos de declaração em apelação; aposentadoria por tempo de contribuição; reconhecimento de tempo especial; engenheiro agrônomo |
+| 5001254-36.2020.4.03.6002 | 10/08/2026 | parcialmente provido | Embargos de declaração · Aposentadoria por tempo de contribuição. Atividade especial. Efeitos infringentes. Exposição a ruído e frio | embargos de declaração; aposentadoria por tempo de contribuição; atividade especial; exposição a ruído e frio |
 
 </details>
 

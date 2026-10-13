@@ -51,17 +51,19 @@ def rotulo(membros, contexto=None):
     import math
     cont=collections.Counter(); [cont.update(_segs(r)) for r in membros]
     n=len(membros)
-    if n==1: esc=[s for s,_ in cont.most_common(4)]
+    ordem=lambda c:sorted(c.items(),key=lambda x:(-x[1],x[0]))   # desempate estável (independe da ordem dos sets)
+    if n==1: esc=[s for s,_ in ordem(cont)[:4]]
     else:
         ctx=collections.Counter(); [ctx.update(_segs(r)) for r in (contexto or membros)]; N=len(contexto or membros)
         cand=[(s,c) for s,c in cont.items() if c>=max(2,0.25*n)]
-        pont=sorted(cand,key=lambda x:-(x[1]/n)*math.log(1+(x[1]/n)/max(ctx[x[0]]/N,1e-9)))
-        freq=sorted(cand,key=lambda x:-x[1])
+        cand.sort(key=lambda x:x[0])
+        pont=sorted(cand,key=lambda x:(-(x[1]/n)*math.log(1+(x[1]/n)/max(ctx[x[0]]/N,1e-9)),x[0]))
+        freq=sorted(cand,key=lambda x:(-x[1],x[0]))
         esc=[]
         for s,_ in freq[:1]+pont:          # o mais frequente + os mais característicos
             if not any(s.lower().startswith(e.lower()) or e.lower().startswith(s.lower()) for e in esc): esc.append(s)
             if len(esc)==4: break
-        if not esc: esc=[s for s,_ in cont.most_common(3)]
+        if not esc: esc=[s for s,_ in ordem(cont)[:3]]
     return '. '.join(frase(x) for x in esc) or '(sem cabeçalho)'
 
 SIGLAS={'STJ','STF','TNU','CF','CPC','CTN','INSS','LOAS','BPC','EC','ACP','MP','ADI','ADC','RE','RESP','OAB','SIAPE','CDA','FGTS','RMI','DIB','DER','DII','PIS','CNIS','CTPS','PPP','LTCAT','EPI','IRDR','IAC','SUS','FUNASA','IBGE','UFMS','IFMS','IN','CNH','IPI','ICMS','IRPF','CSLL','COFINS','PASEP','SFH','CEF','MCMV','FIES','ICMBIO','IBAMA','ANTT','DNIT','CREA','CRM','CRC','CRF','CORE','PRF','RFB','PGFN','LEF','ECA','CDC','JEF','TRF3','TRF','MS','SP','UF','LTDA','ME','EPP','DPU','MPF','PRR','ADCT','ICMS','TCU','AGU','UNIÃO'}

@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5008795-87.2024.4.03.6000 | 28/09/2026 | desprovido | Desnecessidade. Conselho regional de educação física. Instrutor de futevôlei. Registro profissional | remessa necessária em mandado de segurança; conselho regional de educação física; instrutor de futevôlei; registro profissional |
+| 5008795-87.2024.4.03.6000 | 28/09/2026 | desprovido | Conselho regional de educação física. Desnecessidade. Instrutor de futevôlei. Registro profissional | remessa necessária em mandado de segurança; conselho regional de educação física; instrutor de futevôlei; registro profissional |
 
 </details>
 

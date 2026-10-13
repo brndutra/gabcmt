@@ -16,7 +16,7 @@
 
 | Processo | Julgamento | Resultado | Questão | Especificidades |
 |---|---|---|---|---|
-| 5002759-91.2022.4.03.6002 | 09/06/2026 | desprovido | Exigência de registro de empresa que realiza manutenção de balanças eletrônicas. Atividade que não é privativa de engenheiro. Conselho regional de engenharia e agronomia | conselho regional de engenharia e agronomia; atividade que não é privativa de engenheiro |
+| 5002759-91.2022.4.03.6002 | 09/06/2026 | desprovido | Atividade que não é privativa de engenheiro. Conselho regional de engenharia e agronomia. Exigência de registro de empresa que realiza manutenção de balanças eletrônicas | conselho regional de engenharia e agronomia; atividade que não é privativa de engenheiro |
 
 </details>
 
