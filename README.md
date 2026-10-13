@@ -6,6 +6,7 @@ Material de apoio do gabinete do Desembargador Federal Carlos Muta (Turma Region
 
 | Caminho | O que é |
 |---|---|
+| `construtor.html` | **Construtor de Minutas (Gabinete CMT)**. Lê precedentes, modelos, parágrafos e citações de `banco/` a cada abertura; publicado no GitHub Pages, lê do próprio site (`https://brndutra.github.io/gabcmt/construtor.html`). |
 | `index.html` | Catálogo de 1.828 acórdãos (julgados de 18/03 a 06/10/2026), organizados por **assunto › tema › igualdade de texto**, com as especificidades de cada tema, alternância para a visão em tabela, filtros e exportação de `precedentes.json`. Arquivo único, sem dependências. |
 | `precedentes/` | Os mesmos precedentes em pastas: **uma pasta por assunto** e, dentro dela, **um arquivo por tema**, com as especificidades mais frequentes. Comece pelo [`precedentes/INDICE.md`](precedentes/INDICE.md); cada pasta tem um `README.md` com os temas, resultados, especificidades e a lista de processos. |
 | `data/precedentes-parte1.json` | 845 precedentes julgados de 06/07 a 06/10/2026, prontos para importar. |
