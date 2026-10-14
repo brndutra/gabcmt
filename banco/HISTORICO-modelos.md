@@ -1,5 +1,19 @@
 # Histórico do banco de modelos
 
+## 2026-10-14 — 28,86%: conferência literal com os seis votos
+
+Cada parágrafo dos seis votos (Votos_28_86_Questoes_Marcadas_por_Cor_4.docx) foi conferido palavra por palavra com as duas matrizes. Ajustes para fidelidade literal:
+- C1 “b” com a redação de 5007937 (“No caso, a controvérsia…”) e C1 “c” com a de 5001115.
+- “[...]” no mesmo parágrafo do art. 7º da MP 2.169-43, como nos votos.
+- Honorários com a redação de cada voto e 1% literal, em lugar da variável: 5007937 (“a parte exequente”), 5001115 e 5006675 (“o autor”; o 5006675 fala em “sucumbência fixada na sentença pelo decaimento na instância de origem”).
+
+Diferenças mantidas:
+- dados do caso substituídos por variáveis ou campos (IDs, sindicato, ação coletiva, parte);
+- Tema 1.433/STJ com “j. em” (dois votos) em vez de “julgado em” (5003454);
+- correção de “403” para “4.03” no número da ACP (5006675).
+
+Artefatos do .docx, sem efeito na matriz: hífens com espaço (“Advocacia- Geral”, “2º- A”, “Afasta- se”), citação partida em dois parágrafos (5003454) e “Tema 1.178/STJ Com efeito” sem ponto e sem quebra (5001115).
+
 ## 2026-10-14 — 28,86%: duas matrizes em vez de uma
 
 A análise dos seis votos-paradigma, com as questões marcadas por cor, levou a separar a matriz única em duas, por coerência lógica.
