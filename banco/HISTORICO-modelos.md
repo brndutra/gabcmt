@@ -1,5 +1,9 @@
 # Histórico do banco de modelos
 
+## 2026-10-14 — matriz única de 28,86%
+
+As três matrizes de 28,86% foram unificadas em **MODELO-MATRIZ · 28,86% · ACP 0005019-15.1997.4.03.6000 · cumprimento individual · apelação**, com três hipóteses marcadas por letra: [A] limite territorial afastado · provida; [B] acordo administrativo (fichas SIAPE) · desprovida; [C] servidor representado por sindicato com ação anterior · desprovida. Blocos fixos por questão (limitação territorial, acordo administrativo, limites subjetivos da coisa julgada, servidor do sindicato); seções de uma só hipótese desligadas por padrão; versões por hipótese como cartões (controvérsia, fichas, conclusão, honorários, dispositivo). Cada hipótese reproduz exatamente o texto da matriz de origem. Processos associados: os seis processos-fonte das três matrizes. Saem do banco: par-matriz-2886-territorial-provida, par-matriz-2886-acordo-administrativo-desprovida e par-matriz-2886-ilegitimidade-acao-sindical.
+
 ## 2026-10-14 — matrizes de 28,86% no padrão atual
 
 Reinseridas as três matrizes de voto da ACP 0005019-15.1997.4.03.6000 (28,86%), já convertidas ao padrão atual do app (parágrafos em versões, variáveis @ e campos {{ }}), com os processos-fonte como processos associados:
