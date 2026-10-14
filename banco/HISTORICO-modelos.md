@@ -1,5 +1,14 @@
 # Histórico do banco de modelos
 
+## 2026-10-14 — matriz de 28,86% por questões selecionáveis
+
+A matriz única de 28,86% deixa de ter hipóteses [A]/[B]/[C] escolhidas por cartões e passa a ser montada por **questões do caso** (`_questoes` no esqueleto), cada uma um item selecionável no painel “Questões do caso” do editor (workbench 31 + `scripts/workbench-questoes-do-caso.js`). Marcar uma questão a inclui, numerada, na frase da Controvérsia e liga os subtópicos e parágrafos a ela vinculados; desmarcar retira o que só ela usava.
+
+- Controvérsias: limitação territorial (padrão) · prescrição da pretensão executória · habilitação de herdeiros (exige prescrição) · acordo administrativo (fichas SIAPE) · servidor representado por sindicato com ação própria.
+- Questões incidentais: Tema 1.433/STJ · ilegitimidade ativa em contrarrazões · má-fé · gratuidade impugnada no recurso adesivo · honorários pedidos pelo ente.
+- Preliminares sem texto-base: Tema 1.433 e ilegitimidade viraram cartões próprios. A abertura “O caso é peculiar…” virou o subtópico **Exceções da coisa julgada**.
+- As frases compostas reproduzem as controvérsias originais (territorial; territorial + prescrição + herdeiros). **Redação nova**, a revisar: as frases das questões “acordo administrativo” e “sindicato”.
+
 ## 2026-10-14 — matriz única de 28,86%
 
 As três matrizes de 28,86% foram unificadas em **MODELO-MATRIZ · 28,86% · ACP 0005019-15.1997.4.03.6000 · cumprimento individual · apelação**, com três hipóteses marcadas por letra: [A] limite territorial afastado · provida; [B] acordo administrativo (fichas SIAPE) · desprovida; [C] servidor representado por sindicato com ação anterior · desprovida. Blocos fixos por questão (limitação territorial, acordo administrativo, limites subjetivos da coisa julgada, servidor do sindicato); seções de uma só hipótese desligadas por padrão; versões por hipótese como cartões (controvérsia, fichas, conclusão, honorários, dispositivo). Cada hipótese reproduz exatamente o texto da matriz de origem. Processos associados: os seis processos-fonte das três matrizes. Saem do banco: par-matriz-2886-territorial-provida, par-matriz-2886-acordo-administrativo-desprovida e par-matriz-2886-ilegitimidade-acao-sindical.
