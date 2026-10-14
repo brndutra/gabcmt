@@ -10,6 +10,8 @@ Reinseridas as três matrizes de voto da ACP 0005019-15.1997.4.03.6000 (28,86%),
 | 28,86% · Legitimidade reconhecida, mas acordo administrativo (fichas SIAPE) · apelação desprovida | 5007937-56.2024.4.03.6000, 5001115-51.2024.4.03.6000 | 68 |
 | 28,86% · Ilegitimidade ativa · categoria representada por sindicato com ação coletiva anterior · apelação desprovida | 5006675-71.2024.4.03.6000 | 20 |
 
+**Estrutura (revisão no mesmo dia):** os parágrafos que formam a espinha do voto deixaram de ser cartões opcionais e passaram a texto-base imutável das seções (citações diretas em seções de citação, preservando o recuo). Continuam como cartões só as versões alternativas (controvérsia, fichas, conclusão, honorários, dispositivo) e os parágrafos de situação específica (ilegitimidade e honorários pedidos em contrarrazões); prescrição, litigância de má-fé e gratuidade ficaram como seções opcionais desligadas. Cartões: 31 → 6, 68 → 11 e 20 → 3; o texto que sai com as escolhas-padrão é idêntico ao anterior.
+
 As três substituem as versões antigas retiradas na revisão anterior; os modelos F04, F05, F12 e M8-039 seguem fora do banco.
 
 ## 2026-10-14 — saneamento, unificação e processos associados
