@@ -1,8 +1,20 @@
 # Histórico do banco de modelos
 
+## 2026-10-14 — matrizes de 28,86% no padrão atual
+
+Reinseridas as três matrizes de voto da ACP 0005019-15.1997.4.03.6000 (28,86%), já convertidas ao padrão atual do app (parágrafos em versões, variáveis @ e campos {{ }}), com os processos-fonte como processos associados:
+
+| Matriz | Processos associados | Parágrafos |
+|---|---|---:|
+| 28,86% · Limite territorial afastado · apelação da parte exequente provida | 5003454-12.2026.4.03.6000, 5003797-42.2025.4.03.6000, 5003544-88.2024.4.03.6000 | 31 |
+| 28,86% · Legitimidade reconhecida, mas acordo administrativo (fichas SIAPE) · apelação desprovida | 5007937-56.2024.4.03.6000, 5001115-51.2024.4.03.6000 | 68 |
+| 28,86% · Ilegitimidade ativa · categoria representada por sindicato com ação coletiva anterior · apelação desprovida | 5006675-71.2024.4.03.6000 | 20 |
+
+As três substituem as versões antigas retiradas na revisão anterior; os modelos F04, F05, F12 e M8-039 seguem fora do banco.
+
 ## 2026-10-14 — saneamento, unificação e processos associados
 
-Total: **207 → 158** registros (Decisão interlocutória: 40, Decisão monocrática terminativa: 42, Despacho: 25, Voto: 51).
+Total: **207 → 158** registros (161 após a reinserção das matrizes de 28,86%) (Decisão interlocutória: 40, Decisão monocrática terminativa: 42, Despacho: 25, Voto: 51).
 
 ### O que mudou
 
@@ -18,9 +30,6 @@ Total: **207 → 158** registros (Decisão interlocutória: 40, Decisão monocr�
 
 | Registro | Motivo |
 |---|---|
-| MATRIZ · 28,86% · Legitimidade reconhecida, mas acordo administrativo (fichas SIAPE) · ape | índice de 28,86% (matéria retirada do banco a pedido) |
-| MATRIZ · 28,86% · Ilegitimidade ativa · categoria representada por sindicato com ação cole | índice de 28,86% (matéria retirada do banco a pedido) |
-| MATRIZ · 28,86% · Limite territorial afastado · apelação da parte exequente provida | índice de 28,86% (matéria retirada do banco a pedido) |
 | MODELO F04 | índice de 28,86% (matéria retirada do banco a pedido) |
 | MODELO F05 | índice de 28,86% (matéria retirada do banco a pedido) |
 | MODELO F12 | índice de 28,86% (matéria retirada do banco a pedido) |
