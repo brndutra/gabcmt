@@ -44,4 +44,4 @@ Campos acrescentados aos acórdãos do catálogo: `temaId`, `temaRotulo`, `temaT
 - `scripts/construir.py`: importa os bancos, refaz o catálogo, `catalogo-trf3/` e o `index.html`.
 - `scripts/banco/importar.py`: só a importação dos bancos para `banco/`.
 - `scripts/catalogo/`: geração do catálogo (`acumular.py`, `paradigma.py`, `similaridade.py`, `organizar.py`, `extrair.py`).
-- `scripts/modelos-matriz/`: rotinas usadas para extrair dos PDFs do PJe os modelos-matriz de 28,86%, hoje incorporados a `banco/modelos.json`.
+- `scripts/modelos-matriz/`: extração de votos dos PDFs do PJe (`extrair_pdf.py`, `estruturar.py`) e, em `v3/`, os dois modelos-matriz de 28,86% (abrangência territorial; exclusão por ação sindical), com a conferência literal com os votos-fonte.

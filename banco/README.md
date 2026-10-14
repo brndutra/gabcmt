@@ -6,7 +6,7 @@ Exportações dos bancos do app, importadas por `scripts/banco/importar.py` (sem
 |---|---|---:|---|
 | [`assuntos.json`](assuntos.json) | Catálogo de assuntos (TPU/CNJ, seções e sinônimos) | 556 | 2026-10-13 |
 | [`jurisprudencia.json`](jurisprudencia.json) | Jurisprudência de referência (temas, súmulas, precedentes qualificados) | 42 | 2026-10-13 |
-| [`modelos.json`](modelos.json) | Modelos do Banco de Paradigmas (estrutura em fases, versões alternativas e processos associados — ver [`HISTORICO-modelos.md`](HISTORICO-modelos.md)) | 159 | 2026-10-14 |
+| [`modelos.json`](modelos.json) | Modelos do Banco de Paradigmas (estrutura em fases, versões alternativas e processos associados — ver [`HISTORICO-modelos.md`](HISTORICO-modelos.md)) | 160 | 2026-10-14 |
 | [`normas.json`](normas.json) | Catálogo de normas (siglas, aliases e forma por extenso) | 56 | 2026-10-13 |
 | [`paragrafos.json`](paragrafos.json) | Parágrafos-modelo do gestor de parágrafos | 120 | 2026-10-13 |
 | [`precedentes.json`](precedentes.json) | Precedentes curados do Banco de Paradigmas | 64 | 2026-10-13 |
