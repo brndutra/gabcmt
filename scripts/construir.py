@@ -6,9 +6,10 @@ Uso:
 Etapas:
   1. importa as exportações para banco/ (scripts/banco/importar.py), sem duplicar;
   2. regenera o catálogo de acórdãos (scripts/catalogo/acumular.py), marcando o que já consta do banco;
-  3. monta precedentes/<assunto>/<tema>.json só com o que ainda NÃO está no banco (scripts/catalogo/organizar.py);
-  4. regrava data/precedentes-parte1.json e parte2.json (abaixo de 10 MB cada) e o index.html.
-Assim, cada precedente aparece uma única vez como arquivo de importação: ou em banco/ (curado), ou no catálogo (bruto).
+  3. monta catalogo-trf3/<assunto>/<tema>.json só com o que ainda NÃO está no banco (scripts/catalogo/organizar.py);
+  4. regrava o index.html.
+Assim, cada precedente aparece uma única vez: ou em banco/precedentes.json (curado, lido pelo construtor.html),
+ou no catálogo bruto de acórdãos do TRF3 (catalogo-trf3/), à espera de curadoria.
 """
 import json
 import shutil
@@ -31,20 +32,12 @@ def main(args):
     arquivos = [a for a in args if not a.startswith("--")]
     if arquivos:
         rodar(RAIZ / "scripts" / "banco" / "importar.py", *arquivos, *[a for a in args if a.startswith("--")])
-    shutil.copy(RAIZ / "data" / "acordaos.jsonl", CAT / "acordaos.jsonl")
+    shutil.copy(RAIZ / "catalogo-trf3" / "acordaos.jsonl", CAT / "acordaos.jsonl")
     try:
         rodar(CAT / "acumular.py")
     finally:
         (CAT / "acordaos.jsonl").unlink(missing_ok=True)
-    rodar(CAT / "organizar.py", CAT / "catalogo-agrupado.json", RAIZ / "precedentes")
-
-    p = json.loads((CAT / "precedentes.json").read_text(encoding="utf-8"))
-    regs = sorted(p["registros"], key=lambda r: "-".join(reversed(r.get("sessao", "").split("/"))), reverse=True)
-    meio = len(regs) // 2
-    for k, parte in ((1, regs[:meio]), (2, regs[meio:])):
-        (RAIZ / "data" / f"precedentes-parte{k}.json").write_text(
-            json.dumps({**p, "registros": parte}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"data/: {len(regs)} precedentes do catálogo fora do banco ({meio} + {len(regs) - meio})")
+    rodar(CAT / "organizar.py", CAT / "catalogo-agrupado.json", RAIZ / "catalogo-trf3")
 
     html = (CAT / "tabela-acordaos-carlos-muta.html").read_text(encoding="utf-8")
     fim_titulo = html.index("</title>") + 8

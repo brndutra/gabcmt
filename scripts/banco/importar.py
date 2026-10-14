@@ -30,8 +30,7 @@ PROC = re.compile(r"\d{7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4}")
 
 DESCR = {
     "precedentes": "Precedentes curados do Banco de Paradigmas",
-    "modelos": "Modelos (texto para minuta) do Banco de Paradigmas",
-    "paradigmas": "Banco de Paradigmas completo (precedentes e modelos)",
+    "modelos": "Modelos do Banco de Paradigmas, inclusive os antigos modelos-matriz (hoje unificados)",
     "paragrafos": "Parágrafos-modelo do gestor de parágrafos",
     "normas": "Catálogo de normas (siglas, aliases e forma por extenso)",
     "jurisprudencia": "Jurisprudência de referência (temas, súmulas, precedentes qualificados)",
@@ -46,7 +45,7 @@ def sem_acento(s):
 
 def chave_natural(nome, r):
     """Identidade do registro independente do id; None quando o banco não tem chave natural confiável."""
-    if nome in ("precedentes", "paradigmas") and r.get("tipo", "Precedente") == "Precedente":
+    if nome == "precedentes" and r.get("tipo", "Precedente") == "Precedente":
         p = PROC.search(r.get("processo") or "")
         return ("proc", p.group(0), sem_acento(r.get("especie"))[:4]) if p else None
     if nome == "normas":
@@ -115,7 +114,7 @@ def atualizar_referencias():
     """banco-atual.json: processo → registros do banco que o citam (para o catálogo não repetir o que já está curado).
     assuntos.json: lista de assuntos do app usada para classificar os acórdãos."""
     curados = {}
-    for nome in ("precedentes", "modelos", "paradigmas"):
+    for nome in ("precedentes", "modelos"):
         for r in carregar(nome)["registros"]:
             procs = set(PROC.findall(r.get("processo") or "")) | set(PROC.findall(r.get("processosAssociados") or ""))
             for p in procs:
@@ -146,9 +145,18 @@ def leia_me():
 
 def importar(arquivos, substituir=False):
     resumo = []
+    lotes = []
     for arq in arquivos:
         obj = json.loads(Path(arq).read_text(encoding="utf-8"))
         nome = nome_do_schema(obj, arq)
+        if nome == "paradigmas":  # exportação conjunta: separa em precedentes e modelos (um banco para cada)
+            for alvo, tipo in (("precedentes", "Precedente"), ("modelos", "Modelo")):
+                regs = [r for r in obj["registros"] if (r.get("tipo") or "Precedente") == tipo]
+                if regs:
+                    lotes.append((alvo, {**obj, "schema": f"gabA.{alvo}", "registros": regs}))
+        else:
+            lotes.append((nome, obj))
+    for nome, obj in lotes:
         atual = carregar(nome)
         antes = len(atual["registros"])
         regs, desc = mesclar(nome, atual["registros"], obj["registros"], substituir)

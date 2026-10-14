@@ -58,9 +58,12 @@ def md(t):
 def main(origem, destino):
     R = json.loads(Path(origem).read_text(encoding='utf-8'))
     dest = Path(destino)
-    if dest.exists():
-        shutil.rmtree(dest)
-    dest.mkdir(parents=True)
+    dest.mkdir(parents=True, exist_ok=True)
+    for velho in dest.iterdir():  # refaz só as pastas de assunto e o índice; preserva acordaos.jsonl
+        if velho.is_dir():
+            shutil.rmtree(velho)
+        elif velho.name == 'INDICE.md':
+            velho.unlink()
 
     por_ass = collections.defaultdict(lambda: collections.defaultdict(list))
     for r in R:
@@ -70,8 +73,9 @@ def main(origem, destino):
     indice = [f'# Precedentes do Des. Fed. Carlos Muta por assunto e tema\n',
               f'{len(R)} acórdãos em {len(ordem)} assuntos. Dentro de cada assunto, os casos estão reunidos por **tema** '
               '(mesma questão jurídica), com as **especificidades** mais frequentes de cada tema.\n',
-              'Cada arquivo `.json` importa no Banco de Paradigmas › Precedentes › Importar JSON e traz apenas os '
-              'acórdãos que ainda não constam do banco; os que já constam aparecem nos índices com a marca *(no banco)*.\n',
+              'Não é um banco: é a base bruta de acórdãos colhida no portal do TRF3, à espera de curadoria. Cada arquivo `.json` importa '
+              'no Banco de Paradigmas › Precedentes › Importar JSON e traz apenas os acórdãos que ainda não constam de `banco/precedentes.json`; '
+              'os que já constam aparecem nos índices com a marca *(no banco)*.\n',
               '| # | Assunto | Acórdãos | Temas com 2+ casos | Casos sem par | Pasta |', '|---:|---|---:|---:|---:|---|']
     totais = {'arquivos': 0, 'registros': 0}
 

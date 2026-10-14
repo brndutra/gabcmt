@@ -2,7 +2,7 @@
 
 1828 acórdãos em 94 assuntos. Dentro de cada assunto, os casos estão reunidos por **tema** (mesma questão jurídica), com as **especificidades** mais frequentes de cada tema.
 
-Cada arquivo `.json` importa no Banco de Paradigmas › Precedentes › Importar JSON e traz apenas os acórdãos que ainda não constam do banco; os que já constam aparecem nos índices com a marca *(no banco)*.
+Não é um banco: é a base bruta de acórdãos colhida no portal do TRF3, à espera de curadoria. Cada arquivo `.json` importa no Banco de Paradigmas › Precedentes › Importar JSON e traz apenas os acórdãos que ainda não constam de `banco/precedentes.json`; os que já constam aparecem nos índices com a marca *(no banco)*.
 
 | # | Assunto | Acórdãos | Temas com 2+ casos | Casos sem par | Pasta |
 |---:|---|---:|---:|---:|---|
@@ -101,4 +101,4 @@ Cada arquivo `.json` importa no Banco de Paradigmas › Precedentes › Importar
 | 93 | Tutela de Urgência | 1 | 0 | 1 | [93-tutela-de-urgencia](93-tutela-de-urgencia/README.md) |
 | 94 | Área de Preservação Permanente | 1 | 0 | 1 | [94-area-de-preservacao-permanente](94-area-de-preservacao-permanente/README.md) |
 
-Arquivos de importação: 398, com 1690 precedentes ainda fora do banco.
+Arquivos de importação: 398, com 1688 precedentes ainda fora do banco.
