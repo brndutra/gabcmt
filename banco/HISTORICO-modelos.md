@@ -1,0 +1,84 @@
+# Histórico do banco de modelos
+
+## 2026-10-14 — saneamento, unificação e processos associados
+
+Total: **207 → 158** registros (Decisão interlocutória: 40, Decisão monocrática terminativa: 42, Despacho: 25, Voto: 51).
+
+### O que mudou
+
+- **Processos associados** preenchidos em todos os modelos M8: o processo de referência e os demais processos de onde o texto foi extraído (origem, ação conexa, execução, AI anterior), na ordem referência → demais. Os votos rurais trazem o processo do voto e as ações citadas na narrativa; os modelos unificados reúnem os processos de todos os modelos absorvidos.
+- **Estrutura em fases** (Relatório › Fundamentação › Caso › Dispositivo › Determinações › Fecho) aplicada a todo o MODELOS 8; despachos ganharam o tópico *Relatório › Narrativa* e o relato saiu de *Determinações › Ordem*.
+- **Unificação**: 28 modelos absorvidos em 15 famílias, com versões alternativas por hipótese (`paragrafosModelo`, mesma letra em todos os tópicos). Modelos com parágrafos alternativos/opcionais: 23.
+- **Correções de conteúdo**: Tema 988/STJ (taxatividade mitigada) citado como “Tema 998” em M8-028/029/030/031; precedente restaurado no M8-010 (AI 5014100-44.2023.4.03.0000); fragmentos partidos (M8-029, M8-030); “(ID----)” no M8-058; assinatura perdida no meio do M8-129; versões coladas separadas como alternativas (M8-062, M8-106, M8-111, M8-123); M8-062 reclassificado como decisão interlocutória; tipografia (espaço rígido) normalizada.
+- **Votos rurais (RURAL-001 a 036)** reconstruídos com o texto integral do caso (Compêndio Rural), dados pessoais substituídos por `{{CAMPOS}}`, ementa do acórdão, resultado, dispositivo, temas e dispositivos citados.
+- **Nova matriz**: *MODELO-MATRIZ · Apelação · Aposentadoria por idade rural* — 17 parágrafos opcionais de análise e 5 conclusões alternativas extraídos dos votos.
+- **Compêndio genérico**: itens só com orientação removidos quando há modelo com texto real; 5 (causa acidentária) e 7.2 (digitalização) reescritos nas fases-padrão; 4.3 virou parágrafo opcional do M8-001.
+
+### Registros removidos
+
+| Registro | Motivo |
+|---|---|
+| MATRIZ · 28,86% · Legitimidade reconhecida, mas acordo administrativo (fichas SIAPE) · ape | índice de 28,86% (matéria retirada do banco a pedido) |
+| MATRIZ · 28,86% · Ilegitimidade ativa · categoria representada por sindicato com ação cole | índice de 28,86% (matéria retirada do banco a pedido) |
+| MATRIZ · 28,86% · Limite territorial afastado · apelação da parte exequente provida | índice de 28,86% (matéria retirada do banco a pedido) |
+| MODELO F04 | índice de 28,86% (matéria retirada do banco a pedido) |
+| MODELO F05 | índice de 28,86% (matéria retirada do banco a pedido) |
+| MODELO F12 | índice de 28,86% (matéria retirada do banco a pedido) |
+| M8-039 | índice de 28,86% (matéria retirada do banco a pedido) |
+| M8-063 | fragmento (“São Paulo, 06 de fevereiro de 2024”) da 2ª versão do sobrestamento — hoje alternativa “b” do M8-062 |
+| M8-124 | 2ª versão colada do despacho de juntada de mídias — hoje alternativa “c” do M8-125 |
+| 1.1.1 | compêndio sem texto — substituído por M8-084 |
+| 1.1.2 | compêndio sem texto — substituído por M8-052 |
+| 1.1.3 | compêndio sem texto — substituído por M8-084 |
+| 1.2 | compêndio sem texto — substituído por M8-098 |
+| 2.1 | compêndio sem texto — substituído por M8-006 |
+| 3 | compêndio sem texto — substituído por M8-024 |
+| 4.1 | compêndio sem texto — substituído por M8-001 |
+| 4.2 | compêndio sem texto — substituído por M8-001 |
+| 4.3 | compêndio sem texto — substituído por M8-001 (parágrafo opcional) |
+| 6.1 | compêndio sem texto — substituído por M8-137 / M8-037 |
+| 7.1 | compêndio sem texto — substituído por M8-116 |
+| 7.3 | compêndio sem texto — substituído por M8-113 |
+| M8-002 | absorvido em modelo unificado |
+| M8-003 | absorvido em modelo unificado |
+| M8-007 | absorvido em modelo unificado |
+| M8-009 | absorvido em modelo unificado |
+| M8-028 | absorvido em modelo unificado |
+| M8-030 | absorvido em modelo unificado |
+| M8-031 | absorvido em modelo unificado |
+| M8-041 | absorvido em modelo unificado |
+| M8-051 | absorvido em modelo unificado |
+| M8-059 | absorvido em modelo unificado |
+| M8-088 | absorvido em modelo unificado |
+| M8-105 | absorvido em modelo unificado |
+| M8-107 | absorvido em modelo unificado |
+| M8-109 | absorvido em modelo unificado |
+| M8-111 | absorvido em modelo unificado |
+| M8-114 | absorvido em modelo unificado |
+| M8-115 | absorvido em modelo unificado |
+| M8-118 | absorvido em modelo unificado |
+| M8-123 | absorvido em modelo unificado |
+| M8-126 | absorvido em modelo unificado |
+| M8-127 | absorvido em modelo unificado |
+| M8-128 | absorvido em modelo unificado |
+| M8-129 | absorvido em modelo unificado |
+| M8-136 | absorvido em modelo unificado |
+| M8-138 | absorvido em modelo unificado |
+| M8-139 | absorvido em modelo unificado |
+| M8-146 | absorvido em modelo unificado |
+| M8-147 | absorvido em modelo unificado |
+| RURAL-037 | voto rural sem texto-fonte (aguarda PDF) |
+| RURAL-038 | voto rural sem texto-fonte (aguarda PDF) |
+| RURAL-039 | voto rural sem texto-fonte (aguarda PDF) |
+| RURAL-040 | voto rural sem texto-fonte (aguarda PDF) |
+
+### Pendências
+
+Votos rurais sem texto-fonte no compêndio (“A informar com o PDF”), retirados até a juntada do PDF:
+
+- RURAL-037 — 5105717-56.2026.4.03.9999 (EDcl)
+- RURAL-038 — 5204226-56.2025.4.03.9999 ()
+- RURAL-039 — 5151731-98.2026.4.03.9999 ()
+- RURAL-040 — 0025947-82.2026.4.03.8000 (EDcl)
+
+> A importação do app não exclui registros: para que as remoções valham, use este `modelos.json` como banco (ou exclua manualmente os registros listados).
