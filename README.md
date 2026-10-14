@@ -13,7 +13,9 @@ banco/                 um arquivo por banco (é daqui que o construtor.html lê 
   redacao.json         padrão de redação: conectivos, verbos, preferências, correções, alertas
   paragrafos.json      parágrafos-modelo do gestor de parágrafos
   normas.json          normas: siglas, aliases e forma por extenso
+  acervo.json          acervo geral de processos do gabinete (Painel Central), saneado
 construtor.html        Construtor de Minutas
+painel.html            Painel Central (acervo · seleção · pauta), ligado a banco/acervo.json
 index.html             catálogo de acórdãos do TRF3 (visualização)
 catalogo-trf3/         base bruta de acórdãos colhida no portal do TRF3, à espera de curadoria (não é banco)
 scripts/               rotinas de importação e de geração do catálogo
@@ -30,6 +32,20 @@ python3 scripts/construir.py precedentes.json modelos.json assuntos.json jurispr
 ```
 
 Os arquivos são reconhecidos pelo `schema`, não pelo nome; uma exportação conjunta `gabA.paradigmas` é separada em precedentes e modelos. A importação mescla por `id` (atualiza o que existe, acrescenta o que é novo, não apaga nada) e elimina duplicatas pela chave natural de cada banco: processo e espécie nos precedentes, sigla nas normas, referência na jurisprudência, nome nos assuntos, texto nos parágrafos. Com `--substituir`, a exportação vira a fotografia oficial do banco, e o que foi apagado no app sai também daqui. Requer `scikit-learn` e `numpy`.
+
+## Acervo geral (Painel Central)
+
+`banco/acervo.json` (`schema: gabA.acervo`) guarda o acervo de processos do gabinete, um processo por linha, identificado pelo número (`acv-<20 dígitos>`). Quem o alimenta é o `painel.html` (publicado em `https://brndutra.github.io/gabcmt/painel.html`):
+
+- **ao abrir**, o painel lê o banco e mescla no Acervo Central: cria os processos que faltam e atualiza os que, no banco, estão mais recentes que a cópia do navegador. Os controles de trabalho (servidor, seleção prévia, pauta, observações) nunca vêm do banco nem vão para ele;
+- **ao importar** uma planilha (Gab A - Acervo, Sigilosos ou PJe 2G), os processos alterados são carimbados e, com a opção ligada (padrão), encaminhados ao GitHub — basta informar um token com permissão *Contents: leitura e escrita*, que fica só na memória da aba. A mescla é por processo: entra o que é novo ou mais recente, nada é apagado (há um botão à parte para substituir o banco inteiro);
+- pelo botão **ACERVO · GITHUB** (canto inferior direito) também se exporta o banco como `acervo.json` ou `acervo.html` (tabela legível com o JSON embutido) e se importa qualquer um dos dois; importar atualiza o Acervo Central e, em seguida, o banco.
+
+No repositório, o mesmo arquivo exportado entra por `python3 scripts/construir.py acervo.html` (ou `acervo.json`), com a mesma regra: prevalece a versão mais recente de cada processo.
+
+**Saneamento** (o repositório é público): processos sigilosos (`Consta_Acervo_Sigiloso`, `Nível_Sigilo` ou campo de segredo preenchido) não entram, e campos de celular, telefone, e-mail e CPF são removidos — no painel e de novo no `importar.py`.
+
+Para atualizar o painel com uma versão nova baixada do app: `python3 scripts/painel/montar.py Painel_Central_….html` (reinjeta `scripts/painel/acervo-github.js` e regrava `painel.html`).
 
 ## Catálogo de acórdãos do TRF3
 
