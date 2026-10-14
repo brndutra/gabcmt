@@ -1,5 +1,16 @@
 # Histórico do banco de modelos
 
+## 2026-10-14 — matriz de 28,86% no formato nativo do workbench 38
+
+A matriz única de 28,86% passa ao formato de controvérsias do workbench 38: cada controvérsia é um parágrafo do subtópico Controvérsia (`controversia: true`), incluído um a um na Minuta, e os subtópicos e trechos vinculados (`cv`) entram e saem com ela.
+
+- C1 limitação territorial · C2 prescrição (versão “a”) ou prescrição e habilitação de herdeiros (versão “b”) · C3 acordo administrativo · C4 servidor representado por sindicato.
+- Citações marcadas com “> ” (saem recuadas). Fecho a cargo do app.
+- Situações específicas como subtópicos recuperáveis: Tema 1.433/STJ, ilegitimidade em contrarrazões, má-fé, gratuidade no adesivo, honorários pedidos pelo ente.
+- Dispositivo escolhido entre as versões, porque o vínculo `cv` não estabelece precedência entre controvérsias.
+- Em `scripts/workbench-controversias-numeradas.js`: controvérsias incluídas juntas saem numa só frase, “A controvérsia envolve discutir: (1) …; e (2) …”. Sem esse script, cada uma sai em parágrafo próprio.
+- Substitui o formato `_questoes` da versão anterior, que dependia de painel próprio no editor.
+
 ## 2026-10-14 — matriz de 28,86% por questões selecionáveis
 
 A matriz única de 28,86% deixa de ter hipóteses [A]/[B]/[C] escolhidas por cartões e passa a ser montada por **questões do caso** (`_questoes` no esqueleto), cada uma um item selecionável no painel “Questões do caso” do editor (workbench 31 + `scripts/workbench-questoes-do-caso.js`). Marcar uma questão a inclui, numerada, na frase da Controvérsia e liga os subtópicos e parágrafos a ela vinculados; desmarcar retira o que só ela usava.
