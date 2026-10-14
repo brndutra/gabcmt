@@ -1,5 +1,27 @@
 # Histórico do banco de modelos
 
+## 2026-10-14 — 28,86%: duas matrizes em vez de uma
+
+A análise dos seis votos-paradigma, com as questões marcadas por cor, levou a separar a matriz única em duas, por coerência lógica.
+
+**1. Abrangência territorial** (`par-matriz-2886-acp-cumprimento`) — cinco votos: 5003454, 5003797 e 5003544, providos; 5007937 e 5001115, desprovidos.
+- Os cinco votos têm o mesmo bloco de abrangência territorial (22 parágrafos idênticos). O que separa provimento de desprovimento é só a prova do acordo administrativo.
+- A controvérsia C1 tem três versões mutuamente exclusivas, todas com o texto dos próprios votos:
+  - “a”, limitação territorial;
+  - “b”, limitação territorial e acordo administrativo;
+  - “c”, a mesma da “b”, com recurso adesivo do ente.
+- Cada versão traz consigo as preliminares (Tema 1.433/STJ e ilegitimidade, só na “a”), os blocos e o dispositivo próprio, sem conflito.
+- C2 é a prescrição, com ou sem habilitação de herdeiros.
+- Não há redação nova: saíram as frases criadas para “acordo” e “sindicato”.
+
+**2. Exclusão subjetiva por ação coletiva sindical anterior** (`par-matriz-2886-acp-sindicato`, nova) — voto 5006675.
+- A questão determinante é outra, a exclusão pelo próprio título, e não a limitação geográfica.
+- O conhecimento é parcial justamente porque a questão territorial não é examinada. Fundida à primeira matriz, permitiria combinar o “conheço em parte” com o exame integral da abrangência territorial, o que é contraditório.
+
+Conferência: cada cenário reproduz o voto-fonte parágrafo a parágrafo. As diferenças são só os dados do caso (variáveis e campos), as escolhas de versão e dois ajustes deliberados:
+- a controvérsia passa a constar em 5003454, que fala em “a controvérsia” sem enunciá-la;
+- a habilitação de herdeiros fica uniforme entre a frase da controvérsia e o parágrafo da prescrição (5003797 e 5003454 divergiam).
+
 ## 2026-10-14 — matriz de 28,86% no formato nativo do workbench 38
 
 A matriz única de 28,86% passa ao formato de controvérsias do workbench 38: cada controvérsia é um parágrafo do subtópico Controvérsia (`controversia: true`), incluído um a um na Minuta, e os subtópicos e trechos vinculados (`cv`) entram e saem com ela.
