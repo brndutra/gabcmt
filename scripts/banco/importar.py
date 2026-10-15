@@ -13,9 +13,11 @@ Uso:
   espécie nos precedentes; sigla nas normas). Dois registros com a mesma chave natural e ids diferentes são
   reduzidos a um, prevalecendo o que veio por último, e o descarte é informado.
 - Acervo (gabA.acervo, exportado pelo Painel Central como acervo.json ou acervo.html): chave natural é o número
-  do processo; vale a versão mais recente de cada processo (campo atualizado_em). O saneamento é refeito aqui:
-  celulares, telefones, e-mails e CPF são removidos (o repositório é público). Processos sigilosos entram: as
-  informações sigilosas já vêm mascaradas (###) na planilha de origem.
+  do processo; vale a versão mais recente de cada processo (campo atualizado_em). Formato 2: espelho do painel —
+  cada processo com todas as colunas e o estado interno em "_", o estado geral em "painel" (vale o mais recente) e
+  a lista de colunas em "colunas"; grava também banco/acervo.csv (planilha com todas as colunas). O saneamento é
+  refeito aqui, em qualquer nível: celulares, telefones, e-mails e CPF são removidos (o repositório é público).
+  Processos sigilosos entram: as informações sigilosas já vêm mascaradas (###) na planilha de origem.
 - Ao final, atualiza as referências usadas pelo catálogo (scripts/catalogo/ref/banco-atual.json e assuntos.json)
   e grava banco/README.md com as contagens.
 """
@@ -40,11 +42,22 @@ DESCR = {
     "jurisprudencia": "Jurisprudência de referência (temas, súmulas, precedentes qualificados)",
     "assuntos": "Catálogo de assuntos (TPU/CNJ, seções e sinônimos)",
     "redacao": "Padrão de redação: conectivos, verbos, preferências, correções e alertas",
-    "acervo": "Acervo geral de processos do gabinete (Painel Central), saneado: sem celulares, e-mails e CPF",
+    "acervo": "Espelho do Painel Central (acervo, controles de trabalho, triagem e sessões), saneado: sem celulares, e-mails e CPF",
 }
-SANEAMENTO = ("Sem celulares, telefones, e-mails e CPF (repositório público). Processos sigilosos incluídos: "
-              "as informações sigilosas já vêm mascaradas (###) na planilha de origem.")
-SENSIVEL = re.compile(r"celular|telefone|fone|whats|e-?mail|cpf", re.I)
+SANEAMENTO = ("Espelho do Painel Central (dados e controles de trabalho). Sem celulares, telefones, e-mails e CPF "
+              "(repositório público). Processos sigilosos incluídos: as informações sigilosas já vêm mascaradas (###) "
+              "na planilha de origem.")
+SENSIVEL = re.compile(r"celular|telefone|fone|whats|e-?mail|cpf|token|senha|password", re.I)
+META_ACERVO = ("id", "processo", "atualizado_em", "_")
+
+
+def limpar(v):
+    """Cópia sem chaves sensíveis, em qualquer nível."""
+    if isinstance(v, dict):
+        return {k: limpar(x) for k, x in v.items() if not SENSIVEL.search(str(k))}
+    if isinstance(v, list):
+        return [limpar(x) for x in v]
+    return v
 SIGILO_CAMPO = re.compile(r"sigil|segredo", re.I)
 NAO = re.compile(r"^(0|n[aã]o|n|false|p[uú]blico|-)$", re.I)
 SIM = re.compile(r"^(sim|s|true|1|x)$", re.I)
@@ -71,10 +84,12 @@ def sanear_acervo(regs):
             fora.append(("sem processo", proc or "?"))
             continue
         o = {"id": "acv-" + dig, "processo": proc}
-        o.update({k: v for k, v in r.items() if k not in ("id", "processo", "Processo") and not k.startswith("_")
+        o.update({k: limpar(v) for k, v in r.items() if k not in ("id", "processo", "Processo") and not k.startswith("_")
                   and not SENSIVEL.search(k) and str(v if v is not None else "").strip() != ""})
-        if "atualizado_em" in o:
-            o["atualizado_em"] = o.pop("atualizado_em")
+        if isinstance(r.get("_"), dict):  # estado interno da linha (formato 2)
+            o["_"] = limpar({k: v for k, v in r["_"].items() if k not in ("_acervoSync", "_acervoHash", "_acervoPend")})
+        o.pop("atualizado_em", None)
+        o["atualizado_em"] = r.get("atualizado_em", "")
         limpos.append(o)
     return limpos, fora
 
@@ -150,13 +165,48 @@ def gravar(nome, regs, origem):
            "versao": origem.get("versao", date.today().isoformat()),
            "atualizado_em": origem.get("atualizado_em", date.today().isoformat()), "registros": regs}
     if nome == "acervo":  # um processo por linha: diffs legíveis e arquivo menor (mesmo formato do Painel Central)
-        obj = {**{k: v for k, v in obj.items() if k != "registros"}, "saneamento": SANEAMENTO, "registros": regs}
+        atual = carregar("acervo")
+        obj["schema_versao"] = max(int(origem.get("schema_versao", 1) or 1), int(atual.get("schema_versao", 1) or 1))
+        painel = max((p for p in (origem.get("painel"), atual.get("painel")) if isinstance(p, dict)),
+                     key=lambda p: str(p.get("atualizado_em") or ""), default=None)
+        colunas = colunas_acervo(regs, (origem.get("colunas") or []) + (atual.get("colunas") or []))
+        extra = {"colunas": colunas, **({"painel": limpar(painel)} if painel else {})}
+        obj = {**{k: v for k, v in obj.items() if k != "registros"}, "saneamento": SANEAMENTO, **extra, "registros": regs}
         cab = [f"  {json.dumps(k, ensure_ascii=False)}: {json.dumps(v, ensure_ascii=False)}" for k, v in obj.items() if k != "registros"]
         linhas = ["    " + json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in regs]
         texto = "{\n" + ",\n".join(cab) + ',\n  "registros": [\n' + ",\n".join(linhas) + ("\n" if linhas else "") + "  ]\n}\n"
         (BANCO / "acervo.json").write_text(texto, encoding="utf-8")
+        gravar_csv(regs, colunas)
         return
     (BANCO / f"{nome}.json").write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def colunas_acervo(regs, preferidas):
+    """Todas as colunas do Acervo Central: primeiro a ordem do painel, depois as demais encontradas nos registros."""
+    vistas = {k for r in regs for k in r if k not in META_ACERVO}
+    ordem = ["Processo", *preferidas, *sorted(vistas, key=sem_acento)]
+    saida, ja = [], set()
+    for k in ordem:
+        if k and k not in ja and not str(k).startswith("_") and not SENSIVEL.search(str(k)) and k not in META_ACERVO:
+            ja.add(k)
+            saida.append(k)
+    return saida
+
+
+def gravar_csv(regs, colunas):
+    """banco/acervo.csv: uma linha por processo, todas as colunas (o GitHub mostra como tabela)."""
+    import csv
+    import io
+    buf = io.StringIO()
+    w = csv.writer(buf, lineterminator="\r\n")
+    w.writerow([*colunas, "atualizado_em"])
+    for r in regs:
+        linha = []
+        for k in colunas:
+            v = (r.get("Processo") or r.get("processo")) if k == "Processo" else r.get(k, "")
+            linha.append(json.dumps(v, ensure_ascii=False) if isinstance(v, (dict, list)) else ("" if v is None else v))
+        w.writerow([*linha, r.get("atualizado_em", "")])
+    (BANCO / "acervo.csv").write_text(buf.getvalue(), encoding="utf-8")
 
 
 def ler_exportacao(arq):
@@ -205,8 +255,9 @@ def leia_me():
         nome = f.stem
         linhas.append(f"| [`{f.name}`]({f.name}) | {DESCR.get(nome, o.get('schema', ''))} | {len(o['registros'])} | {o.get('versao', '')} |")
     linhas += ["", "Para atualizar: exporte cada banco no app e rode `python3 scripts/construir.py ARQUIVOS.json`.",
-               "", "O acervo (`acervo.json`) é atualizado pelo próprio Painel Central (`painel.html`): cada importação de planilha "
-               "é encaminhada ao GitHub. Também aceita `python3 scripts/construir.py acervo.html` (ou `acervo.json`) exportado do painel. "
+               "", "O acervo (`acervo.json`, com a planilha `acervo.csv`) é o espelho do Painel Central (`painel.html`): todas as colunas "
+               "do Acervo Central, controles de trabalho, triagem, escaninhos, sessões e equipe, encaminhados ao GitHub ao SALVAR e após "
+               "cada importação. Também aceita `python3 scripts/construir.py acervo.html` (ou `acervo.json`) exportado do painel. "
                "Saneamento: sem celulares, telefones, e-mails e CPF; os sigilosos entram, já mascarados (###) na origem."]
     (BANCO / "README.md").write_text("\n".join(linhas) + "\n", encoding="utf-8")
 
@@ -226,7 +277,7 @@ def importar(arquivos, substituir=False):
             regs, fora = sanear_acervo(obj["registros"])
             if fora:
                 print(f"acervo: {len(fora)} registro(s) sem número de processo ignorado(s)")
-            lotes.append((nome, {**obj, "registros": regs}))
+            lotes.append((nome, {**obj, "registros": regs, **({"painel": limpar(obj["painel"])} if isinstance(obj.get("painel"), dict) else {})}))
         else:
             lotes.append((nome, obj))
     for nome, obj in lotes:

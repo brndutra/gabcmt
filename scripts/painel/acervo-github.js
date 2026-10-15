@@ -1,41 +1,45 @@
-/* Banco do Acervo Geral — brndutra/gabcmt · main · banco/acervo.json
+/* Banco do Acervo Geral — brndutra/gabcmt · main · banco/acervo.json (+ banco/acervo.csv)
    Injetado no Painel Central por scripts/painel/montar.py.
 
-   - Ao abrir o painel, lê banco/acervo.json e mescla no Acervo Central (cria o que falta; atualiza o que,
-     no banco, é mais recente que a cópia local; nunca apaga nada e nunca toca nos controles de trabalho).
-   - Cada importação de planilha (Acervo, Sigilosos, PJe 2G) marca os processos alterados e, se a opção
-     estiver ligada, encaminha o acervo ao GitHub: o banco passa a refletir a importação.
-   - Também importa/exporta o banco como arquivo: acervo.json (gabA.acervo) ou acervo.html (página
-     legível com o mesmo JSON embutido, reimportável aqui ou por scripts/construir.py).
-   - Saneamento (o repositório é público): os processos sigilosos entram, porque a planilha de origem já
-     mascara as informações sigilosas (###); celulares,
-     telefones, e-mails e CPF não entram. */
+   Formato 2 (espelho do painel): o banco guarda o Acervo Central como ele está no navegador —
+   - cada processo com TODAS as colunas (dados das planilhas e controles de trabalho: etiquetas atuais, Tema,
+     Especificidades, Síntese Processual, complexidade, servidor, regularidade, voto, seleção, pauta…) e, no campo
+     "_", o estado interno da linha (triagem, escaninho, ordem da seleção, participações em pauta, histórico,
+     intercorrências, etiquetas convertidas/removidas…);
+   - em "painel", o estado geral: sessões e seus marcos, equipe, calendário, escaninhos, configuração de colunas…;
+   - em "colunas", a lista completa das colunas do Acervo Central (é também o cabeçalho de banco/acervo.csv, a
+     planilha legível que o GitHub mostra como tabela).
+   Sincronização: cada edição salva carimba o processo (atualizado_em); ao SALVAR e após cada importação o painel
+   encaminha ao GitHub (um commit com acervo.json e acervo.csv); ao abrir, traz do GitHub o que for mais recente.
+   Por processo (e para o estado geral), prevalece a versão mais recente.
+   Saneamento (repositório público): campos de celular, telefone, e-mail e CPF não saem do navegador, em nenhum nível.
+   Os sigilosos entram: a planilha de origem já mascara as informações sigilosas (###). */
 (function () {
   "use strict";
   if (window.__acervoGitHub) return;
 
-  const GH = { dono: "brndutra", repo: "gabcmt", ramo: "main", pasta: "banco", arquivo: "acervo.json" };
-  const SCHEMA = "gabA.acervo";
-  const SANEAMENTO = "Sem celulares, telefones, e-mails e CPF (repositório público). Processos sigilosos incluídos: as informações sigilosas já vêm mascaradas (###) na planilha de origem.";
-  const LS_AUTO = "acv_gh_auto";
+  const GH = { dono: "brndutra", repo: "gabcmt", ramo: "main", pasta: "banco", arquivo: "acervo.json", planilha: "acervo.csv" };
+  const SCHEMA = "gabA.acervo", VERSAO = 2;
+  const SANEAMENTO = "Espelho do Painel Central (dados e controles de trabalho). Sem celulares, telefones, e-mails e CPF (repositório público). Processos sigilosos incluídos: as informações sigilosas já vêm mascaradas (###) na planilha de origem.";
+  const LS_AUTO = "acv_gh_auto", LS_PAINEL = "acv_gh_painel";
 
-  /* ---------- campos do banco: só os dados de origem do acervo, nunca os controles de trabalho ---------- */
+  /* ---------- campos ---------- */
+  /* formato 1 (antigo): só os dados de origem — usados para ler bancos anteriores */
   const ACERVO_COLUMNS = ["processo","classe_judicial","assunto_judicial","data_distribuição","tarefa_atual","data_entrada_tarefa","prioridade","etiquetas","polo_ativo","advogado_pa","polo_passivo","advogado_pp","dpu","mpf","valor_causa","ultimo_movimento","dt_distribuicao_1g","celular_pa","celular_pp"];
   const GAB_ACERVO_COLUMNS = ["Ano","Mês","Processo","Gabinete","Julgador_Colegiado","Data_Distribuição","Código_Classe","Classe","Código_Assunto_Principal","Assunto_Principal","Assuntos_do_Processo","Pendente_1Julgamento","Conclusão?","Data_Conclusão","Data_Fase","Fase","Complemento","Última_Movimentação","Data_Última_Movimentação","Tempo_de_Tramitação","Polo_Ativo","Polo_Passivo","Seção de Origem","Valor_da_Causa","etiquetas","tarefa_atual","DAT_FIM","NUM_CPF_MAGIST","SIN_PRAZO_LEGAL","SIN_SECRETARIA","SIN_CONTADORIA","SIN_REM_EXTERNA","SIN_UFOR","BASE","K_TEMPO"];
-  const EXTRAS = ["Consta_Acervo_Gab_A", "Assunto", "Etiquetas Originais"];
-  /* "etiquetas"/"Etiquetas" ficam de fora: as originais vão em "Etiquetas Originais"; as atuais são controle do painel */
-  const CAMPOS = new Set([...ACERVO_COLUMNS, ...GAB_ACERVO_COLUMNS, ...EXTRAS].filter(c => !/^etiquetas$/i.test(c)));
-  /* campos da planilha Gab A - Sigilosos (informações sigilosas já mascaradas com ### na origem) */
   const GAB_SIGILOSOS_COLUMNS = ["Ano","Mês","Processo","Gabinete","Julgador_Colegiado","Nível_Sigilo","Data_Distribuição","Tempo_Última_Movimentação","DAT_FIM","NUM_CPF_MAGIST","SIN_PEND_1JULG","SIN_CLS","SIN_PRAZO_LEGAL","SIN_SECRETARIA","SIN_CONTADORIA","SIN_REM_EXTERNA","SIN_UFOR","BASE","DES_ULTIMA_MOVIME_SIGILO","K_TEMPO"];
-  const CAMPOS_COMPLETO = new Set([...CAMPOS, ...GAB_SIGILOSOS_COLUMNS, "Consta_Acervo_Sigiloso"]);
-  const SENSIVEL = /celular|telefone|fone|whats|e-?mail|cpf/i;
-  const META = new Set(["id", "processo", "atualizado_em"]);
+  const CAMPOS_V1 = new Set([...ACERVO_COLUMNS, ...GAB_ACERVO_COLUMNS, ...GAB_SIGILOSOS_COLUMNS, "Consta_Acervo_Gab_A", "Consta_Acervo_Sigiloso", "Assunto", "Etiquetas Originais"].filter(c => !/^etiquetas$/i.test(c)));
+  const SENSIVEL = /celular|telefone|fone|whats|e-?mail|cpf|token|senha|password/i;
+  const META = new Set(["id", "processo", "atualizado_em", "_"]);
+  /* estado só deste navegador (nunca vai para o banco) */
+  const LOCAL = new Set(["_acervoSync", "_acervoHash", "_acervoPend"]);
 
   const txt = v => String(v == null ? "" : v).trim();
   const procId = v => txt(v).replace(/\D/g, "");
   const agora = () => new Date().toISOString();
   const esc = s => txt(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const sim = v => /^(sim|s|true|1|x)$/i.test(txt(v));
+  const vazio = v => v == null || (typeof v === "string" && v.trim() === "") || (Array.isArray(v) && !v.length) || (typeof v === "object" && !Array.isArray(v) && !(v instanceof Date) && !Object.keys(v).length);
 
   function sigiloso(r) {
     if (sim(r.Consta_Acervo_Sigiloso)) return true;
@@ -46,29 +50,62 @@
     }
     return false;
   }
-  function valorSimples(v) {
-    if (v == null) return "";
-    if (v instanceof Date) return isNaN(v) ? "" : v.toISOString().slice(0, 10);
-    if (typeof v === "object") return "";
-    return v;
+  /* cópia profunda sem chaves sensíveis (em qualquer nível) */
+  function limpar(v, completo) {
+    if (v == null) return v;
+    if (v instanceof Date) return isNaN(v) ? "" : v.toISOString();
+    if (v instanceof Set) return [...v].map(x => limpar(x, completo));
+    if (Array.isArray(v)) return v.map(x => limpar(x, completo));
+    if (typeof v === "object") { const o = {}; Object.keys(v).forEach(k => { if (!completo && SENSIVEL.test(k)) return; const x = limpar(v[k], completo); if (x !== undefined) o[k] = x; }); return o; }
+    if (typeof v === "function") return undefined;
+    return typeof v === "string" ? v : v;
   }
-  /* registro do banco a partir de uma linha do Acervo Central (sem o carimbo de data) */
-  function camposDe(r, completo) {
-    const o = {}, aceitos = CAMPOS_COMPLETO;
-    Object.keys(r).sort().forEach(k => {
-      if (k.startsWith("_") || k === "Processo" || !aceitos.has(k) || (!completo && SENSIVEL.test(k))) return;
-      const v = valorSimples(r[k]);
-      if (txt(v) === "") return;
-      o[k] = typeof v === "string" ? v.trim() : v;
-    });
-    return o;
-  }
+  /* registro do banco a partir de uma linha do Acervo Central: todas as colunas + estado interno em "_" */
   function registroDe(r, completo) {
     const proc = txt(r.Processo || r.processo), p = procId(proc);
     if (p.length < 15) return null;
-    return { id: "acv-" + p, processo: proc, ...camposDe(r, completo), atualizado_em: r._acervoSync || "" };
+    const o = { id: "acv-" + p, processo: proc }, interno = {};
+    Object.keys(r).sort().forEach(k => {
+      if (k === "Processo" || META.has(k) || LOCAL.has(k) || (!completo && SENSIVEL.test(k))) return;
+      const v = r[k]; if (v === undefined || typeof v === "function") return;
+      if (k.startsWith("_")) { interno[k] = limpar(v, completo); return; } // estado interno vai inteiro (inclusive listas vazias)
+      if (vazio(v)) return;
+      o[k] = typeof v === "string" ? v.trim() : limpar(v, completo);
+    });
+    if (Object.keys(interno).length) o._ = interno;
+    o.atualizado_em = r._acervoSync || "";
+    return o;
   }
-  function assinatura(r) { return JSON.stringify(camposDe(r)) + "|" + (sigiloso(r) ? "S" : ""); }
+  /* impressão digital da linha (para saber o que mudou desde a última sincronização) */
+  function fnv(s) { let h = 0x811c9dc5; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); } return (h >>> 0).toString(36) + ":" + s.length; }
+  const hashLinha = r => fnv(JSON.stringify(r, (k, v) => LOCAL.has(k) ? undefined : v instanceof Set ? [...v] : v));
+
+  /* ---------- estado geral do painel ---------- */
+  function painelDados(c) {
+    return limpar({
+      names: c.names, sessions: c.sessions, globalSettings: c.globalSettings, sessionDetails: c.sessionDetails, teamProfiles: c.teamProfiles,
+      subjectCatalog: c.subjectCatalog, subjectRamos: c.subjectRamos, subjectManual: c.subjectManual, assignmentRules: c.assignmentRules,
+      prePanelState: c._prePanelState, columnConfig: c.columnConfig, selectionLayoutVersion: 4,
+      centralKnownColumns: [...(c.centralKnownColumns || [])], gabSourceColumns: [...(c.gabSourceColumns || [])], deletedTags: c.deletedTags,
+      escaninhos: Array.isArray(c.escaninhos) ? c.escaninhos : []
+    });
+  }
+  const lerPainelLocal = () => { try { return JSON.parse(localStorage.getItem(LS_PAINEL) || "{}"); } catch (e) { return {}; } };
+  const gravarPainelLocal = v => { try { localStorage.setItem(LS_PAINEL, JSON.stringify(v)); } catch (e) {} };
+
+  /* ---------- colunas e planilha ---------- */
+  function colunasDe(c, regs) {
+    const vistas = new Set(); regs.forEach(r => Object.keys(r).forEach(k => { if (!META.has(k)) vistas.add(k); }));
+    const ordem = ["Processo", ...((c && c.columnConfig && c.columnConfig.central) || []), ...((c && c.centralKnownColumns) || []), ...[...vistas].sort((a, b) => a.localeCompare(b, "pt-BR"))];
+    return [...new Set(ordem)].filter(k => k && !k.startsWith("_") && !SENSIVEL.test(k) && !META.has(k));
+  }
+  function csv(doc) {
+    const cols = doc.colunas && doc.colunas.length ? doc.colunas : ["Processo"];
+    const cel = v => { let s = v == null ? "" : typeof v === "object" ? JSON.stringify(v) : String(v); return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+    const linhas = [[...cols, "atualizado_em"].map(cel).join(",")];
+    doc.registros.forEach(r => linhas.push([...cols.map(k => k === "Processo" ? (r.Processo || r.processo) : r[k]), r.atualizado_em].map(cel).join(",")));
+    return linhas.join("\r\n") + "\r\n";
+  }
 
   /* ---------- mescla (mesma regra de scripts/banco/importar.py) ---------- */
   function mesclar(remotos, locais, opts = {}) {
@@ -86,11 +123,11 @@
     const registros = [...mapa.values()].sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
     return { registros, novos, alterados };
   }
-  function documento(registros, base = {}) {
+  function documento(registros, extra = {}) {
     const t = agora();
-    return { schema: SCHEMA, schema_versao: 1, versao: t.slice(0, 10), atualizado_em: t, saneamento: SANEAMENTO, registros };
+    return { schema: SCHEMA, schema_versao: VERSAO, versao: t.slice(0, 10), atualizado_em: t, saneamento: SANEAMENTO, ...extra, registros };
   }
-  /* um registro por linha: diffs legíveis no GitHub e arquivo menor */
+  /* um registro por linha: diffs legíveis no GitHub */
   function serializar(doc) {
     const cab = Object.entries(doc).filter(([k]) => k !== "registros").map(([k, v]) => `  ${JSON.stringify(k)}: ${JSON.stringify(v)}`);
     const regs = doc.registros.map(r => "    " + JSON.stringify(r));
@@ -99,7 +136,6 @@
 
   /* ---------- leitura (pública) ---------- */
   const NO_SITE = /^https?:$/.test(location.protocol) && /(^|\.)github\.io$/i.test(location.hostname);
-  const apiUrl = () => `https://api.github.com/repos/${GH.dono}/${GH.repo}/contents/${GH.pasta}/${GH.arquivo}`;
   const FONTES = [
     ...(NO_SITE ? [() => `${GH.pasta}/${GH.arquivo}?t=${Date.now()}`] : []),
     () => `https://${GH.dono}.github.io/${GH.repo}/${GH.pasta}/${GH.arquivo}?t=${Date.now()}`,
@@ -128,15 +164,37 @@
     for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
     return btoa(s);
   }
-  async function api(opts = {}, accept = "application/vnd.github+json") {
-    const r = await fetch(apiUrl() + (opts.method ? "" : `?ref=${GH.ramo}&t=${Date.now()}`), {
+  async function gh(caminho, opts = {}, accept = "application/vnd.github+json") {
+    const url = `https://api.github.com/repos/${GH.dono}/${GH.repo}/${caminho}`;
+    const r = await fetch(url + (opts.method && opts.method !== "GET" ? "" : (url.includes("?") ? "&" : "?") + "t=" + Date.now()), {
       ...opts, cache: "no-store",
-      headers: { Accept: accept, Authorization: "Bearer " + TOKEN, "X-GitHub-Api-Version": "2022-11-28", ...(opts.headers || {}) }
+      headers: { Accept: accept, Authorization: "Bearer " + TOKEN, "X-GitHub-Api-Version": "2022-11-28", ...(opts.body ? { "Content-Type": "application/json" } : {}), ...(opts.headers || {}) }
     });
-    if (r.status === 404 && !opts.method) return null;
+    if (r.status === 404 && (!opts.method || opts.method === "GET")) return null;
     const corpo = accept.includes("raw") && r.ok ? await r.text() : await r.json().catch(() => ({}));
     if (!r.ok) { const e = new Error((corpo && corpo.message) || "HTTP " + r.status); e.status = r.status; throw e; }
     return corpo;
+  }
+  /* banco atual no GitHub, lido pela API (sem cache), para mesclar antes de gravar */
+  async function lerRemotoApi() {
+    const bruto = await gh(`contents/${GH.pasta}/${GH.arquivo}?ref=${GH.ramo}`, {}, "application/vnd.github.raw+json");
+    if (bruto == null) return { registros: [] };
+    try { return JSON.parse(bruto); } catch (e) { return { registros: [] }; }
+  }
+  /* um commit com vários arquivos (API Git Data: aceita arquivos grandes) */
+  async function commitar(arquivos, mensagem) {
+    const ref = await gh(`git/ref/heads/${GH.ramo}`); if (!ref) throw new Error(`ramo ${GH.ramo} não encontrado`);
+    const base = ref.object.sha, commit = await gh(`git/commits/${base}`);
+    const tree = [];
+    for (const [caminho, conteudo] of arquivos) {
+      const blob = await gh("git/blobs", { method: "POST", body: JSON.stringify({ content: b64(conteudo), encoding: "base64" }) });
+      tree.push({ path: caminho, mode: "100644", type: "blob", sha: blob.sha });
+    }
+    const arvore = await gh("git/trees", { method: "POST", body: JSON.stringify({ base_tree: commit.tree.sha, tree }) });
+    if (arvore.sha === commit.tree.sha) return null;
+    const novo = await gh("git/commits", { method: "POST", body: JSON.stringify({ message: mensagem, tree: arvore.sha, parents: [base] }) });
+    await gh(`git/refs/heads/${GH.ramo}`, { method: "PATCH", body: JSON.stringify({ sha: novo.sha, force: false }) });
+    return novo.sha;
   }
   function pedirToken(motivo) {
     return new Promise(res => {
@@ -148,9 +206,9 @@
         <div class="acv-acoes"><button type="button" data-n>Agora não</button><button type="submit" class="acv-pri">Encaminhar</button></div></form>`;
       document.body.appendChild(bg);
       const fim = v => { bg.remove(); res(v); };
-      bg.querySelector("[data-n]").onclick = () => fim("");
-      bg.addEventListener("mousedown", e => { if (e.target === bg) fim(""); });
-      bg.querySelector("form").onsubmit = e => { e.preventDefault(); const v = bg.querySelector("input").value.trim(); if (v) TOKEN = v; fim(v); };
+      bg.querySelector("[data-n]").onclick = () => { ST.recusado = true; fim(""); };
+      bg.addEventListener("mousedown", e => { if (e.target === bg) { ST.recusado = true; fim(""); } });
+      bg.querySelector("form").onsubmit = e => { e.preventDefault(); const v = bg.querySelector("input").value.trim(); if (v) { TOKEN = v; ST.recusado = false; } fim(v); };
       setTimeout(() => bg.querySelector("input").focus(), 30);
     });
   }
@@ -158,26 +216,44 @@
   /* ---------- ponte com o Painel Central ---------- */
   const comp = () => window.__painelCentralComponent;
   const pronto = c => c && Array.isArray(c.rows) && !c._exclusive && !(c.state && c.state.storageBusy);
-  const ST = { total: null, versao: "", lidoEm: "", erro: "", enviando: false, pendentes: 0, ultimoEnvio: "" };
+  const ST = { total: null, versao: "", lidoEm: "", erro: "", enviando: false, pendentes: 0, ultimoEnvio: "", recusado: false };
   function avisar(msg, tipo) { try { comp().notify(msg, tipo); } catch (e) { console.log("[acervo]", msg); } desenhar(); }
 
-  function locaisParaBanco(c) {
-    const regs = [], sigilosos = [];
+  /* carimbo: toda linha alterada desde a última leitura recebe atualizado_em = agora (roda a cada gravação do painel) */
+  function normalizar(c) { c.rows.forEach(r => { try { c.syncJudgment(r); r["Seção Competente"] = c.secaoCompetente(r); } catch (e) {} }); }
+  function carimbar(c) {
+    const t = agora(); let n = 0;
+    normalizar(c);
     c.rows.forEach(r => {
-      const p = procId(r.Processo || r.processo); if (p.length < 15) return;
-      const reg = registroDe(r); if (reg) regs.push(reg);
+      const h = hashLinha(r);
+      if (r._acervoHash === undefined) { r._acervoHash = h; return; }
+      if (r._acervoHash !== h) { r._acervoHash = h; r._acervoSync = t; r._acervoPend = true; }
+      if (r._acervoPend) n++;
     });
-    return { regs, sigilosos };
+    const pl = lerPainelLocal(), hp = fnv(JSON.stringify(painelDados(c)));
+    if (!pl.hash) gravarPainelLocal({ ...pl, hash: hp });
+    else if (pl.hash !== hp) gravarPainelLocal({ ...pl, hash: hp, sync: t, pend: true });
+    ST.pendentes = n + (lerPainelLocal().pend ? 1 : 0);
+    return ST.pendentes;
+  }
+  function locaisParaBanco(c) {
+    const regs = [];
+    c.rows.forEach(r => { const reg = registroDe(r); if (reg) regs.push(reg); });
+    return { regs, sigilosos: [] };
   }
 
-  /* aplica um registro do banco numa linha do painel, como faria a importação da planilha Acervo */
-  function aplicar(c, r, rec, completo) {
-    const aceitos = CAMPOS_COMPLETO;
-    Object.keys(rec).forEach(k => { if (!META.has(k) && aceitos.has(k) && (completo || !SENSIVEL.test(k)) && k !== "Etiquetas Originais") r[k] = rec[k]; });
+  /* aplica um registro do banco numa linha do painel */
+  function aplicarV1(c, r, rec, completo) {
+    Object.keys(rec).forEach(k => { if (!META.has(k) && CAMPOS_V1.has(k) && (completo || !SENSIVEL.test(k)) && k !== "Etiquetas Originais") r[k] = rec[k]; });
     try { c.applyCanonicalSource(r, rec, sigiloso(rec) ? "sigilosos" : "acervo"); } catch (e) { console.warn(e); }
     if (txt(rec["Etiquetas Originais"])) { try { c.setImportedTags(r, rec["Etiquetas Originais"], r._tagOriginalSource || "acervo"); } catch (e) { r["Etiquetas Originais"] = rec["Etiquetas Originais"]; } }
-    r._acervoSync = txt(rec.atualizado_em) || agora();
-    try { c.recompute(r); } catch (e) { console.warn(e); }
+  }
+  function aplicarV2(c, r, rec) {
+    // o registro do banco é a linha inteira: o que não veio nele fica vazio (exceto campos sensíveis, que nunca saem daqui)
+    Object.keys(r).forEach(k => { if (k === "Processo" || LOCAL.has(k) || SENSIVEL.test(k)) return; delete r[k]; });
+    Object.keys(rec).forEach(k => { if (!META.has(k)) r[k] = JSON.parse(JSON.stringify(rec[k])); });
+    if (rec._ && typeof rec._ === "object") Object.keys(rec._).forEach(k => { if (!LOCAL.has(k)) r[k] = JSON.parse(JSON.stringify(rec._[k])); });
+    r.Processo = txt(rec.processo) || r.Processo; if (!txt(r.processo)) r.processo = r.Processo;
   }
 
   /* mescla um documento gabA.acervo no Acervo Central */
@@ -186,27 +262,39 @@
     const regs = Array.isArray(doc) ? doc : (doc && Array.isArray(doc.registros) ? doc.registros : null);
     if (!regs) throw new Error("O arquivo não contém um banco gabA.acervo (lista \"registros\").");
     if (doc.schema && doc.schema !== SCHEMA) throw new Error(`Banco de outro tipo (${doc.schema}); esperado ${SCHEMA}.`);
-    const completo = !!(doc && doc.completo);
+    const completo = !!(doc && doc.completo), v2 = Number(doc && doc.schema_versao) >= 2;
     const mapa = new Map(c.rows.map(r => [procId(r.Processo || r.processo), r]).filter(x => x[0]));
-    let criados = 0, atualizados = 0, iguais = 0, ignorados = 0;
+    let criados = 0, atualizados = 0, iguais = 0, ignorados = 0, geral = false;
+    const tocados = [];
     for (const rec of regs) {
       const proc = txt(rec && (rec.processo || rec.Processo)), p = procId(proc);
       if (p.length < 15) { ignorados++; continue; }
       let r = mapa.get(p);
-      if (!r) {
-        r = c.ensureShape({ Processo: proc, processo: proc });
-        aplicar(c, r, rec, completo); c.rows.push(r); mapa.set(p, r); criados++;
-      } else if (txt(rec.atualizado_em) > txt(r._acervoSync)) {
-        const antes = assinatura(r); aplicar(c, r, rec, completo);
-        if (assinatura(r) !== antes) atualizados++; else iguais++;
-      } else iguais++;
+      const novo = !r;
+      if (!novo && !(txt(rec.atualizado_em) > txt(r._acervoSync))) { iguais++; continue; }
+      if (novo) { r = c.ensureShape({ Processo: proc, processo: proc }); c.rows.push(r); mapa.set(p, r); }
+      const antes = novo ? "" : hashLinha(r);
+      if (v2) aplicarV2(c, r, rec); else aplicarV1(c, r, rec, completo);
+      r._acervoSync = txt(rec.atualizado_em) || agora(); r._acervoPend = false;
+      tocados.push(r);
+      if (novo) criados++; else if (hashLinha(r) !== antes) atualizados++; else iguais++;
     }
-    if (criados || atualizados) {
+    // estado geral (sessões, equipe, escaninhos, calendário, colunas…): vale o mais recente
+    if (v2 && doc.painel && doc.painel.dados) {
+      const pl = lerPainelLocal();
+      if (txt(doc.painel.atualizado_em) > txt(pl.sync)) {
+        try { c.restoreSnapshot({ ...JSON.parse(JSON.stringify(doc.painel.dados)), rows: c.rows }); geral = true; } catch (e) { console.warn("[acervo] painel", e); }
+        gravarPainelLocal({ sync: doc.painel.atualizado_em, hash: fnv(JSON.stringify(painelDados(c))), pend: false });
+      }
+    }
+    if (criados || atualizados || geral) {
       c.rows = c.rows.map(r => c.ensureShape(r));
+      tocados.forEach(r => { try { c.recompute(r); } catch (e) {} r._acervoHash = hashLinha(r); });
+      if (geral) gravarPainelLocal({ ...lerPainelLocal(), hash: fnv(JSON.stringify(painelDados(c))) });
       await c.saveDB(); c.refresh();
-    }
-    const msg = `Banco do acervo (${origem}): ${criados} novo(s) · ${atualizados} atualizado(s) · ${iguais} já em dia` + (ignorados ? ` · ${ignorados} ignorado(s)` : "") + ".";
-    return { criados, atualizados, iguais, ignorados, msg };
+    } else tocados.forEach(r => { r._acervoHash = hashLinha(r); });
+    const msg = `Banco do acervo (${origem}): ${criados} novo(s) · ${atualizados} atualizado(s) · ${iguais} já em dia` + (ignorados ? ` · ${ignorados} ignorado(s)` : "") + (geral ? " · sessões, equipe, escaninhos e configurações atualizados" : "") + ".";
+    return { criados, atualizados, iguais, ignorados, geral, msg };
   }
 
   async function puxar(silencioso) {
@@ -215,7 +303,7 @@
       const doc = await lerPublico();
       ST.total = (doc.registros || []).length; ST.versao = doc.atualizado_em || doc.versao || ""; ST.lidoEm = agora();
       const r = await receber(doc, "GitHub");
-      if (!silencioso || r.criados || r.atualizados) avisar(r.msg, "ok"); else desenhar();
+      if (!silencioso || r.criados || r.atualizados || r.geral) avisar(r.msg, "ok"); else desenhar();
       return r;
     } catch (e) {
       ST.erro = e.message || String(e);
@@ -227,54 +315,68 @@
   async function encaminhar(opts = {}) {
     const c = comp(); if (!pronto(c)) return avisar("O painel ainda está carregando; tente de novo em instantes.", "warn");
     if (ST.enviando) return;
+    if (opts.silencioso && ST.recusado && !TOKEN) { desenhar(); return; }
     const tok = await pedirToken(opts.motivo); if (!tok) { desenhar(); return; }
     ST.enviando = true; desenhar();
     try {
-      for (let tentativa = 0; tentativa < 2; tentativa++) {
-        const meta = await api({}, "application/vnd.github.object+json");
-        let remoto = { registros: [] };
-        if (meta) { const bruto = await api({}, "application/vnd.github.raw+json"); try { remoto = JSON.parse(bruto); } catch (e) { remoto = { registros: [] }; } }
-        const { regs, sigilosos } = locaisParaBanco(c);
-        const agoraIso = agora();
-        regs.forEach(r => { if (!r.atualizado_em) r.atualizado_em = agoraIso; });
+      for (let tentativa = 0; tentativa < 3; tentativa++) {
+        carimbar(c);
+        const remoto = await lerRemotoApi();
+        // traz primeiro o que estiver mais recente no GitHub (outro computador), depois grava a união
+        if (Array.isArray(remoto.registros) && remoto.registros.length || remoto.painel) await receber(remoto, "GitHub");
+        carimbar(c);
+        const { regs } = locaisParaBanco(c), t = agora();
+        regs.forEach(r => { if (!r.atualizado_em) r.atualizado_em = t; });
         const remotos = Array.isArray(remoto.registros) ? remoto.registros : [];
-        const m = mesclar(remotos, regs, { substituir: !!opts.substituir, remover: sigilosos });
+        const m = mesclar(remotos, regs, { substituir: !!opts.substituir });
         const removidos = remotos.length + m.novos - m.registros.length;
-        if (JSON.stringify(m.registros) === JSON.stringify(remotos)) {
+        const pl = lerPainelLocal(), localPainel = { atualizado_em: pl.sync || t, dados: painelDados(c) };
+        const painel = remoto.painel && txt(remoto.painel.atualizado_em) > txt(localPainel.atualizado_em) ? remoto.painel : localPainel;
+        const doc = documento(m.registros, { colunas: colunasDe(c, m.registros), painel });
+        const igual = Number(remoto.schema_versao) >= VERSAO && JSON.stringify(m.registros) === JSON.stringify(remotos) && JSON.stringify(painel) === JSON.stringify(remoto.painel) && JSON.stringify(doc.colunas) === JSON.stringify(remoto.colunas);
+        if (igual) {
+          c.rows.forEach(r => { r._acervoPend = false; }); gravarPainelLocal({ ...lerPainelLocal(), pend: false });
           ST.total = remotos.length; ST.pendentes = 0;
-          avisar(`Nada a encaminhar: banco/acervo.json já está igual ao acervo deste painel (${remotos.length} processos).`, "ok");
+          if (!opts.silencioso) avisar(`Nada a encaminhar: o GitHub já está igual a este painel (${remotos.length} processos).`, "ok"); else desenhar();
           return;
         }
-        const doc = documento(m.registros);
-        try {
-          await api({ method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({
-            message: `Atualiza banco/acervo.json pelo Painel Central (${m.novos} novo(s), ${m.alterados} atualizado(s)${removidos > 0 ? `, ${removidos} removido(s)` : ""})`,
-            content: b64(serializar(doc)), branch: GH.ramo, ...(meta && meta.sha ? { sha: meta.sha } : {}) }) });
-        } catch (e) { if (e.status === 409 && tentativa === 0) continue; throw e; }
-        ST.total = m.registros.length; ST.versao = doc.atualizado_em; ST.pendentes = 0; ST.ultimoEnvio = agoraIso;
-        avisar(`Acervo encaminhado ao GitHub: ${m.novos} novo(s) · ${m.alterados} atualizado(s)${removidos > 0 ? ` · ${removidos} removido(s)` : ""} · ${m.registros.length} processos em banco/acervo.json (celulares, e-mails e CPF ficam de fora).`, "ok");
+        const msgCommit = `Painel Central: acervo e controles (${m.novos} novo(s), ${m.alterados} atualizado(s)${removidos > 0 ? `, ${removidos} removido(s)` : ""} · ${m.registros.length} processos)`;
+        try { await commitar([[`${GH.pasta}/${GH.arquivo}`, serializar(doc)], [`${GH.pasta}/${GH.planilha}`, csv(doc)]], msgCommit); }
+        catch (e) { if ([409, 422].includes(e.status) && tentativa < 2) continue; throw e; }
+        c.rows.forEach(r => { r._acervoPend = false; }); gravarPainelLocal({ ...lerPainelLocal(), pend: false });
+        ST.total = m.registros.length; ST.versao = doc.atualizado_em; ST.pendentes = 0; ST.ultimoEnvio = t;
+        avisar(`GitHub atualizado: ${m.novos} novo(s) · ${m.alterados} atualizado(s)${removidos > 0 ? ` · ${removidos} removido(s)` : ""} · ${m.registros.length} processos, ${doc.colunas.length} colunas, sessões e escaninhos (sem celulares, e-mails e CPF).`, "ok");
         return;
       }
     } catch (e) {
       if (e.status === 401 || e.status === 403) TOKEN = "";
-      avisar("Falha ao encaminhar o acervo ao GitHub: " + (e.message || e), "err");
+      avisar("Falha ao encaminhar ao GitHub: " + (e.message || e), "err");
     } finally { ST.enviando = false; desenhar(); }
   }
 
-  /* a importação de planilha passa a carimbar o que mudou e, se ligado, a encaminhar ao GitHub */
-  function envolverImportacao(c) {
+  /* gravações do painel carimbam o que mudou; SALVAR e importações encaminham ao GitHub */
+  function envolver(c) {
     if (!c || c.__acvEnvolvido) return;
-    const original = c.importTyped;
-    if (typeof original !== "function") return;
     c.__acvEnvolvido = true;
-    c.importTyped = async function (file, type) {
-      const antes = new Map(this.rows.map(r => [procId(r.Processo || r.processo), assinatura(r)]));
-      const ep = await original.call(this, file, type);
-      const t = agora(); let n = 0;
-      this.rows.forEach(r => { const p = procId(r.Processo || r.processo); if (p && antes.get(p) !== assinatura(r)) { r._acervoSync = t; n++; } });
-      if (n) { await this.saveDB(); ST.pendentes += n; desenhar(); if (autoLigado()) setTimeout(() => encaminhar({ motivo: `A importação alterou ${n} processo(s) do acervo.` }), 400); }
+    const saveDB = c.saveDB;
+    if (typeof saveDB === "function") c.saveDB = function (...a) { try { carimbar(this); desenhar(); } catch (e) { console.warn("[acervo] carimbo", e); } return saveDB.apply(this, a); };
+    const saveNow = c.saveNow;
+    if (typeof saveNow === "function") c.saveNow = async function (...a) {
+      const ok = await saveNow.apply(this, a);
+      if (ok && autoLigado() && ST.pendentes) setTimeout(() => encaminhar({ motivo: `Você salvou ${ST.pendentes} alteração(ões); encaminhe-as ao GitHub.`, silencioso: true }), 200);
+      return ok;
+    };
+    const importTyped = c.importTyped;
+    if (typeof importTyped === "function") c.importTyped = async function (...a) {
+      const ep = await importTyped.apply(this, a);
+      await this.saveDB(); desenhar();
+      if (ST.pendentes && autoLigado()) setTimeout(() => encaminhar({ motivo: `A importação alterou ${ST.pendentes} processo(s) do acervo.`, silencioso: true }), 400);
       return ep;
     };
+    // linha de base ao abrir: o que veio do banco local não é edição nova (preserva pendências ainda não enviadas)
+    normalizar(c); c.rows.forEach(r => { r._acervoHash = hashLinha(r); });
+    gravarPainelLocal({ ...lerPainelLocal(), hash: fnv(JSON.stringify(painelDados(c))) });
+    ST.pendentes = c.rows.filter(r => r._acervoPend).length + (lerPainelLocal().pend ? 1 : 0); desenhar();
   }
 
   /* ---------- arquivos: acervo.json e acervo.html ---------- */
@@ -284,10 +386,12 @@
   }
   function docLocal(completo) {
     const c = comp(); if (!pronto(c)) throw new Error("O painel ainda está carregando.");
-    const regs = completo ? c.rows.map(r => registroDe(r, true)).filter(Boolean) : locaisParaBanco(c).regs, t = agora();
+    carimbar(c);
+    const regs = c.rows.map(r => registroDe(r, !!completo)).filter(Boolean), t = agora();
     regs.forEach(r => { if (!r.atualizado_em) r.atualizado_em = t; });
-    const doc = documento(regs.sort((a, b) => a.id < b.id ? -1 : 1));
-    return doc;
+    regs.sort((a, b) => a.id < b.id ? -1 : 1);
+    const pl = lerPainelLocal();
+    return documento(regs, { ...(completo ? { completo: true } : {}), colunas: colunasDe(c, regs), painel: { atualizado_em: pl.sync || t, dados: limpar(painelDados(c), !!completo) } });
   }
   function paginaHtml(doc) {
     const comp_ = !!doc.completo;
@@ -334,7 +438,7 @@ ${linhas}
         const doc = docDeArquivo(await f.text(), f.name);
         const r = await receber(doc, f.name);
         avisar(r.msg, "ok");
-        if ((r.criados || r.atualizados) && autoLigado()) setTimeout(() => encaminhar({ motivo: `O arquivo ${f.name} alterou ${r.criados + r.atualizados} processo(s).` }), 400);
+        if ((r.criados || r.atualizados || r.geral) && autoLigado()) setTimeout(() => encaminhar({ motivo: `O arquivo ${f.name} alterou ${r.criados + r.atualizados} processo(s).`, silencioso: true }), 400);
       } catch (e) { avisar("Importação do banco do acervo: " + (e.message || e), "err"); }
     });
     inp.click();
@@ -387,11 +491,12 @@ ${linhas}
         <button type="button" class="acv-nav" data-a="enviar" ${ST.enviando ? "disabled" : ""} title="Gravar no GitHub o que mudou neste painel">${ST.enviando ? "ENCAMINHANDO…" : "⇡ ENCAMINHAR AO GITHUB"}</button>
         <button type="button" class="acv-pri" data-a="importar" title="Importar acervo.html ou acervo.json exportado por este painel">⇧ IMPORTAR .HTML / .JSON</button>
         <button type="button" data-a="json">⇩ EXPORTAR ACERVO.JSON</button>
+        <button type="button" data-a="csv">⇩ EXPORTAR ACERVO.CSV</button>
         <button type="button" data-a="html">⇩ EXPORTAR ACERVO.HTML</button>
         <button type="button" class="sub" data-a="substituir" ${ST.enviando ? "disabled" : ""}>Substituir o banco…</button>
       </div>
-      <label><input type="checkbox" data-a="auto" ${autoLigado() ? "checked" : ""}> Encaminhar ao GitHub após cada importação (planilhas Gab A, PJe 2G ou arquivo do banco)</label>
-      <div class="nota">Mescla por processo: o banco recebe o que é novo ou mais recente e nada apaga; os controles de trabalho do painel não saem daqui. ${esc(SANEAMENTO)}</div>`;
+      <label><input type="checkbox" data-a="auto" ${autoLigado() ? "checked" : ""}> Encaminhar ao GitHub ao clicar em SALVAR e após cada importação (planilhas Gab A, PJe 2G ou arquivo do banco)</label>
+      <div class="nota">O GitHub guarda o painel inteiro: todas as colunas do Acervo Central (também em banco/acervo.csv), controles de trabalho, triagem e escaninhos, Seleção Prévia e pauta, sessões, equipe e calendário. Mescla por processo e para o estado geral: prevalece a alteração mais recente; nada é apagado. Ao abrir, o painel traz do GitHub o que estiver mais novo. ${esc(SANEAMENTO)}</div>`;
     if (slot.dataset.pronto === "1" && html === ultimoHtml) return;
     slot.innerHTML = html; slot.dataset.pronto = "1"; ultimoHtml = html;
   }
@@ -401,6 +506,7 @@ ${linhas}
     if (acao === "puxar") puxar(false);
     else if (acao === "enviar") encaminhar({ motivo: "" });
     else if (acao === "importar") escolherArquivo();
+    else if (acao === "csv") { try { baixar("acervo.csv", "\ufeff" + csv(docLocal()), "text/csv;charset=utf-8"); } catch (er) { avisar(er.message, "err"); } }
     else if (acao === "json") { try { baixar("acervo.json", serializar(docLocal()), "application/json"); } catch (er) { avisar(er.message, "err"); } }
     else if (acao === "html") { try { baixar("acervo.html", paginaHtml(docLocal()), "text/html;charset=utf-8"); } catch (er) { avisar(er.message, "err"); } }
     else if (acao === "substituir") {
@@ -422,9 +528,8 @@ ${linhas}
   let iniciado = false;
   setInterval(() => {
     const c = comp(); if (!pronto(c)) return;
-    envolverImportacao(c);
-    if (!iniciado) { iniciado = true; setTimeout(() => puxar(true), 300); }
+    if (!iniciado) { iniciado = true; envolver(c); setTimeout(() => puxar(true), 300); }
   }, 400);
 
-  window.__acervoGitHub = { puxar, encaminhar, receber, docLocal, serializar, mesclar, registroDe, sigiloso, paginaHtml, docDeArquivo, estado: ST, GH };
+  window.__acervoGitHub = { puxar, encaminhar, receber, docLocal, serializar, mesclar, registroDe, sigiloso, paginaHtml, docDeArquivo, csv, carimbar, colunasDe, estado: ST, GH, token: v => { TOKEN = v; } };
 })();
