@@ -36,7 +36,7 @@
         const nova = () => {
           const pg = document.createElement("section"); pg.className = "pg"; pg.style.setProperty("--k", kf);
           const doc = document.createElement("div"); doc.className = "doc";
-          const topo = folhas.length ? [corrente.cloneNode(true)] : [banda.cloneNode(true), legenda.cloneNode(true)];
+          const topo = folhas.length ? [] : [banda.cloneNode(true), legenda.cloneNode(true)]; // a partir da 2ª folha, sem cabeçalho
           const lista = document.createElement("div"); lista.className = "lista";
           doc.append(...topo, ch.cloneNode(true), lista); pg.append(doc, rodape.cloneNode(true)); oficina.append(pg);
           const f = { pg, doc, lista }; folhas.push(f); return f;
