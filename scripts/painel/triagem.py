@@ -562,7 +562,8 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     if (restr && !obs.some(o => canon(o).includes(canon(restr)))) obs.push("⚠ " + (/impediment|suspei/i.test(restr) ? restr : "Impedimento/Suspeição: " + restr));
     return { item: item === undefined || item === null ? "" : item, processo: txt(r.Processo) || txt(r.processo), ind, indTxt: ind.map(b => b.s).join(" · "),
       assunto: this.cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal) || "—",
-      tema: this.triLista(r, "Tema").join(" · ") || txt(r.Tema) || "—", observacoes: obs.join("\n") || "—" };
+      tema: this.triLista(r, "Tema").join(" · ") || txt(r.Tema) || "—", especificidades: this.triLista(r, "Especificidades").join(" · "),
+      grupo: ["", "ai", "ed"][this.cardGrupo(r)] || "", observacoes: obs.join("\n") || "—" };
   }
   relOrdenarPorItem(linhas) {
     const n = v => { const x = parseFloat(String(v).replace(",", ".")); return isNaN(x) ? Infinity : x; };
@@ -574,6 +575,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     const sel = r => r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE";
     return this.relOrdenarPorItem(ord.map(({ r }) => this.relSimplesLinha(r, sel(r) ? this.itemDePauta(r) : pos.get(r))));
   }
+@@REL_IMPRIMIR@@
   imprimirRelacao(itens, titulo, sub) {
     if (!itens.length) return this.notify("Não há processos nesta relação.", "warn");
     const linhas = this.relSimples(itens), pauta = linhas.length && itens.every(({ r }) => r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE");
@@ -792,6 +794,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     };
   }
 '''
+METODOS = METODOS.replace("@@REL_IMPRIMIR@@", __import__('pathlib').Path(__file__).with_name("relacao_impressao.js").read_text(encoding="utf-8").rstrip("\n"))
 
 
 PATCHES = [
@@ -833,7 +836,7 @@ PATCHES = [
     ('this.downloadPautaBytes(this.pautaXlsxBytes(wb));this.notify("Pauta Simplificada baixada em Excel · "+rows.length+" processos.");',
      'if(arquivo)XLSX.writeFile(wb,arquivo);else this.downloadPautaBytes(this.pautaXlsxBytes(wb));this.notify((arquivo ? "Relação simplificada" : "Pauta Simplificada")+" baixada em Excel · "+rows.length+" processos · ordenada pelo item.");'),
     ('  printPautaSimplificada() {\n    const rows=this.simplifiedPautaRows();\n    if(!rows.length)return this.notify("Não há processos na Seleção Prévia para gerar a pauta simplificada.","warn");',
-     '  printPautaSimplificada(rowsIn, tituloIn, subIn, itemHead) {\n    const rows=Array.isArray(rowsIn) ? rowsIn : this.simplifiedPautaRows();\n    if(!rows.length)return this.notify("Não há processos nesta relação para gerar a versão de impressão.","warn");'),
+     '  printPautaSimplificada(rowsIn, tituloIn, subIn, itemHead) {\n    const rows=Array.isArray(rowsIn) ? rowsIn : this.simplifiedPautaRows();\n    if(!rows.length)return this.notify("Não há processos nesta relação para gerar a versão de impressão.","warn");\n    if(!Array.isArray(rowsIn)){const ss=[...new Set(this.effectivePre().map(({r})=>txt(r["Sessão Destino"])).filter(Boolean))];tituloIn=ss.map(n=>{const d=(this.sessionDetails[n]||{}).date;return n+(d&&n!==fmtBr(d)?" · "+fmtBr(d):"");}).join(" / ")||"Pauta simplificada";subIn="Seleção Prévia · pauta simplificada";itemHead="ITEM DE PAUTA";}\n    return this.relImprimirHtml(rows,tituloIn,subIn,itemHead);'),
     ("item = width * .05, remaining = Math.max(0, width - item - processWidth);", "item = width * .05, ind = width * .07, remaining = Math.max(0, width - item - ind - processWidth);"),
     ("const widths = [item, processWidth, remaining * 25 / 71, remaining * 20 / 71, remaining * 26 / 71];", "const widths = [item, processWidth, ind, remaining * 25 / 71, remaining * 20 / 71, remaining * 26 / 71];"),
     ("<title>Pauta simplificada — Seleção Prévia</title>", "<title>${esc(tituloIn || \"Pauta simplificada — Seleção Prévia\")}</title>"),
