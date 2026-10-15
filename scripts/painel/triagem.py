@@ -21,7 +21,7 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-band-topo{padding:13px 14px 10px;background:linear-gradient(180deg,#f6f7f9,#fff);border-bottom:1px solid #e3e7ec}
     .tri-band-topo input{margin-top:8px;width:100%;border:1px solid #e3e7ec;border-radius:10px;background:#eff1f4;color:#14263c;padding:8px 11px;font:inherit;font-size:12px;outline:none}
     .tri-band-topo input:focus{border-color:#1f3d63;background:#fff}
-    .tri-band-lista{max-height:calc(100vh - 300px);min-height:220px;overflow:auto;padding:10px 12px 12px;display:grid;gap:8px;align-content:start}
+    .tri-band-lista{max-height:calc(100vh - 330px);min-height:220px;overflow:auto;padding:10px 12px 12px;display:grid;gap:8px;align-content:start}
     .tri-ficha{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px;align-items:start;background:#fbfaf6;color:#1d2a38;border:1px solid #e1dccf;border-radius:8px;padding:9px 10px;cursor:grab}
     .tri-ficha::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;border-radius:0 3px 3px 0;background:#c9cfd8}
     .tri-ficha:hover{border-color:#c8c1ad}
@@ -30,6 +30,11 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-ficha .meta{font-size:11px;color:#56636f;margin-top:2px;line-height:1.35}
     .tri-tag{display:inline-block;font-size:9px;font-weight:850;letter-spacing:.03em;padding:2px 6px;border-radius:99px;background:#e9edf2;color:#33506e;margin:4px 4px 0 0}
     .tri-tag.ouro{background:#f7e7c4;color:#7a5512}
+    .tri-mover{display:flex;gap:6px;align-items:stretch;margin-top:8px}
+    .tri-mover select{flex:1;min-width:0;border:1px solid #d8dee5;border-radius:9px;background:#fff;padding:7px 8px;font:inherit;font-size:11px;font-weight:700;color:#14263c;outline:none;cursor:pointer}
+    .tri-mover-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;border:0;border-radius:9px;background:#d9a441;color:#33240a;padding:6px 11px;font-size:15px;line-height:1;cursor:pointer}
+    .tri-mover-btn b{font-size:10.5px;font-weight:900;background:rgba(51,36,10,.12);border-radius:99px;padding:2px 6px}
+    .tri-mover-btn:disabled{background:#e9edf2;color:#98a4b0;cursor:not-allowed}
     .tri-band-pe{display:flex;gap:6px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px 12px;border-top:1px solid #e3e7ec;font-size:11px;color:#6d7b8a}
     .tri-movel{position:relative;border-radius:16px;background:#fff;border:1px solid #e3e7ec;box-shadow:0 10px 30px rgba(20,38,60,.08);min-width:0;overflow:hidden}
     .tri-movel-topo{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:13px 14px 10px;background:linear-gradient(180deg,#f6f7f9,#fff);border-bottom:1px solid #e3e7ec;color:#14263c}
@@ -49,7 +54,7 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-capa{position:absolute;left:0;right:0;height:12px;border-radius:2px}
     .tri-contador{position:absolute;top:10px;right:10px;min-width:28px;height:24px;padding:0 8px;border-radius:99px;display:grid;place-items:center;background:#1f3d63;color:#fff;font-weight:900;font-size:12px}
     .tri-vazio-nicho{position:absolute;left:0;right:0;top:86px;text-align:center;color:#98a4b0;font-size:11px;font-weight:700}
-    .tri-placa{position:absolute;left:8px;right:8px;bottom:8px;height:42px;border-radius:8px;padding:6px 10px 5px 12px;background:#fff;border:1px solid #e3e7ec;border-left:4px solid #d9a441;color:#14263c}
+    .tri-placa{position:absolute;left:8px;right:8px;bottom:8px;height:42px;display:flex;flex-direction:column;justify-content:center;border-radius:8px;padding:4px 10px 4px 12px;background:#fff;border:1px solid #e3e7ec;border-left:4px solid #d9a441;color:#14263c}
     .tri-placa .t{display:block;font-weight:850;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .tri-placa .s{display:block;font-size:10px;font-weight:650;color:#6d7b8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .tri-bilhete{position:absolute;top:10px;left:10px;max-width:66%;padding:5px 8px;background:#fff4c2;border:1px solid #efdf94;color:#4a3d0f;font-size:9.5px;line-height:1.35;border-radius:6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap}
@@ -92,6 +97,13 @@ MARKUP = """
             <div class="tri-band-topo">
               <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:12.5px;font-weight:900;letter-spacing:.06em;color:#14263c">BANDEJA DA TRIAGEM</span><span style="font-size:10px;font-weight:800;color:#6d7b8a">{{ triBandejaCount }} na bandeja</span></div>
               <input value="{{ triSearch }}" sc-camel-on-input="{{ onTriSearch }}" placeholder="Buscar processo, classe, assunto, tarefa…" aria-label="Buscar na bandeja">
+              <div class="tri-mover">
+              <sc-raw-select value="{{ triTarget }}" sc-camel-on-change="{{ onTriTarget }}" aria-label="Escaninho de destino" title="Escaninho de destino">
+                <option value="">Escaninho de destino…</option>
+                <sc-for list="{{ triTargetOptions }}" as="o"><option value="{{ o.value }}">{{ o.label }}</option></sc-for>
+              </sc-raw-select>
+              <button class="tri-mover-btn" sc-camel-on-click="{{ triMoverMarcados }}" disabled="{{ triMoverOff }}" title="Mover os processos marcados para o escaninho escolhido" aria-label="Mover os processos marcados para o escaninho escolhido"><span aria-hidden="true">🗂</span><span aria-hidden="true" style="font-size:13px">➜</span><b>{{ triSelCount }}</b></button>
+            </div>
             </div>
             <div class="tri-band-lista">
               <sc-for list="{{ triFichas }}" as="p" hint-placeholder-count="4">
@@ -122,7 +134,7 @@ MARKUP = """
                   <span class="tri-contador">{{ e.count }}</span>
                   <span class="tri-pilha"><sc-for list="{{ e.layers }}" as="l"><span class="tri-folha" style="bottom:{{ l.b }}px"></span></sc-for><sc-if value="{{ e.hasCapa }}"><span class="tri-capa" style="background:{{ e.cor }};bottom:{{ e.capaB }}px"></span></sc-if></span>
                   <sc-if value="{{ e.vazio }}"><span class="tri-vazio-nicho">vazio · solte autos aqui</span></sc-if>
-                  <span class="tri-placa" style="border-left-color:{{ e.cor }}"><span class="t">{{ e.titulo }}</span><span class="s">{{ e.subLabel }}</span></span>
+                  <span class="tri-placa" style="border-left-color:{{ e.cor }}"><span class="t">{{ e.titulo }}</span><sc-if value="{{ e.hasSub }}"><span class="s">{{ e.subLabel }}</span></sc-if></span>
                 </button>
               </sc-for>
               <button class="tri-nicho novo" sc-camel-on-click="{{ newEscaninho }}"><span><span style="display:block;font-size:30px;line-height:1">+</span><span style="font-size:11px;font-weight:850;letter-spacing:.08em">NOVO ESCANINHO</span></span></button>
@@ -131,7 +143,7 @@ MARKUP = """
             <sc-if value="{{ triHasOpen }}" hint-placeholder-val="{{ false }}">
               <div class="tri-aberto" aria-label="Escaninho aberto">
                 <div class="tri-aberto-topo">
-                  <span class="tri-placa"><span class="t">{{ triOpenTitulo }}</span><span class="s">{{ triOpenSub }}</span></span>
+                  <span class="tri-placa"><span class="t">{{ triOpenTitulo }}</span><sc-if value="{{ triOpenHasSub }}"><span class="s">{{ triOpenSub }}</span></sc-if></span>
                   <span style="display:flex;gap:6px;flex-wrap:wrap"><button sc-camel-on-click="{{ triDevolverTodos }}" style="BTN_OURO">↩ Devolver todos à bandeja</button><button sc-camel-on-click="{{ triExcluir }}" style="BTN;color:#a64f35">Excluir escaninho</button><button sc-camel-on-click="{{ triRecolher }}" style="BTN">⌃ Recolher</button></span>
                 </div>
                 <div class="tri-aberto-corpo">
@@ -212,6 +224,16 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triBandejaVazia: !bandeja.length,
       triBandejaMsg: !all.length ? "Nenhum processo na triagem. No Acervo Central, marque processos, escolha “Triagem Processual” no seletor de sessão destino e clique em ENCAMINHAR." : q ? "Nenhuma ficha corresponde à busca." : "Bandeja vazia — tudo guardado nos escaninhos.",
       triTruncated: bandeja.length > LIM, triTruncMsg: `Mostrando ${LIM} de ${bandeja.length} fichas — refine pela busca. “Marcar todos” marca as ${bandeja.length}.`,
+      triTarget: ids.has(s.triTarget) ? s.triTarget : (aberto ? aberto.id : ""), onTriTarget: e => self.setState({ triTarget: e.target.value }),
+      triTargetOptions: escs.map(e => ({ key: e.id, value: e.id, label: "🗂 " + e.titulo + " (" + (count.get(e.id) || 0) + ")" })),
+      triMoverOff: !marcados || !escs.length,
+      triMoverMarcados: () => {
+        const alvo = ids.has(s.triTarget) ? s.triTarget : (aberto ? aberto.id : "");
+        if (!escs.length) return self.notify("Crie um escaninho primeiro (+ Novo escaninho).", "warn");
+        if (!alvo) return self.notify("Escolha o escaninho de destino.", "warn");
+        if (!self.triSel.size) return self.notify("Marque pelo menos uma ficha da bandeja.", "warn");
+        self.triGuardar([...self.triSel], alvo);
+      },
       triSelCount: marcados, triClearFg: marcados ? "#a5730f" : "#6d7b8a",
       triSelectAll: () => { bandeja.forEach(({r}) => self.triSel.add(procId(r.Processo))); self.refresh(); },
       triClearSel: () => { self.triSel.clear(); self.refresh(); },
@@ -223,7 +245,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triFiltros: [["todos","Todos"],["cheios","Com processos"],["vazios","Vazios"]].map(([k, l]) => ({ key: k, label: l, cls: filtro === k ? "on" : "", pick: () => self.setState({ triFiltro: k }) })),
       triDica: marcados ? `${marcados} ficha(s) marcada(s) — clique no escaninho de destino para guardá-las.` : "Marque fichas na bandeja e clique num escaninho — ou arraste as fichas até ele. Clique num escaninho para abri-lo.",
       triEscaninhos: lista.map(e => { const n = count.get(e.id) || 0, cam = n ? Math.min(6, 1 + Math.ceil(Math.log2(n + 1) * 1.6)) : 0; return {
-        key: e.id, titulo: e.titulo, subLabel: txt(e.subtitulo) || "—", obs: e.obs || "", hasObs: !!txt(e.obs), count: n, cor: e.cor, vazio: !n,
+        key: e.id, titulo: e.titulo, subLabel: txt(e.subtitulo), hasSub: !!txt(e.subtitulo), obs: e.obs || "", hasObs: !!txt(e.obs), count: n, cor: e.cor, vazio: !n,
         layers: Array.from({ length: cam }, (_, k) => ({ key: k, b: k * 7 })), hasCapa: !!n, capaB: cam * 7,
         cls: [aberto && aberto.id === e.id ? "aberto" : "", marcados ? "pronto" : ""].join(" "),
         aria: `Escaninho ${e.titulo}, ${n} processo(s)`, title: marcados ? `Guardar ${marcados} ficha(s) aqui` : "Abrir escaninho",
@@ -231,7 +253,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       }; }),
       newEscaninho: () => { const id = "esc_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); self.escaninhos.push({ id, titulo: "Novo escaninho", subtitulo: "", obs: "", cor: PAL[self.escaninhos.length % PAL.length], criado: new Date().toISOString().slice(0,10) }); self.setState({ triOpen: id, triFiltro: "todos" }); salvar("Escaninho criado — dê um título à placa."); },
       triHasOpen: !!aberto,
-      triOpenTitulo: aberto ? aberto.titulo : "", triOpenSubRaw: aberto ? aberto.subtitulo || "" : "", triOpenSub: aberto ? (txt(aberto.subtitulo) || "sem subtítulo") : "",
+      triOpenTitulo: aberto ? aberto.titulo : "", triOpenSubRaw: aberto ? aberto.subtitulo || "" : "", triOpenSub: aberto ? txt(aberto.subtitulo) : "", triOpenHasSub: !!(aberto && txt(aberto.subtitulo)),
       triOpenObs: aberto ? aberto.obs || "" : "", triOpenCriado: aberto ? fmtD(aberto.criado) : "", triOpenCount: aberto ? count.get(aberto.id) || 0 : 0,
       onTriTitulo: e => { if (!aberto) return; aberto.titulo = e.target.value || "Sem título"; self.saveDeb(); self.refresh(); },
       onTriSub: e => { if (!aberto) return; aberto.subtitulo = e.target.value; self.saveDeb(); self.refresh(); },
