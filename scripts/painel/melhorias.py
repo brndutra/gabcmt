@@ -225,6 +225,16 @@ def ajustar_planejamento(template: str) -> str:
     pasta = Path(__file__).parent
     css = (pasta / "selecao_compacta.css").read_text(encoding="utf-8")
     js = (pasta / "selecao_compacta.js").read_text(encoding="utf-8").replace("</script", "<\\/script")
+    # sem clarão: antes de qualquer pintura, as camadas legadas ficam ocultas e a página só aparece após o 1º desenho
+    guarda = ("<style id=\"sp2-guarda\">#selection-planning-frame{display:none!important}"
+              "html:not(.sp2-classico) #controle-pauta-root{display:none!important}"
+              "html:not(.sp2-pronto) body{visibility:hidden}</style>"
+              "<script>setTimeout(function(){var h=document.documentElement;if(!h.classList.contains('sp2-pronto'))"
+              "h.classList.add('sp2-pronto','sp2-classico');},5000);</script>")
+    fim_head = pre.find("</head>")
+    if fim_head < 0:
+        raise SystemExit("melhorias/planejamento: </head> não encontrado na Seleção Prévia.")
+    pre = pre[:fim_head] + guarda + pre[fim_head:]
     fim_body = pre.rindex("</body>")
     pre = pre[:fim_body] + "<style id=\"sp2-css\">" + css + "</style><script>" + js + "</script>" + pre[fim_body:]
     b64 = base64.b64encode(gzip.compress(pre.encode("utf-8"), 9)).decode()

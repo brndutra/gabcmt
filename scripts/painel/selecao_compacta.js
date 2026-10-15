@@ -141,7 +141,9 @@
     cab.hidden = !c; cap.hidden = !c; corpo.hidden = !c; barraClassica.hidden = c;
     if (classico) classico.style.display = c ? "none" : "";
     if (plano) plano.style.display = "none";
+    document.documentElement.classList.toggle("sp2-classico", !c);
     if (c) render();
+    requestAnimationFrame(() => { document.documentElement.classList.add("sp2-pronto"); ajustarAltura(); });
   }
 
   // ------------------------------------------------------------------ desenho
@@ -553,11 +555,18 @@
   }
 
   // ------------------------------------------------------------------ ciclo
-  const iniciar = setInterval(() => { try { if (montar()) clearInterval(iniciar); } catch (e) { console.warn("[sp2]", e); } }, 200);
+  const tentar = () => { try { return montar(); } catch (e) { console.warn("[sp2]", e); return false; } };
+  if (!tentar()) { const iniciar = setInterval(() => { if (tentar()) clearInterval(iniciar); }, 25); }
   setInterval(() => {
     try { if (!cab || modoAtual !== "compacto" || arrastando || emEdicao()) return; if (assinar() !== assinatura) render(); } catch (e) {}
   }, 700);
-  const ajustarAltura = () => { const f = window.frameElement; if (!f) return; const h = Math.ceil(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.getBoundingClientRect().height)); if (Math.abs((parseFloat(f.style.height) || 0) - h) > 2) { f.style.height = h + "px"; f.style.maxHeight = "none"; f.style.minHeight = "0"; } };
+  // altura pelo conteúdo real (documentElement.scrollHeight nunca fica abaixo da altura do próprio iframe: só cresceria)
+  function alturaConteudo() {
+    const b = document.body, y = window.scrollY; let fim = 0;
+    for (const el of b.children) { if (el.tagName === "SCRIPT" || el.tagName === "STYLE") continue; const r = el.getBoundingClientRect(); if (r.height || r.width) fim = Math.max(fim, r.bottom + y + (parseFloat(getComputedStyle(el).marginBottom) || 0)); }
+    return fim + (parseFloat(getComputedStyle(b).paddingBottom) || 0) + (parseFloat(getComputedStyle(b).marginBottom) || 0);
+  }
+  function ajustarAltura() { const f = window.frameElement; if (!f || !document.body) return; const h = Math.ceil(Math.max(alturaConteudo(), 200)); if (Math.abs((parseFloat(f.style.height) || 0) - h) > 2) { f.style.height = h + "px"; f.style.maxHeight = "none"; f.style.minHeight = "0"; } }
   try { new ResizeObserver(ajustarAltura).observe(document.body); } catch (e) {} setInterval(ajustarAltura, 800);
   window.SelecaoCompacta = { render: () => render(), estado: st, modo: m => aplicarModo(m), moverEtapa };
 })();
