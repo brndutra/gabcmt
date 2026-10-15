@@ -237,3 +237,4 @@
 .sp-cap-nota{margin:0;padding:9px 14px 12px;font-size:10.5px;line-height:1.5;color:var(--sp-suave);border-top:1px solid var(--sp-linha)}
 .sp-cap-nota b{color:var(--sp-tinta)}
 @media(max-width:1100px){.sp-construtor{grid-template-columns:minmax(0,1fr)}.sp-cons-col{height:auto}.sp-vals{max-height:180px}.sp-cons-col textarea{min-height:70px}}
+.sp-cap-barra input.sp-ro{background:#f4f6f9;color:var(--sp-suave);cursor:default}

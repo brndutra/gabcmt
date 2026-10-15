@@ -83,9 +83,9 @@
   /* ---------- estado geral do painel ---------- */
   function painelDados(c) {
     return limpar({
-      names: c.names, sessions: c.sessions, globalSettings: c.globalSettings, sessionDetails: c.sessionDetails, teamProfiles: c.teamProfiles,
+      sessionDetails: c.sessionDetails,
       subjectCatalog: c.subjectCatalog, subjectRamos: c.subjectRamos, subjectManual: c.subjectManual, assignmentRules: c.assignmentRules,
-      prePanelState: c._prePanelState, columnConfig: c.columnConfig, selectionLayoutVersion: 4,
+      prePanelState: { ...(c._prePanelState || {}), calendar: undefined }, columnConfig: c.columnConfig, selectionLayoutVersion: 4,
       centralKnownColumns: [...(c.centralKnownColumns || [])], gabSourceColumns: [...(c.gabSourceColumns || [])], deletedTags: c.deletedTags,
       escaninhos: Array.isArray(c.escaninhos) ? c.escaninhos : []
     });
@@ -200,8 +200,8 @@
     return new Promise(res => {
       if (TOKEN) { res(TOKEN); return; }
       const bg = document.createElement("div"); bg.className = "acv-modal";
-      bg.innerHTML = `<form class="acv-box"><h3>Encaminhar o acervo ao GitHub</h3>
-        <p>${esc(motivo || "")} Informe um <b>token de acesso do GitHub</b> com permissão <i>Contents: leitura e escrita</i> em <code>${GH.dono}/${GH.repo}</code>. Ele fica só na memória desta aba e some ao fechá-la.</p>
+      bg.innerHTML = `<form class="acv-box"><h3>Gravar no repositório do gabinete</h3>
+        <p>${esc(motivo || "")} Informe o <b>token de acesso</b> do repositório do gabinete (permissão de leitura e escrita de conteúdo). Ele fica só na memória desta aba e some ao fechá-la.</p>
         <input type="password" autocomplete="off" placeholder="github_pat_…" required>
         <div class="acv-acoes"><button type="button" data-n>Agora não</button><button type="submit" class="acv-pri">Encaminhar</button></div></form>`;
       document.body.appendChild(bg);
@@ -283,7 +283,13 @@
     if (v2 && doc.painel && doc.painel.dados) {
       const pl = lerPainelLocal();
       if (txt(doc.painel.atualizado_em) > txt(pl.sync)) {
-        try { c.restoreSnapshot({ ...JSON.parse(JSON.stringify(doc.painel.dados)), rows: c.rows }); geral = true; } catch (e) { console.warn("[acervo] painel", e); }
+        try {
+          const d = JSON.parse(JSON.stringify(doc.painel.dados));
+          // sessões, equipe e calendário não vêm daqui: são do arquivo do gabinete
+          c.restoreSnapshot({ ...d, rows: c.rows, names: c.names, sessions: c.sessions, globalSettings: c.globalSettings, teamProfiles: c.teamProfiles, prePanelState: { ...(d.prePanelState || {}), calendar: (c._prePanelState || {}).calendar } });
+          if (GST.doc) impor(c, GST.doc);
+          geral = true;
+        } catch (e) { console.warn("[acervo] painel", e); }
         gravarPainelLocal({ sync: doc.painel.atualizado_em, hash: fnv(JSON.stringify(painelDados(c))), pend: false });
       }
     }
@@ -302,12 +308,12 @@
     try {
       const doc = await lerPublico();
       ST.total = (doc.registros || []).length; ST.versao = doc.atualizado_em || doc.versao || ""; ST.lidoEm = agora();
-      const r = await receber(doc, "GitHub");
+      const r = await receber(doc, "repositório");
       if (!silencioso || r.criados || r.atualizados || r.geral) avisar(r.msg, "ok"); else desenhar();
       return r;
     } catch (e) {
       ST.erro = e.message || String(e);
-      if (!silencioso) avisar("Banco do acervo no GitHub: " + ST.erro, "warn"); else desenhar();
+      if (!silencioso) avisar("Banco do acervo no repositório: " + ST.erro, "warn"); else desenhar();
       return null;
     }
   }
@@ -323,7 +329,7 @@
         carimbar(c);
         const remoto = await lerRemotoApi();
         // traz primeiro o que estiver mais recente no GitHub (outro computador), depois grava a união
-        if (Array.isArray(remoto.registros) && remoto.registros.length || remoto.painel) await receber(remoto, "GitHub");
+        if (Array.isArray(remoto.registros) && remoto.registros.length || remoto.painel) await receber(remoto, "repositório");
         carimbar(c);
         const { regs } = locaisParaBanco(c), t = agora();
         regs.forEach(r => { if (!r.atualizado_em) r.atualizado_em = t; });
@@ -337,7 +343,7 @@
         if (igual) {
           c.rows.forEach(r => { r._acervoPend = false; }); gravarPainelLocal({ ...lerPainelLocal(), pend: false });
           ST.total = remotos.length; ST.pendentes = 0;
-          if (!opts.silencioso) avisar(`Nada a encaminhar: o GitHub já está igual a este painel (${remotos.length} processos).`, "ok"); else desenhar();
+          if (!opts.silencioso) avisar(`Nada a encaminhar: o repositório já está igual a este painel (${remotos.length} processos).`, "ok"); else desenhar();
           return;
         }
         const msgCommit = `Painel Central: acervo e controles (${m.novos} novo(s), ${m.alterados} atualizado(s)${removidos > 0 ? `, ${removidos} removido(s)` : ""} · ${m.registros.length} processos)`;
@@ -345,13 +351,113 @@
         catch (e) { if ([409, 422].includes(e.status) && tentativa < 2) continue; throw e; }
         c.rows.forEach(r => { r._acervoPend = false; }); gravarPainelLocal({ ...lerPainelLocal(), pend: false });
         ST.total = m.registros.length; ST.versao = doc.atualizado_em; ST.pendentes = 0; ST.ultimoEnvio = t;
-        avisar(`GitHub atualizado: ${m.novos} novo(s) · ${m.alterados} atualizado(s)${removidos > 0 ? ` · ${removidos} removido(s)` : ""} · ${m.registros.length} processos, ${doc.colunas.length} colunas, sessões e escaninhos (sem celulares, e-mails e CPF).`, "ok");
+        avisar(`Repositório atualizado: ${m.novos} novo(s) · ${m.alterados} atualizado(s)${removidos > 0 ? ` · ${removidos} removido(s)` : ""} · ${m.registros.length} processos, ${doc.colunas.length} colunas, sessões e escaninhos (sem celulares, e-mails e CPF).`, "ok");
         return;
       }
     } catch (e) {
       if (e.status === 401 || e.status === 403) TOKEN = "";
-      avisar("Falha ao encaminhar ao GitHub: " + (e.message || e), "err");
+      avisar("Falha ao gravar no repositório: " + (e.message || e), "err");
     } finally { ST.enviando = false; desenhar(); }
+  }
+
+  /* ================= Gabinete: sessões, calendário e equipe vêm do repositório (banco/gabinete.json) =================
+     O painel só lê: as abas de configuração ficam em modo consulta. Exceção: início da produção, entrega das minutas
+     e liberação, alterados na Seleção Prévia, são gravados no repositório na hora. */
+  const GAB = { arquivo: "gabinete.json", schema: "gabA.gabinete" };
+  const MARCOS_EDITAVEIS = ["prepStart", "minutasDeadline", "releaseDeadline"];
+  const MARCOS = ["date", "pautaDeadline", "prepStart", "minutasDeadline", "releaseDeadline", "minutasMode", "releaseMode", "gabinete", "observations"];
+  const LOCAL_SERVIDOR = ["profile", "logs", "daily", "personal", "photo"];
+  const GST = { doc: null, versao: "", lidoEm: "", erro: "", enviando: false, aplicando: false, pendente: null };
+  let applyOriginal = null;
+  async function lerGabinetePublico() {
+    let ult = "";
+    for (const f of [() => `${GH.pasta}/${GAB.arquivo}?t=${Date.now()}`, () => `https://${GH.dono}.github.io/${GH.repo}/${GH.pasta}/${GAB.arquivo}?t=${Date.now()}`, () => `https://raw.githubusercontent.com/${GH.dono}/${GH.repo}/${GH.ramo}/${GH.pasta}/${GAB.arquivo}?t=${Date.now()}`, () => `https://cdn.jsdelivr.net/gh/${GH.dono}/${GH.repo}@${GH.ramo}/${GH.pasta}/${GAB.arquivo}`]) {
+      if (f === undefined) continue;
+      try { const u = f(); if (!/^https?:/.test(u) && !NO_SITE) continue; const r = await fetch(u, { cache: "no-store" }); if (!r.ok) { ult = r.status === 404 ? "arquivo do gabinete ainda não existe" : "HTTP " + r.status; continue; } return await r.json(); } catch (e) { ult = e.message || "rede bloqueada"; }
+    }
+    throw new Error(ult || "sem acesso");
+  }
+  const servidorPublico = m => { const o = {}; Object.keys(m || {}).forEach(k => { if (!LOCAL_SERVIDOR.includes(k) && !SENSIVEL.test(k)) o[k] = limpar(m[k]); }); if (Array.isArray(o.absences)) o.absences = o.absences.map(a => ({ from: a.from || a.start || "", to: a.to || a.end || "", ...(a.type ? { type: a.type } : {}), ...(a.kind ? { kind: a.kind } : {}) })); return o; };
+  /* configuração global do painel com os dados do repositório por cima (preserva o que é só deste navegador) */
+  function configComGabinete(c, doc) {
+    const cfg = c.globalConfigSnapshot(), sd = {};
+    const sessoes = (doc.sessoes || []).map(s => s && (s.nome || s.name)).filter(Boolean);
+    sessoes.forEach(nome => { const s = doc.sessoes.find(x => (x.nome || x.name) === nome) || {}; const base = cfg.sessionDetails[nome] || {}; sd[nome] = { ...base }; MARCOS.forEach(k => { sd[nome][k] = s[k] == null ? "" : s[k]; }); });
+    const equipe = doc.equipe || {}, locais = (cfg.team && cfg.team.members) || [];
+    const membros = (doc.servidores || []).map(m => { const l = locais.find(x => x.id === m.id) || locais.find(x => String(x.name).toLowerCase() === String(m.name).toLowerCase()) || {}; const o = { ...m }; LOCAL_SERVIDOR.forEach(k => { if (l[k] !== undefined) o[k] = l[k]; }); if (!Array.isArray(o.functions)) o.functions = []; if (!Array.isArray(o.absences)) o.absences = []; return o; });
+    return { ...cfg, sessions: sessoes, sessionDetails: sd, workCalendar: { weekdays: (doc.calendario && doc.calendario.weekdays) || [1, 2, 3, 4, 5], excluded: (doc.calendario && doc.calendario.excluded) || [] },
+      names: [...new Set([...(doc.nomes || []), ...membros.map(m => m.name)])], team: { ...(cfg.team || {}), ...equipe, members: membros, catalog: equipe.catalog || (cfg.team && cfg.team.catalog) || [], subjects: equipe.subjects || (cfg.team && cfg.team.subjects) || [] } };
+  }
+  function impor(c, doc) {
+    if (!doc || !c || GST.aplicando) return false;
+    GST.aplicando = true;
+    try { (applyOriginal || c.applyGlobalConfig).call(c, configComGabinete(c, doc)); return true; }
+    catch (e) { GST.erro = "configuração do gabinete inválida: " + (e.message || e); console.warn("[gabinete]", e); return false; }
+    finally { GST.aplicando = false; }
+  }
+  function sincronizarConfiguracoes() { try { const f = document.getElementById("global-config-frame"), app = f && f.contentWindow && f.contentWindow.PautaApp; if (app && app._configModalOpen && app.loadDB) app.loadDB(); } catch (e) {} }
+  async function puxarGabinete(silencioso) {
+    const c = comp(); GST.erro = "";
+    try {
+      const doc = await lerGabinetePublico();
+      if (doc.schema && doc.schema !== GAB.schema) throw new Error(`arquivo de outro tipo (${doc.schema})`);
+      GST.doc = doc; GST.versao = doc.atualizado_em || ""; GST.lidoEm = agora();
+      if (pronto(c) && impor(c, doc)) { sincronizarConfiguracoes(); if (!silencioso) avisar(`Sessões, calendário e equipe atualizados conforme o repositório (${(doc.sessoes || []).length} sessões, ${(doc.servidores || []).length} servidores).`, "ok"); }
+      return doc;
+    } catch (e) { GST.erro = e.message || String(e); if (!silencioso) avisar("Configurações do gabinete: " + GST.erro, "warn"); return null; }
+    finally { desenhar(); }
+  }
+  /* marcos editáveis na Seleção Prévia: grava no repositório assim que mudam */
+  function marcosAlterados(c) {
+    const doc = GST.doc; if (!doc || !Array.isArray(doc.sessoes)) return [];
+    const mud = [];
+    doc.sessoes.forEach(s => { const nome = s.nome || s.name, m = (c.sessionDetails || {})[nome]; if (!m) return; MARCOS_EDITAVEIS.forEach(k => { const v = txt(m[k]); if (v !== txt(s[k])) mud.push({ nome, k, v }); }); });
+    return mud;
+  }
+  let marcoTimer = null;
+  function marcoEditado(c, s, k, v) {
+    if (!MARCOS_EDITAVEIS.includes(k) || !GST.doc || !Array.isArray(GST.doc.sessoes)) return;
+    const reg = GST.doc.sessoes.find(x => (x.nome || x.name) === s); if (!reg || txt(reg[k]) === txt(v)) return;
+    agendarMarcos(c, [{ nome: s, k, v: txt(v) }]);
+  }
+  function agendarMarcos(c, mud) {
+    mud = mud || marcosAlterados(c); if (!mud.length) return;
+    mud.forEach(({ nome, k, v }) => { const s = GST.doc.sessoes.find(x => (x.nome || x.name) === nome); if (s) s[k] = v; }); // otimista: o painel não volta atrás
+    GST.pendente = [...(GST.pendente || []), ...mud];
+    clearTimeout(marcoTimer); marcoTimer = setTimeout(() => enviarMarcos(), 900);
+  }
+  const ROT = { prepStart: "início da produção", minutasDeadline: "entrega das minutas", releaseDeadline: "liberação" };
+  async function enviarMarcos() {
+    const lista = GST.pendente || []; if (!lista.length || GST.enviando) return;
+    const tok = await pedirToken("Os marcos da sessão foram alterados e serão gravados no repositório do gabinete."); if (!tok) { avisar("Marcos alterados só neste navegador: sem acesso de escrita ao repositório.", "warn"); return; }
+    GST.enviando = true; desenhar();
+    try {
+      for (let t = 0; t < 3; t++) {
+        const bruto = await gh(`contents/${GH.pasta}/${GAB.arquivo}?ref=${GH.ramo}`, {}, "application/vnd.github.raw+json");
+        if (bruto == null) throw new Error("o repositório ainda não tem o arquivo de configurações do gabinete");
+        const doc = JSON.parse(bruto); let n = 0;
+        lista.forEach(({ nome, k, v }) => { const s = (doc.sessoes || []).find(x => (x.nome || x.name) === nome); if (s && txt(s[k]) !== v) { s[k] = v; n++; } });
+        if (!n) { GST.pendente = null; GST.doc = doc; return; }
+        doc.atualizado_em = agora();
+        const sessoes = [...new Set(lista.map(x => x.nome))];
+        try { await commitar([[`${GH.pasta}/${GAB.arquivo}`, JSON.stringify(doc, null, 2) + "\n"]], `Seleção Prévia: marcos de ${sessoes.join(", ")} (${[...new Set(lista.map(x => ROT[x.k]))].join(", ")})`); }
+        catch (e) { if ([409, 422].includes(e.status) && t < 2) continue; throw e; }
+        GST.doc = doc; GST.versao = doc.atualizado_em; GST.pendente = null;
+        avisar(`Marcos de ${sessoes.join(", ")} gravados no repositório do gabinete.`, "ok");
+        return;
+      }
+    } catch (e) { if (e.status === 401 || e.status === 403) TOKEN = ""; avisar("Falha ao gravar os marcos no repositório: " + (e.message || e), "err"); }
+    finally { GST.enviando = false; desenhar(); }
+  }
+  /* as configurações globais não redefinem o que vem do repositório: depois de cada gravação, reimpõe o arquivo */
+  function protegerConfiguracoes(c) {
+    if (!c || c.__gabProtegido || typeof c.applyGlobalConfig !== "function") return;
+    c.__gabProtegido = true; applyOriginal = c.applyGlobalConfig;
+    c.applyGlobalConfig = function (...a) { const r = applyOriginal.apply(this, a); if (GST.doc && !GST.aplicando) { impor(this, GST.doc); return this.globalConfigSnapshot(); } return r; };
+    // marcos editáveis: só edições explícitas na Seleção Prévia (setSessionMeta e o planejamento) vão ao repositório
+    c.__marcoEditado = (s, k, v) => marcoEditado(c, s, k, v);
+    const setMeta = c.setSessionMeta;
+    if (typeof setMeta === "function") c.setSessionMeta = function (s, k, v) { const r = setMeta.call(this, s, k, v); marcoEditado(this, s, k, v); return r; };
   }
 
   /* gravações do painel carimbam o que mudou; SALVAR e importações encaminham ao GitHub */
@@ -363,7 +469,7 @@
     const saveNow = c.saveNow;
     if (typeof saveNow === "function") c.saveNow = async function (...a) {
       const ok = await saveNow.apply(this, a);
-      if (ok && autoLigado() && ST.pendentes) setTimeout(() => encaminhar({ motivo: `Você salvou ${ST.pendentes} alteração(ões); encaminhe-as ao GitHub.`, silencioso: true }), 200);
+      if (ok && autoLigado() && ST.pendentes) setTimeout(() => encaminhar({ motivo: `Você salvou ${ST.pendentes} alteração(ões); grave-as no repositório.`, silencioso: true }), 200);
       return ok;
     };
     const importTyped = c.importTyped;
@@ -412,7 +518,7 @@ th,td{border-bottom:1px solid var(--linha);padding:6px 8px;text-align:left;verti
 .alerta{margin-top:10px;padding:10px 12px;border-radius:8px;background:#fbeaea;color:#7a2e2e;border:1px solid #e9c3c3;font-weight:600}</style></head>
 <body><header><h1>${comp_ ? "Acervo Completo" : "Acervo Geral"} · Gabinete A</h1>
 <p>${doc.registros.length} processos · gerado em ${esc(new Date(doc.atualizado_em).toLocaleString("pt-BR"))} · ${esc(doc.saneamento)}</p>
-${comp_ ? `<div class="alerta">${doc.registros.filter(sigiloso).length} processo(s) sigiloso(s) incluído(s). Reimportável no Painel Central (Acervo · GitHub › Importar arquivo), que restaura também os sigilosos no seu navegador; ao encaminhar ao GitHub, eles continuam de fora.</div>` : `<p>Este arquivo pode ser reimportado no Painel Central (Acervo · GitHub › Importar arquivo) ou no repositório com <code>python3 scripts/construir.py acervo.html</code>.</p>`}</header>
+${comp_ ? `<div class="alerta">${doc.registros.filter(sigiloso).length} processo(s) sigiloso(s) incluído(s). Reimportável no Painel Central (Banco do Acervo Geral › Importar), que restaura também os sigilosos no seu navegador; ao gravar no repositório, eles continuam de fora.</div>` : `<p>Este arquivo pode ser reimportado no Painel Central (Banco do Acervo Geral › Importar) ou no repositório com <code>python3 scripts/construir.py acervo.html</code>.</p>`}</header>
 <div class="barra"><input id="q" placeholder="Filtrar por processo, classe, assunto, tarefa ou parte…" aria-label="Filtrar"></div>
 <main><table><thead><tr><th>Processo</th><th>Classe</th><th>Assunto</th><th>Distribuição</th><th>Tarefa atual</th><th>Polo ativo</th><th>Polo passivo</th></tr></thead><tbody id="t">
 ${linhas}
@@ -472,31 +578,31 @@ ${linhas}
   document.head.appendChild(css);
 
   const btn = document.createElement("button");
-  btn.id = "acvBtn"; btn.type = "button"; btn.title = "Banco do Acervo Geral — importar, exportar e sincronizar com o GitHub";
+  btn.id = "acvBtn"; btn.type = "button"; btn.title = "Banco do Acervo Geral — importar, exportar e sincronizar";
   btn.onclick = () => { const c = comp(); if (c) c.setState({ acervoDialog: true }); };
 
   const dataBr = iso => { try { return iso ? new Date(iso).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" }) : "—"; } catch (e) { return iso; } };
   let ultimoHtml = "";
   function desenhar() {
     const estado = ST.enviando ? "run" : ST.erro ? "warn" : ST.total != null ? "ok" : "";
-    btn.innerHTML = `<i class="${estado}"></i>ACERVO · GITHUB${ST.pendentes ? ` <b>${ST.pendentes}</b>` : ""}`;
+    btn.innerHTML = `<i class="${estado}"></i>ACERVO · SINCRONIA${ST.pendentes ? ` <b>${ST.pendentes}</b>` : ""}`;
     const slot = document.getElementById("acv-gh-slot");
     if (!slot) return;
     const c = comp(), n = c && Array.isArray(c.rows) ? c.rows.length : 0;
-    const situacao = ST.erro ? `Sem leitura do GitHub: ${esc(ST.erro)}.` :
-      ST.total == null ? "Lendo banco/acervo.json…" : `<b>${ST.total}</b> processo(s) em banco/acervo.json · versão ${esc(dataBr(ST.versao))}`;
+    const situacao = ST.erro ? `Sem leitura do repositório: ${esc(ST.erro)}.` :
+      ST.total == null ? "Lendo o banco do acervo…" : `<b>${ST.total}</b> processo(s) no banco do acervo · versão ${esc(dataBr(ST.versao))}`;
     const html = `<div class="st">${situacao}<br>${n} processo(s) neste painel${ST.pendentes ? ` · <b>${ST.pendentes} alterado(s) desde o último envio</b>` : ""}${ST.ultimoEnvio ? ` · último envio ${esc(dataBr(ST.ultimoEnvio))}` : ""}</div>
       <div class="g">
-        <button type="button" data-a="puxar" title="Trazer para este painel o que estiver mais recente no GitHub">⇣ ATUALIZAR DO GITHUB</button>
-        <button type="button" class="acv-nav" data-a="enviar" ${ST.enviando ? "disabled" : ""} title="Gravar no GitHub o que mudou neste painel">${ST.enviando ? "ENCAMINHANDO…" : "⇡ ENCAMINHAR AO GITHUB"}</button>
+        <button type="button" data-a="puxar" title="Trazer para este painel o que estiver mais recente no repositório">⇣ ATUALIZAR DO REPOSITÓRIO</button>
+        <button type="button" class="acv-nav" data-a="enviar" ${ST.enviando ? "disabled" : ""} title="Gravar no repositório o que mudou neste painel">${ST.enviando ? "GRAVANDO…" : "⇡ GRAVAR NO REPOSITÓRIO"}</button>
         <button type="button" class="acv-pri" data-a="importar" title="Importar acervo.html ou acervo.json exportado por este painel">⇧ IMPORTAR .HTML / .JSON</button>
         <button type="button" data-a="json">⇩ EXPORTAR ACERVO.JSON</button>
         <button type="button" data-a="csv">⇩ EXPORTAR ACERVO.CSV</button>
         <button type="button" data-a="html">⇩ EXPORTAR ACERVO.HTML</button>
         <button type="button" class="sub" data-a="substituir" ${ST.enviando ? "disabled" : ""}>Substituir o banco…</button>
       </div>
-      <label><input type="checkbox" data-a="auto" ${autoLigado() ? "checked" : ""}> Encaminhar ao GitHub ao clicar em SALVAR e após cada importação (planilhas Gab A, PJe 2G ou arquivo do banco)</label>
-      <div class="nota">O GitHub guarda o painel inteiro: todas as colunas do Acervo Central (também em banco/acervo.csv), controles de trabalho, triagem e escaninhos, Seleção Prévia e pauta, sessões, equipe e calendário. Mescla por processo e para o estado geral: prevalece a alteração mais recente; nada é apagado. Ao abrir, o painel traz do GitHub o que estiver mais novo. ${esc(SANEAMENTO)}</div>`;
+      <label><input type="checkbox" data-a="auto" ${autoLigado() ? "checked" : ""}> Gravar no repositório ao clicar em SALVAR e após cada importação (planilhas Gab A, PJe 2G ou arquivo do banco)</label>
+      <div class="nota">O repositório guarda o painel inteiro: todas as colunas do Acervo Central (também em planilha CSV), controles de trabalho, triagem e escaninhos, Seleção Prévia e pauta, sessões, equipe e calendário. Mescla por processo e para o estado geral: prevalece a alteração mais recente; nada é apagado. Ao abrir, o painel traz do repositório o que estiver mais novo. ${esc(SANEAMENTO)}</div>`;
     if (slot.dataset.pronto === "1" && html === ultimoHtml) return;
     slot.innerHTML = html; slot.dataset.pronto = "1"; ultimoHtml = html;
   }
@@ -510,7 +616,7 @@ ${linhas}
     else if (acao === "json") { try { baixar("acervo.json", serializar(docLocal()), "application/json"); } catch (er) { avisar(er.message, "err"); } }
     else if (acao === "html") { try { baixar("acervo.html", paginaHtml(docLocal()), "text/html;charset=utf-8"); } catch (er) { avisar(er.message, "err"); } }
     else if (acao === "substituir") {
-      if (window.confirm("Substituir banco/acervo.json pelo acervo deste painel?\n\nProcessos que estão no GitHub mas não neste painel serão retirados do banco. Use só quando este painel tiver o acervo completo.")) encaminhar({ substituir: true, motivo: "" });
+      if (window.confirm("Substituir o banco do acervo pelo acervo deste painel?\n\nProcessos que estão no repositório mas não neste painel serão retirados do banco. Use só quando este painel tiver o acervo completo.")) encaminhar({ substituir: true, motivo: "" });
     }
   });
   document.addEventListener("change", e => { if (e.target.matches && e.target.matches('#acv-gh-slot [data-a="auto"]')) { try { localStorage.setItem(LS_AUTO, e.target.checked ? "1" : "0"); } catch (er) {} } });
@@ -528,8 +634,9 @@ ${linhas}
   let iniciado = false;
   setInterval(() => {
     const c = comp(); if (!pronto(c)) return;
-    if (!iniciado) { iniciado = true; envolver(c); setTimeout(() => puxar(true), 300); }
+    if (!iniciado) { iniciado = true; envolver(c); protegerConfiguracoes(c); setTimeout(async () => { await puxarGabinete(true); await puxar(true); if (GST.doc) impor(c, GST.doc); }, 300); }
   }, 400);
 
-  window.__acervoGitHub = { puxar, encaminhar, receber, docLocal, serializar, mesclar, registroDe, sigiloso, paginaHtml, docDeArquivo, csv, carimbar, colunasDe, estado: ST, GH, token: v => { TOKEN = v; } };
+  window.__acervoGitHub = { puxar, encaminhar, receber, docLocal, serializar, mesclar, registroDe, sigiloso, paginaHtml, docDeArquivo, csv, carimbar, colunasDe, estado: ST, GH, token: v => { TOKEN = v; },
+    gabinete: { puxar: puxarGabinete, estado: GST, servidorPublico, impor: () => impor(comp(), GST.doc), enviarMarcos } };
 })();

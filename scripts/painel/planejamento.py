@@ -223,6 +223,12 @@ CAPACIDADE_ANTIGA = "function capacityDate(){const total=totalCount();if(!state.
 CAPACIDADE_NOVA = "function capacityDate(){const total=totalCount();if(!state.start||total===0)return '';let remaining=total;const active=state.staff.filter(s=>s.included!==false&&s.rate>0);if(!active.length)return '';for(let d=state.start>now()?state.start:now(),i=0;i<3660;d=add(d,1),i++){"
 
 
+TRAVA = """<style>.gab-ro-in{background:#f4f6f9!important;color:#6d7b8a!important;cursor:not-allowed!important}.gab-ro-cal>.content{pointer-events:none;opacity:.72}</style>
+<script>(function(){function trava(){['pauta','session'].forEach(function(id){var e=document.getElementById(id);if(e&&!e.readOnly){e.readOnly=true;e.tabIndex=-1;e.classList.add('gab-ro-in');e.title='Definido no repositório do gabinete (Configurações › Gabinete)';}});
+var c=document.getElementById('calendarDetails');if(c&&!c.dataset.ro){c.dataset.ro='1';c.classList.add('gab-ro-cal');var ct=c.querySelector('.content');if(ct)ct.setAttribute('inert','');var s=c.querySelector('summary small');if(s)s.textContent='Somente leitura · definido no repositório do gabinete';}}
+trava();setInterval(trava,600);})();</script>"""
+
+
 def aplicar(html: str) -> str:
     def troca(antigo, novo, nome):
         nonlocal html
@@ -244,4 +250,10 @@ def aplicar(html: str) -> str:
     troca('<button id="newSession">+ Nova sessão</button><button id="settings">Configurações</button>', '', "botões")
     troca("$('newSession').onclick=()=>root.renderVals().newSession();\n$('settings').onclick=()=>root.setState({dialog:true});\n", '', "botões-js")
     troca("</head>", CSS + "</head>", "css")
+    # marcos editados aqui (início da produção, entrega das minutas, liberação) seguem para o repositório do gabinete
+    troca("Object.entries(DATE_MAP).forEach(([id,key])=>{if((m[key]||'')!==state[id]){m[key]=state[id];if(id==='pauta')m.deadline=state[id];changed=true;}});",
+          "Object.entries(DATE_MAP).forEach(([id,key])=>{if((m[key]||'')!==state[id]){m[key]=state[id];if(id==='pauta')m.deadline=state[id];changed=true;if(root.__marcoEditado)root.__marcoEditado(sessionKey,key,state[id]);}});", "marcos-repositorio")
+    # julgamento, prazo de pauta e calendário vêm do repositório do gabinete: aqui, só leitura
+    k = html.rindex("</body>")
+    html = html[:k] + TRAVA + html[k:]
     return html

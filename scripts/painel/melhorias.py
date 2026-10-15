@@ -231,8 +231,28 @@ def ajustar_planejamento(template: str) -> str:
     return template[:ini] + b64 + template[fim:]
 
 
+def ajustar_configuracoes(template: str) -> str:
+    """Configurações Globais (outro HTML compactado): injeta a aba única "Gabinete", só leitura (config_gabinete.js)."""
+    import base64, gzip
+    from pathlib import Path
+    i = template.find("frame=document.getElementById('global-config-frame')")
+    ini = template.rfind('atob("', 0, i) + len('atob("')
+    if i < 0 or ini < len('atob("'):
+        raise SystemExit("melhorias/configuracoes: página das Configurações Globais não encontrada.")
+    fim = template.index('"', ini)
+    html = gzip.decompress(base64.b64decode(template[ini:fim])).decode("utf-8")
+    if "installGlobalConfigBridge" not in html:
+        raise SystemExit("melhorias/configuracoes: o bloco compactado não é o das Configurações Globais.")
+    js = (Path(__file__).parent / "config_gabinete.js").read_text(encoding="utf-8").replace("</script", "<\\/script")
+    k = html.rindex("</body>")
+    html = html[:k] + "<script>" + js + "</script>" + html[k:]
+    b64 = base64.b64encode(gzip.compress(html.encode("utf-8"), 9)).decode()
+    return template[:ini] + b64 + template[fim:]
+
+
 def aplicar(template: str) -> str:
     template = reorganizar_cards(template)
+    template = ajustar_configuracoes(template)
     template = ajustar_planejamento(template)
     template = banco_dialogo.aplicar(template)
     ancora = "    .central-stats-stack{display:grid;gap:14px;min-width:0}"

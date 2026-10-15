@@ -43,6 +43,10 @@ Os arquivos são reconhecidos pelo `schema`, não pelo nome; uma exportação co
 - a mescla é por processo (e, à parte, para o estado geral): prevalece a alteração mais recente, nada é apagado (há um botão à parte para substituir o banco inteiro);
 - pelo diálogo **Banco do Acervo Geral** também se exporta o banco como `acervo.json`, `acervo.csv` ou `acervo.html` (tabela legível com o JSON embutido) e se importa `.json`/`.html`.
 
+### Sessões, calendário e equipe (`banco/gabinete.json`)
+
+`banco/gabinete.json` (`schema: gabA.gabinete`) é a **fonte única** das sessões de julgamento e seus marcos (`date`, `pautaDeadline`, `prepStart`, `minutasDeadline`, `releaseDeadline`, datas AAAA-MM-DD), do calendário de trabalho (`calendario.weekdays`, dias da semana de 0 = domingo a 6 = sábado, e `calendario.excluded`, feriados e folgas), dos servidores (atribuições em `functions`, especialidades, escopo das minutas e ausências) e do catálogo de atribuições (`equipe.catalog`). O painel **só lê** este arquivo: ao abrir e pelo botão **Atualizar conforme o repositório** da aba **Gabinete** das Configurações Globais (que reúne, em modo consulta, as antigas abas Calendário, Sessões, Servidores e Atribuições). Para mudar qualquer desses dados, edite o arquivo no repositório. A única exceção são **início da produção**, **entrega das minutas** e **liberação**: alterados na Seleção Prévia (na sessão escolhida), são gravados aqui na hora. Sem dados pessoais (repositório público): perfis, históricos e contatos dos servidores ficam só no navegador.
+
 No repositório, o mesmo arquivo exportado entra por `python3 scripts/construir.py acervo.html` (ou `acervo.json`), com a mesma regra: prevalece a versão mais recente de cada processo.
 
 **Saneamento** (o repositório é público): campos de celular, telefone, e-mail e CPF são removidos em qualquer nível (inclusive no estado interno e no estado geral) — no painel e de novo no `importar.py`; esses campos continuam só no navegador. Os processos **sigilosos entram** no banco (com `Consta_Acervo_Sigiloso` e `Nível_Sigilo`), porque a planilha Gab A - Sigilosos já mascara as informações sigilosas com `###`.

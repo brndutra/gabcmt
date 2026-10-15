@@ -18,7 +18,7 @@ EXP_CARD = "display:flex;flex-direction:column;align-items:flex-start;gap:4px;bo
 
 BOTAO_LATERAL = """      <div style="font-size:8.5px;font-weight:850;letter-spacing:.11em;color:#8fa9c0;padding:0 8px 7px">ACERVO</div>
       <div style="display:grid;gap:4px">
-        <button sc-camel-on-click="{{ goImport }}" title="Importar, atualizar, exportar e sincronizar com o GitHub" style="display:flex;align-items:center;gap:9px;border:1px solid {{ importNavBorder }};cursor:pointer;border-radius:10px;padding:10px 11px;font-weight:750;font-size:11.5px;background:{{ importNavBg }};color:{{ importNavFg }};text-align:left"><span style="width:18px;text-align:center">⛁</span><span style="display:grid;gap:1px"><span>Banco do Acervo Geral</span><span style="font-size:8.5px;font-weight:700;opacity:.75">importar · exportar · GitHub</span></span></button>
+        <button sc-camel-on-click="{{ goImport }}" title="Importar, atualizar, exportar e sincronizar" style="display:flex;align-items:center;gap:9px;border:1px solid {{ importNavBorder }};cursor:pointer;border-radius:10px;padding:10px 11px;font-weight:750;font-size:11.5px;background:{{ importNavBg }};color:{{ importNavFg }};text-align:left"><span style="width:18px;text-align:center">⛁</span><span style="display:grid;gap:1px"><span>Banco do Acervo Geral</span><span style="font-size:8.5px;font-weight:700;opacity:.75">importar · exportar · sincronizar</span></span></button>
       </div>"""
 
 
@@ -43,7 +43,7 @@ def aplicar(t: str) -> str:
 
     # 2) barra lateral recolhida: um ícone só (abre o diálogo)
     i = uma('<button sc-camel-on-click="{{ goImport }}" title="Importar / atualizar"', "ícone importar")
-    t = t[:i] + t[i:].replace('title="Importar / atualizar"', 'title="Banco do Acervo Geral — importar, exportar, GitHub"', 1)
+    t = t[:i] + t[i:].replace('title="Importar / atualizar"', 'title="Banco do Acervo Geral — importar, exportar, sincronizar"', 1)
     i = t.find('>⇧</button>', i)
     t = t[:i] + '>⛁</button>' + t[i + len('>⇧</button>'):]
     j = uma('<button sc-camel-on-click="{{ exportAll }}" title="Exportar Excel completo" style="display:grid;place-items:center;height:44px', "ícone exportar")
@@ -69,7 +69,7 @@ def aplicar(t: str) -> str:
       <div role="dialog" aria-modal="true" aria-label="Banco do Acervo Geral" sc-camel-on-click="{{{{ closeAcervoBackdrop }}}}" style="position:fixed;inset:0;z-index:245;background:rgba(20,38,60,.55);display:grid;place-items:center;padding:16px">
        <div style="display:flex;flex-direction:column;width:min(1180px,97vw);max-height:94vh;border-radius:14px;background:#eff1f4;overflow:hidden;box-shadow:0 24px 70px rgba(20,38,60,.35)">
         <div style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px 12px 18px;background:linear-gradient(135deg,#1f3d63,#16304e);color:#fff">
-          <div style="min-width:0"><div style="font-size:10px;font-weight:900;letter-spacing:.1em;color:#e9c46a">BANCO DO ACERVO GERAL</div><div style="font-size:15px;font-weight:850;margin-top:2px">brndutra/gabcmt · banco/acervo.json</div><div style="font-size:10.5px;color:#cddbe8;margin-top:2px">{{{{ statRows }}}} processo(s) neste navegador · importar planilhas, exportar e sincronizar com o GitHub</div></div>
+          <div style="min-width:0"><div style="font-size:10px;font-weight:900;letter-spacing:.1em;color:#e9c46a">BANCO DO ACERVO GERAL</div><div style="font-size:15px;font-weight:850;margin-top:2px">Importar · exportar · sincronizar</div><div style="font-size:10.5px;color:#cddbe8;margin-top:2px">{{{{ statRows }}}} processo(s) neste navegador · importar planilhas, exportar e sincronizar com o repositório</div></div>
           <button sc-camel-on-click="{{{{ closeAcervo }}}}" title="Fechar (Esc)" aria-label="Fechar o Banco do Acervo Geral" style="flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.35);border-radius:8px;background:rgba(255,255,255,.1);color:#fff;padding:7px 12px;font-size:11px;font-weight:850;letter-spacing:.04em;cursor:pointer">FECHAR <span aria-hidden="true" style="font-size:14px;line-height:1">×</span></button>
         </div>
         <div style="flex:1 1 auto;min-height:0;overflow:auto;padding:14px;display:grid;gap:14px;align-content:start">
@@ -77,8 +77,8 @@ def aplicar(t: str) -> str:
           {ocorrencias}
           <div style="display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:14px" class="acv-dlg-topo">
             <section style="{SEC};padding:16px 18px">
-              <div style="font-size:9.5px;font-weight:900;letter-spacing:.09em;color:#1f3d63">GITHUB · BANCO COMPARTILHADO</div>
-              <div style="font-size:14px;font-weight:850;color:#14263c;margin-top:3px">Sincronização com banco/acervo.json</div>
+              <div style="font-size:9.5px;font-weight:900;letter-spacing:.09em;color:#1f3d63">REPOSITÓRIO · BANCO COMPARTILHADO</div>
+              <div style="font-size:14px;font-weight:850;color:#14263c;margin-top:3px">Sincronização do acervo</div>
               <div id="acv-gh-slot" style="margin-top:10px"></div>
             </section>
             <section style="{SEC};padding:16px 18px;display:grid;gap:9px;align-content:start">

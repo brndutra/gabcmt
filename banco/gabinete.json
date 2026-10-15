@@ -1,0 +1,4080 @@
+{
+  "schema": "gabA.gabinete",
+  "schema_versao": 1,
+  "atualizado_em": "2026-10-15T07:16:06.000Z",
+  "descricao": "Fonte única das sessões, do calendário e da equipe do Painel Central. O painel só lê este arquivo (Configurações › Gabinete › Atualizar conforme o repositório). Exceção: prepStart (início da produção), minutasDeadline (entrega das minutas) e releaseDeadline (liberação), alterados na Seleção Prévia, são gravados aqui pelo painel. Datas no formato AAAA-MM-DD. Sem dados pessoais (repositório público).",
+  "calendario": {
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "excluded": []
+  },
+  "sessoes": [
+    {
+      "nome": "14/09/2026",
+      "date": "2026-09-14",
+      "pautaDeadline": "2026-08-12",
+      "prepStart": "",
+      "minutasDeadline": "",
+      "releaseDeadline": "",
+      "minutasMode": "manual",
+      "releaseMode": "manual",
+      "gabinete": "",
+      "observations": ""
+    },
+    {
+      "nome": "25/09/2026",
+      "date": "2026-09-25",
+      "pautaDeadline": "2026-08-24",
+      "prepStart": "",
+      "minutasDeadline": "",
+      "releaseDeadline": "",
+      "minutasMode": "manual",
+      "releaseMode": "manual",
+      "gabinete": "",
+      "observations": ""
+    },
+    {
+      "nome": "05/10/2026",
+      "date": "2026-10-05",
+      "pautaDeadline": "2026-08-31",
+      "prepStart": "",
+      "minutasDeadline": "",
+      "releaseDeadline": "",
+      "minutasMode": "manual",
+      "releaseMode": "manual",
+      "gabinete": "",
+      "observations": ""
+    },
+    {
+      "nome": "26/10/2026",
+      "date": "2026-10-26",
+      "pautaDeadline": "2026-09-14",
+      "prepStart": "",
+      "minutasDeadline": "",
+      "releaseDeadline": "",
+      "minutasMode": "manual",
+      "releaseMode": "manual",
+      "gabinete": "",
+      "observations": ""
+    },
+    {
+      "nome": "13/11/2026",
+      "date": "2026-11-13",
+      "pautaDeadline": "2026-10-05",
+      "prepStart": "2026-10-09",
+      "minutasDeadline": "2026-10-30",
+      "releaseDeadline": "2026-11-06",
+      "minutasMode": "manual",
+      "releaseMode": "auto",
+      "gabinete": "Gab. A da Turma Regional de Mato Grosso do Sul",
+      "observations": ""
+    },
+    {
+      "nome": "27/11/2026",
+      "date": "2026-11-27",
+      "pautaDeadline": "2026-10-19",
+      "prepStart": "",
+      "minutasDeadline": "",
+      "releaseDeadline": "",
+      "minutasMode": "manual",
+      "releaseMode": "manual",
+      "gabinete": "",
+      "observations": ""
+    },
+    {
+      "nome": "07/12/2026",
+      "date": "2026-12-07",
+      "pautaDeadline": "2026-11-09",
+      "prepStart": "",
+      "minutasDeadline": "",
+      "releaseDeadline": "",
+      "minutasMode": "manual",
+      "releaseMode": "manual",
+      "gabinete": "",
+      "observations": ""
+    },
+    {
+      "nome": "15/12/2026",
+      "date": "2026-12-15",
+      "pautaDeadline": "2026-11-23",
+      "prepStart": "",
+      "minutasDeadline": "",
+      "releaseDeadline": "",
+      "minutasMode": "manual",
+      "releaseMode": "manual",
+      "gabinete": "",
+      "observations": ""
+    }
+  ],
+  "servidores": [
+    {
+      "id": "srv_mv01zym3_fitlzsnk",
+      "name": "ALEX",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym3_jd7wby7y",
+      "name": "BRUNO",
+      "hierarchy": "Membro do Time",
+      "functions": [
+        "minutar"
+      ],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [
+        {
+          "id": "mv03eb8b_7wbr8yuz",
+          "functionId": "minutar",
+          "docType": "Voto",
+          "subjectId": "",
+          "specificity": ""
+        }
+      ],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym4_sq7hrk1l",
+      "name": "SAFFIOTI",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym5_edjsy1ki",
+      "name": "VANILDA",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym5_w5b9jea5",
+      "name": "GIOVANA",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym5_cb3bui7b",
+      "name": "DALETE",
+      "hierarchy": "Membro do Time",
+      "functions": [
+        "minutar"
+      ],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [
+        {
+          "id": "mv03eb8b_h4inbuq8",
+          "functionId": "minutar",
+          "docType": "Voto",
+          "subjectId": "",
+          "specificity": ""
+        }
+      ],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym6_nbxfrkfa",
+      "name": "JOSÉ",
+      "hierarchy": "Membro do Time",
+      "functions": [
+        "minutar"
+      ],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [
+        {
+          "id": "mv03eb8b_lqjw1icw",
+          "functionId": "minutar",
+          "docType": "Voto",
+          "subjectId": "",
+          "specificity": ""
+        }
+      ],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym6_vet1d87a",
+      "name": "RODRIGO",
+      "hierarchy": "Membro do Time",
+      "functions": [
+        "minutar",
+        "superv_minuta_voto"
+      ],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [
+        {
+          "id": "mv03eb8b_gjophovy",
+          "functionId": "minutar",
+          "docType": "Decisão",
+          "subjectId": "",
+          "specificity": ""
+        },
+        {
+          "id": "mv03eb8b_i60lyodd",
+          "functionId": "minutar",
+          "docType": "Despacho",
+          "subjectId": "",
+          "specificity": ""
+        },
+        {
+          "id": "mv03eb8b_f6541ahk",
+          "functionId": "minutar",
+          "docType": "Voto",
+          "subjectId": "",
+          "specificity": ""
+        }
+      ],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym7_w62ahxu3",
+      "name": "DUDA",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym7_i7ltv3ke",
+      "name": "DEBORA",
+      "hierarchy": "CJ2",
+      "functions": [
+        "minutar"
+      ],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [
+        {
+          "id": "mv03eb8b_22ddxyou",
+          "functionId": "minutar",
+          "docType": "Voto",
+          "subjectId": "",
+          "specificity": ""
+        }
+      ],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym7_rqqesvue",
+      "name": "RENATO",
+      "hierarchy": "Membro do Time",
+      "functions": [
+        "minutar"
+      ],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [
+        {
+          "id": "mv03eb8b_euz95inx",
+          "functionId": "minutar",
+          "docType": "Voto",
+          "subjectId": "",
+          "specificity": ""
+        }
+      ],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym7_ap8ab488",
+      "name": "VICTOR",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym8_o140sb0v",
+      "name": "ESTELA",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv01zym8_k221byg5",
+      "name": "CM",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv03eb8c_15pz8csy",
+      "name": "Alexander",
+      "hierarchy": "CJ1",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv03eb8c_p7ci4j2k",
+      "name": "Débora",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv03eb8c_rmkuwk9d",
+      "name": "Maria Eduarda",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv03eb8c_43x2wez3",
+      "name": "Lucila",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    },
+    {
+      "id": "srv_mv03eb8c_7m31gnpb",
+      "name": "Wellington",
+      "hierarchy": "Membro do Time",
+      "functions": [],
+      "primary": "",
+      "aliases": [],
+      "specializations": {},
+      "minutaScopes": [],
+      "scopesConfigured": true,
+      "baseStatus": "disponivel",
+      "absences": []
+    }
+  ],
+  "nomes": [
+    "ALEX",
+    "Alexander",
+    "BRUNO",
+    "CM",
+    "DALETE",
+    "DEBORA",
+    "Débora",
+    "DUDA",
+    "ESTELA",
+    "GIOVANA",
+    "JOSÉ",
+    "Lucila",
+    "Maria Eduarda",
+    "RENATO",
+    "RODRIGO",
+    "SAFFIOTI",
+    "VANILDA",
+    "VICTOR",
+    "Wellington"
+  ],
+  "equipe": {
+    "seededVersion": 1,
+    "schemaVersion": 2,
+    "subjectVersion": 1,
+    "catalog": [
+      {
+        "id": "triagem_inicial",
+        "name": "Triagem Processual Inicial",
+        "group": "fluxo",
+        "atribuicoes": "Análise preliminar dos processos distribuídos para direcionamento ao fluxo adequado, seja para regular prosseguimento ou para saneamento de pendências (tais como ausência de documentos, mídias, parecer ou contraminuta/contrarrazões); adicionar etiquetas pertinentes; verificação dos pedidos de tutela de urgência e de prioridades legais (implementar checklist de conferência inicial); análise da tempestividade e do recolhimento de custas; verificação da regularidade da representação processual, com a obrigatória criação de lembrete público com o ID da procuração; adição de sigilo aos autos ou peças nos casos definidos em lei, com a devida configuração dos visualizadores; e, sendo caso de julgamento colegiado, inclusão e habilitação dos demais desembargadores e de suas respectivas assessorias.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "tutela",
+        "name": "Triagem e Acompanhamento de Tutelas de Urgência",
+        "group": "fluxo",
+        "atribuicoes": "Supervisão dos processos distribuídos, com identificação de pedidos de tutela de urgência; avaliação da necessidade de apreciação prioritária; acompanhamento dos feitos urgentes até a elaboração e assinatura da respectiva decisão; e controle, junto à Secretaria processante, das providências e pendências relacionadas à tutela.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "auxilio_pauta",
+        "name": "Auxílio à Definição de Pauta",
+        "group": "presessao",
+        "atribuicoes": "Atribuições não especificadas no documento de referência.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "pauta",
+        "name": "Definição de Pauta",
+        "group": "presessao",
+        "atribuicoes": "Filtro do acervo e definição do lote de processos para julgamento, aplicando os critérios de urgência legal, metas institucionais e ordem cronológica; agrupar os processos em lotes temáticos homogêneos por similitude jurídica; calcular a volumetria ideal distribuindo os blocos conforme o nível de complexidade e a capacidade produtiva da equipe; conferência da regularidade processual dos feitos, mediante revisão de custas, representação processual, parecer do MPF, nível de sigilo, pendências processuais e impedimentos ou suspeições dos integrantes da Turma; adoção das providências necessárias quanto aos processos ainda não aptos à sessão, inclusive encaminhamento para elaboração de despacho ou decisão monocrática; identificação dos feitos que demandem participação de julgador convocado em razão de impedimento ou suspeição, com verificação da disponibilidade, da composição adequada e da compatibilidade de seção ou matéria. Critérios de seleção: urgências e prioridades legais (liminar/tutela pendente, réus presos, idosos, doenças graves, pessoas com deficiência); metas nacionais do CNJ, como a Meta 2; ordem cronológica de distribuição ou conclusão, conforme o CPC; e status do recurso, priorizando agravos de instrumento e apelações prontas, deixando embargos de declaração para semanas específicas. Organização do lote: divisão por lotes temáticos homogêneos, reunindo processos por assunto (indexação/etiquetas do sistema), entregando ao assessor um lote de 10 a 15 processos do mesmo tema, e separando por nível de dificuldade — temas repetitivos e pacificados para assessores novos ou assistentes; processos inéditos, complexos ou volumosos para assessores seniores. Quantidade ideal: meta semanal de 10 a 15 minutas por assessor em matérias repetitivas/corriqueiras e de 3 a 5 em matérias de alta complexidade; giro de acervo semanal equivalente a 1,2 vezes a capacidade de leitura do Desembargador (ex.: se o magistrado revisa e assina 80 votos por semana, o gabinete deve selecionar e minutar cerca de 90 a 100 processos no período, mantendo margem de segurança).",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "peco_dia",
+        "name": "Peço-Dia",
+        "group": "presessao",
+        "atribuicoes": "Conferência final da aptidão dos processos listados na Planilha da sessão e da conclusão dos respectivos votos; execução do comando de Peço-Dia; e remessa à Secretaria processante dos processos aptos à inclusão em pauta de julgamento.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "superv_minuta_voto",
+        "name": "Supervisão de Minutas de Voto",
+        "group": "presessao",
+        "atribuicoes": "Especificações por matéria — ver pílulas abaixo ao marcar esta função.",
+        "kind": "geral",
+        "specializations": [
+          "BPC",
+          "Pensão por morte",
+          "Benefício por incapacidade",
+          "Aposentadoria rural",
+          "Aposentadoria por tempo de contribuição",
+          "Aposentadoria especial",
+          "Aposentadoria híbrida",
+          "Demais matérias"
+        ]
+      },
+      {
+        "id": "minutar",
+        "name": "Elaboração de minutas / Minutar",
+        "group": "elaboracao",
+        "atribuicoes": "Especificações por matéria — ver pílulas abaixo ao marcar esta função.",
+        "kind": "minutar",
+        "specializations": [
+          "BPC",
+          "Pensão por morte",
+          "Benefício por incapacidade",
+          "Aposentadoria rural",
+          "Aposentadoria por tempo de contribuição",
+          "Aposentadoria especial",
+          "Aposentadoria híbrida",
+          "Demais matérias"
+        ]
+      },
+      {
+        "id": "triagem_pautados",
+        "name": "Triagem de Manifestações e Petições — Processos Pautados",
+        "group": "sessao",
+        "atribuicoes": "Análise de petições protocoladas após a inclusão em pauta; identificação de manifestações relevantes para o julgamento; conferência de documentos supervenientes; encaminhamento para providência antes da sessão.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "agendamento_despachos",
+        "name": "Agendamento de Despachos com Advogados",
+        "group": "sessao",
+        "atribuicoes": "Recebimento de solicitações de despacho; organização da agenda; compatibilização de horários; confirmação e acompanhamento dos agendamentos.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "gestao_acervo",
+        "name": "Gestão do Acervo",
+        "group": "supervisao",
+        "atribuicoes": "Acompanhamento geral do acervo do gabinete; controle de processos pendentes; acompanhamento da distribuição de trabalho; controle de prazos internos; acompanhamento das entregas; gestão do Calendário de Entregas do Gabinete; controle de prazos para elaboração de votos; controle de revisão; controle de entrega dos processos; acompanhamento de processos destinados às sessões futuras.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "gestao_acervo_meta2",
+        "name": "Gestão do Acervo — Meta 2",
+        "group": "supervisao",
+        "atribuicoes": "Identificação dos processos abrangidos pela Meta 2; acompanhamento específico do estoque; priorização; distribuição; controle das entregas; acompanhamento da evolução do acervo da Meta 2.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "gestao_acervo_outras",
+        "name": "Gestão do Acervo — Demais Metas",
+        "group": "supervisao",
+        "atribuicoes": "Identificação dos processos vinculados às demais metas; acompanhamento do estoque; priorização; distribuição; controle das entregas; monitoramento do cumprimento das metas.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "superv_minuta_decisao",
+        "name": "Supervisão de Minutas de Decisão",
+        "group": "supervisao",
+        "atribuicoes": "Especificações: decisão monocrática terminativa; decisão interlocutória.",
+        "kind": "geral",
+        "specializations": [
+          "Decisão monocrática terminativa",
+          "Decisão interlocutória"
+        ]
+      },
+      {
+        "id": "superv_minuta_despacho",
+        "name": "Supervisão de Minutas de Despacho",
+        "group": "supervisao",
+        "atribuicoes": "Especificações: Geral; Vista ao MPF; Emenda.",
+        "kind": "geral",
+        "specializations": [
+          "Geral",
+          "Vista ao MPF",
+          "Emenda"
+        ]
+      },
+      {
+        "id": "revisao_decisoes_intercorrentes",
+        "name": "Revisão Decisões Intercorrentes",
+        "group": "supervisao",
+        "atribuicoes": "Revisão de decisões interlocutórias/intercorrentes elaboradas no fluxo processual, com conferência de fundamentação, dispositivo, adequação da providência e consistência formal.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "revisao_monocraticas",
+        "name": "Revisão monocráticas",
+        "group": "supervisao",
+        "atribuicoes": "Revisão de minutas de decisões monocráticas, com conferência de fundamentação, dispositivo, precedentes aplicáveis, coerência interna e correção formal.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "revisao_despachos",
+        "name": "Revisão Despachos",
+        "group": "supervisao",
+        "atribuicoes": "Revisão de minutas de despacho, com conferência da providência determinada, clareza do comando, adequação ao estágio processual e correção formal.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "controle_ponto",
+        "name": "Controle de Frequência e Ponto",
+        "group": "admin",
+        "atribuicoes": "Acompanhamento dos registros de ponto; conferência de ocorrências; controle de pendências; providências relativas a ajustes de frequência.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "triagem_email",
+        "name": "Triagem de Correspondência Eletrônica",
+        "group": "admin",
+        "atribuicoes": "Recebimento; classificação; identificação do assunto; encaminhamento ao responsável; identificação de providências; acompanhamento quando necessário.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "atendimento_institucional",
+        "name": "Atendimento Institucional a Advogados e Autoridades",
+        "group": "admin",
+        "atribuicoes": "Recebimento de solicitações; atendimento e orientação; encaminhamento interno; organização de contatos e reuniões; acompanhamento das providências decorrentes.",
+        "kind": "geral",
+        "specializations": []
+      },
+      {
+        "id": "agenda_presidencia",
+        "name": "Gestão da Agenda Institucional da Presidência da Turma",
+        "group": "admin",
+        "atribuicoes": "Reuniões; compromissos institucionais; solenidades; compromissos administrativos; agendas externas; controle de disponibilidade e conflitos de horário.",
+        "kind": "geral",
+        "specializations": []
+      }
+    ],
+    "subjects": [
+      {
+        "id": "ramo_1",
+        "name": "Direito Civil",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_2",
+        "name": "Direito Processual Civil e do Trabalho",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_3",
+        "name": "Direito Penal",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_4",
+        "name": "Direito Processual Penal",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_5",
+        "name": "Direito do Trabalho",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_6",
+        "name": "Direito Tributário",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_7",
+        "name": "Direito Administrativo",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_8",
+        "name": "Direito Constitucional",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_9",
+        "name": "Direito Previdenciário",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_10",
+        "name": "Direito do Consumidor",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_11",
+        "name": "Direito Comercial (Empresarial)",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_12",
+        "name": "Direito Eleitoral",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_13",
+        "name": "Direito Militar",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_14",
+        "name": "Direito Internacional",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_15",
+        "name": "Direito Ambiental",
+        "parentId": ""
+      },
+      {
+        "id": "ramo_16",
+        "name": "Direito da Criança e do Adolescente",
+        "parentId": ""
+      },
+      {
+        "id": "civil_familia",
+        "name": "Família",
+        "parentId": "ramo_1"
+      },
+      {
+        "id": "familia_alimentos",
+        "name": "Alimentos",
+        "parentId": "civil_familia"
+      },
+      {
+        "id": "alimentos_execucao",
+        "name": "Execução de Alimentos",
+        "parentId": "familia_alimentos"
+      },
+      {
+        "id": "acervo_1",
+        "name": "1/3 de férias",
+        "parentId": "",
+        "sourceCount": 14,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_2",
+        "name": "Abono da Lei 8.178/91",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_3",
+        "name": "Abono de Permanência",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_4",
+        "name": "Abono de Permanência em Serviço (Art. 87)",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_5",
+        "name": "Abono Pecuniário (Art. 78 Lei 8.112/1990)",
+        "parentId": "",
+        "sourceCount": 10,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_6",
+        "name": "Ação Regressiva",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_7",
+        "name": "Acessão",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_8",
+        "name": "Acessibilidade",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_9",
+        "name": "Acesso",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_10",
+        "name": "Acesso sem Conclusão do Ensino Médio",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_11",
+        "name": "Acidente de Trabalho",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_12",
+        "name": "Acidente de Trabalho - Ressarcimento ao Erário",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_13",
+        "name": "Acidente de Trânsito",
+        "parentId": "",
+        "sourceCount": 15,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_14",
+        "name": "Acidente Ferroviário",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_15",
+        "name": "Acidentes",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_16",
+        "name": "Acordo de Exclusividade",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_17",
+        "name": "Adesão a Programa de Parcelamento de Débito",
+        "parentId": "",
+        "sourceCount": 9,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_18",
+        "name": "Adicional de 25%",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_19",
+        "name": "Adicional de Horas Extras",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_20",
+        "name": "Adicional de Inatividade",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_21",
+        "name": "Adicional de Insalubridade",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_22",
+        "name": "Adicional de Periculosidade",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_23",
+        "name": "Adicional de Produtividade",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_24",
+        "name": "Adicional por Tempo de Serviço",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_25",
+        "name": "Adidos, Agregados e Adjuntos",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_26",
+        "name": "Adimplemento e Extinção",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_27",
+        "name": "Admissão / Permanência / Despedida",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_28",
+        "name": "Advertência",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_29",
+        "name": "Advertência / Repreensão",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_30",
+        "name": "Agência e Distribuição",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_31",
+        "name": "Agências/órgãos de regulação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_32",
+        "name": "Agente Agressivo - Eletricidade",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_33",
+        "name": "Agente Agressivo - Químico",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_34",
+        "name": "Agente Agressivo - Ruído",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_35",
+        "name": "Alienação Fiduciária",
+        "parentId": "",
+        "sourceCount": 17,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_36",
+        "name": "Alimentação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_37",
+        "name": "Alteração do coeficiente de cálculo de pensão",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_38",
+        "name": "Alteração do coeficiente de cálculo do benefício",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_39",
+        "name": "Alteração do teto máximo para o valor do benefício previdenciário do RGPS (EC 20 e 41)",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_40",
+        "name": "Ambiental",
+        "parentId": "",
+        "sourceCount": 26,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_41",
+        "name": "Análise de Crédito",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_42",
+        "name": "Anuidades OAB",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_43",
+        "name": "Anulação",
+        "parentId": "",
+        "sourceCount": 29,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_44",
+        "name": "Anulação e Correção de Provas / Questões",
+        "parentId": "",
+        "sourceCount": 32,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_45",
+        "name": "Aplicação INPC/IPCA - Atualização FGTS",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_46",
+        "name": "Aposentadoria",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_47",
+        "name": "Aposentadoria Especial (Art. 57/8)",
+        "parentId": "",
+        "sourceCount": 36,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_48",
+        "name": "Aposentadoria por Idade (Art. 48/51)",
+        "parentId": "",
+        "sourceCount": 10,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_49",
+        "name": "Aposentadoria por Incapacidade Permanente",
+        "parentId": "",
+        "sourceCount": 146,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_50",
+        "name": "Aposentadoria por Invalidez Acidentária",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_51",
+        "name": "Aposentadoria por Tempo de Contribuição (Art. 55/6)",
+        "parentId": "",
+        "sourceCount": 97,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_52",
+        "name": "Aposentadoria por Tempo de Serviço (Art. 52/4)",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_53",
+        "name": "Apreensão",
+        "parentId": "",
+        "sourceCount": 16,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_54",
+        "name": "Aquisição",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_55",
+        "name": "Aquisição de combustíveis",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_56",
+        "name": "Área de Preservação Permanente",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_57",
+        "name": "Arrolamento de Bens",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_58",
+        "name": "Art. 29, II, da Lei 8.213/1991",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_59",
+        "name": "Asilo",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_60",
+        "name": "Assinatura Eletrônica / Digital",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_61",
+        "name": "Assistência à Saúde",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_62",
+        "name": "Assistência Judiciária Gratuita",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_63",
+        "name": "Assistência Médico-Hospitalar",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_64",
+        "name": "Assistência Social",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_65",
+        "name": "Ato Lesivo ao Patrimônio Artístico, Estético, Histórico ou Turístico",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_66",
+        "name": "Atos Administrativos",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_67",
+        "name": "Atraso na Entrega do Imóvel",
+        "parentId": "",
+        "sourceCount": 25,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_68",
+        "name": "Atualização de Conta",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_69",
+        "name": "Ausência de Cobrança Administrativa Prévia",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_70",
+        "name": "Auxílio por Incapacidade Temporária",
+        "parentId": "",
+        "sourceCount": 73,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_71",
+        "name": "Auxílio-Acidente (Art. 86)",
+        "parentId": "",
+        "sourceCount": 18,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_72",
+        "name": "Auxílio-Alimentação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_73",
+        "name": "Auxílio-Doença Acidentário",
+        "parentId": "",
+        "sourceCount": 9,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_74",
+        "name": "Auxílio-Moradia",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_75",
+        "name": "Auxílio-Reclusão (Art. 80)",
+        "parentId": "",
+        "sourceCount": 9,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_76",
+        "name": "Auxílio-transporte",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_77",
+        "name": "Averbação/Cômputo de tempo de serviço rural (empregado/empregador)",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_78",
+        "name": "Averbação/Cômputo de tempo de serviço de segurado especial (regime de economia familiar)",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_79",
+        "name": "Averbação/Cômputo de tempo de serviço urbano",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_80",
+        "name": "Averbação/Cômputo/Conversão de tempo de serviço especial",
+        "parentId": "",
+        "sourceCount": 9,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_81",
+        "name": "Bem Público",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_82",
+        "name": "Benefício Assistencial (Art. 203,V CF/88)",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_83",
+        "name": "Benefício mínimo a partir da CF/88 (art. 201, § 2º CF/88)",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_84",
+        "name": "Benfeitorias",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_85",
+        "name": "Bens Públicos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_86",
+        "name": "Busca e Apreensão",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_87",
+        "name": "Cadastro de Inadimplentes - CADIN/SPC/SERASA/SIAFI/CAUC",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_88",
+        "name": "Cadastro de Indadimplentes - CADIN",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_89",
+        "name": "Cálculo do Benefício com Base na Regra Definitiva Prevista no Art. 29 da Lei 8.213/1991, Quando Mais Favorável que a Regra de Transição Contida no Art. 3º da Lei 9.876/1999",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_90",
+        "name": "Cálculo do fator previdenciário - Lei 9.876/99",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_91",
+        "name": "Capitalização / Anatocismo",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_92",
+        "name": "Cartão de Crédito",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_93",
+        "name": "Cédula de Crédito Bancário",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_94",
+        "name": "Cédula de Crédito Rural",
+        "parentId": "",
+        "sourceCount": 11,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_95",
+        "name": "Cédula de Produto Rural",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_96",
+        "name": "Certidão de Tempo de Serviço",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_97",
+        "name": "Certificado de Regularidade - FGTS",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_98",
+        "name": "Cessão de Crédito",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_99",
+        "name": "Cessão de créditos não-tributários",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_100",
+        "name": "Cessão de Direitos",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_101",
+        "name": "Chamamento ao Processo",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_102",
+        "name": "Cirurgia",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_103",
+        "name": "Classificação e/ou Preterição",
+        "parentId": "",
+        "sourceCount": 24,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_104",
+        "name": "Cláusulas Abusivas",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_105",
+        "name": "CND/Certidão Negativa de Débito",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_106",
+        "name": "CNH - Carteira Nacional de Habilitação",
+        "parentId": "",
+        "sourceCount": 18,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_107",
+        "name": "CNPJ/Cadastro Nacional de Pessoas Jurídicas",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_108",
+        "name": "Cofins",
+        "parentId": "",
+        "sourceCount": 24,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_109",
+        "name": "COFINS - Importação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_110",
+        "name": "Colação de Grau",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_111",
+        "name": "Compensação de Prejuízo",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_112",
+        "name": "Competência da Justiça Federal",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_113",
+        "name": "Competência Tributária",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_114",
+        "name": "Compra e Venda",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_115",
+        "name": "Compromisso",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_116",
+        "name": "Concessão",
+        "parentId": "",
+        "sourceCount": 10,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_117",
+        "name": "Concessão / Permissão / Autorização",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_118",
+        "name": "Concessão de Naturalização",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_119",
+        "name": "Concorrência",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_120",
+        "name": "Concurso Público - Nomeação/Posse Tardia",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_121",
+        "name": "Concurso Público / Edital",
+        "parentId": "",
+        "sourceCount": 15,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_122",
+        "name": "Condomínio",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_123",
+        "name": "CONSELHOS",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_124",
+        "name": "Conselhos Regionais de Fiscalização Profissional e Afins",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_125",
+        "name": "Conselhos Regionais e Afins (Anuidade)",
+        "parentId": "",
+        "sourceCount": 131,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_126",
+        "name": "Contrato Administrativo",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_127",
+        "name": "Contrato Temporário de Mão de Obra L 8.745/1993",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_128",
+        "name": "Contratos Administrativos",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_129",
+        "name": "Contratos Bancários",
+        "parentId": "",
+        "sourceCount": 44,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_130",
+        "name": "Contratuais",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_131",
+        "name": "Contribuição de Autônomos, Empresários (Pró-labore) e Facultativos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_132",
+        "name": "Contribuição de Intervenção no Domínio Econômico (CIDE)",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_133",
+        "name": "Contribuição INCRA",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_134",
+        "name": "Contribuição sobre a folha de salários",
+        "parentId": "",
+        "sourceCount": 14,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_135",
+        "name": "Contribuição sobre Nota Fiscal de Execução de Serviços",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_136",
+        "name": "Contribuição Social sobre o Lucro Líquido",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_137",
+        "name": "Contribuições Corporativas",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_138",
+        "name": "Contribuições Especiais",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_139",
+        "name": "Contribuições para o SEBRAE, SESC, SENAC, SENAI e outros",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_140",
+        "name": "Contribuições Previdenciárias",
+        "parentId": "",
+        "sourceCount": 26,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_141",
+        "name": "Contribuições Sociais",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_142",
+        "name": "Controle Externo da atividade policial",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_143",
+        "name": "Convalidação de Estudos e Reconhecimento de Diploma",
+        "parentId": "",
+        "sourceCount": 51,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_144",
+        "name": "Convênio",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_145",
+        "name": "Correção da Tabela",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_146",
+        "name": "Correção Monetária de Benefício pago com atraso",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_147",
+        "name": "Correção Monetária de Diferenças Pagas em Atraso",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_148",
+        "name": "Cota para Ingresso - Ações Afirmativas",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_149",
+        "name": "CPF/Cadastro de Pessoas Físicas",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_150",
+        "name": "Crédito Rural",
+        "parentId": "",
+        "sourceCount": 10,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_151",
+        "name": "Cruzados Novos / Bloqueio",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_152",
+        "name": "Currículo Escolar",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_153",
+        "name": "Curso de Formação",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_154",
+        "name": "Dano ao Erário",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_155",
+        "name": "Dano Moral Coletivo Decorrente de Dano Ambiental",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_156",
+        "name": "Data de Início de Benefício (DIB)",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_157",
+        "name": "Decadência/Prescrição",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_158",
+        "name": "Declaração de Trânsito Aduaneiro",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_159",
+        "name": "Demarcação",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_160",
+        "name": "Demissão ou Exoneração",
+        "parentId": "",
+        "sourceCount": 9,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_161",
+        "name": "Depósito",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_162",
+        "name": "Desapropriação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_163",
+        "name": "Desapropriação Indireta",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_164",
+        "name": "Desapropriação para Regularização de Comunidade Quilombola / Dec. 4887/2003",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_165",
+        "name": "Desapropriação por Interesse Social Comum / L 4.132/1962",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_166",
+        "name": "Desapropriação por Interesse Social para Reforma Agrária",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_167",
+        "name": "Desapropriação por Utilidade Pública / DL 3.365/1941",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_168",
+        "name": "Desconto em Folha de Pagamento/Benefício Previdenciário",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_169",
+        "name": "Descontos dos benefícios",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_170",
+        "name": "Descontos Indevidos",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_171",
+        "name": "Desembaraço Aduaneiro",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_172",
+        "name": "Desvio de Função",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_173",
+        "name": "Dever de Informação",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_174",
+        "name": "Devolução de contribuições previdenciárias pagas além do teto",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_175",
+        "name": "Diárias e Outras Indenizações",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_176",
+        "name": "Direito de Acesso à Informação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_177",
+        "name": "Direito de Imagem",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_178",
+        "name": "Direitos Indígenas",
+        "parentId": "",
+        "sourceCount": 9,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_179",
+        "name": "Dívida Ativa (Execução Fiscal)",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_180",
+        "name": "Dívida Ativa não-tributária",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_181",
+        "name": "Drawback",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_182",
+        "name": "Edital",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_183",
+        "name": "Efeito Suspensivo / Impugnação / Embargos à Execução",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_184",
+        "name": "Eleições",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_185",
+        "name": "Eletrônico",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_186",
+        "name": "Empreitada",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_187",
+        "name": "Enade",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_188",
+        "name": "Energia Elétrica",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_189",
+        "name": "Enquadramento",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_190",
+        "name": "Enriquecimento sem Causa",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_191",
+        "name": "Entidades Sem Fins Lucrativos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_192",
+        "name": "Equilíbrio Financeiro",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_193",
+        "name": "Equivalência salarial",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_194",
+        "name": "Erro Médico",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_195",
+        "name": "Esbulho / Turbação / Ameaça",
+        "parentId": "",
+        "sourceCount": 26,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_196",
+        "name": "Escolaridade",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_197",
+        "name": "Espécies de Contratos",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_198",
+        "name": "Estágio Probatório",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_199",
+        "name": "Ex-combatentes",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_200",
+        "name": "Exame da Ordem OAB",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_201",
+        "name": "Exame de Saúde e/ou Aptidão Física",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_202",
+        "name": "Exames de Certificação - Diploma",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_203",
+        "name": "Exames Oficiais para Ingresso - Enem",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_204",
+        "name": "Excesso de Penhora",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_205",
+        "name": "Execução Contratual",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_206",
+        "name": "Exercício Profissional",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_207",
+        "name": "Expedição de Certidão Positiva de Débito com Efeito de Negativa",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_208",
+        "name": "Expedição de Diplomas e Omissão na Entrega das Notas",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_209",
+        "name": "Expurgos Inflacionários / Planos Econômicos",
+        "parentId": "",
+        "sourceCount": 88,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_210",
+        "name": "FGTS",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_211",
+        "name": "FGTS/Fundo de Garantia Por Tempo de Serviço",
+        "parentId": "",
+        "sourceCount": 12,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_212",
+        "name": "Fies",
+        "parentId": "",
+        "sourceCount": 38,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_213",
+        "name": "Filho Maior e Inválido",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_214",
+        "name": "Financiamento Público da Educação e/ou Pesquisa",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_215",
+        "name": "Fiscalização",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_216",
+        "name": "FNT/Fundo Nacional de Telecomunicações",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_217",
+        "name": "Fornecimento de Energia Elétrica",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_218",
+        "name": "Fornecimento de Medicamentos",
+        "parentId": "",
+        "sourceCount": 22,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_219",
+        "name": "Fraude Bancária",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_220",
+        "name": "Frentista",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_221",
+        "name": "Funcionamento de Comércio de Derivados de Petróleo",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_222",
+        "name": "FUNDEB/FUNDEF/Fundo de Manutenção e Desenvolvimento do Ensino Fundamental e de Valorização do Magistério",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_223",
+        "name": "Fundo de Participação dos Municípios",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_224",
+        "name": "Fundo de Saúde do Exército - FUSEX",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_225",
+        "name": "Funrural",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_226",
+        "name": "Garantias Constitucionais",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_227",
+        "name": "Gestante / Adotante / Paternidade",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_228",
+        "name": "Gratificação de Atividade Executiva - GAE",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_229",
+        "name": "Gratificação de Incentivo",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_230",
+        "name": "Gratificação de Incremento da Fiscalização e da Arrecadação - GIFA",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_231",
+        "name": "Gratificação Especial de Localidade - GEL",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_232",
+        "name": "Gratificação Incorporada / Quintos e Décimos / VPNI",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_233",
+        "name": "Gratificações da Lei 8.112/1990",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_234",
+        "name": "Gratificações de Atividade",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_235",
+        "name": "Gratificações e Adicionais",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_236",
+        "name": "Habilitação / Registro Cadastral / Julgamento / Homologação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_237",
+        "name": "Híbrida (Art. 48/106)",
+        "parentId": "",
+        "sourceCount": 39,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_238",
+        "name": "Hipoteca",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_239",
+        "name": "Horas Extras",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_240",
+        "name": "ICMS/ Imposto sobre Circulação de Mercadorias",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_241",
+        "name": "ICMS/Importação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_242",
+        "name": "Idoso",
+        "parentId": "",
+        "sourceCount": 10,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_243",
+        "name": "IE/ Imposto sobre Exportação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_244",
+        "name": "II/ Imposto sobre Importação",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_245",
+        "name": "Imissão",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_246",
+        "name": "Impostos",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_247",
+        "name": "Incapacidade Laborativa Parcial",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_248",
+        "name": "Incapacidade Laborativa Permanente",
+        "parentId": "",
+        "sourceCount": 10,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_249",
+        "name": "Incapacidade Laborativa Temporária",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_250",
+        "name": "Incidência sobre Aposentadoria",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_251",
+        "name": "Incidência sobre Lucro",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_252",
+        "name": "Inclusão Indevida em Cadastro de Inadimplentes",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_253",
+        "name": "Indenização / Terço Constitucional",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_254",
+        "name": "Indenização por Dano Ambiental",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_255",
+        "name": "Indenização por Dano Material",
+        "parentId": "",
+        "sourceCount": 17,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_256",
+        "name": "Indenização por Dano Moral",
+        "parentId": "",
+        "sourceCount": 37,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_257",
+        "name": "Índice da URV Lei 8.880/1994",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_258",
+        "name": "Índice de 3,17%",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_259",
+        "name": "Índice de 10,87% Lei 10.192/2001",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_260",
+        "name": "Índice de 28,86% Lei 8.622/1993 e 8.627/1993",
+        "parentId": "",
+        "sourceCount": 215,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_261",
+        "name": "Índice de 28,86% LL 8.622/1993 e 8.627/1993",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_262",
+        "name": "Infração Administrativa",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_263",
+        "name": "Ingresso e Concurso",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_264",
+        "name": "Ingresso no Curso Superior",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_265",
+        "name": "Inquérito / Processo / Recurso Administrativo",
+        "parentId": "",
+        "sourceCount": 63,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_266",
+        "name": "Inscrição / Documentação",
+        "parentId": "",
+        "sourceCount": 42,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_267",
+        "name": "Interdição",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_268",
+        "name": "Interpretação / Revisão de Contrato",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_269",
+        "name": "IOC/IOF Imposto sobre operações de crédito, câmbio e seguro, ou relativas a títulos ou valores mobiliários",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_270",
+        "name": "IPI/ Imposto sobre Produtos Industrializados",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_271",
+        "name": "IPTU/ Imposto Predial e Territorial Urbano",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_272",
+        "name": "IRPF/Imposto de Renda de Pessoa Física",
+        "parentId": "",
+        "sourceCount": 17,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_273",
+        "name": "IRPJ/Imposto de Renda de Pessoa Jurídica",
+        "parentId": "",
+        "sourceCount": 59,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_274",
+        "name": "Irredutibilidade de Vencimentos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_275",
+        "name": "IRSM de Fevereiro de 1994(39,67%)",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_276",
+        "name": "Isenção por Doença ou Acidente em Serviço",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_277",
+        "name": "Isonomia",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_278",
+        "name": "Isonomia/Equivalência Salarial",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_279",
+        "name": "ISS/ Imposto sobre Serviços",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_280",
+        "name": "ITR/ Imposto Territorial Rural",
+        "parentId": "",
+        "sourceCount": 32,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_281",
+        "name": "Jornada de Trabalho",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_282",
+        "name": "Jornada Especial",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_283",
+        "name": "Juros de Mora - Legais / Contratuais",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_284",
+        "name": "Juros Progressivos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_285",
+        "name": "Levantamento de Valor",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_286",
+        "name": "Liberação de Conta",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_287",
+        "name": "Liberação de mercadorias",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_288",
+        "name": "Liberação de Veículo Apreendido",
+        "parentId": "",
+        "sourceCount": 45,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_289",
+        "name": "Licença Prêmio",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_290",
+        "name": "Licenças / Afastamentos",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_291",
+        "name": "Licenciamento",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_292",
+        "name": "Licenciamento de Veículo",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_293",
+        "name": "Licitações",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_294",
+        "name": "Liminar",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_295",
+        "name": "Limite de Carga Horária - Jornada Semanal",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_296",
+        "name": "Locação / Permissão / Concessão / Autorização / Cessão de Uso",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_297",
+        "name": "Locação de Imóvel",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_298",
+        "name": "Mandado de Segurança",
+        "parentId": "",
+        "sourceCount": 11,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_299",
+        "name": "Matrícula",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_300",
+        "name": "Matrícula - Ausência de Pré-Requisito",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_301",
+        "name": "Menor sob Guarda",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_302",
+        "name": "Metrológica",
+        "parentId": "",
+        "sourceCount": 10,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_303",
+        "name": "Microempresa",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_304",
+        "name": "Militar",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_305",
+        "name": "Mineração",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_306",
+        "name": "Minha Casa, Minha Vida",
+        "parentId": "",
+        "sourceCount": 13,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_307",
+        "name": "Minorias Étnicas",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_308",
+        "name": "Moléstia Profissional ou Doença Grave",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_309",
+        "name": "Multas e demais Sanções",
+        "parentId": "",
+        "sourceCount": 114,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_310",
+        "name": "Mútuo",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_311",
+        "name": "Não Cumulatividade",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_312",
+        "name": "Não padronizado",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_313",
+        "name": "Natureza do Cargo Acumulável",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_314",
+        "name": "Obras Públicas",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_315",
+        "name": "Obrigação de Fazer / Não Fazer",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_316",
+        "name": "Ocupação",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_317",
+        "name": "Oncológico",
+        "parentId": "",
+        "sourceCount": 14,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_318",
+        "name": "Outros",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_319",
+        "name": "PAES/Parcelamento Especial",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_320",
+        "name": "Pagamento",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_321",
+        "name": "Pagamento Indevido",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_322",
+        "name": "Parcelamento",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_323",
+        "name": "Parcelas de benefício não pagas",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_324",
+        "name": "Paridade Salarial",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_325",
+        "name": "PASEP",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_326",
+        "name": "Patrimônio Histórico / Tombamento",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_327",
+        "name": "Pensão",
+        "parentId": "",
+        "sourceCount": 19,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_328",
+        "name": "Pensão por Morte (Art. 74/9)",
+        "parentId": "",
+        "sourceCount": 71,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_329",
+        "name": "Perda da Propriedade",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_330",
+        "name": "Perda de Prazo de Matrícula",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_331",
+        "name": "Perdas e Danos",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_332",
+        "name": "Perdimento de Bens",
+        "parentId": "",
+        "sourceCount": 18,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_333",
+        "name": "Pessoa com Deficiência",
+        "parentId": "",
+        "sourceCount": 131,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_334",
+        "name": "PIS",
+        "parentId": "",
+        "sourceCount": 40,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_335",
+        "name": "PIS - Cofins",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_336",
+        "name": "PIS - Importação",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_337",
+        "name": "PIS/PASEP",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_338",
+        "name": "Plano de Classificação de Cargos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_339",
+        "name": "Planos de Saúde",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_340",
+        "name": "Política fundiária e da reforma agrária",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_341",
+        "name": "Por Tempo de Contribuição",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_342",
+        "name": "Pós-Graduação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_343",
+        "name": "Posse",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_344",
+        "name": "Posse e Exercício",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_345",
+        "name": "Pregão",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_346",
+        "name": "Prescrição e Decadência",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_347",
+        "name": "Prestação de Serviços",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_348",
+        "name": "Previdência privada",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_349",
+        "name": "PREVIDENCIÁRIO - INTEGRAÇÃO TJSP (local PJe2G)",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_350",
+        "name": "Processo Administrativo Disciplinar / Sindicância",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_351",
+        "name": "Processo Administrativo Disciplinar ou Sindicância",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_352",
+        "name": "Processo Seletivo",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_353",
+        "name": "Produção Agropecuária",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_354",
+        "name": "Professor",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_355",
+        "name": "Profissional",
+        "parentId": "",
+        "sourceCount": 33,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_356",
+        "name": "Programas de Arrendamento Residencial PAR",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_357",
+        "name": "Progressão Funcional com Interstício de Doze Meses",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_358",
+        "name": "Promoção / Ascensão",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_359",
+        "name": "Propriedade",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_360",
+        "name": "Proteção à Livre Concorrência",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_361",
+        "name": "Proteção Internacional a Direitos Humanos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_362",
+        "name": "Protesto Indevido de Títulos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_363",
+        "name": "Prouni",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_364",
+        "name": "Prova de Títulos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_365",
+        "name": "Prova Objetiva",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_366",
+        "name": "Prova Prática-Sentença",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_367",
+        "name": "Prova Subjetiva",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_368",
+        "name": "Questões Funcionais",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_369",
+        "name": "Quitação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_370",
+        "name": "Readaptação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_371",
+        "name": "Reajuste de Prestações",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_372",
+        "name": "Reajuste de Remuneração, Soldo, Proventos ou Pensão",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_373",
+        "name": "Reajustes de Remuneração, Proventos ou Pensão",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_374",
+        "name": "Reajustes e Revisões Específicos",
+        "parentId": "",
+        "sourceCount": 11,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_375",
+        "name": "Recondução",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_376",
+        "name": "Redistribuição",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_377",
+        "name": "Redução de Alíquota IR/CSLL - Serviços Hospitalares",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_378",
+        "name": "REFIS/Programa de Recuperação Fiscal",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_379",
+        "name": "Reforma",
+        "parentId": "",
+        "sourceCount": 16,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_380",
+        "name": "Regime",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_381",
+        "name": "Regime Estatutário",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_382",
+        "name": "Regime Hospitalar ou Domiciliar durante Período de Internação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_383",
+        "name": "Regime Monofásico",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_384",
+        "name": "Registrado na ANVISA",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_385",
+        "name": "Registro / Porte de arma de fogo",
+        "parentId": "",
+        "sourceCount": 11,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_386",
+        "name": "Registro de Empresa",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_387",
+        "name": "Registro de Marcas, Patentes ou Invenções",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_388",
+        "name": "Registro Profissional",
+        "parentId": "",
+        "sourceCount": 17,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_389",
+        "name": "Reintegração",
+        "parentId": "",
+        "sourceCount": 61,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_390",
+        "name": "Reintegração de Posse",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_391",
+        "name": "Reintegração ou Readmissão",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_392",
+        "name": "Remoção",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_393",
+        "name": "Renda Mensal Vitalícia",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_394",
+        "name": "Repasse de Verbas Públicas",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_395",
+        "name": "Rescisão",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_396",
+        "name": "Rescisão / Resolução",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_397",
+        "name": "Rescisão do contrato e devolução do dinheiro",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_398",
+        "name": "Reserva de Vagas",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_399",
+        "name": "Reserva de Vagas para Pessoas com Deficiência",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_400",
+        "name": "Residência Médica",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_401",
+        "name": "Responsabilidade da Administração",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_402",
+        "name": "Responsabilidade Fiscal",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_403",
+        "name": "Ressarcimento do SUS",
+        "parentId": "",
+        "sourceCount": 11,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_404",
+        "name": "Restabelecimento",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_405",
+        "name": "Restituição ao Erário",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_406",
+        "name": "Restituição de área",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_407",
+        "name": "Restituição de área - FUNAI",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_408",
+        "name": "Retido na fonte",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_409",
+        "name": "Revisão da Vida Toda (Tema 1102 de Repercussão Geral)",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_410",
+        "name": "Revisão do Saldo Devedor",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_411",
+        "name": "Revisão do valor do benefício no primeiro reajuste após a concessão (Art. 21, § 3º, da Lei 8.880/1994)",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_412",
+        "name": "Revogação",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_413",
+        "name": "Revogação/Anulação de multa ambiental",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_414",
+        "name": "Revogação/Concessão de Licença Ambiental",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_415",
+        "name": "RMI - Renda Mensal Inicial",
+        "parentId": "",
+        "sourceCount": 14,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_416",
+        "name": "RMI cuja salário-de-benefício supera menor valor teto",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_417",
+        "name": "RMI pela equivalência entre Salário-de-Benefício e Salário-de-Contribuição",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_418",
+        "name": "Rural (art. 42/44)",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_419",
+        "name": "Rural (Art. 48/51)",
+        "parentId": "",
+        "sourceCount": 161,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_420",
+        "name": "Rural (art. 59/63)",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_421",
+        "name": "Rural (Pensão por Morte (Art. 74/9))",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_422",
+        "name": "Salário-Educação",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_423",
+        "name": "Salário-Maternidade",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_424",
+        "name": "Salário-Maternidade (Art. 71/73)",
+        "parentId": "",
+        "sourceCount": 11,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_425",
+        "name": "Sanções Administrativas",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_426",
+        "name": "Saneamento",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_427",
+        "name": "Sanitárias",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_428",
+        "name": "Seguro",
+        "parentId": "",
+        "sourceCount": 21,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_429",
+        "name": "Seguro Acidentes do Trabalho",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_430",
+        "name": "Seguro Desemprego",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_431",
+        "name": "Seguro-defeso ao pescado artesanal profissional",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_432",
+        "name": "Sem registro na ANVISA",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_433",
+        "name": "Serviço Militar",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_434",
+        "name": "Serviço Militar dos Profissionais da Saúde",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_435",
+        "name": "Serviço Militar Obrigatório",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_436",
+        "name": "Servidores Inativos",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_437",
+        "name": "Sigilo Fiscal",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_438",
+        "name": "SIMPLES",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_439",
+        "name": "Sistema Financeiro da Habitação",
+        "parentId": "",
+        "sourceCount": 11,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_440",
+        "name": "Sistema Nacional de Trânsito",
+        "parentId": "",
+        "sourceCount": 3,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_441",
+        "name": "Sistema Remuneratório e Benefícios",
+        "parentId": "",
+        "sourceCount": 6,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_442",
+        "name": "Sistema Único de Saúde (SUS)",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_443",
+        "name": "Sucumbenciais",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_444",
+        "name": "Suspensão",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_445",
+        "name": "Suspensão da Cobrança - Devedor Beneficiário de Assistência Judiciária Gratuita",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_446",
+        "name": "Sustação de Protesto",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_447",
+        "name": "Sustação/Alteração de Leilão",
+        "parentId": "",
+        "sourceCount": 27,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_448",
+        "name": "Tácito",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_449",
+        "name": "Taxa de Fiscalização Ambiental",
+        "parentId": "",
+        "sourceCount": 8,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_450",
+        "name": "Taxa de Fiscalização da Comissão de Valores Mobiliários",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_451",
+        "name": "Taxa SELIC",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_452",
+        "name": "Telefonia",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_453",
+        "name": "Tempo de serviço",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_454",
+        "name": "Termo Aditivo",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_455",
+        "name": "Transferência",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_456",
+        "name": "Transferência Discente",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_457",
+        "name": "Transporte Aéreo - Aeroporto",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_458",
+        "name": "Transporte Terrestre",
+        "parentId": "",
+        "sourceCount": 4,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_459",
+        "name": "Tratamento Domiciliar (Home Care)",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_460",
+        "name": "Tratamento Médico-Hospitalar",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_461",
+        "name": "Tutela de Urgência",
+        "parentId": "",
+        "sourceCount": 5,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_462",
+        "name": "Unidade de Conservação da Natureza",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_463",
+        "name": "Urbana (art. 42/44)",
+        "parentId": "",
+        "sourceCount": 2,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_464",
+        "name": "Urbana (Art. 48/51)",
+        "parentId": "",
+        "sourceCount": 18,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_465",
+        "name": "Urbana (Pensão por Morte (Art. 74/9))",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_466",
+        "name": "Urbano (art. 60)",
+        "parentId": "",
+        "sourceCount": 7,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_467",
+        "name": "Urgência",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_468",
+        "name": "Usucapião Ordinária",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_469",
+        "name": "Valores Antecipados na Tutela Posteriormente Revogada",
+        "parentId": "",
+        "sourceCount": 1,
+        "source": "Lista fornecida"
+      },
+      {
+        "id": "acervo_470",
+        "name": "Vícios de Construção",
+        "parentId": "",
+        "sourceCount": null,
+        "source": "Lista fornecida"
+      }
+    ],
+    "archivedCatalog": [
+      {
+        "id": "elab_minuta_decisao",
+        "name": "Elaboração de Minutas de Decisão",
+        "group": "elaboracao",
+        "atribuicoes": "Especificações: decisão monocrática terminativa; decisão interlocutória (apreciação de tutela, questões incidentais, demais decisões interlocutórias).",
+        "kind": "minutar",
+        "specializations": [
+          "Decisão monocrática terminativa",
+          "Decisão interlocutória — apreciação de tutela",
+          "Decisão interlocutória — questões incidentais",
+          "Decisão interlocutória — demais hipóteses"
+        ],
+        "migratedTo": "minutar"
+      },
+      {
+        "id": "elab_minuta_despacho",
+        "name": "Elaboração de Minutas de Despacho",
+        "group": "elaboracao",
+        "atribuicoes": "Especificações: Geral; Vista ao MPF; Emenda (comprovação de custas, juntada de procuração, regularização da representação processual, juntada ou complementação documental, outras providências de regularização).",
+        "kind": "minutar",
+        "specializations": [
+          "Geral",
+          "Vista ao MPF",
+          "Emenda — comprovação de custas",
+          "Emenda — juntada de procuração",
+          "Emenda — regularização da representação processual",
+          "Emenda — juntada ou complementação documental",
+          "Emenda — outras providências de regularização"
+        ],
+        "migratedTo": "minutar"
+      }
+    ],
+    "flow": []
+  }
+}

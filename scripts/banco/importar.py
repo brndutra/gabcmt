@@ -42,6 +42,7 @@ DESCR = {
     "jurisprudencia": "Jurisprudência de referência (temas, súmulas, precedentes qualificados)",
     "assuntos": "Catálogo de assuntos (TPU/CNJ, seções e sinônimos)",
     "redacao": "Padrão de redação: conectivos, verbos, preferências, correções e alertas",
+    "gabinete": "Sessões (marcos), calendário de trabalho, servidores e atribuições — fonte única lida pelo Painel Central (contagem = sessões)",
     "acervo": "Espelho do Painel Central (acervo, controles de trabalho, triagem e sessões), saneado: sem celulares, e-mails e CPF",
 }
 SANEAMENTO = ("Espelho do Painel Central (dados e controles de trabalho). Sem celulares, telefones, e-mails e CPF "
@@ -253,7 +254,8 @@ def leia_me():
     for f in sorted(BANCO.glob("*.json")):
         o = json.loads(f.read_text(encoding="utf-8"))
         nome = f.stem
-        linhas.append(f"| [`{f.name}`]({f.name}) | {DESCR.get(nome, o.get('schema', ''))} | {len(o['registros'])} | {o.get('versao', '')} |")
+        qtd = len(o["registros"]) if isinstance(o.get("registros"), list) else len(o.get("sessoes") or [])
+        linhas.append(f"| [`{f.name}`]({f.name}) | {DESCR.get(nome, o.get('schema', ''))} | {qtd} | {o.get('versao', '') or str(o.get('atualizado_em', ''))[:10]} |")
     linhas += ["", "Para atualizar: exporte cada banco no app e rode `python3 scripts/construir.py ARQUIVOS.json`.",
                "", "O acervo (`acervo.json`, com a planilha `acervo.csv`) é o espelho do Painel Central (`painel.html`): todas as colunas "
                "do Acervo Central, controles de trabalho, triagem, escaninhos, sessões e equipe, encaminhados ao GitHub ao SALVAR e após "
