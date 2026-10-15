@@ -34,6 +34,17 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-mover select{flex:1;min-width:0;border:1px solid #d8dee5;border-radius:9px;background:#fff;padding:7px 8px;font:inherit;font-size:11px;font-weight:700;color:#14263c;outline:none;cursor:pointer}
     .tri-mover-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;border:0;border-radius:9px;background:#d9a441;color:#33240a;padding:6px 11px;font-size:15px;line-height:1;cursor:pointer}
     .tri-mover-btn b{font-size:10.5px;font-weight:900;background:rgba(51,36,10,.12);border-radius:99px;padding:2px 6px}
+    .tri-mover-btn.sp{background:#1f3d63;color:#fff}.tri-mover-btn.sp b{background:rgba(255,255,255,.18)}
+    .tri-sp-envio{margin-top:6px}
+    .tri-selbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 12px;margin:0 0 10px;border:1px solid #e1e7ee;border-radius:11px;background:#f7f9fc;font-size:11.5px;color:#55657a}
+    .tri-selbar.on{border-color:#e7c77d;background:#fff9ea}
+    .tri-sel-todos{display:inline-flex;align-items:center;gap:6px;font-weight:850;color:#1f3d63;cursor:pointer}
+    .tri-sel-msg{flex:1 1 220px;min-width:0}
+    .tri-sel-sp{display:inline-flex;align-items:center;gap:6px;margin-left:auto}.tri-sel-sp select{max-width:220px;border:1px solid #d6e0ea;border-radius:8px;padding:5px 8px;font:inherit;font-size:11.5px;background:#fff}
+    .tri-chk,.tri-sel-todos input{width:15px;height:15px;accent-color:#1f3d63;cursor:pointer;margin:0}
+    .tri-pc-marca{display:inline-flex!important;align-items:center;gap:6px}
+    .tri-pcard.marcada{box-shadow:0 0 0 2px #e3b453 inset,0 1px 3px rgba(0,0,0,.05)}
+    .tri-plan-tr.marcada .c{background:#fff6dc}
     .tri-mover-btn:disabled{background:#e9edf2;color:#98a4b0;cursor:not-allowed}
     .tri-band-pe{display:flex;gap:6px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px 12px;border-top:1px solid #e3e7ec;font-size:11px;color:#6d7b8a}
     .tri-movel{position:relative;border-radius:16px;background:#fff;border:1px solid #e3e7ec;box-shadow:0 10px 30px rgba(20,38,60,.08);min-width:0;overflow:hidden}
@@ -251,6 +262,13 @@ MARKUP = """
                 </sc-raw-select>
                 <button class="tri-mover-btn" sc-camel-on-click="{{ triMoverMarcados }}" disabled="{{ triMoverOff }}" title="Mover os processos marcados para o escaninho escolhido" aria-label="Mover os processos marcados para o escaninho escolhido"><span aria-hidden="true">🗂</span><span aria-hidden="true" style="font-size:13px">➜</span><b>{{ triSelCount }}</b></button>
               </div>
+                <div class="tri-mover tri-sp-envio">
+                <sc-raw-select value="{{ triSessao }}" sc-camel-on-change="{{ onTriSessao }}" aria-label="Sessão da Seleção Prévia" title="Sessão de destino na Seleção Prévia">
+                  <option value="">Sessão da Seleção Prévia…</option>
+                  <sc-for list="{{ triSessaoOpts }}" as="o"><option value="{{ o.value }}">{{ o.label }}</option></sc-for>
+                </sc-raw-select>
+                <button class="tri-mover-btn sp" sc-camel-on-click="{{ triBandSP }}" disabled="{{ triBandSPOff }}" title="Lançar os processos marcados na Seleção Prévia da sessão escolhida" aria-label="Lançar os marcados na Seleção Prévia"><span aria-hidden="true">✓</span><span aria-hidden="true" style="font-size:13px">➜</span><b>{{ triSelCount }}</b></button>
+              </div>
               </div>
               <div class="tri-band-lista">
                 <sc-for list="{{ triFichas }}" as="p" hint-placeholder-count="4">
@@ -312,20 +330,26 @@ MARKUP = """
                   </div>
                 </sc-if>
                 <div class="tri-procs">
+                  <div class="tri-selbar {{ triEscSelCls }}" role="group" aria-label="Marcação dos processos do escaninho">
+                    <label class="tri-sel-todos"><input type="checkbox" checked="{{ triEscTodos }}" sc-camel-on-change="{{ triEscToggleTodos }}" aria-label="Marcar todos os processos do escaninho"><span>Marcar todos</span></label>
+                    <span class="tri-sel-msg">{{ triEscSelMsg }}</span>
+                    <button class="tri-ab-btn" sc-camel-on-click="{{ triEscLimpar }}" disabled="{{ triEscLimparOff }}" title="Desmarcar todos">Limpar</button>
+                    <span class="tri-sel-sp"><sc-raw-select value="{{ triSessao }}" sc-camel-on-change="{{ onTriSessao }}" aria-label="Sessão da Seleção Prévia" title="Sessão de destino na Seleção Prévia"><option value="">Sessão…</option><sc-for list="{{ triSessaoOpts }}" as="o"><option value="{{ o.value }}">{{ o.label }}</option></sc-for></sc-raw-select><button class="tri-mover-btn sp" sc-camel-on-click="{{ triEscSP }}" disabled="{{ triEscSPOff }}" title="Lançar os processos marcados na Seleção Prévia da sessão escolhida" aria-label="Lançar os marcados na Seleção Prévia"><span aria-hidden="true">✓</span><span aria-hidden="true" style="font-size:13px">➜</span><b>{{ triEscSelCount }}</b></button></span>
+                  </div>
                   <sc-if value="{{ triVistaPlanilha }}" hint-placeholder-val="{{ false }}">
                     <div class="tri-plan-wrap"><div class="tri-plan" role="table" aria-label="Processos do escaninho">
                       <div class="tri-plan-tr cab" role="row"><span></span><sc-for list="{{ triPlanCols }}" as="c"><span class="{{ c.cls }}">{{ c.label }}</span></sc-for></div>
-                      <sc-for list="{{ triPlanLinhas }}" as="g" hint-placeholder-count="3"><div class="tri-plan-tr" role="row">
-                        <div class="c acoes"><button class="tri-icone" sc-camel-on-click="{{ g.abrirCard }}" title="Abrir no modo cards">▸</button><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
+                      <sc-for list="{{ triPlanLinhas }}" as="g" hint-placeholder-count="3"><div class="tri-plan-tr {{ g.selCls }}" role="row">
+                        <div class="c acoes"><input class="tri-chk" type="checkbox" checked="{{ g.sel }}" sc-camel-on-change="{{ g.toggleSel }}" aria-label="Marcar processo"><button class="tri-icone" sc-camel-on-click="{{ g.abrirCard }}" title="Abrir no modo cards">▸</button><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
                         <sc-for list="{{ g.vals }}" as="v"><div class="c {{ v.cls }}" title="{{ v.v }}">{{ v.v }}</div></sc-for>
                       </div></sc-for>
                     </div></div>
                   </sc-if>
                   <sc-if value="{{ triVistaCards }}" hint-placeholder-val="{{ true }}">
                   <sc-for list="{{ triOpenRows }}" as="g" hint-placeholder-count="2">
-                    <div class="tri-pcard" data-tri-card="{{ g.pid }}" style="border-left:4px solid {{ g.clsCor }}">
+                    <div class="tri-pcard {{ g.selCls }}" data-tri-card="{{ g.pid }}" style="border-left:4px solid {{ g.clsCor }}">
                       <div class="tri-pcard-topo">
-                        <div class="tri-pc-cel"><span>PROCESSO</span><b class="num">{{ g.proc }}</b><div class="tri-classe" title="{{ g.clsTitulo }}"><em class="tri-cls" style="background:{{ g.clsFundo }};color:{{ g.clsCor }}">{{ g.clsSigla }}</em><i>{{ g.classe }}</i></div><sc-if value="{{ g.temQualif }}"><div class="tri-qualif"><sc-for list="{{ g.qualifs }}" as="q"><span>▸ {{ q.label }}</span></sc-for></div></sc-if></div>
+                        <div class="tri-pc-cel"><span class="tri-pc-marca"><input class="tri-chk" type="checkbox" checked="{{ g.sel }}" sc-camel-on-change="{{ g.toggleSel }}" aria-label="Marcar processo">PROCESSO</span><b class="num">{{ g.proc }}</b><div class="tri-classe" title="{{ g.clsTitulo }}"><em class="tri-cls" style="background:{{ g.clsFundo }};color:{{ g.clsCor }}">{{ g.clsSigla }}</em><i>{{ g.classe }}</i></div><sc-if value="{{ g.temQualif }}"><div class="tri-qualif"><sc-for list="{{ g.qualifs }}" as="q"><span>▸ {{ q.label }}</span></sc-for></div></sc-if></div>
                         <div class="tri-pc-cel"><span>ASSUNTO</span><b title="{{ g.assuntoTitulo }}" class="dica">{{ g.assunto }}</b></div>
                         <div class="tri-pc-cel"><span>ETIQUETAS ATUAIS</span><b title="{{ g.etiquetas }}">{{ g.etiquetas }}</b></div>
                         <div class="tri-pc-cel larga"><span>TAREFA ATUAL · ÚLTIMO MOVIMENTO</span><div class="tri-tarefa"><b title="{{ g.tarefa }}">{{ g.tarefa }}</b><sc-if value="{{ g.temEntrada }}"><em class="tri-pill" title="{{ g.entradaTitulo }}">desde {{ g.entrada }}</em></sc-if></div><i title="{{ g.movimentoTitulo }}">{{ g.movimento }}</i></div>
@@ -576,6 +600,57 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     return this.relOrdenarPorItem(ord.map(({ r }) => this.relSimplesLinha(r, sel(r) ? this.itemDePauta(r) : pos.get(r))));
   }
 @@REL_IMPRIMIR@@
+  /* lança processos (por procId) na Seleção Prévia da sessão escolhida; continuam na triagem */
+  triParaSelecao(ids, session) {
+    if (!session) return this.notify("Escolha a sessão de destino (com data atual ou futura).", "warn");
+    const set = new Set((ids || []).map(String)); if (!set.size) return this.notify("Marque pelo menos um processo.", "warn");
+    let n = 0, ja = 0, mov = 0;
+    this.rows.forEach(r => {
+      if (!set.has(procId(r.Processo))) return;
+      const sel = r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE";
+      if (sel && r["Sessão Destino"] === session) { ja++; return; }
+      if (sel && txt(r["Sessão Destino"])) { mov++; r["Item (Pauta de Julgamento)"] = ""; }
+      r["Sessão Destino"] = session; r["Seleção Prévia"] = "SELECIONADO PREVIAMENTE";
+      if (r["Status de Julgamento"] !== "PAUTADO") r["Status de Julgamento"] = "PENDENTE";
+      if (!Number.isFinite(Number(r._preOrder)) || !Number(r._preOrder)) r._preOrder = this.nextPreOrder();
+      n++;
+    });
+    this.saveDB(); this.refresh();
+    this.notify(`${n} processo(s) lançado(s) na Seleção Prévia de ${session}` + (mov ? ` (${mov} vindo(s) de outra sessão)` : "") + (ja ? ` · ${ja} já estava(m) nela` : "") + ".", n ? "ok" : "warn");
+  }
+  /* JSON compatível com "Importar sessões" do Hub de Sessões do Controle de Pauta (formato controle-pauta-hub-sessoes v1) */
+  exportarJsonHub(session, itens) {
+    if (!session || session === "Todas as sessões") return this.notify("Escolha uma sessão para exportar em JSON.", "warn");
+    const copia = v => JSON.parse(JSON.stringify(v == null ? null : v)), dig = v => String(v || "").replace(/\D/g, "");
+    const lista = (itens || this.selectionSessionRows(session)).filter(({ r }) => dig(r.Processo).length === 20);
+    if (!lista.length) return this.notify("Não há processos (com número CNJ de 20 dígitos) nesta relação.", "warn");
+    const agora = new Date().toISOString(), soData = v => { const t = txt(v); let m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(t); if (m) return `${m[3]}-${m[2].padStart(2, "0")}-${m[1].padStart(2, "0")}`; m = /^(\d{4}-\d{2}-\d{2})/.exec(t); return m ? m[1] : ""; };
+    const det = copia(this.sessionDetails[session] || {});
+    ["date", "prepStart", "minutasDeadline", "releaseDeadline", "pautaDeadline", "deadline"].forEach(f => { if (det[f] !== undefined && det[f] !== "") det[f] = soData(det[f]); });
+    const ord = this.relOrdenarPorItem ? this.cardOrdenar(lista) : lista;
+    const rows = ord.map(({ r }) => {
+      const o = copia(r), item = String(this.itemDePauta(r) || "");
+      o["Sessão Destino"] = session; o["Seleção Prévia"] = "SELECIONADO PREVIAMENTE"; o["Status de Julgamento"] = txt(r["Status de Julgamento"]) || "PENDENTE";
+      const ents = Array.isArray(o._pautaEntries) ? o._pautaEntries.filter(e => e && typeof e === "object") : [];
+      let e = ents.find(x => x.session === session);
+      if (!e) { e = { session, item, status: o["Status de Julgamento"], next: "", includedAt: agora, closed: false, source: "painel-central" }; ents.push(e); }
+      else if (!txt(e.item)) e.item = item;
+      o._pautaEntries = ents; o._pautaHistory = Array.isArray(o._pautaHistory) ? o._pautaHistory : [];
+      return o;
+    });
+    let cfg = {}; try { cfg = this.globalConfigSnapshot() || {}; } catch (err) {}
+    const cal = cfg.workCalendar || (() => { try { return this.selectionCalendar(); } catch (err) { return null; } })();
+    const contar = f => rows.filter(f).length;
+    const data = { formato: "controle-pauta-hub-sessoes", versao: 1, exportadoEm: agora, origem: "Painel Central · Seleção Prévia",
+      sessions: [session], sessionDetails: { [session]: det }, rows,
+      pautaPreferences: { session, jsonSessionLists: { [session]: [...new Set(rows.map(o => dig(o.Processo)))] } }, pautaDaily: {},
+      ...(cal && typeof cal === "object" ? { workCalendar: { weekdays: Array.isArray(cal.weekdays) ? cal.weekdays : [1, 2, 3, 4, 5], excluded: (cal.excluded || []).map(soData).filter(Boolean), labels: cal.labels && typeof cal.labels === "object" ? copia(cal.labels) : {} } } : {}),
+      ...(cfg.team && typeof cfg.team === "object" ? { team: copia(cfg.team) } : {}), names: copia(this.names || []),
+      estatisticas: { [session]: { total: rows.length, minutados: contar(o => txt(o.MINUTADO)), corrigidos: contar(o => /^(sim|s|true|1|x)$/i.test(txt(o.CORRIGIDO))), liberados: 0, julgados: contar(o => !["", "PENDENTE", "PAUTADO"].includes(txt(o["Status de Julgamento"]))), aMinutar: contar(o => !txt(o.MINUTADO)), mediaMinutasServidorDia: null, avisos: [] } } };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json;charset=utf-8" }), url = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = url; a.download = ("Hub_Sessoes_" + session + "_" + agora.slice(0, 10)).replace(/[^\w.\-]+/g, "_") + ".json"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
+    this.notify(`JSON da sessão ${session} exportado · ${rows.length} processo(s) · importável em “Importar sessões” do Controle de Pauta.`);
+  }
   imprimirRelacao(itens, titulo, sub) {
     if (!itens.length) return this.notify("Não há processos nesta relação.", "warn");
     const linhas = this.relSimples(itens), pauta = linhas.length && itens.every(({ r }) => r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE");
@@ -676,6 +751,14 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     const salvar = msg => { self.saveDB(); self.refresh(); if (msg) self.notify(msg); };
     const filtro = s.triFiltro || "todos", aberto = escs.find(e => e.id === s.triOpen) || null;
     const marcados = this.triSel.size;
+    if (!this.triEscSel) this.triEscSel = new Set();
+    const noAberto = aberto ? all.filter(({r}) => escOf(r) === aberto.id) : [];
+    const idsAberto = new Set(noAberto.map(({r}) => procId(r.Processo)));
+    [...this.triEscSel].forEach(id => { if (!idsAberto.has(id)) this.triEscSel.delete(id); });
+    const escMarc = noAberto.filter(({r}) => this.triEscSel.has(procId(r.Processo)));
+    const relExp = () => escMarc.length ? escMarc : noAberto, sufixo = () => escMarc.length ? "_marcados" : "";
+    const sessoes = (() => { try { return this.upcomingSessions(); } catch (e) { return []; } })();
+    const sessaoSP = sessoes.includes(s.triSessao) ? s.triSessao : (sessoes[0] || "");
     const lista = escs.filter(e => filtro === "todos" || (filtro === "cheios" ? count.get(e.id) : !count.get(e.id)));
     const camposDados = [...new Set([...this.columnConfig.central, ...this.centralKnownColumns].map(centralColumn))]
       .filter(c => isVisibleColumn(c) && !WORK_COLUMNS.has(c) && !["Processo","processo","Assunto","Etiquetas","etiquetas","Etiquetas Originais","Etiquetas Operacionais","tarefa_atual","Tema","Especificidades","Síntese Processual","Dificuldade"].includes(c));
@@ -702,6 +785,14 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
         if (!self.triSel.size) return self.notify("Marque pelo menos uma ficha da bandeja.", "warn");
         self.triGuardar([...self.triSel], alvo);
       },
+      triSessaoOpts: sessoes.map(x => ({ key: x, value: x, label: x })), triSessao: sessaoSP, onTriSessao: e => self.setState({ triSessao: e.target.value }),
+      triBandSP: () => { if (!self.triSel.size) return self.notify("Marque pelo menos uma ficha da bandeja.", "warn"); self.triParaSelecao([...self.triSel], sessaoSP); self.triSel.clear(); self.refresh(); }, triBandSPOff: !marcados || !sessaoSP,
+      triEscSelCount: escMarc.length, triEscTodos: !!noAberto.length && escMarc.length === noAberto.length,
+      triEscToggleTodos: e => { if (e.target.checked) noAberto.forEach(({r}) => self.triEscSel.add(procId(r.Processo))); else self.triEscSel.clear(); self.refresh(); },
+      triEscLimpar: () => { self.triEscSel.clear(); self.refresh(); }, triEscLimparOff: !escMarc.length,
+      triEscSP: () => { if (!escMarc.length) return self.notify("Marque processos do escaninho (ou “Marcar todos”).", "warn"); self.triParaSelecao(escMarc.map(({r}) => procId(r.Processo)), sessaoSP); self.triEscSel.clear(); self.refresh(); }, triEscSPOff: !escMarc.length || !sessaoSP,
+      triEscSelMsg: escMarc.length ? `${escMarc.length} de ${noAberto.length} marcado(s) · exportação somente dos marcados` : `${noAberto.length} processo(s) · nenhum marcado — exportação de todos`,
+      triEscSelCls: escMarc.length ? "on" : "",
       triSelCount: marcados, triClearFg: marcados ? "#a5730f" : "#6d7b8a",
       triSelectAll: () => { bandeja.forEach(({r}) => self.triSel.add(procId(r.Processo))); self.refresh(); },
       triClearSel: () => { self.triSel.clear(); self.refresh(); },
@@ -730,15 +821,15 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triConfigAberta: !!s.triConfig, triConfigSeta: s.triConfig ? "▴" : "▾", triConfigCls: s.triConfig ? "on" : "",
       triVistaPlanilha: s.triVista === "planilha", triVistaCards: s.triVista !== "planilha",
       ...(() => { if (s.triVista !== "planilha" || !aberto) return { triPlanCols: [], triPlanLinhas: [] }; const itens = self.cardOrdenar(all.filter(({r}) => escOf(r) === aberto.id)); itens.forEach(({r}) => { if (self.cardRegras(r)) self.saveDeb(); }); const pl = self.cardPlanilha(itens);
-        return { triPlanCols: pl.cols, triPlanLinhas: pl.linhas.map(({ r, vals }) => { const pid = procId(r.Processo); return { key: "p" + pid, vals,
+        return { triPlanCols: pl.cols, triPlanLinhas: pl.linhas.map(({ r, vals }) => { const pid = procId(r.Processo); return { key: "p" + pid, vals, sel: self.triEscSel.has(pid), selCls: self.triEscSel.has(pid) ? "marcada" : "", toggleSel: e => { e.target.checked ? self.triEscSel.add(pid) : self.triEscSel.delete(pid); self.refresh(); },
           abrirCard: () => { self.triFaixa.add(pid); self.setState({ triVista: "cards" }); setTimeout(() => { const n = document.querySelector(`[data-tri-card="${pid}"]`); n && n.scrollIntoView({ block: "start", behavior: "smooth" }); }, 60); },
           devolver: () => { r._escaninho = ""; salvar("Processo devolvido à bandeja."); },
           remover: () => { if (!window.confirm(`Remover ${r.Processo} da Triagem Processual? Ele continua no Acervo Central.`)) return; r._triagem = ""; r._escaninho = ""; salvar("Processo removido da triagem."); } }; }) }; })(),
       triVistaPlanCls: s.triVista === "planilha" ? "on" : "", triVistaCardsCls: s.triVista !== "planilha" ? "on" : "",
       triVerCards: () => self.setState({ triVista: "cards" }),
-      triExpCompleta: () => aberto && self.exportarRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho_" + aberto.titulo, false),
-      triExpSimples: () => aberto && self.exportarRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho_" + aberto.titulo, true),
-      triImprimir: () => aberto && self.imprimirRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho · " + aberto.titulo, "Triagem Processual · Gabinete A"), triVerPlanilha: () => self.setState({ triVista: "planilha" }),
+      triExpCompleta: () => aberto && self.exportarRelacao(relExp(), "Escaninho_" + aberto.titulo + sufixo(), false),
+      triExpSimples: () => aberto && self.exportarRelacao(relExp(), "Escaninho_" + aberto.titulo + sufixo(), true),
+      triImprimir: () => aberto && self.imprimirRelacao(relExp(), "Escaninho · " + aberto.titulo, "Triagem Processual · Gabinete A" + (escMarc.length ? " · " + escMarc.length + " marcado(s)" : "")), triVerPlanilha: () => self.setState({ triVista: "planilha" }),
       triToggleConfig: () => self.setState({ triConfig: !s.triConfig }),
       triOpenCor: aberto ? aberto.cor : "#c3ccd6",
       triConfigResumo: aberto ? (txt(aberto.obs) ? "📝 " + String(aberto.obs).replace(/\s+/g, " ").trim() : "sem bilhete") : "",
@@ -753,7 +844,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
         if (aberta) { try { ctrls = self.preControllers(i).parts.map(c => ({ ...c, key: c.col })); if (!ctrls.some(c => /id da procura/.test(canon(c.col)))) ctrls.push({ ...self.cell(i, "ID da Procuração"), col: "ID DA PROCURAÇÃO", key: "idproc" });
             ctrls.push({ col: "INTERCORRÊNCIAS", key: "interc", kind: "area", value: txt(r["Intercorrências"]), options: [], chips: [], tags: [], checked: false, auto: "", manual: "", onText: v => { self.cardIntercorrencias(r, v); self.saveDeb(); } }); } catch (err) { ctrls = ["Tempestividade","Impedimento / Suspeição","Preparo","Representação","ID da Procuração"].map(c => ({ ...self.cell(i, c), col: c.toUpperCase(), key: c })); } }
         const obsTxt = String(r["Observações"] || ""), poloA = txt(r.polo_ativo || r.Polo_Ativo) || "—", poloP = txt(r.polo_passivo || r.Polo_Passivo) || "—";
-        return { key: "g" + pid, pid, ...linha(r), poloA, poloP, obsTxt, obsCount: obsTxt.split("\n").filter(l => l.trim()).length,
+        return { key: "g" + pid, pid, ...linha(r), poloA, poloP, obsTxt, sel: self.triEscSel.has(pid), selCls: self.triEscSel.has(pid) ? "marcada" : "", toggleSel: e => { e.target.checked ? self.triEscSel.add(pid) : self.triEscSel.delete(pid); self.refresh(); }, obsCount: obsTxt.split("\n").filter(l => l.trim()).length,
         temasTxt: temas.join(" · ") || "—", espsTxt: esps.join(" · ") || "—", destObs: pid + "|Observações",
         onObs: e => { r["Observações"] = e.target.value; self.saveDeb(); },
         abrirCard: () => { self.triFaixa.add(pid); self.setState({ triVista: "cards" }); setTimeout(() => { const n = document.querySelector(`[data-tri-card="${pid}"]`); n && n.scrollIntoView({ block: "start", behavior: "smooth" }); }, 60); },
