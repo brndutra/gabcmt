@@ -140,7 +140,7 @@
     const c = m === "compacto";
     cab.hidden = !c; cap.hidden = !c; corpo.hidden = !c; barraClassica.hidden = c;
     if (classico) classico.style.display = c ? "none" : "";
-    if (plano) plano.style.display = !c || st.plano ? "block" : "none";
+    if (plano) plano.style.display = "none";
     if (c) render();
   }
 
@@ -195,7 +195,7 @@
     const semServ = rows.filter(x => !txt(x.r.SERVIDOR)).length, irreg = rows.filter(x => Object.values(reg(x.r)).includes("ruim")).length, pend = rows.filter(x => Object.values(reg(x.r)).includes("pend")).length, semVoto = rows.filter(x => etapa(x.r) === 2 && !txt(x.r["Voto - Resultado"])).length, minut = rows.filter(x => etapa(x.r) === 2).length;
     const alertas = [semServ ? `<button class="sp-al a" data-sp="serv" data-v="—">● ${semServ} sem servidor</button>` : "", irreg ? `<button class="sp-al p" data-sp="alerta">● ${irreg} com irregularidade</button>` : "", pend ? `<button class="sp-al a" data-sp="alerta">● ${pend} com verificação pendente</button>` : "", semVoto ? `<span class="sp-al a">● ${semVoto} minutado(s) sem resultado do voto</span>` : "", `<span class="sp-al o">✓ ${minut} minutado(s)</span>`].join("");
     cab.innerHTML = `<div class="sp-sessao-topo"><div><div class="sp-eyebrow">Seleção Prévia</div><h1>${esc(s)}${d ? ` <small>· julgamento ${brFull(d)}</small>` : ""}</h1></div>
-        <div class="sp-abas-sessao"><button class="sp-abrir" data-sp="plano" aria-expanded="${st.plano}" title="Marcos editáveis e simulador de designação">Planejamento ${st.plano ? "▴" : "▾"}</button>${sessoes.map(x => { const dd = iso((P().sessionDetails[x] || {}).date); return `<button class="sp-aba-s ${x === s ? "on" : ""}" data-sp="sessao" data-v="${esc(x)}"><b>${dd ? brFull(dd) : esc(x)}</b><span>${esc(x)} · ${P().selectionSessionRows(x).length} proc.</span></button>`; }).join("") || `<span class="sp-vazio">Nenhuma sessão futura com processos selecionados.</span>`}</div></div>
+        <div class="sp-abas-sessao">${sessoes.map(x => { const dd = iso((P().sessionDetails[x] || {}).date); return `<button class="sp-aba-s ${x === s ? "on" : ""}" data-sp="sessao" data-v="${esc(x)}"><b>${dd ? brFull(dd) : esc(x)}</b><span>${esc(x)} · ${P().selectionSessionRows(x).length} proc.</span></button>`; }).join("") || `<span class="sp-vazio">Nenhuma sessão futura com processos selecionados.</span>`}</div></div>
       <div class="sp-distrib" aria-label="Distribuição dos processos por servidor"><div class="sp-kpis">${kpis}</div><div class="sp-dist">${dist || `<i class="sp-livre" style="width:100%">sem processos</i>`}</div></div>
       <div class="sp-esteira" aria-label="Esteira do trabalho — clique numa etapa para filtrar">${esteira}</div>
       <div class="sp-alertas">${alertas}</div>`;
@@ -264,7 +264,7 @@
   const campo = (rot, html, cls = "") => `<div class="sp-campo ${cls}"><label>${rot}</label>${html}</div>`;
   /* cartão do processo: mesmo padrão e regras do cartão da Triagem Processual (+ SERVIDOR e CORRETOR) */
   const faixaAberta = new Set(), infoAberta = new Set();
-  function cartao(x, todos) {
+  function cartao(x, todos, dentro = "") {
     const { r, i } = x, p = P(); let info, cc;
     try { if (p.cardRegras(r)) p.saveDeb(); info = p.cardInfo(r); cc = p.cardCampos(r); } catch (e) { return ""; }
     const cl = info.classe, sit = (() => { try { return p.situacao(r); } catch (e) { return { label: "—", bg: "#eef1f5", fg: "#6d7b8a" }; } })();
@@ -283,6 +283,7 @@
         ${cel("TAREFA ATUAL · ÚLTIMO MOVIMENTO", `<div class="sp-tarefa"><b title="${esc(info.tarefa)}">${esc(info.tarefa)}</b>${info.entrada ? `<em class="sp-pill" title="${esc(info.entradaTitulo)}">desde ${esc(info.entrada)}</em>` : ""}</div><i title="${esc(info.movimentoTitulo)}">${esc(info.movimento)}</i>`, "larga")}
         ${cel("SERVIDOR", sel("SERVIDOR", i, r.SERVIDOR, todos))}
         ${cel("CORRETOR", sel("CORRETOR", i, r.CORRETOR, todos))}
+        ${cel("MINUTADO", `<label class="sp-minutado ${iso(r.MINUTADO) ? "on" : ""}" title="${iso(r.MINUTADO) ? "Minuta concluída em " + brFull(iso(r.MINUTADO)) + " — desmarque para desfazer" : "Marque quando a minuta estiver concluída (registra a data de hoje)"}"><input type="checkbox" data-minut="1" data-i="${i}" ${iso(r.MINUTADO) ? "checked" : ""}><span>${iso(r.MINUTADO) ? brFull(iso(r.MINUTADO)) : "a minutar"}</span></label>`)}
         ${cel("SITUAÇÃO ATUAL", `<em class="sp-sit" style="background:${sit.bg};color:${sit.fg}">${esc(sit.label)}</em>`)}
       </div>
       ${cc.A.length ? `<div class="sp-pcard-campos">${cc.A.map(f => `<div class="sp-pc-campo"><span>${esc(f.col)}</span><b title="${esc(f.val)}">${esc(f.val)}</b></div>`).join("")}</div>` : ""}
@@ -305,6 +306,7 @@
       </div>
       <div class="sp-faixa info"><button class="sp-faixa-barra" data-sp="info" data-i="${i}" aria-expanded="${inf}"><span>${inf ? "▾" : "▸"}</span><span class="rot">+ INFORMAÇÕES</span><span class="res">${esc(cc.B.length ? cc.B.slice(0, 4).map(f => f.col.toLowerCase()).join(" · ") + (cc.B.length > 4 ? ` · +${cc.B.length - 4}` : "") : "sem outras informações")}</span></button>
         ${inf && cc.B.length ? `<div class="sp-pcard-campos">${cc.B.map(f => `<div class="sp-pc-campo"><span>${esc(f.col)}</span><b title="${esc(f.val)}">${esc(f.val)}</b></div>`).join("")}</div>` : ""}</div>
+      ${dentro}
     </div>`;
   }
   function detalhe(x, todos) {
@@ -326,7 +328,8 @@
       julg: `<div class="sp-grade">${campo("STATUS", sel("__status", i, r["Status de Julgamento"] || "PENDENTE", OPC.Status))}${campo("SESSÃO DESTINO", sel("Sessão Destino", i, r["Sessão Destino"], P().upcomingSessions(false)))}${campo("ITEM OFICIAL", inp("Item (Pauta de Julgamento)", i, r["Item (Pauta de Julgamento)"]))}${campo("REMOVER", `<button class="sp-btn" data-sp="remover1" data-i="${i}" style="color:#a64f35">Remover da seleção</button>`)}
         ${campo("HISTÓRICO", hist ? `<ul class="sp-hist">${hist}</ul>` : `<div class="sp-dica" style="margin:0">Sem registros de histórico.</div>`, "l4")}</div>`
     };
-    return `<div class="sp-detalhe">${cartao(x, todos)}<div class="sp-abas">${abas.map(([k, l, b]) => `<button class="${st.aba === k ? "on" : ""}" data-sp="aba" data-v="${k}">${l}${b ? `<span class="b">${b}</span>` : ""}</button>`).join("")}</div>${corpoAba[st.aba] || corpoAba.elab}<div class="sp-dica">Alterações gravadas na hora, nos mesmos campos da visão clássica. Alegações em tópicos, mídias e demais controles: “Visão clássica”.</div></div>`;
+    const blocoAbas = `<div class="sp-pcard-abas"><div class="sp-abas">${abas.map(([k, l, b]) => `<button class="${st.aba === k ? "on" : ""}" data-sp="aba" data-v="${k}">${l}${b ? `<span class="b">${b}</span>` : ""}</button>`).join("")}</div>${corpoAba[st.aba] || corpoAba.elab}<div class="sp-dica">Alterações gravadas na hora, nos mesmos campos da visão clássica. Alegações em tópicos e mídias: “Visão clássica”.</div></div>`;
+    return `<div class="sp-detalhe">${cartao(x, todos, blocoAbas)}</div>`;
   }
   function desenharCorpo(s, rows, todos, mapa) {
     const fs = filtrados(rows), cont = f => rows.filter(f).length;
@@ -513,6 +516,7 @@
     if (t.dataset.selrow !== undefined) { const i = +t.dataset.selrow; t.checked ? st.sel.add(i) : st.sel.delete(i); render(); return; }
     if (t.dataset.rev) { P().preReviewChange(+t.dataset.i, t.dataset.rev, t.checked); render(); return; }
     if (t.dataset.imp) { const p = P(), i = +t.dataset.i, c = p.cell(i, "Impedimento / Suspeição"); if (t.dataset.imp === "toggle") c.onSelect(t.checked ? "Impedimento" : ""); else if (t.dataset.imp === "tipo") c.onSelect(t.value); else c.onManual(t.value); try { p.recompute(p.rows[i]); } catch (er) {} salvar(); return; }
+    if (t.dataset.minut) { gravar("MINUTADO", +t.dataset.i, t.checked ? hoje() : ""); return; }
     if (t.dataset.fin) { try { P().financialChange(P().rows[+t.dataset.i], t.dataset.fin, t.checked); } catch (er) {} salvar(); return; }
     if (t.dataset.add !== undefined) return;
     if (t.dataset.chk) { P().preCommit(+t.dataset.i, t.dataset.chk, t.checked ? "Sim" : ""); salvar(); return; }
@@ -551,5 +555,7 @@
   setInterval(() => {
     try { if (!cab || modoAtual !== "compacto" || arrastando || emEdicao()) return; if (assinar() !== assinatura) render(); } catch (e) {}
   }, 700);
+  const ajustarAltura = () => { const f = window.frameElement; if (!f) return; const h = Math.ceil(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.getBoundingClientRect().height)); if (Math.abs((parseFloat(f.style.height) || 0) - h) > 2) { f.style.height = h + "px"; f.style.maxHeight = "none"; f.style.minHeight = "0"; } };
+  try { new ResizeObserver(ajustarAltura).observe(document.body); } catch (e) {} setInterval(ajustarAltura, 800);
   window.SelecaoCompacta = { render: () => render(), estado: st, modo: m => aplicarModo(m), moverEtapa };
 })();

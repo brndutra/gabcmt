@@ -74,7 +74,9 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-config textarea{min-height:58px}
     .tri-procs{padding:12px;max-height:72vh;overflow:auto}
     .tri-pcard{background:#fff;border:1px solid #dfe6ee;border-radius:12px;margin-bottom:9px;overflow:hidden}
-    .tri-pcard-topo{display:grid;grid-template-columns:minmax(180px,.9fr) minmax(0,1fr) minmax(0,.9fr) minmax(0,1.5fr) 150px auto;align-items:stretch}
+    .tri-pcard-topo{display:grid;grid-template-columns:minmax(180px,.9fr) minmax(0,1fr) minmax(0,.9fr) minmax(0,1.5fr) 112px 140px auto;align-items:stretch}
+    .tri-minutado{display:flex;align-items:center;gap:6px;border:1px solid #d6e0ea;border-radius:8px;padding:4px 7px;font-size:10.5px;font-weight:800;color:#6d7b8a;cursor:pointer;background:#fff;align-self:flex-start}
+    .tri-minutado input{accent-color:#7a5ba6;margin:0}.tri-minutado.on{border-color:#cfc3ea;background:#f3effa;color:#5b4a8a}
     .tri-tarefa{display:flex;align-items:center;gap:6px;min-width:0}.tri-tarefa b{flex:1;min-width:0}
     .tri-pill{flex:0 0 auto;margin-left:auto;font-style:normal;font-size:9px;font-weight:850;color:#33506e;background:#e8eef5;border-radius:99px;padding:2px 8px;white-space:nowrap;cursor:help}
     .tri-pc-cel.larga i{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:10.5px;color:#56636f}
@@ -323,6 +325,7 @@ MARKUP = """
                         <div class="tri-pc-cel"><span>ASSUNTO</span><b title="{{ g.assuntoTitulo }}" class="dica">{{ g.assunto }}</b></div>
                         <div class="tri-pc-cel"><span>ETIQUETAS ATUAIS</span><b title="{{ g.etiquetas }}">{{ g.etiquetas }}</b></div>
                         <div class="tri-pc-cel larga"><span>TAREFA ATUAL · ÚLTIMO MOVIMENTO</span><div class="tri-tarefa"><b title="{{ g.tarefa }}">{{ g.tarefa }}</b><sc-if value="{{ g.temEntrada }}"><em class="tri-pill" title="{{ g.entradaTitulo }}">desde {{ g.entrada }}</em></sc-if></div><i title="{{ g.movimentoTitulo }}">{{ g.movimento }}</i></div>
+                        <div class="tri-pc-cel"><span>MINUTADO</span><label class="tri-minutado {{ g.minutCls }}" title="{{ g.minutTitulo }}"><input type="checkbox" checked="{{ g.minutado }}" sc-camel-on-change="{{ g.onMinut }}"><span>{{ g.minutTxt }}</span></label></div>
                         <div class="tri-pc-cel"><span>SITUAÇÃO ATUAL</span><em style="background:{{ g.sitBg }};color:{{ g.sitFg }}">{{ g.situacao }}</em></div>
                         <div class="tri-pc-acoes"><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
                       </div>
@@ -684,6 +687,8 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
         tempo: info.tempo, tempoTitulo: info.tempoTitulo,
         cxValor: cx ? cx[0] : "", onCx: e => { r.Dificuldade = e.target.value; self.saveDeb(); self.refresh(); },
         ...self.cardControles(i),
+        ...(() => { const d = workflowDate(r.MINUTADO), br = d ? d.split("-").reverse().join("/") : ""; return { minutado: !!d, minutCls: d ? "on" : "", minutTxt: d ? br : "a minutar", minutTitulo: d ? `Minuta concluída em ${br} — desmarque para desfazer` : "Marque quando a minuta estiver concluída (registra a data de hoje)",
+          onMinut: e => { const hj = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10); self.cell(i, "MINUTADO").onText(e.target.checked ? hj : ""); self.saveDeb(); self.refresh(); } }; })(),
         faixaAberta: aberta, faixaSeta: aberta ? "▾" : "▸",
         toggleFaixa: () => { aberta ? self.triFaixa.delete(pid) : self.triFaixa.add(pid); self.refresh(); },
         cxCor: cx ? cx[3] : "#c3ccd6", cxSimb: cx ? cx[1] : "·",
