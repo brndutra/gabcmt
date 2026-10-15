@@ -1,0 +1,14 @@
+{
+  "formato": "controle-pauta-servidores",
+  "versao": 1,
+  "atualizadoEm": null,
+  "origem": "CntrlA · Servidores",
+  "members": [],
+  "catalog": [],
+  "flow": [],
+  "removedMembers": {},
+  "rosterManaged": true,
+  "showCorrectionProductivity": false,
+  "schemaVersion": 2,
+  "seededVersion": 1
+}
