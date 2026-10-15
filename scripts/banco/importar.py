@@ -224,6 +224,8 @@ def importar(arquivos, substituir=False):
                 if regs:
                     lotes.append((alvo, {**obj, "schema": f"gabA.{alvo}", "registros": regs}))
         elif nome == "acervo":
+            if obj.get("completo"):
+                print(f"{arq}: exportação COMPLETA do painel (com sigilosos) — será saneada antes de entrar no banco público")
             regs, fora = sanear_acervo(obj["registros"])
             if fora:
                 print(f"acervo: {len(fora)} registro(s) retirado(s) no saneamento (sigilosos ou sem processo)")

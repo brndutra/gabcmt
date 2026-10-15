@@ -24,6 +24,10 @@
   const EXTRAS = ["Consta_Acervo_Gab_A", "Assunto", "Etiquetas Originais"];
   /* "etiquetas"/"Etiquetas" ficam de fora: as originais vão em "Etiquetas Originais"; as atuais são controle do painel */
   const CAMPOS = new Set([...ACERVO_COLUMNS, ...GAB_ACERVO_COLUMNS, ...EXTRAS].filter(c => !/^etiquetas$/i.test(c)));
+  /* exportação COMPLETA (só no computador do usuário, nunca no GitHub): inclui sigilosos e todos os campos de origem */
+  const GAB_SIGILOSOS_COLUMNS = ["Ano","Mês","Processo","Gabinete","Julgador_Colegiado","Nível_Sigilo","Data_Distribuição","Tempo_Última_Movimentação","DAT_FIM","NUM_CPF_MAGIST","SIN_PEND_1JULG","SIN_CLS","SIN_PRAZO_LEGAL","SIN_SECRETARIA","SIN_CONTADORIA","SIN_REM_EXTERNA","SIN_UFOR","BASE","DES_ULTIMA_MOVIME_SIGILO","K_TEMPO"];
+  const CAMPOS_COMPLETO = new Set([...CAMPOS, ...GAB_SIGILOSOS_COLUMNS, "Consta_Acervo_Sigiloso"]);
+  const AVISO_COMPLETO = "ACERVO COMPLETO — contém processos sigilosos e dados pessoais. Uso interno: guarde só no seu computador; não publique nem envie ao GitHub.";
   const SENSIVEL = /celular|telefone|fone|whats|e-?mail|cpf|sigilo/i;
   const META = new Set(["id", "processo", "atualizado_em"]);
 
@@ -49,20 +53,20 @@
     return v;
   }
   /* registro do banco a partir de uma linha do Acervo Central (sem o carimbo de data) */
-  function camposDe(r) {
-    const o = {};
+  function camposDe(r, completo) {
+    const o = {}, aceitos = completo ? CAMPOS_COMPLETO : CAMPOS;
     Object.keys(r).sort().forEach(k => {
-      if (k.startsWith("_") || !CAMPOS.has(k) || SENSIVEL.test(k)) return;
+      if (k.startsWith("_") || !aceitos.has(k) || (!completo && SENSIVEL.test(k))) return;
       const v = valorSimples(r[k]);
       if (txt(v) === "") return;
       o[k] = typeof v === "string" ? v.trim() : v;
     });
     return o;
   }
-  function registroDe(r) {
+  function registroDe(r, completo) {
     const proc = txt(r.Processo || r.processo), p = procId(proc);
-    if (p.length < 15 || sigiloso(r)) return null;
-    return { id: "acv-" + p, processo: proc, ...camposDe(r), atualizado_em: r._acervoSync || "" };
+    if (p.length < 15 || (!completo && sigiloso(r))) return null;
+    return { id: "acv-" + p, processo: proc, ...camposDe(r, completo), atualizado_em: r._acervoSync || "" };
   }
   function assinatura(r) { return JSON.stringify(camposDe(r)) + "|" + (sigiloso(r) ? "S" : ""); }
 
@@ -168,9 +172,10 @@
   }
 
   /* aplica um registro do banco numa linha do painel, como faria a importação da planilha Acervo */
-  function aplicar(c, r, rec) {
-    Object.keys(rec).forEach(k => { if (!META.has(k) && CAMPOS.has(k) && !SENSIVEL.test(k) && k !== "Etiquetas Originais") r[k] = rec[k]; });
-    try { c.applyCanonicalSource(r, rec, "acervo"); } catch (e) { console.warn(e); }
+  function aplicar(c, r, rec, completo) {
+    const aceitos = completo ? CAMPOS_COMPLETO : CAMPOS;
+    Object.keys(rec).forEach(k => { if (!META.has(k) && aceitos.has(k) && (completo || !SENSIVEL.test(k)) && k !== "Etiquetas Originais") r[k] = rec[k]; });
+    try { c.applyCanonicalSource(r, rec, completo && sigiloso(rec) ? "sigilosos" : "acervo"); } catch (e) { console.warn(e); }
     if (txt(rec["Etiquetas Originais"])) { try { c.setImportedTags(r, rec["Etiquetas Originais"], r._tagOriginalSource || "acervo"); } catch (e) { r["Etiquetas Originais"] = rec["Etiquetas Originais"]; } }
     r._acervoSync = txt(rec.atualizado_em) || agora();
     try { c.recompute(r); } catch (e) { console.warn(e); }
@@ -182,17 +187,18 @@
     const regs = Array.isArray(doc) ? doc : (doc && Array.isArray(doc.registros) ? doc.registros : null);
     if (!regs) throw new Error("O arquivo não contém um banco gabA.acervo (lista \"registros\").");
     if (doc.schema && doc.schema !== SCHEMA) throw new Error(`Banco de outro tipo (${doc.schema}); esperado ${SCHEMA}.`);
+    const completo = !!(doc && doc.completo);
     const mapa = new Map(c.rows.map(r => [procId(r.Processo || r.processo), r]).filter(x => x[0]));
     let criados = 0, atualizados = 0, iguais = 0, ignorados = 0;
     for (const rec of regs) {
       const proc = txt(rec && (rec.processo || rec.Processo)), p = procId(proc);
-      if (p.length < 15 || sigiloso(rec)) { ignorados++; continue; }
+      if (p.length < 15 || (!completo && sigiloso(rec))) { ignorados++; continue; }
       let r = mapa.get(p);
       if (!r) {
         r = c.ensureShape({ Processo: proc, processo: proc });
-        aplicar(c, r, rec); c.rows.push(r); mapa.set(p, r); criados++;
+        aplicar(c, r, rec, completo); c.rows.push(r); mapa.set(p, r); criados++;
       } else if (txt(rec.atualizado_em) > txt(r._acervoSync)) {
-        const antes = assinatura(r); aplicar(c, r, rec);
+        const antes = assinatura(r); aplicar(c, r, rec, completo);
         if (assinatura(r) !== antes) atualizados++; else iguais++;
       } else iguais++;
     }
@@ -277,18 +283,21 @@
     const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([conteudo], { type: tipo }));
     a.download = nome; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
   }
-  function docLocal() {
+  function docLocal(completo) {
     const c = comp(); if (!pronto(c)) throw new Error("O painel ainda está carregando.");
-    const { regs } = locaisParaBanco(c), t = agora();
+    const regs = completo ? c.rows.map(r => registroDe(r, true)).filter(Boolean) : locaisParaBanco(c).regs, t = agora();
     regs.forEach(r => { if (!r.atualizado_em) r.atualizado_em = t; });
-    return documento(regs.sort((a, b) => a.id < b.id ? -1 : 1));
+    const doc = documento(regs.sort((a, b) => a.id < b.id ? -1 : 1));
+    if (completo) { doc.completo = true; doc.saneamento = AVISO_COMPLETO; }
+    return doc;
   }
   function paginaHtml(doc) {
-    const linhas = doc.registros.map(r => `<tr><td>${esc(r.processo)}</td><td>${esc(r.classe_judicial || r.Classe)}</td><td>${esc(r.assunto_judicial || r.Assunto_Principal || r.Assunto)}</td><td>${esc(r["data_distribuição"] || r["Data_Distribuição"])}</td><td>${esc(r.tarefa_atual)}</td><td>${esc(r.polo_ativo || r.Polo_Ativo)}</td><td>${esc(r.polo_passivo || r.Polo_Passivo)}</td></tr>`).join("\n");
+    const comp_ = !!doc.completo;
+    const linhas = doc.registros.map(r => `<tr><td>${esc(r.processo)}${comp_ && sigiloso(r) ? ' <span class="sig">SIGILOSO</span>' : ""}</td><td>${esc(r.classe_judicial || r.Classe)}</td><td>${esc(r.assunto_judicial || r.Assunto_Principal || r.Assunto)}</td><td>${esc(r["data_distribuição"] || r["Data_Distribuição"])}</td><td>${esc(r.tarefa_atual)}</td><td>${esc(r.polo_ativo || r.Polo_Ativo)}</td><td>${esc(r.polo_passivo || r.Polo_Passivo)}</td></tr>`).join("\n");
     const json = JSON.stringify(doc).replace(/</g, "\\u003c");
     return `<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Acervo Geral · Gabinete A</title>
+<title>${comp_ ? "Acervo Completo (sigiloso)" : "Acervo Geral"} · Gabinete A</title>
 <style>:root{--fundo:#f6f8fa;--papel:#fff;--tinta:#14263c;--suave:#6d7b8a;--linha:#dee3e9;--marca:#1f3d63;--ouro:#d9a441}
 @media (prefers-color-scheme:dark){:root{--fundo:#0f1722;--papel:#16212f;--tinta:#e6edf5;--suave:#9fb0c2;--linha:#2a3a4e;--marca:#8fb3e0}}
 *{box-sizing:border-box}body{margin:0;background:var(--fundo);color:var(--tinta);font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -296,10 +305,12 @@ header{padding:20px 16px 12px;max-width:1400px;margin:auto}h1{margin:0;font-size
 .barra{position:sticky;top:0;background:var(--fundo);padding:8px 16px;max-width:1400px;margin:auto}
 input{width:100%;padding:9px 12px;border:1px solid var(--linha);border-radius:8px;background:var(--papel);color:var(--tinta);font:inherit}
 main{max-width:1400px;margin:auto;padding:0 16px 32px;overflow-x:auto}table{width:100%;border-collapse:collapse;background:var(--papel)}
-th,td{border-bottom:1px solid var(--linha);padding:6px 8px;text-align:left;vertical-align:top}th{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--suave);position:sticky;top:52px;background:var(--papel)}</style></head>
-<body><header><h1>Acervo Geral · Gabinete A</h1>
+th,td{border-bottom:1px solid var(--linha);padding:6px 8px;text-align:left;vertical-align:top}th{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--suave);background:var(--papel)}
+.sig{display:inline-block;margin-left:4px;padding:1px 6px;border-radius:999px;background:#a14d4d;color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em}
+.alerta{margin-top:10px;padding:10px 12px;border-radius:8px;background:#fbeaea;color:#7a2e2e;border:1px solid #e9c3c3;font-weight:600}</style></head>
+<body><header><h1>${comp_ ? "Acervo Completo" : "Acervo Geral"} · Gabinete A</h1>
 <p>${doc.registros.length} processos · gerado em ${esc(new Date(doc.atualizado_em).toLocaleString("pt-BR"))} · ${esc(doc.saneamento)}</p>
-<p>Este arquivo pode ser reimportado no Painel Central (Acervo · GitHub › Importar arquivo) ou no repositório com <code>python3 scripts/construir.py acervo.html</code>.</p></header>
+${comp_ ? `<div class="alerta">${doc.registros.filter(sigiloso).length} processo(s) sigiloso(s) incluído(s). Reimportável no Painel Central (Acervo · GitHub › Importar arquivo), que restaura também os sigilosos no seu navegador; ao encaminhar ao GitHub, eles continuam de fora.</div>` : `<p>Este arquivo pode ser reimportado no Painel Central (Acervo · GitHub › Importar arquivo) ou no repositório com <code>python3 scripts/construir.py acervo.html</code>.</p>`}</header>
 <div class="barra"><input id="q" placeholder="Filtrar por processo, classe, assunto, tarefa ou parte…" aria-label="Filtrar"></div>
 <main><table><thead><tr><th>Processo</th><th>Classe</th><th>Assunto</th><th>Distribuição</th><th>Tarefa atual</th><th>Polo ativo</th><th>Polo passivo</th></tr></thead><tbody id="t">
 ${linhas}
@@ -347,7 +358,7 @@ ${linhas}
 #acvPop button.acv-pri{background:#d9a441;border-color:#d9a441;color:#33240a}#acvPop button.acv-nav{background:#1f3d63;border-color:#1f3d63;color:#fff}
 #acvPop button:disabled{opacity:.5;cursor:wait}#acvPop label{display:flex;gap:7px;align-items:flex-start;margin-top:10px;font-size:10.5px;color:#4c5b6b;cursor:pointer}
 #acvPop .nota{margin-top:9px;font-size:9.5px;color:#7e8b99}#acvPop .x{position:absolute;right:10px;top:8px;border:0;padding:4px 7px;background:transparent;font-size:14px}
-#acvPop .full{grid-column:1/-1}#acvPop .sub{background:transparent;border-color:transparent;color:#a14d4d;font-weight:700}
+#acvPop .full{grid-column:1/-1}#acvPop button.acv-sig{border-color:#e9c3c3;color:#7a2e2e;background:#fdf5f5}#acvPop .sub{background:transparent;border-color:transparent;color:#a14d4d;font-weight:700}
 .acv-modal{position:fixed;inset:0;z-index:600;background:rgba(20,38,60,.55);display:flex;align-items:center;justify-content:center;padding:16px}
 .acv-box{background:#fff;color:#14263c;border-radius:12px;max-width:440px;width:100%;padding:18px 20px;box-shadow:0 18px 50px rgba(0,0,0,.3);font:13px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 .acv-box h3{margin:0 0 6px;font-size:15px}.acv-box p{margin:0 0 12px}.acv-box code{font-size:12px}
@@ -379,6 +390,7 @@ ${linhas}
         <button type="button" class="acv-pri full" data-a="importar">IMPORTAR ARQUIVO (.HTML OU .JSON)</button>
         <button type="button" data-a="json">EXPORTAR ACERVO.JSON</button>
         <button type="button" data-a="html">EXPORTAR ACERVO.HTML</button>
+        <button type="button" class="full acv-sig" data-a="htmlc" title="Inclui os processos sigilosos e todos os campos. Fica só no seu computador.">EXPORTAR HTML COMPLETO · COM SIGILOSOS (SÓ LOCAL)</button>
         <button type="button" class="sub full" data-a="substituir" ${ST.enviando ? "disabled" : ""}>Substituir o banco pelo acervo deste painel…</button>
       </div>
       <label><input type="checkbox" data-a="auto" ${autoLigado() ? "checked" : ""}> Encaminhar ao GitHub após cada importação (planilhas Gab A, PJe 2G ou arquivo do banco)</label>
@@ -392,6 +404,7 @@ ${linhas}
     else if (acao === "enviar") encaminhar({ motivo: "" });
     else if (acao === "importar") escolherArquivo();
     else if (acao === "json") { try { baixar("acervo.json", serializar(docLocal()), "application/json"); } catch (er) { avisar(er.message, "err"); } }
+    else if (acao === "htmlc") { try { const d = docLocal(true); baixar(`acervo-completo-SIGILOSO-${d.versao}.html`, paginaHtml(d), "text/html;charset=utf-8"); avisar(`HTML completo gerado com ${d.registros.length} processo(s), inclusive ${d.registros.filter(sigiloso).length} sigiloso(s). Guarde-o só no seu computador.`, "ok"); } catch (er) { avisar(er.message, "err"); } }
     else if (acao === "html") { try { baixar("acervo.html", paginaHtml(docLocal()), "text/html;charset=utf-8"); } catch (er) { avisar(er.message, "err"); } }
     else if (acao === "substituir") {
       if (window.confirm("Substituir banco/acervo.json pelo acervo deste painel?\n\nProcessos que estão no GitHub mas não neste painel serão retirados do banco. Use só quando este painel tiver o acervo completo.")) encaminhar({ substituir: true, motivo: "" });
