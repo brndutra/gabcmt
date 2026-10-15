@@ -190,8 +190,9 @@ DIALOGO = [
 
 import triagem  # noqa: E402  (aba Triagem Processual e escaninhos)
 import banco_dialogo  # noqa: E402  (diálogo Banco do Acervo Geral)
+import busca_incluir  # noqa: E402  (botão + INCLUIR na busca)
 
-AJUSTES = [("desempenho", DESEMPENHO), ("desempenho-tela", DESEMPENHO_TELA), ("cards", CARDS), ("abertura", ABERTURA), ("html-plano", HTML_PLANO), ("dialogo", DIALOGO), ("triagem", triagem.PATCHES)]
+AJUSTES = [("desempenho", DESEMPENHO), ("desempenho-tela", DESEMPENHO_TELA), ("cards", CARDS), ("abertura", ABERTURA), ("html-plano", HTML_PLANO), ("dialogo", DIALOGO), ("triagem", triagem.PATCHES), ("busca", busca_incluir.PATCHES)]
 
 
 # ---------------------------------------------------------------------------------------------------------------
