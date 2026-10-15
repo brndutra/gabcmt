@@ -37,18 +37,30 @@ def js_inline(codigo: str) -> str:
     return "<script>" + codigo.replace("</script", "<\\/script") + "</script>"
 
 
+# logo do gabinete (substitui o selo "PC"); recolorida por filtro para a paleta do painel; se não carregar, volta o "PC"
+LOGO_URL = "https://i.ibb.co/5XS9CWBR/S-mbolo-geom-trico-cinza-em-fundo-transparente.png"
+FILTRO_AZUL = "brightness(0) saturate(100%) invert(19%) sepia(33%) saturate(1478%) hue-rotate(181deg) brightness(93%) contrast(92%)"
+FILTRO_OURO = "brightness(0) saturate(100%) invert(74%) sepia(37%) saturate(718%) hue-rotate(359deg) brightness(91%) contrast(88%)"
+LOGO_FALHA = "this.parentNode.classList.add('sem-logo');this.remove()"
+SIDEBAR_PC = '<div style="width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:#d9a441;display:grid;place-items:center;color:#33240a;font-weight:900;font-size:12px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)">PC</div>'
+SIDEBAR_LOGO = ('<div class="pc-logo-lateral" style="width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center">'
+                f'<img src="{LOGO_URL}" alt="Painel Central" style="width:30px;height:30px;object-fit:contain;filter:{FILTRO_OURO}" onerror="{LOGO_FALHA}"></div>')
+
 ABERTURA_CSS = """<style id="painel-abertura-css">
 #painel-abertura{position:fixed;inset:0;z-index:9000;display:grid;place-items:center;background:#eff1f4;transition:opacity .25s ease}
 #painel-abertura.saindo{opacity:0;pointer-events:none}
 #painel-abertura .pa{display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:14px;background:#fff;border:1px solid #e3e7ec;box-shadow:0 10px 30px rgba(20,38,60,.08);font-family:'Figtree',system-ui,sans-serif;color:#14263c}
-#painel-abertura .pl{width:40px;height:40px;border-radius:11px;background:#d9a441;color:#33240a;display:grid;place-items:center;font-weight:900;font-size:14px}
+#painel-abertura .pl{width:40px;height:40px;display:grid;place-items:center}
+#painel-abertura .pl img{width:40px;height:40px;object-fit:contain;filter:__FILTRO_AZUL__}
+#painel-abertura .pl.sem-logo,.pc-logo-lateral.sem-logo{border-radius:11px;background:#d9a441;color:#33240a;font-weight:900;font-size:13px}
+#painel-abertura .pl.sem-logo::after,.pc-logo-lateral.sem-logo::after{content:"PC"}
 #painel-abertura b{display:block;font-size:14px;font-weight:850}#painel-abertura span{display:block;font-size:11px;color:#6d7b8a;margin-top:2px}
 #painel-abertura .pb{height:3px;width:150px;margin-top:8px;border-radius:9px;background:#e3e7ec;overflow:hidden}
 #painel-abertura .pb i{display:block;height:100%;width:40%;border-radius:9px;background:#1f3d63;animation:paMov 1.1s ease-in-out infinite}
 @keyframes paMov{0%{transform:translateX(-100%)}100%{transform:translateX(260%)}}
 @media(prefers-reduced-motion:reduce){#painel-abertura .pb i{animation:none;width:100%}}
 </style>"""
-ABERTURA_HTML = """<div id="painel-abertura" role="status" aria-live="polite"><div class="pa"><div class="pl">PC</div><div><b>Painel Central</b><span>Carregando o acervo deste navegador…</span><div class="pb"><i></i></div></div></div></div>
+ABERTURA_HTML = """<div id="painel-abertura" role="status" aria-live="polite"><div class="pa"><div class="pl"><img src="__LOGO_URL__" alt="" onerror="__LOGO_FALHA__"></div><div><b>Painel Central</b><span>Carregando o acervo deste navegador…</span><div class="pb"><i></i></div></div></div></div>
 <script>(function(){var el=document.getElementById("painel-abertura");function fim(){if(!el||el.classList.contains("saindo"))return;el.classList.add("saindo");setTimeout(function(){el.style.display="none"},300)}
 if(window.__painelPronto)fim();window.addEventListener("painel-pronto",fim);window.addEventListener("error",function(){setTimeout(fim,1500)});setTimeout(fim,45000);})();</script>"""
 
@@ -134,6 +146,12 @@ def montar(origem: Path, saida: Path):
     cab = re.search(r"<head[^>]*>", template)
     template = (template[:cab.end()] + f"\n<title>{TITULO}</title>\n" + inicializacao(componentes) + "\n"
                 + js_inline(react) + "\n" + js_inline(react_dom) + "\n" + ABERTURA_CSS + "\n" + template[cab.end():])
+    # logo: abertura, barra lateral e ícone da aba
+    template = (template.replace("__LOGO_URL__", LOGO_URL).replace("__LOGO_FALHA__", LOGO_FALHA).replace("__FILTRO_AZUL__", FILTRO_AZUL))
+    if SIDEBAR_PC not in template:
+        sys.exit("montar: selo PC da barra lateral não encontrado")
+    template = template.replace(SIDEBAR_PC, SIDEBAR_LOGO)
+    template = template.replace(f"<title>{TITULO}</title>", f'<title>{TITULO}</title>\n<link rel="icon" type="image/png" href="{LOGO_URL}">\n<script>window.__LOGO_GABINETE=window.__LOGO_GABINETE||"{LOGO_URL}";</script>', 1)
     template = re.sub(r"<html(?=[\s>])", '<html style="background:#eff1f4"', template, count=1)   # sem clarão branco na abertura
     if not template.lstrip().lower().startswith("<!doctype"):
         template = "<!DOCTYPE html>\n" + template
