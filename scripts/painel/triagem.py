@@ -577,7 +577,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     if (g === 1) out.push({ k: "ai", s: "AI", t: "Agravo de instrumento" });
     const metas = [...splitTags(r.META).map(txt), ...this.allTags(r).filter(t => { try { return this.tagRole(t) === "meta"; } catch (e) { return false; } })].filter(Boolean);
     const vistos = new Set();
-    metas.forEach(m => { const rot = /meta/i.test(m) ? m.toUpperCase().replace(/\s+/g, " ") : "META " + m; const c = canon(rot); if (vistos.has(c)) return; vistos.add(c); out.push({ k: "meta", s: rot, t: "Meta" }); });
+    metas.forEach(m => { const full = /meta/i.test(m) ? m.toUpperCase().replace(/\s+/g, " ").trim() : "META " + txt(m); const curto = (full.match(/META\s*\d+[A-Z]?/) || [full])[0].replace(/\s+/g, " "); const c = canon(curto); if (vistos.has(c)) return; vistos.add(c); out.push({ k: "meta", s: curto, t: full }); });
     return out;
   }
   relSimplesLinha(r, item) {
@@ -587,7 +587,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     return { item: item === undefined || item === null ? "" : item, processo: txt(r.Processo) || txt(r.processo), ind, indTxt: ind.map(b => b.s).join(" · "),
       assunto: this.cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal) || "—",
       tema: this.triLista(r, "Tema").join(" · ") || txt(r.Tema) || "—", especificidades: this.triLista(r, "Especificidades").join(" · "),
-      grupo: ["", "ai", "ed"][this.cardGrupo(r)] || "", observacoes: obs.join("\n") || "—" };
+      grupo: ["", "ai", "ed"][this.cardGrupo(r)] || "", pend1: (() => { try { return this.cardInfo(r).pendente === true; } catch (e) { return false; } })(), observacoes: obs.join("\n") || "—" };
   }
   relOrdenarPorItem(linhas) {
     const n = v => { const x = parseFloat(String(v).replace(",", ".")); return isNaN(x) ? Infinity : x; };
