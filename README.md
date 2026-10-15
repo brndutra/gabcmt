@@ -37,6 +37,8 @@ Os arquivos são reconhecidos pelo `schema`, não pelo nome; uma exportação co
 
 Sem duplicidade: o que já está em `banco/precedentes.json` (ou é citado em `banco/modelos.json`) não entra nos arquivos de importação do catálogo; aparece nos índices com a marca *(no banco)*. Quando o mesmo processo tem outro julgamento já curado (ex.: a apelação no banco e os embargos de declaração no catálogo), o do catálogo recebe id próprio (`par-<processo>-<espécie>-<data>`), para não sobrescrever o curado ao importar.
 
+Em `catalogo-trf3/inteiros-teores-2886-outubro-2026.json` está o acervo dos **inteiros teores** dos 58 acórdãos do relator sobre os 28,86% julgados em outubro de 2026 (relatório, voto, ementa e acórdão), copiados do portal de jurisprudência do TRF3.
+
 Campos acrescentados aos acórdãos do catálogo: `temaId`, `temaRotulo`, `temaTamanho`, `temaRepresentante`, `similaridadeTema`, `grauIgualdade` (idêntico, quase idêntico, similar, mesma questão, representante, único), `modeloTextoId`, `modeloTextoTamanho` e `sentidoResultado`. O agrupamento é automático; todos saem com `statusCuradoria: bruto`.
 
 ## Scripts
