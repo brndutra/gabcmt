@@ -65,6 +65,27 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-aberto-topo .tri-placa{position:relative;left:auto;right:auto;bottom:auto;height:auto;min-width:240px;max-width:520px;padding:7px 12px 6px 12px}
     .tri-aberto-topo .tri-placa .t{font-size:14px}.tri-aberto-topo .tri-placa .s{font-size:11px}
     .tri-aberto-corpo{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:16px;padding:14px}
+    .tri-config-barra{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 12px;border-bottom:1px solid #d6e0ea;background:#f9fbfd}
+    .tri-config-toggle{border:1px solid #d6e0ea;background:#fff;border-radius:8px;padding:5px 10px;font-size:10.5px;font-weight:850;color:#1f3d63;cursor:pointer}
+    .tri-config-resumo{display:flex;align-items:center;gap:6px;min-width:0;flex:1;font-size:10.5px;color:#6d7b8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tri-cor-ponto{flex:0 0 auto;width:10px;height:10px;border-radius:50%}
+    .tri-config{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:12px;border-bottom:1px solid #d6e0ea}
+    .tri-config .tri-campo{margin:0}.tri-config .tri-l2{grid-column:span 1}
+    .tri-config textarea{min-height:58px}
+    .tri-procs{padding:12px;max-height:72vh;overflow:auto}
+    .tri-pcard{background:#fff;border:1px solid #dfe6ee;border-radius:12px;margin-bottom:9px;overflow:hidden}
+    .tri-pcard-topo{display:grid;grid-template-columns:minmax(170px,.9fr) minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) 160px auto;align-items:stretch}
+    .tri-pc-cel{display:flex;flex-direction:column;gap:2px;min-width:0;padding:9px 12px;border-left:1px solid #f0f2f5}
+    .tri-pc-cel:first-child{border-left:0}
+    .tri-pc-cel>span,.tri-pc-campo>span{font-size:8.5px;font-weight:850;letter-spacing:.06em;color:#98a4b0;text-transform:uppercase}
+    .tri-pc-cel b{font-size:11.5px;font-weight:650;color:#3d4c5c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tri-pc-cel b.num{font:600 11.5px "IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;color:#14263c}
+    .tri-pc-cel i{font-style:normal;font-size:10px;color:#7e8b99;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tri-pc-cel em{font-style:normal;align-self:flex-start;max-width:100%;padding:3px 9px;border-radius:99px;font-size:9px;font-weight:850;letter-spacing:.03em;line-height:1.3}
+    .tri-pc-acoes{display:flex;align-items:center;gap:4px;padding:0 10px;border-left:1px solid #f0f2f5;background:#f8fafb}
+    .tri-pcard-campos{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:1px;background:#eef1f4;border-top:1px solid #eef1f4}
+    .tri-pc-campo{display:flex;flex-direction:column;gap:2px;min-width:0;background:#fbfcfd;padding:6px 10px}
+    .tri-pc-campo b{font-size:11px;font-weight:600;color:#3d4c5c;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;word-break:break-word}
     .tri-campo{display:grid;gap:4px;margin-bottom:9px}
     .tri-campo label{font-size:9px;font-weight:900;letter-spacing:.08em;color:#6d7b8a}
     .tri-campo input,.tri-campo textarea{width:100%;border:1px solid #d6e0ea;border-radius:9px;background:#fff;color:#14263c;padding:8px 10px;font:inherit;font-size:12.5px;outline:none}
@@ -76,7 +97,7 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-guardado .num{font:600 12px "IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace}
     .tri-guardado .meta{font-size:10.5px;color:#6d7b8a}
     .tri-icone{border:1px solid #dfe6ee;background:#fff;border-radius:7px;padding:3px 8px;font-size:12px;font-weight:900;cursor:pointer;color:#1f3d63}
-    @media(max-width:1100px){.tri-grid{grid-template-columns:minmax(0,1fr)}.tri-bandeja{position:static}.tri-band-lista{max-height:340px}.tri-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-aberto-corpo{grid-template-columns:minmax(0,1fr)}}
+    @media(max-width:1100px){.tri-config{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pcard-topo{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pc-acoes{padding:8px 12px}.tri-grid{grid-template-columns:minmax(0,1fr)}.tri-bandeja{position:static}.tri-band-lista{max-height:340px}.tri-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-aberto-corpo{grid-template-columns:minmax(0,1fr)}}
 """
 
 BTN = "border:1px solid #d8dee5;border-radius:8px;background:#fff;color:#1f3d63;padding:6px 10px;font-size:10px;font-weight:850;cursor:pointer;white-space:nowrap"
@@ -146,23 +167,36 @@ MARKUP = """
                   <span class="tri-placa"><span class="t">{{ triOpenTitulo }}</span><sc-if value="{{ triOpenHasSub }}"><span class="s">{{ triOpenSub }}</span></sc-if></span>
                   <span style="display:flex;gap:6px;flex-wrap:wrap"><button sc-camel-on-click="{{ triDevolverTodos }}" style="BTN_OURO">↩ Devolver todos à bandeja</button><button sc-camel-on-click="{{ triExcluir }}" style="BTN;color:#a64f35">Excluir escaninho</button><button sc-camel-on-click="{{ triRecolher }}" style="BTN">⌃ Recolher</button></span>
                 </div>
-                <div class="tri-aberto-corpo">
-                  <div>
+                <div class="tri-config-barra">
+                  <button class="tri-config-toggle" sc-camel-on-click="{{ triToggleConfig }}" aria-expanded="{{ triConfigAberta }}"><span aria-hidden="true">⚙</span> Configurações do escaninho <span aria-hidden="true">{{ triConfigSeta }}</span></button>
+                  <span class="tri-config-resumo"><span class="tri-cor-ponto" style="background:{{ triOpenCor }}"></span>{{ triConfigResumo }}</span>
+                </div>
+                <sc-if value="{{ triConfigAberta }}" hint-placeholder-val="{{ false }}">
+                  <div class="tri-config">
                     <div class="tri-campo"><label>TÍTULO DA PLACA</label><input value="{{ triOpenTitulo }}" sc-camel-on-input="{{ onTriTitulo }}" maxlength="70" aria-label="Título do escaninho"></div>
                     <div class="tri-campo"><label>SUBTÍTULO (OPCIONAL)</label><input value="{{ triOpenSubRaw }}" sc-camel-on-input="{{ onTriSub }}" maxlength="90" aria-label="Subtítulo do escaninho"></div>
-                    <div class="tri-campo"><label>BILHETE · OBSERVAÇÃO</label><textarea value="{{ triOpenObs }}" sc-camel-on-input="{{ onTriObs }}" aria-label="Observação do escaninho"></textarea></div>
-                    <div class="tri-campo"><label>COR DA PASTA</label><span style="display:flex;gap:7px;flex-wrap:wrap"><sc-for list="{{ triCores }}" as="c"><button class="tri-cor {{ c.cls }}" style="background:{{ c.cor }}" sc-camel-on-click="{{ c.pick }}" aria-label="Cor da pasta"></button></sc-for></span></div>
-                    <div style="font-size:9.5px;color:#7e8b99">Criado em {{ triOpenCriado }} · alterações salvas automaticamente</div>
+                    <div class="tri-campo tri-l2"><label>BILHETE · OBSERVAÇÃO</label><textarea value="{{ triOpenObs }}" sc-camel-on-input="{{ onTriObs }}" aria-label="Observação do escaninho"></textarea></div>
+                    <div class="tri-campo"><label>COR DA PASTA</label><span style="display:flex;gap:7px;flex-wrap:wrap"><sc-for list="{{ triCores }}" as="c"><button class="tri-cor {{ c.cls }}" style="background:{{ c.cor }}" sc-camel-on-click="{{ c.pick }}" aria-label="Cor da pasta"></button></sc-for></span><span style="font-size:9.5px;color:#7e8b99;margin-top:6px">Criado em {{ triOpenCriado }} · salvo automaticamente</span></div>
                   </div>
-                  <div>
-                    <div style="font-size:9px;font-weight:900;letter-spacing:.08em;color:#6d7b8a;margin-bottom:6px">PROCESSOS GUARDADOS · {{ triOpenCount }}</div>
-                    <div class="tri-guardados">
-                      <sc-for list="{{ triOpenRows }}" as="g" hint-placeholder-count="3">
-                        <div class="tri-guardado"><div style="min-width:0"><div class="num">{{ g.proc }}</div><div class="meta">{{ g.classe }} · {{ g.assunto }} · {{ g.tarefa }}</div></div><span style="display:flex;gap:4px"><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></span></div>
-                      </sc-for>
-                      <sc-if value="{{ triOpenVazio }}"><div style="padding:18px;text-align:center;color:#7e8b99;font-size:11.5px;border:1px dashed #c9d5e2;border-radius:9px">Escaninho vazio. Marque fichas na bandeja e clique neste escaninho — ou arraste-as até ele.</div></sc-if>
+                </sc-if>
+                <div class="tri-procs">
+                  <div style="font-size:9px;font-weight:900;letter-spacing:.08em;color:#6d7b8a;margin-bottom:8px">PROCESSOS GUARDADOS · {{ triOpenCount }}</div>
+                  <sc-for list="{{ triOpenRows }}" as="g" hint-placeholder-count="2">
+                    <div class="tri-pcard">
+                      <div class="tri-pcard-topo">
+                        <div class="tri-pc-cel"><span>PROCESSO</span><b class="num">{{ g.proc }}</b><i>{{ g.classe }}</i></div>
+                        <div class="tri-pc-cel"><span>ASSUNTO</span><b>{{ g.assunto }}</b></div>
+                        <div class="tri-pc-cel"><span>ETIQUETAS ATUAIS</span><b title="{{ g.etiquetas }}">{{ g.etiquetas }}</b></div>
+                        <div class="tri-pc-cel"><span>TAREFA ATUAL</span><b title="{{ g.tarefa }}">{{ g.tarefa }}</b></div>
+                        <div class="tri-pc-cel"><span>SITUAÇÃO ATUAL</span><em style="background:{{ g.sitBg }};color:{{ g.sitFg }}">{{ g.situacao }}</em></div>
+                        <div class="tri-pc-acoes"><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
+                      </div>
+                      <div class="tri-pcard-campos">
+                        <sc-for list="{{ g.campos }}" as="f"><div class="tri-pc-campo"><span>{{ f.col }}</span><b title="{{ f.val }}">{{ f.val }}</b></div></sc-for>
+                      </div>
                     </div>
-                  </div>
+                  </sc-for>
+                  <sc-if value="{{ triOpenVazio }}"><div style="padding:18px;text-align:center;color:#7e8b99;font-size:11.5px;border:1px dashed #c9d5e2;border-radius:9px">Escaninho vazio. Marque fichas na bandeja e clique neste escaninho — ou arraste-as até ele.</div></sc-if>
                 </div>
               </div>
             </sc-if>
@@ -212,6 +246,8 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     const filtro = s.triFiltro || "todos", aberto = escs.find(e => e.id === s.triOpen) || null;
     const marcados = this.triSel.size;
     const lista = escs.filter(e => filtro === "todos" || (filtro === "cheios" ? count.get(e.id) : !count.get(e.id)));
+    const camposDados = [...new Set([...this.columnConfig.central, ...this.centralKnownColumns].map(centralColumn))]
+      .filter(c => isVisibleColumn(c) && !WORK_COLUMNS.has(c) && !["Processo","processo","Assunto","Etiquetas","etiquetas","Etiquetas Originais","Etiquetas Operacionais","tarefa_atual"].includes(c));
     const linha = r => ({ proc: r.Processo || "—", classe: txt(r.classe_judicial || r.Classe) || "—", assunto: txt(r.Assunto || r.assunto_judicial) || "—", tarefa: txt(r.tarefa_atual) || "—" });
     return {
       isTriagem: s.tab === "triagem",
@@ -249,9 +285,9 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
         layers: Array.from({ length: cam }, (_, k) => ({ key: k, b: k * 7 })), hasCapa: !!n, capaB: cam * 7,
         cls: [aberto && aberto.id === e.id ? "aberto" : "", marcados ? "pronto" : ""].join(" "),
         aria: `Escaninho ${e.titulo}, ${n} processo(s)`, title: marcados ? `Guardar ${marcados} ficha(s) aqui` : "Abrir escaninho",
-        click: () => { if (self.triSel.size) self.triGuardar([...self.triSel], e.id); else self.setState({ triOpen: s.triOpen === e.id ? "" : e.id }); }
+        click: () => { if (self.triSel.size) self.triGuardar([...self.triSel], e.id); else self.setState({ triOpen: s.triOpen === e.id ? "" : e.id, triConfig: false }); }
       }; }),
-      newEscaninho: () => { const id = "esc_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); self.escaninhos.push({ id, titulo: "Novo escaninho", subtitulo: "", obs: "", cor: PAL[self.escaninhos.length % PAL.length], criado: new Date().toISOString().slice(0,10) }); self.setState({ triOpen: id, triFiltro: "todos" }); salvar("Escaninho criado — dê um título à placa."); },
+      newEscaninho: () => { const id = "esc_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); self.escaninhos.push({ id, titulo: "Novo escaninho", subtitulo: "", obs: "", cor: PAL[self.escaninhos.length % PAL.length], criado: new Date().toISOString().slice(0,10) }); self.setState({ triOpen: id, triFiltro: "todos", triConfig: true }); salvar("Escaninho criado — dê um título à placa."); },
       triHasOpen: !!aberto,
       triOpenTitulo: aberto ? aberto.titulo : "", triOpenSubRaw: aberto ? aberto.subtitulo || "" : "", triOpenSub: aberto ? txt(aberto.subtitulo) : "", triOpenHasSub: !!(aberto && txt(aberto.subtitulo)),
       triOpenObs: aberto ? aberto.obs || "" : "", triOpenCriado: aberto ? fmtD(aberto.criado) : "", triOpenCount: aberto ? count.get(aberto.id) || 0 : 0,
@@ -259,9 +295,15 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       onTriSub: e => { if (!aberto) return; aberto.subtitulo = e.target.value; self.saveDeb(); self.refresh(); },
       onTriObs: e => { if (!aberto) return; aberto.obs = e.target.value; self.saveDeb(); self.refresh(); },
       triCores: PAL.map(c => ({ key: c, cor: c, cls: aberto && aberto.cor === c ? "on" : "", pick: () => { if (!aberto) return; aberto.cor = c; self.saveDeb(); self.refresh(); } })),
-      triOpenRows: aberto ? all.filter(({r}) => escOf(r) === aberto.id).map(({r}) => ({ key: "g" + procId(r.Processo), ...linha(r),
+      triConfigAberta: !!s.triConfig, triConfigSeta: s.triConfig ? "▴" : "▾",
+      triToggleConfig: () => self.setState({ triConfig: !s.triConfig }),
+      triOpenCor: aberto ? aberto.cor : "#c3ccd6",
+      triConfigResumo: aberto ? (txt(aberto.obs) ? "📝 " + String(aberto.obs).replace(/\s+/g, " ").trim() : "sem bilhete · clique em Configurações para editar placa, bilhete e cor") : "",
+      triOpenRows: aberto ? all.filter(({r}) => escOf(r) === aberto.id).map(({r}) => { const sit = self.situacao(r); return { key: "g" + procId(r.Processo), ...linha(r),
+        etiquetas: self.sourceTags(r).join(", ") || "—", situacao: sit.label, sitBg: sit.bg, sitFg: sit.fg,
+        campos: (() => { const vistos = new Set(); return camposDados.map(c => ({ key: c, col: c, val: txt(r[c]) })).filter(f => { if (!f.val) return false; const k = fieldKey(f.col) + "|" + canon(f.val), k2 = "v|" + canon(f.val) + "|" + canon(f.col).replace(/[^a-z]/g, "").slice(0, 6); if (vistos.has(k) || vistos.has(k2)) return false; vistos.add(k); vistos.add(k2); return true; }); })(),
         devolver: () => { r._escaninho = ""; salvar("Processo devolvido à bandeja."); },
-        remover: () => { if (!window.confirm(`Remover ${r.Processo} da Triagem Processual? Ele continua no Acervo Central.`)) return; r._triagem = ""; r._escaninho = ""; salvar("Processo removido da triagem."); } })) : [],
+        remover: () => { if (!window.confirm(`Remover ${r.Processo} da Triagem Processual? Ele continua no Acervo Central.`)) return; r._triagem = ""; r._escaninho = ""; salvar("Processo removido da triagem."); } }; }) : [],
       triOpenVazio: !!aberto && !(count.get(aberto.id) || 0),
       triDevolverTodos: () => { if (!aberto) return; const m = all.filter(({r}) => escOf(r) === aberto.id); m.forEach(({r}) => { r._escaninho = ""; }); salvar(`${m.length} processo(s) devolvido(s) à bandeja.`); },
       triExcluir: () => { if (!aberto) return; const n = count.get(aberto.id) || 0; if (!window.confirm(`Excluir o escaninho "${aberto.titulo}"?` + (n ? `\n\nOs ${n} processo(s) dele voltam para a bandeja.` : ""))) return; self.rows.forEach(r => { if (r._escaninho === aberto.id) r._escaninho = ""; }); self.escaninhos = self.escaninhos.filter(x => x.id !== aberto.id); self.setState({ triOpen: "" }); salvar(`Escaninho "${aberto.titulo}" excluído.`); },
