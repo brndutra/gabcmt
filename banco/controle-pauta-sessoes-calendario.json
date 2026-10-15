@@ -1,0 +1,19 @@
+{
+  "formato": "controle-pauta-sessoes-calendario",
+  "versao": 1,
+  "atualizadoEm": null,
+  "origem": "CntrlA · Hub de Sessões",
+  "sessions": [],
+  "sessionDetails": {},
+  "workCalendar": {
+    "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "excluded": [],
+    "labels": {}
+  }
+}
