@@ -43,21 +43,21 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-filtro{border:1px solid #d8dee5;background:#fff;color:#1f3d63;border-radius:99px;padding:5px 11px;font-size:10.5px;font-weight:800;cursor:pointer}
     .tri-filtro.on{background:#1f3d63;color:#fff;border-color:#1f3d63}
     .tri-dica{margin:0;padding:9px 14px 0;font-size:10.5px;color:#6d7b8a}
-    .tri-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:12px;padding:12px 14px 14px}
-    .tri-nicho{position:relative;height:196px;border-radius:12px;border:1px solid #e3e7ec;padding:0;text-align:left;font:inherit;background:#f6f8fa;cursor:pointer;overflow:hidden}
+    .tri-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:10px;padding:10px 14px 12px}
+    .tri-nicho{position:relative;height:132px;border-radius:10px;border:1px solid #e3e7ec;padding:0;text-align:left;font:inherit;background:#f6f8fa;cursor:pointer;overflow:hidden}
     .tri-nicho:hover{border-color:#b7c6d6;background:#f1f5f9}
     .tri-nicho:focus-visible{outline:2px solid #d9a441;outline-offset:2px}
     .tri-nicho.alvo,.tri-nicho.pronto:hover{border-color:#d9a441;background:#fffaf0}
     .tri-nicho.aberto{border:2px solid #1f3d63;background:#eef3f8}
-    .tri-pilha{position:absolute;left:16px;right:16px;bottom:58px;height:70px}
-    .tri-folha{position:absolute;left:0;right:0;height:8px;border-radius:2px;background:#fff;border:1px solid #d9d4c7}
-    .tri-capa{position:absolute;left:0;right:0;height:12px;border-radius:2px}
-    .tri-contador{position:absolute;top:10px;right:10px;min-width:28px;height:24px;padding:0 8px;border-radius:99px;display:grid;place-items:center;background:#1f3d63;color:#fff;font-weight:900;font-size:12px}
-    .tri-vazio-nicho{position:absolute;left:0;right:0;top:86px;text-align:center;color:#98a4b0;font-size:11px;font-weight:700}
-    .tri-placa{position:absolute;left:8px;right:8px;bottom:8px;height:42px;display:flex;flex-direction:column;justify-content:center;border-radius:8px;padding:4px 10px 4px 12px;background:#fff;border:1px solid #e3e7ec;border-left:4px solid #d9a441;color:#14263c}
-    .tri-placa .t{display:block;font-weight:850;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .tri-placa .s{display:block;font-size:10px;font-weight:650;color:#6d7b8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .tri-bilhete{position:absolute;top:10px;left:10px;max-width:66%;padding:5px 8px;background:#fff4c2;border:1px solid #efdf94;color:#4a3d0f;font-size:9.5px;line-height:1.35;border-radius:6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap}
+    .tri-pilha{position:absolute;left:12px;right:12px;bottom:46px;height:40px}
+    .tri-folha{position:absolute;left:0;right:0;height:6px;border-radius:2px;background:#fff;border:1px solid #d9d4c7}
+    .tri-capa{position:absolute;left:0;right:0;height:8px;border-radius:2px}
+    .tri-contador{position:absolute;top:7px;right:7px;min-width:22px;height:19px;padding:0 6px;border-radius:99px;display:grid;place-items:center;background:#1f3d63;color:#fff;font-weight:900;font-size:10.5px}
+    .tri-vazio-nicho{position:absolute;left:0;right:0;top:52px;text-align:center;color:#98a4b0;font-size:11px;font-weight:700}
+    .tri-placa{position:absolute;left:6px;right:6px;bottom:6px;height:34px;display:flex;flex-direction:column;justify-content:center;border-radius:8px;padding:4px 10px 4px 12px;background:#fff;border:1px solid #e3e7ec;border-left:4px solid #d9a441;color:#14263c}
+    .tri-placa .t{display:block;font-weight:850;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tri-placa .s{display:block;font-size:9px;font-weight:650;color:#6d7b8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tri-bilhete{position:absolute;top:7px;left:7px;max-width:70%;padding:3px 6px;background:#fff4c2;border:1px solid #efdf94;color:#4a3d0f;font-size:8.5px;line-height:1.3;border-radius:5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap}
     .tri-nicho.novo{display:grid;place-items:center;text-align:center;background:#fff;border:2px dashed #cfd8e2;color:#6d7b8a}
     .tri-nicho.novo:hover{border-color:#d9a441;color:#8a6416;background:#fffaf0}
     .tri-aberto{margin:0 14px 14px;border-radius:12px;background:#f6f8fa;border:1px solid #d6e0ea;color:#14263c;overflow:hidden}
@@ -86,6 +86,42 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-pcard-campos{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:1px;background:#eef1f4;border-top:1px solid #eef1f4}
     .tri-pc-campo{display:flex;flex-direction:column;gap:2px;min-width:0;background:#fbfcfd;padding:6px 10px}
     .tri-pc-campo b{font-size:11px;font-weight:600;color:#3d4c5c;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;word-break:break-word}
+    .tri-faixa{border-top:1px solid #eef1f4;background:#fbfaf6}
+    .tri-faixa-barra{width:100%;display:flex;align-items:center;gap:8px;border:0;background:#f6f2e7;padding:6px 12px;font:inherit;font-size:10.5px;color:#5d5137;cursor:pointer;text-align:left}
+    .tri-faixa-barra:hover{background:#f1ead8}
+    .tri-faixa-barra .rot{font-size:9px;font-weight:900;letter-spacing:.08em;color:#7a5512}
+    .tri-faixa-barra .res{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#6d6046}
+    .tri-cx-mini{flex:0 0 auto;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:10.5px;font-weight:800;font-family:"Times New Roman",Georgia,serif}
+    .tri-faixa-corpo{display:grid;gap:10px;padding:10px 12px 12px;border-top:1px solid #efe7d2}
+    .tri-fx-l1{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:stretch}
+    .tri-fx-l2{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:10px}
+    .tri-fx-rot{display:block;font-size:8.5px;font-weight:900;letter-spacing:.08em;color:#7e8b99;margin-bottom:5px}
+    .tri-cx{display:grid;gap:4px}
+    .tri-cx-op{display:flex;align-items:center;gap:8px;border:1px solid #e3e7ec;background:#fff;border-radius:8px;padding:4px 12px 4px 5px;font:inherit;font-size:11.5px;font-weight:650;color:#3d4c5c;cursor:pointer;text-align:left;min-width:150px}
+    .tri-cx-op i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;color:#fff;font-style:normal;font-size:12.5px;font-weight:800;font-family:"Times New Roman",Georgia,serif;opacity:.45}
+    .tri-cx-op:hover i,.tri-cx-op.on i{opacity:1}
+    .tri-cx-op.on{border-color:#1f3d63;background:#eef3f8;color:#14263c;font-weight:800}
+    .tri-fx-sintese{width:100%;height:100%;min-height:82px;border:1px solid #d6e0ea;border-radius:9px;background:#fff;color:#14263c;padding:8px 10px;font:inherit;font-size:12px;line-height:1.45;resize:vertical;outline:none}
+    .tri-fx-sintese:focus{border-color:#1f3d63}
+    .tri-fx-caixa{border:1px solid #e3e7ec;border-radius:10px;background:#fff;padding:8px 9px;min-width:0;display:flex;flex-direction:column}
+    .tri-fx-caixa.alvo{border-color:#d9a441;background:#fffaf0;box-shadow:inset 0 0 0 1px #d9a441}
+    .tri-fx-caixa.tema{border-top:3px solid #2f6690}.tri-fx-caixa.esp{border-top:3px solid #7a5ba6}.tri-fx-caixa.etq{border-top:3px solid #d9a441}
+    .tri-fx-chips{display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start;min-height:30px;max-height:150px;overflow:auto;flex:1}
+    .tri-fx-chips em{font-style:normal;font-size:10.5px;color:#98a4b0}
+    .tri-chip{display:inline-flex;align-items:center;gap:3px;max-width:100%;border-radius:99px;padding:2px 3px 2px 9px;font-size:10.5px;font-weight:700;background:#f7e7c4;color:#6b4a0e;cursor:grab}
+    .tri-chip>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+    .tri-chip button{flex:0 0 auto;border:0;width:18px;height:18px;border-radius:50%;font-size:9px;font-weight:900;cursor:pointer;background:rgba(255,255,255,.75);color:#1f3d63;padding:0}
+    .tri-chip button.e{color:#5b4a8a}.tri-chip button:hover{background:#fff}
+    .tri-chip.tema{background:#e3edf6;color:#1f4d73;cursor:default}.tri-chip.esp{background:#ece6f6;color:#4f3d7a;cursor:default}
+    .tri-chip.tema button,.tri-chip.esp button{color:#a64f35}
+    .tri-fx-add{display:flex;gap:4px;margin-top:7px}
+    .tri-fx-add input{flex:1;min-width:0;border:1px solid #d6e0ea;border-radius:8px;padding:5px 8px;font:inherit;font-size:11px;outline:none;background:#fafbfc}
+    .tri-fx-add input:focus{border-color:#1f3d63;background:#fff}
+    .tri-fx-add button{border:0;border-radius:8px;background:#1f3d63;color:#fff;font-weight:900;padding:0 10px;cursor:pointer}
+    .tri-fx-ctrl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#e7eaee;border:1px solid #e3e7ec;border-radius:10px;overflow:hidden}
+    .tri-fx-ctrl>div{background:#fff;min-width:0}
+    .tri-fx-ctrl .cab{color:#6d7b8a;font-size:9px;font-weight:800;letter-spacing:.04em;padding:5px 8px}
+    @media(max-width:1100px){.tri-fx-l1,.tri-fx-l2{grid-template-columns:minmax(0,1fr)}}
     .tri-campo{display:grid;gap:4px;margin-bottom:9px}
     .tri-campo label{font-size:9px;font-weight:900;letter-spacing:.08em;color:#6d7b8a}
     .tri-campo input,.tri-campo textarea{width:100%;border:1px solid #d6e0ea;border-radius:9px;background:#fff;color:#14263c;padding:8px 10px;font:inherit;font-size:12.5px;outline:none}
@@ -158,7 +194,7 @@ MARKUP = """
                   <span class="tri-placa" style="border-left-color:{{ e.cor }}"><span class="t">{{ e.titulo }}</span><sc-if value="{{ e.hasSub }}"><span class="s">{{ e.subLabel }}</span></sc-if></span>
                 </button>
               </sc-for>
-              <button class="tri-nicho novo" sc-camel-on-click="{{ newEscaninho }}"><span><span style="display:block;font-size:30px;line-height:1">+</span><span style="font-size:11px;font-weight:850;letter-spacing:.08em">NOVO ESCANINHO</span></span></button>
+              <button class="tri-nicho novo" sc-camel-on-click="{{ newEscaninho }}"><span><span style="display:block;font-size:24px;line-height:1">+</span><span style="font-size:10px;font-weight:850;letter-spacing:.08em">NOVO ESCANINHO</span></span></button>
             </div>
 
             <sc-if value="{{ triHasOpen }}" hint-placeholder-val="{{ false }}">
@@ -192,7 +228,38 @@ MARKUP = """
                         <div class="tri-pc-acoes"><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
                       </div>
                       <div class="tri-pcard-campos">
-                        <sc-for list="{{ g.campos }}" as="f"><div class="tri-pc-campo"><span>{{ f.col }}</span><b title="{{ f.val }}">{{ f.val }}</b></div></sc-for>
+                        <sc-for list="{{ g.camposA }}" as="f"><div class="tri-pc-campo"><span>{{ f.col }}</span><b title="{{ f.val }}">{{ f.val }}</b></div></sc-for>
+                      </div>
+                      <div class="tri-faixa">
+                        <button class="tri-faixa-barra" sc-camel-on-click="{{ g.toggleFaixa }}" aria-expanded="{{ g.faixaAberta }}"><span aria-hidden="true">{{ g.faixaSeta }}</span><span class="rot">TRIAGEM DO PROCESSO</span><span class="tri-cx-mini" style="background:{{ g.cxCor }}">{{ g.cxSimb }}</span><span class="res">{{ g.faixaResumo }}</span></button>
+                        <sc-if value="{{ g.faixaAberta }}" hint-placeholder-val="{{ false }}">
+                          <div class="tri-faixa-corpo">
+                            <div class="tri-fx-l1">
+                              <div><span class="tri-fx-rot">COMPLEXIDADE</span><div class="tri-cx" role="radiogroup" aria-label="Complexidade"><sc-for list="{{ g.cxOpcoes }}" as="o"><button class="tri-cx-op {{ o.cls }}" role="radio" aria-checked="{{ o.on }}" sc-camel-on-click="{{ o.pick }}"><i style="background:{{ o.cor }}">{{ o.simb }}</i>{{ o.nome }}</button></sc-for></div></div>
+                              <div style="display:flex;flex-direction:column;min-width:0"><span class="tri-fx-rot">SÍNTESE PROCESSUAL</span><textarea class="tri-fx-sintese" value="{{ g.sintese }}" sc-camel-on-input="{{ g.onSintese }}" placeholder="Resumo do caso: pedido, sentença, recurso e o ponto controvertido…" aria-label="Síntese processual"></textarea></div>
+                            </div>
+                            <div class="tri-fx-l2">
+                              <div class="tri-fx-caixa etq">
+                                <span class="tri-fx-rot">TODAS AS ETIQUETAS · {{ g.etqCount }} · arraste ou use T / E</span>
+                                <div class="tri-fx-chips"><sc-for list="{{ g.etqs }}" as="t"><span class="tri-chip" draggable="true" data-tri-tag="{{ t.drag }}" title="{{ t.label }}"><span>{{ t.label }}</span><button sc-camel-on-click="{{ t.toTema }}" title="Encaminhar para TEMAS" aria-label="Encaminhar para temas">T</button><button class="e" sc-camel-on-click="{{ t.toEsp }}" title="Encaminhar para ESPECIFICIDADES" aria-label="Encaminhar para especificidades">E</button></span></sc-for><sc-if value="{{ g.etqVazio }}"><em>Sem etiquetas atuais.</em></sc-if></div>
+                              </div>
+                            <div class="tri-fx-caixa tema" data-tri-dest="{{ g.destTema }}">
+                              <span class="tri-fx-rot">TEMAS · {{ g.temasCount }}</span>
+                              <div class="tri-fx-chips"><sc-for list="{{ g.temas }}" as="t"><span class="tri-chip tema" title="{{ t.label }}"><span>{{ t.label }}</span><button sc-camel-on-click="{{ t.remover }}" title="Remover (se veio de etiqueta, volta às etiquetas)" aria-label="Remover">✕</button></span></sc-for><sc-if value="{{ g.temasVazio }}"><em>Arraste etiquetas para cá ou crie abaixo.</em></sc-if></div>
+                              <div class="tri-fx-add"><input placeholder="+ novo tema" sc-camel-on-key-down="{{ g.addTemaKey }}" aria-label="+ novo tema"><button sc-camel-on-click="{{ g.addTemaBtn }}" title="Incluir" aria-label="Incluir">+</button></div>
+                            </div>
+                            <div class="tri-fx-caixa esp" data-tri-dest="{{ g.destEsp }}">
+                              <span class="tri-fx-rot">ESPECIFICIDADES · {{ g.espsCount }}</span>
+                              <div class="tri-fx-chips"><sc-for list="{{ g.esps }}" as="t"><span class="tri-chip esp" title="{{ t.label }}"><span>{{ t.label }}</span><button sc-camel-on-click="{{ t.remover }}" title="Remover (se veio de etiqueta, volta às etiquetas)" aria-label="Remover">✕</button></span></sc-for><sc-if value="{{ g.espsVazio }}"><em>Arraste etiquetas para cá ou crie abaixo.</em></sc-if></div>
+                              <div class="tri-fx-add"><input placeholder="+ nova especificidade" sc-camel-on-key-down="{{ g.addEspKey }}" aria-label="+ nova especificidade"><button sc-camel-on-click="{{ g.addEspBtn }}" title="Incluir" aria-label="Incluir">+</button></div>
+                            </div>
+                            </div>
+                            <div class="tri-fx-ctrl"><sc-for list="{{ g.ctrls }}" as="cell"><div><div class="cab">{{ cell.col }}</div><dc-import name="Celula" kind="{{ cell.kind }}" value="{{ cell.value }}" options="{{ cell.options }}" checked="{{ cell.checked }}" chips="{{ cell.chips }}" tags="{{ cell.tags }}" auto="{{ cell.auto }}" manual="{{ cell.manual }}" on-text="{{ cell.onText }}" on-select="{{ cell.onSelect }}" on-check="{{ cell.onCheck }}" on-manual="{{ cell.onManual }}" on-tag-add="{{ cell.onTagAdd }}" hint-size="100%,38px"></dc-import></div></sc-for></div>
+                          </div>
+                        </sc-if>
+                      </div>
+                      <div class="tri-pcard-campos">
+                        <sc-for list="{{ g.camposB }}" as="f"><div class="tri-pc-campo"><span>{{ f.col }}</span><b title="{{ f.val }}">{{ f.val }}</b></div></sc-for>
                       </div>
                     </div>
                   </sc-for>
@@ -221,6 +288,34 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     this.saveDB(); this.refresh();
     if (n) this.notify(`${n} processo(s) guardado(s) no escaninho "${e.titulo}".`);
   }
+  triLista(r, c) { return dedupeLabels(splitTags(r[c])); }
+  triAddItem(i, c, label) {
+    const r = this.rows[i]; label = txt(label); if (!r || !label) return;
+    const cur = this.triLista(r, c); if (!cur.some(t => canon(t) === canon(label))) r[c] = [...cur, label].join("\n");
+    this.saveDeb(); this.refresh();
+  }
+  triMoverEtiqueta(i, label, c) {
+    const r = this.rows[i]; if (!r || this._exclusive) return;
+    const labels = this.sourceTags(r), key = canon(label); if (!labels.some(t => canon(t) === key)) return;
+    const cur = this.triLista(r, c); if (!cur.some(t => canon(t) === key)) r[c] = [...cur, label].join("\n");
+    this.setCurrentTags(r, labels.filter(t => canon(t) !== key)); this.routeSpecialTags(r);
+    this.saveDeb(); this.refresh();
+  }
+  triRemoverItem(i, c, label) {
+    const r = this.rows[i]; if (!r) return; const key = canon(label);
+    r[c] = this.triLista(r, c).filter(t => canon(t) !== key).join("\n");
+    if (this.originalTags(r).some(t => canon(t) === key) && !this.sourceTags(r).some(t => canon(t) === key)) { this.setCurrentTags(r, [...this.sourceTags(r), label]); this.routeSpecialTags(r); }
+    this.saveDeb(); this.refresh();
+  }
+  triColsExport(cols) {
+    const out = [...cols]; let at = out.findIndex(c => fieldKey(c) === "etiquetas"); at = at < 0 ? out.length : at + 1;
+    ["Tema", "Especificidades", "Síntese Processual"].forEach(c => { if (!out.includes(c)) out.splice(at++, 0, c); else at = Math.max(at, out.indexOf(c) + 1); });
+    return out;
+  }
+  triEtqExport(r, v) {
+    const fora = new Set([...splitTags(r.Tema), ...splitTags(r.Especificidades)].map(canon));
+    return dedupeLabels(splitTags(v)).filter(t => !/secao/.test(canon(t)) && !fora.has(canon(t))).join(", ");
+  }
   triagemValues() {
     const s = this.state, self = this, PAL = ["#2f6690","#4a8f74","#b4763a","#7a5ba6","#a6545e","#3d8b9c","#6b7d2f","#c0843d"];
     if (!this.triSel) this.triSel = new Set();
@@ -233,6 +328,19 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       document.addEventListener("dragleave", e => { const n = alvo(e); if (n && !n.contains(e.relatedTarget)) n.classList.remove("alvo"); });
       document.addEventListener("drop", e => { const n = alvo(e); if (!n) return; e.preventDefault(); n.classList.remove("alvo"); const d = e.dataTransfer.getData("text/plain") || ""; if (d.startsWith("tri:")) window.__painelCentralComponent.triGuardar(d.slice(4).split(",").filter(Boolean), n.dataset.triEsc); });
     }
+    if (!window.__triDndTag) {
+      window.__triDndTag = true;
+      const caixa = e => e.target && e.target.closest && e.target.closest("[data-tri-dest]");
+      document.addEventListener("dragstart", e => { const c = e.target && e.target.closest && e.target.closest("[data-tri-tag]"); if (!c) return; e.dataTransfer.setData("text/plain", "tag:" + c.dataset.triTag); e.dataTransfer.effectAllowed = "move"; e.stopPropagation(); }, true);
+      document.addEventListener("dragover", e => { const n = caixa(e); if (!n) return; e.preventDefault(); n.classList.add("alvo"); });
+      document.addEventListener("dragleave", e => { const n = caixa(e); if (n && !n.contains(e.relatedTarget)) n.classList.remove("alvo"); });
+      document.addEventListener("drop", e => { const n = caixa(e); if (!n) return; e.preventDefault(); n.classList.remove("alvo");
+        const d = e.dataTransfer.getData("text/plain") || ""; if (!d.startsWith("tag:")) return;
+        const [pid, ...resto] = d.slice(4).split("|"), [dpid, dest] = String(n.dataset.triDest).split("|"); if (pid !== dpid) return;
+        const c = window.__painelCentralComponent, i = c.rows.findIndex(r => procId(r.Processo) === pid); if (i >= 0) c.triMoverEtiqueta(i, resto.join("|"), dest); });
+    }
+    if (!this.triFaixa) this.triFaixa = new Set();
+    const CX = [["1", "Ω", "Padrão", "#2f8a5e"], ["2", "A", "Intermediário", "#e3a21a"], ["3", "Σ", "Complexo", "#cf4b3b"]];
     const escs = this.escaninhos; escs.forEach((e, i) => { if (!e.cor) e.cor = PAL[i % PAL.length]; });
     const ids = new Set(escs.map(e => e.id));
     const all = this.triagemRows(), escOf = r => ids.has(r._escaninho) ? r._escaninho : "";
@@ -247,7 +355,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     const marcados = this.triSel.size;
     const lista = escs.filter(e => filtro === "todos" || (filtro === "cheios" ? count.get(e.id) : !count.get(e.id)));
     const camposDados = [...new Set([...this.columnConfig.central, ...this.centralKnownColumns].map(centralColumn))]
-      .filter(c => isVisibleColumn(c) && !WORK_COLUMNS.has(c) && !["Processo","processo","Assunto","Etiquetas","etiquetas","Etiquetas Originais","Etiquetas Operacionais","tarefa_atual"].includes(c));
+      .filter(c => isVisibleColumn(c) && !WORK_COLUMNS.has(c) && !["Processo","processo","Assunto","Etiquetas","etiquetas","Etiquetas Originais","Etiquetas Operacionais","tarefa_atual","Tema","Especificidades","Síntese Processual","Dificuldade"].includes(c));
     const linha = r => ({ proc: r.Processo || "—", classe: txt(r.classe_judicial || r.Classe) || "—", assunto: txt(r.Assunto || r.assunto_judicial) || "—", tarefa: txt(r.tarefa_atual) || "—" });
     return {
       isTriagem: s.tab === "triagem",
@@ -282,7 +390,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triDica: marcados ? `${marcados} ficha(s) marcada(s) — clique no escaninho de destino para guardá-las.` : "Marque fichas na bandeja e clique num escaninho — ou arraste as fichas até ele. Clique num escaninho para abri-lo.",
       triEscaninhos: lista.map(e => { const n = count.get(e.id) || 0, cam = n ? Math.min(6, 1 + Math.ceil(Math.log2(n + 1) * 1.6)) : 0; return {
         key: e.id, titulo: e.titulo, subLabel: txt(e.subtitulo), hasSub: !!txt(e.subtitulo), obs: e.obs || "", hasObs: !!txt(e.obs), count: n, cor: e.cor, vazio: !n,
-        layers: Array.from({ length: cam }, (_, k) => ({ key: k, b: k * 7 })), hasCapa: !!n, capaB: cam * 7,
+        layers: Array.from({ length: cam }, (_, k) => ({ key: k, b: k * 5 })), hasCapa: !!n, capaB: cam * 5,
         cls: [aberto && aberto.id === e.id ? "aberto" : "", marcados ? "pronto" : ""].join(" "),
         aria: `Escaninho ${e.titulo}, ${n} processo(s)`, title: marcados ? `Guardar ${marcados} ficha(s) aqui` : "Abrir escaninho",
         click: () => { if (self.triSel.size) self.triGuardar([...self.triSel], e.id); else self.setState({ triOpen: s.triOpen === e.id ? "" : e.id, triConfig: false }); }
@@ -299,9 +407,31 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triToggleConfig: () => self.setState({ triConfig: !s.triConfig }),
       triOpenCor: aberto ? aberto.cor : "#c3ccd6",
       triConfigResumo: aberto ? (txt(aberto.obs) ? "📝 " + String(aberto.obs).replace(/\s+/g, " ").trim() : "sem bilhete · clique em Configurações para editar placa, bilhete e cor") : "",
-      triOpenRows: aberto ? all.filter(({r}) => escOf(r) === aberto.id).map(({r}) => { const sit = self.situacao(r); return { key: "g" + procId(r.Processo), ...linha(r),
+      triOpenRows: aberto ? all.filter(({r}) => escOf(r) === aberto.id).map(({r, i}) => { const sit = self.situacao(r), pid = procId(r.Processo), aberta = self.triFaixa.has(pid);
+        const campos = (() => { const vistos = new Set(); return camposDados.map(c => ({ key: c, col: c, val: txt(r[c]) })).filter(f => { if (!f.val) return false; const k = fieldKey(f.col) + "|" + canon(f.val), k2 = "v|" + canon(f.val) + "|" + canon(f.col).replace(/[^a-z]/g, "").slice(0, 6); if (vistos.has(k) || vistos.has(k2)) return false; vistos.add(k); vistos.add(k2); return true; }); })();
+        let corte = campos.findIndex(f => /polo/.test(canon(f.col))); if (corte < 0) corte = campos.length;
+        const etqs = self.sourceTags(r), temas = self.triLista(r, "Tema"), esps = self.triLista(r, "Especificidades"), cx = CX.find(c => c[0] === String(txt(r.Dificuldade)));
+        const addKey = c => e => { if (e.key !== "Enter") return; e.preventDefault(); const v = e.target.value; e.target.value = ""; self.triAddItem(i, c, v); };
+        const addBtn = c => e => { const inp = e.currentTarget.parentElement.querySelector("input"); const v = inp.value; inp.value = ""; self.triAddItem(i, c, v); };
+        const plural = (n, s, p) => n + " " + (n === 1 ? s : p);
+        let ctrls = [];
+        if (aberta) { try { ctrls = self.preControllers(i).parts.map(c => ({ ...c, key: c.col })); if (!ctrls.some(c => /id da procura/.test(canon(c.col)))) ctrls.push({ ...self.cell(i, "ID da Procuração"), col: "ID DA PROCURAÇÃO", key: "idproc" }); } catch (err) { ctrls = ["Tempestividade","Impedimento / Suspeição","Preparo","Representação","ID da Procuração"].map(c => ({ ...self.cell(i, c), col: c.toUpperCase(), key: c })); } }
+        return { key: "g" + pid, ...linha(r),
+        camposA: campos.slice(0, corte), camposB: campos.slice(corte),
+        faixaAberta: aberta, faixaSeta: aberta ? "▾" : "▸",
+        toggleFaixa: () => { aberta ? self.triFaixa.delete(pid) : self.triFaixa.add(pid); self.refresh(); },
+        cxCor: cx ? cx[3] : "#c3ccd6", cxSimb: cx ? cx[1] : "·",
+        faixaResumo: [cx ? cx[2] : "complexidade não definida", plural(etqs.length, "etiqueta", "etiquetas"), plural(temas.length, "tema", "temas"), plural(esps.length, "especificidade", "especificidades"), txt(r["Síntese Processual"]) ? "síntese ✓" : "sem síntese"].join(" · "),
+        cxOpcoes: CX.map(([v, simb, nome, cor]) => ({ key: v, simb, nome, cor, on: cx && cx[0] === v, cls: cx && cx[0] === v ? "on" : "", pick: () => { r.Dificuldade = cx && cx[0] === v ? "" : v; self.saveDeb(); self.refresh(); } })),
+        sintese: r["Síntese Processual"] || "", onSintese: e => { r["Síntese Processual"] = e.target.value; self.saveDeb(); },
+        etqCount: etqs.length, etqVazio: !etqs.length,
+        etqs: aberta ? etqs.map(l => ({ key: l, label: l, drag: pid + "|" + l, toTema: () => self.triMoverEtiqueta(i, l, "Tema"), toEsp: () => self.triMoverEtiqueta(i, l, "Especificidades") })) : [],
+        destTema: pid + "|Tema", destEsp: pid + "|Especificidades",
+        temasCount: temas.length, temasVazio: !temas.length, temas: aberta ? temas.map(l => ({ key: l, label: l, remover: () => self.triRemoverItem(i, "Tema", l) })) : [],
+        espsCount: esps.length, espsVazio: !esps.length, esps: aberta ? esps.map(l => ({ key: l, label: l, remover: () => self.triRemoverItem(i, "Especificidades", l) })) : [],
+        addTemaKey: addKey("Tema"), addTemaBtn: addBtn("Tema"), addEspKey: addKey("Especificidades"), addEspBtn: addBtn("Especificidades"),
+        ctrls,
         etiquetas: self.sourceTags(r).join(", ") || "—", situacao: sit.label, sitBg: sit.bg, sitFg: sit.fg,
-        campos: (() => { const vistos = new Set(); return camposDados.map(c => ({ key: c, col: c, val: txt(r[c]) })).filter(f => { if (!f.val) return false; const k = fieldKey(f.col) + "|" + canon(f.val), k2 = "v|" + canon(f.val) + "|" + canon(f.col).replace(/[^a-z]/g, "").slice(0, 6); if (vistos.has(k) || vistos.has(k2)) return false; vistos.add(k); vistos.add(k2); return true; }); })(),
         devolver: () => { r._escaninho = ""; salvar("Processo devolvido à bandeja."); },
         remover: () => { if (!window.confirm(`Remover ${r.Processo} da Triagem Processual? Ele continua no Acervo Central.`)) return; r._triagem = ""; r._escaninho = ""; salvar("Processo removido da triagem."); } }; }) : [],
       triOpenVazio: !!aberto && !(count.get(aberto.id) || 0),
@@ -343,4 +473,10 @@ PATCHES = [
     ("    </sc-if>\n  </main></div>", "    </sc-if>\n" + MARKUP + "  </main></div>"),
     # estilos
     ("    .central-stats-stack{display:grid;gap:14px;min-width:0}", CSS + "    .central-stats-stack{display:grid;gap:14px;min-width:0}"),
+    # exportação: TEMAS (coluna Tema, cabeçalho "Temas"), ESPECIFICIDADES e SÍNTESE; etiquetas sem as convertidas e sem "Seção"
+    ('"Status: Corrigido":"CORRIGIDO"};', '"Status: Corrigido":"CORRIGIDO","Temas":"Tema"};'),
+    ("  addSheet(wb, name, cols, dataRows, accent) {\n    const data = this.exportRows(cols, dataRows);\n    const ws = XLSX.utils.json_to_sheet(data, { header: cols });",
+     "  addSheet(wb, name, cols, dataRows, accent) {\n    cols = this.triColsExport(cols);\n    const data = this.exportRows(cols, dataRows);\n    const ws = XLSX.utils.json_to_sheet(data, { header: cols });\n    cols.forEach((c, j) => { const a = XLSX.utils.encode_cell({ r: 0, c: j }); if (c === \"Tema\" && ws[a]) ws[a].v = \"Temas\"; });"),
+    ('        else o[c] = r[c] == null ? "" : r[c];\n      });\n      return o;',
+     '        else if (fieldKey(c) === "etiquetas" || c === "Etiquetas Originais") o[c] = this.triEtqExport(r, r[c]);\n        else o[c] = r[c] == null ? "" : r[c];\n      });\n      return o;'),
 ]
