@@ -75,6 +75,8 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-procs{padding:12px;max-height:72vh;overflow:auto}
     .tri-pcard{background:#fff;border:1px solid #dfe6ee;border-radius:12px;margin-bottom:9px;overflow:hidden}
     .tri-pcard-topo{display:grid;grid-template-columns:minmax(180px,.9fr) minmax(0,1fr) minmax(0,.9fr) minmax(0,1.5fr) 150px auto;align-items:stretch}
+    .tri-tarefa{display:flex;align-items:center;gap:6px;min-width:0}.tri-tarefa b{flex:1;min-width:0}
+    .tri-pill{flex:0 0 auto;margin-left:auto;font-style:normal;font-size:9px;font-weight:850;color:#33506e;background:#e8eef5;border-radius:99px;padding:2px 8px;white-space:nowrap;cursor:help}
     .tri-pc-cel.larga i{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:10.5px;color:#56636f}
     .tri-classe{display:flex;align-items:center;gap:5px;min-width:0;margin-top:2px}
     .tri-cls{flex:0 0 auto;font-style:normal;font-size:9px;font-weight:900;letter-spacing:.04em;border-radius:5px;padding:2px 5px;line-height:1.2}
@@ -183,11 +185,12 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-aberto-topo .tri-config-resumo{flex:1 1 160px;min-width:0}
     /* modo planilha */
     .tri-plan-wrap{overflow:auto;max-height:72vh;border:1px solid #dfe6ee;border-radius:10px;background:#fff}
-    .tri-plan{display:table;width:100%;border-collapse:collapse;min-width:1180px;font-size:11.5px}
+    .tri-plan{display:table;width:max-content;min-width:100%;border-collapse:collapse;font-size:11.5px}
     .tri-plan-tr{display:table-row}
     .tri-plan-tr>*{display:table-cell;padding:7px 8px;border-bottom:1px solid #eef1f4;vertical-align:top;color:#3d4c5c;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
     .tri-plan-tr.cab>span{position:sticky;top:0;z-index:1;background:#f4f6f9;color:#5c6a78;font-size:8.5px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;padding:8px;border-bottom:1px solid #e3e7ec}
-    .tri-plan-tr>.quebra{white-space:normal;min-width:120px}
+    .tri-plan-tr>.quebra{white-space:normal;min-width:160px;max-width:260px}
+    .tri-plan-tr>.c:first-child,.tri-plan-tr.cab>span:first-child{position:sticky;left:0;z-index:2;background:#fff}.tri-plan-tr.cab>span:first-child{z-index:3;background:#f4f6f9}
     .tri-plan-tr>.obs{white-space:pre-line;font-size:11px}
     .tri-plan-tr:not(.cab):hover>*{background:#fafcfe}
     .tri-plan b.num{display:block;font:600 11.5px "IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;color:#14263c}
@@ -305,14 +308,10 @@ MARKUP = """
                 <div class="tri-procs">
                   <sc-if value="{{ triVistaPlanilha }}" hint-placeholder-val="{{ false }}">
                     <div class="tri-plan-wrap"><div class="tri-plan" role="table" aria-label="Processos do escaninho">
-                      <div class="tri-plan-tr cab" role="row"><span>Processo</span><span>Assunto</span><span>Complex.</span><span>Etiquetas</span><span>Temas</span><span>Especificidades</span><span>Observações</span><span>Tarefa atual</span><span>Situação</span><span>Polo ativo</span><span>Polo passivo</span><span></span></div>
-                      <sc-for list="{{ triOpenRows }}" as="g" hint-placeholder-count="3"><div class="tri-plan-tr" role="row">
-                        <div class="c"><b class="num">{{ g.proc }}</b><i>{{ g.classe }}</i></div><div class="c" title="{{ g.assunto }}">{{ g.assunto }}</div>
-                        <div class="c"><span class="tri-plan-cx"><sc-for list="{{ g.cxOpcoes }}" as="o"><button class="{{ o.cls }}" style="--c:{{ o.cor }}" sc-camel-on-click="{{ o.pick }}" title="{{ o.nome }}" aria-pressed="{{ o.on }}">{{ o.simb }}</button></sc-for></span></div>
-                        <div class="c quebra" title="{{ g.etiquetas }}">{{ g.etiquetas }}</div><div class="c quebra">{{ g.temasTxt }}</div><div class="c quebra">{{ g.espsTxt }}</div><div class="c quebra obs" title="{{ g.obsTxt }}">{{ g.obsTxt }}</div>
-                        <div class="c" title="{{ g.tarefa }}">{{ g.tarefa }}</div><div class="c"><em style="background:{{ g.sitBg }};color:{{ g.sitFg }}">{{ g.situacao }}</em></div>
-                        <div class="c" title="{{ g.poloA }}">{{ g.poloA }}</div><div class="c" title="{{ g.poloP }}">{{ g.poloP }}</div>
-                        <div class="c acoes"><button class="tri-icone" sc-camel-on-click="{{ g.abrirCard }}" title="Abrir no modo cards, com a faixa de triagem">▸</button><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
+                      <div class="tri-plan-tr cab" role="row"><span></span><sc-for list="{{ triPlanCols }}" as="c"><span class="{{ c.cls }}">{{ c.label }}</span></sc-for></div>
+                      <sc-for list="{{ triPlanLinhas }}" as="g" hint-placeholder-count="3"><div class="tri-plan-tr" role="row">
+                        <div class="c acoes"><button class="tri-icone" sc-camel-on-click="{{ g.abrirCard }}" title="Abrir no modo cards">▸</button><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
+                        <sc-for list="{{ g.vals }}" as="v"><div class="c {{ v.cls }}" title="{{ v.v }}">{{ v.v }}</div></sc-for>
                       </div></sc-for>
                     </div></div>
                   </sc-if>
@@ -323,7 +322,7 @@ MARKUP = """
                         <div class="tri-pc-cel"><span>PROCESSO</span><b class="num">{{ g.proc }}</b><div class="tri-classe" title="{{ g.clsTitulo }}"><em class="tri-cls" style="background:{{ g.clsFundo }};color:{{ g.clsCor }}">{{ g.clsSigla }}</em><i>{{ g.classe }}</i></div><sc-if value="{{ g.temQualif }}"><div class="tri-qualif"><sc-for list="{{ g.qualifs }}" as="q"><span>▸ {{ q.label }}</span></sc-for></div></sc-if></div>
                         <div class="tri-pc-cel"><span>ASSUNTO</span><b title="{{ g.assuntoTitulo }}" class="dica">{{ g.assunto }}</b></div>
                         <div class="tri-pc-cel"><span>ETIQUETAS ATUAIS</span><b title="{{ g.etiquetas }}">{{ g.etiquetas }}</b></div>
-                        <div class="tri-pc-cel larga"><span>TAREFA ATUAL · ÚLTIMO MOVIMENTO</span><b title="{{ g.tarefa }}">{{ g.tarefa }}</b><i title="{{ g.movimentoTitulo }}">{{ g.movimento }}</i></div>
+                        <div class="tri-pc-cel larga"><span>TAREFA ATUAL · ÚLTIMO MOVIMENTO</span><div class="tri-tarefa"><b title="{{ g.tarefa }}">{{ g.tarefa }}</b><sc-if value="{{ g.temEntrada }}"><em class="tri-pill" title="{{ g.entradaTitulo }}">desde {{ g.entrada }}</em></sc-if></div><i title="{{ g.movimentoTitulo }}">{{ g.movimento }}</i></div>
                         <div class="tri-pc-cel"><span>SITUAÇÃO ATUAL</span><em style="background:{{ g.sitBg }};color:{{ g.sitFg }}">{{ g.situacao }}</em></div>
                         <div class="tri-pc-acoes"><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
                       </div>
@@ -466,13 +465,16 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       metas: splitTags(r.META).map(txt).filter(Boolean), prioridade: prioOn, prioridadeTitulo: prioOn ? `Prioridade: ${prio}` : "Sem prioridade legal registrada",
       pendente: pend, pendenteTitulo: pend === null ? "Pendência de 1º julgamento não informada" : pend ? "Pendente de 1º julgamento" : "Sem pendência de 1º julgamento",
       tempo: tempo || "—", tempoTitulo: ["Tempo de tramitação" + (tempoRaw ? `: ${tempoRaw}${/^\d+$/.test(tempoRaw) ? " dias" : ""}` : " não informado"), ...datas].join("\n"),
+      ...(() => { const raw = txt(r.data_entrada_tarefa || r.Data_Entrada_Tarefa), d = raw.match(/^(\d{4})-(\d\d)-(\d\d)/) ? raw.slice(0, 10) : (raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/) ? raw.replace(/^(\d{1,2})\/(\d{1,2})\/(\d{4}).*$/, (m0, a, b, c) => `${c}-${b.padStart(2, "0")}-${a.padStart(2, "0")}`) : "");
+        const dias = d ? Math.round((Date.now() - Date.parse(d + "T12:00:00Z")) / 86400000) : null;
+        return { entrada: d ? d.slice(8, 10) + "/" + d.slice(5, 7) + "/" + d.slice(2, 4) : raw, entradaTitulo: raw ? `Entrada na tarefa: ${raw}${dias !== null ? ` · há ${dias} dia(s)` : ""}` : "" }; })(),
       tarefa: txt(r.tarefa_atual) || "—", movimento: this.cardAssunto(txt(r.ultimo_movimento || r["Última_Movimentação"])) || "—",
       movimentoTitulo: [txt(r.ultimo_movimento || r["Última_Movimentação"]), txt(r["Data_Última_Movimentação"]) ? "em " + txt(r["Data_Última_Movimentação"]) : ""].filter(Boolean).join(" ") };
   }
   /* campos de dados do cartão: os de cima (até as partes) e os de "+ Informações" (das partes em diante) */
   cardCampos(r) {
     const fora = new Set(["Processo","processo","Assunto","Etiquetas","etiquetas","Etiquetas Originais","Etiquetas Operacionais","tarefa_atual","Tema","Especificidades","Síntese Processual","Dificuldade",
-      "Código_Classe","Código_Assunto_Principal","classe_judicial","Classe","ultimo_movimento","Última_Movimentação","Data_Última_Movimentação","prioridade","Prioridade","Pendente_1Julgamento","SIN_PEND_1JULG","Tempo_de_Tramitação","Data_Conclusão","data_conclusão","META"]);
+      "Código_Classe","Código_Assunto_Principal","classe_judicial","Classe","ultimo_movimento","Última_Movimentação","Data_Última_Movimentação","prioridade","Prioridade","Pendente_1Julgamento","SIN_PEND_1JULG","Tempo_de_Tramitação","Data_Conclusão","data_conclusão","META","data_entrada_tarefa","Data_Entrada_Tarefa"]);
     const cols = [...new Set([...this.columnConfig.central, ...this.centralKnownColumns].map(centralColumn))].filter(c => isVisibleColumn(c) && !WORK_COLUMNS.has(c) && !fora.has(c));
     const vistos = new Set();
     const campos = cols.map(c => { let v = txt(r[c]); if (/assunto/i.test(c)) v = this.cardAssunto(v); return { key: c, col: c.replace(/_/g, " "), val: v }; }).filter(f => {
@@ -498,6 +500,22 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       repId: txt(r["ID da Procuração"]), repSemId: rep !== "Regular", repIdPh: rep === "Regular" ? "ID da procuração" : "ID (se regular)", onRepId: e => { self.cell(i, "ID da Procuração").onText(e.target.value); ok(); },
       interc: txt(r["Intercorrências"]), onInterc: e => { self.cardIntercorrencias(r, e.target.value); self.saveDeb(); }
     };
+  }
+  /* planilha: uma coluna para cada campo do cartão (+ extras da página) e, depois, os campos de dados */
+  cardPlanilha(itens, extras = []) {
+    const yn = v => truthy(v) ? "Sim" : "Não", CXN = { 1: "Ω Padrão", 2: "A Intermediário", 3: "Σ Complexo" };
+    const base = [["Processo", r => r.Processo], ["Classe", (r, f) => f.classe.nome], ["Qualificação", (r, f) => f.qualificacoes.join(" · ")], ["Assunto", (r, f) => f.assunto], ["Etiquetas", (r, f) => f.etiquetas.join(", ")],
+      ["Tarefa atual", (r, f) => f.tarefa], ["Entrada na tarefa", (r, f) => f.entrada], ["Último movimento", (r, f) => f.movimento], ["Situação", r => { try { return this.situacao(r).label; } catch (e) { return ""; } }],
+      ["Complexidade", r => CXN[Math.round(Number(r.Dificuldade))] || ""], ["Meta", (r, f) => f.metas.join(" · ")], ["Prioridade", (r, f) => f.prioridade ? txt(r.prioridade || r.Prioridade) || "Sim" : "Não"],
+      ["1º julgamento", (r, f) => f.pendente === null ? "" : f.pendente ? "Pendente" : "Não"], ["Tramitação", (r, f) => f.tempo === "—" ? "" : f.tempo],
+      ["Tempestividade", r => r.Tempestividade], ["Preparo", r => r.Preparo], ["DPU", r => yn(r["DPU (controle)"])], ["AJG", r => yn(r.AJG)], ["Impedimento / Suspeição", r => r["Impedimento / Suspeição"]],
+      ["Representação", r => r["Representação"]], ["ID da Procuração", r => r["ID da Procuração"]], ["Síntese processual", r => r["Síntese Processual"]], ["Intercorrências", r => r["Intercorrências"]],
+      ["Temas", r => this.triLista(r, "Tema").join(" · ")], ["Especificidades", r => this.triLista(r, "Especificidades").join(" · ")], ["Observações", r => r["Observações"]], ...extras];
+    const dados = [], porLinha = itens.map(({ r }) => { const f = this.cardInfo(r), cc = this.cardCampos(r), m = {}; [...cc.A, ...cc.B].forEach(c => { if (!dados.includes(c.col)) dados.push(c.col); m[c.col] = c.val; }); return { r, f, m }; });
+    const longas = new Set(["Etiquetas", "Síntese processual", "Intercorrências", "Observações", "Temas", "Especificidades", "Último movimento", "Assunto"]);
+    const cols = [...base.map(b => b[0]), ...dados];
+    return { cols: cols.map(c => ({ key: c, label: c, cls: longas.has(c) ? "quebra" : "" })),
+      linhas: porLinha.map(({ r, f, m }) => ({ r, vals: [...base.map(([c, fn]) => ({ key: c, v: txt(fn(r, f)) || "—", cls: longas.has(c) ? "quebra" : "" })), ...dados.map(c => ({ key: c, v: m[c] || "—", cls: "" }))] })) };
   }
   cardIntercorrencias(r, texto) {
     const antes = Array.isArray(r._pautaIncidents) ? r._pautaIncidents : [];
@@ -629,6 +647,11 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triCores: PAL.map(c => ({ key: c, cor: c, cls: aberto && aberto.cor === c ? "on" : "", pick: () => { if (!aberto) return; aberto.cor = c; self.saveDeb(); self.refresh(); } })),
       triConfigAberta: !!s.triConfig, triConfigSeta: s.triConfig ? "▴" : "▾", triConfigCls: s.triConfig ? "on" : "",
       triVistaPlanilha: s.triVista === "planilha", triVistaCards: s.triVista !== "planilha",
+      ...(() => { if (s.triVista !== "planilha" || !aberto) return { triPlanCols: [], triPlanLinhas: [] }; const itens = all.filter(({r}) => escOf(r) === aberto.id); itens.forEach(({r}) => { if (self.cardRegras(r)) self.saveDeb(); }); const pl = self.cardPlanilha(itens);
+        return { triPlanCols: pl.cols, triPlanLinhas: pl.linhas.map(({ r, vals }) => { const pid = procId(r.Processo); return { key: "p" + pid, vals,
+          abrirCard: () => { self.triFaixa.add(pid); self.setState({ triVista: "cards" }); setTimeout(() => { const n = document.querySelector(`[data-tri-card="${pid}"]`); n && n.scrollIntoView({ block: "start", behavior: "smooth" }); }, 60); },
+          devolver: () => { r._escaninho = ""; salvar("Processo devolvido à bandeja."); },
+          remover: () => { if (!window.confirm(`Remover ${r.Processo} da Triagem Processual? Ele continua no Acervo Central.`)) return; r._triagem = ""; r._escaninho = ""; salvar("Processo removido da triagem."); } }; }) }; })(),
       triVistaPlanCls: s.triVista === "planilha" ? "on" : "", triVistaCardsCls: s.triVista !== "planilha" ? "on" : "",
       triVerCards: () => self.setState({ triVista: "cards" }), triVerPlanilha: () => self.setState({ triVista: "planilha" }),
       triToggleConfig: () => self.setState({ triConfig: !s.triConfig }),
@@ -654,7 +677,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
         toggleInfo: () => { if (!self.triInfo) self.triInfo = new Set(); infoAberta ? self.triInfo.delete(pid) : self.triInfo.add(pid); self.refresh(); },
         clsSigla: info.classe.sigla, clsCor: info.classe.cor, clsFundo: info.classe.fundo, clsTitulo: info.classeTitulo, classe: info.classe.nome,
         qualifs: info.qualificacoes.map(q => ({ key: q, label: q })), temQualif: info.qualificacoes.length > 0,
-        assunto: info.assunto, assuntoTitulo: info.assuntoTitulo, tarefa: info.tarefa, movimento: info.movimento, movimentoTitulo: info.movimentoTitulo,
+        assunto: info.assunto, assuntoTitulo: info.assuntoTitulo, tarefa: info.tarefa, temEntrada: !!info.entrada, entrada: info.entrada, entradaTitulo: info.entradaTitulo, movimento: info.movimento, movimentoTitulo: info.movimentoTitulo,
         metas: info.metas.map(m => ({ key: m, label: m })), semMeta: !info.metas.length,
         prioCls: info.prioridade ? "on" : "off", prioTitulo: info.prioridadeTitulo,
         pendCls: info.pendente ? "on" : "off", pendTxt: info.pendente === null ? "—" : info.pendente ? "pendente" : "não", pendTitulo: info.pendenteTitulo,

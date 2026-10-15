@@ -223,10 +223,10 @@ CAPACIDADE_ANTIGA = "function capacityDate(){const total=totalCount();if(!state.
 CAPACIDADE_NOVA = "function capacityDate(){const total=totalCount();if(!state.start||total===0)return '';let remaining=total;const active=state.staff.filter(s=>s.included!==false&&s.rate>0);if(!active.length)return '';for(let d=state.start>now()?state.start:now(),i=0;i<3660;d=add(d,1),i++){"
 
 
-TRAVA = """<style>.gab-ro-in{background:#f4f6f9!important;color:#6d7b8a!important;cursor:not-allowed!important}.gab-ro-cal>.content{pointer-events:none;opacity:.72}</style>
+TRAVA = """<style>.gab-ro-in{background:#f4f6f9!important;color:#6d7b8a!important;cursor:not-allowed!important}.gab-ro-cal>.content{pointer-events:none;opacity:.72}#mkLine,#mkWarn,.sec-01{display:none!important}</style>
 <script>(function(){function trava(){['pauta','session'].forEach(function(id){var e=document.getElementById(id);if(e&&!e.readOnly){e.readOnly=true;e.tabIndex=-1;e.classList.add('gab-ro-in');e.title='Definido no repositório do gabinete (Configurações › Gabinete)';}});
 var c=document.getElementById('calendarDetails');if(c&&!c.dataset.ro){c.dataset.ro='1';c.classList.add('gab-ro-cal');var ct=c.querySelector('.content');if(ct)ct.setAttribute('inert','');var s=c.querySelector('summary small');if(s)s.textContent='Somente leitura · definido no repositório do gabinete';}}
-trava();setInterval(trava,600);})();</script>"""
+document.querySelectorAll('.section-caption h2').forEach(function(h){if(/^01 ·/.test(h.textContent.trim()))h.closest('.section-caption').classList.add('sec-01');});trava();setInterval(trava,600);})();</script>"""
 
 
 def aplicar(html: str) -> str:
