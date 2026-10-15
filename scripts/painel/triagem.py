@@ -651,6 +651,24 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     a.href = url; a.download = ("Hub_Sessoes_" + session + "_" + agora.slice(0, 10)).replace(/[^\w.\-]+/g, "_") + ".json"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1500);
     this.notify(`JSON da sessão ${session} exportado · ${rows.length} processo(s) · importável em “Importar sessões” do Controle de Pauta.`);
   }
+  /* planilha do Acervo Central: todos os campos de dados do processo (não operacionais), além das colunas configuradas */
+  centralDadosExtras(cols) {
+    const agora = Date.now(), n = this.rows.length;
+    if (!this._dadosCache || agora - this._dadosCache.t > 4000 || this._dadosCache.n !== n) {
+      const chaves = new Set([...ACERVO_COLUMNS, ...GAB_SOURCE_COLUMNS, ...this.centralKnownColumns]);
+      this.rows.forEach(r => { for (const k in (r || {})) chaves.add(k); });
+      const OPER = new Set(["Especificidades", "Síntese processual", "Síntese Processual", "Intercorrências", "Dificuldade", "COMPLEXIDADE", "Etiquetas Originais", "Etiquetas Operacionais", "Regularidade Manual"].map(canon));
+      const ordem = new Map([...ACERVO_COLUMNS, ...GAB_SOURCE_COLUMNS].map((c, k) => [c, k]));
+      const lista = [...new Set([...chaves].map(centralColumn))]
+        .filter(c => isVisibleColumn(c) && !WORK_COLUMNS.has(c) && !OPER.has(canon(c)) && this.rows.some(r => r && r[c] != null && txt(r[c]) !== ""))
+        .sort((a, b) => (ordem.has(a) ? ordem.get(a) : 1e6) - (ordem.has(b) ? ordem.get(b) : 1e6) || a.localeCompare(b, "pt-BR"));
+      this._dadosCache = { t: agora, n, lista };
+    }
+    const tem = new Set(cols.map(centralColumn));
+    // mesma coluna com grafias distintas (ex.: Classe/classe_judicial são campos distintos e permanecem; só nomes idênticos após normalização são fundidos)
+    const temK = new Set([...tem].map(c => canonKey(c)));
+    return this._dadosCache.lista.filter(c => !tem.has(c) && !temK.has(canonKey(c)));
+  }
   imprimirRelacao(itens, titulo, sub) {
     if (!itens.length) return this.notify("Não há processos nesta relação.", "warn");
     const linhas = this.relSimples(itens), pauta = linhas.length && itens.every(({ r }) => r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE");
@@ -937,6 +955,11 @@ PATCHES = [
      '<h1>${tituloIn ? esc(tituloIn) : "Pauta simplificada"+(sessionText ? " — "+esc(sessionText) : "")}</h1><div class="sub">${esc(subIn || "Seleção Prévia")} · ${rows.length} processo(s) · ordem pelo ${itemHead==="ITEM" ? "item" : "item de pauta"}</div><div class="legenda"><span class="b b-ed">ED</span> embargos de declaração <span class="b b-agint">AgInt</span> agravo interno <span class="b b-ai">AI</span> agravo de instrumento <span class="b b-meta">META</span> meta · impedimento/suspeição nas observações (⚠)</div></header><table><colgroup><col style="width:5%"><col style="width:24%"><col style="width:7%">'),
     ("<thead><tr><th>ITEM DE PAUTA</th><th>PROCESSO</th><th>ASSUNTO CNJ</th>", "<thead><tr><th>${esc(itemHead || \"ITEM DE PAUTA\")}</th><th>PROCESSO</th><th>IND.</th><th>ASSUNTO CNJ</th>"),
     ('<td class="processo">${esc(r.processo)}</td><td>${esc(r.assunto)}</td>', '<td class="processo">${esc(r.processo)}</td><td class="ind">${(r.ind || []).map(b=>`<span class="b b-${b.k}" title="${esc(b.t)}">${esc(b.s)}</span>`).join("")}</td><td>${esc(r.assunto)}</td>'),
+    # Acervo Central · planilha: todos os campos de dados do processo (não operacionais), independentemente da configuração dos cartões
+    ('const sheetDisplayCols=cols.filter(c => !["Etiquetas Originais","Seção Competente"].includes(c));',
+     'const sheetExtra=this.centralDadosExtras(cols),sheetSig=new Set(SIGILO_COLUMNS);\n    const sheetDisplayCols=[...cols,...sheetExtra].filter(c => c !== "Etiquetas Originais");'),
+    ('const sheetGroups=[{label:"PROCESSO, TEMA E ETIQUETAS",cols:leading},...cardColumnGroups.map(g => ({...g,cols:g.cols.filter(c => sheetDisplayCols.includes(c) && !leadingSet.has(c))}))]',
+     'const sheetGroups=[{label:"PROCESSO, TEMA E ETIQUETAS",cols:leading},...(cardColumnGroups.some(g => g.label==="DADOS DO PROCESSO") ? cardColumnGroups : [{label:"DADOS DO PROCESSO",cols:[]},...cardColumnGroups]).map(g => ({...g,cols:[...g.cols,...(g.label==="DADOS DO PROCESSO" ? sheetExtra.filter(c => !sheetSig.has(c)) : g.label==="SIGILO" ? sheetExtra.filter(c => sheetSig.has(c)) : [])].filter(c => sheetDisplayCols.includes(c) && !leadingSet.has(c))}))]'),
     # pauta simplificada: item provisório (ordem Assunto › Tema › Especificidade; AI e ED ao final)
     ('return {item:txt(r["Item (Pauta de Julgamento)"]) || this.rows.filter(x=>x["Seleção Prévia"]==="SELECIONADO PREVIAMENTE").sort((a,b)=>Number(a._preOrder)-Number(b._preOrder)).indexOf(r)+1,', 'return {item:this.itemDePauta(r),'),
     ('    return this.effectivePre().map(({r},idx)=>{', '    return this.cardOrdenar(this.effectivePre()).map(({r},idx)=>{'),

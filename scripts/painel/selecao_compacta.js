@@ -150,7 +150,7 @@
   let assinatura = "";
   function assinar() {
     const s = sessao(), rows = linhas();
-    return JSON.stringify([s, P().upcomingSessions(true), P().sessionDetails[s], P().names, P().selectionCalendar(), rows.map(({ r, i }) => [i, r.Processo, r.SERVIDOR, r.MINUTADO, r.Dificuldade, r.Tempestividade, r.Preparo, r["Representação"], r.MPF, r["Voto - Resultado"], r["Status de Julgamento"], r._preOrder, r.Assunto, r.Tema, r.META, r.CORRETOR, r.CORRIGIDO])]);
+    return JSON.stringify([s, P().upcomingSessions(true), P().sessionDetails[s], P().names, P().selectionCalendar(), rows.map(({ r, i }) => [i, r.Processo, r.SERVIDOR, r.MINUTADO, r.Dificuldade, r.Tempestividade, r.Preparo, r["Representação"], r.MPF, r["Voto - Resultado"], r["Status de Julgamento"], r._preOrder, r.Assunto, r.Tema, r.META, r.Pendente_1Julgamento, r.SIN_PEND_1JULG, r.Etiquetas, r.CORRETOR, r.CORRIGIDO])]);
   }
   const chaveFoco = el => { if (!el || !el.dataset) return null; for (const k of ["campo", "cap", "capd", "spIn"]) if (el.dataset[k] !== undefined) return `[data-${k.replace(/[A-Z]/g, c => "-" + c.toLowerCase())}="${CSS.escape(el.dataset[k])}"]` + (el.dataset.i !== undefined ? `[data-i="${el.dataset.i}"]` : "") + (el.dataset.name !== undefined ? `[data-name="${CSS.escape(el.dataset.name)}"]` : ""); return el.id ? "#" + CSS.escape(el.id) : null; };
   const emEdicao = () => { const a = document.activeElement; return !!(a && [cab, cap, corpo].some(x => x && x.contains(a)) && a.matches("input,textarea,select")); };
@@ -190,6 +190,23 @@
       + kp("Meta por servidor", dias && ativos.length ? porDia(total / dias / ativos.length) : "—", ativos.length + " servidor(es) ativo(s)")
       + kp("Capacidade no ritmo", cap === null ? "—" : Math.round(cap) + " · " + total, cap === null ? "defina a entrega" : cap >= total ? "folga de " + Math.round(cap - total) : "faltam " + Math.round(total - cap), cap === null ? "" : cap >= total ? "ok" : "ruim", "Ritmo habitual × dias úteis de cada servidor ativo, contra o total da sessão")
       + kp("Equilíbrio", cargas.length ? Math.min(...cargas) + "–" + Math.max(...cargas) : "—", cargas.length ? "média " + String(Math.round(cargas.reduce((a, b) => a + b, 0) / cargas.length * 10) / 10).replace(".", ",") + " por servidor" : "menor–maior carga");
+    // metas da sessão: 1º julgamento (≥ 150 pendentes), embargos de declaração e metas CNJ por tipo
+    const ALVO1 = 150, inf = r => { try { return P().cardInfo(r); } catch (e) { return {}; } };
+    const pend1 = rows.filter(x => inf(x.r).pendente === true).length, pendNI = rows.filter(x => inf(x.r).pendente === null).length;
+    const nED = rows.filter(x => { try { return P().relIndicadores(x.r).some(b => b.k === "ed"); } catch (e) { return false; } }).length;
+    const tipos = new Map(); let comMeta = 0;
+    rows.forEach(x => { let ms = []; try { ms = P().relIndicadores(x.r).filter(b => b.k === "meta").map(b => b.s); } catch (e) {} if (ms.length) comMeta++; ms.forEach(t => tipos.set(t, (tipos.get(t) || 0) + 1)); });
+    const ordTipos = [...tipos.entries()].sort((a, b) => a[0].localeCompare(b[0], "pt-BR", { numeric: true }));
+    const pct1 = Math.min(100, Math.round(pend1 / ALVO1 * 100)), ok1 = pend1 >= ALVO1;
+    const metasHtml = `<div class="sp-metas">
+        <div class="sp-meta-card m1 ${ok1 ? "ok" : "ruim"}" title="Processos com 1º julgamento pendente (Pendente_1Julgamento = Sim) nesta sessão. Meta: pelo menos ${ALVO1}.${pendNI ? `\n${pendNI} processo(s) sem a informação.` : ""}">
+          <span>Meta · 1º julgamento</span><b>${pend1}<i> / ${ALVO1}</i></b>
+          <div class="sp-meta-barra"><em style="width:${pct1}%"></em></div>
+          <small>${ok1 ? "✓ meta atingida" + (pend1 > ALVO1 ? " · +" + (pend1 - ALVO1) : "") : "faltam " + (ALVO1 - pend1)} · ${pct1}%${pendNI ? ` · ${pendNI} sem informação` : ""}</small></div>
+        <div class="sp-meta-card ed" title="Embargos de declaração na sessão (classe ou etiqueta)"><span>Embargos de declaração</span><b>${nED}</b><small>${total ? Math.round(nED / total * 100) + "% da sessão" : "—"}</small></div>
+        <div class="sp-meta-card mt" title="Processos com meta CNJ (campo META ou etiqueta de meta), por tipo"><span>Processos com meta</span><b>${comMeta}</b>
+          <div class="sp-meta-tipos">${ordTipos.length ? ordTipos.map(([t, n]) => `<em title="${n} processo(s) com ${esc(t)}">${esc(t)} · <b>${n}</b></em>`).join("") : '<small>nenhuma meta registrada</small>'}</div></div>
+      </div>`;
     const base = Math.max(total, 1);
     const dist = todos.map(n => { const a = rows.filter(x => txt(x.r.SERVIDOR) === n).length; if (!a) return ""; const w = a / base * 100; return `<i style="width:${w}%;background:${corDe(n, todos)}" title="${esc(n)}: ${a} processo(s) · ${Math.round(a / base * 100)}%">${w > 7 ? esc(n.split(/\s+/)[0]) + " " + a : w > 3 ? a : ""}</i>`; }).join("")
       + (livres > 0 ? `<i class="sp-livre" style="width:${livres / base * 100}%" title="Sem designação: ${livres}">${livres / base > .06 ? "livres " + livres : ""}</i>` : "");
@@ -198,7 +215,7 @@
     const alertas = [semServ ? `<button class="sp-al a" data-sp="serv" data-v="—">● ${semServ} sem servidor</button>` : "", irreg ? `<button class="sp-al p" data-sp="alerta">● ${irreg} com irregularidade</button>` : "", pend ? `<button class="sp-al a" data-sp="alerta">● ${pend} com verificação pendente</button>` : "", semVoto ? `<span class="sp-al a">● ${semVoto} minutado(s) sem resultado do voto</span>` : "", `<span class="sp-al o">✓ ${minut} minutado(s)</span>`].join("");
     cab.innerHTML = `<div class="sp-sessao-topo"><div><div class="sp-eyebrow">Seleção Prévia</div><h1>${esc(s)}${d ? ` <small>· julgamento ${brFull(d)}</small>` : ""}</h1></div>
         <div class="sp-abas-sessao">${sessoes.map(x => { const dd = iso((P().sessionDetails[x] || {}).date); return `<button class="sp-aba-s ${x === s ? "on" : ""}" data-sp="sessao" data-v="${esc(x)}"><b>${dd ? brFull(dd) : esc(x)}</b><span>${esc(x)} · ${P().selectionSessionRows(x).length} proc.</span></button>`; }).join("") || `<span class="sp-vazio">Nenhuma sessão futura com processos selecionados.</span>`}</div></div>
-      <div class="sp-distrib" aria-label="Distribuição dos processos por servidor"><div class="sp-kpis">${kpis}</div><div class="sp-dist">${dist || `<i class="sp-livre" style="width:100%">sem processos</i>`}</div></div>
+      <div class="sp-distrib" aria-label="Distribuição dos processos por servidor"><div class="sp-kpis">${kpis}</div>${metasHtml}<div class="sp-dist">${dist || `<i class="sp-livre" style="width:100%">sem processos</i>`}</div></div>
       <div class="sp-esteira" aria-label="Esteira do trabalho — clique numa etapa para filtrar">${esteira}</div>
       <div class="sp-alertas">${alertas}</div>`;
   }

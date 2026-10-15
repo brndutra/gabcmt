@@ -361,3 +361,22 @@ html,body{height:auto!important;min-height:0!important;overflow:visible!importan
 .sp-exp{display:inline-flex}.sp-exp .sp-btn{border-radius:0}.sp-exp .sp-btn:first-child{border-radius:9px 0 0 9px}.sp-exp .sp-btn:last-child{border-radius:0 9px 9px 0;border-left:0}
 .sp-exp .sp-btn b{font-size:9px;letter-spacing:.05em}
 .sp-alca{cursor:default;font-size:8.5px;font-weight:900;color:#b4691f}
+
+/* metas da sessão */
+.sp-metas{display:grid;grid-template-columns:1.35fr 1fr 1.65fr;gap:8px;margin:8px 0}
+.sp-meta-card{position:relative;border:1px solid var(--sp-linha);border-left:4px solid #1f3d63;border-radius:10px;background:#fff;padding:8px 12px;min-width:0}
+.sp-meta-card>span{display:block;font-size:8.5px;font-weight:900;letter-spacing:.07em;color:#33506e;text-transform:uppercase}
+.sp-meta-card>b{display:block;font-size:20px;font-weight:850;line-height:1.2;margin-top:2px;white-space:nowrap}
+.sp-meta-card>b i{font-style:normal;font-size:12px;font-weight:700;color:var(--sp-suave)}
+.sp-meta-card>small{display:block;font-size:10px;color:var(--sp-suave);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sp-meta-card.m1.ok{border-left-color:var(--sp-ok)}.sp-meta-card.m1.ok>b{color:var(--sp-ok)}
+.sp-meta-card.m1.ruim{border-left-color:#d9a441}.sp-meta-card.m1.ruim>b{color:#a5730f}
+.sp-meta-barra{height:6px;border-radius:99px;background:var(--sp-linha2);overflow:hidden;margin:4px 0 3px}
+.sp-meta-barra em{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#d9a441,#2f8a5e)}
+.sp-meta-card.m1.ok .sp-meta-barra em{background:var(--sp-ok)}
+.sp-meta-card.ed{border-left-color:#b26a00}.sp-meta-card.ed>b{color:#8a5200}
+.sp-meta-card.mt{border-left-color:#1f7a45}.sp-meta-card.mt>b{color:#17643a}
+.sp-meta-tipos{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+.sp-meta-tipos em{font-style:normal;font-size:9.5px;font-weight:800;color:#17643a;background:#e0f6e8;border:1px solid #9fd8b4;border-radius:99px;padding:1px 7px;white-space:nowrap}
+.sp-meta-tipos em b{font-weight:900;color:#0f4a2a}
+@media(max-width:680px){.sp-metas{grid-template-columns:1fr}}
