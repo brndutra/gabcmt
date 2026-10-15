@@ -344,19 +344,22 @@ ${linhas}
   const autoLigado = () => { try { return localStorage.getItem(LS_AUTO) !== "0"; } catch (e) { return true; } };
   const css = document.createElement("style");
   css.textContent = `
-#acvBtn{position:fixed;right:16px;bottom:16px;z-index:240;display:flex;align-items:center;gap:7px;border:1px solid #1f3d63;background:#1f3d63;color:#fff;border-radius:999px;padding:8px 13px;font:800 10.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.04em;cursor:pointer;box-shadow:0 4px 14px rgba(20,38,60,.25)}
+#acvBtn{position:fixed;right:16px;bottom:16px;z-index:230;display:flex;align-items:center;gap:7px;border:1px solid #1f3d63;background:#1f3d63;color:#fff;border-radius:999px;padding:8px 13px;font:800 10.5px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.04em;cursor:pointer;box-shadow:0 4px 14px rgba(20,38,60,.25)}
 #acvBtn i{width:8px;height:8px;border-radius:50%;background:#8fa9c0;display:inline-block}#acvBtn i.ok{background:#5fc27e}#acvBtn i.warn{background:#d9a441}#acvBtn i.run{background:#7fb3ff;animation:acvP 1s infinite}
 #acvBtn b{background:#d9a441;color:#33240a;border-radius:999px;padding:2px 6px;font-size:9.5px}
 @keyframes acvP{50%{opacity:.35}}
-#acvPop{position:fixed;right:16px;bottom:58px;z-index:241;width:min(370px,calc(100vw - 32px));background:#fff;color:#14263c;border:1px solid #dee3e9;border-radius:12px;box-shadow:0 18px 50px rgba(20,38,60,.28);padding:15px;font:600 11.5px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-#acvPop h4{margin:0;font-size:9.5px;letter-spacing:.09em;color:#1f3d63}#acvPop .t{font-size:15px;font-weight:850;margin:2px 0 8px}
-#acvPop .st{background:#f6f8fa;border:1px solid #edf0f3;border-radius:9px;padding:9px 10px;color:#4c5b6b;font-size:10.5px}
-#acvPop .g{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}
-#acvPop button{border:1px solid #cfd7e0;background:#fff;color:#14263c;border-radius:8px;padding:8px;font-family:inherit;font-size:10px;font-weight:800;line-height:1.2;letter-spacing:.03em;cursor:pointer}
-#acvPop button.acv-pri{background:#d9a441;border-color:#d9a441;color:#33240a}#acvPop button.acv-nav{background:#1f3d63;border-color:#1f3d63;color:#fff}
-#acvPop button:disabled{opacity:.5;cursor:wait}#acvPop label{display:flex;gap:7px;align-items:flex-start;margin-top:10px;font-size:10.5px;color:#4c5b6b;cursor:pointer}
-#acvPop .nota{margin-top:9px;font-size:9.5px;color:#7e8b99}#acvPop .x{position:absolute;right:10px;top:8px;border:0;padding:4px 7px;background:transparent;font-size:14px}
-#acvPop .full{grid-column:1/-1}#acvPop .sub{background:transparent;border-color:transparent;color:#a14d4d;font-weight:700}
+#acv-gh-slot{font:600 11.5px/1.5 Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#14263c}
+#acv-gh-slot .st{background:#f6f8fa;border:1px solid #edf0f3;border-radius:9px;padding:9px 11px;color:#4c5b6b;font-size:11px}
+#acv-gh-slot .st b{color:#14263c}
+#acv-gh-slot .g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:10px}
+#acv-gh-slot button{border:1px solid #cfd7e0;background:#fff;color:#14263c;border-radius:8px;padding:9px 8px;font-family:inherit;font-size:10px;font-weight:850;line-height:1.2;letter-spacing:.03em;cursor:pointer}
+#acv-gh-slot button:hover{border-color:#9fb3c9}
+#acv-gh-slot button.acv-pri{background:#d9a441;border-color:#d9a441;color:#33240a}#acv-gh-slot button.acv-nav{background:#1f3d63;border-color:#1f3d63;color:#fff}
+#acv-gh-slot button:disabled{opacity:.5;cursor:wait}
+#acv-gh-slot label{display:flex;gap:7px;align-items:flex-start;margin-top:10px;font-size:10.5px;color:#4c5b6b;cursor:pointer}
+#acv-gh-slot .nota{margin-top:8px;font-size:9.5px;color:#7e8b99;line-height:1.45}
+#acv-gh-slot .full{grid-column:1/-1}#acv-gh-slot .sub{background:transparent;border-color:transparent;color:#a14d4d;font-weight:750;justify-self:start;padding-left:0}
+@media(max-width:700px){#acv-gh-slot .g{grid-template-columns:1fr 1fr}}
 .acv-modal{position:fixed;inset:0;z-index:600;background:rgba(20,38,60,.55);display:flex;align-items:center;justify-content:center;padding:16px}
 .acv-box{background:#fff;color:#14263c;border-radius:12px;max-width:440px;width:100%;padding:18px 20px;box-shadow:0 18px 50px rgba(0,0,0,.3);font:13px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 .acv-box h3{margin:0 0 6px;font-size:15px}.acv-box p{margin:0 0 12px}.acv-box code{font-size:12px}
@@ -364,40 +367,38 @@ ${linhas}
 .acv-acoes{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}.acv-acoes button{padding:7px 14px;border-radius:7px;border:1px solid #c9ced4;background:#fff;cursor:pointer;font:inherit}.acv-acoes .acv-pri{background:#1f3d63;border-color:#1f3d63;color:#fff}`;
   document.head.appendChild(css);
 
-  let aberto = false;
   const btn = document.createElement("button");
-  btn.id = "acvBtn"; btn.type = "button"; btn.title = "Banco do Acervo Geral no GitHub (banco/acervo.json)";
-  btn.onclick = () => { aberto = !aberto; desenhar(); };
-  const pop = document.createElement("div"); pop.id = "acvPop"; pop.hidden = true; pop.setAttribute("role", "dialog"); pop.setAttribute("aria-label", "Banco do Acervo Geral");
+  btn.id = "acvBtn"; btn.type = "button"; btn.title = "Banco do Acervo Geral — importar, exportar e sincronizar com o GitHub";
+  btn.onclick = () => { const c = comp(); if (c) c.setState({ acervoDialog: true }); };
 
   const dataBr = iso => { try { return iso ? new Date(iso).toLocaleString("pt-BR", { dateStyle: "short", timeStyle: "short" }) : "—"; } catch (e) { return iso; } };
+  let ultimoHtml = "";
   function desenhar() {
     const estado = ST.enviando ? "run" : ST.erro ? "warn" : ST.total != null ? "ok" : "";
     btn.innerHTML = `<i class="${estado}"></i>ACERVO · GITHUB${ST.pendentes ? ` <b>${ST.pendentes}</b>` : ""}`;
-    pop.hidden = !aberto;
-    if (!aberto) return;
+    const slot = document.getElementById("acv-gh-slot");
+    if (!slot) return;
     const c = comp(), n = c && Array.isArray(c.rows) ? c.rows.length : 0;
     const situacao = ST.erro ? `Sem leitura do GitHub: ${esc(ST.erro)}.` :
       ST.total == null ? "Lendo banco/acervo.json…" : `<b>${ST.total}</b> processo(s) em banco/acervo.json · versão ${esc(dataBr(ST.versao))}`;
-    pop.innerHTML = `<button class="x" type="button" aria-label="Fechar" data-a="fechar">×</button>
-      <h4>BANCO DO ACERVO GERAL</h4><div class="t">${GH.dono}/${GH.repo} · ${GH.pasta}/${GH.arquivo}</div>
-      <div class="st">${situacao}<br>${n} processo(s) neste painel${ST.pendentes ? ` · <b>${ST.pendentes} alterado(s) desde o último envio</b>` : ""}${ST.ultimoEnvio ? ` · último envio ${esc(dataBr(ST.ultimoEnvio))}` : ""}</div>
+    const html = `<div class="st">${situacao}<br>${n} processo(s) neste painel${ST.pendentes ? ` · <b>${ST.pendentes} alterado(s) desde o último envio</b>` : ""}${ST.ultimoEnvio ? ` · último envio ${esc(dataBr(ST.ultimoEnvio))}` : ""}</div>
       <div class="g">
-        <button type="button" data-a="puxar">ATUALIZAR DO GITHUB</button>
-        <button type="button" class="acv-nav" data-a="enviar" ${ST.enviando ? "disabled" : ""}>${ST.enviando ? "ENCAMINHANDO…" : "ENCAMINHAR AO GITHUB"}</button>
-        <button type="button" class="acv-pri full" data-a="importar">IMPORTAR ARQUIVO (.HTML OU .JSON)</button>
-        <button type="button" data-a="json">EXPORTAR ACERVO.JSON</button>
-        <button type="button" data-a="html">EXPORTAR ACERVO.HTML</button>
-        <button type="button" class="sub full" data-a="substituir" ${ST.enviando ? "disabled" : ""}>Substituir o banco pelo acervo deste painel…</button>
+        <button type="button" data-a="puxar" title="Trazer para este painel o que estiver mais recente no GitHub">⇣ ATUALIZAR DO GITHUB</button>
+        <button type="button" class="acv-nav" data-a="enviar" ${ST.enviando ? "disabled" : ""} title="Gravar no GitHub o que mudou neste painel">${ST.enviando ? "ENCAMINHANDO…" : "⇡ ENCAMINHAR AO GITHUB"}</button>
+        <button type="button" class="acv-pri" data-a="importar" title="Importar acervo.html ou acervo.json exportado por este painel">⇧ IMPORTAR .HTML / .JSON</button>
+        <button type="button" data-a="json">⇩ EXPORTAR ACERVO.JSON</button>
+        <button type="button" data-a="html">⇩ EXPORTAR ACERVO.HTML</button>
+        <button type="button" class="sub" data-a="substituir" ${ST.enviando ? "disabled" : ""}>Substituir o banco…</button>
       </div>
       <label><input type="checkbox" data-a="auto" ${autoLigado() ? "checked" : ""}> Encaminhar ao GitHub após cada importação (planilhas Gab A, PJe 2G ou arquivo do banco)</label>
       <div class="nota">Mescla por processo: o banco recebe o que é novo ou mais recente e nada apaga; os controles de trabalho do painel não saem daqui. ${esc(SANEAMENTO)}</div>`;
+    if (slot.dataset.pronto === "1" && html === ultimoHtml) return;
+    slot.innerHTML = html; slot.dataset.pronto = "1"; ultimoHtml = html;
   }
-  pop.addEventListener("click", async e => {
-    const a = e.target.closest("[data-a]"); if (!a) return;
+  document.addEventListener("click", e => {
+    const a = e.target.closest && e.target.closest("#acv-gh-slot [data-a]"); if (!a) return;
     const acao = a.dataset.a;
-    if (acao === "fechar") { aberto = false; desenhar(); }
-    else if (acao === "puxar") puxar(false);
+    if (acao === "puxar") puxar(false);
     else if (acao === "enviar") encaminhar({ motivo: "" });
     else if (acao === "importar") escolherArquivo();
     else if (acao === "json") { try { baixar("acervo.json", serializar(docLocal()), "application/json"); } catch (er) { avisar(er.message, "err"); } }
@@ -406,12 +407,14 @@ ${linhas}
       if (window.confirm("Substituir banco/acervo.json pelo acervo deste painel?\n\nProcessos que estão no GitHub mas não neste painel serão retirados do banco. Use só quando este painel tiver o acervo completo.")) encaminhar({ substituir: true, motivo: "" });
     }
   });
-  pop.addEventListener("change", e => { if (e.target.dataset.a === "auto") { try { localStorage.setItem(LS_AUTO, e.target.checked ? "1" : "0"); } catch (er) {} } });
-  document.addEventListener("keydown", e => { if (e.key === "Escape" && aberto) { aberto = false; desenhar(); } });
+  document.addEventListener("change", e => { if (e.target.matches && e.target.matches('#acv-gh-slot [data-a="auto"]')) { try { localStorage.setItem(LS_AUTO, e.target.checked ? "1" : "0"); } catch (er) {} } });
+  document.addEventListener("keydown", e => { if (e.key !== "Escape" || document.querySelector(".acv-modal")) return; const c = comp(); if (c && c.state && c.state.acervoDialog && !c.state.clearDialog) c.setState({ acervoDialog: false }); });
+  /* o espaço do GitHub nasce e some com o diálogo: redesenha quando ele aparece */
+  new MutationObserver(() => { const slot = document.getElementById("acv-gh-slot"); if (slot && slot.dataset.pronto !== "1") desenhar(); }).observe(document.documentElement, { childList: true, subtree: true });
 
   function montar() {
     if (!document.body) return setTimeout(montar, 50);
-    document.body.appendChild(btn); document.body.appendChild(pop); desenhar();
+    document.body.appendChild(btn); desenhar();
   }
   montar();
 

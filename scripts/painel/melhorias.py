@@ -189,6 +189,7 @@ DIALOGO = [
 ]
 
 import triagem  # noqa: E402  (aba Triagem Processual e escaninhos)
+import banco_dialogo  # noqa: E402  (diálogo Banco do Acervo Geral)
 
 AJUSTES = [("desempenho", DESEMPENHO), ("desempenho-tela", DESEMPENHO_TELA), ("cards", CARDS), ("abertura", ABERTURA), ("html-plano", HTML_PLANO), ("dialogo", DIALOGO), ("triagem", triagem.PATCHES)]
 
@@ -225,6 +226,9 @@ def ajustar_planejamento(template: str) -> str:
 def aplicar(template: str) -> str:
     template = reorganizar_cards(template)
     template = ajustar_planejamento(template)
+    template = banco_dialogo.aplicar(template)
+    ancora = "    .central-stats-stack{display:grid;gap:14px;min-width:0}"
+    template = template.replace(ancora, banco_dialogo.CSS + ancora, 1)
     for grupo, trocas in AJUSTES:
         for i, (antigo, novo) in enumerate(trocas, 1):
             n = template.count(antigo)
