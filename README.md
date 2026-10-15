@@ -45,7 +45,13 @@ No repositório, o mesmo arquivo exportado entra por `python3 scripts/construir.
 
 **Saneamento** (o repositório é público): campos de celular, telefone, e-mail e CPF são removidos — no painel e de novo no `importar.py`. Os processos **sigilosos entram** no banco (com `Consta_Acervo_Sigiloso` e `Nível_Sigilo`), porque a planilha Gab A - Sigilosos já mascara as informações sigilosas com `###`.
 
-Para atualizar o painel com uma versão nova baixada do app: `python3 scripts/painel/montar.py Painel_Central_….html` (reinjeta `scripts/painel/acervo-github.js` e regrava `painel.html`).
+**Montagem do painel.** `painel.html` é gerado por `python3 scripts/painel/montar.py` a partir da versão baixada do app (guardada em `scripts/painel/original/painel-central.html`; para uma versão nova, passe o arquivo baixado como argumento). A montagem:
+
+- grava o painel **desempacotado** (React, runtime, planilhas e fontes embutidos direto): abre sem a etapa de descompactação e sem o logotipo gigante “Unpacking…”, com uma tela de carregamento discreta até o banco local terminar de carregar;
+- aplica os ajustes de `scripts/painel/melhorias.py`: funções de normalização de colunas memorizadas e listas ocultas desenhadas só quando abertas (com 3.000 processos, a abertura caiu de 15–19 s para cerca de 3,5 s); na tela Acervo Central, Assuntos · Classes processuais · Tarefas atuais na primeira linha, em larguras iguais, e **Antiguidade do acervo** à esquerda de **Processos por seção**, na mesma altura fixa; e cards de processo que, abertos, mostram só os **controles de trabalho da planilha da Seleção Prévia**;
+- injeta `scripts/painel/acervo-github.js` (banco do acervo no GitHub).
+
+Cada ajuste é uma troca exata no código do painel: se uma versão nova do app mudar o trecho, a montagem para e diz qual ajuste revisar, em vez de gerar um painel quebrado.
 
 ## Catálogo de acórdãos do TRF3
 
