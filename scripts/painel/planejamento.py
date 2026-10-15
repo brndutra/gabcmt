@@ -249,5 +249,8 @@ def aplicar(html: str) -> str:
     troca(READHOST_ANTIGO, READHOST_NOVO, "readHost")
     troca(UPDATE_ANTIGO, UPDATE_NOVO, "update")
     troca(CAPACIDADE_ANTIGA, CAPACIDADE_NOVA, "capacidade")
+    # "+ Nova sessão" e "Configurações" já existem na própria página da Seleção Prévia
+    troca('<button id="newSession">+ Nova sessão</button><button id="settings">Configurações</button>', '', "botões")
+    troca("$('newSession').onclick=()=>root.renderVals().newSession();\n$('settings').onclick=()=>root.setState({dialog:true});\n", '', "botões-js")
     troca("</head>", CSS + "</head>", "css")
     return html

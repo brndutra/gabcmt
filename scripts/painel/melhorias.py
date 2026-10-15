@@ -170,7 +170,25 @@ DESEMPENHO_TELA = [
      '<sc-for list="{{ specificClasses }}" as="g"><details open="{{ g.open }}" sc-camel-on-toggle="{{ g.toggle }}" style="border:1px solid #dce4ed;border-radius:9px;margin-bottom:7px;overflow:hidden">'),
 ]
 
-AJUSTES = [("desempenho", DESEMPENHO), ("desempenho-tela", DESEMPENHO_TELA), ("cards", CARDS), ("abertura", ABERTURA), ("html-plano", HTML_PLANO)]
+# ---------------------------------------------------------------------------------------------------------------
+# 7. Diálogo Configurações Globais: barra com título e botão Fechar; Esc e clique fora também fecham.
+# ---------------------------------------------------------------------------------------------------------------
+DIALOGO = [
+    ('<div role="dialog" aria-modal="true" aria-label="Configurações Globais" style="position:fixed;inset:0;z-index:500;background:rgba(20,38,60,.55);display:grid;place-items:center;padding:16px"><iframe id="global-config-frame" title="Configurações Globais" style="width:min(1560px,98vw);height:95vh;border:1px solid #dce4ec;border-radius:14px;background:#fff;box-shadow:0 12px 60px #14263c45"></iframe></div>',
+     '<div role="dialog" aria-modal="true" aria-label="Configurações Globais" sc-camel-on-click="{{ closeDialogBackdrop }}" style="position:fixed;inset:0;z-index:500;background:rgba(20,38,60,.55);display:grid;place-items:center;padding:16px">'
+     '<div style="display:flex;flex-direction:column;width:min(1560px,98vw);height:95vh;border:1px solid #dce4ec;border-radius:14px;background:#fff;box-shadow:0 12px 60px #14263c45;overflow:hidden">'
+     '<div style="flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 10px 8px 16px;background:#1f3d63;color:#fff">'
+     '<div style="font-size:12px;font-weight:850;letter-spacing:.06em">CONFIGURAÇÕES GLOBAIS</div>'
+     '<button sc-camel-on-click="{{ closeDialog }}" title="Fechar (Esc)" aria-label="Fechar configurações" style="display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.35);border-radius:8px;background:rgba(255,255,255,.1);color:#fff;padding:6px 12px;font-size:11px;font-weight:850;letter-spacing:.04em;cursor:pointer">FECHAR <span aria-hidden="true" style="font-size:14px;line-height:1">×</span></button>'
+     '</div>'
+     '<iframe id="global-config-frame" title="Configurações Globais" sc-camel-on-load="{{ dialogFrameLoad }}" style="flex:1 1 auto;width:100%;min-height:0;border:0;background:#fff"></iframe></div></div>'),
+    ("openDialog: () => self.setState({ dialog: true }), closeDialog: () => self.setState({ dialog: false }),",
+     "openDialog: () => self.setState({ dialog: true }), closeDialog: () => self.setState({ dialog: false }), closeDialogBackdrop: e => { if (e && e.target === e.currentTarget) self.setState({ dialog: false }); }, dialogFrameLoad: e => { try { const w = e.target.contentWindow; if (w && !w.__escFecha) { w.__escFecha = true; w.addEventListener('keydown', ev => { if (ev.key === 'Escape') self.setState({ dialog: false }); }); } } catch (_) {} },"),
+    ("componentDidMount() { window.__painelCentralComponent = this; Promise",
+     "componentDidMount() { window.__painelCentralComponent = this; if (!this.__escFecha) { this.__escFecha = e => { if (e.key === \"Escape\" && this.state.dialog) this.setState({ dialog: false }); }; window.addEventListener(\"keydown\", this.__escFecha); } Promise"),
+]
+
+AJUSTES = [("desempenho", DESEMPENHO), ("desempenho-tela", DESEMPENHO_TELA), ("cards", CARDS), ("abertura", ABERTURA), ("html-plano", HTML_PLANO), ("dialogo", DIALOGO)]
 
 
 # ---------------------------------------------------------------------------------------------------------------
