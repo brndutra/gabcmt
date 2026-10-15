@@ -84,6 +84,7 @@
       .banda{display:flex;align-items:baseline;gap:.4em .9em;flex-wrap:nowrap;padding:0 .2em .3em;border-bottom:1.5px solid #1f3d63;margin-bottom:.3em;overflow:hidden;background:none;color:#1d2733}
       .banda .tit{display:flex;align-items:baseline;gap:.6em;min-width:0}
       .banda .sobre{font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:#d9a441;font-weight:800;white-space:nowrap}
+      .banda .logo{height:1.5em;width:auto;flex:0 0 auto;align-self:center;margin-right:-.35em;filter:brightness(0) saturate(100%) invert(19%) sepia(33%) saturate(1478%) hue-rotate(181deg) brightness(93%) contrast(92%);-webkit-print-color-adjust:exact;print-color-adjust:exact}
       .banda h1{font-size:1.18em;line-height:1.15;font-weight:800;white-space:nowrap;color:#1f3d63;letter-spacing:-.005em}
       .banda .meta{margin-left:auto;text-align:right;font-size:.76em;color:#c9d6e4;white-space:nowrap}
       .banda .meta b{color:#fff}
@@ -124,7 +125,7 @@
       <div class="barra"><button onclick="window.print()">IMPRIMIR / SALVAR COMO PDF</button><span id="status">diagramando…</span></div>
       <div id="paginas"></div>
       <div id="fonte">
-        <div class="banda"><h1>${esc(itemHead === "ITEM" ? titulo : "Pauta · " + titulo)}</h1><div class="kpis">${resumo}</div></div>
+        <div class="banda"><img class="logo" src="${esc(window.__LOGO_GABINETE || "https://i.ibb.co/5XS9CWBR/S-mbolo-geom-trico-cinza-em-fundo-transparente.png")}" alt="" onerror="this.remove()"><h1>${esc(itemHead === "ITEM" ? titulo : "Pauta · " + titulo)}</h1><div class="kpis">${resumo}</div></div>
 <div class="legenda"></div>
         <div class="corrente"><b>${esc(titulo)}</b><span class="pn"></span></div>
         ${colhead}
