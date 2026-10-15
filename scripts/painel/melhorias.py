@@ -173,8 +173,38 @@ DESEMPENHO_TELA = [
 AJUSTES = [("desempenho", DESEMPENHO), ("desempenho-tela", DESEMPENHO_TELA), ("cards", CARDS), ("abertura", ABERTURA), ("html-plano", HTML_PLANO)]
 
 
+# ---------------------------------------------------------------------------------------------------------------
+# 6. Seleção Prévia › Planejamento da sessão (01 · Marcos em uma linha; 02 · simulador com metas dinâmicas).
+#    A página de planejamento é texto dentro da página da Seleção Prévia, que vai compactada dentro do painel.
+# ---------------------------------------------------------------------------------------------------------------
+def ajustar_planejamento(template: str) -> str:
+    import base64, gzip, json
+    import planejamento
+    marca = 'const b=Uint8Array.from(atob("'
+    i = template.find(marca)
+    if i < 0 or template.find(marca, i + 1) >= 0 and "__PRE_PANEL_HTML" not in template[i:i + 4000000]:
+        raise SystemExit("melhorias/planejamento: página da Seleção Prévia não encontrada.")
+    ini = i + len(marca)
+    fim = template.index('"', ini)
+    pre = gzip.decompress(base64.b64decode(template[ini:fim])).decode("utf-8")
+    if "window.__PRE_PANEL_HTML" not in template[fim:fim + 400]:
+        raise SystemExit("melhorias/planejamento: o primeiro bloco compactado não é a Seleção Prévia.")
+    alvo = pre.find("Planejamento da sessão · Marcos e Simulador")
+    k = pre.rfind('const source="', 0, alvo)
+    if alvo < 0 or k < 0:
+        raise SystemExit("melhorias/planejamento: página de planejamento não encontrada na Seleção Prévia.")
+    k += len("const source=")
+    texto, fim_txt = json.JSONDecoder().raw_decode(pre, k)
+    novo = planejamento.aplicar(texto)
+    cod = json.dumps(novo, ensure_ascii=False).replace("</", "<\\/")
+    pre = pre[:k] + cod + pre[fim_txt:]
+    b64 = base64.b64encode(gzip.compress(pre.encode("utf-8"), 9)).decode()
+    return template[:ini] + b64 + template[fim:]
+
+
 def aplicar(template: str) -> str:
     template = reorganizar_cards(template)
+    template = ajustar_planejamento(template)
     for grupo, trocas in AJUSTES:
         for i, (antigo, novo) in enumerate(trocas, 1):
             n = template.count(antigo)
