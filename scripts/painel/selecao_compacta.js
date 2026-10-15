@@ -264,19 +264,17 @@
       <div class="sp-faixa"><button class="sp-faixa-barra" data-sp="faixa" data-i="${i}" aria-expanded="${aberta}"><span>${aberta ? "▾" : "▸"}</span><span class="rot">TRIAGEM DO PROCESSO</span><span class="sp-cx-mini" style="background:${c ? CX[c - 1][2] : "#c3ccd6"}">${c ? CX[c - 1][0] : "·"}</span><span class="res">${esc(resumo)}</span></button>
         ${aberta ? `<div class="sp-faixa-corpo">
           <div class="sp-fx-l1"><div class="sp-ind-bloco"><span class="sp-fx-rot">COMPLEXIDADE · INDICADORES</span><label class="sp-cx-sel"><i style="background:${c ? CX[c - 1][2] : "#c3ccd6"}">${c ? CX[c - 1][0] : "·"}</i><select data-campo="Dificuldade" data-i="${i}" aria-label="Complexidade"><option value="" ${c ? "" : "selected"}>Complexidade…</option>${CX.map(([s1, n], k) => `<option value="${k + 1}" ${c === k + 1 ? "selected" : ""}>${s1} · ${n}</option>`).join("")}</select></label><div class="sp-ind-chips">${ind}</div></div>
-            <div class="sp-fx-sint"><span class="sp-fx-rot">SÍNTESE PROCESSUAL</span><textarea data-campo="Síntese Processual" data-i="${i}" placeholder="Resumo do caso: pedido, sentença, recurso e o ponto controvertido…">${esc(r["Síntese Processual"] || "")}</textarea></div></div>
+            <div class="sp-ctl"><span class="sp-fx-rot">TEMPESTIVIDADE</span>${sel("Tempestividade", i, r.Tempestividade, OPC.Tempestividade)}</div>
+            <div class="sp-ctl"><span class="sp-fx-rot">PREPARO</span>${sel("Preparo", i, r.Preparo, OPC.Preparo, yes(r["DPU (controle)"]) ? "disabled" : "")}<span class="sp-ctl-checks"><label><input type="checkbox" data-fin="DPU (controle)" data-i="${i}" ${yes(r["DPU (controle)"]) ? "checked" : ""}> DPU</label><label><input type="checkbox" data-fin="AJG" data-i="${i}" ${yes(r.AJG) ? "checked" : ""} ${yes(r["DPU (controle)"]) ? "disabled" : ""}> AJG</label></span></div>
+            <div class="sp-ctl"><span class="sp-fx-rot">IMPEDIMENTO / SUSPEIÇÃO</span><label class="sp-ctl-1"><input type="checkbox" data-imp="toggle" data-i="${i}" ${r._restricaoTipo ? "checked" : ""}> ${esc(r._restricaoTipo || "Nenhum")}</label>${r._restricaoTipo ? `<span class="sp-ctl-par"><select data-imp="tipo" data-i="${i}">${["Impedimento", "Suspeição"].map(o => `<option ${o === r._restricaoTipo ? "selected" : ""}>${o}</option>`).join("")}</select><input type="text" data-imp="nome" data-i="${i}" value="${esc(r._magistradoRestricao || "")}" placeholder="Magistrado"></span>` : ""}</div>
+            <div class="sp-ctl"><span class="sp-fx-rot">REPRESENTAÇÃO · ID</span>${sel("Representação", i, r["Representação"], OPC["Representação"])}<input type="text" data-campo="ID da Procuração" data-i="${i}" value="${esc(r["ID da Procuração"] || "")}" placeholder="${r["Representação"] === "Regular" ? "ID da procuração" : "ID (se regular)"}" ${r["Representação"] === "Regular" ? "" : "disabled"}></div>
+            <div class="sp-ctl"><span class="sp-fx-rot">MPF · ID DO PARECER</span>${sel("MPF", i, r.MPF, OPC.MPF)}<input type="text" data-campo="ID do Parecer MPF" data-i="${i}" value="${esc(r["ID do Parecer MPF"] || "")}" placeholder="${r.MPF === "Com Parecer" ? "ID do parecer" : "ID (se com parecer)"}" ${r.MPF === "Com Parecer" ? "" : "disabled"}></div>
+          </div>
+          <div class="sp-fx-l1b"><div class="sp-fx-sint"><span class="sp-fx-rot">SÍNTESE PROCESSUAL</span><textarea data-campo="Síntese Processual" data-i="${i}" placeholder="Resumo do caso: pedido, sentença, recurso e o ponto controvertido…">${esc(r["Síntese Processual"] || "")}</textarea></div><div class="sp-fx-sint"><span class="sp-fx-rot">INTERCORRÊNCIAS · UMA POR LINHA</span><textarea data-campo="Intercorrências" data-i="${i}" placeholder="Ex.: falta procuração; mídia ilegível…">${esc(r.Intercorrências || "")}</textarea></div></div>
           <div class="sp-fx-l2">
             <div class="sp-fx-caixa etq"><span class="sp-fx-rot">TODAS AS ETIQUETAS · ${etqs.length} · use T / E / O</span><div class="sp-fx-chips">${etqs.map(l => `<span class="sp-chip-e"><span>${esc(l)}</span><button data-sp="etq" data-i="${i}" data-c="Tema" data-v="${esc(l)}" title="Encaminhar para TEMAS">T</button><button data-sp="etq" data-i="${i}" data-c="Especificidades" data-v="${esc(l)}" title="Encaminhar para ESPECIFICIDADES">E</button><button data-sp="etq" data-i="${i}" data-c="Observações" data-v="${esc(l)}" title="Encaminhar para OBSERVAÇÕES">O</button></span>`).join("") || "<em>Sem etiquetas atuais.</em>"}</div></div>
             ${caixa("tema", "TEMAS", temas, "Tema", "+ novo tema")}${caixa("esp", "ESPECIFICIDADES", esps, "Especificidades", "+ nova especificidade")}
             <div class="sp-fx-caixa obs"><span class="sp-fx-rot">OBSERVAÇÕES · ${obs.split("\n").filter(l => l.trim()).length}</span><textarea data-campo="Observações" data-i="${i}" placeholder="Etiquetas encaminhadas entram como tópicos “• …”; escreva livremente.">${esc(obs)}</textarea></div>
-          </div>
-          <div class="sp-fx-ctrl">
-            ${ctrl("TEMPESTIVIDADE", sel("Tempestividade", i, r.Tempestividade, OPC.Tempestividade))}
-            ${ctrl("PREPARO", sel("Preparo", i, r.Preparo, OPC.Preparo) + `<div class="sp-checks" style="margin-top:6px"><label class="sp-check"><input type="checkbox" data-fin="DPU (controle)" data-i="${i}" ${yes(r["DPU (controle)"]) ? "checked" : ""}> DPU</label><label class="sp-check"><input type="checkbox" data-fin="AJG" data-i="${i}" ${yes(r.AJG) ? "checked" : ""}> AJG</label></div>`)}
-            ${ctrl("IMPEDIMENTO / SUSPEIÇÃO", `<div class="sp-ro-txt">${esc(txt(r["Impedimento / Suspeição"]) || "Nenhum registrado")}</div>`)}
-            ${ctrl("REPRESENTAÇÃO", sel("Representação", i, r["Representação"], OPC["Representação"]) + (r["Representação"] === "Regular" ? `<div style="margin-top:6px">${inp("ID da Procuração", i, r["ID da Procuração"], "ID da procuração")}</div>` : ""))}
-            ${ctrl("MPF", sel("MPF", i, r.MPF, OPC.MPF) + (r.MPF === "Com Parecer" ? `<div style="margin-top:6px">${inp("ID do Parecer MPF", i, r["ID do Parecer MPF"], "ID do parecer")}</div>` : ""))}
-            ${ctrl("INTERCORRÊNCIAS (UMA POR LINHA)", area("Intercorrências", i, r.Intercorrências))}
           </div>
         </div>` : ""}
       </div>
@@ -398,6 +396,7 @@
     else if (campoNome === "__status") { if (!PC().setStatus(h, r, v, r["Sessão Destino"])) return render(); }
     else if (campoNome === "Intercorrências") { PC().setIncidents ? PC().setIncidents(r, v) : p.cardIntercorrencias(r, v); }
     else if (campoNome === "Dificuldade" && !v) { r.Dificuldade = ""; }
+    else if (campoNome === "Preparo") { try { p.financialChange(r, "Preparo", v); p.recompute(r); } catch (er) { p.preCommit(i, campoNome, v); } }
     else p.preCommit(i, campoNome, v);
     salvar();
   }
@@ -480,6 +479,7 @@
       return; }
     if (t.dataset.selrow !== undefined) { const i = +t.dataset.selrow; t.checked ? st.sel.add(i) : st.sel.delete(i); render(); return; }
     if (t.dataset.rev) { P().preReviewChange(+t.dataset.i, t.dataset.rev, t.checked); render(); return; }
+    if (t.dataset.imp) { const p = P(), i = +t.dataset.i, c = p.cell(i, "Impedimento / Suspeição"); if (t.dataset.imp === "toggle") c.onSelect(t.checked ? "Impedimento" : ""); else if (t.dataset.imp === "tipo") c.onSelect(t.value); else c.onManual(t.value); try { p.recompute(p.rows[i]); } catch (er) {} salvar(); return; }
     if (t.dataset.fin) { try { P().financialChange(P().rows[+t.dataset.i], t.dataset.fin, t.checked); } catch (er) {} salvar(); return; }
     if (t.dataset.add !== undefined) return;
     if (t.dataset.chk) { P().preCommit(+t.dataset.i, t.dataset.chk, t.checked ? "Sim" : ""); salvar(); return; }

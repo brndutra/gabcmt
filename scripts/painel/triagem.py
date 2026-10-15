@@ -106,7 +106,17 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-faixa-barra .res{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#6d6046}
     .tri-cx-mini{flex:0 0 auto;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:10.5px;font-weight:800;font-family:"Times New Roman",Georgia,serif}
     .tri-faixa-corpo{display:grid;gap:10px;padding:10px 12px 12px;border-top:1px solid #efe7d2}
-    .tri-fx-l1{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:stretch}
+    .tri-fx-l1{display:grid;grid-template-columns:minmax(230px,280px) repeat(4,minmax(0,1fr));gap:8px;align-items:start;background:#fff;border:1px solid #e3e7ec;border-radius:10px;padding:9px 10px}
+    .tri-fx-l1 .tri-ind{max-width:none}
+    .tri-ctl{display:flex;flex-direction:column;gap:5px;min-width:0;border-left:1px solid #eef1f4;padding-left:8px}
+    .tri-ctl select,.tri-ctl input:not([type=checkbox]){width:100%;min-width:0;border:1px solid #d6e0ea;border-radius:8px;background:#fff;padding:5px 7px;font:inherit;font-size:11px;color:#14263c;outline:none}
+    .tri-ctl select:disabled,.tri-ctl input:disabled{background:#f4f6f9;color:#98a4b0}
+    .tri-ctl-checks{display:flex;gap:10px}.tri-ctl label{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:750;color:#3d4c5c;cursor:pointer}
+    .tri-ctl input[type=checkbox]{accent-color:#1f3d63;margin:0}
+    .tri-ctl-par{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:4px}
+    .tri-fx-l1b{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:10px}
+    .tri-fx-sint{display:flex;flex-direction:column;min-width:0}
+    .tri-fx-l1b .tri-fx-sintese{min-height:70px}
     .tri-fx-l2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.15fr);gap:10px}
     .tri-fx-rot{display:block;font-size:8.5px;font-weight:900;letter-spacing:.08em;color:#7e8b99;margin-bottom:5px}
     .tri-cx{display:grid;gap:4px}
@@ -138,13 +148,18 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-fx-ctrl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#e7eaee;border:1px solid #e3e7ec;border-radius:10px;overflow:hidden}
     .tri-fx-ctrl>div{background:#fff;min-width:0}
     .tri-fx-ctrl .cab{color:#6d7b8a;font-size:9px;font-weight:800;letter-spacing:.04em;padding:5px 8px}
-    @media(max-width:1100px){.tri-fx-l1,.tri-fx-l2{grid-template-columns:minmax(0,1fr)}}
+    @media(max-width:1100px){.tri-fx-l1{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-fx-l1b,.tri-fx-l2{grid-template-columns:minmax(0,1fr)}}
     /* bandeja integrada ao móvel de escaninhos */
     .tri-int-corpo{display:grid;grid-template-columns:300px minmax(0,1fr);align-items:stretch;min-width:0}
     .tri-int .tri-bandeja{position:static;border:0;border-right:1px solid #e3e7ec;border-radius:0;box-shadow:none;display:flex;flex-direction:column;min-width:0;background:#fbfcfd}
     .tri-int .tri-band-topo{background:transparent}
     .tri-int .tri-band-lista{max-height:560px;min-height:260px;flex:1}
     .tri-int-nichos{min-width:0}
+    .tri-band-vazia-rot{display:none}
+    .tri-int-corpo.semband{grid-template-columns:40px minmax(0,1fr)}
+    .tri-bandeja.semband{background:#f4f6f9;cursor:not-allowed;min-height:0;overflow:hidden}
+    .tri-bandeja.semband>*:not(.tri-band-vazia-rot){display:none!important}
+    .tri-bandeja.semband .tri-band-vazia-rot{display:flex;align-items:center;justify-content:center;height:auto;min-height:150px;flex:1;writing-mode:vertical-rl;transform:rotate(180deg);font-size:9.5px;font-weight:900;letter-spacing:.14em;color:#a4afba}
     .tri-topo-num{font-size:10.5px;color:#6d7b8a}.tri-topo-num b{color:#14263c}
     .tri-int .tri-aberto{margin:0 14px 14px}
     .tri-int .tri-aberto{border-top:1px solid #d6e0ea}
@@ -216,8 +231,8 @@ MARKUP = """
               <span class="tri-topo-num"><b>{{ triBandejaCount }}</b> na bandeja · <b>{{ triInEsc }}</b> em {{ triEscCount }} escaninho(s)</span>
               <span style="display:flex;gap:6px;flex-wrap:wrap;margin-left:auto"><sc-for list="{{ triFiltros }}" as="f"><button class="tri-filtro {{ f.cls }}" sc-camel-on-click="{{ f.pick }}">{{ f.label }}</button></sc-for></span>
             </div>
-            <div class="tri-int-corpo">
-            <aside class="tri-bandeja" aria-label="Bandeja da triagem">
+            <div class="tri-int-corpo {{ triCorpoCls }}">
+            <aside class="tri-bandeja {{ triCorpoCls }}" aria-label="Bandeja da triagem" aria-disabled="{{ triBandejaOff }}"><div class="tri-band-vazia-rot" title="Bandeja vazia: encaminhe processos do Acervo Central (seletor de sessão → Triagem Processual)">BANDEJA VAZIA</div>
               <div class="tri-band-topo">
                 <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:12.5px;font-weight:900;letter-spacing:.06em;color:#14263c">BANDEJA DA TRIAGEM</span><span style="font-size:10px;font-weight:800;color:#6d7b8a">{{ triBandejaCount }} na bandeja</span></div>
                 <input value="{{ triSearch }}" sc-camel-on-input="{{ onTriSearch }}" placeholder="Buscar processo, classe, assunto, tarefa…" aria-label="Buscar na bandeja">
@@ -329,7 +344,14 @@ MARKUP = """
                                   <span class="tri-ind-chip tempo" title="{{ g.tempoTitulo }}">⏱ {{ g.tempo }}</span>
                                 </div>
                               </div>
-                              <div style="display:flex;flex-direction:column;min-width:0"><span class="tri-fx-rot">SÍNTESE PROCESSUAL</span><textarea class="tri-fx-sintese" value="{{ g.sintese }}" sc-camel-on-input="{{ g.onSintese }}" placeholder="Resumo do caso: pedido, sentença, recurso e o ponto controvertido…" aria-label="Síntese processual"></textarea></div>
+                              <div class="tri-ctl"><span class="tri-fx-rot">TEMPESTIVIDADE</span><sc-raw-select value="{{ g.tempVal }}" sc-camel-on-change="{{ g.onTemp }}" aria-label="Tempestividade"><sc-for list="{{ g.tempOpts }}" as="o"><option value="{{ o.v }}">{{ o.l }}</option></sc-for></sc-raw-select></div>
+                              <div class="tri-ctl"><span class="tri-fx-rot">PREPARO</span><sc-raw-select value="{{ g.prepVal }}" sc-camel-on-change="{{ g.onPrep }}" disabled="{{ g.dpu }}" aria-label="Preparo"><sc-for list="{{ g.prepOpts }}" as="o"><option value="{{ o.v }}">{{ o.l }}</option></sc-for></sc-raw-select><span class="tri-ctl-checks"><label><input type="checkbox" checked="{{ g.dpu }}" sc-camel-on-change="{{ g.onDpu }}"> DPU</label><label><input type="checkbox" checked="{{ g.ajg }}" disabled="{{ g.dpu }}" sc-camel-on-change="{{ g.onAjg }}"> AJG</label></span></div>
+                              <div class="tri-ctl"><span class="tri-fx-rot">IMPEDIMENTO / SUSPEIÇÃO</span><label class="tri-ctl-check1"><input type="checkbox" checked="{{ g.restr }}" sc-camel-on-change="{{ g.onRestr }}"> {{ g.restrRot }}</label><sc-if value="{{ g.restr }}"><span class="tri-ctl-par"><sc-raw-select value="{{ g.restrTipo }}" sc-camel-on-change="{{ g.onRestrTipo }}" aria-label="Tipo"><option value="Impedimento">Impedimento</option><option value="Suspeição">Suspeição</option></sc-raw-select><input value="{{ g.restrNome }}" sc-camel-on-change="{{ g.onRestrNome }}" placeholder="Magistrado" aria-label="Magistrado"></span></sc-if></div>
+                              <div class="tri-ctl"><span class="tri-fx-rot">REPRESENTAÇÃO · ID</span><sc-raw-select value="{{ g.repVal }}" sc-camel-on-change="{{ g.onRep }}" aria-label="Representação"><sc-for list="{{ g.repOpts }}" as="o"><option value="{{ o.v }}">{{ o.l }}</option></sc-for></sc-raw-select><input value="{{ g.repId }}" sc-camel-on-change="{{ g.onRepId }}" disabled="{{ g.repSemId }}" placeholder="{{ g.repIdPh }}" aria-label="ID da procuração"></div>
+                            </div>
+                            <div class="tri-fx-l1b">
+                              <div class="tri-fx-sint"><span class="tri-fx-rot">SÍNTESE PROCESSUAL</span><textarea class="tri-fx-sintese" value="{{ g.sintese }}" sc-camel-on-input="{{ g.onSintese }}" placeholder="Resumo do caso: pedido, sentença, recurso e o ponto controvertido…" aria-label="Síntese processual"></textarea></div>
+                              <div class="tri-fx-sint"><span class="tri-fx-rot">INTERCORRÊNCIAS · UMA POR LINHA</span><textarea class="tri-fx-sintese" value="{{ g.interc }}" sc-camel-on-change="{{ g.onInterc }}" placeholder="Ex.: falta procuração; mídia ilegível…" aria-label="Intercorrências"></textarea></div>
                             </div>
                             <div class="tri-fx-l2">
                               <div class="tri-fx-caixa etq">
@@ -351,7 +373,6 @@ MARKUP = """
                               <textarea class="tri-fx-obs" value="{{ g.obsTxt }}" sc-camel-on-input="{{ g.onObs }}" placeholder="Arraste etiquetas para cá (entram como tópicos “• …”) ou escreva livremente." aria-label="Observações do processo"></textarea>
                             </div>
                             </div>
-                            <div class="tri-fx-ctrl"><sc-for list="{{ g.ctrls }}" as="cell"><div><div class="cab">{{ cell.col }}</div><dc-import name="Celula" kind="{{ cell.kind }}" value="{{ cell.value }}" options="{{ cell.options }}" checked="{{ cell.checked }}" chips="{{ cell.chips }}" tags="{{ cell.tags }}" auto="{{ cell.auto }}" manual="{{ cell.manual }}" on-text="{{ cell.onText }}" on-select="{{ cell.onSelect }}" on-check="{{ cell.onCheck }}" on-manual="{{ cell.onManual }}" on-tag-add="{{ cell.onTagAdd }}" hint-size="100%,38px"></dc-import></div></sc-for></div>
                           </div>
                         </sc-if>
                       </div>
@@ -460,6 +481,24 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     let corte = campos.findIndex(f => /polo|advogado|parte/.test(canon(f.key))); if (corte < 0) corte = campos.length;
     return { A: campos.slice(0, corte), B: campos.slice(corte) };
   }
+  /* controles de regularidade em formato compacto (mesma lógica dos controles da Seleção Prévia) */
+  cardControles(i) {
+    const r = this.rows[i], self = this, op = (lista, v) => [...new Set(["", ...lista, txt(v)])].map(x => ({ key: x || "_", v: x, l: x || "—" }));
+    const ok = () => { self.recompute(r); self.saveDeb(); self.refresh(); };
+    const dpu = truthy(r["DPU (controle)"]), restr = !!r._restricaoTipo, rep = txt(r["Representação"]);
+    return {
+      tempVal: txt(r.Tempestividade), tempOpts: op(DROPDOWNS.Tempestividade || ["Não Verificado", "Tempestivo", "Intempestivo"], r.Tempestividade), onTemp: e => { self.cell(i, "Tempestividade").onSelect(e.target.value); ok(); },
+      prepVal: txt(r.Preparo), prepOpts: op(DROPDOWNS.Preparo || [], r.Preparo), onPrep: e => { self.financialChange(r, "Preparo", e.target.value); ok(); },
+      dpu, ajg: truthy(r.AJG), onDpu: e => { self.financialChange(r, "DPU (controle)", e.target.checked); ok(); }, onAjg: e => { self.financialChange(r, "AJG", e.target.checked); ok(); },
+      restr, restrRot: restr ? (r._restricaoTipo || "Registrado") : "Nenhum", restrTipo: r._restricaoTipo || "Impedimento", restrNome: txt(r._magistradoRestricao),
+      onRestr: e => { self.cell(i, "Impedimento / Suspeição").onSelect(e.target.checked ? "Impedimento" : ""); ok(); },
+      onRestrTipo: e => { self.cell(i, "Impedimento / Suspeição").onSelect(e.target.value); ok(); },
+      onRestrNome: e => { self.cell(i, "Impedimento / Suspeição").onManual(e.target.value); ok(); },
+      repVal: rep, repOpts: op(DROPDOWNS["Representação"] || ["Não Verificado", "Regular", "Negativo"], rep), onRep: e => { self.cell(i, "Representação").onSelect(e.target.value); ok(); },
+      repId: txt(r["ID da Procuração"]), repSemId: rep !== "Regular", repIdPh: rep === "Regular" ? "ID da procuração" : "ID (se regular)", onRepId: e => { self.cell(i, "ID da Procuração").onText(e.target.value); ok(); },
+      interc: txt(r["Intercorrências"]), onInterc: e => { self.cardIntercorrencias(r, e.target.value); self.saveDeb(); }
+    };
+  }
   cardIntercorrencias(r, texto) {
     const antes = Array.isArray(r._pautaIncidents) ? r._pautaIncidents : [];
     const linhas = String(texto || "").split("\n").map(x => x.trim()).filter(Boolean);
@@ -546,6 +585,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triTotal: all.length, triInEsc: all.filter(({r}) => escOf(r)).length, triSemEsc: all.filter(({r}) => !escOf(r)).length, triEscCount: escs.length,
       triSearch: s.triSearch || "", onTriSearch: e => self.setState({ triSearch: e.target.value }),
       triBandejaCount: count.get("") || 0,
+      triBandejaOff: !(count.get("") || 0) && !q, triCorpoCls: !(count.get("") || 0) && !q ? "semband" : "",
       triFichas: bandeja.slice(0, LIM).map(({r}) => { const id = procId(r.Processo), sel = self.triSel.has(id); return { key: "f" + id, id, ...linha(r), sel, cls: sel ? "sel" : "",
         tags: this.sourceTags(r).filter(x => !this.cardEtiquetaOculta(x)).slice(0, 3).map((t, k) => ({ key: k, label: t })),
         toggle: ev => { ev.target.checked ? self.triSel.add(id) : self.triSel.delete(id); self.refresh(); } }; }),
@@ -620,6 +660,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
         pendCls: info.pendente ? "on" : "off", pendTxt: info.pendente === null ? "—" : info.pendente ? "pendente" : "não", pendTitulo: info.pendenteTitulo,
         tempo: info.tempo, tempoTitulo: info.tempoTitulo,
         cxValor: cx ? cx[0] : "", onCx: e => { r.Dificuldade = e.target.value; self.saveDeb(); self.refresh(); },
+        ...self.cardControles(i),
         faixaAberta: aberta, faixaSeta: aberta ? "▾" : "▸",
         toggleFaixa: () => { aberta ? self.triFaixa.delete(pid) : self.triFaixa.add(pid); self.refresh(); },
         cxCor: cx ? cx[3] : "#c3ccd6", cxSimb: cx ? cx[1] : "·",
