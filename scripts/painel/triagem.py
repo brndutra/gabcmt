@@ -22,57 +22,50 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-band-topo input{margin-top:8px;width:100%;border:1px solid #e3e7ec;border-radius:10px;background:#eff1f4;color:#14263c;padding:8px 11px;font:inherit;font-size:12px;outline:none}
     .tri-band-topo input:focus{border-color:#1f3d63;background:#fff}
     .tri-band-lista{max-height:calc(100vh - 300px);min-height:220px;overflow:auto;padding:10px 12px 12px;display:grid;gap:8px;align-content:start}
-    .tri-ficha{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px;align-items:start;background:#fbfaf6;color:#1d2a38;border:1px solid #d9d4c7;border-radius:6px;padding:9px 10px 9px 10px;cursor:grab;box-shadow:0 1px 0 rgba(0,0,0,.04),0 3px 8px rgba(20,38,60,.06);transition:transform .15s,box-shadow .15s}
+    .tri-ficha{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px;align-items:start;background:#fbfaf6;color:#1d2a38;border:1px solid #e1dccf;border-radius:8px;padding:9px 10px;cursor:grab}
     .tri-ficha::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;border-radius:0 3px 3px 0;background:#c9cfd8}
-    .tri-ficha:hover{transform:translateY(-1px) rotate(-.3deg);box-shadow:0 6px 16px rgba(20,38,60,.12)}
-    .tri-ficha.sel{outline:2px solid #d9a441;outline-offset:1px}.tri-ficha.sel::before{background:#d9a441}
+    .tri-ficha:hover{border-color:#c8c1ad}
+    .tri-ficha.sel{border-color:#d9a441;background:#fffaf0}.tri-ficha.sel::before{background:#d9a441}
     .tri-ficha .num{font:600 11.5px "IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:-.02em}
     .tri-ficha .meta{font-size:11px;color:#56636f;margin-top:2px;line-height:1.35}
     .tri-tag{display:inline-block;font-size:9px;font-weight:850;letter-spacing:.03em;padding:2px 6px;border-radius:99px;background:#e9edf2;color:#33506e;margin:4px 4px 0 0}
     .tri-tag.ouro{background:#f7e7c4;color:#7a5512}
     .tri-band-pe{display:flex;gap:6px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px 12px;border-top:1px solid #e3e7ec;font-size:11px;color:#6d7b8a}
-    .tri-movel{position:relative;border-radius:20px;padding:16px 16px 20px;background:linear-gradient(180deg,rgba(255,255,255,.06),transparent 30%),repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 2px,transparent 2px 9px),linear-gradient(160deg,#2a3f58,#1d2f45);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 24px 50px rgba(20,38,60,.28);min-width:0}
-    .tri-movel-topo{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 2px 12px;color:#dbe6f2}
-    .tri-placa-mestra{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border-radius:8px;background:linear-gradient(180deg,#e9c46a,#c9922f);color:#33240a;font-weight:900;font-size:11px;letter-spacing:.14em;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 2px 0 rgba(0,0,0,.25)}
-    .tri-placa-mestra i{width:6px;height:6px;border-radius:50%;background:#7a5512}
-    .tri-filtro{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#dbe6f2;border-radius:99px;padding:5px 11px;font-size:10.5px;font-weight:800;cursor:pointer}
-    .tri-filtro.on{background:#fff;color:#14304e;border-color:#fff}
-    .tri-dica{margin:-4px 2px 12px;font-size:10.5px;color:#9fb3c9}
-    .tri-dica b{color:#e9c46a}
-    .tri-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:14px}
-    .tri-nicho{position:relative;height:204px;border-radius:12px;border:0;padding:0;text-align:left;font:inherit;background:radial-gradient(120% 70% at 50% 0%,rgba(255,255,255,.07),transparent 60%),linear-gradient(180deg,#0f1c2c,#16263a 22%);box-shadow:inset 0 10px 18px rgba(0,0,0,.55),inset 0 -2px 0 rgba(255,255,255,.05),0 1px 0 rgba(255,255,255,.08);cursor:pointer;transition:transform .18s,box-shadow .18s;overflow:hidden}
-    .tri-nicho:hover{transform:translateY(-2px)}
-    .tri-nicho:focus-visible{outline:none;box-shadow:inset 0 10px 18px rgba(0,0,0,.55),0 0 0 3px #d9a441}
-    .tri-nicho.alvo,.tri-nicho.pronto:hover{box-shadow:inset 0 10px 18px rgba(0,0,0,.55),0 0 0 3px #d9a441,0 0 28px rgba(217,164,65,.55)}
-    .tri-nicho.aberto{box-shadow:inset 0 10px 18px rgba(0,0,0,.55),0 0 0 3px #fff}
-    .tri-nicho.aberto::after{content:"";position:absolute;left:50%;bottom:-1px;margin-left:-9px;border:9px solid transparent;border-bottom-color:#eef3f8}
-    .tri-pilha{position:absolute;left:18px;right:18px;bottom:62px;height:74px}
-    .tri-folha{position:absolute;left:0;right:0;height:14px;border-radius:3px;background:#fbfaf6;border:1px solid #d9d4c7;box-shadow:0 1px 0 rgba(0,0,0,.25)}
-    .tri-folha:nth-child(odd){transform:translateX(-2px) rotate(-.6deg)}.tri-folha:nth-child(3n){transform:translateX(3px) rotate(.7deg)}
-    .tri-capa{position:absolute;left:-2px;right:-2px;height:16px;border-radius:3px 3px 2px 2px;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 2px 3px rgba(0,0,0,.35)}
-    .tri-capa::after{content:"";position:absolute;right:14px;top:-7px;width:34px;height:9px;border-radius:4px 4px 0 0;background:inherit;filter:brightness(1.1)}
-    .tri-contador{position:absolute;top:12px;right:12px;min-width:30px;height:30px;padding:0 8px;border-radius:99px;display:grid;place-items:center;background:rgba(255,255,255,.1);color:#fff;font-weight:900;font-size:13px;border:1px solid rgba(255,255,255,.14)}
-    .tri-vazio-nicho{position:absolute;left:0;right:0;top:92px;text-align:center;color:rgba(219,230,242,.45);font-size:11px;font-weight:700}
-    .tri-placa{position:absolute;left:10px;right:10px;bottom:10px;height:44px;border-radius:6px;padding:6px 10px 5px 26px;background:linear-gradient(180deg,#f1d48a,#cf9c3a 55%,#b9852a);color:#3a2706;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -1px 0 rgba(0,0,0,.18),0 3px 6px rgba(0,0,0,.4)}
-    .tri-placa::before,.tri-placa::after{content:"";position:absolute;left:9px;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff3c8,#7a5512)}
-    .tri-placa::before{top:8px}.tri-placa::after{bottom:8px}
-    .tri-placa .t{display:block;font-weight:900;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .tri-placa .s{display:block;font-size:10px;font-weight:700;opacity:.78;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .tri-bilhete{position:absolute;top:10px;left:12px;max-width:62%;padding:6px 8px 7px;background:#fff4c2;color:#4a3d0f;font-size:9.5px;line-height:1.35;border-radius:2px;transform:rotate(-3deg);box-shadow:0 4px 10px rgba(0,0,0,.35);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap}
-    .tri-nicho.novo{display:grid;place-items:center;text-align:center;background:transparent;box-shadow:none;border:2px dashed rgba(219,230,242,.28);color:#dbe6f2}
-    .tri-nicho.novo:hover{border-color:#d9a441;color:#d9a441}
-    .tri-aberto{margin-top:16px;border-radius:14px;background:#eef3f8;color:#14263c;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.25);animation:triAbre .28s cubic-bezier(.2,.8,.2,1)}
-    @keyframes triAbre{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
-    .tri-aberto-topo{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 14px;background:linear-gradient(180deg,#e2eaf3,#eef3f8);border-bottom:1px solid #d6e0ea}
-    .tri-aberto-topo .tri-placa{position:relative;left:auto;right:auto;bottom:auto;height:auto;min-width:260px;max-width:520px;padding:8px 14px 7px 28px}
-    .tri-aberto-topo .tri-placa .t{font-size:14.5px}.tri-aberto-topo .tri-placa .s{font-size:11px}
+    .tri-movel{position:relative;border-radius:16px;background:#fff;border:1px solid #e3e7ec;box-shadow:0 10px 30px rgba(20,38,60,.08);min-width:0;overflow:hidden}
+    .tri-movel-topo{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:13px 14px 10px;background:linear-gradient(180deg,#f6f7f9,#fff);border-bottom:1px solid #e3e7ec;color:#14263c}
+    .tri-placa-mestra{font-size:12.5px;font-weight:900;letter-spacing:.06em;color:#14263c}
+    .tri-placa-mestra i{display:none}
+    .tri-filtro{border:1px solid #d8dee5;background:#fff;color:#1f3d63;border-radius:99px;padding:5px 11px;font-size:10.5px;font-weight:800;cursor:pointer}
+    .tri-filtro.on{background:#1f3d63;color:#fff;border-color:#1f3d63}
+    .tri-dica{margin:0;padding:9px 14px 0;font-size:10.5px;color:#6d7b8a}
+    .tri-grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:12px;padding:12px 14px 14px}
+    .tri-nicho{position:relative;height:196px;border-radius:12px;border:1px solid #e3e7ec;padding:0;text-align:left;font:inherit;background:#f6f8fa;cursor:pointer;overflow:hidden}
+    .tri-nicho:hover{border-color:#b7c6d6;background:#f1f5f9}
+    .tri-nicho:focus-visible{outline:2px solid #d9a441;outline-offset:2px}
+    .tri-nicho.alvo,.tri-nicho.pronto:hover{border-color:#d9a441;background:#fffaf0}
+    .tri-nicho.aberto{border:2px solid #1f3d63;background:#eef3f8}
+    .tri-pilha{position:absolute;left:16px;right:16px;bottom:58px;height:70px}
+    .tri-folha{position:absolute;left:0;right:0;height:8px;border-radius:2px;background:#fff;border:1px solid #d9d4c7}
+    .tri-capa{position:absolute;left:0;right:0;height:12px;border-radius:2px}
+    .tri-contador{position:absolute;top:10px;right:10px;min-width:28px;height:24px;padding:0 8px;border-radius:99px;display:grid;place-items:center;background:#1f3d63;color:#fff;font-weight:900;font-size:12px}
+    .tri-vazio-nicho{position:absolute;left:0;right:0;top:86px;text-align:center;color:#98a4b0;font-size:11px;font-weight:700}
+    .tri-placa{position:absolute;left:8px;right:8px;bottom:8px;height:42px;border-radius:8px;padding:6px 10px 5px 12px;background:#fff;border:1px solid #e3e7ec;border-left:4px solid #d9a441;color:#14263c}
+    .tri-placa .t{display:block;font-weight:850;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tri-placa .s{display:block;font-size:10px;font-weight:650;color:#6d7b8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tri-bilhete{position:absolute;top:10px;left:10px;max-width:66%;padding:5px 8px;background:#fff4c2;border:1px solid #efdf94;color:#4a3d0f;font-size:9.5px;line-height:1.35;border-radius:6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap}
+    .tri-nicho.novo{display:grid;place-items:center;text-align:center;background:#fff;border:2px dashed #cfd8e2;color:#6d7b8a}
+    .tri-nicho.novo:hover{border-color:#d9a441;color:#8a6416;background:#fffaf0}
+    .tri-aberto{margin:0 14px 14px;border-radius:12px;background:#f6f8fa;border:1px solid #d6e0ea;color:#14263c;overflow:hidden}
+    .tri-aberto-topo{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 12px;background:#eef3f8;border-bottom:1px solid #d6e0ea}
+    .tri-aberto-topo .tri-placa{position:relative;left:auto;right:auto;bottom:auto;height:auto;min-width:240px;max-width:520px;padding:7px 12px 6px 12px}
+    .tri-aberto-topo .tri-placa .t{font-size:14px}.tri-aberto-topo .tri-placa .s{font-size:11px}
     .tri-aberto-corpo{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:16px;padding:14px}
     .tri-campo{display:grid;gap:4px;margin-bottom:9px}
     .tri-campo label{font-size:9px;font-weight:900;letter-spacing:.08em;color:#6d7b8a}
     .tri-campo input,.tri-campo textarea{width:100%;border:1px solid #d6e0ea;border-radius:9px;background:#fff;color:#14263c;padding:8px 10px;font:inherit;font-size:12.5px;outline:none}
     .tri-campo textarea{min-height:78px;resize:vertical;background:#fff4c2;border-color:#e8d78a;color:#4a3d0f}
-    .tri-cor{width:22px;height:22px;border-radius:50%;border:2px solid transparent;box-shadow:inset 0 0 0 2px rgba(255,255,255,.6);cursor:pointer;padding:0}
-    .tri-cor.on{border-color:#14263c}
+    .tri-cor{width:22px;height:22px;border-radius:50%;border:2px solid #fff;outline:1px solid #d6e0ea;cursor:pointer;padding:0}
+    .tri-cor.on{outline:2px solid #14263c}
     .tri-guardados{display:grid;gap:6px;max-height:360px;overflow:auto;align-content:start}
     .tri-guardado{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;background:#fff;border:1px solid #dfe6ee;border-radius:9px;padding:8px 10px}
     .tri-guardado .num{font:600 12px "IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace}
@@ -129,7 +122,7 @@ MARKUP = """
                   <span class="tri-contador">{{ e.count }}</span>
                   <span class="tri-pilha"><sc-for list="{{ e.layers }}" as="l"><span class="tri-folha" style="bottom:{{ l.b }}px"></span></sc-for><sc-if value="{{ e.hasCapa }}"><span class="tri-capa" style="background:{{ e.cor }};bottom:{{ e.capaB }}px"></span></sc-if></span>
                   <sc-if value="{{ e.vazio }}"><span class="tri-vazio-nicho">vazio · solte autos aqui</span></sc-if>
-                  <span class="tri-placa"><span class="t">{{ e.titulo }}</span><span class="s">{{ e.subLabel }}</span></span>
+                  <span class="tri-placa" style="border-left-color:{{ e.cor }}"><span class="t">{{ e.titulo }}</span><span class="s">{{ e.subLabel }}</span></span>
                 </button>
               </sc-for>
               <button class="tri-nicho novo" sc-camel-on-click="{{ newEscaninho }}"><span><span style="display:block;font-size:30px;line-height:1">+</span><span style="font-size:11px;font-weight:850;letter-spacing:.08em">NOVO ESCANINHO</span></span></button>
@@ -231,7 +224,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triDica: marcados ? `${marcados} ficha(s) marcada(s) — clique no escaninho de destino para guardá-las.` : "Marque fichas na bandeja e clique num escaninho — ou arraste as fichas até ele. Clique num escaninho para abri-lo.",
       triEscaninhos: lista.map(e => { const n = count.get(e.id) || 0, cam = n ? Math.min(6, 1 + Math.ceil(Math.log2(n + 1) * 1.6)) : 0; return {
         key: e.id, titulo: e.titulo, subLabel: txt(e.subtitulo) || "—", obs: e.obs || "", hasObs: !!txt(e.obs), count: n, cor: e.cor, vazio: !n,
-        layers: Array.from({ length: cam }, (_, k) => ({ key: k, b: k * 9 })), hasCapa: !!n, capaB: cam * 9,
+        layers: Array.from({ length: cam }, (_, k) => ({ key: k, b: k * 7 })), hasCapa: !!n, capaB: cam * 7,
         cls: [aberto && aberto.id === e.id ? "aberto" : "", marcados ? "pronto" : ""].join(" "),
         aria: `Escaninho ${e.titulo}, ${n} processo(s)`, title: marcados ? `Guardar ${marcados} ficha(s) aqui` : "Abrir escaninho",
         click: () => { if (self.triSel.size) self.triGuardar([...self.triSel], e.id); else self.setState({ triOpen: s.triOpen === e.id ? "" : e.id }); }
