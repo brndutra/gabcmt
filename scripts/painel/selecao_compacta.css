@@ -380,3 +380,6 @@ html,body{height:auto!important;min-height:0!important;overflow:visible!importan
 .sp-meta-tipos em{font-style:normal;font-size:9.5px;font-weight:800;color:#2d6655;background:#e7f1ee;border:1px solid #a7cabd;border-radius:99px;padding:1px 7px;white-space:nowrap}
 .sp-meta-tipos em b{font-weight:900;color:#1f4c3f}
 @media(max-width:680px){.sp-metas{grid-template-columns:1fr}}
+
+.sp2 .sp-btn.sp-perigo{color:#a64f35;border-color:#efd3c8;background:#fff}
+.sp2 .sp-btn.sp-perigo:hover{background:#fbefea;border-color:#e2b3a2}
