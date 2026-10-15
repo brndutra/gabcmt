@@ -296,7 +296,7 @@ MARKUP = """
                   <span class="tri-config-resumo" title="Bilhete do escaninho">{{ triConfigResumo }}</span>
                   <div class="tri-ab-ferr">
                     <div class="tri-seg" role="group" aria-label="Modo de exibição"><button class="{{ triVistaCardsCls }}" sc-camel-on-click="{{ triVerCards }}" aria-pressed="{{ triVistaCards }}" title="Cards completos, com a faixa de triagem">▦ Cards</button><button class="{{ triVistaPlanCls }}" sc-camel-on-click="{{ triVerPlanilha }}" aria-pressed="{{ triVistaPlanilha }}" title="Lista em planilha, uma linha por processo">☰ Planilha</button></div>
-                    <span class="tri-exp" role="group" aria-label="Exportar a relação"><button class="tri-ab-btn icone" sc-camel-on-click="{{ triExpCompleta }}" title="Exportar a relação em Excel completo — todos os campos do cartão" aria-label="Exportar Excel completo">⇩<b>XLSX</b></button><button class="tri-ab-btn icone" sc-camel-on-click="{{ triExpSimples }}" title="Exportar a relação simplificada — item e processo" aria-label="Exportar relação simplificada">⇩<b>ITEM</b></button></span>
+                    <span class="tri-exp" role="group" aria-label="Exportar a relação"><button class="tri-ab-btn icone" sc-camel-on-click="{{ triExpCompleta }}" title="Exportar a relação em Excel completo — todos os campos do cartão" aria-label="Exportar Excel completo">⇩<b>XLSX</b></button><button class="tri-ab-btn icone" sc-camel-on-click="{{ triExpSimples }}" title="Excel simplificado — item, processo, indicadores (ED · AgInt · AI · META), assunto, tema e observações; ordenado pelo item" aria-label="Exportar relação simplificada">⇩<b>ITEM</b></button><button class="tri-ab-btn icone" sc-camel-on-click="{{ triImprimir }}" title="Versão para impressão — A4 retrato, sem margens, no máximo 2 páginas; ordenada pelo item" aria-label="Imprimir relação simplificada">⎙<b>A4</b></button></span>
                     <button class="tri-ab-btn {{ triConfigCls }}" sc-camel-on-click="{{ triToggleConfig }}" aria-expanded="{{ triConfigAberta }}" title="Placa, subtítulo, bilhete e cor da pasta"><span aria-hidden="true">⚙</span> Configurar <span aria-hidden="true">{{ triConfigSeta }}</span></button>
                     <button class="tri-ab-btn ouro" sc-camel-on-click="{{ triDevolverTodos }}" title="Devolver todos os processos deste escaninho à bandeja"><span aria-hidden="true">↩</span> Devolver todos</button>
                     <button class="tri-ab-btn perigo" sc-camel-on-click="{{ triExcluir }}" title="Excluir o escaninho (os processos voltam à bandeja)"><span aria-hidden="true">🗑</span> Excluir</button>
@@ -545,14 +545,48 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     return mapa.get(r) || "";
   }
   itemDePauta(r) { return txt(r["Item (Pauta de Julgamento)"]) || this.itemProvisorio(r); }
-  /* exportação da relação exibida (cartões): completa (todos os campos) ou simplificada (item e processo) */
+  /* relação simplificada (planilha e impressão A4): ITEM · PROCESSO · IND. · ASSUNTO · TEMA · OBSERVAÇÕES, ordenada pelo item */
+  relIndicadores(r) {
+    const out = [], g = this.cardGrupo(r), ok = (f) => { try { return f(); } catch (e) { return false; } };
+    if (g === 2 || ok(() => this.pautaClass(r, "EMBARGOS DE DECLARAÇÃO"))) out.push({ k: "ed", s: "ED", t: "Embargos de declaração" });
+    if (ok(() => this.pautaClass(r, "AGRAVO INTERNO")) || /agravo interno|\bagint\b/i.test([txt(r.classe_judicial || r.Classe), ...this.sourceTags(r)].join(" | "))) out.push({ k: "agint", s: "AgInt", t: "Agravo interno" });
+    if (g === 1) out.push({ k: "ai", s: "AI", t: "Agravo de instrumento" });
+    const metas = [...splitTags(r.META).map(txt), ...this.allTags(r).filter(t => { try { return this.tagRole(t) === "meta"; } catch (e) { return false; } })].filter(Boolean);
+    const vistos = new Set();
+    metas.forEach(m => { const rot = /meta/i.test(m) ? m.toUpperCase().replace(/\s+/g, " ") : "META " + m; const c = canon(rot); if (vistos.has(c)) return; vistos.add(c); out.push({ k: "meta", s: rot, t: "Meta" }); });
+    return out;
+  }
+  relSimplesLinha(r, item) {
+    const ind = this.relIndicadores(r), restr = this.restrictionValue(r);
+    const obs = txt(r["Observações"]).split("\n").map(x => x.trim()).filter(Boolean);
+    if (restr && !obs.some(o => canon(o).includes(canon(restr)))) obs.push("⚠ " + (/impediment|suspei/i.test(restr) ? restr : "Impedimento/Suspeição: " + restr));
+    return { item: item === undefined || item === null ? "" : item, processo: txt(r.Processo) || txt(r.processo), ind, indTxt: ind.map(b => b.s).join(" · "),
+      assunto: this.cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal) || "—",
+      tema: this.triLista(r, "Tema").join(" · ") || txt(r.Tema) || "—", observacoes: obs.join("\n") || "—" };
+  }
+  relOrdenarPorItem(linhas) {
+    const n = v => { const x = parseFloat(String(v).replace(",", ".")); return isNaN(x) ? Infinity : x; };
+    return linhas.map((l, k) => ({ l, k })).sort((a, b) => (n(a.l.item) - n(b.l.item)) || (a.k - b.k)).map(x => x.l);
+  }
+  relSimplesSelecao() { return this.relOrdenarPorItem(this.cardOrdenar(this.effectivePre()).map(({ r }) => this.relSimplesLinha(r, this.itemDePauta(r)))); }
+  relSimples(itens) {
+    const ord = this.cardOrdenar(itens), pos = new Map(ord.map((x, k) => [x.r, k + 1]));
+    const sel = r => r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE";
+    return this.relOrdenarPorItem(ord.map(({ r }) => this.relSimplesLinha(r, sel(r) ? this.itemDePauta(r) : pos.get(r))));
+  }
+  imprimirRelacao(itens, titulo, sub) {
+    if (!itens.length) return this.notify("Não há processos nesta relação.", "warn");
+    const linhas = this.relSimples(itens), pauta = linhas.length && itens.every(({ r }) => r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE");
+    this.printPautaSimplificada(linhas, titulo, sub, pauta ? "ITEM DE PAUTA" : "ITEM");
+  }
+  /* exportação da relação exibida (cartões): completa (todos os campos) ou simplificada (item, processo, indicadores, assunto, tema e observações) */
   exportarRelacao(itens, nome, simplificado, extras = []) {
     if (!itens.length) return this.notify("Não há processos nesta relação.", "warn");
     try {
       const ord = this.cardOrdenar(itens), X = window.XLSX, wb = X.utils.book_new(), pos = new Map(ord.map((x, k) => [x.r, k + 1]));
       const sel = r => r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE", item = r => sel(r) ? this.itemDePauta(r) : pos.get(r), prov = r => sel(r) ? this.itemProvisorio(r) : pos.get(r);
       let aoa;
-      if (simplificado) aoa = [["ITEM", "PROCESSO"], ...ord.map(({ r }) => [item(r), txt(r.Processo)])];
+      if (simplificado) { const pauta = ord.every(({ r }) => sel(r)); return this.exportPautaSimplificada(this.relSimples(itens), `${nome}_simplificada.xlsx`.replace(/[^\w.\-]+/g, "_"), pauta ? "ITEM DE PAUTA" : "ITEM"); }
       else { const pl = this.cardPlanilha(ord, extras); aoa = [["ITEM", "Item provisório", ...pl.cols.map(c => c.label)], ...pl.linhas.map(({ r, vals }) => [item(r), prov(r), ...vals.map(v => v.v === "—" ? "" : v.v)])]; }
       const ws = X.utils.aoa_to_sheet(aoa), bd = { style: "thin", color: { rgb: "D9DCEF" } };
       aoa[0].forEach((_, j) => { const a = X.utils.encode_cell({ r: 0, c: j }); if (ws[a]) ws[a].s = { fill: { fgColor: { rgb: "1F3D63" } }, font: { bold: true, color: { rgb: "FFFFFF" } }, alignment: { horizontal: "center", vertical: "center", wrapText: true }, border: { top: bd, bottom: bd, left: bd, right: bd } }; });
@@ -701,7 +735,8 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triVistaPlanCls: s.triVista === "planilha" ? "on" : "", triVistaCardsCls: s.triVista !== "planilha" ? "on" : "",
       triVerCards: () => self.setState({ triVista: "cards" }),
       triExpCompleta: () => aberto && self.exportarRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho_" + aberto.titulo, false),
-      triExpSimples: () => aberto && self.exportarRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho_" + aberto.titulo, true), triVerPlanilha: () => self.setState({ triVista: "planilha" }),
+      triExpSimples: () => aberto && self.exportarRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho_" + aberto.titulo, true),
+      triImprimir: () => aberto && self.imprimirRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho · " + aberto.titulo, "Triagem Processual · Gabinete A"), triVerPlanilha: () => self.setState({ triVista: "planilha" }),
       triToggleConfig: () => self.setState({ triConfig: !s.triConfig }),
       triOpenCor: aberto ? aberto.cor : "#c3ccd6",
       triConfigResumo: aberto ? (txt(aberto.obs) ? "📝 " + String(aberto.obs).replace(/\s+/g, " ").trim() : "sem bilhete") : "",
@@ -787,6 +822,27 @@ PATCHES = [
      'title="Enviar selecionados à sessão escolhida (Seleção Prévia) ou à Triagem Processual" style="border:0;cursor:pointer;padding:8px 13px;font-weight:850;font-size:9px;background:#d9a441;color:#33240a;white-space:nowrap">{{ selectBtnLabel }}</button>'),
     # aba
     ("    </sc-if>\n  </main></div>", "    </sc-if>\n" + MARKUP + "  </main></div>"),
+    # relação simplificada: colunas IND./ASSUNTO/TEMA/OBSERVAÇÕES, indicadores e ordem pelo item (planilha e impressão A4)
+    ("  simplifiedPautaRows() {", "  simplifiedPautaRows() { return this.relSimplesSelecao(); }\n  simplifiedPautaRowsLegado() {"),
+    ('  exportPautaSimplificada() {\n    const rows=this.simplifiedPautaRows();if(!rows.length)return this.notify("Não há processos nos filtros atuais.","warn");\n    const heads=["ITEM DE PAUTA","PROCESSO","ASSUNTO CNJ","TEMA","OBSERVAÇÕES"],keys=["item","processo","assunto","tema","observacoes"];',
+     '  exportPautaSimplificada(rowsIn, arquivo, itemHead) {\n    const rows=rowsIn || this.simplifiedPautaRows();if(!rows.length)return this.notify("Não há processos nos filtros atuais.","warn");\n    const heads=[itemHead || "ITEM DE PAUTA","PROCESSO","IND.","ASSUNTO CNJ","TEMA","OBSERVAÇÕES"],keys=["item","processo","indTxt","assunto","tema","observacoes"];'),
+    ("for(let j=0;j<5;j++)", "for(let j=0;j<6;j++)"),
+    ('horizontal:j===0?"center":"left"},border};}', 'horizontal:j===0||j===2?"center":"left"},border};}'),
+    ("{wch:7},{wch:27},", "{wch:7},{wch:27},{wch:11},"),
+    ('ws["!autofilter"]={ref:"A1:E"', 'ws["!autofilter"]={ref:"A1:F"'),
+    ('this.downloadPautaBytes(this.pautaXlsxBytes(wb));this.notify("Pauta Simplificada baixada em Excel · "+rows.length+" processos.");',
+     'if(arquivo)XLSX.writeFile(wb,arquivo);else this.downloadPautaBytes(this.pautaXlsxBytes(wb));this.notify((arquivo ? "Relação simplificada" : "Pauta Simplificada")+" baixada em Excel · "+rows.length+" processos · ordenada pelo item.");'),
+    ('  printPautaSimplificada() {\n    const rows=this.simplifiedPautaRows();\n    if(!rows.length)return this.notify("Não há processos na Seleção Prévia para gerar a pauta simplificada.","warn");',
+     '  printPautaSimplificada(rowsIn, tituloIn, subIn, itemHead) {\n    const rows=Array.isArray(rowsIn) ? rowsIn : this.simplifiedPautaRows();\n    if(!rows.length)return this.notify("Não há processos nesta relação para gerar a versão de impressão.","warn");'),
+    ("item = width * .05, remaining = Math.max(0, width - item - processWidth);", "item = width * .05, ind = width * .07, remaining = Math.max(0, width - item - ind - processWidth);"),
+    ("const widths = [item, processWidth, remaining * 25 / 71, remaining * 20 / 71, remaining * 26 / 71];", "const widths = [item, processWidth, ind, remaining * 25 / 71, remaining * 20 / 71, remaining * 26 / 71];"),
+    ("<title>Pauta simplificada — Seleção Prévia</title>", "<title>${esc(tituloIn || \"Pauta simplificada — Seleção Prévia\")}</title>"),
+    ("tr{break-inside:avoid;page-break-inside:avoid}thead{display:table-header-group}",
+     "tr{break-inside:avoid;page-break-inside:avoid}thead{display:table-header-group}td.ind{text-align:center;white-space:normal}.b{display:inline-block;border:.15mm solid #666;border-radius:.6mm;padding:0 .5mm;margin:0 .2mm .25mm;font-size:6.6pt;font-weight:700;line-height:1.2;white-space:nowrap;print-color-adjust:exact;-webkit-print-color-adjust:exact}.b-ed{background:#ffe2b8;border-color:#b26a00}.b-agint{background:#eadcff;border-color:#6a3fb5}.b-ai{background:#d6e9ff;border-color:#2563a8}.b-meta{background:#d4f3df;border-color:#1f7a45}.legenda{font-size:6.5pt;margin:.6mm 0 0}"),
+    ('<h1>Pauta simplificada${sessionText ? " — "+esc(sessionText) : ""}</h1><div class="sub">Seleção Prévia · ${rows.length} processo(s)</div></header><table><colgroup><col style="width:5%"><col style="width:24%">',
+     '<h1>${tituloIn ? esc(tituloIn) : "Pauta simplificada"+(sessionText ? " — "+esc(sessionText) : "")}</h1><div class="sub">${esc(subIn || "Seleção Prévia")} · ${rows.length} processo(s) · ordem pelo ${itemHead==="ITEM" ? "item" : "item de pauta"}</div><div class="legenda"><span class="b b-ed">ED</span> embargos de declaração <span class="b b-agint">AgInt</span> agravo interno <span class="b b-ai">AI</span> agravo de instrumento <span class="b b-meta">META</span> meta · impedimento/suspeição nas observações (⚠)</div></header><table><colgroup><col style="width:5%"><col style="width:24%"><col style="width:7%">'),
+    ("<thead><tr><th>ITEM DE PAUTA</th><th>PROCESSO</th><th>ASSUNTO CNJ</th>", "<thead><tr><th>${esc(itemHead || \"ITEM DE PAUTA\")}</th><th>PROCESSO</th><th>IND.</th><th>ASSUNTO CNJ</th>"),
+    ('<td class="processo">${esc(r.processo)}</td><td>${esc(r.assunto)}</td>', '<td class="processo">${esc(r.processo)}</td><td class="ind">${(r.ind || []).map(b=>`<span class="b b-${b.k}" title="${esc(b.t)}">${esc(b.s)}</span>`).join("")}</td><td>${esc(r.assunto)}</td>'),
     # pauta simplificada: item provisório (ordem Assunto › Tema › Especificidade; AI e ED ao final)
     ('return {item:txt(r["Item (Pauta de Julgamento)"]) || this.rows.filter(x=>x["Seleção Prévia"]==="SELECIONADO PREVIAMENTE").sort((a,b)=>Number(a._preOrder)-Number(b._preOrder)).indexOf(r)+1,', 'return {item:this.itemDePauta(r),'),
     ('    return this.effectivePre().map(({r},idx)=>{', '    return this.cardOrdenar(this.effectivePre()).map(({r},idx)=>{'),
