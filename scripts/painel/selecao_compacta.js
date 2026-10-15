@@ -45,7 +45,7 @@
 
   // ------------------------------------------------------------------ dados
   const sessao = () => P().normalizeSelectionSession();
-  const linhas = () => P().selectionSessionRows(sessao());
+  const linhas = () => { const rs = P().selectionSessionRows(sessao()); try { return P().cardOrdenar(rs); } catch (e) { return rs; } };
   const etapa = r => iso(r.MINUTADO) ? 2 : txt(r.SERVIDOR) ? 1 : 0;
   const compl = r => { const n = Math.round(Number(r.Dificuldade)); return n >= 1 && n <= 3 ? n : 0; };
   const reg = r => ({
@@ -379,6 +379,7 @@
           <button data-sp="exp" data-v="parent-info"><b>⎙ Informações de pauta</b><span>Impressão para a sessão</span></button><hr>
           <button data-sp="exp" data-v="complete-csv"><b>CSV</b><span>Dados tabulares</span></button>
           <button data-sp="exp" data-v="complete-json"><b>JSON</b><span>Sessão completa</span></button></div></div>
+        <span class="sp-exp" role="group" aria-label="Exportar a relação"><button class="sp-btn" data-sp="exp-rel" data-v="completa" title="Exportar a relação em Excel completo — todos os campos do cartão">⇩ <b>XLSX</b></button><button class="sp-btn" data-sp="exp-rel" data-v="simples" title="Exportar a relação simplificada — item e processo">⇩ <b>ITEM</b></button></span>
         <button class="sp-btn" data-sp="modo-classico" title="Planilha e cards completos, colunas e grupos, estatísticas">⚙ Visão clássica</button></div>
       ${faixa}
       <div class="sp-chips">${chips}</div>
@@ -390,7 +391,7 @@
     let conteudo;
     if (st.visao === "planilha") {
       let pl; try { fs.forEach(({ r }) => { if (P().cardRegras(r)) P().saveDeb(); }); pl = P().cardPlanilha(fs, [["Servidor", r => r.SERVIDOR], ["Corretor", r => r.CORRETOR], ["Etapa", r => ETAPAS[etapa(r)][0]], ["Data da minuta", r => iso(r.MINUTADO) ? brFull(iso(r.MINUTADO)) : ""], ["MPF", r => r.MPF], ["ID do Parecer MPF", r => r["ID do Parecer MPF"]], ["Voto", r => r["Voto - Resultado"]], ["Status de julgamento", r => r["Status de Julgamento"] || "PENDENTE"], ["Item da pauta", r => r["Item (Pauta de Julgamento)"]]]); } catch (e) { pl = { cols: [], linhas: [] }; }
-      conteudo = `<section class="sp-card sp-plan-card"><div class="sp-plan-wrap"><table class="sp-plan"><thead><tr><th class="fixa">Nº</th>${pl.cols.map(c => `<th class="${c.cls}">${esc(c.label)}</th>`).join("")}</tr></thead><tbody>${pl.linhas.map(({ r, vals }) => { const x = fs.find(y => y.r === r); return `<tr data-sp="abrir-de" data-i="${x.i}" title="Abrir o cartão do processo"><td class="fixa"><b>${mapa.get(x.i)}</b></td>${vals.map(v => `<td class="${v.cls}" title="${esc(v.v)}">${esc(v.v)}</td>`).join("")}</tr>`; }).join("")}</tbody></table></div>
+      conteudo = `<section class="sp-card sp-plan-card"><div class="sp-plan-wrap"><table class="sp-plan"><thead><tr><th class="fixa">ITEM</th>${pl.cols.map(c => `<th class="${c.cls}">${esc(c.label)}</th>`).join("")}</tr></thead><tbody>${pl.linhas.map(({ r, vals }) => { const x = fs.find(y => y.r === r); return `<tr data-sp="abrir-de" data-i="${x.i}" title="Abrir o cartão do processo"><td class="fixa"><b>${mapa.get(x.i)}</b></td>${vals.map(v => `<td class="${v.cls}" title="${esc(v.v)}">${esc(v.v)}</td>`).join("")}</tr>`; }).join("")}</tbody></table></div>
         <div class="sp-rodape"><span>${fs.length} de ${rows.length} processos · ${pl.cols.length} colunas (todos os campos do cartão e dados das planilhas) · clique numa linha para abrir o cartão</span><span>${ativos ? "filtros ativos" : ""}</span></div></section>`;
     } else if (st.visao === "quadro") conteudo = `<section class="sp-card"><div class="sp-quadro">${ETAPAS.map(([l, c], k) => { const it = fs.filter(x => etapa(x.r) === k); return `<div class="sp-coluna" data-col="${k}"><h3><span style="color:${c}">● ${l.toUpperCase()}</span><span class="q">${it.length}</span></h3><div class="sp-kcards">${it.map(({ r, i }) => `<div class="sp-kcard" draggable="true" data-k="${i}"><div class="p sp-mono">${esc(r.Processo)}</div><div class="a">${esc(r.Assunto || r.assunto_judicial || "—")}</div><div class="rr"><span class="sp-serv ${txt(r.SERVIDOR) ? "" : "vazio"}"><span class="sp-av" style="width:18px;height:18px;font-size:8px;background:${corDe(txt(r.SERVIDOR), todos)}">${ini(txt(r.SERVIDOR))}</span><span style="font-size:10.5px">${esc(txt(r.SERVIDOR) || "—")}</span></span><span class="sp-alertas-i">${regIcon(r)}</span></div></div>`).join("")}</div></div>`; }).join("")}</div><div class="sp-rodape"><span>Arraste os cartões entre as colunas para mudar a etapa (Designado exige servidor; Minutado registra a minuta hoje).</span><span>${fs.length} processos</span></div></section>`;
     else if (st.visao === "servidor") {
@@ -400,9 +401,9 @@
           <div class="sp-raia-proc">${it.map(({ r, i }) => `<button data-sp="abrir-de" data-i="${i}" title="${esc(r.Assunto || "")} · ${ETAPAS[etapa(r)][0]}"><b style="color:${ETAPAS[etapa(r)][1]}">●</b> <span class="sp-mono">${esc(String(r.Processo).slice(0, 15))}</span></button>`).join("") || "<i style='color:#98a4b0'>nenhum</i>"}</div></div>`; }).join("")}</div><div class="sp-rodape"><span>Carga e andamento de cada servidor (barra colorida = etapas). Meta = designados ÷ dias úteis até a entrega das minutas.</span><span>${fs.length} processos</span></div></section>`;
     } else {
       const linhasHtml = fs.map(x => { const { r, i } = x, sv = txt(r.SERVIDOR), e = etapa(r), c = compl(r), ab = st.aberto === i;
-        return `<div class="sp-linha ${st.sel.has(i) ? "sel" : ""} ${ab ? "aberta" : ""}" data-linha="${i}" draggable="true">
+        return `<div class="sp-linha ${st.sel.has(i) ? "sel" : ""} ${ab ? "aberta" : ""}" data-linha="${i}">
           <input type="checkbox" data-selrow="${i}" ${st.sel.has(i) ? "checked" : ""} aria-label="Selecionar ${esc(r.Processo)}">
-          <span class="sp-num">${mapa.get(i)}</span><span class="sp-alca" title="Arrastar para reordenar">⠿</span>
+          <span class="sp-num" title="${txt(r["Item (Pauta de Julgamento)"]) ? "Item oficial da pauta: " + esc(r["Item (Pauta de Julgamento)"]) + " · provisório: " + mapa.get(i) : "Item provisório (Assunto › Tema › Especificidade; AI e ED ao final)"}">${mapa.get(i)}</span><span class="sp-alca" title="${["", "Agravo de instrumento: ao final", "Embargos de declaração: por último"][(() => { try { return P().cardGrupo(r); } catch (e) { return 0; } })()]}">${["", "AI", "ED"][(() => { try { return P().cardGrupo(r); } catch (e) { return 0; } })()]}</span>
           <div class="sp-proc"><div class="p sp-mono">${esc(r.Processo)}</div><div class="c">${(() => { try { const k = P().cardClasse(r); return `<em class="sp-cls" style="background:${k.fundo};color:${k.cor}" title="${esc(k.rotulo)}">${esc(k.sigla)}</em>`; } catch (e) { return ""; } })()}${esc(r.classe_judicial || r.Classe || "")}${txt(r.META) ? ` · <b style="color:#8a6416">${esc(r.META)}</b>` : ""}</div></div>
           <div class="sp-assunto"><div>${esc((() => { try { return P().cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal); } catch (e) { return r.Assunto; } })() || "—")}</div><div class="tema">${esc([txt(r.Tema).split("\n")[0], secao(r)].filter(Boolean).join(" · "))}</div></div>
           <div class="sp-compl" title="Complexidade: ${c ? CX[c - 1][1] : "não definida"}">${CX.map(([s1, nm, cor], k) => `<i class="${k + 1 === c ? "on" : ""}" style="${k + 1 === c ? `background:${cor};color:#fff` : ""}">${s1}</i>`).join("")}</div>
@@ -413,9 +414,9 @@
           <div><span class="sp-pill ${r["Status de Julgamento"] === "PAUTADO" ? "sp-e5" : "sp-e0"}">${esc(r["Status de Julgamento"] || "PENDENTE")}</span></div>
           <button class="sp-seta" data-sp="abrir" data-i="${i}" aria-expanded="${ab}" aria-label="Abrir detalhes">${ab ? "⌃" : "⌄"}</button>
         </div>${ab ? detalhe(x, todos) : ""}`; }).join("");
-      conteudo = `<section class="sp-card sp-lista"><div class="sp-cab"><span><input type="checkbox" data-sp="sel-todos" aria-label="Selecionar todos" ${fs.length && fs.every(x => st.sel.has(x.i)) ? "checked" : ""}></span><span>Nº</span><span></span><span>PROCESSO</span><span>ASSUNTO · TEMA · SEÇÃO</span><span>COMPLEX.</span><span>SERVIDOR</span><span>ETAPA</span><span>REGULARIDADE</span><span>VOTO</span><span>STATUS</span><span></span></div>
+      conteudo = `<section class="sp-card sp-lista"><div class="sp-cab"><span><input type="checkbox" data-sp="sel-todos" aria-label="Selecionar todos" ${fs.length && fs.every(x => st.sel.has(x.i)) ? "checked" : ""}></span><span title="Item provisório">ITEM</span><span></span><span>PROCESSO</span><span>ASSUNTO · TEMA · SEÇÃO</span><span>COMPLEX.</span><span>SERVIDOR</span><span>ETAPA</span><span>REGULARIDADE</span><span>VOTO</span><span>STATUS</span><span></span></div>
         ${linhasHtml || `<div style="padding:40px;text-align:center;color:#6d7b8a">${rows.length ? "Nenhum processo corresponde aos filtros." : "Nenhum processo selecionado para esta sessão. No Acervo Central, marque processos e use SELECIONAR."}</div>`}
-        <div class="sp-rodape"><span>${fs.length} de ${rows.length} processos · ordem manual (arraste ⠿) · clique na linha para abrir</span><span>${ativos ? "filtros ativos" : ""}</span></div></section>`;
+        <div class="sp-rodape"><span>${fs.length} de ${rows.length} processos · item provisório pela ordem Assunto › Tema › Especificidade, com agravos de instrumento e, por último, embargos de declaração ao final · clique na linha para abrir</span><span>${ativos ? "filtros ativos" : ""}</span></div></section>`;
     }
     corpo.innerHTML = comando + conteudo;
   }
@@ -470,6 +471,7 @@
       case "cap": st.cap = !st.cap; lembrar(); render(); break;
       case "cap-restaurar": { const s = sessao(), m = p.sessionDetails[s], corr = st.capAba === "corr"; if (!m || !window.confirm(`Voltar capacidade, disponibilidade e esforço ao padrão na aba ${corr ? "Corretores" : "Servidores"}?`)) break; const K = corr ? ["corrRates", "corrAvailability", "corrEffort"] : ["staffRates", "staffAvailability", "staffEffort"]; nomes(linhas()).forEach(nm => { K.forEach(k => { if (m[k]) delete m[k][nm]; }); if (!corr && m.staffRates) m.staffRates[nm] = 3; }); st.asof = ""; p.syncConfigSeed && p.syncConfigSeed(); salvar(); break; }
       case "cap-aba": st.capAba = v; render(); break;
+      case "exp-rel": { const fs = filtrados(linhas()); p.exportarRelacao(fs, "Selecao_Previa_" + sessao(), v === "simples", [["Servidor", r => r.SERVIDOR], ["Corretor", r => r.CORRETOR], ["Etapa", r => ETAPAS[etapa(r)][0]], ["Minutado", r => iso(r.MINUTADO) ? brFull(iso(r.MINUTADO)) : ""], ["MPF", r => r.MPF], ["ID do Parecer MPF", r => r["ID do Parecer MPF"]], ["Voto", r => r["Voto - Resultado"]], ["Status de julgamento", r => r["Status de Julgamento"] || "PENDENTE"]]); break; }
       case "cap-remover": case "cap-restaurar1": case "cap-restaurar-todos": { const s = sessao(); p.ensureSession && p.ensureSession(s); const m = p.sessionDetails[s] || (p.sessionDetails[s] = {}), aba = st.capAba === "corr" ? "corr" : "serv"; m.capRemovidos = { serv: [], corr: [], ...(m.capRemovidos || {}) }; const lst = new Set(m.capRemovidos[aba]);
         if (a === "cap-remover") lst.add(v); else if (a === "cap-restaurar1") lst.delete(v); else lst.clear(); m.capRemovidos = { ...m.capRemovidos, [aba]: [...lst] }; salvar(); break; }
       case "cap-ideal": p.setSessionMeta(sessao(), "minutasDeadline", v); p.notify(`Entrega das minutas fixada em ${brFull(v)}.`); render(); break;

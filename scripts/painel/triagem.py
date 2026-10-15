@@ -184,6 +184,9 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-ab-btn.ouro{background:#d9a441;border-color:#d9a441;color:#33240a}
     .tri-ab-btn.perigo{color:#a64f35}.tri-ab-btn.perigo:hover{border-color:#e2b3a5;background:#fdf3f0}
     .tri-ab-btn.icone{width:32px;justify-content:center;padding:0;font-size:14px}
+    .tri-exp{display:inline-flex;gap:0;border:1px solid #d6e0ea;border-radius:9px;overflow:hidden}
+    .tri-exp .tri-ab-btn.icone{width:auto;border:0;border-radius:0;padding:0 9px;gap:3px;font-size:13px}.tri-exp .tri-ab-btn.icone+.tri-ab-btn{border-left:1px solid #e3e7ec}
+    .tri-exp b{font-size:8.5px;font-weight:900;letter-spacing:.05em}
     .tri-aberto-topo .tri-config-resumo{flex:1 1 160px;min-width:0}
     /* modo planilha */
     .tri-plan-wrap{overflow:auto;max-height:72vh;border:1px solid #dfe6ee;border-radius:10px;background:#fff}
@@ -293,6 +296,7 @@ MARKUP = """
                   <span class="tri-config-resumo" title="Bilhete do escaninho">{{ triConfigResumo }}</span>
                   <div class="tri-ab-ferr">
                     <div class="tri-seg" role="group" aria-label="Modo de exibição"><button class="{{ triVistaCardsCls }}" sc-camel-on-click="{{ triVerCards }}" aria-pressed="{{ triVistaCards }}" title="Cards completos, com a faixa de triagem">▦ Cards</button><button class="{{ triVistaPlanCls }}" sc-camel-on-click="{{ triVerPlanilha }}" aria-pressed="{{ triVistaPlanilha }}" title="Lista em planilha, uma linha por processo">☰ Planilha</button></div>
+                    <span class="tri-exp" role="group" aria-label="Exportar a relação"><button class="tri-ab-btn icone" sc-camel-on-click="{{ triExpCompleta }}" title="Exportar a relação em Excel completo — todos os campos do cartão" aria-label="Exportar Excel completo">⇩<b>XLSX</b></button><button class="tri-ab-btn icone" sc-camel-on-click="{{ triExpSimples }}" title="Exportar a relação simplificada — item e processo" aria-label="Exportar relação simplificada">⇩<b>ITEM</b></button></span>
                     <button class="tri-ab-btn {{ triConfigCls }}" sc-camel-on-click="{{ triToggleConfig }}" aria-expanded="{{ triConfigAberta }}" title="Placa, subtítulo, bilhete e cor da pasta"><span aria-hidden="true">⚙</span> Configurar <span aria-hidden="true">{{ triConfigSeta }}</span></button>
                     <button class="tri-ab-btn ouro" sc-camel-on-click="{{ triDevolverTodos }}" title="Devolver todos os processos deste escaninho à bandeja"><span aria-hidden="true">↩</span> Devolver todos</button>
                     <button class="tri-ab-btn perigo" sc-camel-on-click="{{ triExcluir }}" title="Excluir o escaninho (os processos voltam à bandeja)"><span aria-hidden="true">🗑</span> Excluir</button>
@@ -520,6 +524,45 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     return { cols: cols.map(c => ({ key: c, label: c, cls: longas.has(c) ? "quebra" : "" })),
       linhas: porLinha.map(({ r, f, m }) => ({ r, vals: [...base.map(([c, fn]) => ({ key: c, v: txt(fn(r, f)) || "—", cls: longas.has(c) ? "quebra" : "" })), ...dados.map(c => ({ key: c, v: m[c] || "—", cls: "" }))] })) };
   }
+  /* ordem da relação: Assunto › Tema › Especificidade; agravos de instrumento e, por último, embargos de declaração ao final */
+  cardGrupo(r) {
+    const sig = this.cardClasse(r).sigla, q = this.sourceTags(r).map(x => this.cardQualifica(x));
+    if (sig === "ED" || q.includes("EMBARGOS DE DECLARAÇÃO")) return 2;
+    if (sig === "AI" || q.includes("AGRAVO DE INSTRUMENTO")) return 1;
+    return 0;
+  }
+  cardOrdenar(itens) {
+    const chave = new Map(itens.map(x => { const r = x.r; return [x, [this.cardGrupo(r), canon(this.cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal)) || "~", canon(this.triLista(r, "Tema")[0] || "") || "~", canon(this.triLista(r, "Especificidades")[0] || "") || "~", Number(r._preOrder) || 0, txt(r.Processo)]]; }));
+    const cmp = (a, b) => { const A = chave.get(a), B = chave.get(b); for (let k = 0; k < A.length; k++) { if (A[k] === B[k]) continue; return typeof A[k] === "number" ? A[k] - B[k] : String(A[k]).localeCompare(String(B[k]), "pt-BR"); } return 0; };
+    return itens.slice().sort(cmp);
+  }
+  /* item provisório: posição do processo na relação ordenada da sua sessão (vira ITEM / ITEM DE PAUTA nas exportações) */
+  itemProvisorio(r) {
+    const s = txt(r["Sessão Destino"]) || "Sem sessão", agora = Date.now();
+    if (!this._itemCache || agora - this._itemCache.t > 1500) this._itemCache = { t: agora, m: new Map() };
+    let mapa = this._itemCache.m.get(s);
+    if (!mapa) { mapa = new Map(); this.cardOrdenar(this.selectionSessionRows(s === "Sem sessão" ? "" : s).filter(({ r: x }) => (txt(x["Sessão Destino"]) || "Sem sessão") === s)).forEach((x, k) => mapa.set(x.r, k + 1)); this._itemCache.m.set(s, mapa); }
+    return mapa.get(r) || "";
+  }
+  itemDePauta(r) { return txt(r["Item (Pauta de Julgamento)"]) || this.itemProvisorio(r); }
+  /* exportação da relação exibida (cartões): completa (todos os campos) ou simplificada (item e processo) */
+  exportarRelacao(itens, nome, simplificado, extras = []) {
+    if (!itens.length) return this.notify("Não há processos nesta relação.", "warn");
+    try {
+      const ord = this.cardOrdenar(itens), X = window.XLSX, wb = X.utils.book_new(), pos = new Map(ord.map((x, k) => [x.r, k + 1]));
+      const sel = r => r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE", item = r => sel(r) ? this.itemDePauta(r) : pos.get(r), prov = r => sel(r) ? this.itemProvisorio(r) : pos.get(r);
+      let aoa;
+      if (simplificado) aoa = [["ITEM", "PROCESSO"], ...ord.map(({ r }) => [item(r), txt(r.Processo)])];
+      else { const pl = this.cardPlanilha(ord, extras); aoa = [["ITEM", "Item provisório", ...pl.cols.map(c => c.label)], ...pl.linhas.map(({ r, vals }) => [item(r), prov(r), ...vals.map(v => v.v === "—" ? "" : v.v)])]; }
+      const ws = X.utils.aoa_to_sheet(aoa), bd = { style: "thin", color: { rgb: "D9DCEF" } };
+      aoa[0].forEach((_, j) => { const a = X.utils.encode_cell({ r: 0, c: j }); if (ws[a]) ws[a].s = { fill: { fgColor: { rgb: "1F3D63" } }, font: { bold: true, color: { rgb: "FFFFFF" } }, alignment: { horizontal: "center", vertical: "center", wrapText: true }, border: { top: bd, bottom: bd, left: bd, right: bd } }; });
+      ws["!cols"] = aoa[0].map((h, j) => ({ wch: j === 0 ? 8 : Math.min(48, Math.max(12, String(h).length + 4)) }));
+      ws["!autofilter"] = { ref: `A1:${X.utils.encode_col(aoa[0].length - 1)}${aoa.length}` };
+      X.utils.book_append_sheet(wb, ws, simplificado ? "Relação" : "Relação completa");
+      const arq = `${nome}_${simplificado ? "simplificada" : "completa"}.xlsx`.replace(/[^\w.\-]+/g, "_");
+      X.writeFile(wb, arq); this.notify(`${ord.length} processo(s) exportado(s) — ${simplificado ? "item e processo" : aoa[0].length + " colunas"}.`);
+    } catch (e) { this.notify("Falha ao exportar: " + (e.message || e), "err"); }
+  }
   cardIntercorrencias(r, texto) {
     const antes = Array.isArray(r._pautaIncidents) ? r._pautaIncidents : [];
     const linhas = String(texto || "").split("\n").map(x => x.trim()).filter(Boolean);
@@ -650,17 +693,19 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triCores: PAL.map(c => ({ key: c, cor: c, cls: aberto && aberto.cor === c ? "on" : "", pick: () => { if (!aberto) return; aberto.cor = c; self.saveDeb(); self.refresh(); } })),
       triConfigAberta: !!s.triConfig, triConfigSeta: s.triConfig ? "▴" : "▾", triConfigCls: s.triConfig ? "on" : "",
       triVistaPlanilha: s.triVista === "planilha", triVistaCards: s.triVista !== "planilha",
-      ...(() => { if (s.triVista !== "planilha" || !aberto) return { triPlanCols: [], triPlanLinhas: [] }; const itens = all.filter(({r}) => escOf(r) === aberto.id); itens.forEach(({r}) => { if (self.cardRegras(r)) self.saveDeb(); }); const pl = self.cardPlanilha(itens);
+      ...(() => { if (s.triVista !== "planilha" || !aberto) return { triPlanCols: [], triPlanLinhas: [] }; const itens = self.cardOrdenar(all.filter(({r}) => escOf(r) === aberto.id)); itens.forEach(({r}) => { if (self.cardRegras(r)) self.saveDeb(); }); const pl = self.cardPlanilha(itens);
         return { triPlanCols: pl.cols, triPlanLinhas: pl.linhas.map(({ r, vals }) => { const pid = procId(r.Processo); return { key: "p" + pid, vals,
           abrirCard: () => { self.triFaixa.add(pid); self.setState({ triVista: "cards" }); setTimeout(() => { const n = document.querySelector(`[data-tri-card="${pid}"]`); n && n.scrollIntoView({ block: "start", behavior: "smooth" }); }, 60); },
           devolver: () => { r._escaninho = ""; salvar("Processo devolvido à bandeja."); },
           remover: () => { if (!window.confirm(`Remover ${r.Processo} da Triagem Processual? Ele continua no Acervo Central.`)) return; r._triagem = ""; r._escaninho = ""; salvar("Processo removido da triagem."); } }; }) }; })(),
       triVistaPlanCls: s.triVista === "planilha" ? "on" : "", triVistaCardsCls: s.triVista !== "planilha" ? "on" : "",
-      triVerCards: () => self.setState({ triVista: "cards" }), triVerPlanilha: () => self.setState({ triVista: "planilha" }),
+      triVerCards: () => self.setState({ triVista: "cards" }),
+      triExpCompleta: () => aberto && self.exportarRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho_" + aberto.titulo, false),
+      triExpSimples: () => aberto && self.exportarRelacao(all.filter(({r}) => escOf(r) === aberto.id), "Escaninho_" + aberto.titulo, true), triVerPlanilha: () => self.setState({ triVista: "planilha" }),
       triToggleConfig: () => self.setState({ triConfig: !s.triConfig }),
       triOpenCor: aberto ? aberto.cor : "#c3ccd6",
       triConfigResumo: aberto ? (txt(aberto.obs) ? "📝 " + String(aberto.obs).replace(/\s+/g, " ").trim() : "sem bilhete") : "",
-      triOpenRows: aberto ? all.filter(({r}) => escOf(r) === aberto.id).map(({r, i}) => { const sit = self.situacao(r), pid = procId(r.Processo), aberta = self.triFaixa.has(pid);
+      triOpenRows: aberto ? self.cardOrdenar(all.filter(({r}) => escOf(r) === aberto.id)).map(({r, i}) => { const sit = self.situacao(r), pid = procId(r.Processo), aberta = self.triFaixa.has(pid);
         if (self.cardRegras(r)) self.saveDeb();
         const info = self.cardInfo(r), cc = self.cardCampos(r), infoAberta = !!(self.triInfo && self.triInfo.has(pid));
         const etqs = info.etiquetas, temas = self.triLista(r, "Tema"), esps = self.triLista(r, "Especificidades"), cx = CX.find(c => c[0] === String(txt(r.Dificuldade)));
@@ -742,6 +787,9 @@ PATCHES = [
      'title="Enviar selecionados à sessão escolhida (Seleção Prévia) ou à Triagem Processual" style="border:0;cursor:pointer;padding:8px 13px;font-weight:850;font-size:9px;background:#d9a441;color:#33240a;white-space:nowrap">{{ selectBtnLabel }}</button>'),
     # aba
     ("    </sc-if>\n  </main></div>", "    </sc-if>\n" + MARKUP + "  </main></div>"),
+    # pauta simplificada: item provisório (ordem Assunto › Tema › Especificidade; AI e ED ao final)
+    ('return {item:txt(r["Item (Pauta de Julgamento)"]) || this.rows.filter(x=>x["Seleção Prévia"]==="SELECIONADO PREVIAMENTE").sort((a,b)=>Number(a._preOrder)-Number(b._preOrder)).indexOf(r)+1,', 'return {item:this.itemDePauta(r),'),
+    ('    return this.effectivePre().map(({r},idx)=>{', '    return this.cardOrdenar(this.effectivePre()).map(({r},idx)=>{'),
     # estilos
     ("    .central-stats-stack{display:grid;gap:14px;min-width:0}", CSS + "    .central-stats-stack{display:grid;gap:14px;min-width:0}"),
     # exportação: TEMAS (coluna Tema, cabeçalho "Temas"), ESPECIFICIDADES e SÍNTESE; etiquetas sem as convertidas e sem "Seção"
@@ -749,5 +797,5 @@ PATCHES = [
     ("  addSheet(wb, name, cols, dataRows, accent) {\n    const data = this.exportRows(cols, dataRows);\n    const ws = XLSX.utils.json_to_sheet(data, { header: cols });",
      "  addSheet(wb, name, cols, dataRows, accent) {\n    cols = this.triColsExport(cols);\n    const data = this.exportRows(cols, dataRows);\n    const ws = XLSX.utils.json_to_sheet(data, { header: cols });\n    cols.forEach((c, j) => { const a = XLSX.utils.encode_cell({ r: 0, c: j }); if (c === \"Tema\" && ws[a]) ws[a].v = \"Temas\"; });"),
     ('        else o[c] = r[c] == null ? "" : r[c];\n      });\n      return o;',
-     '        else if (fieldKey(c) === "etiquetas" || c === "Etiquetas Originais") o[c] = this.triEtqExport(r, r[c]);\n        else o[c] = r[c] == null ? "" : r[c];\n      });\n      return o;'),
+     '        else if (fieldKey(c) === "etiquetas" || c === "Etiquetas Originais") o[c] = this.triEtqExport(r, r[c]);\n        else if ((c === "Item (Pauta de Julgamento)" || c === "Numeração Prévia") && !txt(r[c]) && r["Seleção Prévia"] === "SELECIONADO PREVIAMENTE") o[c] = this.itemProvisorio(r);\n        else o[c] = r[c] == null ? "" : r[c];\n      });\n      return o;'),
 ]
