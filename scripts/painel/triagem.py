@@ -61,12 +61,12 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-nicho.novo{display:grid;place-items:center;text-align:center;background:#fff;border:2px dashed #cfd8e2;color:#6d7b8a}
     .tri-nicho.novo:hover{border-color:#d9a441;color:#8a6416;background:#fffaf0}
     .tri-aberto{margin:0 14px 14px;border-radius:12px;background:#f6f8fa;border:1px solid #d6e0ea;color:#14263c;overflow:hidden}
-    .tri-aberto-topo{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 12px;background:#eef3f8;border-bottom:1px solid #d6e0ea}
-    .tri-aberto-topo .tri-placa{position:relative;left:auto;right:auto;bottom:auto;height:auto;min-width:240px;max-width:520px;padding:7px 12px 6px 12px}
+    .tri-aberto-topo{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:nowrap;padding:10px 12px;background:#eef3f8;border-bottom:1px solid #d6e0ea}
+    .tri-aberto-topo .tri-placa{position:relative;left:auto;right:auto;bottom:auto;height:auto;flex:0 1 auto;min-width:200px;max-width:380px;padding:7px 12px 6px 12px}
     .tri-aberto-topo .tri-placa .t{font-size:14px}.tri-aberto-topo .tri-placa .s{font-size:11px}
     .tri-aberto-corpo{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:16px;padding:14px}
-    .tri-config-barra{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 12px;border-bottom:1px solid #d6e0ea;background:#f9fbfd}
-    .tri-config-toggle{border:1px solid #d6e0ea;background:#fff;border-radius:8px;padding:5px 10px;font-size:10.5px;font-weight:850;color:#1f3d63;cursor:pointer}
+    .tri-config-barra{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:10px}
+    .tri-config-toggle{flex:0 0 auto;white-space:nowrap;border:1px solid #d6e0ea;background:#fff;border-radius:8px;padding:5px 10px;font-size:10.5px;font-weight:850;color:#1f3d63;cursor:pointer}
     .tri-config-resumo{display:flex;align-items:center;gap:6px;min-width:0;flex:1;font-size:10.5px;color:#6d7b8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .tri-cor-ponto{flex:0 0 auto;width:10px;height:10px;border-radius:50%}
     .tri-config{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:12px;border-bottom:1px solid #d6e0ea}
@@ -133,7 +133,7 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-guardado .num{font:600 12px "IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace}
     .tri-guardado .meta{font-size:10.5px;color:#6d7b8a}
     .tri-icone{border:1px solid #dfe6ee;background:#fff;border-radius:7px;padding:3px 8px;font-size:12px;font-weight:900;cursor:pointer;color:#1f3d63}
-    @media(max-width:1100px){.tri-config{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pcard-topo{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pc-acoes{padding:8px 12px}.tri-grid{grid-template-columns:minmax(0,1fr)}.tri-bandeja{position:static}.tri-band-lista{max-height:340px}.tri-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-aberto-corpo{grid-template-columns:minmax(0,1fr)}}
+    @media(max-width:1100px){.tri-aberto-topo{flex-wrap:wrap}.tri-config{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pcard-topo{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pc-acoes{padding:8px 12px}.tri-grid{grid-template-columns:minmax(0,1fr)}.tri-bandeja{position:static}.tri-band-lista{max-height:340px}.tri-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-aberto-corpo{grid-template-columns:minmax(0,1fr)}}
 """
 
 BTN = "border:1px solid #d8dee5;border-radius:8px;background:#fff;color:#1f3d63;padding:6px 10px;font-size:10px;font-weight:850;cursor:pointer;white-space:nowrap"
@@ -201,11 +201,11 @@ MARKUP = """
               <div class="tri-aberto" aria-label="Escaninho aberto">
                 <div class="tri-aberto-topo">
                   <span class="tri-placa"><span class="t">{{ triOpenTitulo }}</span><sc-if value="{{ triOpenHasSub }}"><span class="s">{{ triOpenSub }}</span></sc-if></span>
-                  <span style="display:flex;gap:6px;flex-wrap:wrap"><button sc-camel-on-click="{{ triDevolverTodos }}" style="BTN_OURO">↩ Devolver todos à bandeja</button><button sc-camel-on-click="{{ triExcluir }}" style="BTN;color:#a64f35">Excluir escaninho</button><button sc-camel-on-click="{{ triRecolher }}" style="BTN">⌃ Recolher</button></span>
-                </div>
-                <div class="tri-config-barra">
-                  <button class="tri-config-toggle" sc-camel-on-click="{{ triToggleConfig }}" aria-expanded="{{ triConfigAberta }}"><span aria-hidden="true">⚙</span> Configurações do escaninho <span aria-hidden="true">{{ triConfigSeta }}</span></button>
-                  <span class="tri-config-resumo"><span class="tri-cor-ponto" style="background:{{ triOpenCor }}"></span>{{ triConfigResumo }}</span>
+                  <span class="tri-config-barra">
+                    <button class="tri-config-toggle" title="Configurações do escaninho: placa, bilhete e cor" sc-camel-on-click="{{ triToggleConfig }}" aria-expanded="{{ triConfigAberta }}"><span aria-hidden="true">⚙</span> Configurações <span aria-hidden="true">{{ triConfigSeta }}</span></button>
+                    <span class="tri-config-resumo"><span class="tri-cor-ponto" style="background:{{ triOpenCor }}"></span>{{ triConfigResumo }}</span>
+                  </span>
+                  <span style="display:flex;gap:6px;flex-wrap:wrap;flex:0 0 auto"><button sc-camel-on-click="{{ triDevolverTodos }}" style="BTN_OURO">↩ Devolver todos</button><button sc-camel-on-click="{{ triExcluir }}" style="BTN;color:#a64f35">Excluir escaninho</button><button sc-camel-on-click="{{ triRecolher }}" style="BTN">⌃ Recolher</button></span>
                 </div>
                 <sc-if value="{{ triConfigAberta }}" hint-placeholder-val="{{ false }}">
                   <div class="tri-config">
@@ -406,7 +406,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       triConfigAberta: !!s.triConfig, triConfigSeta: s.triConfig ? "▴" : "▾",
       triToggleConfig: () => self.setState({ triConfig: !s.triConfig }),
       triOpenCor: aberto ? aberto.cor : "#c3ccd6",
-      triConfigResumo: aberto ? (txt(aberto.obs) ? "📝 " + String(aberto.obs).replace(/\s+/g, " ").trim() : "sem bilhete · clique em Configurações para editar placa, bilhete e cor") : "",
+      triConfigResumo: aberto ? (txt(aberto.obs) ? "📝 " + String(aberto.obs).replace(/\s+/g, " ").trim() : "sem bilhete") : "",
       triOpenRows: aberto ? all.filter(({r}) => escOf(r) === aberto.id).map(({r, i}) => { const sit = self.situacao(r), pid = procId(r.Processo), aberta = self.triFaixa.has(pid);
         const campos = (() => { const vistos = new Set(); return camposDados.map(c => ({ key: c, col: c, val: txt(r[c]) })).filter(f => { if (!f.val) return false; const k = fieldKey(f.col) + "|" + canon(f.val), k2 = "v|" + canon(f.val) + "|" + canon(f.col).replace(/[^a-z]/g, "").slice(0, 6); if (vistos.has(k) || vistos.has(k2)) return false; vistos.add(k); vistos.add(k2); return true; }); })();
         let corte = campos.findIndex(f => /polo/.test(canon(f.col))); if (corte < 0) corte = campos.length;
