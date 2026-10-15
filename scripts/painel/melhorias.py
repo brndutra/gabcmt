@@ -188,7 +188,9 @@ DIALOGO = [
      "componentDidMount() { window.__painelCentralComponent = this; if (!this.__escFecha) { this.__escFecha = e => { if (e.key === \"Escape\" && this.state.dialog) this.setState({ dialog: false }); }; window.addEventListener(\"keydown\", this.__escFecha); } Promise"),
 ]
 
-AJUSTES = [("desempenho", DESEMPENHO), ("desempenho-tela", DESEMPENHO_TELA), ("cards", CARDS), ("abertura", ABERTURA), ("html-plano", HTML_PLANO), ("dialogo", DIALOGO)]
+import triagem  # noqa: E402  (aba Triagem Processual e escaninhos)
+
+AJUSTES = [("desempenho", DESEMPENHO), ("desempenho-tela", DESEMPENHO_TELA), ("cards", CARDS), ("abertura", ABERTURA), ("html-plano", HTML_PLANO), ("dialogo", DIALOGO), ("triagem", triagem.PATCHES)]
 
 
 # ---------------------------------------------------------------------------------------------------------------

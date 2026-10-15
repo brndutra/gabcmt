@@ -3,12 +3,12 @@
 A página vive como texto dentro da página da Seleção Prévia, que por sua vez vai compactada (gzip+base64) dentro do
 painel. melhorias.py abre essas camadas e chama aplicar() com o HTML da página de planejamento.
 
-01 · Marcos da sessão — uma só linha compacta: sessão, os cinco marcos com os dias úteis entre eles (preparação,
+01 · Marcos da sessão — uma só linha compacta: sessão, os cinco marcos com os dias úteis entre eles (preparo,
      produção, revisão, antecedência) e os números que orientam o prazo: dias úteis de produção, capacidade da equipe
-     no ritmo habitual contra as minutas restantes, entrega sugerida pela capacidade, tempo decorrido × entregue.
+     no ritmo habitual contra o total da sessão, entrega ideal pela capacidade e meta diária da equipe.
 02 · Simulador — card de altura fixa: cabeçalho com a estatística da distribuição entre servidores e lista rolável
-     com metas dinâmicas por servidor (meta/dia planejada = designados ÷ dias úteis do início à entrega; meta/dia
-     para entregar = restantes ÷ dias úteis que faltam; andamento contra o esperado até hoje; término no ritmo).
+     com metas por servidor (meta/dia planejada = designados ÷ dias úteis de produção; capacidade no período e
+     folga/excesso; término no ritmo). A Seleção Prévia antecede a produção: não há minutas feitas nem restantes.
 """
 
 CSS = r"""<style id="planejamento-compacto">
@@ -48,7 +48,8 @@ CSS = r"""<style id="planejamento-compacto">
 
 .sim-card{height:560px;display:flex;flex-direction:column;border:1px solid #dce4ed;border-radius:12px;background:#fff;overflow:hidden}
 .sim-head{flex:0 0 auto;padding:10px 12px 8px;border-bottom:1px solid #e6edf4;background:#f9fbfd}
-.sim-kpis.k9{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:6px}
+.sim-kpis.k9{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:6px}.sim-kpis.k8{grid-template-columns:repeat(8,minmax(0,1fr))}
+.sim-kpi.ok b{color:#25714e}.sim-kpi.bad b{color:#a64f35}
 .sim-kpis.k9 .sim-kpi{padding:6px 8px;border-radius:9px}
 .sim-kpis.k9 .sim-kpi span{font-size:8.5px;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .sim-kpis.k9 .sim-kpi b{font-size:16px;line-height:1.35;white-space:nowrap}
@@ -82,7 +83,7 @@ CSS = r"""<style id="planejamento-compacto">
 .sim-note{font-size:10.5px;line-height:1.5;color:#698099;margin-top:6px}
 @media(max-width:1060px){.mk-line{padding:7px 8px}.mk-session{flex-basis:116px}.mk{min-width:86px;flex-basis:86px}.mk input{font-size:10.5px;padding:3px 3px}.mk-gap{flex-basis:40px}.mk-kpis{gap:3px 8px;padding-left:8px;margin-left:4px}.mk-kpis b{font-size:12px}}
 @media(max-width:900px){.mk-line{flex-wrap:wrap;row-gap:8px}.mk-kpis{margin-left:0;border-left:0;padding-left:0;grid-template-columns:repeat(4,auto);flex-basis:100%}}
-@media(max-width:1100px){.sim-kpis.k9{grid-template-columns:repeat(5,minmax(0,1fr))}.sim-card{height:620px}.sim-list td{padding:6px 6px}.sim-list .c-name{min-width:140px}.sim-list .c-name input[type=text]{width:100px}.sim-list input.in-n{width:52px}.sim-list table.simtable{min-width:900px}.sim-list td small{white-space:normal}.st-pill{white-space:normal}}
+@media(max-width:1100px){.sim-kpis.k9{grid-template-columns:repeat(4,minmax(0,1fr))}.sim-card{height:620px}.sim-list td{padding:6px 6px}.sim-list .c-name{min-width:140px}.sim-list .c-name input[type=text]{width:100px}.sim-list input.in-n{width:52px}.sim-list table.simtable{min-width:900px}.sim-list td small{white-space:normal}.st-pill{white-space:normal}}
 @media(max-width:700px){.sim-kpis.k9{grid-template-columns:repeat(3,minmax(0,1fr))}}
 </style>"""
 
@@ -107,9 +108,9 @@ MARCOS = r"""<div class="section-caption"><div><h2>01 · Marcos da sessão</h2><
  <div class="mk mk-final" data-field="session"><div class="mk-lbl">JULGAMENTO</div><input id="session" type="date" lang="pt-BR" aria-label="Data da sessão"><div class="mk-sub" data-meta="session">—</div></div>
  <div class="mk-kpis">
   <div title="Dias úteis entre o início da produção e a entrega das minutas (feriados e dias sem expediente excluídos)"><span>Produção</span><b id="kProd">—</b></div>
-  <div id="kCapBox"><span>Capac. · restam</span><b id="kCap">—</b></div>
+  <div id="kCapBox"><span>Capac. · total</span><b id="kCap">—</b></div>
   <div title="Primeiro dia em que a equipe, no ritmo habitual de cada servidor, conclui todas as minutas"><span>Entrega ideal</span><div class="mk-sug"><b id="suggestedDate">—</b><button id="applySuggested" title="Aplicar como entrega das minutas">aplicar</button></div></div>
-  <div title="Tempo de produção já decorrido × minutas já concluídas"><span>Tempo · entregue</span><b><span id="elapsedPct">—%</span> · <span id="kDone">—%</span></b></div>
+  <div title="Total da sessão ÷ dias úteis de produção"><span>Meta da equipe</span><b id="kTeamPlan">—</b></div>
  </div>
 </div>
 <div class="mk-warn" id="mkWarn"></div>
@@ -119,15 +120,14 @@ MARCOS = r"""<div class="section-caption"><div><h2>01 · Marcos da sessão</h2><
 <div class="section-caption"><div><h2>02 · Simulador de Designação de Processos</h2><div class="sub">Metas diárias por servidor, do início da produção à entrega das minutas</div></div><div class="actions"><span class="helper-badge" id="simStatus">—</span><button class="primary" id="add">+ Servidor</button></div></div>
 <div class="sim-card">
  <div class="sim-head">
-  <div class="sim-kpis k9">
+  <div class="sim-kpis k9 k8">
    <div class="sim-kpi"><span>Total da sessão</span><b id="totalProcesses">0</b><small>processos</small></div>
    <div class="sim-kpi"><span>Designados</span><b id="designated">0</b><small id="kDesigPct">—</small></div>
    <div class="sim-kpi"><span>Sem designação</span><b id="undesignated">0</b><small id="kFreeHint">—</small></div>
-   <div class="sim-kpi"><span>Minutas feitas</span><b id="kDoneN">0</b><small id="kDonePct">—</small></div>
-   <div class="sim-kpi"><span>Restantes</span><b id="kRemain">0</b><small>a entregar</small></div>
-   <div class="sim-kpi"><span>Dias úteis</span><b id="availableDays">—</b><small id="kDaysHint">até a entrega</small></div>
-   <div class="sim-kpi"><span>Meta da equipe</span><b id="kTeamDay">—</b><small>restantes ÷ dias</small></div>
+   <div class="sim-kpi"><span>Dias úteis</span><b id="availableDays">—</b><small id="kDaysHint">de produção</small></div>
+   <div class="sim-kpi"><span>Meta da equipe</span><b id="kTeamDay">—</b><small>total ÷ dias úteis</small></div>
    <div class="sim-kpi"><span>Meta por servidor</span><b id="kPerServer">—</b><small id="kActive">—</small></div>
+   <div class="sim-kpi" id="kCapTile"><span>Capacidade no ritmo</span><b id="kCap2">—</b><small id="kCapHint">no período</small></div>
    <div class="sim-kpi"><span>Equilíbrio</span><b id="kBalance">—</b><small id="kBalanceHint">menor–maior carga</small></div>
   </div>
   <div class="dist-bar" id="distBar" aria-label="Distribuição dos processos por servidor"></div>
@@ -135,14 +135,11 @@ MARCOS = r"""<div class="section-caption"><div><h2>01 · Marcos da sessão</h2><
   <div id="simWarnings"></div>
  </div>
  <div class="sim-list"><table class="simtable"><thead><tr>
-  <th>Servidor</th><th>Designados<br>· parcela</th><th>Feitas<br>· restantes</th><th>Dias úteis<br>plano · faltam</th><th title="Designados ÷ dias úteis do início da produção à entrega">Meta/dia<br>planejada</th><th title="Restantes ÷ dias úteis que faltam até a entrega">Meta/dia<br>para entregar</th><th title="Média habitual de minutas por dia útil (editável)">Ritmo<br>habitual</th><th title="Feitas comparadas ao esperado até ontem, pela meta planejada">Andamento</th><th title="Data em que conclui as restantes no ritmo habitual">Término<br>no ritmo</th><th>Situação</th><th></th>
+  <th>Servidor</th><th>Designados<br>· parcela</th><th title="Dias úteis do início da produção à entrega, descontadas as ausências">Dias úteis<br>de produção</th><th title="Designados ÷ dias úteis de produção">Meta/dia<br>planejada</th><th title="Média habitual de minutas por dia útil (editável)">Ritmo<br>habitual</th><th title="Ritmo habitual × dias úteis de produção">Capacidade<br>no período</th><th title="Capacidade no período − designados">Folga<br>· excesso</th><th title="Data em que conclui os designados no ritmo habitual, a partir do início">Término<br>no ritmo</th><th>Situação</th><th></th>
  </tr></thead><tbody id="staffBody"></tbody><tfoot id="staffFoot"></tfoot></table></div>
 </div>
-<div class="sim-note">Meta/dia planejada = designados ÷ dias úteis do início da produção à entrega. Meta/dia para entregar = restantes ÷ dias úteis que faltam (a partir de hoje ou do início, o que vier depois). Minutas feitas = processos com data de minuta (MINUTADO). Dias úteis descontam fins de semana, feriados do calendário e ausências de cada servidor. A designação aqui é simulação: alterar quantidades não muda o SERVIDOR dos processos.</div>
+<div class="sim-note">Meta/dia planejada = designados ÷ dias úteis do início da produção à entrega. Capacidade no período = ritmo habitual × esses dias; a diferença para os designados indica folga ou excesso. Término no ritmo = data em que o servidor concluiria os designados mantendo o ritmo habitual a partir do início. Dias úteis descontam fins de semana, feriados do calendário e ausências de cada servidor. A designação aqui é simulação: alterar quantidades não muda o SERVIDOR dos processos.</div>
 """
-
-READHOST_ANTIGO = "actualAssigned:assigned,"
-READHOST_NOVO = r"actualAssigned:assigned,done:rows.filter(x=>x.r.SERVIDOR===name&&/^\d{4}-\d\d-\d\d/.test(String(x.r.MINUTADO||''))).length,"
 
 RENDER = r"""const MK_GAPS={start:'preparo',deadline:'produção',release:'revisão',session:'anteced.'};
 const PAL=['#2f6690','#4a8f74','#b4763a','#7a5ba6','#3d8b9c','#a6545e','#6b7d2f','#5b6f8f','#c0843d','#46708a'];
@@ -160,13 +157,12 @@ function renderTimeline(){
  });
  const prod=state.start&&state.deadline&&state.start<=state.deadline?days(state.start,state.deadline):null;
  $('kProd').textContent=prod===null?'—':prod+' út.';
- const total=totalCount(),done=state.staff.reduce((a,s)=>a+(+s.done||0),0),remain=Math.max(0,total-done),from=state.start&&state.start>today?state.start:today;
+ const total=totalCount(),from=state.start&&state.start>today?state.start:today;
  const active=state.staff.filter(s=>s.included!==false&&s.rate>0);
  const cap=state.deadline?active.reduce((a,s)=>a+(days(from,state.deadline,s.excluded||[],s.name)||0)*s.rate,0):null;
- const kc=$('kCap');kc.textContent=cap===null?'—':Math.round(cap)+' · '+remain;kc.className=cap===null?'':cap>=remain?'ok':'bad';
- $('kCapBox').title=cap===null?'Informe a entrega das minutas':'No ritmo habitual, a equipe produz cerca de '+Math.round(cap)+' minuta(s) até a entrega; restam '+remain+'. '+(cap>=remain?'Folga de '+Math.round(cap-remain)+'.':'Faltam '+Math.round(remain-cap)+': adiante o início, amplie a equipe ou adie a entrega.');
- let tp='—%';if(prod){const el=state.start<today?Math.min(prod,days(state.start,add(today,-1))||0):0;tp=Math.round(el/prod*100)+'%';}
- $('elapsedPct').textContent=tp;$('kDone').textContent=total?Math.round(done/total*100)+'%':'—%';
+ const kc=$('kCap');kc.textContent=cap===null?'—':Math.round(cap)+' · '+total;kc.className=cap===null?'':cap>=total?'ok':'bad';
+ $('kCapBox').title=cap===null?'Informe a entrega das minutas':'No ritmo habitual, a equipe produz cerca de '+Math.round(cap)+' minuta(s) até a entrega para '+total+' processo(s) da sessão. '+(cap>=total?'Folga de '+Math.round(cap-total)+'.':'Faltam '+Math.round(total-cap)+': adiante o início, amplie a equipe ou adie a entrega.');
+ $('kTeamPlan').textContent=prod?perDay(total/prod):'—';
  $('sessionCombinedLabel').textContent=readOnly?'Escolher sessão':sessionKey;
  const msgs=Object.values(issues).flat();$('mkWarn').textContent=msgs.length?'Ordem dos marcos: '+[...new Set(msgs)].slice(0,2).join(' '):'';
 }
@@ -174,49 +170,45 @@ function renderTimeline(){
 function renderStaff(){
  const today=now(),from=state.start&&state.start>today?state.start:today,end=state.deadline,count=totalCount();
  const assigned=state.staff.reduce((a,s)=>a+(+s.assigned||0),0),unassigned=count-assigned;
- const done=state.staff.reduce((a,s)=>a+(+s.done||0),0),remain=Math.max(0,count-done);
- const overall=end?days(from,end):null,plan=state.start&&end?days(state.start,end):null;
- const active=state.staff.filter(s=>s.included!==false);
+ const plan=end?days(from,end):null,active=state.staff.filter(s=>s.included!==false);
  $('totalProcesses').textContent=count;$('procCount').textContent=count;$('designated').textContent=assigned;$('undesignated').textContent=unassigned;
  $('kDesigPct').textContent=count?Math.round(assigned/count*100)+'% da sessão':'—';
  $('kFreeHint').textContent=unassigned>0&&active.length?'+'+Math.ceil(unassigned/active.length)+' p/ cada um':unassigned<0?'designação excedente':'tudo designado';
- $('kDoneN').textContent=done;$('kDonePct').textContent=count?Math.round(done/count*100)+'% concluído':'—';$('kRemain').textContent=remain;
- $('availableDays').textContent=overall===null?'—':overall;$('kDaysHint').textContent=plan===null?'até a entrega':'de '+plan+' no plano';
- $('kTeamDay').textContent=overall?perDay(remain/overall):'—';
- $('kPerServer').textContent=overall&&active.length?perDay(remain/overall/active.length):'—';$('kActive').textContent=active.length+' servidor(es) ativo(s)';
+ $('availableDays').textContent=plan===null?'—':plan;$('kDaysHint').textContent=state.start&&state.start<today?'de hoje à entrega':'do início à entrega';
+ $('kTeamDay').textContent=plan?perDay(count/plan):'—';
+ $('kPerServer').textContent=plan&&active.length?perDay(count/plan/active.length):'—';$('kActive').textContent=active.length+' servidor(es) ativo(s)';
+ const capT=end?active.filter(s=>s.rate>0).reduce((a,s)=>a+(days(from,end,s.excluded||[],s.name)||0)*s.rate,0):null;
+ $('kCap2').textContent=capT===null?'—':Math.round(capT)+' · '+count;$('kCapTile').className='sim-kpi '+(capT===null?'':capT>=count?'ok':'bad');
+ $('kCapHint').textContent=capT===null?'defina a entrega':capT>=count?'folga de '+Math.round(capT-count):'faltam '+Math.round(count-capT);
  const loads=active.map(s=>+s.assigned||0);
  $('kBalance').textContent=loads.length?Math.min(...loads)+'–'+Math.max(...loads):'—';
  $('kBalanceHint').textContent=loads.length?'média '+String(Math.round(loads.reduce((a,b)=>a+b,0)/loads.length*10)/10).replace('.',',')+' por servidor':'menor–maior carga';
- $('daysbadge').textContent=overall===null?'— dias úteis':overall+' dias úteis';
+ $('daysbadge').textContent=plan===null?'— dias úteis':plan+' dias úteis';
  $('distributionProgress').style.width=(count?Math.min(100,assigned/count*100):0)+'%';
- $('simStatus').textContent=count?Math.round(assigned/count*100)+'% distribuídos · '+Math.round(done/count*100)+'% feitos':'Sem processos';
+ $('simStatus').textContent=count?Math.round(assigned/count*100)+'% distribuídos':'Sem processos';
  const base=Math.max(count,assigned)||1;
  $('distBar').innerHTML=state.staff.map((s,i)=>{const a=+s.assigned||0;if(!a)return '';const w=a/base*100;return '<i style="width:'+w+'%;background:'+PAL[i%PAL.length]+(s.included===false?';opacity:.45':'')+'" title="'+esc(s.name)+': '+a+' processo(s) · '+Math.round(a/(count||1)*100)+'%">'+(w>7?esc(firstName(s.name))+' '+a:w>3?a:'')+'</i>'}).join('')+(unassigned>0?'<i class="free" style="width:'+unassigned/base*100+'%" title="Sem designação: '+unassigned+'">'+(unassigned/base>.06?'livres '+unassigned:'')+'</i>':'');
- let tA=0,tF=0,tR=0,tRate=0,tExp=0;
+ let tA=0,tRate=0,tCap=0;
  $('staffBody').innerHTML=state.staff.map((s,i)=>{
-  const abs=s.excluded||[],a=+s.assigned||0,f=Math.min(a,+s.done||0),r=Math.max(0,a-f),cor=PAL[i%PAL.length],on=s.included!==false;
-  const dPlan=state.start&&end&&state.start<=end?days(state.start,end,abs,s.name):null,dLeft=end?days(from,end,abs,s.name):null;
-  const mPlan=dPlan>0?a/dPlan:dPlan===0&&a?Infinity:null,mNow=dLeft>0?r/dLeft:dLeft===0?(r?Infinity:0):null;
-  const el=dPlan&&state.start<today?Math.min(dPlan,days(state.start,add(today,-1),abs,s.name)||0):0,exp=dPlan?Math.round(a*el/dPlan):0,delta=f-exp;
-  const fin=r?finishDate(r,from,s):'',slack=fin&&end?(fin<=end?days(add(fin,1),end,abs,s.name):-days(add(end,1),fin,abs,s.name)):null;
-  let st,cls;if(!on){st='Fora da simulação';cls='muted'}else if(!end){st='Defina a entrega';cls='muted'}else if(!a){st='Sem designação';cls='muted'}else if(!r){st='Concluído';cls='ok'}else if(!dLeft){st='Prazo esgotado';cls='bad'}else if(mNow<=s.rate){st='No ritmo';cls='ok'}else if(mNow<=s.rate*1.25){st='Atenção';cls='warn'}else{st='Acima da capacidade';cls='bad'}
-  if(on){tA+=a;tF+=f;tR+=r;tRate+=+s.rate||0;tExp+=exp;}
-  const and=!dPlan||!a?'<span class="even">—</span>':state.start>=today?'<span class="even">não iniciou</span>':delta>0?'<span class="adv">+'+delta+' adiantado</span>':delta<0?'<span class="late">'+delta+' atrasado</span>':'<span class="even">em dia</span>';
+  const abs=s.excluded||[],a=+s.assigned||0,cor=PAL[i%PAL.length],on=s.included!==false;
+  const d=end?days(from,end,abs,s.name):null,m=d>0?a/d:d===0&&a?Infinity:null,cap=d===null?null:d*(+s.rate||0),gap=cap===null?null:Math.round((cap-a)*10)/10;
+  const fin=a?finishDate(a,from,s):'',slack=fin&&end?(fin<=end?days(add(fin,1),end,abs,s.name):-days(add(end,1),fin,abs,s.name)):null;
+  let st,cls;if(!on){st='Fora da simulação';cls='muted'}else if(!end){st='Defina a entrega';cls='muted'}else if(!a){st='Sem designação';cls='muted'}else if(!d){st='Sem dias úteis';cls='bad'}else if(m<=s.rate){st='Viável';cls='ok'}else if(m<=s.rate*1.25){st='Atenção';cls='warn'}else{st='Acima da capacidade';cls='bad'}
+  if(on){tA+=a;tRate+=+s.rate||0;tCap+=cap||0;}
   return '<tr data-id="'+esc(s.id)+'"><td><div class="c-name"><span class="dot" style="background:'+cor+'"></span><div><input type="text" data-key="name" value="'+esc(s.name)+'"><label class="toggleline"><input type="checkbox" data-key="included" '+(on?'checked':'')+'> participa</label></div></div></td>'
   +'<td><input class="in-n" type="number" min="0" data-key="assigned" value="'+a+'"><div class="share"><i style="width:'+(count?Math.min(100,a/count*100):0)+'%;background:'+cor+'"></i></div><small>'+(count?Math.round(a/count*100):0)+'% da sessão</small></td>'
-  +'<td><b>'+f+'</b> · '+r+'<small>feitas · restantes</small></td>'
-  +'<td>'+(dPlan===null?'—':dPlan)+' · '+(dLeft===null?'—':dLeft)+'<small>'+(abs.length?abs.length+' ausência(s)':'sem ausências')+'</small></td>'
-  +'<td class="meta"><b>'+perDay(mPlan)+'</b><small>'+(mPlan&&isFinite(mPlan)?'≈ '+String(Math.round(mPlan*5*10)/10).replace('.',',')+' por semana':'')+'</small></td>'
-  +'<td class="meta now '+(on&&a?cls:'')+'"><b>'+perDay(mNow)+'</b><small>'+(mNow&&isFinite(mNow)&&s.rate?Math.round(mNow/s.rate*100)+'% do ritmo':'')+'</small></td>'
+  +'<td>'+(d===null?'—':d)+'<small>'+(abs.length?abs.length+' ausência(s)':'sem ausências')+'</small></td>'
+  +'<td class="meta now '+(on&&a&&end?cls:'')+'"><b>'+perDay(m)+'</b><small>'+(m&&isFinite(m)?'≈ '+String(Math.round(m*5*10)/10).replace('.',',')+' por semana':'')+'</small></td>'
   +'<td><input class="in-n" type="number" min="0" step="0.5" data-key="rate" value="'+s.rate+'"><small>minutas/dia</small></td>'
-  +'<td>'+and+'<small>'+(dPlan&&a&&state.start<today?'esperado '+exp+' · feitas '+f:'')+'</small></td>'
-  +'<td>'+(r?(fin?fmt(fin):'—'):a?'concluído':'—')+'<small>'+(slack===null?'':slack>=0?slack+' út. de folga':(-slack)+' út. após a entrega')+'</small></td>'
+  +'<td>'+(cap===null?'—':Number(cap.toFixed(1)).toLocaleString('pt-BR'))+'<small>'+(m&&isFinite(m)&&s.rate?Math.round(m/s.rate*100)+'% do ritmo':'')+'</small></td>'
+  +'<td>'+(gap===null||!a?'—':gap>=0?'<span class="adv">+'+String(gap).replace('.',',')+' folga</span>':'<span class="late">'+String(-gap).replace('.',',')+' a mais</span>')+'</td>'
+  +'<td>'+(fin?fmt(fin):'—')+'<small>'+(slack===null?'':slack>=0?slack+' út. de folga':(-slack)+' út. após a entrega')+'</small></td>'
   +'<td><span class="st-pill '+cls+'">'+st+'</span></td>'
   +'<td style="white-space:nowrap"><button class="chipbtn" data-action="expand" title="Ausências">'+(s.expanded?'▾':'▸')+'</button><button class="chipbtn" data-action="remove" title="Remover servidor">×</button></td></tr>'
-  +(s.expanded?'<tr class="absences" data-id="'+esc(s.id)+'"><td colspan="11"><label>Ausências individuais de '+esc(s.name)+' (dd/mm/aaaa, uma por linha)<textarea data-key="excluded" rows="2">'+abs.map(fmt).join('\n')+'</textarea></label></td></tr>':'');
- }).join('')||'<tr><td colspan="11" class="muted">Adicione servidores para simular a designação.</td></tr>';
- const capDate=capacityDate(),tDelta=tF-tExp;
- $('staffFoot').innerHTML=state.staff.length?'<tr><td>Equipe ('+active.length+')</td><td>'+tA+'</td><td>'+tF+' · '+tR+'</td><td>'+(plan===null?'—':plan)+' · '+(overall===null?'—':overall)+'</td><td>'+(plan?perDay(tA/plan):'—')+'</td><td>'+(overall?perDay(tR/overall):'—')+'</td><td>'+String(tRate).replace('.',',')+'/dia</td><td>'+(state.start&&state.start<today&&plan?(tDelta>0?'+'+tDelta:tDelta)+' no total':'—')+'</td><td>'+(capDate?fmt(capDate):'—')+'</td><td colspan="2"></td></tr>':'';
+  +(s.expanded?'<tr class="absences" data-id="'+esc(s.id)+'"><td colspan="10"><label>Ausências individuais de '+esc(s.name)+' (dd/mm/aaaa, uma por linha)<textarea data-key="excluded" rows="2">'+abs.map(fmt).join('\n')+'</textarea></label></td></tr>':'');
+ }).join('')||'<tr><td colspan="10" class="muted">Adicione servidores para simular a designação.</td></tr>';
+ const capDate=capacityDate(),tGap=Math.round((tCap-tA)*10)/10;
+ $('staffFoot').innerHTML=state.staff.length?'<tr><td>Equipe ('+active.length+')</td><td>'+tA+'</td><td>'+(plan===null?'—':plan)+'</td><td>'+(plan?perDay(tA/plan):'—')+'</td><td>'+String(tRate).replace('.',',')+'/dia</td><td>'+(end?Number(tCap.toFixed(1)).toLocaleString('pt-BR'):'—')+'</td><td>'+(end?(tGap>=0?'+'+String(tGap).replace('.',',')+' folga':String(-tGap).replace('.',',')+' a mais'):'—')+'</td><td>'+(capDate?fmt(capDate):'—')+'</td><td colspan="2"></td></tr>':'';
  const alerts=[];if(unassigned<0)alerts.push('A soma das designações supera o total da sessão em '+(-unassigned)+' processo(s).');else if(unassigned>0)alerts.push(unassigned+' processo(s) sem designação'+(active.length?' — cerca de '+Math.ceil(unassigned/active.length)+' para cada servidor ativo.':'.'));if(count&&!state.start)alerts.push('Informe o início da produção para calcular metas e a entrega sugerida.');if(!state.deadline)alerts.push('Informe ou aplique a entrega das minutas para calcular as metas diárias.');
  $('simWarnings').innerHTML=alerts.map(s=>'<div class="note '+(unassigned<0?'warn':'')+'">'+esc(s)+'</div>').join('');
 }
@@ -226,9 +218,9 @@ UPDATE_ANTIGO = "$('suggestionExplanation').textContent=`${totalCount()} process
 UPDATE_NOVO = "$('suggestionExplanation').textContent=`${totalCount()} processos · ${active} servidor(es) ativo(s) · ritmo habitual de cada servidor · excluídos dias sem expediente e ausências.`;"
 
 
-# entrega sugerida: a partir de hoje (ou do início, se ainda não começou) e só com as minutas que faltam
+# entrega sugerida: a partir do início da produção (ou de hoje, se o início já passou)
 CAPACIDADE_ANTIGA = "function capacityDate(){const total=totalCount();if(!state.start||total===0)return '';let remaining=total;const active=state.staff.filter(s=>s.included!==false&&s.rate>0);if(!active.length)return '';for(let d=state.start,i=0;i<3660;d=add(d,1),i++){"
-CAPACIDADE_NOVA = "function capacityDate(){const total=totalCount();if(!state.start||total===0)return '';let remaining=total-state.staff.reduce((a,s)=>a+(+s.done||0),0);if(remaining<=0)return '';const active=state.staff.filter(s=>s.included!==false&&s.rate>0);if(!active.length)return '';for(let d=state.start>now()?state.start:now(),i=0;i<3660;d=add(d,1),i++){"
+CAPACIDADE_NOVA = "function capacityDate(){const total=totalCount();if(!state.start||total===0)return '';let remaining=total;const active=state.staff.filter(s=>s.included!==false&&s.rate>0);if(!active.length)return '';for(let d=state.start>now()?state.start:now(),i=0;i<3660;d=add(d,1),i++){"
 
 
 def aplicar(html: str) -> str:
@@ -246,7 +238,6 @@ def aplicar(html: str) -> str:
     if a < 0 or b < a:
         raise SystemExit("planejamento: funções renderTimeline/renderStaff não encontradas.")
     html = html[:a] + RENDER + html[b:]
-    troca(READHOST_ANTIGO, READHOST_NOVO, "readHost")
     troca(UPDATE_ANTIGO, UPDATE_NOVO, "update")
     troca(CAPACIDADE_ANTIGA, CAPACIDADE_NOVA, "capacidade")
     # "+ Nova sessão" e "Configurações" já existem na própria página da Seleção Prévia
