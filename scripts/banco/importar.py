@@ -14,7 +14,8 @@ Uso:
   reduzidos a um, prevalecendo o que veio por último, e o descarte é informado.
 - Acervo (gabA.acervo, exportado pelo Painel Central como acervo.json ou acervo.html): chave natural é o número
   do processo; vale a versão mais recente de cada processo (campo atualizado_em). O saneamento é refeito aqui:
-  processos sigilosos não entram, e celulares, telefones, e-mails e CPF são removidos (o repositório é público).
+  celulares, telefones, e-mails e CPF são removidos (o repositório é público). Processos sigilosos entram: as
+  informações sigilosas já vêm mascaradas (###) na planilha de origem.
 - Ao final, atualiza as referências usadas pelo catálogo (scripts/catalogo/ref/banco-atual.json e assuntos.json)
   e grava banco/README.md com as contagens.
 """
@@ -39,10 +40,11 @@ DESCR = {
     "jurisprudencia": "Jurisprudência de referência (temas, súmulas, precedentes qualificados)",
     "assuntos": "Catálogo de assuntos (TPU/CNJ, seções e sinônimos)",
     "redacao": "Padrão de redação: conectivos, verbos, preferências, correções e alertas",
-    "acervo": "Acervo geral de processos do gabinete (Painel Central), saneado: sem sigilosos, celulares e CPF",
+    "acervo": "Acervo geral de processos do gabinete (Painel Central), saneado: sem celulares, e-mails e CPF",
 }
-SANEAMENTO = "Sem processos sigilosos; sem celulares, telefones, e-mails e CPF (repositório público)."
-SENSIVEL = re.compile(r"celular|telefone|fone|whats|e-?mail|cpf|sigilo", re.I)
+SANEAMENTO = ("Sem celulares, telefones, e-mails e CPF (repositório público). Processos sigilosos incluídos: "
+              "as informações sigilosas já vêm mascaradas (###) na planilha de origem.")
+SENSIVEL = re.compile(r"celular|telefone|fone|whats|e-?mail|cpf", re.I)
 SIGILO_CAMPO = re.compile(r"sigil|segredo", re.I)
 NAO = re.compile(r"^(0|n[aã]o|n|false|p[uú]blico|-)$", re.I)
 SIM = re.compile(r"^(sim|s|true|1|x)$", re.I)
@@ -60,16 +62,13 @@ def sigiloso(r):
 
 
 def sanear_acervo(regs):
-    """Retira sigilosos e campos pessoais; garante id = acv-<20 dígitos>."""
+    """Retira campos pessoais (celular, telefone, e-mail, CPF); garante id = acv-<20 dígitos>."""
     limpos, fora = [], []
     for r in regs:
         proc = str(r.get("processo") or r.get("Processo") or "").strip()
         dig = re.sub(r"\D", "", proc)
         if len(dig) < 15:
             fora.append(("sem processo", proc or "?"))
-            continue
-        if sigiloso(r):
-            fora.append(("acv-" + dig, "sigiloso"))
             continue
         o = {"id": "acv-" + dig, "processo": proc}
         o.update({k: v for k, v in r.items() if k not in ("id", "processo", "Processo") and not k.startswith("_")
@@ -208,7 +207,7 @@ def leia_me():
     linhas += ["", "Para atualizar: exporte cada banco no app e rode `python3 scripts/construir.py ARQUIVOS.json`.",
                "", "O acervo (`acervo.json`) é atualizado pelo próprio Painel Central (`painel.html`): cada importação de planilha "
                "é encaminhada ao GitHub. Também aceita `python3 scripts/construir.py acervo.html` (ou `acervo.json`) exportado do painel. "
-               "Saneamento: sem processos sigilosos, celulares, telefones, e-mails e CPF."]
+               "Saneamento: sem celulares, telefones, e-mails e CPF; os sigilosos entram, já mascarados (###) na origem."]
     (BANCO / "README.md").write_text("\n".join(linhas) + "\n", encoding="utf-8")
 
 
@@ -224,11 +223,9 @@ def importar(arquivos, substituir=False):
                 if regs:
                     lotes.append((alvo, {**obj, "schema": f"gabA.{alvo}", "registros": regs}))
         elif nome == "acervo":
-            if obj.get("completo"):
-                print(f"{arq}: exportação COMPLETA do painel (com sigilosos) — será saneada antes de entrar no banco público")
             regs, fora = sanear_acervo(obj["registros"])
             if fora:
-                print(f"acervo: {len(fora)} registro(s) retirado(s) no saneamento (sigilosos ou sem processo)")
+                print(f"acervo: {len(fora)} registro(s) sem número de processo ignorado(s)")
             lotes.append((nome, {**obj, "registros": regs}))
         else:
             lotes.append((nome, obj))

@@ -13,7 +13,7 @@ banco/                 um arquivo por banco (é daqui que o construtor.html lê 
   redacao.json         padrão de redação: conectivos, verbos, preferências, correções, alertas
   paragrafos.json      parágrafos-modelo do gestor de parágrafos
   normas.json          normas: siglas, aliases e forma por extenso
-  acervo.json          acervo geral de processos do gabinete (Painel Central), saneado
+  acervo.json          acervo geral de processos do gabinete (Painel Central), inclusive sigilosos
 construtor.html        Construtor de Minutas
 painel.html            Painel Central (acervo · seleção · pauta), ligado a banco/acervo.json
 index.html             catálogo de acórdãos do TRF3 (visualização)
@@ -41,11 +41,9 @@ Os arquivos são reconhecidos pelo `schema`, não pelo nome; uma exportação co
 - **ao importar** uma planilha (Gab A - Acervo, Sigilosos ou PJe 2G), os processos alterados são carimbados e, com a opção ligada (padrão), encaminhados ao GitHub — basta informar um token com permissão *Contents: leitura e escrita*, que fica só na memória da aba. A mescla é por processo: entra o que é novo ou mais recente, nada é apagado (há um botão à parte para substituir o banco inteiro);
 - pelo botão **ACERVO · GITHUB** (canto inferior direito) também se exporta o banco como `acervo.json` ou `acervo.html` (tabela legível com o JSON embutido) e se importa qualquer um dos dois; importar atualiza o Acervo Central e, em seguida, o banco.
 
-**Processos sigilosos no HTML:** eles ficam normalmente no Acervo Central do navegador (planilha Gab A - Sigilosos). O botão **EXPORTAR HTML COMPLETO · COM SIGILOSOS (SÓ LOCAL)** gera `acervo-completo-SIGILOSO-<data>.html`, com todos os processos e campos, marcado como uso interno; reimportado no painel, restaura também os sigilosos. Esse arquivo nunca vai ao GitHub: o envio do painel e o `importar.py` continuam retirando sigilosos, celulares e CPF.
-
 No repositório, o mesmo arquivo exportado entra por `python3 scripts/construir.py acervo.html` (ou `acervo.json`), com a mesma regra: prevalece a versão mais recente de cada processo.
 
-**Saneamento** (o repositório é público): processos sigilosos (`Consta_Acervo_Sigiloso`, `Nível_Sigilo` ou campo de segredo preenchido) não entram, e campos de celular, telefone, e-mail e CPF são removidos — no painel e de novo no `importar.py`.
+**Saneamento** (o repositório é público): campos de celular, telefone, e-mail e CPF são removidos — no painel e de novo no `importar.py`. Os processos **sigilosos entram** no banco (com `Consta_Acervo_Sigiloso` e `Nível_Sigilo`), porque a planilha Gab A - Sigilosos já mascara as informações sigilosas com `###`.
 
 Para atualizar o painel com uma versão nova baixada do app: `python3 scripts/painel/montar.py Painel_Central_….html` (reinjeta `scripts/painel/acervo-github.js` e regrava `painel.html`).
 
