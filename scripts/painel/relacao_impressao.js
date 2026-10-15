@@ -6,16 +6,16 @@
     const nImp = rows.filter(r => /⚠/.test(r.observacoes || "")).length, nMeta = conta("meta");
     const agora = new Date(), gerado = agora.toLocaleDateString("pt-BR") + " · " + agora.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
     const rotItem = itemHead === "ITEM" ? "Item" : "Item de pauta";
-    // blocos: cabeçalho de grupo (assunto; AI e ED em blocos próprios ao final) + linhas
-    const grupoDe = r => r.grupo === "ed" ? "Embargos de declaração" : r.grupo === "ai" ? "Agravos de instrumento" : (vazio(r.assunto) ? "Assunto não informado" : r.assunto);
+    // blocos: título = Seção Competente (AI e ED em blocos próprios ao final, também por seção) + linhas
+    const secaoDe = r => vazio(r.secao) ? "Seção não informada" : r.secao;
+    const grupoDe = r => r.grupo === "ed" ? "Embargos de declaração — " + secaoDe(r) : r.grupo === "ai" ? "Agravos de instrumento — " + secaoDe(r) : secaoDe(r);
     const blocos = []; let atual = null;
     rows.forEach(r => { const g = grupoDe(r); if (!atual || atual.g !== g) { atual = { g, tipo: r.grupo || "", rows: [] }; blocos.push(atual); } atual.rows.push(r); });
     const curtaMeta = t => { const m = /meta\s*(\d+[a-z]?)/i.exec(t); return m ? "META " + m[1].toUpperCase() : t; };
     const linha = (r, k) => {
       const obs = vazio(r.observacoes) ? "" : String(r.observacoes).split("\n").map(o => o.trim()).filter(Boolean).map(o => /^⚠/.test(o) ? `<span class="alerta">⚠ ${esc(o.replace(/^⚠\s*/, ""))}</span>` : `<span>${esc(o.replace(/^•\s*/, ""))}</span>`).join("");
       const tema = vazio(r.tema) ? "" : `<b>${esc(r.tema)}</b>`, espec = vazio(r.especificidades) ? "" : `<i>${esc(r.especificidades)}</i>`;
-      const assuntoExtra = r.grupo && !vazio(r.assunto) ? `<i class="ass">${esc(r.assunto)}</i>` : "";
-      return `<div class="rw${k % 2 ? " par" : ""}${r.grupo ? " g-" + r.grupo : ""}"><div class="c-item">${esc(r.item)}</div><div class="c-proc">${esc(r.processo)}</div><div class="c-ind">${(r.ind || []).map(b => `<span class="b b-${b.k}" title="${esc(b.k === "meta" ? b.s : b.t)}">${esc(b.k === "meta" ? curtaMeta(b.s) : b.s)}</span>`).join("")}</div><div class="c-tema">${tema || assuntoExtra || espec ? [tema, assuntoExtra, espec].filter(Boolean).join("") : '<span class="tr">—</span>'}</div><div class="c-obs">${obs || '<span class="tr">—</span>'}</div></div>`;
+      return `<div class="rw${k % 2 ? " par" : ""}${r.grupo ? " g-" + r.grupo : ""}"><div class="c-item">${esc(r.item)}</div><div class="c-proc">${esc(r.processo)}</div><div class="c-ind">${(r.ind || []).map(b => `<span class="b b-${b.k}" title="${esc(b.k === "meta" ? b.s : b.t)}">${esc(b.k === "meta" ? curtaMeta(b.s) : b.s)}</span>`).join("")}</div><div class="c-ass">${vazio(r.assunto) ? '<span class="tr">—</span>' : esc(r.assunto)}</div><div class="c-tema">${tema || espec ? [tema, espec].filter(Boolean).join("") : '<span class="tr">—</span>'}</div><div class="c-obs">${obs || '<span class="tr">—</span>'}</div></div>`;
     };
     let k = 0;
     const corpo = blocos.map(b => `<div class="gh${b.tipo ? " gh-" + b.tipo : ""}" data-g="${esc(b.g)}"><span class="gt">${esc(b.g)}</span><span class="gn">${b.rows.length} processo${b.rows.length > 1 ? "s" : ""} · ${esc(b.rows[0].item)}${b.rows.length > 1 ? "–" + esc(b.rows[b.rows.length - 1].item) : ""}</span></div>` + b.rows.map(r => linha(r, k++)).join("")).join("");
@@ -24,7 +24,7 @@
     const n1 = rows.filter(r => r.pend1).length, nEd = conta("ed");
     const resumo = [chip(rows.length, rows.length === 1 ? "processo" : "processos"), chip(n1, "1º julgamento", "k-1j"), chip(nEd, "ED", "k-ed"),
       chip(nMeta, "com meta" + (metaTipos.size ? ": " + [...metaTipos.entries()].sort((x, y) => x[0].localeCompare(y[0], "pt-BR", { numeric: true })).map(([t, n]) => `${esc(t)} (${n})`).join(" · ") : ""), "k-meta")].join("");
-    const colhead = `<div class="ch"><div>${itemHead === "ITEM" ? "Item" : "Item"}</div><div>Processo</div><div>Ind.</div><div>Tema · especificidade</div><div>Observações</div></div>`;
+    const colhead = `<div class="ch"><div>${itemHead === "ITEM" ? "Item" : "Item"}</div><div>Processo</div><div>Ind.</div><div>Assunto</div><div>Tema · especificidade</div><div>Observações</div></div>`;
     const layout = () => {
       const fonte = document.getElementById("fonte"), paginas = document.getElementById("paginas"), status = document.getElementById("status");
       const banda = fonte.querySelector(".banda"), legenda = fonte.querySelector(".legenda"), corrente = fonte.querySelector(".corrente"), ch = fonte.querySelector(".ch"), rodape = fonte.querySelector(".rodape");
@@ -80,7 +80,7 @@
       .pg{position:relative;width:210mm;height:296.5mm;padding:4mm 4.5mm 0;overflow:hidden;background:#fff;break-after:page;page-break-after:always}
       .pg:last-child{break-after:auto;page-break-after:auto}
       .oficina{position:absolute;left:-10000px;top:0;visibility:hidden}
-      .doc{height:calc(296.5mm - 4mm - 7.5mm);overflow:hidden;font-size:calc(9.4px * var(--k,1));line-height:1.25}
+      .doc{height:calc(296.5mm - 4mm - 7.5mm);overflow:hidden;font-size:calc(9.4px * var(--k,1));line-height:1.16}
       .banda{display:flex;align-items:baseline;gap:.4em .9em;flex-wrap:nowrap;padding:0 .2em .3em;border-bottom:1.5px solid #1f3d63;margin-bottom:.3em;overflow:hidden;background:none;color:#1d2733}
       .banda .tit{display:flex;align-items:baseline;gap:.6em;min-width:0}
       .banda .sobre{font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:#d9a441;font-weight:800;white-space:nowrap}
@@ -90,33 +90,33 @@
       .kpis{display:flex;flex-wrap:nowrap;gap:.3em;min-width:0;overflow:hidden;margin-left:auto}.legenda{display:none!important}
       .kpi{display:inline-flex;align-items:baseline;gap:.28em;padding:0;border-radius:0;background:none;font-size:.82em;color:#5c6b7e;white-space:nowrap}.kpi+.kpi::before{content:"·";color:#b3bdc9;margin-right:.55em}
       .kpi b{font-size:1.08em;font-weight:800;color:#1f3d63}
-      .kpi.k-ed b{color:#8a5200}.kpi.k-meta b{color:#17643a}.kpi.k-1j b{color:#1f3d63}
+      .kpi.k-ed b{color:#7d5a17}.kpi.k-meta b{color:#2d6655}.kpi.k-1j b{color:#1f3d63}
       .legenda{font-size:.74em;color:#55657a;display:flex;flex-wrap:wrap;gap:.2em .9em;align-items:center;padding:0 .2em .35em}
       .legenda .b{margin-right:.25em}
       .corrente{display:flex;justify-content:space-between;align-items:baseline;padding:0 .2em .3em;border-bottom:2px solid #1f3d63;margin-bottom:.3em;font-size:.92em}
       .corrente b{color:#1f3d63;font-weight:800}.corrente span{color:#6b7a8c;font-size:.9em}
-      .ch,.rw{display:grid;grid-template-columns:3.2em 16em 5.2em minmax(0,1.2fr) minmax(0,1fr);column-gap:.7em;align-items:baseline}
+      .ch,.rw{display:grid;grid-template-columns:3em 15.6em 5em minmax(0,1.05fr) minmax(0,.9fr) minmax(0,1fr);column-gap:.7em;align-items:baseline}
       .ch{padding:.35em .5em;font-size:.74em;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#5c6b7e;border-bottom:1px solid #c9d3df}
       .ch div:first-child{text-align:center}
-      .gh{display:flex;justify-content:space-between;align-items:baseline;margin-top:.4em;padding:.26em .5em .24em;border-left:.32em solid #1f3d63;background:#eef3f8;break-after:avoid}
+      .gh{display:flex;justify-content:space-between;align-items:baseline;margin-top:.3em;padding:.14em .5em;border-left:.32em solid #1f3d63;background:#eef3f8;break-after:avoid}
       .gh .gt{font-weight:800;color:#1f3d63;font-size:1.02em}
       .gh .gn{font-size:.8em;color:#5c6b7e;font-weight:600}
-      .gh-ai{border-left-color:#2563a8;background:#e8f2fd}.gh-ai .gt{color:#1d4f86}
-      .gh-ed{border-left-color:#b26a00;background:#fff3e0}.gh-ed .gt{color:#8a5200}
-      .rw{padding:.26em .5em;border-bottom:1px solid #e6ebf1;break-inside:avoid}
+      .gh-ai{border-left-color:#5f86aa;background:#eef3f8}.gh-ai .gt{color:#2c5274}
+      .gh-ed{border-left-color:#c49a45;background:#faf5ea}.gh-ed .gt{color:#7d5a17}
+      .rw{padding:.1em .45em;border-bottom:1px solid #e6ebf1;break-inside:avoid}
       .rw.par{background:#fafbfd}
       .c-item{text-align:center;font-weight:800;font-size:1.08em;color:#1f3d63;font-variant-numeric:tabular-nums}
       .c-proc{font-weight:700;letter-spacing:-.01em;white-space:nowrap;font-variant-numeric:tabular-nums;font-size:1.02em}
       .c-ind{display:flex;flex-wrap:wrap;gap:.2em;align-self:start;padding-top:.05em}
-      .c-tema,.c-obs{min-width:0;overflow-wrap:anywhere}
+      .c-ass,.c-tema,.c-obs{min-width:0;overflow-wrap:anywhere}.c-ass{color:#24384f}
       .c-tema b{font-weight:650;color:#24384f}.c-tema i{font-style:normal;color:#6b7a8c;font-size:.94em}.c-tema i.ass{color:#40566e}
       .c-tema b+i::before{content:" — ";color:#a3afbd}.c-tema i+i::before{content:" · ";color:#a3afbd}
       .c-obs span{color:#2f3d4d}.c-obs span+span::before{content:" · ";color:#a3afbd;font-weight:400}
       .c-obs span.alerta{color:#a12626;font-weight:700}.c-obs span.alerta::after{content:""}
       .tr{color:#b3bdc9}
       .b{display:inline-block;padding:.08em .42em;border-radius:.35em;font-size:.78em;font-weight:800;letter-spacing:.02em;line-height:1.3;border:1px solid;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
-      .b-ed{background:#fff0d6;border-color:#e0a24a;color:#7a4700}.b-agint{background:#f0e8ff;border-color:#a888e0;color:#4b2a8c}
-      .b-ai{background:#e3f0ff;border-color:#7fb0e6;color:#1d4f86}.b-meta{background:#e0f6e8;border-color:#7cc89a;color:#17643a}
+      .b-ed{background:#f6eedc;border-color:#d8bd83;color:#7d5a17}.b-agint{background:#f1ebf4;border-color:#c9b3d4;color:#62466f}
+      .b-ai{background:#e9f0f6;border-color:#adc3d7;color:#2c5274}.b-meta{background:#e7f1ee;border-color:#a7cabd;color:#2d6655}
       .rodape{position:absolute;left:4.5mm;right:4.5mm;bottom:2.2mm;height:4.2mm;display:flex;justify-content:space-between;align-items:flex-end;font-size:7px;color:#8a97a6;border-top:1px solid #e3e8ee;padding-top:.4mm;white-space:nowrap;overflow:hidden}
       @media screen{body{background:#dfe4ea}#paginas{display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px 0 30px}.pg{box-shadow:0 2px 14px rgba(15,42,71,.18)}}
       @media print{.barra{display:none!important}#paginas{padding:0}.pg{box-shadow:none}}`;

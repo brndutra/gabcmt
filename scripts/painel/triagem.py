@@ -548,7 +548,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     return { cols: cols.map(c => ({ key: c, label: c, cls: longas.has(c) ? "quebra" : "" })),
       linhas: porLinha.map(({ r, f, m }) => ({ r, vals: [...base.map(([c, fn]) => ({ key: c, v: txt(fn(r, f)) || "—", cls: longas.has(c) ? "quebra" : "" })), ...dados.map(c => ({ key: c, v: m[c] || "—", cls: "" }))] })) };
   }
-  /* ordem da relação: Assunto › Tema › Especificidade; agravos de instrumento e, por último, embargos de declaração ao final */
+  /* ordem da relação: Seção Competente › Assunto › Tema › Especificidade; agravos de instrumento e, por último, embargos de declaração ao final */
   cardGrupo(r) {
     const sig = this.cardClasse(r).sigla, q = this.sourceTags(r).map(x => this.cardQualifica(x));
     if (sig === "ED" || q.includes("EMBARGOS DE DECLARAÇÃO")) return 2;
@@ -556,7 +556,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     return 0;
   }
   cardOrdenar(itens) {
-    const chave = new Map(itens.map(x => { const r = x.r; return [x, [this.cardGrupo(r), canon(this.cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal)) || "~", canon(this.triLista(r, "Tema")[0] || "") || "~", canon(this.triLista(r, "Especificidades")[0] || "") || "~", Number(r._preOrder) || 0, txt(r.Processo)]]; }));
+    const chave = new Map(itens.map(x => { const r = x.r; return [x, [this.cardGrupo(r), (() => { try { return canon(this.secaoCompetente(r)) || "~"; } catch (e) { return "~"; } })(), canon(this.cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal)) || "~", canon(this.triLista(r, "Tema")[0] || "") || "~", canon(this.triLista(r, "Especificidades")[0] || "") || "~", Number(r._preOrder) || 0, txt(r.Processo)]]; }));
     const cmp = (a, b) => { const A = chave.get(a), B = chave.get(b); for (let k = 0; k < A.length; k++) { if (A[k] === B[k]) continue; return typeof A[k] === "number" ? A[k] - B[k] : String(A[k]).localeCompare(String(B[k]), "pt-BR"); } return 0; };
     return itens.slice().sort(cmp);
   }
@@ -587,7 +587,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
     return { item: item === undefined || item === null ? "" : item, processo: txt(r.Processo) || txt(r.processo), ind, indTxt: ind.map(b => b.s).join(" · "),
       assunto: this.cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal) || "—",
       tema: this.triLista(r, "Tema").join(" · ") || txt(r.Tema) || "—", especificidades: this.triLista(r, "Especificidades").join(" · "),
-      grupo: ["", "ai", "ed"][this.cardGrupo(r)] || "", pend1: (() => { try { return this.cardInfo(r).pendente === true; } catch (e) { return false; } })(), observacoes: obs.join("\n") || "—" };
+      grupo: ["", "ai", "ed"][this.cardGrupo(r)] || "", secao: (() => { try { return txt(this.secaoCompetente(r)); } catch (e) { return txt(r["Seção Competente"]); } })() || "Seção não informada", pend1: (() => { try { return this.cardInfo(r).pendente === true; } catch (e) { return false; } })(), observacoes: obs.join("\n") || "—" };
   }
   relOrdenarPorItem(linhas) {
     const n = v => { const x = parseFloat(String(v).replace(",", ".")); return isNaN(x) ? Infinity : x; };
