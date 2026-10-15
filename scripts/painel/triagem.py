@@ -94,7 +94,7 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-cx-mini{flex:0 0 auto;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:10.5px;font-weight:800;font-family:"Times New Roman",Georgia,serif}
     .tri-faixa-corpo{display:grid;gap:10px;padding:10px 12px 12px;border-top:1px solid #efe7d2}
     .tri-fx-l1{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:stretch}
-    .tri-fx-l2{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:10px}
+    .tri-fx-l2{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.15fr);gap:10px}
     .tri-fx-rot{display:block;font-size:8.5px;font-weight:900;letter-spacing:.08em;color:#7e8b99;margin-bottom:5px}
     .tri-cx{display:grid;gap:4px}
     .tri-cx-op{display:flex;align-items:center;gap:8px;border:1px solid #e3e7ec;background:#fff;border-radius:8px;padding:4px 12px 4px 5px;font:inherit;font-size:11.5px;font-weight:650;color:#3d4c5c;cursor:pointer;text-align:left;min-width:150px}
@@ -105,6 +105,10 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-fx-sintese:focus{border-color:#1f3d63}
     .tri-fx-caixa{border:1px solid #e3e7ec;border-radius:10px;background:#fff;padding:8px 9px;min-width:0;display:flex;flex-direction:column}
     .tri-fx-caixa.alvo{border-color:#d9a441;background:#fffaf0;box-shadow:inset 0 0 0 1px #d9a441}
+    .tri-fx-caixa.obs{border-top:3px solid #4a8f74}
+    .tri-fx-obs{flex:1;min-height:96px;width:100%;resize:vertical;border:1px solid #e3e7ec;border-radius:8px;background:#fbfdfc;padding:7px 9px;font:inherit;font-size:11.5px;line-height:1.55;color:#14263c;outline:none;white-space:pre-wrap}
+    .tri-fx-obs:focus{border-color:#4a8f74;background:#fff}
+    .tri-chip button.o{color:#2f6b52}
     .tri-fx-caixa.tema{border-top:3px solid #2f6690}.tri-fx-caixa.esp{border-top:3px solid #7a5ba6}.tri-fx-caixa.etq{border-top:3px solid #d9a441}
     .tri-fx-chips{display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start;min-height:30px;max-height:150px;overflow:auto;flex:1}
     .tri-fx-chips em{font-style:normal;font-size:10.5px;color:#98a4b0}
@@ -122,6 +126,50 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-fx-ctrl>div{background:#fff;min-width:0}
     .tri-fx-ctrl .cab{color:#6d7b8a;font-size:9px;font-weight:800;letter-spacing:.04em;padding:5px 8px}
     @media(max-width:1100px){.tri-fx-l1,.tri-fx-l2{grid-template-columns:minmax(0,1fr)}}
+    /* bandeja integrada ao móvel de escaninhos */
+    .tri-int-corpo{display:grid;grid-template-columns:300px minmax(0,1fr);align-items:stretch;min-width:0}
+    .tri-int .tri-bandeja{position:static;border:0;border-right:1px solid #e3e7ec;border-radius:0;box-shadow:none;display:flex;flex-direction:column;min-width:0;background:#fbfcfd}
+    .tri-int .tri-band-topo{background:transparent}
+    .tri-int .tri-band-lista{max-height:560px;min-height:260px;flex:1}
+    .tri-int-nichos{min-width:0}
+    .tri-topo-num{font-size:10.5px;color:#6d7b8a}.tri-topo-num b{color:#14263c}
+    .tri-int .tri-aberto{margin:0 14px 14px}
+    .tri-int .tri-aberto{border-top:1px solid #d6e0ea}
+    /* cabeçalho do escaninho aberto */
+    .tri-aberto-topo{border-top:4px solid #2f6690}
+    .tri-ab-id{display:flex;align-items:center;gap:10px;min-width:0;flex:0 1 auto}
+    .tri-ab-pasta{flex:0 0 auto;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:17px}
+    .tri-ab-t{font-size:15px;font-weight:850;color:#14263c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:360px}
+    .tri-ab-s{font-size:11px;font-weight:600;color:#6d7b8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:360px}
+    .tri-ab-chip{flex:0 0 auto;font-size:10px;font-weight:850;color:#33506e;background:#fff;border:1px solid #d6e0ea;border-radius:99px;padding:3px 9px;white-space:nowrap}
+    .tri-ab-ferr{display:flex;align-items:center;gap:6px;flex-wrap:wrap;flex:0 0 auto;margin-left:auto}
+    .tri-seg{display:flex;gap:2px;background:#e3eaf2;border-radius:9px;padding:3px}
+    .tri-seg button{border:0;background:transparent;border-radius:7px;padding:6px 11px;font-size:10.5px;font-weight:850;color:#5c6a78;cursor:pointer;white-space:nowrap}
+    .tri-seg button.on{background:#fff;color:#1f3d63;box-shadow:0 1px 2px rgba(20,38,60,.14)}
+    .tri-ab-btn{display:inline-flex;align-items:center;gap:5px;height:32px;border:1px solid #d6e0ea;border-radius:9px;background:#fff;color:#1f3d63;padding:0 11px;font-size:10.5px;font-weight:850;cursor:pointer;white-space:nowrap}
+    .tri-ab-btn:hover{border-color:#9fb3c9}
+    .tri-ab-btn.on{background:#1f3d63;border-color:#1f3d63;color:#fff}
+    .tri-ab-btn.ouro{background:#d9a441;border-color:#d9a441;color:#33240a}
+    .tri-ab-btn.perigo{color:#a64f35}.tri-ab-btn.perigo:hover{border-color:#e2b3a5;background:#fdf3f0}
+    .tri-ab-btn.icone{width:32px;justify-content:center;padding:0;font-size:14px}
+    .tri-aberto-topo .tri-config-resumo{flex:1 1 160px;min-width:0}
+    /* modo planilha */
+    .tri-plan-wrap{overflow:auto;max-height:72vh;border:1px solid #dfe6ee;border-radius:10px;background:#fff}
+    .tri-plan{display:table;width:100%;border-collapse:collapse;min-width:1180px;font-size:11.5px}
+    .tri-plan-tr{display:table-row}
+    .tri-plan-tr>*{display:table-cell;padding:7px 8px;border-bottom:1px solid #eef1f4;vertical-align:top;color:#3d4c5c;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .tri-plan-tr.cab>span{position:sticky;top:0;z-index:1;background:#f4f6f9;color:#5c6a78;font-size:8.5px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;padding:8px;border-bottom:1px solid #e3e7ec}
+    .tri-plan-tr>.quebra{white-space:normal;min-width:120px}
+    .tri-plan-tr>.obs{white-space:pre-line;font-size:11px}
+    .tri-plan-tr:not(.cab):hover>*{background:#fafcfe}
+    .tri-plan b.num{display:block;font:600 11.5px "IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace;color:#14263c}
+    .tri-plan .c>i{display:block;font-style:normal;font-size:10px;color:#7e8b99}
+    .tri-plan em{font-style:normal;display:inline-block;padding:3px 8px;border-radius:99px;font-size:9px;font-weight:850}
+    .tri-plan .acoes{white-space:nowrap;text-align:right}
+    .tri-plan-cx{display:inline-flex;gap:3px}
+    .tri-plan-cx button{width:22px;height:22px;border-radius:50%;border:1px solid #e3e7ec;background:#f4f6f9;color:#a4afba;font:800 11.5px "Times New Roman",Georgia,serif;cursor:pointer;padding:0}
+    .tri-plan-cx button.on{background:var(--c);border-color:var(--c);color:#fff}
+    .tri-plan-cx button:hover{border-color:var(--c);color:var(--c)}.tri-plan-cx button.on:hover{color:#fff}
     .tri-campo{display:grid;gap:4px;margin-bottom:9px}
     .tri-campo label{font-size:9px;font-weight:900;letter-spacing:.08em;color:#6d7b8a}
     .tri-campo input,.tri-campo textarea{width:100%;border:1px solid #d6e0ea;border-radius:9px;background:#fff;color:#14263c;padding:8px 10px;font:inherit;font-size:12.5px;outline:none}
@@ -133,7 +181,7 @@ CSS = """    .tri-page{display:grid;gap:14px;min-width:0}
     .tri-guardado .num{font:600 12px "IBM Plex Mono",ui-monospace,SFMono-Regular,Consolas,monospace}
     .tri-guardado .meta{font-size:10.5px;color:#6d7b8a}
     .tri-icone{border:1px solid #dfe6ee;background:#fff;border-radius:7px;padding:3px 8px;font-size:12px;font-weight:900;cursor:pointer;color:#1f3d63}
-    @media(max-width:1100px){.tri-aberto-topo{flex-wrap:wrap}.tri-config{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pcard-topo{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pc-acoes{padding:8px 12px}.tri-grid{grid-template-columns:minmax(0,1fr)}.tri-bandeja{position:static}.tri-band-lista{max-height:340px}.tri-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-aberto-corpo{grid-template-columns:minmax(0,1fr)}}
+    @media(max-width:1100px){.tri-aberto-topo{flex-wrap:wrap}.tri-config{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pcard-topo{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-pc-acoes{padding:8px 12px}.tri-grid{grid-template-columns:minmax(0,1fr)}.tri-bandeja{position:static}.tri-int-corpo{grid-template-columns:minmax(0,1fr)}.tri-int .tri-bandeja{border-right:0;border-bottom:1px solid #e3e7ec}.tri-fx-l2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.tri-band-lista{max-height:340px}.tri-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.tri-aberto-corpo{grid-template-columns:minmax(0,1fr)}}
 """
 
 BTN = "border:1px solid #d8dee5;border-radius:8px;background:#fff;color:#1f3d63;padding:6px 10px;font-size:10px;font-weight:850;cursor:pointer;white-space:nowrap"
@@ -149,63 +197,74 @@ MARKUP = """
           <div class="tri-kpi"><span>NA BANDEJA</span><b style="KPI_B">{{ triSemEsc }}</b></div>
           <div class="tri-kpi"><span>ESCANINHOS</span><b style="KPI_B">{{ triEscCount }}</b></div>
         </div>
-        <div class="tri-grid">
-          <aside class="tri-bandeja" aria-label="Bandeja da triagem">
-            <div class="tri-band-topo">
-              <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:12.5px;font-weight:900;letter-spacing:.06em;color:#14263c">BANDEJA DA TRIAGEM</span><span style="font-size:10px;font-weight:800;color:#6d7b8a">{{ triBandejaCount }} na bandeja</span></div>
-              <input value="{{ triSearch }}" sc-camel-on-input="{{ onTriSearch }}" placeholder="Buscar processo, classe, assunto, tarefa…" aria-label="Buscar na bandeja">
-              <div class="tri-mover">
-              <sc-raw-select value="{{ triTarget }}" sc-camel-on-change="{{ onTriTarget }}" aria-label="Escaninho de destino" title="Escaninho de destino">
-                <option value="">Escaninho de destino…</option>
-                <sc-for list="{{ triTargetOptions }}" as="o"><option value="{{ o.value }}">{{ o.label }}</option></sc-for>
-              </sc-raw-select>
-              <button class="tri-mover-btn" sc-camel-on-click="{{ triMoverMarcados }}" disabled="{{ triMoverOff }}" title="Mover os processos marcados para o escaninho escolhido" aria-label="Mover os processos marcados para o escaninho escolhido"><span aria-hidden="true">🗂</span><span aria-hidden="true" style="font-size:13px">➜</span><b>{{ triSelCount }}</b></button>
-            </div>
-            </div>
-            <div class="tri-band-lista">
-              <sc-for list="{{ triFichas }}" as="p" hint-placeholder-count="4">
-                <div class="tri-ficha {{ p.cls }}" draggable="true" data-tri-ficha="{{ p.id }}" title="Arraste para um escaninho, ou marque e clique no escaninho">
-                  <input type="checkbox" checked="{{ p.sel }}" sc-camel-on-change="{{ p.toggle }}" aria-label="Marcar processo" style="margin:2px 0 0;width:15px;height:15px;accent-color:#1f3d63;cursor:pointer">
-                  <div style="min-width:0"><div class="num">{{ p.proc }}</div><div class="meta">{{ p.classe }} · {{ p.assunto }}</div><div><span class="tri-tag">{{ p.tarefa }}</span><sc-for list="{{ p.tags }}" as="t"><span class="tri-tag ouro">{{ t.label }}</span></sc-for></div></div>
-                </div>
-              </sc-for>
-              <sc-if value="{{ triBandejaVazia }}"><div style="padding:26px 10px;text-align:center;color:#7e8b99;font-size:12px;line-height:1.5">{{ triBandejaMsg }}</div></sc-if>
-              <sc-if value="{{ triTruncated }}"><div style="font-size:10.5px;color:#7e8b99;text-align:center">{{ triTruncMsg }}</div></sc-if>
-            </div>
-            <div class="tri-band-pe">
-              <span style="font-weight:800;color:{{ triClearFg }}">{{ triSelCount }} marcado(s)</span>
-              <span style="display:flex;gap:5px;flex-wrap:wrap"><button sc-camel-on-click="{{ triSelectAll }}" style="BTN">Marcar todos</button><button sc-camel-on-click="{{ triClearSel }}" style="BTN">Limpar</button><button sc-camel-on-click="{{ removeFromTriagem }}" title="Devolver os marcados ao acervo (saem da triagem)" style="BTN;color:#a64f35">Remover da triagem</button></span>
-            </div>
-          </aside>
-
-          <section class="tri-movel" aria-label="Móvel de escaninhos">
+          <section class="tri-movel tri-int" aria-label="Gabinete A · Escaninhos">
             <div class="tri-movel-topo">
-              <span class="tri-placa-mestra"><i></i>GABINETE A · ESCANINHOS<i></i></span>
-              <span style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ triFiltros }}" as="f"><button class="tri-filtro {{ f.cls }}" sc-camel-on-click="{{ f.pick }}">{{ f.label }}</button></sc-for></span>
+              <span class="tri-placa-mestra">GABINETE A · ESCANINHOS</span>
+              <span class="tri-topo-num"><b>{{ triBandejaCount }}</b> na bandeja · <b>{{ triInEsc }}</b> em {{ triEscCount }} escaninho(s)</span>
+              <span style="display:flex;gap:6px;flex-wrap:wrap;margin-left:auto"><sc-for list="{{ triFiltros }}" as="f"><button class="tri-filtro {{ f.cls }}" sc-camel-on-click="{{ f.pick }}">{{ f.label }}</button></sc-for></span>
             </div>
-            <div class="tri-dica">{{ triDica }}</div>
-            <div class="tri-grade">
-              <sc-for list="{{ triEscaninhos }}" as="e" hint-placeholder-count="3">
-                <button class="tri-nicho {{ e.cls }}" data-tri-esc="{{ e.key }}" sc-camel-on-click="{{ e.click }}" aria-label="{{ e.aria }}" title="{{ e.title }}">
-                  <sc-if value="{{ e.hasObs }}"><span class="tri-bilhete">{{ e.obs }}</span></sc-if>
-                  <span class="tri-contador">{{ e.count }}</span>
-                  <span class="tri-pilha"><sc-for list="{{ e.layers }}" as="l"><span class="tri-folha" style="bottom:{{ l.b }}px"></span></sc-for><sc-if value="{{ e.hasCapa }}"><span class="tri-capa" style="background:{{ e.cor }};bottom:{{ e.capaB }}px"></span></sc-if></span>
-                  <sc-if value="{{ e.vazio }}"><span class="tri-vazio-nicho">vazio · solte autos aqui</span></sc-if>
-                  <span class="tri-placa" style="border-left-color:{{ e.cor }}"><span class="t">{{ e.titulo }}</span><sc-if value="{{ e.hasSub }}"><span class="s">{{ e.subLabel }}</span></sc-if></span>
-                </button>
-              </sc-for>
-              <button class="tri-nicho novo" sc-camel-on-click="{{ newEscaninho }}"><span><span style="display:block;font-size:24px;line-height:1">+</span><span style="font-size:10px;font-weight:850;letter-spacing:.08em">NOVO ESCANINHO</span></span></button>
+            <div class="tri-int-corpo">
+            <aside class="tri-bandeja" aria-label="Bandeja da triagem">
+              <div class="tri-band-topo">
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:12.5px;font-weight:900;letter-spacing:.06em;color:#14263c">BANDEJA DA TRIAGEM</span><span style="font-size:10px;font-weight:800;color:#6d7b8a">{{ triBandejaCount }} na bandeja</span></div>
+                <input value="{{ triSearch }}" sc-camel-on-input="{{ onTriSearch }}" placeholder="Buscar processo, classe, assunto, tarefa…" aria-label="Buscar na bandeja">
+                <div class="tri-mover">
+                <sc-raw-select value="{{ triTarget }}" sc-camel-on-change="{{ onTriTarget }}" aria-label="Escaninho de destino" title="Escaninho de destino">
+                  <option value="">Escaninho de destino…</option>
+                  <sc-for list="{{ triTargetOptions }}" as="o"><option value="{{ o.value }}">{{ o.label }}</option></sc-for>
+                </sc-raw-select>
+                <button class="tri-mover-btn" sc-camel-on-click="{{ triMoverMarcados }}" disabled="{{ triMoverOff }}" title="Mover os processos marcados para o escaninho escolhido" aria-label="Mover os processos marcados para o escaninho escolhido"><span aria-hidden="true">🗂</span><span aria-hidden="true" style="font-size:13px">➜</span><b>{{ triSelCount }}</b></button>
+              </div>
+              </div>
+              <div class="tri-band-lista">
+                <sc-for list="{{ triFichas }}" as="p" hint-placeholder-count="4">
+                  <div class="tri-ficha {{ p.cls }}" draggable="true" data-tri-ficha="{{ p.id }}" title="Arraste para um escaninho, ou marque e clique no escaninho">
+                    <input type="checkbox" checked="{{ p.sel }}" sc-camel-on-change="{{ p.toggle }}" aria-label="Marcar processo" style="margin:2px 0 0;width:15px;height:15px;accent-color:#1f3d63;cursor:pointer">
+                    <div style="min-width:0"><div class="num">{{ p.proc }}</div><div class="meta">{{ p.classe }} · {{ p.assunto }}</div><div><span class="tri-tag">{{ p.tarefa }}</span><sc-for list="{{ p.tags }}" as="t"><span class="tri-tag ouro">{{ t.label }}</span></sc-for></div></div>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ triBandejaVazia }}"><div style="padding:26px 10px;text-align:center;color:#7e8b99;font-size:12px;line-height:1.5">{{ triBandejaMsg }}</div></sc-if>
+                <sc-if value="{{ triTruncated }}"><div style="font-size:10.5px;color:#7e8b99;text-align:center">{{ triTruncMsg }}</div></sc-if>
+              </div>
+              <div class="tri-band-pe">
+                <span style="font-weight:800;color:{{ triClearFg }}">{{ triSelCount }} marcado(s)</span>
+                <span style="display:flex;gap:5px;flex-wrap:wrap"><button sc-camel-on-click="{{ triSelectAll }}" style="BTN">Marcar todos</button><button sc-camel-on-click="{{ triClearSel }}" style="BTN">Limpar</button><button sc-camel-on-click="{{ removeFromTriagem }}" title="Devolver os marcados ao acervo (saem da triagem)" style="BTN;color:#a64f35">Remover da triagem</button></span>
+              </div>
+            </aside>
+              <div class="tri-int-nichos">
+                <div class="tri-dica">{{ triDica }}</div>
+                <div class="tri-grade">
+                  <sc-for list="{{ triEscaninhos }}" as="e" hint-placeholder-count="3">
+                    <button class="tri-nicho {{ e.cls }}" data-tri-esc="{{ e.key }}" sc-camel-on-click="{{ e.click }}" aria-label="{{ e.aria }}" title="{{ e.title }}">
+                      <sc-if value="{{ e.hasObs }}"><span class="tri-bilhete">{{ e.obs }}</span></sc-if>
+                      <span class="tri-contador">{{ e.count }}</span>
+                      <span class="tri-pilha"><sc-for list="{{ e.layers }}" as="l"><span class="tri-folha" style="bottom:{{ l.b }}px"></span></sc-for><sc-if value="{{ e.hasCapa }}"><span class="tri-capa" style="background:{{ e.cor }};bottom:{{ e.capaB }}px"></span></sc-if></span>
+                      <sc-if value="{{ e.vazio }}"><span class="tri-vazio-nicho">vazio · solte autos aqui</span></sc-if>
+                      <span class="tri-placa" style="border-left-color:{{ e.cor }}"><span class="t">{{ e.titulo }}</span><sc-if value="{{ e.hasSub }}"><span class="s">{{ e.subLabel }}</span></sc-if></span>
+                    </button>
+                  </sc-for>
+                  <button class="tri-nicho novo" sc-camel-on-click="{{ newEscaninho }}"><span><span style="display:block;font-size:24px;line-height:1">+</span><span style="font-size:10px;font-weight:850;letter-spacing:.08em">NOVO ESCANINHO</span></span></button>
+                </div>
+
+              </div>
             </div>
 
             <sc-if value="{{ triHasOpen }}" hint-placeholder-val="{{ false }}">
               <div class="tri-aberto" aria-label="Escaninho aberto">
-                <div class="tri-aberto-topo">
-                  <span class="tri-placa"><span class="t">{{ triOpenTitulo }}</span><sc-if value="{{ triOpenHasSub }}"><span class="s">{{ triOpenSub }}</span></sc-if></span>
-                  <span class="tri-config-barra">
-                    <button class="tri-config-toggle" title="Configurações do escaninho: placa, bilhete e cor" sc-camel-on-click="{{ triToggleConfig }}" aria-expanded="{{ triConfigAberta }}"><span aria-hidden="true">⚙</span> Configurações <span aria-hidden="true">{{ triConfigSeta }}</span></button>
-                    <span class="tri-config-resumo"><span class="tri-cor-ponto" style="background:{{ triOpenCor }}"></span>{{ triConfigResumo }}</span>
-                  </span>
-                  <span style="display:flex;gap:6px;flex-wrap:wrap;flex:0 0 auto"><button sc-camel-on-click="{{ triDevolverTodos }}" style="BTN_OURO">↩ Devolver todos</button><button sc-camel-on-click="{{ triExcluir }}" style="BTN;color:#a64f35">Excluir escaninho</button><button sc-camel-on-click="{{ triRecolher }}" style="BTN">⌃ Recolher</button></span>
+                <div class="tri-aberto-topo" style="border-top-color:{{ triOpenCor }}">
+                  <div class="tri-ab-id">
+                    <span class="tri-ab-pasta" style="background:{{ triOpenCor }}" aria-hidden="true">🗂</span>
+                    <div style="min-width:0"><div class="tri-ab-t">{{ triOpenTitulo }}</div><sc-if value="{{ triOpenHasSub }}"><div class="tri-ab-s">{{ triOpenSub }}</div></sc-if></div>
+                    <span class="tri-ab-chip">{{ triOpenCount }} processo(s)</span>
+                  </div>
+                  <span class="tri-config-resumo" title="Bilhete do escaninho">{{ triConfigResumo }}</span>
+                  <div class="tri-ab-ferr">
+                    <div class="tri-seg" role="group" aria-label="Modo de exibição"><button class="{{ triVistaCardsCls }}" sc-camel-on-click="{{ triVerCards }}" aria-pressed="{{ triVistaCards }}" title="Cards completos, com a faixa de triagem">▦ Cards</button><button class="{{ triVistaPlanCls }}" sc-camel-on-click="{{ triVerPlanilha }}" aria-pressed="{{ triVistaPlanilha }}" title="Lista em planilha, uma linha por processo">☰ Planilha</button></div>
+                    <button class="tri-ab-btn {{ triConfigCls }}" sc-camel-on-click="{{ triToggleConfig }}" aria-expanded="{{ triConfigAberta }}" title="Placa, subtítulo, bilhete e cor da pasta"><span aria-hidden="true">⚙</span> Configurar <span aria-hidden="true">{{ triConfigSeta }}</span></button>
+                    <button class="tri-ab-btn ouro" sc-camel-on-click="{{ triDevolverTodos }}" title="Devolver todos os processos deste escaninho à bandeja"><span aria-hidden="true">↩</span> Devolver todos</button>
+                    <button class="tri-ab-btn perigo" sc-camel-on-click="{{ triExcluir }}" title="Excluir o escaninho (os processos voltam à bandeja)"><span aria-hidden="true">🗑</span> Excluir</button>
+                    <button class="tri-ab-btn icone" sc-camel-on-click="{{ triRecolher }}" title="Recolher o escaninho" aria-label="Recolher o escaninho">⌃</button>
+                  </div>
                 </div>
                 <sc-if value="{{ triConfigAberta }}" hint-placeholder-val="{{ false }}">
                   <div class="tri-config">
@@ -216,9 +275,22 @@ MARKUP = """
                   </div>
                 </sc-if>
                 <div class="tri-procs">
-                  <div style="font-size:9px;font-weight:900;letter-spacing:.08em;color:#6d7b8a;margin-bottom:8px">PROCESSOS GUARDADOS · {{ triOpenCount }}</div>
+                  <sc-if value="{{ triVistaPlanilha }}" hint-placeholder-val="{{ false }}">
+                    <div class="tri-plan-wrap"><div class="tri-plan" role="table" aria-label="Processos do escaninho">
+                      <div class="tri-plan-tr cab" role="row"><span>Processo</span><span>Assunto</span><span>Complex.</span><span>Etiquetas</span><span>Temas</span><span>Especificidades</span><span>Observações</span><span>Tarefa atual</span><span>Situação</span><span>Polo ativo</span><span>Polo passivo</span><span></span></div>
+                      <sc-for list="{{ triOpenRows }}" as="g" hint-placeholder-count="3"><div class="tri-plan-tr" role="row">
+                        <div class="c"><b class="num">{{ g.proc }}</b><i>{{ g.classe }}</i></div><div class="c" title="{{ g.assunto }}">{{ g.assunto }}</div>
+                        <div class="c"><span class="tri-plan-cx"><sc-for list="{{ g.cxOpcoes }}" as="o"><button class="{{ o.cls }}" style="--c:{{ o.cor }}" sc-camel-on-click="{{ o.pick }}" title="{{ o.nome }}" aria-pressed="{{ o.on }}">{{ o.simb }}</button></sc-for></span></div>
+                        <div class="c quebra" title="{{ g.etiquetas }}">{{ g.etiquetas }}</div><div class="c quebra">{{ g.temasTxt }}</div><div class="c quebra">{{ g.espsTxt }}</div><div class="c quebra obs" title="{{ g.obsTxt }}">{{ g.obsTxt }}</div>
+                        <div class="c" title="{{ g.tarefa }}">{{ g.tarefa }}</div><div class="c"><em style="background:{{ g.sitBg }};color:{{ g.sitFg }}">{{ g.situacao }}</em></div>
+                        <div class="c" title="{{ g.poloA }}">{{ g.poloA }}</div><div class="c" title="{{ g.poloP }}">{{ g.poloP }}</div>
+                        <div class="c acoes"><button class="tri-icone" sc-camel-on-click="{{ g.abrirCard }}" title="Abrir no modo cards, com a faixa de triagem">▸</button><button class="tri-icone" sc-camel-on-click="{{ g.devolver }}" title="Devolver à bandeja">↩</button><button class="tri-icone" sc-camel-on-click="{{ g.remover }}" title="Remover da triagem (volta só ao acervo)" style="color:#a64f35">✕</button></div>
+                      </div></sc-for>
+                    </div></div>
+                  </sc-if>
+                  <sc-if value="{{ triVistaCards }}" hint-placeholder-val="{{ true }}">
                   <sc-for list="{{ triOpenRows }}" as="g" hint-placeholder-count="2">
-                    <div class="tri-pcard">
+                    <div class="tri-pcard" data-tri-card="{{ g.pid }}">
                       <div class="tri-pcard-topo">
                         <div class="tri-pc-cel"><span>PROCESSO</span><b class="num">{{ g.proc }}</b><i>{{ g.classe }}</i></div>
                         <div class="tri-pc-cel"><span>ASSUNTO</span><b>{{ g.assunto }}</b></div>
@@ -240,8 +312,8 @@ MARKUP = """
                             </div>
                             <div class="tri-fx-l2">
                               <div class="tri-fx-caixa etq">
-                                <span class="tri-fx-rot">TODAS AS ETIQUETAS · {{ g.etqCount }} · arraste ou use T / E</span>
-                                <div class="tri-fx-chips"><sc-for list="{{ g.etqs }}" as="t"><span class="tri-chip" draggable="true" data-tri-tag="{{ t.drag }}" title="{{ t.label }}"><span>{{ t.label }}</span><button sc-camel-on-click="{{ t.toTema }}" title="Encaminhar para TEMAS" aria-label="Encaminhar para temas">T</button><button class="e" sc-camel-on-click="{{ t.toEsp }}" title="Encaminhar para ESPECIFICIDADES" aria-label="Encaminhar para especificidades">E</button></span></sc-for><sc-if value="{{ g.etqVazio }}"><em>Sem etiquetas atuais.</em></sc-if></div>
+                                <span class="tri-fx-rot">TODAS AS ETIQUETAS · {{ g.etqCount }} · arraste ou use T / E / O</span>
+                                <div class="tri-fx-chips"><sc-for list="{{ g.etqs }}" as="t"><span class="tri-chip" draggable="true" data-tri-tag="{{ t.drag }}" title="{{ t.label }}"><span>{{ t.label }}</span><button sc-camel-on-click="{{ t.toTema }}" title="Encaminhar para TEMAS" aria-label="Encaminhar para temas">T</button><button class="e" sc-camel-on-click="{{ t.toEsp }}" title="Encaminhar para ESPECIFICIDADES" aria-label="Encaminhar para especificidades">E</button><button class="o" sc-camel-on-click="{{ t.toObs }}" title="Encaminhar para OBSERVAÇÕES" aria-label="Encaminhar para observações">O</button></span></sc-for><sc-if value="{{ g.etqVazio }}"><em>Sem etiquetas atuais.</em></sc-if></div>
                               </div>
                             <div class="tri-fx-caixa tema" data-tri-dest="{{ g.destTema }}">
                               <span class="tri-fx-rot">TEMAS · {{ g.temasCount }}</span>
@@ -253,6 +325,10 @@ MARKUP = """
                               <div class="tri-fx-chips"><sc-for list="{{ g.esps }}" as="t"><span class="tri-chip esp" title="{{ t.label }}"><span>{{ t.label }}</span><button sc-camel-on-click="{{ t.remover }}" title="Remover (se veio de etiqueta, volta às etiquetas)" aria-label="Remover">✕</button></span></sc-for><sc-if value="{{ g.espsVazio }}"><em>Arraste etiquetas para cá ou crie abaixo.</em></sc-if></div>
                               <div class="tri-fx-add"><input placeholder="+ nova especificidade" sc-camel-on-key-down="{{ g.addEspKey }}" aria-label="+ nova especificidade"><button sc-camel-on-click="{{ g.addEspBtn }}" title="Incluir" aria-label="Incluir">+</button></div>
                             </div>
+                            <div class="tri-fx-caixa obs" data-tri-dest="{{ g.destObs }}">
+                              <span class="tri-fx-rot">OBSERVAÇÕES · {{ g.obsCount }}</span>
+                              <textarea class="tri-fx-obs" value="{{ g.obsTxt }}" sc-camel-on-input="{{ g.onObs }}" placeholder="Arraste etiquetas para cá (entram como tópicos “• …”) ou escreva livremente." aria-label="Observações do processo"></textarea>
+                            </div>
                             </div>
                             <div class="tri-fx-ctrl"><sc-for list="{{ g.ctrls }}" as="cell"><div><div class="cab">{{ cell.col }}</div><dc-import name="Celula" kind="{{ cell.kind }}" value="{{ cell.value }}" options="{{ cell.options }}" checked="{{ cell.checked }}" chips="{{ cell.chips }}" tags="{{ cell.tags }}" auto="{{ cell.auto }}" manual="{{ cell.manual }}" on-text="{{ cell.onText }}" on-select="{{ cell.onSelect }}" on-check="{{ cell.onCheck }}" on-manual="{{ cell.onManual }}" on-tag-add="{{ cell.onTagAdd }}" hint-size="100%,38px"></dc-import></div></sc-for></div>
                           </div>
@@ -263,12 +339,12 @@ MARKUP = """
                       </div>
                     </div>
                   </sc-for>
+                  </sc-if>
                   <sc-if value="{{ triOpenVazio }}"><div style="padding:18px;text-align:center;color:#7e8b99;font-size:11.5px;border:1px dashed #c9d5e2;border-radius:9px">Escaninho vazio. Marque fichas na bandeja e clique neste escaninho — ou arraste-as até ele.</div></sc-if>
                 </div>
               </div>
             </sc-if>
           </section>
-        </div>
       </div>
     </sc-if>
 """.replace('style="KPI_B"', 'style="' + KPI_B + '"').replace('style="BTN_OURO"', 'style="' + BTN_OURO + '"').replace('style="BTN;', 'style="' + BTN + ';').replace('style="BTN"', 'style="' + BTN + '"')
@@ -297,7 +373,13 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
   triMoverEtiqueta(i, label, c) {
     const r = this.rows[i]; if (!r || this._exclusive) return;
     const labels = this.sourceTags(r), key = canon(label); if (!labels.some(t => canon(t) === key)) return;
-    const cur = this.triLista(r, c); if (!cur.some(t => canon(t) === key)) r[c] = [...cur, label].join("\n");
+    if (c === "Observações") {
+      // entra como tópico: "• Etiqueta", uma por linha, sem repetir
+      const linhas = String(r[c] || "").replace(/\r/g, "").split("\n").map(l => l.replace(/\s+$/, "")).filter((l, k, a) => l || (k && a[k - 1]));
+      const limpo = String(label).replace(/\s+/g, " ").trim(), item = "• " + limpo.charAt(0).toUpperCase() + limpo.slice(1);
+      if (!linhas.some(l => canon(l.replace(/^[•\-–—*]\s*/, "")) === key)) { while (linhas.length && !linhas[linhas.length - 1].trim()) linhas.pop(); linhas.push(item); }
+      r[c] = linhas.join("\n");
+    } else { const cur = this.triLista(r, c); if (!cur.some(t => canon(t) === key)) r[c] = [...cur, label].join("\n"); }
     this.setCurrentTags(r, labels.filter(t => canon(t) !== key)); this.routeSpecialTags(r);
     this.saveDeb(); this.refresh();
   }
@@ -403,7 +485,10 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
       onTriSub: e => { if (!aberto) return; aberto.subtitulo = e.target.value; self.saveDeb(); self.refresh(); },
       onTriObs: e => { if (!aberto) return; aberto.obs = e.target.value; self.saveDeb(); self.refresh(); },
       triCores: PAL.map(c => ({ key: c, cor: c, cls: aberto && aberto.cor === c ? "on" : "", pick: () => { if (!aberto) return; aberto.cor = c; self.saveDeb(); self.refresh(); } })),
-      triConfigAberta: !!s.triConfig, triConfigSeta: s.triConfig ? "▴" : "▾",
+      triConfigAberta: !!s.triConfig, triConfigSeta: s.triConfig ? "▴" : "▾", triConfigCls: s.triConfig ? "on" : "",
+      triVistaPlanilha: s.triVista === "planilha", triVistaCards: s.triVista !== "planilha",
+      triVistaPlanCls: s.triVista === "planilha" ? "on" : "", triVistaCardsCls: s.triVista !== "planilha" ? "on" : "",
+      triVerCards: () => self.setState({ triVista: "cards" }), triVerPlanilha: () => self.setState({ triVista: "planilha" }),
       triToggleConfig: () => self.setState({ triConfig: !s.triConfig }),
       triOpenCor: aberto ? aberto.cor : "#c3ccd6",
       triConfigResumo: aberto ? (txt(aberto.obs) ? "📝 " + String(aberto.obs).replace(/\s+/g, " ").trim() : "sem bilhete") : "",
@@ -416,7 +501,11 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
         const plural = (n, s, p) => n + " " + (n === 1 ? s : p);
         let ctrls = [];
         if (aberta) { try { ctrls = self.preControllers(i).parts.map(c => ({ ...c, key: c.col })); if (!ctrls.some(c => /id da procura/.test(canon(c.col)))) ctrls.push({ ...self.cell(i, "ID da Procuração"), col: "ID DA PROCURAÇÃO", key: "idproc" }); } catch (err) { ctrls = ["Tempestividade","Impedimento / Suspeição","Preparo","Representação","ID da Procuração"].map(c => ({ ...self.cell(i, c), col: c.toUpperCase(), key: c })); } }
-        return { key: "g" + pid, ...linha(r),
+        const obsTxt = String(r["Observações"] || ""), poloA = txt(r.polo_ativo || r.Polo_Ativo) || "—", poloP = txt(r.polo_passivo || r.Polo_Passivo) || "—";
+        return { key: "g" + pid, pid, ...linha(r), poloA, poloP, obsTxt, obsCount: obsTxt.split("\n").filter(l => l.trim()).length,
+        temasTxt: temas.join(" · ") || "—", espsTxt: esps.join(" · ") || "—", destObs: pid + "|Observações",
+        onObs: e => { r["Observações"] = e.target.value; self.saveDeb(); },
+        abrirCard: () => { self.triFaixa.add(pid); self.setState({ triVista: "cards" }); setTimeout(() => { const n = document.querySelector(`[data-tri-card="${pid}"]`); n && n.scrollIntoView({ block: "start", behavior: "smooth" }); }, 60); },
         camposA: campos.slice(0, corte), camposB: campos.slice(corte),
         faixaAberta: aberta, faixaSeta: aberta ? "▾" : "▸",
         toggleFaixa: () => { aberta ? self.triFaixa.delete(pid) : self.triFaixa.add(pid); self.refresh(); },
@@ -425,7 +514,7 @@ METODOS = r'''  triagemRows() { return this.rows.map((r,i)=>({r,i})).filter(({r}
         cxOpcoes: CX.map(([v, simb, nome, cor]) => ({ key: v, simb, nome, cor, on: cx && cx[0] === v, cls: cx && cx[0] === v ? "on" : "", pick: () => { r.Dificuldade = cx && cx[0] === v ? "" : v; self.saveDeb(); self.refresh(); } })),
         sintese: r["Síntese Processual"] || "", onSintese: e => { r["Síntese Processual"] = e.target.value; self.saveDeb(); },
         etqCount: etqs.length, etqVazio: !etqs.length,
-        etqs: aberta ? etqs.map(l => ({ key: l, label: l, drag: pid + "|" + l, toTema: () => self.triMoverEtiqueta(i, l, "Tema"), toEsp: () => self.triMoverEtiqueta(i, l, "Especificidades") })) : [],
+        etqs: aberta ? etqs.map(l => ({ key: l, label: l, drag: pid + "|" + l, toTema: () => self.triMoverEtiqueta(i, l, "Tema"), toEsp: () => self.triMoverEtiqueta(i, l, "Especificidades"), toObs: () => self.triMoverEtiqueta(i, l, "Observações") })) : [],
         destTema: pid + "|Tema", destEsp: pid + "|Especificidades",
         temasCount: temas.length, temasVazio: !temas.length, temas: aberta ? temas.map(l => ({ key: l, label: l, remover: () => self.triRemoverItem(i, "Tema", l) })) : [],
         espsCount: esps.length, espsVazio: !esps.length, esps: aberta ? esps.map(l => ({ key: l, label: l, remover: () => self.triRemoverItem(i, "Especificidades", l) })) : [],
