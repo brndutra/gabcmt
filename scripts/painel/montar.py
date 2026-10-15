@@ -53,6 +53,17 @@ ABERTURA_HTML = """<div id="painel-abertura" role="status" aria-live="polite"><d
 if(window.__painelPronto)fim();window.addEventListener("painel-pronto",fim);window.addEventListener("error",function(){setTimeout(fim,1500)});setTimeout(fim,45000);})();</script>"""
 
 
+def assuntos_cnj() -> str:
+    import csv
+    arq = Path(__file__).with_name("dados") / "assuntos-cnj-2grau.csv"
+    mapa = {}
+    with arq.open(encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            if (r.get("codigo") or "").strip():
+                mapa[r["codigo"].strip()] = [r["nome"].strip(), (r.get("pai") or "").strip()]
+    return json.dumps(mapa, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+
+
 def inicializacao(recursos: dict) -> str:
     """Recursos que o runtime pede por nome (componentes .dc.html) + captura do HTML para "Baixar HTML configurado"."""
     # "<" escapado: o texto embutido não pode conter "</head>" nem "<body>" literais (o HTML configurado procura esses marcos)
@@ -96,6 +107,8 @@ def montar(origem: Path, saida: Path):
         sys.exit("acervo-github.js não pode conter </script>")
     fim = template.rfind("</body>")
     template = template[:fim] + '<script id="acervo-github">\n' + js + "</script>\n" + template[fim:]
+    # tabela de assuntos do CNJ (2º grau): código → [nome, código do pai], para trocar números por nomes nos cards
+    template = template.replace("</head>", js_inline("window.__ASSUNTOS_CNJ=" + assuntos_cnj() + ";") + "</head>", 1)
 
     # 2. recursos embutidos no lugar dos identificadores do manifesto
     por_id = {e["id"]: e["uuid"] for e in ext}

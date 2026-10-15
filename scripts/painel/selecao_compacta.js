@@ -34,7 +34,7 @@
   };
   const REV = [["Rev - Ementa", "Ementa"], ["Rev - Subementa", "Subementa"], ["Rev - IDs", "IDs"], ["Rev - Mérito", "Mérito"], ["Rev - Honorários", "Honorários"], ["Rev - Atenção", "Atenção"], ["CORRIGIDO", "Corrigido"]];
 
-  const st = { visao: "lista", busca: "", etapa: null, serv: null, secao: null, alerta: false, aberto: null, aba: "id", sel: new Set(), plano: false, assin: "",
+  const st = { visao: "lista", busca: "", etapa: null, serv: null, secao: null, alerta: false, aberto: null, aba: "elab", sel: new Set(), plano: false, assin: "",
     avancada: false, status: null, criterios: [], tags: [], lote: null, modoBusca: "texto", loteTexto: "", fcol: "Assunto", fop: "contains", fcombine: "any", fvals: new Set(), fvalBusca: "", ftrechos: "",
     cap: true, asof: "" };
   let arrastando = false;
@@ -128,6 +128,7 @@
     plano.before(barraClassica); plano.before(cab); plano.before(cap); plano.after(corpo);
     document.addEventListener("click", clique); document.addEventListener("change", mudanca); document.addEventListener("input", digitacao);
     document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target && e.target.id === "sp-busca") { e.preventDefault(); incluirBusca(); } });
+    document.addEventListener("keydown", e => { const t = e.target; if (e.key === "Enter" && t && t.dataset && t.dataset.add !== undefined) { e.preventDefault(); const v = t.value; t.value = ""; P().triAddItem(+t.dataset.i, t.dataset.add, v); render(); } });
     document.addEventListener("keydown", e => { if (e.key === "Escape" && document.querySelector(".sp-menu.on")) document.querySelector(".sp-menu.on").classList.remove("on"); });
     arrastar();
     aplicarModo(modo());
@@ -194,8 +195,7 @@
     const semServ = rows.filter(x => !txt(x.r.SERVIDOR)).length, irreg = rows.filter(x => Object.values(reg(x.r)).includes("ruim")).length, pend = rows.filter(x => Object.values(reg(x.r)).includes("pend")).length, semVoto = rows.filter(x => etapa(x.r) === 2 && !txt(x.r["Voto - Resultado"])).length, minut = rows.filter(x => etapa(x.r) === 2).length;
     const alertas = [semServ ? `<button class="sp-al a" data-sp="serv" data-v="—">● ${semServ} sem servidor</button>` : "", irreg ? `<button class="sp-al p" data-sp="alerta">● ${irreg} com irregularidade</button>` : "", pend ? `<button class="sp-al a" data-sp="alerta">● ${pend} com verificação pendente</button>` : "", semVoto ? `<span class="sp-al a">● ${semVoto} minutado(s) sem resultado do voto</span>` : "", `<span class="sp-al o">✓ ${minut} minutado(s)</span>`].join("");
     cab.innerHTML = `<div class="sp-sessao-topo"><div><div class="sp-eyebrow">Seleção Prévia</div><h1>${esc(s)}${d ? ` <small>· julgamento ${brFull(d)}</small>` : ""}</h1></div>
-        <div class="sp-abas-sessao">${sessoes.map(x => { const dd = iso((P().sessionDetails[x] || {}).date); return `<button class="sp-aba-s ${x === s ? "on" : ""}" data-sp="sessao" data-v="${esc(x)}"><b>${dd ? brFull(dd) : esc(x)}</b><span>${esc(x)} · ${P().selectionSessionRows(x).length} proc.</span></button>`; }).join("") || `<span class="sp-vazio">Nenhuma sessão futura com processos selecionados.</span>`}</div></div>
-      <div class="sp-marcos" aria-label="Marcos da sessão">${marcos}<button class="sp-abrir" data-sp="plano" aria-expanded="${st.plano}" title="Marcos editáveis e simulador de designação">Planejamento ${st.plano ? "▴" : "▾"}</button></div>
+        <div class="sp-abas-sessao"><button class="sp-abrir" data-sp="plano" aria-expanded="${st.plano}" title="Marcos editáveis e simulador de designação">Planejamento ${st.plano ? "▴" : "▾"}</button>${sessoes.map(x => { const dd = iso((P().sessionDetails[x] || {}).date); return `<button class="sp-aba-s ${x === s ? "on" : ""}" data-sp="sessao" data-v="${esc(x)}"><b>${dd ? brFull(dd) : esc(x)}</b><span>${esc(x)} · ${P().selectionSessionRows(x).length} proc.</span></button>`; }).join("") || `<span class="sp-vazio">Nenhuma sessão futura com processos selecionados.</span>`}</div></div>
       <div class="sp-distrib" aria-label="Distribuição dos processos por servidor"><div class="sp-kpis">${kpis}</div><div class="sp-dist">${dist || `<i class="sp-livre" style="width:100%">sem processos</i>`}</div></div>
       <div class="sp-esteira" aria-label="Esteira do trabalho — clique numa etapa para filtrar">${esteira}</div>
       <div class="sp-alertas">${alertas}</div>`;
@@ -237,15 +237,63 @@
   const inp = (campo, i, val, ph = "") => `<input type="text" data-campo="${esc(campo)}" data-i="${i}" value="${esc(val)}" placeholder="${esc(ph)}">`;
   const area = (campo, i, val, ph = "") => `<textarea data-campo="${esc(campo)}" data-i="${i}" placeholder="${esc(ph)}">${esc(val)}</textarea>`;
   const campo = (rot, html, cls = "") => `<div class="sp-campo ${cls}"><label>${rot}</label>${html}</div>`;
+  /* cartão do processo: mesmo padrão e regras do cartão da Triagem Processual (+ SERVIDOR e CORRETOR) */
+  const faixaAberta = new Set(), infoAberta = new Set();
+  function cartao(x, todos) {
+    const { r, i } = x, p = P(); let info, cc;
+    try { if (p.cardRegras(r)) p.saveDeb(); info = p.cardInfo(r); cc = p.cardCampos(r); } catch (e) { return ""; }
+    const cl = info.classe, sit = (() => { try { return p.situacao(r); } catch (e) { return { label: "—", bg: "#eef1f5", fg: "#6d7b8a" }; } })();
+    const temas = p.triLista(r, "Tema"), esps = p.triLista(r, "Especificidades"), obs = String(r["Observações"] || ""), c = compl(r);
+    const aberta = faixaAberta.has(i), inf = infoAberta.has(i), etqs = info.etiquetas;
+    const cel = (rot, html, cls = "") => `<div class="sp-pc-cel ${cls}"><span>${rot}</span>${html}</div>`;
+    const caixa = (cls, rot, lista, campo, ph) => `<div class="sp-fx-caixa ${cls}"><span class="sp-fx-rot">${rot} · ${lista.length}</span><div class="sp-fx-chips">${lista.map(l => `<span class="sp-chip-e ${cls}" title="${esc(l)}"><span>${esc(l)}</span><button data-sp="rm-item" data-i="${i}" data-c="${esc(campo)}" data-v="${esc(l)}" title="Remover (se veio de etiqueta, volta às etiquetas)">✕</button></span>`).join("") || `<em>Use T / E nas etiquetas ou crie abaixo.</em>`}</div><div class="sp-fx-add"><input type="text" data-add="${esc(campo)}" data-i="${i}" placeholder="${esc(ph)}"><button data-sp="add-item" data-i="${i}" data-c="${esc(campo)}" title="Incluir">+</button></div></div>`;
+    const ind = `${info.metas.map(m => `<span class="sp-ind meta" title="Meta: ${esc(m)}">🎯 ${esc(m)}</span>`).join("") || `<span class="sp-ind off" title="Sem meta registrada">sem meta</span>`}<span class="sp-ind ${info.prioridade ? "on" : "off"}" title="${esc(info.prioridadeTitulo)}">⚑ prioridade</span><span class="sp-ind ${info.pendente ? "on" : "off"}" title="${esc(info.pendenteTitulo)}">1º julg. ${info.pendente === null ? "—" : info.pendente ? "pendente" : "não"}</span><span class="sp-ind tempo" title="${esc(info.tempoTitulo)}">⏱ ${esc(info.tempo)}</span>`;
+    const ctrl = (rot, html) => `<div><div class="cab">${rot}</div><div class="cpo">${html}</div></div>`;
+    const resumo = [c ? CX[c - 1][1] : "complexidade não definida", `${etqs.length} etiqueta(s)`, `${temas.length} tema(s)`, `${esps.length} especificidade(s)`, txt(r["Síntese Processual"]) ? "síntese ✓" : "sem síntese"].join(" · ");
+    return `<div class="sp-pcard" style="border-left-color:${cl.cor}">
+      <div class="sp-pcard-topo">
+        ${cel("PROCESSO", `<b class="sp-mono">${esc(r.Processo)}</b><div class="sp-classe" title="${esc(info.classeTitulo)}"><em style="background:${cl.fundo};color:${cl.cor}">${esc(cl.sigla)}</em><i>${esc(cl.nome)}</i></div>${info.qualificacoes.length ? `<div class="sp-qualif">${info.qualificacoes.map(q => `<span>▸ ${esc(q)}</span>`).join("")}</div>` : ""}`)}
+        ${cel("ASSUNTO", `<b class="dica" title="${esc(info.assuntoTitulo)}">${esc(info.assunto)}</b>`)}
+        ${cel("ETIQUETAS ATUAIS", `<b title="${esc(etqs.join(", "))}">${esc(etqs.join(", ") || "—")}</b>`)}
+        ${cel("TAREFA ATUAL · ÚLTIMO MOVIMENTO", `<b title="${esc(info.tarefa)}">${esc(info.tarefa)}</b><i title="${esc(info.movimentoTitulo)}">${esc(info.movimento)}</i>`, "larga")}
+        ${cel("SERVIDOR", sel("SERVIDOR", i, r.SERVIDOR, todos))}
+        ${cel("CORRETOR", sel("CORRETOR", i, r.CORRETOR, todos))}
+        ${cel("SITUAÇÃO ATUAL", `<em class="sp-sit" style="background:${sit.bg};color:${sit.fg}">${esc(sit.label)}</em>`)}
+      </div>
+      ${cc.A.length ? `<div class="sp-pcard-campos">${cc.A.map(f => `<div class="sp-pc-campo"><span>${esc(f.col)}</span><b title="${esc(f.val)}">${esc(f.val)}</b></div>`).join("")}</div>` : ""}
+      <div class="sp-faixa"><button class="sp-faixa-barra" data-sp="faixa" data-i="${i}" aria-expanded="${aberta}"><span>${aberta ? "▾" : "▸"}</span><span class="rot">TRIAGEM DO PROCESSO</span><span class="sp-cx-mini" style="background:${c ? CX[c - 1][2] : "#c3ccd6"}">${c ? CX[c - 1][0] : "·"}</span><span class="res">${esc(resumo)}</span></button>
+        ${aberta ? `<div class="sp-faixa-corpo">
+          <div class="sp-fx-l1"><div class="sp-ind-bloco"><span class="sp-fx-rot">COMPLEXIDADE · INDICADORES</span><label class="sp-cx-sel"><i style="background:${c ? CX[c - 1][2] : "#c3ccd6"}">${c ? CX[c - 1][0] : "·"}</i><select data-campo="Dificuldade" data-i="${i}" aria-label="Complexidade"><option value="" ${c ? "" : "selected"}>Complexidade…</option>${CX.map(([s1, n], k) => `<option value="${k + 1}" ${c === k + 1 ? "selected" : ""}>${s1} · ${n}</option>`).join("")}</select></label><div class="sp-ind-chips">${ind}</div></div>
+            <div class="sp-fx-sint"><span class="sp-fx-rot">SÍNTESE PROCESSUAL</span><textarea data-campo="Síntese Processual" data-i="${i}" placeholder="Resumo do caso: pedido, sentença, recurso e o ponto controvertido…">${esc(r["Síntese Processual"] || "")}</textarea></div></div>
+          <div class="sp-fx-l2">
+            <div class="sp-fx-caixa etq"><span class="sp-fx-rot">TODAS AS ETIQUETAS · ${etqs.length} · use T / E / O</span><div class="sp-fx-chips">${etqs.map(l => `<span class="sp-chip-e"><span>${esc(l)}</span><button data-sp="etq" data-i="${i}" data-c="Tema" data-v="${esc(l)}" title="Encaminhar para TEMAS">T</button><button data-sp="etq" data-i="${i}" data-c="Especificidades" data-v="${esc(l)}" title="Encaminhar para ESPECIFICIDADES">E</button><button data-sp="etq" data-i="${i}" data-c="Observações" data-v="${esc(l)}" title="Encaminhar para OBSERVAÇÕES">O</button></span>`).join("") || "<em>Sem etiquetas atuais.</em>"}</div></div>
+            ${caixa("tema", "TEMAS", temas, "Tema", "+ novo tema")}${caixa("esp", "ESPECIFICIDADES", esps, "Especificidades", "+ nova especificidade")}
+            <div class="sp-fx-caixa obs"><span class="sp-fx-rot">OBSERVAÇÕES · ${obs.split("\n").filter(l => l.trim()).length}</span><textarea data-campo="Observações" data-i="${i}" placeholder="Etiquetas encaminhadas entram como tópicos “• …”; escreva livremente.">${esc(obs)}</textarea></div>
+          </div>
+          <div class="sp-fx-ctrl">
+            ${ctrl("TEMPESTIVIDADE", sel("Tempestividade", i, r.Tempestividade, OPC.Tempestividade))}
+            ${ctrl("PREPARO", sel("Preparo", i, r.Preparo, OPC.Preparo) + `<div class="sp-checks" style="margin-top:6px"><label class="sp-check"><input type="checkbox" data-fin="DPU (controle)" data-i="${i}" ${yes(r["DPU (controle)"]) ? "checked" : ""}> DPU</label><label class="sp-check"><input type="checkbox" data-fin="AJG" data-i="${i}" ${yes(r.AJG) ? "checked" : ""}> AJG</label></div>`)}
+            ${ctrl("IMPEDIMENTO / SUSPEIÇÃO", `<div class="sp-ro-txt">${esc(txt(r["Impedimento / Suspeição"]) || "Nenhum registrado")}</div>`)}
+            ${ctrl("REPRESENTAÇÃO", sel("Representação", i, r["Representação"], OPC["Representação"]) + (r["Representação"] === "Regular" ? `<div style="margin-top:6px">${inp("ID da Procuração", i, r["ID da Procuração"], "ID da procuração")}</div>` : ""))}
+            ${ctrl("MPF", sel("MPF", i, r.MPF, OPC.MPF) + (r.MPF === "Com Parecer" ? `<div style="margin-top:6px">${inp("ID do Parecer MPF", i, r["ID do Parecer MPF"], "ID do parecer")}</div>` : ""))}
+            ${ctrl("INTERCORRÊNCIAS (UMA POR LINHA)", area("Intercorrências", i, r.Intercorrências))}
+          </div>
+        </div>` : ""}
+      </div>
+      <div class="sp-faixa info"><button class="sp-faixa-barra" data-sp="info" data-i="${i}" aria-expanded="${inf}"><span>${inf ? "▾" : "▸"}</span><span class="rot">+ INFORMAÇÕES</span><span class="res">${esc(cc.B.length ? cc.B.slice(0, 4).map(f => f.col.toLowerCase()).join(" · ") + (cc.B.length > 4 ? ` · +${cc.B.length - 4}` : "") : "sem outras informações")}</span></button>
+        ${inf && cc.B.length ? `<div class="sp-pcard-campos">${cc.B.map(f => `<div class="sp-pc-campo"><span>${esc(f.col)}</span><b title="${esc(f.val)}">${esc(f.val)}</b></div>`).join("")}</div>` : ""}</div>
+    </div>`;
+  }
   function detalhe(x, todos) {
     const { r, i } = x, g = reg(r), s = sessao();
-    const abas = [["id", "Identificação"], ["elab", "Elaboração e revisão"], ["reg", "Regularidade", Object.values(g).filter(v => v !== "ok").length], ["aleg", "Alegações e contrarrazões"], ["voto", "Voto"], ["julg", "Julgamento e histórico"]];
+    const abas = [["elab", "Elaboração e revisão"], ["aleg", "Alegações e contrarrazões"], ["voto", "Voto"], ["julg", "Julgamento e histórico"]];
+    if (!abas.some(a => a[0] === st.aba)) st.aba = "elab";
     const hist = (Array.isArray(r._pautaHistory) ? r._pautaHistory : []).slice(-6).reverse().map(h => `<li><b>${esc(brFull(String(h.at || "").slice(0, 10)))}</b> · ${esc(h.action || "")}${h.session ? " · " + esc(h.session) : ""}${h.status ? " · " + esc(h.status) : ""}</li>`).join("");
     const corpoAba = {
       id: `<div class="sp-grade">${campo("ASSUNTO CNJ", inp("Assunto", i, r.Assunto || r.assunto_judicial), "l2")}${campo("SEÇÃO COMPETENTE", `<input type="text" value="${esc(secao(r))}" disabled>`)}${campo("TEMA", inp("Tema", i, r.Tema))}
         ${campo("COMPLEXIDADE", `<div class="sp-cx">${CX.map(([s1, n, c], k) => `<button class="${compl(r) === k + 1 ? "on" : ""}" data-sp="cx" data-i="${i}" data-v="${k + 1}" title="${n}"><i style="background:${c}">${s1}</i>${n}</button>`).join("")}</div>`, "l2")}
         ${campo("META", inp("META", i, r.META))}${campo("ITEM OFICIAL DA PAUTA", inp("Item (Pauta de Julgamento)", i, r["Item (Pauta de Julgamento)"], "opcional · até 3 dígitos"))}</div>`,
-      elab: `<div class="sp-grade">${campo("SERVIDOR", sel("SERVIDOR", i, r.SERVIDOR, todos))}${campo("DATA DA MINUTA", `<input type="date" data-campo="MINUTADO" data-i="${i}" value="${esc(iso(r.MINUTADO))}" max="${hoje()}">`)}${campo("CORRETOR", sel("CORRETOR", i, r.CORRETOR, todos))}${campo("ETAPA", `<input type="text" value="${ETAPAS[etapa(r)][0]}" disabled title="Definida pelo servidor e pela data da minuta">`)}
+      elab: `<div class="sp-grade">${campo("DATA DA MINUTA", `<input type="date" data-campo="MINUTADO" data-i="${i}" value="${esc(iso(r.MINUTADO))}" max="${hoje()}">`)}${campo("ETAPA", `<input type="text" value="${ETAPAS[etapa(r)][0]}" disabled title="Definida pelo servidor e pela data da minuta">`)}
         ${campo("REVISÃO", `<div class="sp-checks">${REV.map(([f, l]) => `<label class="sp-check"><input type="checkbox" data-rev="${esc(f)}" data-i="${i}" ${yes(r[f]) ? "checked" : ""}> ${l}</label>`).join("")}</div>`, "l4")}</div>`,
       reg: `<div class="sp-grade">${campo("TEMPESTIVIDADE", sel("Tempestividade", i, r.Tempestividade, OPC.Tempestividade))}${campo("PREPARO", sel("Preparo", i, r.Preparo, OPC.Preparo))}${campo("REPRESENTAÇÃO", sel("Representação", i, r["Representação"], OPC["Representação"]))}${campo("ID DA PROCURAÇÃO", inp("ID da Procuração", i, r["ID da Procuração"]))}
         ${campo("MPF", sel("MPF", i, r.MPF, OPC.MPF))}${campo("ID DO PARECER MPF", inp("ID do Parecer MPF", i, r["ID do Parecer MPF"]))}${campo("OBSERVAÇÕES", area("Observações", i, r.Observações), "l2")}${campo("INTERCORRÊNCIAS (UMA POR LINHA)", area("Intercorrências", i, r.Intercorrências), "l2")}</div>`,
@@ -255,7 +303,7 @@
       julg: `<div class="sp-grade">${campo("STATUS", sel("__status", i, r["Status de Julgamento"] || "PENDENTE", OPC.Status))}${campo("SESSÃO DESTINO", sel("Sessão Destino", i, r["Sessão Destino"], P().upcomingSessions(false)))}${campo("ITEM OFICIAL", inp("Item (Pauta de Julgamento)", i, r["Item (Pauta de Julgamento)"]))}${campo("REMOVER", `<button class="sp-btn" data-sp="remover1" data-i="${i}" style="color:#a64f35">Remover da seleção</button>`)}
         ${campo("HISTÓRICO", hist ? `<ul class="sp-hist">${hist}</ul>` : `<div class="sp-dica" style="margin:0">Sem registros de histórico.</div>`, "l4")}</div>`
     };
-    return `<div class="sp-detalhe"><div class="sp-abas">${abas.map(([k, l, b]) => `<button class="${st.aba === k ? "on" : ""}" data-sp="aba" data-v="${k}">${l}${b ? `<span class="b">${b}</span>` : ""}</button>`).join("")}</div>${corpoAba[st.aba] || corpoAba.id}<div class="sp-dica">Alterações gravadas na hora, nos mesmos campos da visão clássica. Alegações em tópicos, mídias e demais controles: “Visão clássica”.</div></div>`;
+    return `<div class="sp-detalhe">${cartao(x, todos)}<div class="sp-abas">${abas.map(([k, l, b]) => `<button class="${st.aba === k ? "on" : ""}" data-sp="aba" data-v="${k}">${l}${b ? `<span class="b">${b}</span>` : ""}</button>`).join("")}</div>${corpoAba[st.aba] || corpoAba.elab}<div class="sp-dica">Alterações gravadas na hora, nos mesmos campos da visão clássica. Alegações em tópicos, mídias e demais controles: “Visão clássica”.</div></div>`;
   }
   function desenharCorpo(s, rows, todos, mapa) {
     const fs = filtrados(rows), cont = f => rows.filter(f).length;
@@ -325,8 +373,8 @@
         return `<div class="sp-linha ${st.sel.has(i) ? "sel" : ""} ${ab ? "aberta" : ""}" data-linha="${i}" draggable="true">
           <input type="checkbox" data-selrow="${i}" ${st.sel.has(i) ? "checked" : ""} aria-label="Selecionar ${esc(r.Processo)}">
           <span class="sp-num">${mapa.get(i)}</span><span class="sp-alca" title="Arrastar para reordenar">⠿</span>
-          <div class="sp-proc"><div class="p sp-mono">${esc(r.Processo)}</div><div class="c">${esc(r.classe_judicial || r.Classe || "")}${txt(r.META) ? ` · <b style="color:#8a6416">${esc(r.META)}</b>` : ""}</div></div>
-          <div class="sp-assunto"><div>${esc(r.Assunto || r.assunto_judicial || "—")}</div><div class="tema">${esc([txt(r.Tema).split("\n")[0], secao(r)].filter(Boolean).join(" · "))}</div></div>
+          <div class="sp-proc"><div class="p sp-mono">${esc(r.Processo)}</div><div class="c">${(() => { try { const k = P().cardClasse(r); return `<em class="sp-cls" style="background:${k.fundo};color:${k.cor}" title="${esc(k.rotulo)}">${esc(k.sigla)}</em>`; } catch (e) { return ""; } })()}${esc(r.classe_judicial || r.Classe || "")}${txt(r.META) ? ` · <b style="color:#8a6416">${esc(r.META)}</b>` : ""}</div></div>
+          <div class="sp-assunto"><div>${esc((() => { try { return P().cardAssunto(r.Assunto || r.assunto_judicial || r.Assunto_Principal); } catch (e) { return r.Assunto; } })() || "—")}</div><div class="tema">${esc([txt(r.Tema).split("\n")[0], secao(r)].filter(Boolean).join(" · "))}</div></div>
           <div class="sp-compl" title="Complexidade: ${c ? CX[c - 1][1] : "não definida"}">${CX.map(([s1, nm, cor], k) => `<i class="${k + 1 === c ? "on" : ""}" style="${k + 1 === c ? `background:${cor};color:#fff` : ""}">${s1}</i>`).join("")}</div>
           <div class="sp-serv ${sv ? "" : "vazio"}"><span class="sp-av" style="background:${corDe(sv, todos)}">${ini(sv)}</span><span>${esc(sv || "sem servidor")}</span></div>
           <div><span class="sp-pill sp-e${e}">${ETAPAS[e][0].toUpperCase()}</span></div>
@@ -348,7 +396,8 @@
     if (campoNome === "SERVIDOR" || campoNome === "CORRETOR") { const c = p.cell(i, campoNome); if (c && c.onSelect) c.onSelect(v); else p.preCommit(i, campoNome, v); }
     else if (campoNome === "MINUTADO") { if (!PC().recordMinutado(h, r, v)) return render(); }
     else if (campoNome === "__status") { if (!PC().setStatus(h, r, v, r["Sessão Destino"])) return render(); }
-    else if (campoNome === "Intercorrências") { PC().setIncidents ? PC().setIncidents(r, v) : (r["Intercorrências"] = v); }
+    else if (campoNome === "Intercorrências") { PC().setIncidents ? PC().setIncidents(r, v) : p.cardIntercorrencias(r, v); }
+    else if (campoNome === "Dificuldade" && !v) { r.Dificuldade = ""; }
     else p.preCommit(i, campoNome, v);
     salvar();
   }
@@ -363,7 +412,7 @@
     const t = e.target; if (!cab || !(cab.contains(t) || cap.contains(t) || corpo.contains(t) || barraClassica.contains(t))) { const mm = document.querySelector(".sp-menu.on"); if (mm) mm.classList.remove("on"); return; }
     const b = t.closest("[data-sp]");
     const menu = document.getElementById("sp-menu-exp"); if (menu && !t.closest("#sp-menu-exp")) menu.classList.remove("on");
-    if (!b) { const ln = t.closest(".sp-linha"); if (ln && !t.closest("input,select,button,textarea")) { const i = +ln.dataset.linha; st.aberto = st.aberto === i ? null : i; if (st.aberto !== null) st.aba = "id"; render(); } return; }
+    if (!b) { const ln = t.closest(".sp-linha"); if (ln && !t.closest("input,select,button,textarea")) { const i = +ln.dataset.linha; st.aberto = st.aberto === i ? null : i; if (st.aberto !== null) st.aba = "elab"; render(); } return; }
     const a = b.dataset.sp, v = b.dataset.v, i = b.dataset.i !== undefined ? +b.dataset.i : null;
     const p = P();
     switch (a) {
@@ -391,9 +440,14 @@
       case "cap-restaurar": { const s = sessao(), m = p.sessionDetails[s]; if (!m || !window.confirm("Restaurar capacidade 3/dia, disponibilidade 100% e esforço 1,0 para os servidores desta sessão?")) break; const ns = nomes(linhas()); ns.forEach(nm => { if (m.staffRates) m.staffRates[nm] = 3; if (m.staffAvailability) delete m.staffAvailability[nm]; if (m.staffEffort) delete m.staffEffort[nm]; }); st.asof = ""; p.syncConfigSeed && p.syncConfigSeed(); salvar(); break; }
       case "visao": st.visao = v; lembrar(); render(); break;
       case "aba": st.aba = v; render(); break;
-      case "abrir": st.aberto = st.aberto === i ? null : i; st.aba = "id"; render(); break;
-      case "abrir-de": st.visao = "lista"; st.aberto = i; st.aba = "id"; lembrar(); render(); setTimeout(() => { const l = corpo.querySelector(`[data-linha="${i}"]`); l && l.scrollIntoView({ block: "center" }); }, 30); break;
+      case "abrir": st.aberto = st.aberto === i ? null : i; st.aba = "elab"; render(); break;
+      case "abrir-de": st.visao = "lista"; st.aberto = i; st.aba = "elab"; lembrar(); render(); setTimeout(() => { const l = corpo.querySelector(`[data-linha="${i}"]`); l && l.scrollIntoView({ block: "center" }); }, 30); break;
       case "cx": p.preCommit(i, "Dificuldade", v); salvar(); break;
+      case "faixa": faixaAberta.has(i) ? faixaAberta.delete(i) : faixaAberta.add(i); render(); break;
+      case "info": infoAberta.has(i) ? infoAberta.delete(i) : infoAberta.add(i); render(); break;
+      case "etq": p.triMoverEtiqueta(i, v, b.dataset.c); render(); break;
+      case "rm-item": p.triRemoverItem(i, b.dataset.c, v); render(); break;
+      case "add-item": { const inp = b.parentElement.querySelector("input"); const val = inp.value; inp.value = ""; p.triAddItem(i, b.dataset.c, val); render(); break; }
       case "menu": menu.classList.toggle("on"); break;
       case "exp": { menu.classList.remove("on"); const pg = PC().page; if (pg) { pg.scope = "all"; pg.render(); } const btn = document.querySelector(`#controle-pauta-root [data-action="${v}"]`); if (btn) btn.click(); else p.notify("Exportação indisponível no momento — tente pela visão clássica.", "warn"); break; }
       case "modo-classico": { const u = H().uiPref("sp2", {}) || {}; H().setUiPref("sp2", { ...u, modo: "classico" }); aplicarModo("classico"); break; }
@@ -426,6 +480,8 @@
       return; }
     if (t.dataset.selrow !== undefined) { const i = +t.dataset.selrow; t.checked ? st.sel.add(i) : st.sel.delete(i); render(); return; }
     if (t.dataset.rev) { P().preReviewChange(+t.dataset.i, t.dataset.rev, t.checked); render(); return; }
+    if (t.dataset.fin) { try { P().financialChange(P().rows[+t.dataset.i], t.dataset.fin, t.checked); } catch (er) {} salvar(); return; }
+    if (t.dataset.add !== undefined) return;
     if (t.dataset.chk) { P().preCommit(+t.dataset.i, t.dataset.chk, t.checked ? "Sim" : ""); salvar(); return; }
     if (t.dataset.campo) { gravar(t.dataset.campo, +t.dataset.i, t.value); return; }
     if (t.dataset.lote) {
