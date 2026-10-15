@@ -4,6 +4,7 @@ Exportações dos bancos do app, importadas por `scripts/banco/importar.py` (sem
 
 | Arquivo | Conteúdo | Registros | Versão |
 |---|---|---:|---|
+| [`acervo.json`](acervo.json) | Acervo geral de processos do gabinete (Painel Central), saneado: sem celulares, e-mails e CPF | 0 | 2026-10-15 |
 | [`assuntos.json`](assuntos.json) | Catálogo de assuntos (TPU/CNJ, seções e sinônimos) | 556 | 2026-10-13 |
 | [`jurisprudencia.json`](jurisprudencia.json) | Jurisprudência de referência (temas, súmulas, precedentes qualificados) | 42 | 2026-10-13 |
 | [`modelos.json`](modelos.json) | Modelos do Banco de Paradigmas, inclusive os antigos modelos-matriz (hoje unificados) | 202 | 2026-10-14 |
@@ -13,3 +14,5 @@ Exportações dos bancos do app, importadas por `scripts/banco/importar.py` (sem
 | [`redacao.json`](redacao.json) | Padrão de redação: conectivos, verbos, preferências, correções e alertas | 136 | 2026-10-13 |
 
 Para atualizar: exporte cada banco no app e rode `python3 scripts/construir.py ARQUIVOS.json`.
+
+O acervo (`acervo.json`) é atualizado pelo próprio Painel Central (`painel.html`): cada importação de planilha é encaminhada ao GitHub. Também aceita `python3 scripts/construir.py acervo.html` (ou `acervo.json`) exportado do painel. Saneamento: sem celulares, telefones, e-mails e CPF; os sigilosos entram, já mascarados (###) na origem.
