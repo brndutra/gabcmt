@@ -220,6 +220,13 @@ def ajustar_planejamento(template: str) -> str:
     novo = planejamento.aplicar(texto)
     cod = json.dumps(novo, ensure_ascii=False).replace("</", "<\\/")
     pre = pre[:k] + cod + pre[fim_txt:]
+    # painel compacto da Seleção Prévia (layout da prévia sobre os dados reais; visão clássica preservada)
+    from pathlib import Path
+    pasta = Path(__file__).parent
+    css = (pasta / "selecao_compacta.css").read_text(encoding="utf-8")
+    js = (pasta / "selecao_compacta.js").read_text(encoding="utf-8").replace("</script", "<\\/script")
+    fim_body = pre.rindex("</body>")
+    pre = pre[:fim_body] + "<style id=\"sp2-css\">" + css + "</style><script>" + js + "</script>" + pre[fim_body:]
     b64 = base64.b64encode(gzip.compress(pre.encode("utf-8"), 9)).decode()
     return template[:ini] + b64 + template[fim:]
 
